@@ -1,0 +1,4 @@
+/target/
+/host/
+/scratch/
+__pycache__/

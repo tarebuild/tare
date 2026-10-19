@@ -1,0 +1,11 @@
+Tare toolchain
+
+The Anchor-compatible surface, protocol schemas, error names/messages, and version-specific SPL API adapters derive from the Anchor contributors' Apache-2.0 sources.
+Reference revisions:
+  v0.31.1: 47284f8f0b9844c6b83234aa90f556bad00e12ed
+  v0.32.3: 0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66
+  v1.2.2:  8d9d1488d9b8af41b266d7513eea2e668adf15a2
+https://github.com/solana-foundation/anchor
+
+Pinocchio is used by the independent benchmark references; its crate license remains with that dependency.
+Portable Strawberry Perl and other host tools are downloaded separately into ignored host caches and retain their own licenses.
