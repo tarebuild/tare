@@ -1,0 +1,13 @@
+Tare SPL compatibility layer
+
+Public wrapper signatures, account field order, instruction construction and SPL state
+adapter behavior are derived from Anchor anchor-spl 0.31.1, commit
+47284f8f0b9844c6b83234aa90f556bad00e12ed, Copyright Coral and Anchor contributors,
+licensed under Apache License 2.0. See LICENSE.
+
+This crate uses Tare AccountInfo views and the Tare C-ABI invocation runtime.
+It does not link or invoke the stock Anchor language runtime.
+
+The versions/v1 adapters preserve the public wrapper and instruction-construction
+behavior of Anchor 1.2.2, also Apache-2.0, from bench/corpus/anchor-1.2.2.
+Their AccountInfo and invocation types are replaced with the Tare runtime bridge.

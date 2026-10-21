@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["crates/tare-lang-macros", "crates/tare-lang"]
+members = ["crates/tare-lang-macros", "crates/tare-lang", "crates/tare-spl"]
 
 [workspace.package]
 version = "0.1.0"
