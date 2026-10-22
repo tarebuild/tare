@@ -1,0 +1,17 @@
+[package]
+name = "tare-opt"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow = "1"
+litesvm = "=0.18.2"
+serde = { version = "1", features = ["derive"] }
+solana-address = { version = "~2.7.0", features = ["copy"] }
+solana-sbpf = { version = "=0.23.0", default-features = false }
+
+[dev-dependencies]
+serde_json = "1"
+
+
