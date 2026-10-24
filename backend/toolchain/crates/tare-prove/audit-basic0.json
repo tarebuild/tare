@@ -1,0 +1,3993 @@
+{
+  "stockHash": "08d063d5b2d5ad23e08f7a70fd3435589e765f56be24fc2bbc602552c65731ab",
+  "tareHash": "7a506d9d9716ac19be17a8024d4fd5f8f1bc63dcfdb460255c6418354a37623c",
+  "report": {
+    "corpusHash": "987f36b00e01a70ec9b388ad6a3826af36a4553a18e46d7b419c6a4481e6058e",
+    "counts": {
+      "tests": 0,
+      "generated": 440,
+      "mainnet": 0
+    },
+    "comparisons": {
+      "inputs": 440,
+      "accountBytes": 3168,
+      "lamports": 3168,
+      "logs": 440,
+      "returnData": 440,
+      "errors": 440
+    },
+    "instructions": [
+      {
+        "name": "initialize",
+        "discriminator": "afaf6d1f0d989bed",
+        "inputs": 12,
+        "gross": 197,
+        "net": 163,
+        "tare": 34
+      }
+    ],
+    "firstDivergence": null,
+    "outcomes": [
+      {
+        "gross": 1412,
+        "grossError": "InstructionError(0, Custom(101))",
+        "label": "initialize:short-instruction",
+        "net": 951,
+        "netError": "InstructionError(0, Custom(101))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1420,
+        "grossError": "InstructionError(0, Custom(101))",
+        "label": "initialize:unknown-discriminator",
+        "net": 959,
+        "netError": "InstructionError(0, Custom(101))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1527,
+        "grossError": "InstructionError(0, Custom(4100))",
+        "label": "initialize:wrong-declared-program-id",
+        "net": 972,
+        "netError": "InstructionError(0, Custom(4100))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:seed-0",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:repeat-1",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:repeat-2",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 1702,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:tag-only",
+        "net": 981,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1995,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:unknown-variant",
+        "net": 1002,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1710,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:create-short",
+        "net": 988,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1724,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-no-accounts",
+        "net": 1223,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1578,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-buffer-no-accounts",
+        "net": 1055,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1714,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:write-short",
+        "net": 991,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1744,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-no-accounts",
+        "net": 1233,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1790,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:write-short-payload",
+        "net": 994,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1744,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer-no-accounts",
+        "net": 1233,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1712,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:set-authority-short",
+        "net": 992,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1762,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-authority-no-accounts",
+        "net": 1235,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1746,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-no-accounts",
+        "net": 1232,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1712,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:resize-short",
+        "net": 990,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1737,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:resize-no-accounts",
+        "net": 1234,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1533,
+        "grossError": "InstructionError(0, Custom(1500))",
+        "label": "event-cpi:stub",
+        "net": 979,
+        "netError": "InstructionError(0, Custom(1500))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2947,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create:missing-last-account",
+        "net": 1526,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 3229,
+        "grossError": "InstructionError(0, Custom(2002))",
+        "label": "idl:create:missing-signer-0",
+        "net": 1529,
+        "netError": "InstructionError(0, Custom(2002))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 16896,
+        "grossError": "InstructionError(0, PrivilegeEscalation)",
+        "label": "idl:create:readonly-0",
+        "net": 8486,
+        "netError": "InstructionError(0, PrivilegeEscalation)",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 3221,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:create:readonly-1",
+        "net": 1524,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 9738,
+        "grossError": "InstructionError(0, Custom(2006))",
+        "label": "idl:create:wrong-base",
+        "net": 8026,
+        "netError": "InstructionError(0, Custom(2006))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 17578,
+        "grossError": null,
+        "label": "idl:create",
+        "net": 8812,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 2504,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:resize:missing-last-account",
+        "net": 1603,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2631,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:resize:readonly-0",
+        "net": 1584,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2613,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:resize:missing-signer-1",
+        "net": 1516,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2681,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:resize:readonly-1",
+        "net": 1606,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 3110,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:resize:wrong-owner-0",
+        "net": 1863,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2548,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:resize:short-account-0",
+        "net": 1410,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2670,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:resize:bad-discriminator-0",
+        "net": 1424,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 3736,
+        "grossError": null,
+        "label": "idl:resize",
+        "net": 2456,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 2113,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-buffer:missing-last-account",
+        "net": 1363,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2555,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:create-buffer:readonly-0",
+        "net": 1662,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2250,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:create-buffer:missing-signer-1",
+        "net": 1358,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 3101,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:create-buffer:wrong-owner-0",
+        "net": 2121,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2359,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:create-buffer:short-account-0",
+        "net": 1531,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2409,
+        "grossError": "InstructionError(0, Custom(2013))",
+        "label": "idl:create-buffer:bad-discriminator-0",
+        "net": 1509,
+        "netError": "InstructionError(0, Custom(2013))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1740,
+        "grossError": null,
+        "label": "idl:create-buffer",
+        "net": 1046,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 2358,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-buffer:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2481,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:write-buffer:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2495,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:write-buffer:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2993,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:write-buffer:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2431,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:write-buffer:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2553,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:write-buffer:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1314,
+        "grossError": null,
+        "label": "idl:write-buffer",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 2263,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer-authority:missing-last-account",
+        "net": 1488,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2386,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer-authority:readonly-0",
+        "net": 1455,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2400,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-buffer-authority:missing-signer-1",
+        "net": 1483,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2898,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer-authority:wrong-owner-0",
+        "net": 1842,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2336,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer-authority:short-account-0",
+        "net": 1389,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2458,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer-authority:bad-discriminator-0",
+        "net": 1403,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1170,
+        "grossError": null,
+        "label": "idl:set-buffer-authority",
+        "net": 552,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 2853,
+        "grossError": "InstructionError(0, Custom(2001))",
+        "label": "idl:old-authority-write",
+        "net": 1916,
+        "netError": "InstructionError(0, Custom(2001))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2332,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-new-authority:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2455,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:write-new-authority:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2469,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:write-new-authority:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2967,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:write-new-authority:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2405,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:write-new-authority:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2527,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:write-new-authority:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1288,
+        "grossError": null,
+        "label": "idl:write-new-authority",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 2263,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-canonical-authority:missing-last-account",
+        "net": 1488,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2386,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-canonical-authority:readonly-0",
+        "net": 1455,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2400,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-canonical-authority:missing-signer-1",
+        "net": 1483,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2898,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-canonical-authority:wrong-owner-0",
+        "net": 1842,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2336,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-canonical-authority:short-account-0",
+        "net": 1389,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2458,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-canonical-authority:bad-discriminator-0",
+        "net": 1403,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1170,
+        "grossError": null,
+        "label": "idl:set-canonical-authority",
+        "net": 552,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 2607,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer:missing-last-account",
+        "net": 1656,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2732,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer:readonly-0",
+        "net": 1627,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2770,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer:readonly-1",
+        "net": 1639,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2744,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-buffer:missing-signer-2",
+        "net": 1651,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 3119,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer:wrong-owner-0",
+        "net": 1843,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2557,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer:short-account-0",
+        "net": 1390,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2679,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer:bad-discriminator-0",
+        "net": 1404,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 3244,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer:wrong-owner-1",
+        "net": 2010,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2682,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer:short-account-1",
+        "net": 1557,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2804,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer:bad-discriminator-1",
+        "net": 1571,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2583,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:set-buffer:aliased-buffer",
+        "net": 1405,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 4230,
+        "grossError": "InstructionError(0, Custom(2506))",
+        "label": "idl:set-buffer:short-target",
+        "net": 3226,
+        "netError": "InstructionError(0, Custom(2506))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2886,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:set-buffer:invalid-buffer-length",
+        "net": 1856,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1756,
+        "grossError": null,
+        "label": "idl:set-buffer",
+        "net": 816,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 2502,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-buffer:missing-last-account",
+        "net": 1497,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2654,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:close-buffer:readonly-0",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2615,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:close-buffer:missing-signer-1",
+        "net": 1458,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-buffer:readonly-2",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 3117,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:close-buffer:wrong-owner-0",
+        "net": 1846,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2649,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:close-buffer:short-account-0",
+        "net": 1393,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2677,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:close-buffer:bad-discriminator-0",
+        "net": 1407,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2564,
+        "grossError": "InstructionError(0, Custom(2011))",
+        "label": "idl:close-buffer:self-close",
+        "net": 1507,
+        "netError": "InstructionError(0, Custom(2011))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-buffer",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 2332,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:append-canonical:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2455,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:append-canonical:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2469,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:append-canonical:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2967,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:append-canonical:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2405,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:append-canonical:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2527,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:append-canonical:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1288,
+        "grossError": null,
+        "label": "idl:append-canonical",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 2502,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-canonical:missing-last-account",
+        "net": 1497,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2654,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:close-canonical:readonly-0",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2615,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:close-canonical:missing-signer-1",
+        "net": 1458,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-canonical:readonly-2",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 3117,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:close-canonical:wrong-owner-0",
+        "net": 1846,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2649,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:close-canonical:short-account-0",
+        "net": 1393,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2677,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:close-canonical:bad-discriminator-0",
+        "net": 1407,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 2564,
+        "grossError": "InstructionError(0, Custom(2011))",
+        "label": "idl:close-canonical:self-close",
+        "net": 1507,
+        "netError": "InstructionError(0, Custom(2011))",
+        "sequence": "seed-1413567045-0",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-canonical",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-0",
+        "success": true
+      },
+      {
+        "gross": 1412,
+        "grossError": "InstructionError(0, Custom(101))",
+        "label": "initialize:short-instruction",
+        "net": 951,
+        "netError": "InstructionError(0, Custom(101))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1420,
+        "grossError": "InstructionError(0, Custom(101))",
+        "label": "initialize:unknown-discriminator",
+        "net": 959,
+        "netError": "InstructionError(0, Custom(101))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1527,
+        "grossError": "InstructionError(0, Custom(4100))",
+        "label": "initialize:wrong-declared-program-id",
+        "net": 972,
+        "netError": "InstructionError(0, Custom(4100))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:seed-1",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:repeat-1",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:repeat-2",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 1702,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:tag-only",
+        "net": 981,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1995,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:unknown-variant",
+        "net": 1002,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1710,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:create-short",
+        "net": 988,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1724,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-no-accounts",
+        "net": 1223,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1578,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-buffer-no-accounts",
+        "net": 1055,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1714,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:write-short",
+        "net": 991,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1744,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-no-accounts",
+        "net": 1233,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1790,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:write-short-payload",
+        "net": 994,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1744,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer-no-accounts",
+        "net": 1233,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1712,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:set-authority-short",
+        "net": 992,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1762,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-authority-no-accounts",
+        "net": 1235,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1746,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-no-accounts",
+        "net": 1232,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1712,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:resize-short",
+        "net": 990,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1737,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:resize-no-accounts",
+        "net": 1234,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1533,
+        "grossError": "InstructionError(0, Custom(1500))",
+        "label": "event-cpi:stub",
+        "net": 979,
+        "netError": "InstructionError(0, Custom(1500))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2947,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create:missing-last-account",
+        "net": 1526,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 3229,
+        "grossError": "InstructionError(0, Custom(2002))",
+        "label": "idl:create:missing-signer-0",
+        "net": 1529,
+        "netError": "InstructionError(0, Custom(2002))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 16896,
+        "grossError": "InstructionError(0, PrivilegeEscalation)",
+        "label": "idl:create:readonly-0",
+        "net": 8486,
+        "netError": "InstructionError(0, PrivilegeEscalation)",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 3221,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:create:readonly-1",
+        "net": 1524,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 9738,
+        "grossError": "InstructionError(0, Custom(2006))",
+        "label": "idl:create:wrong-base",
+        "net": 8026,
+        "netError": "InstructionError(0, Custom(2006))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 17578,
+        "grossError": null,
+        "label": "idl:create",
+        "net": 8812,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 2504,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:resize:missing-last-account",
+        "net": 1603,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2631,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:resize:readonly-0",
+        "net": 1584,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2613,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:resize:missing-signer-1",
+        "net": 1516,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2681,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:resize:readonly-1",
+        "net": 1606,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 3110,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:resize:wrong-owner-0",
+        "net": 1863,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2548,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:resize:short-account-0",
+        "net": 1410,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2670,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:resize:bad-discriminator-0",
+        "net": 1424,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 3736,
+        "grossError": null,
+        "label": "idl:resize",
+        "net": 2456,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 2113,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-buffer:missing-last-account",
+        "net": 1363,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2555,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:create-buffer:readonly-0",
+        "net": 1662,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2250,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:create-buffer:missing-signer-1",
+        "net": 1358,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 3101,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:create-buffer:wrong-owner-0",
+        "net": 2121,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2359,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:create-buffer:short-account-0",
+        "net": 1531,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2409,
+        "grossError": "InstructionError(0, Custom(2013))",
+        "label": "idl:create-buffer:bad-discriminator-0",
+        "net": 1509,
+        "netError": "InstructionError(0, Custom(2013))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1740,
+        "grossError": null,
+        "label": "idl:create-buffer",
+        "net": 1046,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 2358,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-buffer:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2481,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:write-buffer:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2495,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:write-buffer:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2993,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:write-buffer:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2431,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:write-buffer:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2553,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:write-buffer:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1314,
+        "grossError": null,
+        "label": "idl:write-buffer",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 2263,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer-authority:missing-last-account",
+        "net": 1488,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2386,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer-authority:readonly-0",
+        "net": 1455,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2400,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-buffer-authority:missing-signer-1",
+        "net": 1483,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2898,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer-authority:wrong-owner-0",
+        "net": 1842,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2336,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer-authority:short-account-0",
+        "net": 1389,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2458,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer-authority:bad-discriminator-0",
+        "net": 1403,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1170,
+        "grossError": null,
+        "label": "idl:set-buffer-authority",
+        "net": 552,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 2853,
+        "grossError": "InstructionError(0, Custom(2001))",
+        "label": "idl:old-authority-write",
+        "net": 1916,
+        "netError": "InstructionError(0, Custom(2001))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2332,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-new-authority:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2455,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:write-new-authority:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2469,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:write-new-authority:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2967,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:write-new-authority:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2405,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:write-new-authority:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2527,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:write-new-authority:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1288,
+        "grossError": null,
+        "label": "idl:write-new-authority",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 2263,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-canonical-authority:missing-last-account",
+        "net": 1488,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2386,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-canonical-authority:readonly-0",
+        "net": 1455,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2400,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-canonical-authority:missing-signer-1",
+        "net": 1483,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2898,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-canonical-authority:wrong-owner-0",
+        "net": 1842,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2336,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-canonical-authority:short-account-0",
+        "net": 1389,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2458,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-canonical-authority:bad-discriminator-0",
+        "net": 1403,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1170,
+        "grossError": null,
+        "label": "idl:set-canonical-authority",
+        "net": 552,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 2607,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer:missing-last-account",
+        "net": 1656,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2732,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer:readonly-0",
+        "net": 1627,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2770,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer:readonly-1",
+        "net": 1639,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2744,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-buffer:missing-signer-2",
+        "net": 1651,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 3119,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer:wrong-owner-0",
+        "net": 1843,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2557,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer:short-account-0",
+        "net": 1390,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2679,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer:bad-discriminator-0",
+        "net": 1404,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 3244,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer:wrong-owner-1",
+        "net": 2010,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2682,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer:short-account-1",
+        "net": 1557,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2804,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer:bad-discriminator-1",
+        "net": 1571,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2583,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:set-buffer:aliased-buffer",
+        "net": 1405,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 4230,
+        "grossError": "InstructionError(0, Custom(2506))",
+        "label": "idl:set-buffer:short-target",
+        "net": 3226,
+        "netError": "InstructionError(0, Custom(2506))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2886,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:set-buffer:invalid-buffer-length",
+        "net": 1856,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1756,
+        "grossError": null,
+        "label": "idl:set-buffer",
+        "net": 816,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 2502,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-buffer:missing-last-account",
+        "net": 1497,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2654,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:close-buffer:readonly-0",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2615,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:close-buffer:missing-signer-1",
+        "net": 1458,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-buffer:readonly-2",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 3117,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:close-buffer:wrong-owner-0",
+        "net": 1846,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2649,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:close-buffer:short-account-0",
+        "net": 1393,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2677,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:close-buffer:bad-discriminator-0",
+        "net": 1407,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2564,
+        "grossError": "InstructionError(0, Custom(2011))",
+        "label": "idl:close-buffer:self-close",
+        "net": 1507,
+        "netError": "InstructionError(0, Custom(2011))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-buffer",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 2332,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:append-canonical:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2455,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:append-canonical:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2469,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:append-canonical:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2967,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:append-canonical:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2405,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:append-canonical:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2527,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:append-canonical:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1288,
+        "grossError": null,
+        "label": "idl:append-canonical",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 2502,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-canonical:missing-last-account",
+        "net": 1497,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2654,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:close-canonical:readonly-0",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2615,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:close-canonical:missing-signer-1",
+        "net": 1458,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-canonical:readonly-2",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 3117,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:close-canonical:wrong-owner-0",
+        "net": 1846,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2649,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:close-canonical:short-account-0",
+        "net": 1393,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2677,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:close-canonical:bad-discriminator-0",
+        "net": 1407,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 2564,
+        "grossError": "InstructionError(0, Custom(2011))",
+        "label": "idl:close-canonical:self-close",
+        "net": 1507,
+        "netError": "InstructionError(0, Custom(2011))",
+        "sequence": "seed-1413567045-1",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-canonical",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-1",
+        "success": true
+      },
+      {
+        "gross": 1412,
+        "grossError": "InstructionError(0, Custom(101))",
+        "label": "initialize:short-instruction",
+        "net": 951,
+        "netError": "InstructionError(0, Custom(101))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1420,
+        "grossError": "InstructionError(0, Custom(101))",
+        "label": "initialize:unknown-discriminator",
+        "net": 959,
+        "netError": "InstructionError(0, Custom(101))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1527,
+        "grossError": "InstructionError(0, Custom(4100))",
+        "label": "initialize:wrong-declared-program-id",
+        "net": 972,
+        "netError": "InstructionError(0, Custom(4100))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:seed-2",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:repeat-1",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:repeat-2",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 1702,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:tag-only",
+        "net": 981,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1995,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:unknown-variant",
+        "net": 1002,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1710,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:create-short",
+        "net": 988,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1724,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-no-accounts",
+        "net": 1223,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1578,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-buffer-no-accounts",
+        "net": 1055,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1714,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:write-short",
+        "net": 991,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1744,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-no-accounts",
+        "net": 1233,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1790,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:write-short-payload",
+        "net": 994,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1744,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer-no-accounts",
+        "net": 1233,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1712,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:set-authority-short",
+        "net": 992,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1762,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-authority-no-accounts",
+        "net": 1235,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1746,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-no-accounts",
+        "net": 1232,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1712,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:resize-short",
+        "net": 990,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1737,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:resize-no-accounts",
+        "net": 1234,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1533,
+        "grossError": "InstructionError(0, Custom(1500))",
+        "label": "event-cpi:stub",
+        "net": 979,
+        "netError": "InstructionError(0, Custom(1500))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2947,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create:missing-last-account",
+        "net": 1526,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 3229,
+        "grossError": "InstructionError(0, Custom(2002))",
+        "label": "idl:create:missing-signer-0",
+        "net": 1529,
+        "netError": "InstructionError(0, Custom(2002))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 16896,
+        "grossError": "InstructionError(0, PrivilegeEscalation)",
+        "label": "idl:create:readonly-0",
+        "net": 8486,
+        "netError": "InstructionError(0, PrivilegeEscalation)",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 3221,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:create:readonly-1",
+        "net": 1524,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 9738,
+        "grossError": "InstructionError(0, Custom(2006))",
+        "label": "idl:create:wrong-base",
+        "net": 8026,
+        "netError": "InstructionError(0, Custom(2006))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 17578,
+        "grossError": null,
+        "label": "idl:create",
+        "net": 8812,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 2504,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:resize:missing-last-account",
+        "net": 1603,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2631,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:resize:readonly-0",
+        "net": 1584,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2613,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:resize:missing-signer-1",
+        "net": 1516,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2681,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:resize:readonly-1",
+        "net": 1606,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 3110,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:resize:wrong-owner-0",
+        "net": 1863,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2548,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:resize:short-account-0",
+        "net": 1410,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2670,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:resize:bad-discriminator-0",
+        "net": 1424,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 3736,
+        "grossError": null,
+        "label": "idl:resize",
+        "net": 2456,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 2113,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-buffer:missing-last-account",
+        "net": 1363,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2555,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:create-buffer:readonly-0",
+        "net": 1662,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2250,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:create-buffer:missing-signer-1",
+        "net": 1358,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 3101,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:create-buffer:wrong-owner-0",
+        "net": 2121,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2359,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:create-buffer:short-account-0",
+        "net": 1531,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2409,
+        "grossError": "InstructionError(0, Custom(2013))",
+        "label": "idl:create-buffer:bad-discriminator-0",
+        "net": 1509,
+        "netError": "InstructionError(0, Custom(2013))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1740,
+        "grossError": null,
+        "label": "idl:create-buffer",
+        "net": 1046,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 2358,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-buffer:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2481,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:write-buffer:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2495,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:write-buffer:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2993,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:write-buffer:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2431,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:write-buffer:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2553,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:write-buffer:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1314,
+        "grossError": null,
+        "label": "idl:write-buffer",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 2263,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer-authority:missing-last-account",
+        "net": 1488,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2386,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer-authority:readonly-0",
+        "net": 1455,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2400,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-buffer-authority:missing-signer-1",
+        "net": 1483,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2898,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer-authority:wrong-owner-0",
+        "net": 1842,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2336,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer-authority:short-account-0",
+        "net": 1389,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2458,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer-authority:bad-discriminator-0",
+        "net": 1403,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1170,
+        "grossError": null,
+        "label": "idl:set-buffer-authority",
+        "net": 552,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 2853,
+        "grossError": "InstructionError(0, Custom(2001))",
+        "label": "idl:old-authority-write",
+        "net": 1916,
+        "netError": "InstructionError(0, Custom(2001))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2332,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-new-authority:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2455,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:write-new-authority:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2469,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:write-new-authority:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2967,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:write-new-authority:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2405,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:write-new-authority:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2527,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:write-new-authority:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1288,
+        "grossError": null,
+        "label": "idl:write-new-authority",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 2263,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-canonical-authority:missing-last-account",
+        "net": 1488,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2386,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-canonical-authority:readonly-0",
+        "net": 1455,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2400,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-canonical-authority:missing-signer-1",
+        "net": 1483,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2898,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-canonical-authority:wrong-owner-0",
+        "net": 1842,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2336,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-canonical-authority:short-account-0",
+        "net": 1389,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2458,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-canonical-authority:bad-discriminator-0",
+        "net": 1403,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1170,
+        "grossError": null,
+        "label": "idl:set-canonical-authority",
+        "net": 552,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 2607,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer:missing-last-account",
+        "net": 1656,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2732,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer:readonly-0",
+        "net": 1627,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2770,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer:readonly-1",
+        "net": 1639,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2744,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-buffer:missing-signer-2",
+        "net": 1651,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 3119,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer:wrong-owner-0",
+        "net": 1843,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2557,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer:short-account-0",
+        "net": 1390,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2679,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer:bad-discriminator-0",
+        "net": 1404,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 3244,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer:wrong-owner-1",
+        "net": 2010,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2682,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer:short-account-1",
+        "net": 1557,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2804,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer:bad-discriminator-1",
+        "net": 1571,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2583,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:set-buffer:aliased-buffer",
+        "net": 1405,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 4230,
+        "grossError": "InstructionError(0, Custom(2506))",
+        "label": "idl:set-buffer:short-target",
+        "net": 3226,
+        "netError": "InstructionError(0, Custom(2506))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2886,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:set-buffer:invalid-buffer-length",
+        "net": 1856,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1756,
+        "grossError": null,
+        "label": "idl:set-buffer",
+        "net": 816,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 2502,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-buffer:missing-last-account",
+        "net": 1497,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2654,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:close-buffer:readonly-0",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2615,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:close-buffer:missing-signer-1",
+        "net": 1458,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-buffer:readonly-2",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 3117,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:close-buffer:wrong-owner-0",
+        "net": 1846,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2649,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:close-buffer:short-account-0",
+        "net": 1393,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2677,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:close-buffer:bad-discriminator-0",
+        "net": 1407,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2564,
+        "grossError": "InstructionError(0, Custom(2011))",
+        "label": "idl:close-buffer:self-close",
+        "net": 1507,
+        "netError": "InstructionError(0, Custom(2011))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-buffer",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 2332,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:append-canonical:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2455,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:append-canonical:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2469,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:append-canonical:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2967,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:append-canonical:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2405,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:append-canonical:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2527,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:append-canonical:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1288,
+        "grossError": null,
+        "label": "idl:append-canonical",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 2502,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-canonical:missing-last-account",
+        "net": 1497,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2654,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:close-canonical:readonly-0",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2615,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:close-canonical:missing-signer-1",
+        "net": 1458,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-canonical:readonly-2",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 3117,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:close-canonical:wrong-owner-0",
+        "net": 1846,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2649,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:close-canonical:short-account-0",
+        "net": 1393,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2677,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:close-canonical:bad-discriminator-0",
+        "net": 1407,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 2564,
+        "grossError": "InstructionError(0, Custom(2011))",
+        "label": "idl:close-canonical:self-close",
+        "net": 1507,
+        "netError": "InstructionError(0, Custom(2011))",
+        "sequence": "seed-1413567045-2",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-canonical",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-2",
+        "success": true
+      },
+      {
+        "gross": 1412,
+        "grossError": "InstructionError(0, Custom(101))",
+        "label": "initialize:short-instruction",
+        "net": 951,
+        "netError": "InstructionError(0, Custom(101))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1420,
+        "grossError": "InstructionError(0, Custom(101))",
+        "label": "initialize:unknown-discriminator",
+        "net": 959,
+        "netError": "InstructionError(0, Custom(101))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1527,
+        "grossError": "InstructionError(0, Custom(4100))",
+        "label": "initialize:wrong-declared-program-id",
+        "net": 972,
+        "netError": "InstructionError(0, Custom(4100))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:seed-3",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:repeat-1",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 197,
+        "grossError": null,
+        "label": "initialize:repeat-2",
+        "net": 163,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 1702,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:tag-only",
+        "net": 981,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1995,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:unknown-variant",
+        "net": 1002,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1710,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:create-short",
+        "net": 988,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1724,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-no-accounts",
+        "net": 1223,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1578,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-buffer-no-accounts",
+        "net": 1055,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1714,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:write-short",
+        "net": 991,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1744,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-no-accounts",
+        "net": 1233,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1790,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:write-short-payload",
+        "net": 994,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1744,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer-no-accounts",
+        "net": 1233,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1712,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:set-authority-short",
+        "net": 992,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1762,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-authority-no-accounts",
+        "net": 1235,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1746,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-no-accounts",
+        "net": 1232,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1712,
+        "grossError": "InstructionError(0, Custom(102))",
+        "label": "idl:resize-short",
+        "net": 990,
+        "netError": "InstructionError(0, Custom(102))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1737,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:resize-no-accounts",
+        "net": 1234,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1533,
+        "grossError": "InstructionError(0, Custom(1500))",
+        "label": "event-cpi:stub",
+        "net": 979,
+        "netError": "InstructionError(0, Custom(1500))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2947,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create:missing-last-account",
+        "net": 1526,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 3229,
+        "grossError": "InstructionError(0, Custom(2002))",
+        "label": "idl:create:missing-signer-0",
+        "net": 1529,
+        "netError": "InstructionError(0, Custom(2002))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 16896,
+        "grossError": "InstructionError(0, PrivilegeEscalation)",
+        "label": "idl:create:readonly-0",
+        "net": 8486,
+        "netError": "InstructionError(0, PrivilegeEscalation)",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 3221,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:create:readonly-1",
+        "net": 1524,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 9738,
+        "grossError": "InstructionError(0, Custom(2006))",
+        "label": "idl:create:wrong-base",
+        "net": 8026,
+        "netError": "InstructionError(0, Custom(2006))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 17578,
+        "grossError": null,
+        "label": "idl:create",
+        "net": 8812,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 2504,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:resize:missing-last-account",
+        "net": 1603,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2631,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:resize:readonly-0",
+        "net": 1584,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2613,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:resize:missing-signer-1",
+        "net": 1516,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2681,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:resize:readonly-1",
+        "net": 1606,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 3110,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:resize:wrong-owner-0",
+        "net": 1863,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2548,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:resize:short-account-0",
+        "net": 1410,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2670,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:resize:bad-discriminator-0",
+        "net": 1424,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 3736,
+        "grossError": null,
+        "label": "idl:resize",
+        "net": 2456,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 2113,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:create-buffer:missing-last-account",
+        "net": 1363,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2555,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:create-buffer:readonly-0",
+        "net": 1662,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2250,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:create-buffer:missing-signer-1",
+        "net": 1358,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 3101,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:create-buffer:wrong-owner-0",
+        "net": 2121,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2359,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:create-buffer:short-account-0",
+        "net": 1531,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2409,
+        "grossError": "InstructionError(0, Custom(2013))",
+        "label": "idl:create-buffer:bad-discriminator-0",
+        "net": 1509,
+        "netError": "InstructionError(0, Custom(2013))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1740,
+        "grossError": null,
+        "label": "idl:create-buffer",
+        "net": 1046,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 2358,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-buffer:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2481,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:write-buffer:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2495,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:write-buffer:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2993,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:write-buffer:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2431,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:write-buffer:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2553,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:write-buffer:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1314,
+        "grossError": null,
+        "label": "idl:write-buffer",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 2263,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer-authority:missing-last-account",
+        "net": 1488,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2386,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer-authority:readonly-0",
+        "net": 1455,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2400,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-buffer-authority:missing-signer-1",
+        "net": 1483,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2898,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer-authority:wrong-owner-0",
+        "net": 1842,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2336,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer-authority:short-account-0",
+        "net": 1389,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2458,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer-authority:bad-discriminator-0",
+        "net": 1403,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1170,
+        "grossError": null,
+        "label": "idl:set-buffer-authority",
+        "net": 552,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 2853,
+        "grossError": "InstructionError(0, Custom(2001))",
+        "label": "idl:old-authority-write",
+        "net": 1916,
+        "netError": "InstructionError(0, Custom(2001))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2332,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:write-new-authority:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2455,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:write-new-authority:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2469,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:write-new-authority:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2967,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:write-new-authority:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2405,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:write-new-authority:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2527,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:write-new-authority:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1288,
+        "grossError": null,
+        "label": "idl:write-new-authority",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 2263,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-canonical-authority:missing-last-account",
+        "net": 1488,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2386,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-canonical-authority:readonly-0",
+        "net": 1455,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2400,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-canonical-authority:missing-signer-1",
+        "net": 1483,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2898,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-canonical-authority:wrong-owner-0",
+        "net": 1842,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2336,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-canonical-authority:short-account-0",
+        "net": 1389,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2458,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-canonical-authority:bad-discriminator-0",
+        "net": 1403,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1170,
+        "grossError": null,
+        "label": "idl:set-canonical-authority",
+        "net": 552,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 2607,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:set-buffer:missing-last-account",
+        "net": 1656,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2732,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer:readonly-0",
+        "net": 1627,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2770,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:set-buffer:readonly-1",
+        "net": 1639,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2744,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:set-buffer:missing-signer-2",
+        "net": 1651,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 3119,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer:wrong-owner-0",
+        "net": 1843,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2557,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer:short-account-0",
+        "net": 1390,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2679,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer:bad-discriminator-0",
+        "net": 1404,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 3244,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:set-buffer:wrong-owner-1",
+        "net": 2010,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2682,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:set-buffer:short-account-1",
+        "net": 1557,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2804,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:set-buffer:bad-discriminator-1",
+        "net": 1571,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2583,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:set-buffer:aliased-buffer",
+        "net": 1405,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 4230,
+        "grossError": "InstructionError(0, Custom(2506))",
+        "label": "idl:set-buffer:short-target",
+        "net": 3226,
+        "netError": "InstructionError(0, Custom(2506))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2886,
+        "grossError": "InstructionError(0, ProgramFailedToComplete)",
+        "label": "idl:set-buffer:invalid-buffer-length",
+        "net": 1856,
+        "netError": "InstructionError(0, ProgramFailedToComplete)",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1756,
+        "grossError": null,
+        "label": "idl:set-buffer",
+        "net": 816,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 2502,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-buffer:missing-last-account",
+        "net": 1497,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2654,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:close-buffer:readonly-0",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2615,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:close-buffer:missing-signer-1",
+        "net": 1458,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-buffer:readonly-2",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 3117,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:close-buffer:wrong-owner-0",
+        "net": 1846,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2649,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:close-buffer:short-account-0",
+        "net": 1393,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2677,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:close-buffer:bad-discriminator-0",
+        "net": 1407,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2564,
+        "grossError": "InstructionError(0, Custom(2011))",
+        "label": "idl:close-buffer:self-close",
+        "net": 1507,
+        "netError": "InstructionError(0, Custom(2011))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-buffer",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 2332,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:append-canonical:missing-last-account",
+        "net": 1486,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2455,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:append-canonical:readonly-0",
+        "net": 1453,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2469,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:append-canonical:missing-signer-1",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2967,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:append-canonical:wrong-owner-0",
+        "net": 1840,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2405,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:append-canonical:short-account-0",
+        "net": 1387,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2527,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:append-canonical:bad-discriminator-0",
+        "net": 1401,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1288,
+        "grossError": null,
+        "label": "idl:append-canonical",
+        "net": 596,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 2502,
+        "grossError": "InstructionError(0, Custom(3005))",
+        "label": "idl:close-canonical:missing-last-account",
+        "net": 1497,
+        "netError": "InstructionError(0, Custom(3005))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2654,
+        "grossError": "InstructionError(0, Custom(2000))",
+        "label": "idl:close-canonical:readonly-0",
+        "net": 1481,
+        "netError": "InstructionError(0, Custom(2000))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2615,
+        "grossError": "InstructionError(0, Custom(3010))",
+        "label": "idl:close-canonical:missing-signer-1",
+        "net": 1458,
+        "netError": "InstructionError(0, Custom(3010))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-canonical:readonly-2",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      },
+      {
+        "gross": 3117,
+        "grossError": "InstructionError(0, Custom(3007))",
+        "label": "idl:close-canonical:wrong-owner-0",
+        "net": 1846,
+        "netError": "InstructionError(0, Custom(3007))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2649,
+        "grossError": "InstructionError(0, Custom(3001))",
+        "label": "idl:close-canonical:short-account-0",
+        "net": 1393,
+        "netError": "InstructionError(0, Custom(3001))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2677,
+        "grossError": "InstructionError(0, Custom(3002))",
+        "label": "idl:close-canonical:bad-discriminator-0",
+        "net": 1407,
+        "netError": "InstructionError(0, Custom(3002))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 2564,
+        "grossError": "InstructionError(0, Custom(2011))",
+        "label": "idl:close-canonical:self-close",
+        "net": 1507,
+        "netError": "InstructionError(0, Custom(2011))",
+        "sequence": "seed-1413567045-3",
+        "success": false
+      },
+      {
+        "gross": 1498,
+        "grossError": null,
+        "label": "idl:close-canonical",
+        "net": 571,
+        "netError": null,
+        "sequence": "seed-1413567045-3",
+        "success": true
+      }
+    ]
+  }
+}
