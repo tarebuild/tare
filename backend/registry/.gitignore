@@ -1,0 +1,7 @@
+/target/*
+!/target/idl/
+/target/idl/*
+!/target/idl/tare_registry.json
+/tests/target/
+/.local/
+/node_modules/

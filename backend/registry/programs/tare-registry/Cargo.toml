@@ -1,0 +1,20 @@
+[package]
+name = "tare-registry"
+version = "0.1.0"
+edition = "2021"
+description = "Public proof records for Tare builds"
+
+[lib]
+name = "tare_registry"
+crate-type = ["cdylib", "lib"]
+
+[features]
+default = []
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = { version = "=1.2.2", features = ["event-cpi"] }
