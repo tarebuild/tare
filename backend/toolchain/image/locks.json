@@ -1,0 +1,51 @@
+{
+  "retrievedAt": "2026-11-14T12:23:50.323825+00:00",
+  "architecture": "linux/amd64",
+  "rust": {
+    "version": "1.99.0",
+    "image": "rust:1.99.0-slim-bookworm",
+    "digest": "sha256:ba81bc3eaa4422af576c0262515d96b0111a628a6ccc2c86557cf55c9a4bbee0",
+    "source": "https://hub.docker.com/v2/repositories/library/rust/tags/1.99.0-slim-bookworm"
+  },
+  "agave": {
+    "version": "4.4.0",
+    "url": "https://github.com/anza-xyz/agave/releases/download/v4.4.0/solana-release-x86_64-unknown-linux-gnu.tar.bz2",
+    "sha256": "3363f4728fe786ac7036e342a20df928aa2e3e43f807fbdce67814840538c574",
+    "source": "https://api.github.com/repos/anza-xyz/agave/releases/tags/v4.4.0"
+  },
+  "platformTools": {
+    "version": "1.57",
+    "url": "https://github.com/anza-xyz/platform-tools/releases/download/v1.57/platform-tools-linux-x86_64.tar.bz2",
+    "sha256": "b0f7af104adf726fff2a6a09ea2eb2f2d2965c92295f4d7388c08d140e0c2b00",
+    "source": "https://api.github.com/repos/anza-xyz/platform-tools/releases/tags/v1.57"
+  },
+  "debianSnapshot": "20261101T000000Z",
+  "sbfArchitecture": "v0",
+  "upstreamTests": {
+    "nodeVersion": "22.23.4",
+    "nodeUrl": "https://nodejs.org/dist/v22.23.4/node-v22.23.4-linux-x64.tar.gz",
+    "nodeSha256": "b8492284c76a54baf58d61668dd0e41ee0fc98adabf9503d30f05d08f55b4406",
+    "yarnVersion": "1.22.22",
+    "network": "isolated Docker namespace; no published ports",
+    "anchorRepositories": [
+      {
+        "anchorVersion": "0.31.1",
+        "revision": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+        "repository": "https://github.com/solana-foundation/anchor",
+        "tag": "v0.31.1"
+      },
+      {
+        "anchorVersion": "0.32.3",
+        "revision": "0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66",
+        "repository": "https://github.com/solana-foundation/anchor",
+        "tag": "v0.32.3"
+      },
+      {
+        "anchorVersion": "1.2.2",
+        "revision": "8d9d1488d9b8af41b266d7513eea2e668adf15a2",
+        "repository": "https://github.com/solana-foundation/anchor",
+        "tag": "v1.2.2"
+      }
+    ]
+  }
+}
