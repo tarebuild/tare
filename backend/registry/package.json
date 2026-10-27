@@ -1,0 +1,12 @@
+{
+  "name": "tare-registry-client",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@solana/web3.js": "1.99.0"
+  }
+}
