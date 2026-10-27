@@ -1,0 +1,227 @@
+{
+  "anchorVersion": "1.2.2",
+  "programId": "7viqDjx5k8ffnfnZiBv9dMhxzVhcGSYLMb5bKdDP1XtP",
+  "accountDiscriminators": {
+    "Config": [
+      155,
+      12,
+      170,
+      224,
+      30,
+      250,
+      204,
+      130
+    ],
+    "Record": [
+      254,
+      233,
+      117,
+      252,
+      76,
+      166,
+      146,
+      139
+    ],
+    "Flag": [
+      156,
+      221,
+      153,
+      134,
+      84,
+      147,
+      165,
+      54
+    ]
+  },
+  "instructionDiscriminators": {
+    "init_config": [
+      23,
+      235,
+      115,
+      232,
+      168,
+      96,
+      1,
+      231
+    ],
+    "set_config": [
+      108,
+      158,
+      154,
+      175,
+      212,
+      98,
+      52,
+      66
+    ],
+    "attest": [
+      83,
+      148,
+      120,
+      119,
+      144,
+      139,
+      117,
+      160
+    ],
+    "flag": [
+      70,
+      151,
+      36,
+      255,
+      227,
+      208,
+      40,
+      57
+    ]
+  },
+  "eventDiscriminators": {
+    "ConfigInitialized": [
+      181,
+      49,
+      200,
+      156,
+      19,
+      167,
+      178,
+      91
+    ],
+    "ConfigUpdated": [
+      40,
+      241,
+      230,
+      122,
+      11,
+      19,
+      198,
+      194
+    ],
+    "RecordAttested": [
+      39,
+      253,
+      180,
+      252,
+      82,
+      213,
+      198,
+      88
+    ],
+    "RecordFlagged": [
+      24,
+      145,
+      152,
+      150,
+      224,
+      138,
+      108,
+      239
+    ]
+  },
+  "spaces": {
+    "Config": 48,
+    "Record": 1128,
+    "Flag": 628
+  },
+  "seeds": {
+    "config": [
+      "utf8:config"
+    ],
+    "feeVault": [
+      "utf8:fee_vault"
+    ],
+    "record": [
+      "utf8:record",
+      "program",
+      "report_hash",
+      "attester"
+    ],
+    "flag": [
+      "utf8:flag",
+      "record",
+      "input_hash"
+    ]
+  },
+  "sourceCommit": {
+    "storage": "Vec<u8>",
+    "lengths": [
+      20,
+      32
+    ],
+    "event": "lowercase hex String"
+  },
+  "accountOrder": {
+    "init_config": [
+      "authority",
+      "registry_program",
+      "program_data",
+      "config",
+      "fee_vault",
+      "system_program",
+      "event_authority",
+      "program"
+    ],
+    "set_config": [
+      "admin",
+      "config",
+      "fee_vault",
+      "event_authority",
+      "program"
+    ],
+    "attest": [
+      "attester",
+      "config",
+      "fee_vault",
+      "record",
+      "system_program",
+      "event_authority",
+      "program"
+    ],
+    "flag": [
+      "flagger",
+      "record",
+      "flag",
+      "system_program",
+      "event_authority",
+      "program"
+    ]
+  },
+  "initAuthorization": "current upgrade authority validated against the registry Program and its ProgramData account",
+  "instructionArguments": {
+    "init_config": [
+      {
+        "name": "admin",
+        "type": "pubkey"
+      },
+      {
+        "name": "attest_fee_lamports",
+        "type": "u64"
+      }
+    ],
+    "set_config": [
+      {
+        "name": "new_admin",
+        "type": "pubkey"
+      },
+      {
+        "name": "attest_fee_lamports",
+        "type": "u64"
+      }
+    ],
+    "attest": [
+      {
+        "name": "args",
+        "type": "AttestArgs"
+      }
+    ],
+    "flag": [
+      {
+        "name": "input_hash",
+        "type": "[u8;32]"
+      },
+      {
+        "name": "input_location",
+        "type": "String"
+      }
+    ]
+  }
+}

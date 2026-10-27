@@ -1,0 +1,847 @@
+{
+  "accounts": [
+    {
+      "discriminator": [
+        155,
+        12,
+        170,
+        224,
+        30,
+        250,
+        204,
+        130
+      ],
+      "name": "Config"
+    },
+    {
+      "discriminator": [
+        156,
+        221,
+        153,
+        134,
+        84,
+        147,
+        165,
+        54
+      ],
+      "name": "Flag"
+    },
+    {
+      "discriminator": [
+        254,
+        233,
+        117,
+        252,
+        76,
+        166,
+        146,
+        139
+      ],
+      "name": "Record"
+    }
+  ],
+  "address": "7viqDjx5k8ffnfnZiBv9dMhxzVhcGSYLMb5bKdDP1XtP",
+  "errors": [
+    {
+      "code": 6000,
+      "msg": "Only the configured authority may perform this action",
+      "name": "Unauthorized"
+    },
+    {
+      "code": 6001,
+      "msg": "The program-data account does not belong to this registry",
+      "name": "ProgramDataMismatch"
+    },
+    {
+      "code": 6002,
+      "msg": "Source repository must contain between 1 and 256 UTF-8 bytes",
+      "name": "RepositoryLength"
+    },
+    {
+      "code": 6003,
+      "msg": "Source commit must contain 20 or 32 bytes",
+      "name": "CommitLength"
+    },
+    {
+      "code": 6004,
+      "msg": "Toolchain version must contain between 1 and 64 UTF-8 bytes",
+      "name": "VersionLength"
+    },
+    {
+      "code": 6005,
+      "msg": "Pinned location must contain between 1 and 512 UTF-8 bytes",
+      "name": "LocationLength"
+    },
+    {
+      "code": 6006,
+      "msg": "The fee recipient is not the one the registry config names",
+      "name": "FeeRecipientMismatch"
+    }
+  ],
+  "events": [
+    {
+      "discriminator": [
+        181,
+        49,
+        200,
+        156,
+        19,
+        167,
+        178,
+        91
+      ],
+      "name": "ConfigInitialized"
+    },
+    {
+      "discriminator": [
+        40,
+        241,
+        230,
+        122,
+        11,
+        19,
+        198,
+        194
+      ],
+      "name": "ConfigUpdated"
+    },
+    {
+      "discriminator": [
+        39,
+        253,
+        180,
+        252,
+        82,
+        213,
+        198,
+        88
+      ],
+      "name": "RecordAttested"
+    },
+    {
+      "discriminator": [
+        24,
+        145,
+        152,
+        150,
+        224,
+        138,
+        108,
+        239
+      ],
+      "name": "RecordFlagged"
+    }
+  ],
+  "instructions": [
+    {
+      "accounts": [
+        {
+          "name": "attester",
+          "signer": true,
+          "writable": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "fee_recipient",
+          "relations": [
+            "config"
+          ],
+          "writable": true
+        },
+        {
+          "name": "record",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  99,
+                  111,
+                  114,
+                  100
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "args.program"
+              },
+              {
+                "kind": "arg",
+                "path": "args.report_hash"
+              },
+              {
+                "kind": "account",
+                "path": "attester"
+              }
+            ]
+          },
+          "writable": true
+        },
+        {
+          "address": "11111111111111111111111111111111",
+          "name": "system_program"
+        },
+        {
+          "name": "event_authority"
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "AttestArgs"
+            }
+          }
+        }
+      ],
+      "discriminator": [
+        83,
+        148,
+        120,
+        119,
+        144,
+        139,
+        117,
+        160
+      ],
+      "name": "attest"
+    },
+    {
+      "accounts": [
+        {
+          "name": "flagger",
+          "signer": true,
+          "writable": true
+        },
+        {
+          "name": "record"
+        },
+        {
+          "name": "flag",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  108,
+                  97,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "record"
+              },
+              {
+                "kind": "arg",
+                "path": "input_hash"
+              }
+            ]
+          },
+          "writable": true
+        },
+        {
+          "address": "11111111111111111111111111111111",
+          "name": "system_program"
+        },
+        {
+          "name": "event_authority"
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "input_hash",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "input_location",
+          "type": "string"
+        }
+      ],
+      "discriminator": [
+        70,
+        151,
+        36,
+        255,
+        227,
+        208,
+        40,
+        57
+      ],
+      "name": "flag"
+    },
+    {
+      "accounts": [
+        {
+          "name": "authority",
+          "signer": true,
+          "writable": true
+        },
+        {
+          "address": "7viqDjx5k8ffnfnZiBv9dMhxzVhcGSYLMb5bKdDP1XtP",
+          "name": "registry_program"
+        },
+        {
+          "name": "program_data"
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          },
+          "writable": true
+        },
+        {
+          "address": "11111111111111111111111111111111",
+          "name": "system_program"
+        },
+        {
+          "name": "event_authority"
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "admin",
+          "type": "pubkey"
+        },
+        {
+          "name": "fee_recipient",
+          "type": "pubkey"
+        },
+        {
+          "name": "attest_fee_lamports",
+          "type": "u64"
+        }
+      ],
+      "discriminator": [
+        23,
+        235,
+        115,
+        232,
+        168,
+        96,
+        1,
+        231
+      ],
+      "name": "init_config"
+    },
+    {
+      "accounts": [
+        {
+          "name": "admin",
+          "relations": [
+            "config"
+          ],
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          },
+          "writable": true
+        },
+        {
+          "name": "event_authority"
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "new_admin",
+          "type": "pubkey"
+        },
+        {
+          "name": "fee_recipient",
+          "type": "pubkey"
+        },
+        {
+          "name": "attest_fee_lamports",
+          "type": "u64"
+        }
+      ],
+      "discriminator": [
+        108,
+        158,
+        154,
+        175,
+        212,
+        98,
+        52,
+        66
+      ],
+      "name": "set_config"
+    }
+  ],
+  "metadata": {
+    "description": "Public proof records for Tare builds",
+    "name": "tare_registry",
+    "spec": "0.1.0",
+    "version": "0.1.0"
+  },
+  "types": [
+    {
+      "name": "AttestArgs",
+      "type": {
+        "fields": [
+          {
+            "name": "program",
+            "type": "pubkey"
+          },
+          {
+            "name": "stock_build_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tare_build_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "source_repository",
+            "type": "string"
+          },
+          {
+            "name": "source_commit",
+            "type": "bytes"
+          },
+          {
+            "name": "toolchain_version",
+            "type": "string"
+          },
+          {
+            "name": "corpus_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tests_count",
+            "type": "u64"
+          },
+          {
+            "name": "generated_count",
+            "type": "u64"
+          },
+          {
+            "name": "mainnet_count",
+            "type": "u64"
+          },
+          {
+            "name": "gross",
+            "type": "u64"
+          },
+          {
+            "name": "net",
+            "type": "u64"
+          },
+          {
+            "name": "report_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "report_location",
+            "type": "string"
+          }
+        ],
+        "kind": "struct"
+      }
+    },
+    {
+      "name": "Config",
+      "type": {
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "fee_recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "attest_fee_lamports",
+            "type": "u64"
+          }
+        ],
+        "kind": "struct"
+      }
+    },
+    {
+      "name": "ConfigInitialized",
+      "type": {
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "fee_recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "attest_fee_lamports",
+            "type": "u64"
+          }
+        ],
+        "kind": "struct"
+      }
+    },
+    {
+      "name": "ConfigUpdated",
+      "type": {
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "fee_recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "attest_fee_lamports",
+            "type": "u64"
+          }
+        ],
+        "kind": "struct"
+      }
+    },
+    {
+      "name": "Flag",
+      "type": {
+        "fields": [
+          {
+            "name": "record",
+            "type": "pubkey"
+          },
+          {
+            "name": "input_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "input_location",
+            "type": "string"
+          },
+          {
+            "name": "flagger",
+            "type": "pubkey"
+          },
+          {
+            "name": "slot",
+            "type": "u64"
+          }
+        ],
+        "kind": "struct"
+      }
+    },
+    {
+      "name": "Record",
+      "type": {
+        "fields": [
+          {
+            "name": "program",
+            "type": "pubkey"
+          },
+          {
+            "name": "stock_build_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tare_build_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "source_repository",
+            "type": "string"
+          },
+          {
+            "name": "source_commit",
+            "type": "bytes"
+          },
+          {
+            "name": "toolchain_version",
+            "type": "string"
+          },
+          {
+            "name": "corpus_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tests_count",
+            "type": "u64"
+          },
+          {
+            "name": "generated_count",
+            "type": "u64"
+          },
+          {
+            "name": "mainnet_count",
+            "type": "u64"
+          },
+          {
+            "name": "gross",
+            "type": "u64"
+          },
+          {
+            "name": "net",
+            "type": "u64"
+          },
+          {
+            "name": "report_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "report_location",
+            "type": "string"
+          },
+          {
+            "name": "attester",
+            "type": "pubkey"
+          },
+          {
+            "name": "slot",
+            "type": "u64"
+          }
+        ],
+        "kind": "struct"
+      }
+    },
+    {
+      "name": "RecordAttested",
+      "type": {
+        "fields": [
+          {
+            "name": "program",
+            "type": "pubkey"
+          },
+          {
+            "name": "stock_build_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tare_build_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "source_repository",
+            "type": "string"
+          },
+          {
+            "name": "source_commit",
+            "type": "string"
+          },
+          {
+            "name": "toolchain_version",
+            "type": "string"
+          },
+          {
+            "name": "corpus_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tests_count",
+            "type": "u64"
+          },
+          {
+            "name": "generated_count",
+            "type": "u64"
+          },
+          {
+            "name": "mainnet_count",
+            "type": "u64"
+          },
+          {
+            "name": "gross",
+            "type": "u64"
+          },
+          {
+            "name": "net",
+            "type": "u64"
+          },
+          {
+            "name": "report_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "report_location",
+            "type": "string"
+          },
+          {
+            "name": "attester",
+            "type": "pubkey"
+          },
+          {
+            "name": "slot",
+            "type": "u64"
+          },
+          {
+            "name": "fee_recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "fee_lamports",
+            "type": "u64"
+          }
+        ],
+        "kind": "struct"
+      }
+    },
+    {
+      "name": "RecordFlagged",
+      "type": {
+        "fields": [
+          {
+            "name": "record",
+            "type": "pubkey"
+          },
+          {
+            "name": "input_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "input_location",
+            "type": "string"
+          },
+          {
+            "name": "flagger",
+            "type": "pubkey"
+          },
+          {
+            "name": "slot",
+            "type": "u64"
+          }
+        ],
+        "kind": "struct"
+      }
+    }
+  ]
+}
