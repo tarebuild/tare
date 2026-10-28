@@ -1,0 +1,35 @@
+{
+  "name": "@tare/contract",
+  "version": "0.1.0",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "schema",
+    "fixtures",
+    "openapi.json",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./fixtures": {
+      "types": "./dist/fixtures.d.ts",
+      "import": "./dist/fixtures.js"
+    },
+    "./openapi.json": "./openapi.json",
+    "./schema/*": "./schema/*",
+    "./fixtures/*": "./fixtures/*"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node dist/write-artifacts.js"
+  },
+  "dependencies": {
+    "zod": "4.6.7"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
