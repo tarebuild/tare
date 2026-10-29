@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": [
+            "VALIDATION_ERROR",
+            "UNAUTHORIZED",
+            "ORIGIN_NOT_ALLOWED",
+            "NOT_FOUND",
+            "PROGRAM_UNAVAILABLE",
+            "CONFIGURATION_REQUIRED",
+            "IDEMPOTENCY_CONFLICT",
+            "TRANSACTION_EXPIRED",
+            "PAYLOAD_TOO_LARGE",
+            "UNSUPPORTED_MEDIA_TYPE",
+            "SIMULATION_FAILED",
+            "CHAIN_REFUSED",
+            "RATE_LIMITED",
+            "INTERNAL_ERROR",
+            "UPSTREAM_UNAVAILABLE",
+            "RECORD_NOT_FOUND",
+            "REPORT_UNAVAILABLE",
+            "FLAG_INPUT_UNAVAILABLE",
+            "RPC_UNAVAILABLE",
+            "PINNING_UNAVAILABLE",
+            "INVALID_REPORT",
+            "INVALID_FLAG_INPUT"
+          ]
+        },
+        "message": {
+          "type": "string"
+        },
+        "retryable": {
+          "type": "boolean"
+        },
+        "stage": {
+          "type": "string",
+          "enum": [
+            "validation",
+            "auth",
+            "read",
+            "upload",
+            "build",
+            "wallet",
+            "co_sign",
+            "simulation",
+            "send",
+            "confirmation"
+          ]
+        },
+        "fieldErrors": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "programError": {
+          "type": "object",
+          "properties": {
+            "programId": {
+              "type": "string",
+              "minLength": 32,
+              "maxLength": 44,
+              "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+            },
+            "name": {
+              "type": "string"
+            },
+            "number": {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            }
+          },
+          "required": [
+            "programId",
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "retryAfterSeconds": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "requestId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "retryable",
+        "stage"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "error"
+  ],
+  "additionalProperties": false,
+  "title": "ApiError"
+}
