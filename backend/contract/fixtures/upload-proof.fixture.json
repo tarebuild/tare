@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "1",
+  "program": {
+    "name": "fixture_vault",
+    "address": "Df1i3KASZDwNuVJEo5qRf1gziEoenYfroPyMwKD1MaFd"
+  },
+  "toolchainVersion": "0.2.0-fixture",
+  "anchorVersion": "0.31.1",
+  "source": {
+    "repository": "https://example.invalid/tare-fixtures/vault",
+    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "builds": {
+    "stock": {
+      "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "sizeBytes": 204800,
+      "rentLamports": 1200000000
+    },
+    "tare": {
+      "hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "sizeBytes": 102400,
+      "rentLamports": 600000000
+    }
+  },
+  "instructions": [
+    {
+      "name": "initialize",
+      "discriminator": "afaf6d1f0d989bed",
+      "inputs": 10,
+      "gross": 12000,
+      "net": 5500,
+      "tare": 6500
+    },
+    {
+      "name": "deposit",
+      "discriminator": "f223c68952e1f2b6",
+      "inputs": 70,
+      "gross": 9000,
+      "net": 3400,
+      "tare": 5600
+    },
+    {
+      "name": "withdraw",
+      "discriminator": "b712469c946da122",
+      "inputs": 20,
+      "gross": 11500,
+      "net": 4500,
+      "tare": 7000
+    },
+    {
+      "name": "close_vault",
+      "discriminator": "79a8589d7f31a601",
+      "inputs": 0,
+      "gross": null,
+      "net": null,
+      "tare": null
+    }
+  ],
+  "totals": {
+    "gross": 32500,
+    "net": 13400,
+    "tare": 19100,
+    "inputs": 100
+  },
+  "proof": {
+    "status": "matched",
+    "corpus": {
+      "hash": "47fb60393b573d3159d7a5c06a0ba0773dc95c1cbb39ebc8e01c769a79a21ad4",
+      "counts": {
+        "tests": 12,
+        "generated": 80,
+        "mainnet": 8
+      }
+    },
+    "comparisons": {
+      "inputs": 100,
+      "accountBytes": 300,
+      "lamports": 300,
+      "logs": 100,
+      "returnData": 100,
+      "errors": 100
+    },
+    "firstDivergence": null
+  },
+  "optimization": {
+    "inputBytes": 204800,
+    "outputBytes": 102400,
+    "inputHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "outputHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "textInstructions": 10000,
+    "branchTargetsThreaded": 8,
+    "callTargetsThreaded": 2,
+    "stackLoadsForwarded": 4,
+    "arithmeticStrengthReductions": 3,
+    "constantBranchesSimplified": 1,
+    "identityRunsSkipped": 5,
+    "identityInstructionsBypassed": 10,
+    "unreachableInstructionsNeutralized": 30,
+    "unreachableFunctionsNeutralized": 2,
+    "indirectCalls": 0,
+    "relocationSitesPreserved": 120,
+    "rootPcs": [
+      0,
+      20
+    ],
+    "modifiedPcs": [
+      30,
+      40
+    ]
+  },
+  "recordedCorpus": [
+    {
+      "generatedCorpusHash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "recordedCorpusHash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "capturedStockHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "replayStockHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "sameStockBinary": true,
+      "validatorReproduction": {
+        "inputs": 12,
+        "matched": 12,
+        "failed": 0,
+        "clockExactInputs": 12,
+        "firstDifference": null
+      }
+    }
+  ],
+  "replay": {
+    "encoding": "gzip+base64",
+    "sha256": "47fb60393b573d3159d7a5c06a0ba0773dc95c1cbb39ebc8e01c769a79a21ad4",
+    "data": "H4sIAAAAAAAC/z2OwQrCQAxE/yXnYum1NxE8e/IiInFN24XdrCZZKZT+u1tbPSXzmBlmAnUDRTyTqE8MLTRQQUT2Hamd0IaCnpJ6wah150fLQrc35mD1AaVPO0sxlEhPTIJGD2gnUFpuU/2S++BRSaG9XCugkVw2vAc6rnUbV3plYveTntUkOyurvmT+t20GKwPLyzmEZbFnJlvl/AGkLknV1gAAAA=="
+  }
+}

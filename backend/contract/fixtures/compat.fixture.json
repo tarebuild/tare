@@ -1,0 +1,738 @@
+{
+  "schemaVersion": "1",
+  "fixture": true,
+  "toolchainVersion": "0.2.0-fixture",
+  "generatedAt": "2026-11-14T00:00:00.000Z",
+  "anchorVersions": [
+    "0.31.1",
+    "0.32.1",
+    "1.0.0"
+  ],
+  "constructs": [
+    {
+      "construct": "#[program]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "#[derive(Accounts)]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "account_constraints",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "Account",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "Signer",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "Program",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "SystemAccount",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "UncheckedAccount",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "AccountLoader",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-loader"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-loader"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": false,
+          "programs": [
+            "fixture-loader"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "InterfaceAccount",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "Context",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "CpiContext",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "#[account]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "#[event]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "emit!",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "#[error_code]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "require!",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "require_family",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "init",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "init_if_needed",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "realloc",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "close",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "seeds",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "bumps",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    },
+    {
+      "construct": "remaining_accounts",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        },
+        {
+          "anchorVersion": "1.0.0",
+          "supported": true,
+          "programs": [
+            "fixture-vault"
+          ],
+          "note": "Fictional fixture compatibility only."
+        }
+      ]
+    }
+  ]
+}

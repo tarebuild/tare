@@ -1,0 +1,318 @@
+{
+  "schemaVersion": "1",
+  "fixture": true,
+  "toolchainVersion": "0.2.0-fixture",
+  "generatedAt": "2026-11-14T00:00:00.000Z",
+  "programs": [
+    {
+      "id": "fixture-vault",
+      "name": "Fixture Vault",
+      "source": {
+        "repository": "https://example.invalid/tare-fixtures/vault",
+        "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "anchorVersion": "0.31.1",
+      "kind": "anchor_example",
+      "status": "measured",
+      "weighing": {
+        "schemaVersion": "1",
+        "program": {
+          "name": "fixture_vault",
+          "address": "Df1i3KASZDwNuVJEo5qRf1gziEoenYfroPyMwKD1MaFd"
+        },
+        "toolchainVersion": "0.2.0-fixture",
+        "anchorVersion": "0.31.1",
+        "source": {
+          "repository": "https://example.invalid/tare-fixtures/vault",
+          "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "builds": {
+          "stock": {
+            "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "sizeBytes": 204800,
+            "rentLamports": 1200000000
+          },
+          "tare": {
+            "hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "sizeBytes": 102400,
+            "rentLamports": 600000000
+          }
+        },
+        "instructions": [
+          {
+            "name": "initialize",
+            "discriminator": "afaf6d1f0d989bed",
+            "inputs": 10,
+            "gross": 12000,
+            "net": 5500,
+            "tare": 6500
+          },
+          {
+            "name": "deposit",
+            "discriminator": "f223c68952e1f2b6",
+            "inputs": 70,
+            "gross": 9000,
+            "net": 3400,
+            "tare": 5600
+          },
+          {
+            "name": "withdraw",
+            "discriminator": "b712469c946da122",
+            "inputs": 20,
+            "gross": 11500,
+            "net": 4500,
+            "tare": 7000
+          },
+          {
+            "name": "close_vault",
+            "discriminator": "79a8589d7f31a601",
+            "inputs": 0,
+            "gross": null,
+            "net": null,
+            "tare": null
+          }
+        ],
+        "totals": {
+          "gross": 32500,
+          "net": 13400,
+          "tare": 19100,
+          "inputs": 100
+        },
+        "proof": {
+          "status": "matched",
+          "corpus": {
+            "hash": "47fb60393b573d3159d7a5c06a0ba0773dc95c1cbb39ebc8e01c769a79a21ad4",
+            "counts": {
+              "tests": 12,
+              "generated": 80,
+              "mainnet": 8
+            }
+          },
+          "comparisons": {
+            "inputs": 100,
+            "accountBytes": 300,
+            "lamports": 300,
+            "logs": 100,
+            "returnData": 100,
+            "errors": 100
+          },
+          "firstDivergence": null
+        },
+        "optimization": {
+          "inputBytes": 204800,
+          "outputBytes": 102400,
+          "inputHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "outputHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "textInstructions": 10000,
+          "branchTargetsThreaded": 8,
+          "callTargetsThreaded": 2,
+          "stackLoadsForwarded": 4,
+          "arithmeticStrengthReductions": 3,
+          "constantBranchesSimplified": 1,
+          "identityRunsSkipped": 5,
+          "identityInstructionsBypassed": 10,
+          "unreachableInstructionsNeutralized": 30,
+          "unreachableFunctionsNeutralized": 2,
+          "indirectCalls": 0,
+          "relocationSitesPreserved": 120,
+          "rootPcs": [
+            0,
+            20
+          ],
+          "modifiedPcs": [
+            30,
+            40
+          ]
+        },
+        "recordedCorpus": [
+          {
+            "generatedCorpusHash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "recordedCorpusHash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "capturedStockHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "replayStockHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "sameStockBinary": true,
+            "validatorReproduction": {
+              "inputs": 12,
+              "matched": 12,
+              "failed": 0,
+              "clockExactInputs": 12,
+              "firstDifference": null
+            }
+          }
+        ],
+        "replay": {
+          "encoding": "gzip+base64",
+          "sha256": "47fb60393b573d3159d7a5c06a0ba0773dc95c1cbb39ebc8e01c769a79a21ad4",
+          "data": "H4sIAAAAAAAC/z2OwQrCQAxE/yXnYum1NxE8e/IiInFN24XdrCZZKZT+u1tbPSXzmBlmAnUDRTyTqE8MLTRQQUT2Hamd0IaCnpJ6wah150fLQrc35mD1AaVPO0sxlEhPTIJGD2gnUFpuU/2S++BRSaG9XCugkVw2vAc6rnUbV3plYveTntUkOyurvmT+t20GKwPLyzmEZbFnJlvl/AGkLknV1gAAAA=="
+        }
+      },
+      "tests": {
+        "ran": 12,
+        "passed": 12,
+        "failed": 0
+      },
+      "proof": {
+        "status": "matched",
+        "corpus": {
+          "hash": "47fb60393b573d3159d7a5c06a0ba0773dc95c1cbb39ebc8e01c769a79a21ad4",
+          "counts": {
+            "tests": 12,
+            "generated": 80,
+            "mainnet": 8
+          }
+        },
+        "comparisons": {
+          "inputs": 100,
+          "accountBytes": 300,
+          "lamports": 300,
+          "logs": 100,
+          "returnData": 100,
+          "errors": 100
+        }
+      },
+      "record": "FpspPVPCTPWadzmt2PhfyzVhNLAHhLEuLsTHjjihSQTr",
+      "recordCluster": "localnet",
+      "recordUrl": "http://127.0.0.1:7800/builds/FpspPVPCTPWadzmt2PhfyzVhNLAHhLEuLsTHjjihSQTr"
+    },
+    {
+      "id": "fixture-counter",
+      "name": "Fixture Counter",
+      "source": {
+        "repository": "https://example.invalid/tare-fixtures/counter",
+        "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "anchorVersion": "0.32.1",
+      "kind": "production",
+      "status": "measured",
+      "weighing": {
+        "schemaVersion": "1",
+        "program": {
+          "name": "fixture_counter",
+          "address": "CqxFNGQFrP9oJguuJrn4kxJRFwyqWnXmkd1EweuzFDtx"
+        },
+        "toolchainVersion": "0.2.0-fixture",
+        "anchorVersion": "0.32.1",
+        "source": {
+          "repository": "https://example.invalid/tare-fixtures/counter",
+          "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        "builds": {
+          "stock": {
+            "hash": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "sizeBytes": 100000,
+            "rentLamports": 600000000
+          },
+          "tare": {
+            "hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "sizeBytes": 70000,
+            "rentLamports": 420000000
+          }
+        },
+        "instructions": [
+          {
+            "name": "increment",
+            "discriminator": "0b12680968ae3b21",
+            "inputs": 23,
+            "gross": 2000,
+            "net": 700,
+            "tare": 1300
+          }
+        ],
+        "totals": {
+          "gross": 2000,
+          "net": 700,
+          "tare": 1300,
+          "inputs": 23
+        },
+        "proof": {
+          "status": "matched",
+          "corpus": {
+            "hash": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "counts": {
+              "tests": 3,
+              "generated": 20,
+              "mainnet": 0
+            }
+          },
+          "comparisons": {
+            "inputs": 23,
+            "accountBytes": 23,
+            "lamports": 23,
+            "logs": 23,
+            "returnData": 23,
+            "errors": 23
+          },
+          "firstDivergence": null
+        },
+        "optimization": null,
+        "recordedCorpus": null
+      },
+      "tests": {
+        "ran": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "proof": {
+        "status": "matched",
+        "corpus": {
+          "hash": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "counts": {
+            "tests": 3,
+            "generated": 20,
+            "mainnet": 0
+          }
+        },
+        "comparisons": {
+          "inputs": 23,
+          "accountBytes": 23,
+          "lamports": 23,
+          "logs": 23,
+          "returnData": 23,
+          "errors": 23
+        }
+      },
+      "record": "3wwMgrFsRuFkuay3qDkrbUDNDYHRFxSyFe3V8JE2Yz1g",
+      "recordCluster": "devnet"
+    },
+    {
+      "id": "fixture-loader",
+      "name": "Fixture Loader (unsupported)",
+      "source": {
+        "repository": "https://example.invalid/tare-fixtures/loader",
+        "commit": "cccccccccccccccccccccccccccccccccccccccc"
+      },
+      "anchorVersion": "1.0.0",
+      "kind": "anchor_test",
+      "status": "not_built",
+      "reason": "Fixture toolchain does not implement AccountLoader for this version.",
+      "construct": "AccountLoader"
+    }
+  ],
+  "totals": {
+    "programs": 3,
+    "measured": 2,
+    "notBuilt": 1,
+    "instructions": 4,
+    "weights": {
+      "gross": 34500,
+      "net": 14100,
+      "tare": 20400,
+      "inputs": 123
+    },
+    "binarySize": {
+      "gross": 304800,
+      "net": 172400,
+      "tare": 132400
+    },
+    "rentLamports": {
+      "gross": 1800000000,
+      "net": 1020000000,
+      "tare": 780000000
+    },
+    "corpus": {
+      "tests": 15,
+      "generated": 100,
+      "mainnet": 8
+    }
+  }
+}

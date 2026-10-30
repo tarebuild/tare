@@ -1,0 +1,122 @@
+{
+  "program": {
+    "name": "squads_multisig_program",
+    "address": "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf"
+  },
+  "anchor": true,
+  "hasIdl": true,
+  "binarySize": 1470416,
+  "rentLamports": 7471425240,
+  "sampledAt": "2026-11-14T12:39:49.102Z",
+  "transactions": 50,
+  "instructions": [
+    {
+      "name": "vaultTransactionExecute",
+      "discriminator": "c208a15799a419ab",
+      "calls": 12,
+      "median": 23595,
+      "p90": 38603,
+      "totalUnits": 501177,
+      "share": 0.1967881073588858
+    },
+    {
+      "name": "spendingLimitUse",
+      "discriminator": "1039827fc1149b86",
+      "calls": 7,
+      "median": 70486,
+      "p90": 73959,
+      "totalUnits": 493422,
+      "share": 0.1937430917804212
+    },
+    {
+      "name": "vaultTransactionCreate",
+      "discriminator": "30fa4ea8d0e2dad3",
+      "calls": 15,
+      "median": 29860,
+      "p90": 34263,
+      "totalUnits": 446873,
+      "share": 0.1754655379233033
+    },
+    {
+      "name": "proposalApprove",
+      "discriminator": "9025a488bcd82af8",
+      "calls": 44,
+      "median": 8899,
+      "p90": 9768,
+      "totalUnits": 405297,
+      "share": 0.1591406420251415
+    },
+    {
+      "name": "proposalCreate",
+      "discriminator": "dc3c49e01e6c4f9f",
+      "calls": 18,
+      "median": 15135,
+      "p90": 19635,
+      "totalUnits": 278820,
+      "share": 0.10947920613636408
+    },
+    {
+      "name": "vaultTransactionAccountsClose",
+      "discriminator": "c447bbb00223aaa5",
+      "calls": 8,
+      "median": 14583,
+      "p90": 20309,
+      "totalUnits": 129227,
+      "share": 0.0507412286470982
+    },
+    {
+      "name": "batchAddTransaction",
+      "discriminator": "5964e0124546364c",
+      "calls": 4,
+      "median": 26337,
+      "p90": 29337,
+      "totalUnits": 109848,
+      "share": 0.04313202724218966
+    },
+    {
+      "name": "batchExecuteTransaction",
+      "discriminator": "ac2cb398157feab4",
+      "calls": 4,
+      "median": 23782,
+      "p90": 24058,
+      "totalUnits": 95317,
+      "share": 0.037426402307222634
+    },
+    {
+      "name": "batchCreate",
+      "discriminator": "c28e8d1137b914f8",
+      "calls": 2,
+      "median": 16597,
+      "p90": 16597,
+      "totalUnits": 33194,
+      "share": 0.013033687570800048
+    },
+    {
+      "name": "proposalReject",
+      "discriminator": "f33e869ce66af687",
+      "calls": 2,
+      "median": 9435,
+      "p90": 9836,
+      "totalUnits": 19271,
+      "share": 0.007566794998399943
+    },
+    {
+      "name": "proposalActivate",
+      "discriminator": "0b225cf89a1b336a",
+      "calls": 2,
+      "median": 8945,
+      "p90": 8945,
+      "totalUnits": 17890,
+      "share": 0.007024542707766851
+    },
+    {
+      "name": "configTransactionCreate",
+      "discriminator": "9bec57e4894b5127",
+      "calls": 1,
+      "median": 16449,
+      "p90": 16449,
+      "totalUnits": 16449,
+      "share": 0.00645873130240676
+    }
+  ]
+}

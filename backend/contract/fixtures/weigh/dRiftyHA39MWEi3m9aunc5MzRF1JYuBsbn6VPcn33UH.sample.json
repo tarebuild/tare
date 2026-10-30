@@ -1,0 +1,14 @@
+{
+  "program": {
+    "name": "drift",
+    "address": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH"
+  },
+  "anchor": true,
+  "hasIdl": true,
+  "binarySize": 6673069,
+  "rentLamports": 33900902480,
+  "sampledAt": "2026-11-14T12:49:54.623Z",
+  "transactions": 0,
+  "signaturesExamined": 1000,
+  "instructions": []
+}

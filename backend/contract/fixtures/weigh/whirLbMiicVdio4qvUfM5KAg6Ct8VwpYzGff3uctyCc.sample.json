@@ -1,0 +1,104 @@
+{
+  "program": {
+    "name": "whirlpool",
+    "address": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc"
+  },
+  "anchor": true,
+  "hasIdl": true,
+  "binarySize": 10485715,
+  "rentLamports": 53269144160,
+  "sampledAt": "2026-11-14T12:40:00.257Z",
+  "transactions": 33,
+  "instructions": [
+    {
+      "name": "swap_v2",
+      "discriminator": "2b04ed0b1ac91e62",
+      "calls": 25,
+      "median": 46974,
+      "p90": 52317,
+      "totalUnits": 1094438,
+      "share": 0.6566240591805084
+    },
+    {
+      "name": "swap",
+      "discriminator": "f8c69e91e17587c8",
+      "calls": 6,
+      "median": 33328,
+      "p90": 39901,
+      "totalUnits": 210439,
+      "share": 0.12625595089889696
+    },
+    {
+      "name": "reposition_liquidity_v2",
+      "discriminator": "bfa9e00b83139efd",
+      "calls": 4,
+      "median": 23838,
+      "p90": 25801,
+      "totalUnits": 98162,
+      "share": 0.05889372527020906
+    },
+    {
+      "name": "open_position_with_token_extensions",
+      "discriminator": "d42f5f5c726683fa",
+      "calls": 1,
+      "median": 96537,
+      "p90": 96537,
+      "totalUnits": 96537,
+      "share": 0.05791878279181528
+    },
+    {
+      "name": "two_hop_swap",
+      "discriminator": "c360ed6c44a2dbe6",
+      "calls": 1,
+      "median": 73228,
+      "p90": 73228,
+      "totalUnits": 73228,
+      "share": 0.04393420788173498
+    },
+    {
+      "name": "collect_fees_v2",
+      "discriminator": "cf755fbfe5b4e20f",
+      "calls": 2,
+      "median": 18952,
+      "p90": 18952,
+      "totalUnits": 37904,
+      "share": 0.022741058277561624
+    },
+    {
+      "name": "increase_liquidity_by_token_amounts_v2",
+      "discriminator": "effb097cd2c6352b",
+      "calls": 1,
+      "median": 17930,
+      "p90": 17930,
+      "totalUnits": 17930,
+      "share": 0.010757365315446389
+    },
+    {
+      "name": "decrease_liquidity_v2",
+      "discriminator": "3a7fbc3e4f52c460",
+      "calls": 1,
+      "median": 16384,
+      "p90": 16384,
+      "totalUnits": 16384,
+      "share": 0.009829820040617604
+    },
+    {
+      "name": "increase_liquidity_v2",
+      "discriminator": "851d59df45eeb00a",
+      "calls": 1,
+      "median": 16188,
+      "p90": 16188,
+      "totalUnits": 16188,
+      "share": 0.009712226978608261
+    },
+    {
+      "name": "reset_position_range",
+      "discriminator": "a47bb48dc264a0af",
+      "calls": 1,
+      "median": 5555,
+      "p90": 5555,
+      "totalUnits": 5555,
+      "share": 0.0033328033646014884
+    }
+  ]
+}

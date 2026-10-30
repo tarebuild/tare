@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1",
+  "record": "FpspPVPCTPWadzmt2PhfyzVhNLAHhLEuLsTHjjihSQTr",
+  "divergence": {
+    "input": {
+      "kind": "generated",
+      "label": "fixture_overflow_boundary",
+      "transactionBase64": "RklYVFVSRV9OT1RfQV9TT0xBTkFfVFJBTlNBQ1RJT046b3ZlcmZsb3ctYm91bmRhcnk=",
+      "accounts": [
+        {
+          "address": "CbG8gyguKxk25xTdbVocajxYrvTWRYrJ4HF2pnP3U8me",
+          "owner": "Df1i3KASZDwNuVJEo5qRf1gziEoenYfroPyMwKD1MaFd",
+          "lamports": 5000000,
+          "executable": false,
+          "dataBase64": "AA==",
+          "rentEpoch": 0
+        }
+      ],
+      "slot": null
+    },
+    "instructionIndex": 0,
+    "differences": [
+      {
+        "kind": "account_bytes",
+        "account": "CbG8gyguKxk25xTdbVocajxYrvTWRYrJ4HF2pnP3U8me",
+        "gross": "AA==",
+        "net": "AQ=="
+      },
+      {
+        "kind": "lamports",
+        "account": "CbG8gyguKxk25xTdbVocajxYrvTWRYrJ4HF2pnP3U8me",
+        "gross": "5000000",
+        "net": "4999999"
+      },
+      {
+        "kind": "account_metadata",
+        "account": "CbG8gyguKxk25xTdbVocajxYrvTWRYrJ4HF2pnP3U8me",
+        "gross": {
+          "owner": "Df1i3KASZDwNuVJEo5qRf1gziEoenYfroPyMwKD1MaFd",
+          "executable": false,
+          "rentEpoch": "0"
+        },
+        "net": {
+          "owner": "GHw9pQHmZwGx8uNWMisRdRTpyVLZogA6Ku9bGLmNQwML",
+          "executable": false,
+          "rentEpoch": "0"
+        }
+      },
+      {
+        "kind": "logs",
+        "gross": [
+          "Program log: fixture deposit"
+        ],
+        "net": [
+          "Program log: fixture withdraw"
+        ]
+      },
+      {
+        "kind": "return_data",
+        "gross": {
+          "program": "Df1i3KASZDwNuVJEo5qRf1gziEoenYfroPyMwKD1MaFd",
+          "dataBase64": "AA=="
+        },
+        "net": {
+          "program": "Df1i3KASZDwNuVJEo5qRf1gziEoenYfroPyMwKD1MaFd",
+          "dataBase64": "AQ=="
+        }
+      },
+      {
+        "kind": "error",
+        "gross": null,
+        "net": {
+          "InstructionError": [
+            0,
+            {
+              "Custom": 6000
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
