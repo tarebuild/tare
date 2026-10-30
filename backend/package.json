@@ -1,0 +1,37 @@
+{
+  "name": "tare-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "workspaces": [
+    "contract"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "fixture": "node scripts/fixture.mjs",
+    "build": "npm run build --workspace=@tare/contract && prisma generate && tsc -p tsconfig.json",
+    "contract:pack": "npm run build --workspace=@tare/contract && node scripts/pack-contract.mjs",
+    "test": "node --import tsx --test src/compute.test.ts src/registry.test.ts"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "0.32.1",
+    "@hono/node-server": "2.1.6",
+    "@prisma/adapter-pg": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "@solana/web3.js": "1.99.0",
+    "@tare/contract": "file:./contract",
+    "hono": "4.13.16",
+    "pg": "8.16.3",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "@types/pg": "8.23.1",
+    "prisma": "7.10.1",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}
