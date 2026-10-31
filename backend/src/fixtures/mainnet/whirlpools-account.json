@@ -1,0 +1,42 @@
+{
+  "capturedAt": "2026-11-14T12:32:58.092Z",
+  "endpoint": "https://api.mainnet-beta.solana.com",
+  "httpStatus": 200,
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "getAccountInfo",
+    "params": [
+      "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+      {
+        "encoding": "base64",
+        "commitment": "confirmed",
+        "dataSlice": {
+          "offset": 0,
+          "length": 36
+        }
+      }
+    ]
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "result": {
+      "context": {
+        "apiVersion": "4.4.0",
+        "slot": 469329107
+      },
+      "value": {
+        "data": [
+          "AgAAALCj2NteOsPf+tyRpPc+hRFSbDKg2sRwo9znup2STWeS",
+          "base64"
+        ],
+        "executable": true,
+        "lamports": 80851581,
+        "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+        "rentEpoch": 18446744073709552000,
+        "space": 36
+      }
+    },
+    "id": 1
+  }
+}

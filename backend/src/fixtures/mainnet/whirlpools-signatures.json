@@ -1,0 +1,32 @@
+{
+  "capturedAt": "2026-11-14T12:34:14.898Z",
+  "endpoint": "https://api.mainnet-beta.solana.com",
+  "httpStatus": 200,
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "getSignaturesForAddress",
+    "params": [
+      "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+      {
+        "commitment": "confirmed",
+        "limit": 1
+      }
+    ]
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "result": [
+      {
+        "blockTime": 1794659654,
+        "confirmationStatus": "finalized",
+        "err": null,
+        "memo": null,
+        "signature": "2VTnqvdiXiBfmeWuWgUVyd171UpW6YLRYksUUt8JeBLmJrZWkjRTWn96iqxmY8tkBfdL8iHTKaANDnuK2iRhMiq8",
+        "slot": 469329464,
+        "transactionIndex": 551
+      }
+    ],
+    "id": 1
+  }
+}

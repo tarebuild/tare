@@ -1,0 +1,126 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// A registry attestation read from the chain. Its report need not be available locally.
+model Record {
+  address          String   @id @db.VarChar(44)
+  program          String   @db.VarChar(44)
+  programName      String?
+  attester         String   @db.VarChar(44)
+  sourceRepository String
+  sourceCommit     String   @db.VarChar(64)
+  toolchainVersion String
+  stockBuildHash   String   @db.Char(64)
+  tareBuildHash    String   @db.Char(64)
+  corpusHash       String   @db.Char(64)
+  testsCount       BigInt
+  generatedCount   BigInt
+  mainnetCount     BigInt
+  gross            BigInt
+  net              BigInt
+  reportHash       String   @db.Char(64)
+  reportLocation   String
+  slot             BigInt
+  signature        String   @db.VarChar(88)
+  createdAt        DateTime @db.Timestamptz(3)
+  flags            Flag[]
+
+  @@index([slot(sort: Desc), address(sort: Desc)])
+  @@index([program, slot(sort: Desc), address(sort: Desc)])
+  @@map("records")
+}
+
+/// A diverging input attested on chain against one record.
+model Flag {
+  address       String   @id @db.VarChar(44)
+  recordAddress String   @map("record_address") @db.VarChar(44)
+  inputHash     String   @db.Char(64)
+  inputLocation String
+  flagger       String   @db.VarChar(44)
+  slot          BigInt
+  signature     String   @db.VarChar(88)
+  createdAt     DateTime @db.Timestamptz(3)
+  record        Record   @relation(fields: [recordAddress], references: [address])
+
+  @@index([recordAddress, slot, address])
+  @@map("flags")
+}
+
+enum PinnedKind {
+  report
+  flag_input
+}
+
+/// Content-addressed upload metadata. Payloads are the validated public documents.
+model PinnedReport {
+  hash      String     @id @db.Char(64)
+  kind      PinnedKind
+  location  String
+  bytes     Int
+  payload   Json?
+  createdAt DateTime   @default(now()) @db.Timestamptz(3)
+
+  @@map("pinned_reports")
+}
+
+/// The latest completed on-demand sample for a deployed program.
+model Weighing {
+  program   String   @id @db.VarChar(44)
+  sampledAt DateTime @db.Timestamptz(3)
+  payload   Json
+
+  @@index([sampledAt(sort: Desc)])
+  @@map("weighings")
+}
+
+/// Engine backlog: transactions stage before their facts apply in chain order.
+model IndexedTransaction {
+  signature        String    @id @db.VarChar(88)
+  slot             BigInt
+  transactionIndex Int       @default(0) @map("transaction_index")
+  blockTime        DateTime? @map("block_time") @db.Timestamptz(6)
+  failed           Boolean
+  addresses        String[]
+  facts            Json?
+  decodeError      String?   @map("decode_error")
+  chainError       Json?     @map("chain_error")
+  appliedAt        DateTime? @map("applied_at") @db.Timestamptz(6)
+  createdAt        DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@index([appliedAt, slot, transactionIndex])
+  @@map("indexed_transactions")
+}
+
+/// The last applied signature for each watched address.
+model IndexerCursor {
+  address         String   @id @db.VarChar(44)
+  latestSignature String?  @map("latest_signature") @db.VarChar(88)
+  latestSlot      BigInt?  @map("latest_slot")
+  discoveredBy    String?  @map("discovered_by") @db.VarChar(88)
+  updatedAt       DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@map("indexer_cursors")
+}
+
+/// Engine leader lease, renewed against the database clock.
+model WorkerLease {
+  name      String   @id
+  owner     String
+  expiresAt DateTime @map("expires_at") @db.Timestamptz(6)
+
+  @@map("worker_leases")
+}
+
+/// Shared readiness probe reservation; names match the server engine's SQL.
+model ServiceReadiness {
+  id          String    @id
+  ready       Boolean   @default(false)
+  nextProbeAt DateTime  @default(now()) @db.Timestamptz(3)
+  checkedAt   DateTime? @db.Timestamptz(3)
+  lastError   String?
+}
