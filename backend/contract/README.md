@@ -31,3 +31,15 @@ The client validates responses. Failures throw `ApiClientError` with `code`, `st
 - `ProgramSample` is observed deployed-program compute, distinct from a paired build weighing. `share` is a fraction from 0 to 1 of measured program compute; median and p90 are integer CU. A null instruction name is rendered using its hexadecimal discriminator.
 - `ProgramSample.signaturesExamined` counts signature rows examined during the sampling run, including rows that did not yield a measured transaction. Every new sample includes this count. It is optional only for compatibility with older recordings: an absent value means unknown, never zero. `transactions` still counts transactions with accepted compute measurements.
 
+## Rust consumers
+
+Validate produced upload files against `schema/UploadWeighing.json`, `schema/UploadProofReport.json` and `schema/UploadFlagInput.json`. The established `Weighing.json`, `ProofReport.json`, `FlagInput.json`, `Build.json` and `WeighingTotals.json` describe normalized public read outputs. Benchmark and compatibility files use `schema/BenchResults.json` and `schema/Compat.json`. The schemas and `openapi.json` are generated directly from Zod in the package build. POST a ProofReport directly as JSON to `/v1/reports`, and a FlagInput directly to `/v1/flag-inputs`; both return `{ hash, location }`. Hash is lowercase SHA-256 of the exact stored UTF-8 JSON bytes. Read them back through `/v1/reports/{hash}` or `/v1/flag-inputs/{hash}`. Send `Accept: application/json` for normalized public read values. Omit that header, or request `application/octet-stream`, to receive the exact uploaded bytes for content-hash verification. The typed client selects JSON automatically; CLI hash verification uses the raw representation. Responses vary on `Accept`. GET `/v1/config` supplies nullable `installLine` for the site's CLI installation command and `recordUrlTemplate` for the line printed by `tare attest`; substitute the newly created record address for `{record}`. No Pinata key belongs in the CLI.
+
+## Changes from 0.1.0
+
+Instruction weights changed from cumulative CU to per-call medians. Unreached instructions now carry zero inputs and null weights, and are omitted from weight totals. Compatibility construct names now accept any nonempty string. The document envelope remains `schemaVersion: "1"`; consumers must update to the 0.2.0 package and matching schemas together. The 0.1.0 and 0.2.0 tarballs are retained under `pack/`.
+
+## Changes from 0.2.0
+
+`ProgramSample.signaturesExamined` is an additive optional integer. Existing 0.2.0 recordings remain valid without it and are preserved unchanged. New producers must emit the count, and clients must display an omitted count as unknown. The 0.3.0 tarball is published locally alongside the previous versions in `pack/`.
+

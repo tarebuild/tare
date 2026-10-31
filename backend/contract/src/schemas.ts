@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { Address, Base64, Timestamp } from './primitives.js'
 import { defineErrors } from './errors.js'
 
-export const CONTRACT_VERSION = '0.1.0'
+export const CONTRACT_VERSION = '0.3.0'
 export const DOCUMENT_VERSION = '1'
 export const Count = z.int().nonnegative()
 /** Uploaded u64 metadata preserves safe numbers and exact canonical decimal strings. */
