@@ -1,0 +1,10 @@
+corpus/
+path-override-metadata.json
+anchor-lang-crates.json
+**/target/
+tools/
+upstream-run-*/
+record-run-*/
+__pycache__/
+
+flows/
