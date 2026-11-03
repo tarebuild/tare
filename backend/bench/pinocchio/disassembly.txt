@@ -1,0 +1,87 @@
+
+bench\pinocchio\target\deploy\tare_pinocchio_baseline.so:	file format elf64-sbf
+
+Disassembly of section .text:
+
+0000000000000120 <.text>:
+     120:      	ldxdw r1, [r1 + 0x8]
+     128:      	ldxw r4, [r1 + 0x14]
+     130:      	ldxw r3, [r1 + 0x10]
+     138:      	ldxdw r2, [r1 + 0x8]
+     140:      	ldxdw r1, [r1 + 0x0]
+     148:      	call -0x1
+
+0000000000000150 <entrypoint>:
+     150:      	ldxdw r2, [r1 + 0x0]
+     158:      	add64 r1, 0x8
+     160:      	jne r2, 0x0, +0x7 <entrypoint+0x50>
+     168:      	ja +0xb <entrypoint+0x78>
+     170:      	ldxdw r3, [r1 + 0x50]
+     178:      	add64 r1, r3
+     180:      	add64 r1, 0x2867
+     188:      	and64 r1, -0x8
+     190:      	add64 r2, -0x1
+     198:      	jeq r2, 0x0, +0x5 <entrypoint+0x78>
+     1a0:      	ldxb r3, [r1 + 0x0]
+     1a8:      	jeq r3, 0xff, -0x8 <entrypoint+0x20>
+     1b0:      	add64 r1, 0x8
+     1b8:      	add64 r2, -0x1
+     1c0:      	jne r2, 0x0, -0x5 <entrypoint+0x50>
+     1c8:      	ldxdw r2, [r1 + 0x0]
+     1d0:      	jgt r2, -0x9, +0x32 <entrypoint+0x218>
+     1d8:      	mov64 r3, r1
+     1e0:      	add64 r3, r2
+     1e8:      	ldxdw r4, [r3 + 0x8]
+     1f0:      	lddw r5, -0x7e39a1004da3f826
+     200:      	jne r4, r5, +0x1a <entrypoint+0x188>
+     208:      	ldxdw r4, [r3 + 0x10]
+     210:      	lddw r5, -0x78d596f4ac21ec8a
+     220:      	jne r4, r5, +0x16 <entrypoint+0x188>
+     228:      	ldxdw r4, [r3 + 0x18]
+     230:      	lddw r5, 0xc4347da69774735
+     240:      	jne r4, r5, +0x12 <entrypoint+0x188>
+     248:      	ldxdw r3, [r3 + 0x20]
+     250:      	lddw r4, 0x27834a5c335481bd
+     260:      	jne r3, r4, +0xe <entrypoint+0x188>
+     268:      	jlt r2, 0x8, +0x13 <entrypoint+0x1b8>
+     270:      	ldxdw r1, [r1 + 0x8]
+     278:      	lddw r2, -0x126467f2e0925051
+     288:      	jeq r1, r2, +0x15 <entrypoint+0x1e8>
+     290:      	lddw r2, 0x1d9acb512ea545e4
+     2a0:      	jne r1, r2, +0xc <entrypoint+0x1b8>
+     2a8:      	lddw r1, 0x495
+     2b8:      	mov64 r2, 0x90
+     2c0:      	call -0x1
+     2c8:      	mov64 r0, 0x5dc
+     2d0:      	ja +0x5 <entrypoint+0x1b0>
+     2d8:      	lddw r1, 0x53c
+     2e8:      	mov64 r2, 0x9d
+     2f0:      	call -0x1
+     2f8:      	mov64 r0, 0x1004
+     300:      	exit
+     308:      	lddw r1, 0x40f
+     318:      	mov64 r2, 0x86
+     320:      	call -0x1
+     328:      	mov64 r0, 0x65
+     330:      	ja -0x7 <entrypoint+0x1b0>
+     338:      	lddw r1, 0x525
+     348:      	mov64 r2, 0x17
+     350:      	call -0x1
+     358:      	mov64 r0, 0x0
+     360:      	ja -0xd <entrypoint+0x1b0>
+     368:      	lddw r1, 0x5f8
+     378:      	call 0xa
+     380:      	stxdw [r10 - 0x20], r2
+     388:      	stxdw [r10 - 0x28], r1
+     390:      	stxdw [r10 - 0x10], r3
+     398:      	mov64 r1, r10
+     3a0:      	add64 r1, -0x28
+     3a8:      	stxdw [r10 - 0x18], r1
+     3b0:      	sth [r10 - 0x8], 0x1
+     3b8:      	mov64 r1, r10
+     3c0:      	add64 r1, -0x18
+     3c8:      	call -0x56
+     3d0:      	mov64 r3, r1
+     3d8:      	lddw r1, 0x5d9
+     3e8:      	mov64 r2, 0x39
+     3f0:      	call -0xf

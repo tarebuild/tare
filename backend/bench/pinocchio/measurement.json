@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "1",
+  "fixture": false,
+  "measuredAt": "2026-11-14T12:24:30.051556+00:00",
+  "program": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+  "source": "bench\\corpus\\anchor\\examples\\tutorial\\basic-0\\programs\\basic-0\\src\\lib.rs",
+  "stock": {
+    "sizeBytes": 162176,
+    "hash": "08d063d5b2d5ad23e08f7a70fd3435589e765f56be24fc2bbc602552c65731ab"
+  },
+  "pinocchio": {
+    "sizeBytes": 2696,
+    "hash": "f5e97c18249379600e12df1834c8437f250e68c3e4c2672f32649b9a4f3a1eca"
+  },
+  "instructions": [
+    {
+      "name": "initialize",
+      "discriminator": "afaf6d1f0d989bed",
+      "inputs": 12,
+      "gross": 197,
+      "net": 130,
+      "tare": 67
+    }
+  ],
+  "corpus": {
+    "hash": "4d26845fdf1f7ec65cc98d80e421bcf500ad76f45797242df0a363eb212fefdb",
+    "counts": {
+      "tests": 0,
+      "generated": 436,
+      "mainnet": 0
+    }
+  },
+  "proof": {
+    "status": "diverged",
+    "firstDivergence": {
+      "differences": [
+        {
+          "gross": [
+            "Program Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS invoke [1]",
+            "Program log: AnchorError occurred. Error Code: InstructionDidNotDeserialize. Error Number: 102. Error Message: The program could not deserialize the given instruction.",
+            "Program Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS failed: custom program error: 0x66"
+          ],
+          "kind": "logs",
+          "net": [
+            "Program Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS invoke [1]",
+            "Program log: AnchorError occurred. Error Code: InstructionFallbackNotFound. Error Number: 101. Error Message: Fallback functions are not supported.",
+            "Program Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS failed: custom program error: 0x65"
+          ]
+        },
+        {
+          "gross": "InstructionError(0, Custom(102))",
+          "kind": "error",
+          "net": "InstructionError(0, Custom(101))"
+        }
+      ],
+      "input": {
+        "accounts": [
+          {
+            "address": "2uRAQsuhEeCowkuKtBrVTSKLXTApaigLniG7Hr94hUpE",
+            "dataBase64": "",
+            "executable": false,
+            "lamports": 10000000000,
+            "owner": "11111111111111111111111111111111"
+          },
+          {
+            "address": "3D5Vcdai15FGttmmpV1PPbNbNFVRfVSGjNDpJ3rzdTag",
+            "dataBase64": "",
+            "executable": false,
+            "lamports": 10000000000,
+            "owner": "11111111111111111111111111111111"
+          },
+          {
+            "address": "ETc9cbfZZWXmjzdRpn7yT54Kwjn72KrQHpCnjMaE3eyb",
+            "dataBase64": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+            "executable": false,
+            "lamports": 1950720,
+            "owner": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+          },
+          {
+            "address": "HKFuWPds6dCdqwh3EirPg3t5HEKw3hnUKKqb1E8fV2fc",
+            "dataBase64": "",
+            "executable": false,
+            "lamports": 9999985000,
+            "owner": "11111111111111111111111111111111"
+          }
+        ],
+        "kind": "generated",
+        "label": "idl:tag-only",
+        "slot": null,
+        "transactionBase64": "Ac4wdH9naP5Cn4uSZybRVmhIBCY3Fq5UGtwjyWEPBPqu2gSwZ5xj9NbGbLKn14gfKoY06Dk9DXz1bclZWYjUmgoBAAEC8mhMgVMzdldWeKTjV1r6/ChLnIOMw2dZu7dvVEwq9UPaB1yy/17GgXYT3lMLaSqHNUd3adpHQwy9gVQzXEqDJ67rrUp5b8wuFdxMYGG0Xtmzc/Jq38eYyn0tjMWBgnGOAQEACED0vHin6WkK"
+      },
+      "instructionIndex": 0
+    }
+  },
+  "limitations": [
+    "Hand-written Pinocchio reference implements the user instruction and error dispatch only; it does not implement Anchor built-in IDL operations.",
+    "Full corpus runs unchanged. Built-in divergences are reported and retained. User-instruction medians are a compute reference, not an equivalence claim."
+  ]
+}

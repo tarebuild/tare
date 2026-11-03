@@ -1,0 +1,8 @@
+[package]
+name = "tare-handwritten-support"
+version = "0.1.0"
+edition = "2021"
+publish = false
+[dependencies]
+pinocchio = "=0.9.3"
+pinocchio-system = "=0.3.0"
