@@ -1,0 +1,19 @@
+{
+  "integration": "private CLI module plus syn2 full/visit, quote1, proc-macro2",
+  "files": {
+    "src/lib.rs": "aef7a8a46e867d66ab5c472e8f20bd40f9e64e68bd6fc265610021a246c4f981",
+    "src/main.rs": "57731e99304e440f7900125ce62e0e46722b615d366767b5744fac9df7aaab1d",
+    "Cargo.toml": "c8a394cf87d577e6d117586236ebcb1ca745a0c99dcfdb792bb229715732e6ad",
+    "Cargo.lock": "e5e0b77dceeedb19fba23344811e8bc9d86e0131077a610999ddbd2564aff1cf"
+  },
+  "tests": 14,
+  "actualProgramFiles": 16,
+  "liveCompilerChanged": false,
+  "paths": "observation and parser messages are relative to source directory",
+  "additionalGuard": "Renamed local imports and renamed Rc/RefCell observation operations remain conservative",
+  "allMeasuredProgramComparison": {
+    "programs": 189,
+    "changed": 0,
+    "evidence": "all-measured-comparison.json"
+  }
+}

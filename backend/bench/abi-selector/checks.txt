@@ -1,0 +1,7 @@
+$ tare --version
+tare 0.5.0
+Validation uses cargo test --locked --manifest-path bench/abi-selector/Cargo.toml.
+Result: 14 tests passed.
+Validation uses the built selector on 16 pinned corpus source roots.
+Result: all 16 permit the raw compilation probe.
+No live compiler source or SBF ELF changed.

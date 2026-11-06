@@ -1,0 +1,1331 @@
+{
+  "programs": 189,
+  "changed": 0,
+  "liveSelectorSha256": "21679a4eab90a9237f19e2513cc5ddc2d48e8bdee67d5d1a4005cdd3b0153c0f",
+  "candidateSelectorSha256": "aef7a8a46e867d66ab5c472e8f20bd40f9e64e68bd6fc265610021a246c4f981",
+  "rows": [
+    {
+      "id": "basic-0",
+      "source": "bench/corpus/anchor/examples/tutorial/basic-0/programs/basic-0/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "basic-1",
+      "source": "bench/corpus/anchor/examples/tutorial/basic-1/programs/basic-1/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "basic-2",
+      "source": "bench/corpus/anchor/examples/tutorial/basic-2/programs/basic-2/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "puppet",
+      "source": "bench/corpus/anchor/examples/tutorial/basic-3/programs/puppet/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "puppet-master",
+      "source": "bench/corpus/anchor/examples/tutorial/basic-3/programs/puppet-master/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "basic-4",
+      "source": "bench/corpus/anchor/examples/tutorial/basic-4/programs/basic-4/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "basic-5",
+      "source": "bench/corpus/anchor/examples/tutorial/basic-5/programs/basic-5/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "declare-id",
+      "source": "bench/corpus/anchor/tests/declare-id/programs/declare-id/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "multiple-suites",
+      "source": "bench/corpus/anchor/tests/multiple-suites/programs/multiple-suites/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "system-accounts",
+      "source": "bench/corpus/anchor/tests/system-accounts/programs/system-accounts/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "floats",
+      "source": "bench/corpus/anchor/tests/floats/programs/floats/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "events",
+      "source": "bench/corpus/anchor/tests/events/programs/events/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "errors",
+      "source": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "relations-derivation",
+      "source": "bench/corpus/anchor/tests/relations-derivation/programs/relations-derivation/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-spl-metadata-programs-metadata",
+      "source": "bench/corpus/anchor/tests/spl/metadata/programs/metadata/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-spl-token",
+      "source": "bench/corpus/anchor/tests/custom-coder/programs/spl-token/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-validator-clone-programs-validator-clone",
+      "source": "bench/corpus/anchor/tests/validator-clone/programs/validator-clone/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-one",
+      "source": "bench/corpus/anchor/tests/anchor-cli-idl/programs/idl-commands-one/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-two",
+      "source": "bench/corpus/anchor/tests/anchor-cli-idl/programs/idl-commands-two/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "source": "bench/corpus/anchor/tests/multiple-suites-run-single/programs/multiple-suites-run-single/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-spl-associated-token",
+      "source": "bench/corpus/anchor/tests/custom-coder/programs/spl-associated-token/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-account-info",
+      "source": "bench/corpus/anchor/tests/safety-checks/programs/account-info/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-unchecked-account",
+      "source": "bench/corpus/anchor/tests/safety-checks/programs/unchecked-account/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-sysvars-programs-sysvars",
+      "source": "bench/corpus/anchor/tests/sysvars/programs/sysvars/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-typescript-programs-typescript",
+      "source": "bench/corpus/anchor/tests/typescript/programs/typescript/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-external",
+      "source": "bench/corpus/anchor/tests/idl/programs/external/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-ignore-non-accounts",
+      "source": "bench/corpus/anchor/tests/safety-checks/programs/ignore-non-accounts/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-docs",
+      "source": "bench/corpus/anchor/tests/idl/programs/docs/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-optional-programs-allow-missing-optionals",
+      "source": "bench/corpus/anchor/tests/optional/programs/allow-missing-optionals/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-zero-copy-programs-zero-cpi",
+      "source": "bench/corpus/anchor/tests/zero-copy/programs/zero-cpi/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-account-programs-account-command",
+      "source": "bench/corpus/anchor/tests/anchor-cli-account/programs/account-command/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-composite-programs-composite",
+      "source": "bench/corpus/anchor/tests/composite/programs/composite/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-cpi-returns-programs-callee",
+      "source": "bench/corpus/anchor/tests/cpi-returns/programs/callee/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-relations-derivation",
+      "source": "bench/corpus/anchor/tests/idl/programs/relations-derivation/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-init-if-needed",
+      "source": "bench/corpus/anchor/tests/misc/programs/init-if-needed/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-generics",
+      "source": "bench/corpus/anchor/tests/idl/programs/generics/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+      "source": "bench/corpus/anchor/tests/custom-discriminator/programs/custom-discriminator/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-remaining-accounts",
+      "source": "bench/corpus/anchor/tests/misc/programs/remaining-accounts/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-realloc-programs-realloc",
+      "source": "bench/corpus/anchor/tests/realloc/programs/realloc/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-cpi-returns-programs-caller",
+      "source": "bench/corpus/anchor/tests/cpi-returns/programs/caller/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-lamports",
+      "source": "bench/corpus/anchor/tests/misc/programs/lamports/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-chat-programs-chat",
+      "source": "bench/corpus/anchor/tests/chat/programs/chat/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-declare-program-programs-external",
+      "source": "bench/corpus/anchor/tests/declare-program/programs/external/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-overflow-checks",
+      "source": "bench/corpus/anchor/tests/misc/programs/overflow-checks/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-pyth-programs-pyth",
+      "source": "bench/corpus/anchor/tests/pyth/programs/pyth/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-native-system",
+      "source": "bench/corpus/anchor/tests/custom-coder/programs/native-system/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-optional-programs-optional",
+      "source": "bench/corpus/anchor/tests/optional/programs/optional/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-zero-copy-programs-zero-copy",
+      "source": "bench/corpus/anchor/tests/zero-copy/programs/zero-copy/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-spl-transfer-hook-programs-transfer-hook",
+      "source": "bench/corpus/anchor/tests/spl/transfer-hook/programs/transfer-hook/src/lib.rs",
+      "currentReason": "representation observation size_of with unresolved type at lib.rs",
+      "candidateReason": "representation observation size_of with unresolved type at lib.rs",
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+      "source": "bench/corpus/anchor/tests/cashiers-check/programs/cashiers-check/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-idl",
+      "source": "bench/corpus/anchor/tests/idl/programs/idl/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+      "source": "bench/corpus/anchor/tests/spl/token-proxy/programs/token-proxy/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-escrow-programs-escrow",
+      "source": "bench/corpus/anchor/tests/escrow/programs/escrow/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+      "source": "bench/corpus/anchor/tests/spl/token-wrapper/programs/token-wrapper/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-misc-optional",
+      "source": "bench/corpus/anchor/tests/misc/programs/misc-optional/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-misc",
+      "source": "bench/corpus/anchor/tests/misc/programs/misc/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_31_1-tests-bench-programs-bench",
+      "source": "bench/corpus/anchor/tests/bench/programs/bench/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-spl-metadata-programs-metadata",
+      "source": "bench/corpus/anchor-0.32.3/tests/spl/metadata/programs/metadata/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-spl-token",
+      "source": "bench/corpus/anchor-0.32.3/tests/custom-coder/programs/spl-token/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-0-programs-basic-0",
+      "source": "bench/corpus/anchor-0.32.3/examples/tutorial/basic-0/programs/basic-0/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-validator-clone-programs-validator-clone",
+      "source": "bench/corpus/anchor-0.32.3/tests/validator-clone/programs/validator-clone/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-one",
+      "source": "bench/corpus/anchor-0.32.3/tests/anchor-cli-idl/programs/idl-commands-one/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-two",
+      "source": "bench/corpus/anchor-0.32.3/tests/anchor-cli-idl/programs/idl-commands-two/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "source": "bench/corpus/anchor-0.32.3/tests/multiple-suites-run-single/programs/multiple-suites-run-single/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-spl-associated-token",
+      "source": "bench/corpus/anchor-0.32.3/tests/custom-coder/programs/spl-associated-token/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-account-info",
+      "source": "bench/corpus/anchor-0.32.3/tests/safety-checks/programs/account-info/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-unchecked-account",
+      "source": "bench/corpus/anchor-0.32.3/tests/safety-checks/programs/unchecked-account/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-declare-id-programs-declare-id",
+      "source": "bench/corpus/anchor-0.32.3/tests/declare-id/programs/declare-id/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-system-accounts-programs-system-accounts",
+      "source": "bench/corpus/anchor-0.32.3/tests/system-accounts/programs/system-accounts/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-multiple-suites-programs-multiple-suites",
+      "source": "bench/corpus/anchor-0.32.3/tests/multiple-suites/programs/multiple-suites/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-sysvars-programs-sysvars",
+      "source": "bench/corpus/anchor-0.32.3/tests/sysvars/programs/sysvars/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-typescript-programs-typescript",
+      "source": "bench/corpus/anchor-0.32.3/tests/typescript/programs/typescript/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-external",
+      "source": "bench/corpus/anchor-0.32.3/tests/idl/programs/external/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-ignore-non-accounts",
+      "source": "bench/corpus/anchor-0.32.3/tests/safety-checks/programs/ignore-non-accounts/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-3-programs-puppet",
+      "source": "bench/corpus/anchor-0.32.3/examples/tutorial/basic-3/programs/puppet/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+      "source": "bench/corpus/anchor-0.32.3/examples/tutorial/basic-3/programs/puppet-master/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-docs",
+      "source": "bench/corpus/anchor-0.32.3/tests/idl/programs/docs/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-optional-programs-allow-missing-optionals",
+      "source": "bench/corpus/anchor-0.32.3/tests/optional/programs/allow-missing-optionals/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-1-programs-basic-1",
+      "source": "bench/corpus/anchor-0.32.3/examples/tutorial/basic-1/programs/basic-1/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-2-programs-basic-2",
+      "source": "bench/corpus/anchor-0.32.3/examples/tutorial/basic-2/programs/basic-2/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-zero-copy-programs-zero-cpi",
+      "source": "bench/corpus/anchor-0.32.3/tests/zero-copy/programs/zero-cpi/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-events-programs-events",
+      "source": "bench/corpus/anchor-0.32.3/tests/events/programs/events/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-account-programs-account-command",
+      "source": "bench/corpus/anchor-0.32.3/tests/anchor-cli-account/programs/account-command/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-floats-programs-floats",
+      "source": "bench/corpus/anchor-0.32.3/tests/floats/programs/floats/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-composite-programs-composite",
+      "source": "bench/corpus/anchor-0.32.3/tests/composite/programs/composite/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-cpi-returns-programs-callee",
+      "source": "bench/corpus/anchor-0.32.3/tests/cpi-returns/programs/callee/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-relations-derivation",
+      "source": "bench/corpus/anchor-0.32.3/tests/idl/programs/relations-derivation/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-init-if-needed",
+      "source": "bench/corpus/anchor-0.32.3/tests/misc/programs/init-if-needed/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+      "source": "bench/corpus/anchor-0.32.3/examples/tutorial/basic-4/programs/basic-4/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-generics",
+      "source": "bench/corpus/anchor-0.32.3/tests/idl/programs/generics/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+      "source": "bench/corpus/anchor-0.32.3/tests/custom-discriminator/programs/custom-discriminator/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-remaining-accounts",
+      "source": "bench/corpus/anchor-0.32.3/tests/misc/programs/remaining-accounts/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-relations-derivation-programs-relations-derivation",
+      "source": "bench/corpus/anchor-0.32.3/tests/relations-derivation/programs/relations-derivation/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-realloc-programs-realloc",
+      "source": "bench/corpus/anchor-0.32.3/tests/realloc/programs/realloc/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-cpi-returns-programs-caller",
+      "source": "bench/corpus/anchor-0.32.3/tests/cpi-returns/programs/caller/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-lamports",
+      "source": "bench/corpus/anchor-0.32.3/tests/misc/programs/lamports/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-chat-programs-chat",
+      "source": "bench/corpus/anchor-0.32.3/tests/chat/programs/chat/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-declare-program-programs-external",
+      "source": "bench/corpus/anchor-0.32.3/tests/declare-program/programs/external/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+      "source": "bench/corpus/anchor-0.32.3/examples/tutorial/basic-5/programs/basic-5/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-overflow-checks",
+      "source": "bench/corpus/anchor-0.32.3/tests/misc/programs/overflow-checks/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-pyth-programs-pyth",
+      "source": "bench/corpus/anchor-0.32.3/tests/pyth/programs/pyth/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-native-system",
+      "source": "bench/corpus/anchor-0.32.3/tests/custom-coder/programs/native-system/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-optional-programs-optional",
+      "source": "bench/corpus/anchor-0.32.3/tests/optional/programs/optional/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-zero-copy-programs-zero-copy",
+      "source": "bench/corpus/anchor-0.32.3/tests/zero-copy/programs/zero-copy/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-errors-programs-errors",
+      "source": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-spl-transfer-hook-programs-transfer-hook",
+      "source": "bench/corpus/anchor-0.32.3/tests/spl/transfer-hook/programs/transfer-hook/src/lib.rs",
+      "currentReason": "representation observation size_of with unresolved type at lib.rs",
+      "candidateReason": "representation observation size_of with unresolved type at lib.rs",
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+      "source": "bench/corpus/anchor-0.32.3/tests/cashiers-check/programs/cashiers-check/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-idl",
+      "source": "bench/corpus/anchor-0.32.3/tests/idl/programs/idl/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+      "source": "bench/corpus/anchor-0.32.3/tests/spl/token-proxy/programs/token-proxy/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-escrow-programs-escrow",
+      "source": "bench/corpus/anchor-0.32.3/tests/escrow/programs/escrow/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+      "source": "bench/corpus/anchor-0.32.3/tests/spl/token-wrapper/programs/token-wrapper/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-new-idl",
+      "source": "bench/corpus/anchor-0.32.3/tests/idl/programs/new-idl/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-misc-optional",
+      "source": "bench/corpus/anchor-0.32.3/tests/misc/programs/misc-optional/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-misc",
+      "source": "bench/corpus/anchor-0.32.3/tests/misc/programs/misc/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v0_32_3-tests-bench-programs-bench",
+      "source": "bench/corpus/anchor-0.32.3/tests/bench/programs/bench/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-spl-metadata-programs-metadata",
+      "source": "bench/corpus/anchor-1.2.2/tests/spl/metadata/programs/metadata/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-spl-token",
+      "source": "bench/corpus/anchor-1.2.2/tests/custom-coder/programs/spl-token/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-0-programs-basic-0",
+      "source": "bench/corpus/anchor-1.2.2/examples/tutorial/basic-0/programs/basic-0/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-env-id",
+      "source": "bench/corpus/anchor-1.2.2/tests/idl/programs/env-id/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-validator-clone-programs-validator-clone",
+      "source": "bench/corpus/anchor-1.2.2/tests/validator-clone/programs/validator-clone/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-one",
+      "source": "bench/corpus/anchor-1.2.2/tests/anchor-cli-idl/programs/idl-commands-one/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-two",
+      "source": "bench/corpus/anchor-1.2.2/tests/anchor-cli-idl/programs/idl-commands-two/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-solana-program-deps-matching-programs-matching-solana-program",
+      "source": "bench/corpus/anchor-1.2.2/tests/solana-program-deps/matching/programs/matching-solana-program/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-solana-program-deps-mismatched-programs-mismatched-solana-program",
+      "source": "bench/corpus/anchor-1.2.2/tests/solana-program-deps/mismatched/programs/mismatched-solana-program/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "source": "bench/corpus/anchor-1.2.2/tests/multiple-suites-run-single/programs/multiple-suites-run-single/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-spl-associated-token",
+      "source": "bench/corpus/anchor-1.2.2/tests/custom-coder/programs/spl-associated-token/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-multiple-scripts-programs-example",
+      "source": "bench/corpus/anchor-1.2.2/tests/multiple-scripts/programs/example/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-account-info",
+      "source": "bench/corpus/anchor-1.2.2/tests/safety-checks/programs/account-info/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-unchecked-account",
+      "source": "bench/corpus/anchor-1.2.2/tests/safety-checks/programs/unchecked-account/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-declare-id-programs-declare-id",
+      "source": "bench/corpus/anchor-1.2.2/tests/declare-id/programs/declare-id/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-system-accounts-programs-system-accounts",
+      "source": "bench/corpus/anchor-1.2.2/tests/system-accounts/programs/system-accounts/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-multiple-suites-programs-multiple-suites",
+      "source": "bench/corpus/anchor-1.2.2/tests/multiple-suites/programs/multiple-suites/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-sysvars-programs-sysvars",
+      "source": "bench/corpus/anchor-1.2.2/tests/sysvars/programs/sysvars/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-typescript-programs-typescript",
+      "source": "bench/corpus/anchor-1.2.2/tests/typescript/programs/typescript/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-legacy-idl-programs-anchor-cli-legacy-idl",
+      "source": "bench/corpus/anchor-1.2.2/tests/anchor-cli-legacy-idl/programs/anchor-cli-legacy-idl/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-interface-account-programs-old",
+      "source": "bench/corpus/anchor-1.2.2/tests/interface-account/programs/old/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-external",
+      "source": "bench/corpus/anchor-1.2.2/tests/idl/programs/external/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-account-generation-test-programs-account-generation-test",
+      "source": "bench/corpus/anchor-1.2.2/tests/account-generation-test/programs/account-generation-test/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-ignore-non-accounts",
+      "source": "bench/corpus/anchor-1.2.2/tests/safety-checks/programs/ignore-non-accounts/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation",
+      "source": "bench/corpus/anchor-1.2.2/tests/test-instruction-validation/pass-args-count/programs/test-instruction-validation/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-3-programs-puppet",
+      "source": "bench/corpus/anchor-1.2.2/examples/tutorial/basic-3/programs/puppet/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+      "source": "bench/corpus/anchor-1.2.2/examples/tutorial/basic-3/programs/puppet-master/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-docs",
+      "source": "bench/corpus/anchor-1.2.2/tests/idl/programs/docs/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-optional-programs-allow-missing-optionals",
+      "source": "bench/corpus/anchor-1.2.2/tests/optional/programs/allow-missing-optionals/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-malicious",
+      "source": "bench/corpus/anchor-1.2.2/tests/cpi-returns/programs/malicious/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-1-programs-basic-1",
+      "source": "bench/corpus/anchor-1.2.2/examples/tutorial/basic-1/programs/basic-1/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-interface-account-programs-new",
+      "source": "bench/corpus/anchor-1.2.2/tests/interface-account/programs/new/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-2-programs-basic-2",
+      "source": "bench/corpus/anchor-1.2.2/examples/tutorial/basic-2/programs/basic-2/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-events-programs-events",
+      "source": "bench/corpus/anchor-1.2.2/tests/events/programs/events/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-account-programs-account-command",
+      "source": "bench/corpus/anchor-1.2.2/tests/anchor-cli-account/programs/account-command/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-floats-programs-floats",
+      "source": "bench/corpus/anchor-1.2.2/tests/floats/programs/floats/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-composite-programs-composite",
+      "source": "bench/corpus/anchor-1.2.2/tests/composite/programs/composite/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation",
+      "source": "bench/corpus/anchor-1.2.2/tests/test-instruction-validation/pass-type/programs/test-instruction-validation/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-relations-derivation",
+      "source": "bench/corpus/anchor-1.2.2/tests/idl/programs/relations-derivation/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-init-if-needed",
+      "source": "bench/corpus/anchor-1.2.2/tests/misc/programs/init-if-needed/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+      "source": "bench/corpus/anchor-1.2.2/examples/tutorial/basic-4/programs/basic-4/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-callee",
+      "source": "bench/corpus/anchor-1.2.2/tests/cpi-returns/programs/callee/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-custom-program-programs-custom-program",
+      "source": "bench/corpus/anchor-1.2.2/tests/custom-program/programs/custom-program/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+      "source": "bench/corpus/anchor-1.2.2/tests/custom-discriminator/programs/custom-discriminator/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-remaining-accounts",
+      "source": "bench/corpus/anchor-1.2.2/tests/misc/programs/remaining-accounts/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-generics",
+      "source": "bench/corpus/anchor-1.2.2/tests/idl/programs/generics/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-relations-derivation-programs-relations-derivation",
+      "source": "bench/corpus/anchor-1.2.2/tests/relations-derivation/programs/relations-derivation/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-lamports",
+      "source": "bench/corpus/anchor-1.2.2/tests/misc/programs/lamports/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-chat-programs-chat",
+      "source": "bench/corpus/anchor-1.2.2/tests/chat/programs/chat/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+      "source": "bench/corpus/anchor-1.2.2/examples/tutorial/basic-5/programs/basic-5/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-overflow-checks",
+      "source": "bench/corpus/anchor-1.2.2/tests/misc/programs/overflow-checks/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-pyth-programs-pyth",
+      "source": "bench/corpus/anchor-1.2.2/tests/pyth/programs/pyth/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+      "source": "bench/corpus/anchor-1.2.2/tests/accountloader-realloc/programs/accountloader-realloc/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-native-system",
+      "source": "bench/corpus/anchor-1.2.2/tests/custom-coder/programs/native-system/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-realloc-programs-realloc",
+      "source": "bench/corpus/anchor-1.2.2/tests/realloc/programs/realloc/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-optional-programs-optional",
+      "source": "bench/corpus/anchor-1.2.2/tests/optional/programs/optional/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-errors-programs-errors",
+      "source": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+      "source": "bench/corpus/anchor-1.2.2/tests/duplicate-mutable-accounts/programs/duplicate-mutable-accounts/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-spl-transfer-hook-programs-transfer-hook",
+      "source": "bench/corpus/anchor-1.2.2/tests/spl/transfer-hook/programs/transfer-hook/src/lib.rs",
+      "currentReason": "representation observation size_of with unresolved type at lib.rs",
+      "candidateReason": "representation observation size_of with unresolved type at lib.rs",
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-declare-program-programs-declare-program",
+      "source": "bench/corpus/anchor-1.2.2/tests/declare-program/programs/declare-program/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-tictactoe-programs-tictactoe",
+      "source": "bench/corpus/anchor-1.2.2/tests/tictactoe/programs/tictactoe/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+      "source": "bench/corpus/anchor-1.2.2/tests/cashiers-check/programs/cashiers-check/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-declare-program-programs-external",
+      "source": "bench/corpus/anchor-1.2.2/tests/declare-program/programs/external/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-caller",
+      "source": "bench/corpus/anchor-1.2.2/tests/cpi-returns/programs/caller/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+      "source": "bench/corpus/anchor-1.2.2/tests/spl/token-proxy/programs/token-proxy/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-escrow-programs-escrow",
+      "source": "bench/corpus/anchor-1.2.2/tests/escrow/programs/escrow/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+      "source": "bench/corpus/anchor-1.2.2/tests/spl/token-wrapper/programs/token-wrapper/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-misc-optional",
+      "source": "bench/corpus/anchor-1.2.2/tests/misc/programs/misc-optional/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-misc",
+      "source": "bench/corpus/anchor-1.2.2/tests/misc/programs/misc/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "v1_2_2-tests-bench-programs-bench",
+      "source": "bench/corpus/anchor-1.2.2/tests/bench/programs/bench/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "tare-registry",
+      "source": "registry/programs/tare-registry/src/lib.rs",
+      "currentReason": null,
+      "candidateReason": null,
+      "changed": false
+    },
+    {
+      "id": "production-squads-v4",
+      "source": "bench/corpus/squads-v4/programs/squads_multisig_program/src/lib.rs",
+      "currentReason": "representation observation size_of<T> at utils\\small_vec.rs",
+      "candidateReason": "representation observation size_of<T> at utils\\small_vec.rs",
+      "changed": false
+    },
+    {
+      "id": "production-whirlpools",
+      "source": "bench/corpus/whirlpools/programs/whirlpool/src/lib.rs",
+      "currentReason": "representation observation size_of<Self> at math\\bn.rs",
+      "candidateReason": "representation observation size_of<Self> at math\\bn.rs",
+      "changed": false
+    },
+    {
+      "id": "production-marinade",
+      "source": "bench/corpus/marinade/programs/marinade-finance/src/lib.rs",
+      "currentReason": "representation observation size_of<StakeState> at checks.rs",
+      "candidateReason": "representation observation size_of<StakeState> at checks.rs",
+      "changed": false
+    }
+  ]
+}
