@@ -1,0 +1,99 @@
+.line {
+  display: flex;
+  align-items: stretch;
+  min-height: 44px;
+  max-width: 100%;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  overflow: hidden;
+  transition: border-color var(--t-panel) var(--ease);
+}
+/* The line answers a copy: its edge and its prompt take the net's green for a moment. */
+.line:has(.copy[data-done='true']) {
+  border-color: color-mix(in srgb, var(--green) 62%, transparent);
+}
+.line:has(.copy[data-done='true']) .prompt {
+  color: var(--green);
+}
+
+.code {
+  flex: 1;
+  min-width: 0;
+  display: block;
+  padding: 11px var(--s3);
+  font-family: var(--mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.prompt {
+  color: var(--ink-3);
+  margin-right: 0.75em;
+  user-select: none;
+  transition: color var(--t-panel) var(--ease);
+}
+
+.labels {
+  display: inline-grid;
+  justify-items: center;
+  overflow: hidden;
+  line-height: 1.5;
+  vertical-align: middle;
+  transition: transform var(--t-press) var(--ease);
+}
+.labels > span {
+  grid-area: 1 / 1;
+  transition:
+    transform 0.34s var(--out),
+    opacity 0.2s var(--ease);
+}
+.labels > :last-child,
+.copy[data-done='true'] .labels > :first-child {
+  opacity: 0;
+}
+.labels > :last-child {
+  transform: translateY(100%);
+}
+.copy[data-done='true'] .labels > :first-child {
+  transform: translateY(-100%);
+}
+.copy[data-done='true'] .labels > :last-child {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .labels > span {
+    transition: none;
+  }
+}
+
+.copy {
+  flex: none;
+  min-width: 76px;
+  padding: 0 var(--s3);
+  border-left: 1px solid var(--line);
+  font-size: var(--small-size);
+  font-weight: 500;
+  color: var(--ink-2);
+  transition: color var(--t-hover) var(--ease), background var(--t-hover) var(--ease);
+}
+.copy[data-done='true'] {
+  color: var(--green);
+}
+.copy:active {
+  background: var(--raised);
+}
+.copy:active .labels {
+  transform: scale(0.94);
+}
+@media (hover: hover) and (pointer: fine) {
+  .copy:hover:not([data-done='true']) {
+    color: var(--ink);
+    background: var(--raised);
+  }
+}

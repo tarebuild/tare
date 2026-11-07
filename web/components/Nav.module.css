@@ -1,0 +1,239 @@
+/* The nav is one capsule of glass floating over whatever scrolls beneath it. */
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-bar);
+  height: var(--bar);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--edge);
+  pointer-events: none;
+}
+
+.capsule {
+  position: relative;
+  isolation: isolate;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  height: 46px;
+  padding: 0 5px 0 18px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgb(255 255 255 / 0.13), rgb(255 255 255 / 0.06));
+  -webkit-backdrop-filter: blur(22px) saturate(180%) brightness(0.72);
+  backdrop-filter: blur(22px) saturate(180%) brightness(0.72);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.2),
+    0 10px 30px rgb(0 0 0 / 0.45);
+}
+
+/* The rim: light caught along the upper edge, let go toward the lower right. */
+.capsule::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(140deg, rgb(255 255 255 / 0.5), rgb(255 255 255 / 0.08) 32%, rgb(255 255 255 / 0.04) 64%, rgb(255 255 255 / 0.28));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.home {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  margin-right: var(--s3);
+  color: var(--ink);
+}
+
+.places {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: var(--s3);
+}
+
+/* The pill the places share: it rests on the current one and travels to the one pointed at. */
+.pill {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 32px;
+  margin-top: -16px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.16);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-hover) var(--ease);
+}
+.pill[data-on='true'] {
+  opacity: 1;
+}
+.pill[data-slide='true'] {
+  transition:
+    opacity var(--t-hover) var(--ease),
+    transform 0.38s var(--out),
+    width 0.38s var(--out);
+}
+@media (prefers-reduced-motion: reduce) {
+  .pill[data-slide='true'] {
+    transition: opacity var(--t-hover) var(--ease);
+  }
+}
+
+.place {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 13px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  color: rgb(255 255 255 / 0.72);
+  transition: color var(--t-hover) var(--ease), background var(--t-hover) var(--ease), transform var(--t-press) var(--ease);
+}
+.place[aria-current='page'] {
+  color: #fff;
+}
+/* Until the pill has been measured the current place carries its own ground. */
+.places:not([data-pill]) .place[aria-current='page'] {
+  background: rgb(255 255 255 / 0.16);
+}
+.place:active {
+  transform: scale(0.96);
+}
+@media (hover: hover) and (pointer: fine) {
+  .place:hover:not([aria-current='page']) {
+    color: #fff;
+  }
+}
+
+/* Once the page has moved under it the capsule sits a little heavier. */
+.capsule {
+  transition:
+    box-shadow var(--t-panel) var(--ease),
+    background var(--t-panel) var(--ease);
+}
+.bar[data-scrolled='true'] .capsule {
+  background: linear-gradient(180deg, rgb(255 255 255 / 0.16), rgb(255 255 255 / 0.08));
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.22),
+    0 14px 40px rgb(0 0 0 / 0.62);
+}
+
+.capsule .action {
+  height: 36px;
+  padding: 0 16px;
+  font-size: 0.875rem;
+}
+
+.toggle {
+  display: none;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  background: rgb(255 255 255 / 0.14);
+}
+
+.sheet {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-bar) - 1);
+  background: rgb(0 0 0 / 0.72);
+  -webkit-backdrop-filter: saturate(180%) blur(30px);
+  backdrop-filter: saturate(180%) blur(30px);
+  padding: calc(var(--bar) + var(--s6)) var(--edge) var(--s7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--s6);
+  overflow-y: auto;
+}
+.sheet[hidden] {
+  display: none;
+}
+
+.sheetPlaces {
+  display: grid;
+  justify-items: start;
+}
+
+/* The sheet comes up in order: its ground, then each place. */
+@keyframes sheetIn {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes placeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sheet {
+    animation: sheetIn 0.24s var(--ease) backwards;
+  }
+  .sheetPlace,
+  .sheet > :global(.btn) {
+    animation: placeIn 0.5s var(--out) backwards;
+  }
+  .sheetPlace:nth-child(2) {
+    animation-delay: 50ms;
+  }
+  .sheetPlace:nth-child(3) {
+    animation-delay: 100ms;
+  }
+  .sheetPlace:nth-child(n + 4) {
+    animation-delay: 150ms;
+  }
+  .sheet > :global(.btn) {
+    animation-delay: 200ms;
+  }
+}
+
+.toggle:active {
+  transform: scale(0.96);
+}
+
+.sheetPlace {
+  font-size: clamp(2rem, 10vw, 3rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+  color: rgb(255 255 255 / 0.6);
+}
+.sheetPlace[aria-current='page'],
+.sheetPlace:active {
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .places,
+  .capsule .action {
+    display: none;
+  }
+  .capsule {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+  }
+}
