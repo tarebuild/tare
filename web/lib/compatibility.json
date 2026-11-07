@@ -1,0 +1,2308 @@
+{
+  "schemaVersion": "1",
+  "fixture": false,
+  "toolchainVersion": "0.7.0",
+  "generatedAt": "2026-11-15T03:16:32.086Z",
+  "anchorVersions": [
+    "0.31.1",
+    "0.32.3",
+    "1.2.2",
+    "0.32.1",
+    "0.29.0"
+  ],
+  "constructs": [
+    {
+      "construct": "#[access_control]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "v0_31_1-tests-cashiers-check-programs-cashiers-check"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-cashiers-check-programs-cashiers-check"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-tictactoe-programs-tictactoe",
+            "v1_2_2-tests-cashiers-check-programs-cashiers-check"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "#[account]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "puppet-master",
+            "basic-4",
+            "basic-5",
+            "floats",
+            "errors",
+            "relations-derivation",
+            "v0_31_1-tests-idl-programs-docs",
+            "v0_31_1-tests-optional-programs-allow-missing-optionals",
+            "v0_31_1-tests-zero-copy-programs-zero-cpi",
+            "v0_31_1-tests-anchor-cli-account-programs-account-command",
+            "v0_31_1-tests-composite-programs-composite",
+            "v0_31_1-tests-cpi-returns-programs-callee",
+            "v0_31_1-tests-idl-programs-relations-derivation",
+            "v0_31_1-tests-misc-programs-init-if-needed",
+            "v0_31_1-tests-idl-programs-generics",
+            "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_31_1-tests-misc-programs-remaining-accounts",
+            "v0_31_1-tests-realloc-programs-realloc",
+            "v0_31_1-tests-cpi-returns-programs-caller",
+            "v0_31_1-tests-misc-programs-lamports",
+            "v0_31_1-tests-chat-programs-chat",
+            "v0_31_1-tests-declare-program-programs-external",
+            "v0_31_1-tests-misc-programs-overflow-checks",
+            "v0_31_1-tests-custom-coder-programs-native-system",
+            "v0_31_1-tests-optional-programs-optional",
+            "v0_31_1-tests-zero-copy-programs-zero-copy",
+            "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-escrow-programs-escrow",
+            "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_31_1-tests-misc-programs-misc-optional",
+            "v0_31_1-tests-misc-programs-misc",
+            "v0_31_1-tests-bench-programs-bench",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet",
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+            "v0_32_3-tests-idl-programs-docs",
+            "v0_32_3-tests-optional-programs-allow-missing-optionals",
+            "v0_32_3-examples-tutorial-basic-1-programs-basic-1",
+            "v0_32_3-examples-tutorial-basic-2-programs-basic-2",
+            "v0_32_3-tests-zero-copy-programs-zero-cpi",
+            "v0_32_3-tests-anchor-cli-account-programs-account-command",
+            "v0_32_3-tests-floats-programs-floats",
+            "v0_32_3-tests-composite-programs-composite",
+            "v0_32_3-tests-cpi-returns-programs-callee",
+            "v0_32_3-tests-idl-programs-relations-derivation",
+            "v0_32_3-tests-misc-programs-init-if-needed",
+            "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+            "v0_32_3-tests-idl-programs-generics",
+            "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_32_3-tests-misc-programs-remaining-accounts",
+            "v0_32_3-tests-relations-derivation-programs-relations-derivation",
+            "v0_32_3-tests-realloc-programs-realloc",
+            "v0_32_3-tests-cpi-returns-programs-caller",
+            "v0_32_3-tests-misc-programs-lamports",
+            "v0_32_3-tests-chat-programs-chat",
+            "v0_32_3-tests-declare-program-programs-external",
+            "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+            "v0_32_3-tests-misc-programs-overflow-checks",
+            "v0_32_3-tests-custom-coder-programs-native-system",
+            "v0_32_3-tests-optional-programs-optional",
+            "v0_32_3-tests-zero-copy-programs-zero-copy",
+            "v0_32_3-tests-errors-programs-errors",
+            "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-escrow-programs-escrow",
+            "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc-optional",
+            "v0_32_3-tests-misc-programs-misc",
+            "v0_32_3-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-interface-account-programs-old",
+            "v1_2_2-tests-idl-programs-external",
+            "v1_2_2-tests-account-generation-test-programs-account-generation-test",
+            "v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+            "v1_2_2-tests-idl-programs-docs",
+            "v1_2_2-tests-optional-programs-allow-missing-optionals",
+            "v1_2_2-examples-tutorial-basic-1-programs-basic-1",
+            "v1_2_2-tests-interface-account-programs-new",
+            "v1_2_2-examples-tutorial-basic-2-programs-basic-2",
+            "v1_2_2-tests-anchor-cli-account-programs-account-command",
+            "v1_2_2-tests-floats-programs-floats",
+            "v1_2_2-tests-composite-programs-composite",
+            "v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation",
+            "v1_2_2-tests-idl-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-init-if-needed",
+            "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+            "v1_2_2-tests-cpi-returns-programs-callee",
+            "v1_2_2-tests-custom-program-programs-custom-program",
+            "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+            "v1_2_2-tests-misc-programs-remaining-accounts",
+            "v1_2_2-tests-idl-programs-generics",
+            "v1_2_2-tests-relations-derivation-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-lamports",
+            "v1_2_2-tests-chat-programs-chat",
+            "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+            "v1_2_2-tests-misc-programs-overflow-checks",
+            "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+            "v1_2_2-tests-custom-coder-programs-native-system",
+            "v1_2_2-tests-realloc-programs-realloc",
+            "v1_2_2-tests-optional-programs-optional",
+            "v1_2_2-tests-errors-programs-errors",
+            "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+            "v1_2_2-tests-declare-program-programs-declare-program",
+            "v1_2_2-tests-tictactoe-programs-tictactoe",
+            "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-cpi-returns-programs-caller",
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-escrow-programs-escrow",
+            "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+            "v1_2_2-tests-misc-programs-misc-optional",
+            "v1_2_2-tests-misc-programs-misc",
+            "v1_2_2-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "#[constant]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "v0_31_1-tests-idl-programs-docs",
+            "v0_31_1-tests-declare-program-programs-external",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-misc-programs-misc-optional"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-idl-programs-docs",
+            "v0_32_3-tests-declare-program-programs-external",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc-optional"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-idl-programs-docs",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-misc-programs-misc-optional"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "#[derive(Accounts)]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-0",
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "puppet-master",
+            "basic-4",
+            "basic-5",
+            "declare-id",
+            "multiple-suites",
+            "system-accounts",
+            "floats",
+            "events",
+            "errors",
+            "relations-derivation",
+            "v0_31_1-tests-validator-clone-programs-validator-clone",
+            "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-one",
+            "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-two",
+            "v0_31_1-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+            "v0_31_1-tests-safety-checks-programs-account-info",
+            "v0_31_1-tests-safety-checks-programs-unchecked-account",
+            "v0_31_1-tests-sysvars-programs-sysvars",
+            "v0_31_1-tests-typescript-programs-typescript",
+            "v0_31_1-tests-idl-programs-external",
+            "v0_31_1-tests-safety-checks-programs-ignore-non-accounts",
+            "v0_31_1-tests-idl-programs-docs",
+            "v0_31_1-tests-optional-programs-allow-missing-optionals",
+            "v0_31_1-tests-zero-copy-programs-zero-cpi",
+            "v0_31_1-tests-anchor-cli-account-programs-account-command",
+            "v0_31_1-tests-composite-programs-composite",
+            "v0_31_1-tests-cpi-returns-programs-callee",
+            "v0_31_1-tests-idl-programs-relations-derivation",
+            "v0_31_1-tests-misc-programs-init-if-needed",
+            "v0_31_1-tests-idl-programs-generics",
+            "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_31_1-tests-misc-programs-remaining-accounts",
+            "v0_31_1-tests-realloc-programs-realloc",
+            "v0_31_1-tests-cpi-returns-programs-caller",
+            "v0_31_1-tests-misc-programs-lamports",
+            "v0_31_1-tests-chat-programs-chat",
+            "v0_31_1-tests-declare-program-programs-external",
+            "v0_31_1-tests-misc-programs-overflow-checks",
+            "v0_31_1-tests-custom-coder-programs-native-system",
+            "v0_31_1-tests-optional-programs-optional",
+            "v0_31_1-tests-zero-copy-programs-zero-copy",
+            "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-escrow-programs-escrow",
+            "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_31_1-tests-misc-programs-misc-optional",
+            "v0_31_1-tests-misc-programs-misc",
+            "v0_31_1-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-examples-tutorial-basic-0-programs-basic-0",
+            "v0_32_3-tests-validator-clone-programs-validator-clone",
+            "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-one",
+            "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-two",
+            "v0_32_3-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+            "v0_32_3-tests-safety-checks-programs-account-info",
+            "v0_32_3-tests-safety-checks-programs-unchecked-account",
+            "v0_32_3-tests-declare-id-programs-declare-id",
+            "v0_32_3-tests-system-accounts-programs-system-accounts",
+            "v0_32_3-tests-multiple-suites-programs-multiple-suites",
+            "v0_32_3-tests-sysvars-programs-sysvars",
+            "v0_32_3-tests-typescript-programs-typescript",
+            "v0_32_3-tests-idl-programs-external",
+            "v0_32_3-tests-safety-checks-programs-ignore-non-accounts",
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet",
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+            "v0_32_3-tests-idl-programs-docs",
+            "v0_32_3-tests-optional-programs-allow-missing-optionals",
+            "v0_32_3-examples-tutorial-basic-1-programs-basic-1",
+            "v0_32_3-examples-tutorial-basic-2-programs-basic-2",
+            "v0_32_3-tests-zero-copy-programs-zero-cpi",
+            "v0_32_3-tests-events-programs-events",
+            "v0_32_3-tests-anchor-cli-account-programs-account-command",
+            "v0_32_3-tests-floats-programs-floats",
+            "v0_32_3-tests-composite-programs-composite",
+            "v0_32_3-tests-cpi-returns-programs-callee",
+            "v0_32_3-tests-idl-programs-relations-derivation",
+            "v0_32_3-tests-misc-programs-init-if-needed",
+            "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+            "v0_32_3-tests-idl-programs-generics",
+            "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_32_3-tests-misc-programs-remaining-accounts",
+            "v0_32_3-tests-relations-derivation-programs-relations-derivation",
+            "v0_32_3-tests-realloc-programs-realloc",
+            "v0_32_3-tests-cpi-returns-programs-caller",
+            "v0_32_3-tests-misc-programs-lamports",
+            "v0_32_3-tests-chat-programs-chat",
+            "v0_32_3-tests-declare-program-programs-external",
+            "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+            "v0_32_3-tests-misc-programs-overflow-checks",
+            "v0_32_3-tests-custom-coder-programs-native-system",
+            "v0_32_3-tests-optional-programs-optional",
+            "v0_32_3-tests-zero-copy-programs-zero-copy",
+            "v0_32_3-tests-errors-programs-errors",
+            "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-escrow-programs-escrow",
+            "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc-optional",
+            "v0_32_3-tests-misc-programs-misc",
+            "v0_32_3-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-examples-tutorial-basic-0-programs-basic-0",
+            "v1_2_2-tests-idl-programs-env-id",
+            "v1_2_2-tests-validator-clone-programs-validator-clone",
+            "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-one",
+            "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-two",
+            "v1_2_2-tests-solana-program-deps-matching-programs-matching-solana-program",
+            "v1_2_2-tests-solana-program-deps-mismatched-programs-mismatched-solana-program",
+            "v1_2_2-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+            "v1_2_2-tests-multiple-scripts-programs-example",
+            "v1_2_2-tests-safety-checks-programs-account-info",
+            "v1_2_2-tests-safety-checks-programs-unchecked-account",
+            "v1_2_2-tests-declare-id-programs-declare-id",
+            "v1_2_2-tests-system-accounts-programs-system-accounts",
+            "v1_2_2-tests-multiple-suites-programs-multiple-suites",
+            "v1_2_2-tests-sysvars-programs-sysvars",
+            "v1_2_2-tests-typescript-programs-typescript",
+            "v1_2_2-tests-anchor-cli-legacy-idl-programs-anchor-cli-legacy-idl",
+            "v1_2_2-tests-interface-account-programs-old",
+            "v1_2_2-tests-idl-programs-external",
+            "v1_2_2-tests-account-generation-test-programs-account-generation-test",
+            "v1_2_2-tests-safety-checks-programs-ignore-non-accounts",
+            "v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+            "v1_2_2-tests-idl-programs-docs",
+            "v1_2_2-tests-optional-programs-allow-missing-optionals",
+            "v1_2_2-tests-cpi-returns-programs-malicious",
+            "v1_2_2-examples-tutorial-basic-1-programs-basic-1",
+            "v1_2_2-tests-interface-account-programs-new",
+            "v1_2_2-examples-tutorial-basic-2-programs-basic-2",
+            "v1_2_2-tests-events-programs-events",
+            "v1_2_2-tests-anchor-cli-account-programs-account-command",
+            "v1_2_2-tests-floats-programs-floats",
+            "v1_2_2-tests-composite-programs-composite",
+            "v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation",
+            "v1_2_2-tests-idl-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-init-if-needed",
+            "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+            "v1_2_2-tests-cpi-returns-programs-callee",
+            "v1_2_2-tests-custom-program-programs-custom-program",
+            "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+            "v1_2_2-tests-misc-programs-remaining-accounts",
+            "v1_2_2-tests-idl-programs-generics",
+            "v1_2_2-tests-relations-derivation-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-lamports",
+            "v1_2_2-tests-chat-programs-chat",
+            "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+            "v1_2_2-tests-misc-programs-overflow-checks",
+            "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+            "v1_2_2-tests-custom-coder-programs-native-system",
+            "v1_2_2-tests-realloc-programs-realloc",
+            "v1_2_2-tests-optional-programs-optional",
+            "v1_2_2-tests-errors-programs-errors",
+            "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+            "v1_2_2-tests-declare-program-programs-declare-program",
+            "v1_2_2-tests-tictactoe-programs-tictactoe",
+            "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-cpi-returns-programs-caller",
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-escrow-programs-escrow",
+            "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+            "v1_2_2-tests-misc-programs-misc-optional",
+            "v1_2_2-tests-misc-programs-misc",
+            "v1_2_2-tests-bench-programs-bench",
+            "tare-registry"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "#[error_code]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-4",
+            "errors",
+            "v0_31_1-tests-chat-programs-chat",
+            "v0_31_1-tests-optional-programs-optional",
+            "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+            "v0_31_1-tests-idl-programs-idl",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+            "v0_32_3-tests-chat-programs-chat",
+            "v0_32_3-tests-optional-programs-optional",
+            "v0_32_3-tests-errors-programs-errors",
+            "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+            "v0_32_3-tests-idl-programs-idl"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+            "v1_2_2-tests-chat-programs-chat",
+            "v1_2_2-tests-optional-programs-optional",
+            "v1_2_2-tests-errors-programs-errors",
+            "v1_2_2-tests-tictactoe-programs-tictactoe",
+            "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+            "v1_2_2-tests-declare-program-programs-external"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "#[event]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "events",
+            "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_31_1-tests-declare-program-programs-external",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-misc-programs-misc-optional",
+            "v0_31_1-tests-misc-programs-misc",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-events-programs-events",
+            "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_32_3-tests-declare-program-programs-external",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc-optional",
+            "v0_32_3-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-events-programs-events",
+            "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+            "v1_2_2-tests-tictactoe-programs-tictactoe",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-misc-programs-misc-optional",
+            "v1_2_2-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "#[event_cpi]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "events"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-events-programs-events"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-events-programs-events"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "#[instruction]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_31_1-tests-realloc-programs-realloc",
+            "v0_31_1-tests-chat-programs-chat",
+            "v0_31_1-tests-optional-programs-optional",
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-escrow-programs-escrow",
+            "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_31_1-tests-misc-programs-misc-optional",
+            "v0_31_1-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_32_3-tests-realloc-programs-realloc",
+            "v0_32_3-tests-chat-programs-chat",
+            "v0_32_3-tests-optional-programs-optional",
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-escrow-programs-escrow",
+            "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_32_3-tests-misc-programs-misc-optional",
+            "v0_32_3-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation",
+            "v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation",
+            "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+            "v1_2_2-tests-chat-programs-chat",
+            "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+            "v1_2_2-tests-realloc-programs-realloc",
+            "v1_2_2-tests-optional-programs-optional",
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-escrow-programs-escrow",
+            "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+            "v1_2_2-tests-misc-programs-misc-optional",
+            "v1_2_2-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "#[interface]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "#[program]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-0",
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "puppet-master",
+            "basic-4",
+            "basic-5",
+            "declare-id",
+            "multiple-suites",
+            "system-accounts",
+            "floats",
+            "events",
+            "errors",
+            "relations-derivation",
+            "v0_31_1-tests-validator-clone-programs-validator-clone",
+            "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-one",
+            "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-two",
+            "v0_31_1-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+            "v0_31_1-tests-safety-checks-programs-account-info",
+            "v0_31_1-tests-safety-checks-programs-unchecked-account",
+            "v0_31_1-tests-sysvars-programs-sysvars",
+            "v0_31_1-tests-typescript-programs-typescript",
+            "v0_31_1-tests-idl-programs-external",
+            "v0_31_1-tests-safety-checks-programs-ignore-non-accounts",
+            "v0_31_1-tests-idl-programs-docs",
+            "v0_31_1-tests-optional-programs-allow-missing-optionals",
+            "v0_31_1-tests-zero-copy-programs-zero-cpi",
+            "v0_31_1-tests-anchor-cli-account-programs-account-command",
+            "v0_31_1-tests-composite-programs-composite",
+            "v0_31_1-tests-cpi-returns-programs-callee",
+            "v0_31_1-tests-idl-programs-relations-derivation",
+            "v0_31_1-tests-misc-programs-init-if-needed",
+            "v0_31_1-tests-idl-programs-generics",
+            "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_31_1-tests-misc-programs-remaining-accounts",
+            "v0_31_1-tests-realloc-programs-realloc",
+            "v0_31_1-tests-cpi-returns-programs-caller",
+            "v0_31_1-tests-misc-programs-lamports",
+            "v0_31_1-tests-chat-programs-chat",
+            "v0_31_1-tests-declare-program-programs-external",
+            "v0_31_1-tests-misc-programs-overflow-checks",
+            "v0_31_1-tests-custom-coder-programs-native-system",
+            "v0_31_1-tests-optional-programs-optional",
+            "v0_31_1-tests-zero-copy-programs-zero-copy",
+            "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-escrow-programs-escrow",
+            "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_31_1-tests-misc-programs-misc-optional",
+            "v0_31_1-tests-misc-programs-misc",
+            "v0_31_1-tests-bench-programs-bench",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-examples-tutorial-basic-0-programs-basic-0",
+            "v0_32_3-tests-validator-clone-programs-validator-clone",
+            "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-one",
+            "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-two",
+            "v0_32_3-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+            "v0_32_3-tests-safety-checks-programs-account-info",
+            "v0_32_3-tests-safety-checks-programs-unchecked-account",
+            "v0_32_3-tests-declare-id-programs-declare-id",
+            "v0_32_3-tests-system-accounts-programs-system-accounts",
+            "v0_32_3-tests-multiple-suites-programs-multiple-suites",
+            "v0_32_3-tests-sysvars-programs-sysvars",
+            "v0_32_3-tests-typescript-programs-typescript",
+            "v0_32_3-tests-idl-programs-external",
+            "v0_32_3-tests-safety-checks-programs-ignore-non-accounts",
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet",
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+            "v0_32_3-tests-idl-programs-docs",
+            "v0_32_3-tests-optional-programs-allow-missing-optionals",
+            "v0_32_3-examples-tutorial-basic-1-programs-basic-1",
+            "v0_32_3-examples-tutorial-basic-2-programs-basic-2",
+            "v0_32_3-tests-zero-copy-programs-zero-cpi",
+            "v0_32_3-tests-events-programs-events",
+            "v0_32_3-tests-anchor-cli-account-programs-account-command",
+            "v0_32_3-tests-floats-programs-floats",
+            "v0_32_3-tests-composite-programs-composite",
+            "v0_32_3-tests-cpi-returns-programs-callee",
+            "v0_32_3-tests-idl-programs-relations-derivation",
+            "v0_32_3-tests-misc-programs-init-if-needed",
+            "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+            "v0_32_3-tests-idl-programs-generics",
+            "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_32_3-tests-misc-programs-remaining-accounts",
+            "v0_32_3-tests-relations-derivation-programs-relations-derivation",
+            "v0_32_3-tests-realloc-programs-realloc",
+            "v0_32_3-tests-cpi-returns-programs-caller",
+            "v0_32_3-tests-misc-programs-lamports",
+            "v0_32_3-tests-chat-programs-chat",
+            "v0_32_3-tests-declare-program-programs-external",
+            "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+            "v0_32_3-tests-misc-programs-overflow-checks",
+            "v0_32_3-tests-custom-coder-programs-native-system",
+            "v0_32_3-tests-optional-programs-optional",
+            "v0_32_3-tests-zero-copy-programs-zero-copy",
+            "v0_32_3-tests-errors-programs-errors",
+            "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-escrow-programs-escrow",
+            "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc-optional",
+            "v0_32_3-tests-misc-programs-misc",
+            "v0_32_3-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-examples-tutorial-basic-0-programs-basic-0",
+            "v1_2_2-tests-idl-programs-env-id",
+            "v1_2_2-tests-validator-clone-programs-validator-clone",
+            "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-one",
+            "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-two",
+            "v1_2_2-tests-solana-program-deps-matching-programs-matching-solana-program",
+            "v1_2_2-tests-solana-program-deps-mismatched-programs-mismatched-solana-program",
+            "v1_2_2-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+            "v1_2_2-tests-multiple-scripts-programs-example",
+            "v1_2_2-tests-safety-checks-programs-account-info",
+            "v1_2_2-tests-safety-checks-programs-unchecked-account",
+            "v1_2_2-tests-declare-id-programs-declare-id",
+            "v1_2_2-tests-system-accounts-programs-system-accounts",
+            "v1_2_2-tests-multiple-suites-programs-multiple-suites",
+            "v1_2_2-tests-sysvars-programs-sysvars",
+            "v1_2_2-tests-typescript-programs-typescript",
+            "v1_2_2-tests-anchor-cli-legacy-idl-programs-anchor-cli-legacy-idl",
+            "v1_2_2-tests-interface-account-programs-old",
+            "v1_2_2-tests-idl-programs-external",
+            "v1_2_2-tests-account-generation-test-programs-account-generation-test",
+            "v1_2_2-tests-safety-checks-programs-ignore-non-accounts",
+            "v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+            "v1_2_2-tests-idl-programs-docs",
+            "v1_2_2-tests-optional-programs-allow-missing-optionals",
+            "v1_2_2-tests-cpi-returns-programs-malicious",
+            "v1_2_2-examples-tutorial-basic-1-programs-basic-1",
+            "v1_2_2-tests-interface-account-programs-new",
+            "v1_2_2-examples-tutorial-basic-2-programs-basic-2",
+            "v1_2_2-tests-events-programs-events",
+            "v1_2_2-tests-anchor-cli-account-programs-account-command",
+            "v1_2_2-tests-floats-programs-floats",
+            "v1_2_2-tests-composite-programs-composite",
+            "v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation",
+            "v1_2_2-tests-idl-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-init-if-needed",
+            "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+            "v1_2_2-tests-cpi-returns-programs-callee",
+            "v1_2_2-tests-custom-program-programs-custom-program",
+            "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+            "v1_2_2-tests-misc-programs-remaining-accounts",
+            "v1_2_2-tests-idl-programs-generics",
+            "v1_2_2-tests-relations-derivation-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-lamports",
+            "v1_2_2-tests-chat-programs-chat",
+            "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+            "v1_2_2-tests-misc-programs-overflow-checks",
+            "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+            "v1_2_2-tests-custom-coder-programs-native-system",
+            "v1_2_2-tests-realloc-programs-realloc",
+            "v1_2_2-tests-optional-programs-optional",
+            "v1_2_2-tests-errors-programs-errors",
+            "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+            "v1_2_2-tests-declare-program-programs-declare-program",
+            "v1_2_2-tests-tictactoe-programs-tictactoe",
+            "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-cpi-returns-programs-caller",
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-escrow-programs-escrow",
+            "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+            "v1_2_2-tests-misc-programs-misc-optional",
+            "v1_2_2-tests-misc-programs-misc",
+            "v1_2_2-tests-bench-programs-bench",
+            "tare-registry"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "#[zero_copy]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "v0_31_1-tests-chat-programs-chat",
+            "v0_31_1-tests-zero-copy-programs-zero-copy",
+            "v0_31_1-tests-idl-programs-idl"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-chat-programs-chat",
+            "v0_32_3-tests-zero-copy-programs-zero-copy",
+            "v0_32_3-tests-idl-programs-idl"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-chat-programs-chat",
+            "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "Account",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "puppet-master",
+            "basic-4",
+            "basic-5",
+            "floats",
+            "errors",
+            "relations-derivation",
+            "v0_31_1-tests-idl-programs-docs",
+            "v0_31_1-tests-optional-programs-allow-missing-optionals",
+            "v0_31_1-tests-anchor-cli-account-programs-account-command",
+            "v0_31_1-tests-composite-programs-composite",
+            "v0_31_1-tests-cpi-returns-programs-callee",
+            "v0_31_1-tests-idl-programs-relations-derivation",
+            "v0_31_1-tests-misc-programs-init-if-needed",
+            "v0_31_1-tests-idl-programs-generics",
+            "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_31_1-tests-misc-programs-remaining-accounts",
+            "v0_31_1-tests-realloc-programs-realloc",
+            "v0_31_1-tests-cpi-returns-programs-caller",
+            "v0_31_1-tests-misc-programs-lamports",
+            "v0_31_1-tests-chat-programs-chat",
+            "v0_31_1-tests-declare-program-programs-external",
+            "v0_31_1-tests-misc-programs-overflow-checks",
+            "v0_31_1-tests-optional-programs-optional",
+            "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-escrow-programs-escrow",
+            "v0_31_1-tests-misc-programs-misc-optional",
+            "v0_31_1-tests-misc-programs-misc",
+            "v0_31_1-tests-bench-programs-bench",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet",
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+            "v0_32_3-tests-idl-programs-docs",
+            "v0_32_3-tests-optional-programs-allow-missing-optionals",
+            "v0_32_3-examples-tutorial-basic-1-programs-basic-1",
+            "v0_32_3-examples-tutorial-basic-2-programs-basic-2",
+            "v0_32_3-tests-anchor-cli-account-programs-account-command",
+            "v0_32_3-tests-floats-programs-floats",
+            "v0_32_3-tests-composite-programs-composite",
+            "v0_32_3-tests-cpi-returns-programs-callee",
+            "v0_32_3-tests-idl-programs-relations-derivation",
+            "v0_32_3-tests-misc-programs-init-if-needed",
+            "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+            "v0_32_3-tests-idl-programs-generics",
+            "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_32_3-tests-misc-programs-remaining-accounts",
+            "v0_32_3-tests-relations-derivation-programs-relations-derivation",
+            "v0_32_3-tests-realloc-programs-realloc",
+            "v0_32_3-tests-cpi-returns-programs-caller",
+            "v0_32_3-tests-misc-programs-lamports",
+            "v0_32_3-tests-chat-programs-chat",
+            "v0_32_3-tests-declare-program-programs-external",
+            "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+            "v0_32_3-tests-misc-programs-overflow-checks",
+            "v0_32_3-tests-optional-programs-optional",
+            "v0_32_3-tests-errors-programs-errors",
+            "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-escrow-programs-escrow",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc-optional",
+            "v0_32_3-tests-misc-programs-misc",
+            "v0_32_3-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-interface-account-programs-old",
+            "v1_2_2-tests-idl-programs-external",
+            "v1_2_2-tests-account-generation-test-programs-account-generation-test",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+            "v1_2_2-tests-idl-programs-docs",
+            "v1_2_2-tests-optional-programs-allow-missing-optionals",
+            "v1_2_2-examples-tutorial-basic-1-programs-basic-1",
+            "v1_2_2-tests-interface-account-programs-new",
+            "v1_2_2-examples-tutorial-basic-2-programs-basic-2",
+            "v1_2_2-tests-anchor-cli-account-programs-account-command",
+            "v1_2_2-tests-floats-programs-floats",
+            "v1_2_2-tests-composite-programs-composite",
+            "v1_2_2-tests-idl-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-init-if-needed",
+            "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+            "v1_2_2-tests-cpi-returns-programs-callee",
+            "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+            "v1_2_2-tests-misc-programs-remaining-accounts",
+            "v1_2_2-tests-idl-programs-generics",
+            "v1_2_2-tests-relations-derivation-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-lamports",
+            "v1_2_2-tests-chat-programs-chat",
+            "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+            "v1_2_2-tests-misc-programs-overflow-checks",
+            "v1_2_2-tests-realloc-programs-realloc",
+            "v1_2_2-tests-optional-programs-optional",
+            "v1_2_2-tests-errors-programs-errors",
+            "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+            "v1_2_2-tests-declare-program-programs-declare-program",
+            "v1_2_2-tests-tictactoe-programs-tictactoe",
+            "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-cpi-returns-programs-caller",
+            "v1_2_2-tests-escrow-programs-escrow",
+            "v1_2_2-tests-misc-programs-misc-optional",
+            "v1_2_2-tests-misc-programs-misc",
+            "v1_2_2-tests-bench-programs-bench",
+            "tare-registry"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "AccountLoader",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "v0_31_1-tests-zero-copy-programs-zero-cpi",
+            "v0_31_1-tests-chat-programs-chat",
+            "v0_31_1-tests-zero-copy-programs-zero-copy",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-misc-programs-misc-optional",
+            "v0_31_1-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-zero-copy-programs-zero-cpi",
+            "v0_32_3-tests-chat-programs-chat",
+            "v0_32_3-tests-zero-copy-programs-zero-copy",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-misc-programs-misc-optional",
+            "v0_32_3-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-chat-programs-chat",
+            "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-misc-programs-misc-optional",
+            "v1_2_2-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "Anchor 0.29.0",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "production-openbook-v2: error: unsupported Anchor version 0.29.0 at programs\\openbook-v2\\Cargo.toml:26; supported: 0.31.1, 0.32.1, 0.32.3, 1.2.2\nproduction-drift-v2: error: unsupported Anchor version 0.29.0 at programs\\drift\\Cargo.toml:21; supported: 0.31.1, 0.32.1, 0.32.3, 1.2.2"
+        }
+      ]
+    },
+    {
+      "construct": "AnchorDeserialize",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "v0_31_1-tests-idl-programs-external",
+            "v0_31_1-tests-anchor-cli-account-programs-account-command",
+            "v0_31_1-tests-cpi-returns-programs-callee",
+            "v0_31_1-tests-idl-programs-generics",
+            "v0_31_1-tests-cpi-returns-programs-caller",
+            "v0_31_1-tests-custom-coder-programs-native-system",
+            "v0_31_1-tests-zero-copy-programs-zero-copy",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-misc-programs-misc",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-idl-programs-external",
+            "v0_32_3-tests-anchor-cli-account-programs-account-command",
+            "v0_32_3-tests-cpi-returns-programs-callee",
+            "v0_32_3-tests-idl-programs-generics",
+            "v0_32_3-tests-cpi-returns-programs-caller",
+            "v0_32_3-tests-custom-coder-programs-native-system",
+            "v0_32_3-tests-zero-copy-programs-zero-copy",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-idl-programs-external",
+            "v1_2_2-tests-anchor-cli-account-programs-account-command",
+            "v1_2_2-tests-cpi-returns-programs-callee",
+            "v1_2_2-tests-idl-programs-generics",
+            "v1_2_2-tests-custom-coder-programs-native-system",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-cpi-returns-programs-caller",
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "AnchorSerialize",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "v0_31_1-tests-idl-programs-external",
+            "v0_31_1-tests-anchor-cli-account-programs-account-command",
+            "v0_31_1-tests-cpi-returns-programs-callee",
+            "v0_31_1-tests-idl-programs-generics",
+            "v0_31_1-tests-cpi-returns-programs-caller",
+            "v0_31_1-tests-custom-coder-programs-native-system",
+            "v0_31_1-tests-zero-copy-programs-zero-copy",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-misc-programs-misc",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-idl-programs-external",
+            "v0_32_3-tests-anchor-cli-account-programs-account-command",
+            "v0_32_3-tests-cpi-returns-programs-callee",
+            "v0_32_3-tests-idl-programs-generics",
+            "v0_32_3-tests-cpi-returns-programs-caller",
+            "v0_32_3-tests-custom-coder-programs-native-system",
+            "v0_32_3-tests-zero-copy-programs-zero-copy",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-idl-programs-external",
+            "v1_2_2-tests-anchor-cli-account-programs-account-command",
+            "v1_2_2-tests-cpi-returns-programs-callee",
+            "v1_2_2-tests-idl-programs-generics",
+            "v1_2_2-tests-custom-coder-programs-native-system",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-cpi-returns-programs-caller",
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-misc-programs-misc"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "Box",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "v0_31_1-tests-optional-programs-optional",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-escrow-programs-escrow",
+            "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_31_1-tests-misc-programs-misc",
+            "v0_31_1-tests-bench-programs-bench",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-optional-programs-optional",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-escrow-programs-escrow",
+            "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc",
+            "v0_32_3-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-realloc-programs-realloc",
+            "v1_2_2-tests-optional-programs-optional",
+            "v1_2_2-tests-escrow-programs-escrow",
+            "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+            "v1_2_2-tests-misc-programs-misc",
+            "v1_2_2-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "Bumps",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "Context",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-0",
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "puppet-master",
+            "basic-4",
+            "basic-5",
+            "declare-id",
+            "multiple-suites",
+            "system-accounts",
+            "floats",
+            "events",
+            "errors",
+            "relations-derivation",
+            "v0_31_1-tests-validator-clone-programs-validator-clone",
+            "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-one",
+            "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-two",
+            "v0_31_1-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+            "v0_31_1-tests-safety-checks-programs-account-info",
+            "v0_31_1-tests-safety-checks-programs-unchecked-account",
+            "v0_31_1-tests-sysvars-programs-sysvars",
+            "v0_31_1-tests-typescript-programs-typescript",
+            "v0_31_1-tests-idl-programs-external",
+            "v0_31_1-tests-safety-checks-programs-ignore-non-accounts",
+            "v0_31_1-tests-idl-programs-docs",
+            "v0_31_1-tests-optional-programs-allow-missing-optionals",
+            "v0_31_1-tests-zero-copy-programs-zero-cpi",
+            "v0_31_1-tests-anchor-cli-account-programs-account-command",
+            "v0_31_1-tests-composite-programs-composite",
+            "v0_31_1-tests-cpi-returns-programs-callee",
+            "v0_31_1-tests-idl-programs-relations-derivation",
+            "v0_31_1-tests-misc-programs-init-if-needed",
+            "v0_31_1-tests-idl-programs-generics",
+            "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_31_1-tests-misc-programs-remaining-accounts",
+            "v0_31_1-tests-realloc-programs-realloc",
+            "v0_31_1-tests-cpi-returns-programs-caller",
+            "v0_31_1-tests-misc-programs-lamports",
+            "v0_31_1-tests-chat-programs-chat",
+            "v0_31_1-tests-declare-program-programs-external",
+            "v0_31_1-tests-misc-programs-overflow-checks",
+            "v0_31_1-tests-custom-coder-programs-native-system",
+            "v0_31_1-tests-optional-programs-optional",
+            "v0_31_1-tests-zero-copy-programs-zero-copy",
+            "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-escrow-programs-escrow",
+            "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_31_1-tests-misc-programs-misc-optional",
+            "v0_31_1-tests-misc-programs-misc",
+            "v0_31_1-tests-bench-programs-bench",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-examples-tutorial-basic-0-programs-basic-0",
+            "v0_32_3-tests-validator-clone-programs-validator-clone",
+            "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-one",
+            "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-two",
+            "v0_32_3-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+            "v0_32_3-tests-safety-checks-programs-account-info",
+            "v0_32_3-tests-safety-checks-programs-unchecked-account",
+            "v0_32_3-tests-declare-id-programs-declare-id",
+            "v0_32_3-tests-system-accounts-programs-system-accounts",
+            "v0_32_3-tests-multiple-suites-programs-multiple-suites",
+            "v0_32_3-tests-sysvars-programs-sysvars",
+            "v0_32_3-tests-typescript-programs-typescript",
+            "v0_32_3-tests-idl-programs-external",
+            "v0_32_3-tests-safety-checks-programs-ignore-non-accounts",
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet",
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+            "v0_32_3-tests-idl-programs-docs",
+            "v0_32_3-tests-optional-programs-allow-missing-optionals",
+            "v0_32_3-examples-tutorial-basic-1-programs-basic-1",
+            "v0_32_3-examples-tutorial-basic-2-programs-basic-2",
+            "v0_32_3-tests-zero-copy-programs-zero-cpi",
+            "v0_32_3-tests-events-programs-events",
+            "v0_32_3-tests-anchor-cli-account-programs-account-command",
+            "v0_32_3-tests-floats-programs-floats",
+            "v0_32_3-tests-composite-programs-composite",
+            "v0_32_3-tests-cpi-returns-programs-callee",
+            "v0_32_3-tests-idl-programs-relations-derivation",
+            "v0_32_3-tests-misc-programs-init-if-needed",
+            "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+            "v0_32_3-tests-idl-programs-generics",
+            "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_32_3-tests-misc-programs-remaining-accounts",
+            "v0_32_3-tests-relations-derivation-programs-relations-derivation",
+            "v0_32_3-tests-realloc-programs-realloc",
+            "v0_32_3-tests-cpi-returns-programs-caller",
+            "v0_32_3-tests-misc-programs-lamports",
+            "v0_32_3-tests-chat-programs-chat",
+            "v0_32_3-tests-declare-program-programs-external",
+            "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+            "v0_32_3-tests-misc-programs-overflow-checks",
+            "v0_32_3-tests-custom-coder-programs-native-system",
+            "v0_32_3-tests-optional-programs-optional",
+            "v0_32_3-tests-zero-copy-programs-zero-copy",
+            "v0_32_3-tests-errors-programs-errors",
+            "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-escrow-programs-escrow",
+            "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc-optional",
+            "v0_32_3-tests-misc-programs-misc",
+            "v0_32_3-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-examples-tutorial-basic-0-programs-basic-0",
+            "v1_2_2-tests-idl-programs-env-id",
+            "v1_2_2-tests-validator-clone-programs-validator-clone",
+            "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-one",
+            "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-two",
+            "v1_2_2-tests-solana-program-deps-matching-programs-matching-solana-program",
+            "v1_2_2-tests-solana-program-deps-mismatched-programs-mismatched-solana-program",
+            "v1_2_2-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+            "v1_2_2-tests-multiple-scripts-programs-example",
+            "v1_2_2-tests-safety-checks-programs-account-info",
+            "v1_2_2-tests-safety-checks-programs-unchecked-account",
+            "v1_2_2-tests-declare-id-programs-declare-id",
+            "v1_2_2-tests-system-accounts-programs-system-accounts",
+            "v1_2_2-tests-multiple-suites-programs-multiple-suites",
+            "v1_2_2-tests-sysvars-programs-sysvars",
+            "v1_2_2-tests-typescript-programs-typescript",
+            "v1_2_2-tests-anchor-cli-legacy-idl-programs-anchor-cli-legacy-idl",
+            "v1_2_2-tests-interface-account-programs-old",
+            "v1_2_2-tests-idl-programs-external",
+            "v1_2_2-tests-account-generation-test-programs-account-generation-test",
+            "v1_2_2-tests-safety-checks-programs-ignore-non-accounts",
+            "v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+            "v1_2_2-tests-idl-programs-docs",
+            "v1_2_2-tests-optional-programs-allow-missing-optionals",
+            "v1_2_2-tests-cpi-returns-programs-malicious",
+            "v1_2_2-examples-tutorial-basic-1-programs-basic-1",
+            "v1_2_2-tests-interface-account-programs-new",
+            "v1_2_2-examples-tutorial-basic-2-programs-basic-2",
+            "v1_2_2-tests-events-programs-events",
+            "v1_2_2-tests-anchor-cli-account-programs-account-command",
+            "v1_2_2-tests-floats-programs-floats",
+            "v1_2_2-tests-composite-programs-composite",
+            "v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation",
+            "v1_2_2-tests-idl-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-init-if-needed",
+            "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+            "v1_2_2-tests-cpi-returns-programs-callee",
+            "v1_2_2-tests-custom-program-programs-custom-program",
+            "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+            "v1_2_2-tests-misc-programs-remaining-accounts",
+            "v1_2_2-tests-idl-programs-generics",
+            "v1_2_2-tests-relations-derivation-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-lamports",
+            "v1_2_2-tests-chat-programs-chat",
+            "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+            "v1_2_2-tests-misc-programs-overflow-checks",
+            "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+            "v1_2_2-tests-custom-coder-programs-native-system",
+            "v1_2_2-tests-realloc-programs-realloc",
+            "v1_2_2-tests-optional-programs-optional",
+            "v1_2_2-tests-errors-programs-errors",
+            "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+            "v1_2_2-tests-declare-program-programs-declare-program",
+            "v1_2_2-tests-tictactoe-programs-tictactoe",
+            "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-cpi-returns-programs-caller",
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-escrow-programs-escrow",
+            "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+            "v1_2_2-tests-misc-programs-misc-optional",
+            "v1_2_2-tests-misc-programs-misc",
+            "v1_2_2-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "CpiContext",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "puppet-master",
+            "v0_31_1-tests-zero-copy-programs-zero-cpi",
+            "v0_31_1-tests-cpi-returns-programs-caller",
+            "v0_31_1-tests-misc-programs-lamports",
+            "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-escrow-programs-escrow",
+            "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+            "v0_32_3-tests-zero-copy-programs-zero-cpi",
+            "v0_32_3-tests-cpi-returns-programs-caller",
+            "v0_32_3-tests-misc-programs-lamports",
+            "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-escrow-programs-escrow",
+            "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+            "v1_2_2-tests-misc-programs-lamports",
+            "v1_2_2-tests-declare-program-programs-declare-program",
+            "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+            "v1_2_2-tests-cpi-returns-programs-caller",
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-escrow-programs-escrow",
+            "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+            "tare-registry"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "ExtraAccountMetaList",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "InitSpace",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-5",
+            "v0_31_1-tests-misc-programs-remaining-accounts",
+            "v0_31_1-tests-chat-programs-chat",
+            "v0_31_1-tests-misc-programs-overflow-checks"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-misc-programs-remaining-accounts",
+            "v0_32_3-tests-chat-programs-chat",
+            "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+            "v0_32_3-tests-misc-programs-overflow-checks",
+            "v0_32_3-tests-idl-programs-new-idl"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-misc-programs-remaining-accounts",
+            "v1_2_2-tests-chat-programs-chat",
+            "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+            "v1_2_2-tests-misc-programs-overflow-checks"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "Interface",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-escrow-programs-escrow",
+            "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_31_1-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-escrow-programs-escrow",
+            "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_32_3-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-escrow-programs-escrow",
+            "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+            "v1_2_2-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "InterfaceAccount",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-escrow-programs-escrow",
+            "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_31_1-tests-misc-programs-misc-optional",
+            "v0_31_1-tests-misc-programs-misc",
+            "v0_31_1-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-escrow-programs-escrow",
+            "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_32_3-tests-misc-programs-misc-optional",
+            "v0_32_3-tests-misc-programs-misc",
+            "v0_32_3-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-escrow-programs-escrow",
+            "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+            "v1_2_2-tests-misc-programs-misc-optional",
+            "v1_2_2-tests-misc-programs-misc",
+            "v1_2_2-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "Lamports",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "LazyAccount",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "v0_31_1-tests-lazy-account-programs-lazy-account: error: Tare does not implement LazyAccount\n  --> programs\\lazy-account\\src\\lib.rs:52:21\n   |\n52 |     pub my_account: LazyAccount<'info, MyAccount>,\n   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: Tare does not implement LazyAccount\n  --> programs\\lazy-account\\src\\lib.rs:75:21\n   |\n75 |     pub my_account: LazyAccount<'info, MyAccount>,\n   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": false,
+          "programs": [],
+          "note": "v0_32_3-tests-lazy-account-programs-lazy-account: error: Tare does not implement LazyAccount\n  --> programs\\lazy-account\\src\\lib.rs:52:21\n   |\n52 |     pub my_account: LazyAccount<'info, MyAccount>,\n   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: Tare does not implement LazyAccount\n  --> programs\\lazy-account\\src\\lib.rs:75:21\n   |\n75 |     pub my_account: LazyAccount<'info, MyAccount>,\n   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": false,
+          "programs": [],
+          "note": "v1_2_2-tests-lazy-account-programs-lazy-account: error: Tare does not implement LazyAccount\n  --> programs\\lazy-account\\src\\lib.rs:65:21\n   |\n65 |     pub my_account: LazyAccount<'info, MyAccount>,\n   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nerror: Tare does not implement LazyAccount\n  --> programs\\lazy-account\\src\\lib.rs:88:21\n   |\n88 |     pub my_account: LazyAccount<'info, MyAccount>,\n   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "Option",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "v0_31_1-tests-optional-programs-allow-missing-optionals",
+            "v0_31_1-tests-optional-programs-optional",
+            "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-misc-programs-misc-optional",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-tests-optional-programs-allow-missing-optionals",
+            "v0_32_3-tests-optional-programs-optional",
+            "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc-optional"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-optional-programs-allow-missing-optionals",
+            "v1_2_2-tests-optional-programs-optional",
+            "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-misc-programs-misc-optional"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "Program",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "puppet-master",
+            "basic-4",
+            "basic-5",
+            "floats",
+            "relations-derivation",
+            "v0_31_1-tests-optional-programs-allow-missing-optionals",
+            "v0_31_1-tests-zero-copy-programs-zero-cpi",
+            "v0_31_1-tests-anchor-cli-account-programs-account-command",
+            "v0_31_1-tests-cpi-returns-programs-callee",
+            "v0_31_1-tests-idl-programs-relations-derivation",
+            "v0_31_1-tests-misc-programs-init-if-needed",
+            "v0_31_1-tests-idl-programs-generics",
+            "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_31_1-tests-misc-programs-remaining-accounts",
+            "v0_31_1-tests-realloc-programs-realloc",
+            "v0_31_1-tests-cpi-returns-programs-caller",
+            "v0_31_1-tests-misc-programs-lamports",
+            "v0_31_1-tests-declare-program-programs-external",
+            "v0_31_1-tests-misc-programs-overflow-checks",
+            "v0_31_1-tests-optional-programs-optional",
+            "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+            "v0_31_1-tests-idl-programs-idl",
+            "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+            "v0_31_1-tests-escrow-programs-escrow",
+            "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_31_1-tests-misc-programs-misc-optional",
+            "v0_31_1-tests-misc-programs-misc",
+            "v0_31_1-tests-bench-programs-bench",
+            "production-marinade"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": true,
+          "programs": [
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet",
+            "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+            "v0_32_3-tests-optional-programs-allow-missing-optionals",
+            "v0_32_3-examples-tutorial-basic-1-programs-basic-1",
+            "v0_32_3-examples-tutorial-basic-2-programs-basic-2",
+            "v0_32_3-tests-zero-copy-programs-zero-cpi",
+            "v0_32_3-tests-anchor-cli-account-programs-account-command",
+            "v0_32_3-tests-floats-programs-floats",
+            "v0_32_3-tests-cpi-returns-programs-callee",
+            "v0_32_3-tests-idl-programs-relations-derivation",
+            "v0_32_3-tests-misc-programs-init-if-needed",
+            "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+            "v0_32_3-tests-idl-programs-generics",
+            "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+            "v0_32_3-tests-misc-programs-remaining-accounts",
+            "v0_32_3-tests-relations-derivation-programs-relations-derivation",
+            "v0_32_3-tests-realloc-programs-realloc",
+            "v0_32_3-tests-cpi-returns-programs-caller",
+            "v0_32_3-tests-misc-programs-lamports",
+            "v0_32_3-tests-declare-program-programs-external",
+            "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+            "v0_32_3-tests-misc-programs-overflow-checks",
+            "v0_32_3-tests-optional-programs-optional",
+            "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+            "v0_32_3-tests-idl-programs-idl",
+            "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+            "v0_32_3-tests-escrow-programs-escrow",
+            "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+            "v0_32_3-tests-idl-programs-new-idl",
+            "v0_32_3-tests-misc-programs-misc-optional",
+            "v0_32_3-tests-misc-programs-misc",
+            "v0_32_3-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": true,
+          "programs": [
+            "v1_2_2-tests-multiple-scripts-programs-example",
+            "v1_2_2-tests-interface-account-programs-old",
+            "v1_2_2-tests-account-generation-test-programs-account-generation-test",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet",
+            "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+            "v1_2_2-tests-optional-programs-allow-missing-optionals",
+            "v1_2_2-examples-tutorial-basic-1-programs-basic-1",
+            "v1_2_2-tests-interface-account-programs-new",
+            "v1_2_2-examples-tutorial-basic-2-programs-basic-2",
+            "v1_2_2-tests-anchor-cli-account-programs-account-command",
+            "v1_2_2-tests-floats-programs-floats",
+            "v1_2_2-tests-idl-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-init-if-needed",
+            "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+            "v1_2_2-tests-cpi-returns-programs-callee",
+            "v1_2_2-tests-custom-program-programs-custom-program",
+            "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+            "v1_2_2-tests-misc-programs-remaining-accounts",
+            "v1_2_2-tests-idl-programs-generics",
+            "v1_2_2-tests-relations-derivation-programs-relations-derivation",
+            "v1_2_2-tests-misc-programs-lamports",
+            "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+            "v1_2_2-tests-misc-programs-overflow-checks",
+            "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+            "v1_2_2-tests-realloc-programs-realloc",
+            "v1_2_2-tests-optional-programs-optional",
+            "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+            "v1_2_2-tests-declare-program-programs-declare-program",
+            "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+            "v1_2_2-tests-declare-program-programs-external",
+            "v1_2_2-tests-cpi-returns-programs-caller",
+            "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+            "v1_2_2-tests-escrow-programs-escrow",
+            "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+            "v1_2_2-tests-misc-programs-misc-optional",
+            "v1_2_2-tests-misc-programs-misc",
+            "v1_2_2-tests-bench-programs-bench"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": true,
+          "programs": [
+            "production-squads-v4",
+            "production-whirlpools"
+          ],
+          "note": "Compiled in programs with matched proofs and successful generated instruction samples; this is not branch coverage or full language conformance."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "ProgramData",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "RefMut",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.3",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "1.2.2",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.32.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        },
+        {
+          "anchorVersion": "0.29.0",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    }
+  ]
+}
