@@ -1,0 +1,106 @@
+.hero {
+  position: relative;
+  margin-top: calc(-1 * var(--bar));
+  height: max(100svh, 560px);
+  display: flex;
+  align-items: center;
+}
+
+/*
+  One column of source down the centre of the view, dimmed, fading out at the top and the bottom.
+  It stands behind the whole landing: the bands pass over it on black plates and it shows between them.
+*/
+.field {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 100lvh;
+  z-index: 0;
+  --dim: 0.38;
+  transition: --dim 0.9s var(--ease);
+  translate: calc(var(--px, 0) * -12px) calc(var(--py, 0) * -7px);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  --band: linear-gradient(to bottom, transparent 0, transparent 7%, #000 22%, #000 35%, rgb(0 0 0 / 0.3) 43%, rgb(0 0 0 / 0.3) 57%, #000 65%, #000 72%, transparent 100%);
+  -webkit-mask-image: var(--band);
+  mask-image: var(--band);
+}
+
+/* The source is dimmed by a black veil, thinner around the pointer: the code is lit where it is looked at. */
+.field::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 24vmax at var(--mx, 50%) var(--my, -100vh),
+    rgb(0 0 0 / max(calc(var(--dim) - 0.34), 0)),
+    rgb(0 0 0 / var(--dim)) 100%
+  );
+}
+
+.stream {
+  display: grid;
+  gap: 1.3em;
+  align-self: flex-start;
+  flex: none;
+  font-size: clamp(0.6875rem, min(1vw, 1.7vh), 0.9375rem);
+}
+
+.col {
+  font-family: var(--mono);
+  font-size: inherit;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  gap: 1.3em;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  translate: calc(var(--px, 0) * 9px) calc(var(--py, 0) * 5px);
+  display: flex;
+  justify-content: center;
+  gap: 0.16em;
+  font-family: var(--mono);
+  font-size: clamp(2.5rem, min(10.8vw, 20vh), 8.5rem);
+  font-weight: 550;
+  line-height: 1.16;
+  letter-spacing: -0.055em;
+  white-space: nowrap;
+}
+
+.title :global(.b) {
+  padding: 0 0.2em;
+  line-height: 1.16;
+  border-radius: 0.2em;
+  box-shadow: 0 0.1em 0.7em rgb(0 0 0 / 0.6);
+}
+
+.glass {
+  padding: 0 0.2em;
+  line-height: 1.16;
+  border-radius: 0.2em;
+}
+
+:global(html[data-past]) .field {
+  --dim: 0.66;
+}
+
+@media (max-width: 600px) {
+  :global(html[data-past]) .field {
+    --dim: 0.74;
+  }
+  .field {
+    --dim: 0.54;
+    justify-content: flex-start;
+    padding-left: var(--edge);
+  }
+  .stream {
+    font-size: 0.6875rem;
+  }
+}

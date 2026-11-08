@@ -1,0 +1,42 @@
+.cascade {
+  --step-x: 2.1em;
+  display: grid;
+  gap: 0.95em;
+  justify-items: start;
+  font-size: clamp(0.6875rem, min(1.02vw, 1.75vh), 0.9375rem);
+  font-weight: 550;
+  letter-spacing: -0.005em;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.stanza {
+  display: grid;
+  gap: 3px;
+  justify-items: start;
+  margin-left: calc(var(--i) * var(--step-x));
+}
+
+.line {
+  display: flex;
+  gap: 0 0.1em;
+  white-space: nowrap;
+  height: 1.2em;
+}
+
+.line :global(.b) {
+  padding: 0 0.22em;
+  line-height: 1.2;
+  border-radius: 0.28em;
+}
+
+.line :global(.b[data-c='none']) {
+  color: var(--ink);
+}
+
+.line :global(.ast) {
+  width: 0.66em;
+  height: 0.66em;
+  margin-block: 0.27em;
+}

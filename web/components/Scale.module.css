@@ -1,0 +1,130 @@
+.scale {
+  container-type: inline-size;
+  --scale-gap: clamp(16px, 3vw, 48px);
+  display: grid;
+  gap: clamp(20px, 2.6vw, 36px);
+  width: 100%;
+}
+
+.figures {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s5) var(--scale-gap);
+}
+.figures > div {
+  display: grid;
+  gap: clamp(8px, 1vw, 14px);
+  justify-items: start;
+  align-content: start;
+}
+.scale[data-align='centre'] .figures > div {
+  justify-items: center;
+  text-align: center;
+}
+
+.figures dt :global(.b) {
+  font-size: clamp(0.8125rem, 1.05vw, 0.9375rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 0.18em 0.7em 0.22em;
+  border-radius: 0.5em;
+}
+
+/* One size for the three, set so the longest fits its column: a mono digit advances about 0.53em at this tracking. */
+.figures :global(.num) {
+  font-size: min(6rem, calc((100cqw - 2 * var(--scale-gap)) / 3 / (var(--chars, 7) * 0.54)));
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.075em;
+  color: var(--ink);
+}
+.figures [data-c='tare'] :global(.num) {
+  color: var(--magenta);
+}
+.figures [data-c='net'] :global(.num) {
+  color: var(--green);
+}
+
+.note {
+  font-size: var(--small-size);
+  line-height: 1.4;
+  color: var(--ink-3);
+}
+
+.beam {
+  display: flex;
+  gap: 3px;
+  width: 100%;
+  height: clamp(10px, 1.3vw, 16px);
+}
+.beam[data-tall] {
+  height: clamp(28px, 3.4vw, 44px);
+  gap: 2px;
+}
+.beam span {
+  flex-basis: 0;
+  min-width: 2px;
+  background: var(--ink);
+  transition: flex-grow 1.3s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s;
+}
+/* Before it arrives the beam is all gross; the tare comes off as it is weighed. */
+:global([data-armed]:not([data-in])) .beam span[data-c='tare'] {
+  flex-grow: 0 !important;
+  min-width: 0;
+  transition: none;
+}
+/* On a page that opens with its scale in view, the beam is weighed as the page opens. */
+@keyframes shed {
+  from {
+    flex-grow: 0;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .beam span[data-c='tare'] {
+    animation: shed 1.3s var(--out) 0.35s backwards;
+  }
+  .beam span[data-c='ink'] {
+    animation: shed 0.9s var(--out) backwards;
+    animation-delay: calc(min(var(--part, 0), 16) * 45ms + 200ms);
+  }
+}
+/* The beam split by instruction: the part pointed at stands up, the rest step back. */
+.beam[data-tall] span {
+  transition:
+    flex-grow 1.3s var(--out) 0.2s,
+    transform 0.28s var(--out),
+    filter var(--t-hover) var(--ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .beam[data-tall]:hover span {
+    filter: brightness(0.5);
+  }
+  .beam[data-tall] span:hover {
+    filter: none;
+    transform: scaleY(1.22);
+  }
+}
+.beam span:first-child {
+  border-radius: 999px 0 0 999px;
+}
+.beam span:last-child {
+  border-radius: 0 999px 999px 0;
+}
+.beam[data-tall] span:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.beam[data-tall] span:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.beam span[data-c='net'] {
+  background: var(--green);
+}
+.beam span[data-c='tare'] {
+  background: var(--magenta);
+}
+
+@media (max-width: 560px) {
+  .note {
+    display: none;
+  }
+}

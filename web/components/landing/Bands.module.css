@@ -1,0 +1,411 @@
+/*
+  The landing below the first view. Every band stands on the centre and is made of the hero's
+  material: mono lines, words on blocks, figures at the size of a headline. No cards.
+*/
+
+/* A band is a black plate over the source that stands behind the page; its edges fade so the source shows between bands. */
+.band {
+  --fade: clamp(72px, 9vw, 136px);
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(96px, 11.5vw, 176px);
+  background: linear-gradient(to bottom, transparent, var(--ground) var(--fade), var(--ground) calc(100% - var(--fade)), transparent);
+}
+
+.centre {
+  display: grid;
+  justify-items: center;
+  gap: clamp(24px, 3vw, 40px);
+  text-align: center;
+}
+.centre > * {
+  min-width: 0;
+}
+
+/* The quiet name of a band: the content under it is what speaks. */
+.kicker {
+  font-size: clamp(1rem, 1.3vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.014em;
+  color: var(--ink-3);
+}
+.kicker b {
+  font-family: var(--mono);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* A line in the hero's own texture: mono words on blocks. */
+.line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em 0.22em;
+  font-family: var(--mono);
+  font-size: clamp(1.75rem, 6.2vw, 5.25rem);
+  font-weight: 550;
+  line-height: 1.16;
+  letter-spacing: -0.055em;
+}
+.line :global(.b) {
+  padding: 0 0.22em;
+  line-height: 1.16;
+  border-radius: 0.2em;
+}
+.line :global(.b[data-c='line']) {
+  color: var(--ink-2);
+}
+
+/* The blocks are the room's only light: a coloured block at headline size throws a little of its colour. */
+.line :global(.b):not([data-c='line']),
+.term :global(.b) {
+  box-shadow: 0 0.2em 1.5em -0.4em color-mix(in srgb, var(--b) 60%, transparent);
+}
+.same :global(.b) {
+  box-shadow: 0 0.1em 0.7em -0.3em color-mix(in srgb, var(--b) 50%, transparent);
+}
+
+.arrow {
+  display: inline-flex;
+  color: var(--ink-3);
+}
+.arrow svg {
+  width: 0.86em;
+  height: 0.52em;
+}
+
+.say {
+  max-width: 34em;
+  font-size: clamp(1.0625rem, 1.5vw, 1.375rem);
+  line-height: 1.42;
+  letter-spacing: -0.016em;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.way {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: var(--s2);
+}
+
+.row {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s3) var(--s5);
+}
+
+.inline {
+  font-family: var(--mono);
+  font-size: 0.92em;
+  color: var(--ink);
+}
+
+.start {
+  padding-top: clamp(72px, 9vw, 136px);
+}
+
+/* ----- the scale: three figures and the beam they share ----- */
+
+.scale {
+  width: 100%;
+  max-width: 1120px;
+  container-type: inline-size;
+  display: flex;
+  justify-content: center;
+  gap: var(--scale-gap);
+  --scale-gap: clamp(14px, 3.4vw, 56px);
+  margin-top: clamp(8px, 1.5vw, 24px);
+}
+.scale > div {
+  display: grid;
+  gap: clamp(8px, 1.2vw, 16px);
+  justify-items: center;
+}
+.scale dt :global(.b) {
+  font-size: clamp(0.8125rem, 1.1vw, 1rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 0.18em 0.7em 0.22em;
+  border-radius: 0.5em;
+}
+/* The three figures share one size, set so the whole row fits: a mono digit advances about 0.53em at this tracking. */
+.scale :global(.num) {
+  font-size: min(6.75rem, calc((100cqw - 2 * var(--scale-gap)) / (var(--chars, 20) * 0.54)));
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.075em;
+  color: var(--ink);
+}
+.tareCol :global(.num) {
+  color: var(--magenta);
+}
+.netCol :global(.num) {
+  color: var(--green);
+}
+
+.note {
+  font-size: var(--small-size);
+  color: var(--ink-3);
+}
+
+.beam {
+  width: 100%;
+  max-width: 1120px;
+}
+.beam > span {
+  height: clamp(10px, 1.4vw, 18px);
+  border-radius: 999px;
+}
+.beam > span > span {
+  border-radius: 999px 0 0 999px;
+  box-shadow: 4px 0 0 var(--ground);
+}
+
+.unit {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.tareText {
+  color: var(--magenta);
+  font-weight: 600;
+}
+
+.netText {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.open {
+  width: 100%;
+  max-width: 880px;
+  margin-top: clamp(16px, 2.5vw, 40px);
+  text-align: left;
+}
+
+.under {
+  max-width: 64ch;
+  color: var(--ink-3);
+}
+
+/* ----- four lines of a terminal ----- */
+
+.term {
+  display: grid;
+  gap: clamp(12px, 1.6vw, 22px);
+  justify-items: start;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: clamp(1.25rem, 3.6vw, 3.25rem);
+  font-weight: 550;
+  letter-spacing: -0.055em;
+  line-height: 1.16;
+}
+.term li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.1em 0.5em;
+}
+.term code {
+  font: inherit;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.32em;
+}
+.term :global(.b) {
+  padding: 0 0.22em;
+  line-height: 1.16;
+  border-radius: 0.2em;
+}
+
+.prompt {
+  color: var(--ink-3);
+  font-weight: 400;
+}
+
+.comment {
+  font-family: var(--sans);
+  font-size: clamp(0.9375rem, 1.25vw, 1.1875rem);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  color: var(--ink-3);
+}
+
+/* ----- identical ----- */
+
+.same {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Each row ends in a zero-height break, so two row gaps make one visible gap. */
+  gap: clamp(3px, 0.4vw, 6px) clamp(6px, 0.8vw, 12px);
+  width: 100%;
+  max-width: 1120px;
+  font-size: clamp(1.5rem, 4.8vw, 4.5rem);
+  font-weight: 650;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+.same li {
+  flex: 1 1 auto;
+  display: flex;
+}
+.same .sameBreak {
+  flex: 0 0 100%;
+  height: 0;
+}
+.same :global(.b) {
+  flex: 1;
+  text-align: center;
+  padding: 0.04em 0.26em 0.08em;
+  line-height: 1.12;
+  border-radius: 0.2em;
+}
+
+/* ----- the proof: two lanes that must agree ----- */
+
+.proof {
+  width: 100%;
+  max-width: 920px;
+  display: grid;
+  justify-items: center;
+  gap: clamp(18px, 2.4vw, 30px);
+}
+
+.feed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: clamp(1rem, 1.9vw, 1.625rem);
+  font-weight: 550;
+  letter-spacing: -0.045em;
+}
+.feed :global(.b) {
+  padding: 0.06em 0.4em 0.1em;
+  border-radius: 0.28em;
+}
+
+.caption {
+  max-width: 46em;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+.lanes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  font-family: var(--mono);
+  font-size: clamp(1.0625rem, 2.9vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1.2;
+}
+
+.laneHead {
+  padding-bottom: 0.5em;
+}
+.laneHead:first-child {
+  justify-self: end;
+}
+.laneHead:nth-child(3) {
+  justify-self: start;
+}
+.laneHead :global(.b) {
+  font-weight: 550;
+  padding: 0 0.24em;
+  line-height: 1.2;
+  border-radius: 0.2em;
+}
+.laneHead :global(.b[data-c='line']) {
+  color: var(--ink-2);
+}
+
+.laneRow {
+  display: contents;
+}
+.laneRow > span {
+  padding-block: 0.2em;
+  border-top: 1px solid var(--line);
+}
+
+.left {
+  text-align: right;
+  color: var(--ink-2);
+  padding-right: 0.24em;
+}
+
+.right {
+  text-align: left;
+  color: var(--ink);
+  padding-left: 0.24em;
+}
+
+.eq {
+  padding-inline: 0.7em;
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* ----- close ----- */
+
+.close {
+  padding-bottom: clamp(104px, 14vw, 200px);
+  background: linear-gradient(to bottom, transparent, var(--ground) var(--fade));
+}
+
+.corpus {
+  width: 100%;
+  max-width: 1120px;
+}
+
+.closeLine {
+  margin-top: clamp(72px, 10vw, 152px);
+}
+
+.token {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--s2) var(--s3);
+  margin-top: var(--s6);
+  font-size: var(--small-size);
+  color: var(--ink-3);
+}
+.token :global(.b) {
+  font-family: var(--mono);
+  font-weight: 600;
+  padding: 1px 0.5em;
+}
+
+@media (max-width: 640px) {
+  .note {
+    display: none;
+  }
+  .term li {
+    display: grid;
+    gap: 4px;
+  }
+  .same :global(.b) {
+    white-space: normal;
+  }
+  .eq {
+    padding-inline: 0.4em;
+  }
+}

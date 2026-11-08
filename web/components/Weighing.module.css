@@ -1,0 +1,197 @@
+.scroll {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table thead th {
+  padding: 0 0 var(--s3) var(--s4);
+  font-size: var(--small-size);
+  font-weight: 500;
+  text-align: left;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.table thead th:first-child {
+  padding-left: 0;
+}
+.table thead :global(.b) {
+  padding: 2px 0.55em;
+  font-weight: 600;
+}
+
+.table tbody th,
+.table tbody td,
+.table tfoot th,
+.table tfoot td {
+  height: 40px;
+  padding: 0 0 0 var(--s4);
+  border-top: 1px solid var(--line);
+  white-space: nowrap;
+}
+.table tbody th:first-child,
+.table tfoot th:first-child {
+  padding-left: 0;
+}
+
+.name {
+  font-family: var(--mono);
+  font-weight: 400;
+  text-align: left;
+  color: var(--ink);
+}
+
+.r {
+  text-align: right !important;
+  width: 1%;
+}
+
+.tare {
+  color: var(--magenta);
+}
+
+.unmeasured {
+  font-size: var(--small-size);
+  color: var(--ink-3);
+}
+
+.net {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.barCol {
+  width: 46%;
+  min-width: 120px;
+}
+
+.bar {
+  display: block;
+  height: 12px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--magenta);
+}
+
+.barNet {
+  display: block;
+  height: 100%;
+  transition: width 1.3s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s;
+  border-radius: 4px 0 0 4px;
+  background: var(--green);
+  box-shadow: 2px 0 0 var(--ground);
+}
+
+:global([data-armed]:not([data-in])) .barNet {
+  width: 100% !important;
+  transition: none;
+}
+
+/* Each bar is drawn out from the left when its table opens, row after row; a row answers the pointer. */
+.bar {
+  transform-origin: left;
+  transition: filter var(--t-hover) var(--ease);
+}
+.table tbody tr {
+  transition: background var(--t-hover) var(--ease);
+}
+@keyframes draw {
+  from {
+    transform: scaleX(0);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .bar {
+    animation: draw 0.9s var(--out) backwards;
+    animation-delay: calc(min(var(--row, 0), 14) * 34ms + 120ms);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .table tbody tr:hover {
+    background: rgb(255 255 255 / 0.04);
+  }
+  .table tbody:hover tr:not(:hover) .bar {
+    filter: saturate(0.55) brightness(0.62);
+  }
+}
+
+.table tfoot th,
+.table tfoot td {
+  height: 52px;
+  border-top: 1px solid rgb(255 255 255 / 0.32);
+  font-size: 1rem;
+}
+.table tfoot .name {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.share {
+  font-size: var(--small-size);
+  color: var(--ink-2);
+}
+.share :global(.num) {
+  color: var(--magenta);
+  font-weight: 600;
+}
+
+.pending {
+  display: grid;
+  gap: var(--s5);
+  padding-block: var(--s2);
+}
+
+.pendingRows {
+  display: grid;
+  gap: 22px;
+}
+
+.pendingNote {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s2) var(--s3);
+}
+.pendingNote :global(.b) {
+  font-size: var(--small-size);
+  font-weight: 600;
+  padding: 2px 0.55em;
+}
+
+@media (max-width: 640px) {
+  .barCol {
+    display: none;
+  }
+  .table tbody th,
+  .table tbody td,
+  .table tfoot th,
+  .table tfoot td,
+  .table thead th {
+    padding-left: var(--s3);
+  }
+  .wideOnly {
+    display: none;
+  }
+  .table {
+    font-size: 0.8125rem;
+  }
+  .table tfoot th,
+  .table tfoot td {
+    font-size: 0.8125rem;
+  }
+  .table tfoot .name {
+    white-space: normal;
+    font-size: 0.75rem;
+    line-height: 1.25;
+  }
+  .name {
+    max-width: 30vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
