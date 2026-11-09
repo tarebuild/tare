@@ -1,0 +1,194 @@
+.index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+.index :global(.num) {
+  color: var(--ink-3);
+}
+
+.list {
+  border-bottom: 1px solid var(--line);
+}
+
+/* One program per row: its name, its three totals, and the bar they share. */
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.5fr) 96px 96px 72px 96px minmax(120px, 2fr) 20px;
+  align-items: center;
+  gap: var(--s4);
+  min-height: 46px;
+  border-top: 1px solid var(--line);
+  font-size: 0.875rem;
+}
+
+.head {
+  min-height: 36px;
+  border-top: 0;
+  font-size: var(--small-size);
+  color: var(--ink-3);
+}
+
+summary.row {
+  cursor: pointer;
+  list-style: none;
+}
+summary.row::-webkit-details-marker {
+  display: none;
+}
+summary.row {
+  transition: background var(--t-hover) var(--ease);
+}
+.name,
+.bar {
+  transition: transform 0.3s var(--out);
+}
+@media (hover: hover) and (pointer: fine) {
+  summary.row:hover {
+    background: rgb(255 255 255 / 0.035);
+  }
+  summary.row:hover .name {
+    transform: translateX(8px);
+  }
+  summary.row:hover .bar {
+    transform: scaleY(1.4);
+  }
+  summary.row:hover .caret {
+    border-color: var(--ink);
+  }
+}
+summary.row:active {
+  background: rgb(255 255 255 / 0.06);
+}
+
+/* A program opens downward to its instructions and closes the same way. */
+@supports (interpolate-size: allow-keywords) {
+  .program {
+    interpolate-size: allow-keywords;
+  }
+  .program::details-content {
+    block-size: 0;
+    overflow: clip;
+    opacity: 0;
+    transition:
+      block-size 0.46s var(--out),
+      opacity 0.3s var(--ease),
+      content-visibility 0.46s allow-discrete;
+  }
+  .program[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .program::details-content {
+      transition: none;
+    }
+  }
+}
+
+.name {
+  font-family: var(--mono);
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kind {
+  color: var(--ink-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.count,
+.fig {
+  text-align: right;
+}
+.count {
+  color: var(--ink-2);
+}
+
+.tare {
+  color: var(--magenta);
+}
+
+.net {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.bar {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--magenta);
+}
+.bar > span {
+  display: block;
+  height: 100%;
+  background: var(--green);
+  box-shadow: 2px 0 0 var(--ground);
+}
+
+.caret {
+  justify-self: end;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--ink-3);
+  border-bottom: 1.5px solid var(--ink-3);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition:
+    transform 0.34s var(--out),
+    border-color var(--t-hover) var(--ease);
+}
+.program[open] .caret {
+  transform: rotate(225deg) translate(-2px, -2px);
+}
+
+.program[open] > summary .name {
+  font-weight: 600;
+}
+
+.open {
+  display: grid;
+  gap: var(--s7);
+  padding: var(--s5) 0 var(--s8);
+  min-width: 0;
+}
+
+.proof {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2) var(--s3);
+}
+
+.program {
+  scroll-margin-top: calc(var(--bar) + var(--s4));
+}
+
+@media (max-width: 1040px) {
+  .row {
+    grid-template-columns: minmax(0, 2fr) 84px 64px 84px minmax(80px, 1fr) 16px;
+  }
+  .kind,
+  .count {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .barHead {
+    display: none;
+  }
+  .row {
+    grid-template-columns: minmax(0, 1fr) 68px 48px 68px 14px;
+    gap: var(--s2);
+    font-size: 0.8125rem;
+  }
+  .bar {
+    display: none;
+  }
+}
