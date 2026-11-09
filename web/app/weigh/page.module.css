@@ -1,0 +1,144 @@
+/* The page is one action, on the centre of the first view. */
+.stage {
+  min-height: calc(72svh - var(--bar));
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: clamp(20px, 2.6vw, 32px);
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.18em 0.2em;
+  font-family: var(--mono);
+  font-size: clamp(2rem, 7.4vw, 6.25rem);
+  font-weight: 550;
+  line-height: 1.16;
+  letter-spacing: -0.055em;
+}
+.title :global(.b) {
+  padding: 0 0.22em;
+  line-height: 1.16;
+  border-radius: 0.2em;
+}
+.title :global(.b[data-c='line']) {
+  color: var(--ink-2);
+}
+
+.lead {
+  max-width: 34em;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.45;
+  letter-spacing: -0.016em;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s2);
+  font-size: var(--small-size);
+  color: var(--ink-3);
+}
+.examples > span {
+  margin-right: var(--s1);
+}
+
+/* Each weighed program is one line: its name, where its compute goes, its heaviest instruction. */
+.list {
+  border-bottom: 1px solid var(--line);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) 104px minmax(140px, 2.2fr) minmax(0, 2fr) 88px;
+  align-items: center;
+  gap: var(--s5);
+  min-height: 64px;
+  border-top: 1px solid var(--line);
+  font-size: 0.875rem;
+  transition: background var(--t-hover) var(--ease);
+}
+.name,
+.beam {
+  transition: transform 0.3s var(--out);
+}
+@keyframes rowIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .list > li {
+    animation: rowIn 0.5s var(--out) backwards;
+    animation-delay: calc(min(var(--row, 0), 12) * 40ms + 200ms);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  a.row:hover {
+    background: rgb(255 255 255 / 0.035);
+  }
+  a.row:hover .name {
+    transform: translateX(8px);
+  }
+  a.row:hover .beam {
+    transform: scaleY(1.4);
+  }
+}
+a.row:active {
+  background: rgb(255 255 255 / 0.06);
+}
+
+.name {
+  font-family: var(--mono);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.top {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.top > :first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quiet {
+  font-size: var(--small-size);
+  color: var(--ink-3);
+}
+
+.size {
+  text-align: right;
+  color: var(--ink-2);
+}
+
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr) minmax(100px, 1fr);
+    gap: var(--s2) var(--s4);
+    padding-block: var(--s3);
+  }
+  .kind,
+  .size {
+    display: none;
+  }
+  .top {
+    grid-column: 1 / -1;
+  }
+}

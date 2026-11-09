@@ -1,0 +1,116 @@
+.address {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2) var(--s3);
+  color: var(--ink-2);
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}
+.address button {
+  min-width: 0;
+  height: 28px;
+  padding: 0 var(--s3);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.ix.ix {
+  letter-spacing: 0;
+  text-transform: none;
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--ink);
+  text-align: left;
+  white-space: nowrap;
+  padding: 10px var(--s3) 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.unknown {
+  margin-left: var(--s2);
+  font-family: var(--sans);
+  font-size: var(--small-size);
+  color: var(--ink-3);
+}
+
+.barCol {
+  width: 34%;
+  min-width: 140px;
+}
+
+.bar {
+  display: block;
+  height: 12px;
+  border-radius: 4px;
+  background: var(--ink);
+  transform-origin: left;
+  transition: opacity var(--t-hover) var(--ease);
+}
+@keyframes draw {
+  from {
+    transform: scaleX(0);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .bar {
+    animation: draw 0.9s var(--out) backwards;
+    animation-delay: calc(min(var(--row, 0), 14) * 34ms + 320ms);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  tbody:hover tr:not(:hover) .bar {
+    opacity: 0.4;
+  }
+  tbody tr:hover > * {
+    background: rgb(255 255 255 / 0.04);
+  }
+}
+
+.median {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s5) clamp(24px, 4vw, 64px);
+}
+.legend > div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.legend dd {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+.legend dt {
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+.rest dd,
+.rest dt {
+  color: var(--ink-3);
+}
+
+.commands {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+  max-width: 100%;
+}
+.commands > * {
+  width: min(100%, 720px);
+}
+
+@media (max-width: 720px) {
+  .barCol {
+    display: none;
+  }
+}
