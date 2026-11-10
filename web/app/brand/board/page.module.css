@@ -1,0 +1,111 @@
+.stage {
+  position: relative;
+  height: 420px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--r-panel);
+}
+
+.stream {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: var(--s5);
+  opacity: 0.62;
+}
+
+.code {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  gap: 1.3em;
+}
+
+.line {
+  position: relative;
+  display: flex;
+  gap: 0.16em;
+  font-family: var(--mono);
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-weight: 550;
+  line-height: 1.16;
+  letter-spacing: -0.055em;
+}
+.line :global(.b),
+.glass {
+  padding: 0 0.2em;
+  line-height: 1.16;
+  border-radius: 0.2em;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--s3);
+}
+.swatch {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+  align-content: start;
+  padding: var(--s5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-panel);
+}
+.swatch :global(.b) {
+  font-size: 1.25rem;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  padding: 0.1em 0.4em 0.14em;
+  border-radius: 0.3em;
+}
+
+.type {
+  display: grid;
+  gap: var(--s5);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s4) var(--s5);
+}
+
+.big {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 2rem;
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+.big :global(.b) {
+  padding: 0.04em 0.3em 0.08em;
+}
+.big :global(.ast) {
+  fill: var(--ink-3);
+}
+
+.fields {
+  display: grid;
+  gap: var(--s4);
+  margin-top: var(--s6);
+  max-width: 620px;
+}
+
+.states {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s3);
+}
+
+@media (max-width: 800px) {
+  .states {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
