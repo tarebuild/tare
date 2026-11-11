@@ -1,0 +1,10 @@
+**/node_modules
+**/.next
+**/.env
+**/.env.*
+/.dockerignore
+/DESIGN.md
+*.tsbuildinfo
+/.next-prod.*
+/.next-build.log
+/refs/
