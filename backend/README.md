@@ -54,3 +54,33 @@ const result = await api.weigh(program)
 A weighing or proof report may carry `optimization` (bytecode sizes, hashes and rewrite statistics) and `recordedCorpus` (recorded-input reproduction provenance). The two metadata objects preserve additional producer keys; the rest of the contract remains strict. Their schemas include the current Rust writer fields and retain compatibility with null metadata and earlier recordings.
 
 The client validates responses. `ApiClientError` exposes `code`, `status`, and `body.error`. All failures use `{error:{code,message,retryable,stage,...}}`. Ordinary empty lists and `not_program`, `no_transactions`, `sampling`, and record `report_unavailable` remain successful responses.
+
+## Routes
+
+| Route | Response |
+| --- | --- |
+| GET `/health` | 200 `{status: "fixture" | "waiting" | "ready"}` |
+| GET `/v1/config` | Site URL, record URL template, and nullable `installLine` |
+| GET `/install.sh` | POSIX installer with the configured release base URL |
+| GET `/releases/{file}` | Release archive, checksum or latest version; plain filenames only |
+| GET `/v1/bench` | Benchmark document |
+| GET `/v1/bench/totals` | Totals from the same document |
+| GET `/v1/compat` | Compatibility document |
+| GET `/v1/registry/totals` | Record, program and flag counts, weights, corpus total |
+| GET `/v1/records?program=&cursor=&limit=` | Records newest first; default 24, max 100 |
+| GET `/v1/records/{record}` | Record, report, flag inputs and check command |
+| GET `/v1/weigh?limit=` | Recently sampled programs |
+| GET `/v1/weigh/{program}` | Start sampling or return stored result and registry records |
+| POST `/v1/reports` | UploadProofReport JSON returns 201 `{hash,location}` |
+| GET `/v1/reports/{hash}` | Normalized ProofReport with explicit Accept: application/json; otherwise original bytes |
+| POST `/v1/flag-inputs` | UploadFlagInput JSON returns 201 `{hash,location}` |
+| GET `/v1/flag-inputs/{hash}` | Normalized FlagInput with explicit Accept: application/json; otherwise original bytes |
+| GET `/v1/token` | Token facts; unknown values null |
+
+Records use keyset pagination by descending slot then address. Pass `page.nextCursor` unchanged and retain the program filter. A missing record fails with `RECORD_NOT_FOUND`; missing report content leaves its record and flags visible with `status: "report_unavailable"`.
+
+Both fixture and chain modes serve the current benchmark and compatibility files from `bench/`. Fixture scenarios do not replace these two files. Readers check file identity, timestamps and size on each request, sharing one concurrent read. A revision is published only after the file is stable and the complete document validates. During a partial write, invalid replacement or temporary removal, requests keep the last good document. The next valid revision appears without restarting the API. With no successful read yet, an absent file returns an empty document; an invalid file returns `INVALID_REPORT` (422). Invalid revisions log `data_validation_failed` with the first failing field path once per cached revision. Real routes refuse `fixture: true`; services never write into `bench/`.
+
+Measured benchmark rows retain `record: string | null` and may carry `recordCluster`. In chain mode, `/v1/bench` adds `recordUrl` only when the matching record exists in this API's indexed registry and `SITE_PUBLIC_URL` supplies `recordUrlTemplate`. The lookup checks program address, both build hashes, corpus hash and available source identity. If a row has no attached record, the newest matching indexed record is attached to the response with the current `CLUSTER`. This enrichment never changes the file. An explicit attachment is preserved; if its cluster differs, is unknown, or the indexed record is absent or mismatched, no link is added. The Solana cluster label `mainnet-beta` is treated as `mainnet`. A `recordUrl` supplied by a file is ignored; the API derives it from its own template. Fixture mode preserves attachment data without making registry links. `/v1/bench/totals` reads the same validated file and needs no database query.
+
+Use one registry cluster per database, as for the existing indexer. Record rows are not partitioned by cluster; changing the API's `CLUSTER` while reusing another cluster's indexed database is not a supported deployment. The website should link a row only when its `recordUrl` is present.

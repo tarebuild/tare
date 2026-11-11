@@ -43,3 +43,11 @@ Instruction weights changed from cumulative CU to per-call medians. Unreached in
 
 `ProgramSample.signaturesExamined` is an additive optional integer. Existing 0.2.0 recordings remain valid without it and are preserved unchanged. New producers must emit the count, and clients must display an omitted count as unknown. The 0.3.0 tarball is published locally alongside the previous versions in `pack/`.
 
+## Changes from 0.3.0
+
+Optional `optimization` and `recordedCorpus` fields preserve the Rust writer's extension data without weakening other schemas. Missing fields remain missing; explicit null remains null. Recorded-corpus writers emit a provenance array (empty when no recordings were replayed). Singleton provenance objects are not accepted. Existing recorded fixtures and all prior tarballs are retained unchanged.
+
+## Changes from 0.4.0
+
+Optional `replay` is retained in strict weighings, proof uploads and reads. `Replay` is exported as a schema and type, with `schema/Replay.json` for Rust consumers. `RegistryTotals` now requires `feesAccruedLamports`; every new API response supplies it. Flag differences additionally accept strict account metadata comparisons, and replay account snapshots accept an optional safe-integer `rentEpoch`. Prior tarballs and recorded mainnet samples remain unchanged.
+
