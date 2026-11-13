@@ -121,3 +121,23 @@ The loader retains responsibility for writable-account enforcement, ownership, l
 ## Assumptions
 
 Each manifest entry selects the default feature set of its pinned program manifest. Explicit environment bindings come from the upstream fixture scripts; the env-id program uses the literal from its own `test.sh`. The generated corpus chooses deterministic client accounts and values, records successful sample counts, and leaves unreached instructions unmeasured. Medians use the upper observed middle sample, so every reported CU value is an actual meter observation. No container or validator result is inferred from a native run.
+
+## Attest, check and flag
+
+`--url`/`TARE_RPC_URL`, `--keypair`/`TARE_KEYPAIR`, `--registry-program`/`TARE_REGISTRY_PROGRAM_ID`, and `--api-url`/`TARE_API_URL` configure the chain and report API. The registry defaults to the mainnet program `7viqDjx5k8ffnfnZiBv9dMhxzVhcGSYLMb5bKdDP1XtP` and the API to `https://api.tare.cx`; `--url` has no default. The CLI never reads or writes global Solana configuration.
+
+`attest` requires a matching proof, unchanged current build hashes, and a clean git source tree at the recorded origin/commit. It uploads the canonical report, verifies the API's content hash, sends the registry instruction, confirms it, and prints the record and configured page URL. `check` reads the on-chain account and report by hash, fetches the exact commit, rebuilds and replays the pinned corpus, and compares both build hashes and the corpus hash. `flag` follows the same rebuild checks, executes the supplied signed transaction/account snapshot on both builds, and uploads/sends only when it actually diverges.
+
+Host and image builds apply the same source-path and crate-metadata normalization. Two independent native checkout folders and fresh caches produce byte-identical stock and Tare new_idl ELFs; the native chain flow then rebuilds and checks an attestation from another folder. The default image path mounts the source at `/workspace`; Windows Docker execution was verified by the lead in round four. Previously attested pre-normalization hashes retain their original meaning and require a new attestation for the new build.
+
+The `replay` report field contains a gzip/base64 manifest with its SHA-256: relative manifest path, generated seed and exact generated transactions, captured test/mainnet transactions and starting state, and external ELF hashes/bytes. The corpus hash commits to this complete manifest. Source paths are portable; check does not resample RPC state. Contract 0.7.1 accepts the replay field. [contract-additions.md](contract-additions.md) lists wide-integer encoding and the optional benchmark record-cluster field.
+
+`prove --program ADDRESS --samples N` adds a bounded current-state mainnet corpus using `TARE_MAINNET_RPC_URL` or `--url`. The default is three signatures and the maximum is twenty. Legacy, v0 and v1 transaction messages are accepted; failed transactions are compared too. Signatures, signed transactions, current account/Clock/lookup-table snapshots and external program bytes are kept for replay. These current-state executions do not claim to reproduce the historical bank.
+
+The ordinary Anchor [registry workspace](../registry/README.md) owns fees and records. The [single Linux entry point](../bench/README.md#one-linux-entry-point) builds tools separately from pristine corpus checkouts, records stock suites, tests Tare suites, and retains their real transcripts. Native RPC rehearsals use real LiteSVM execution and a local report store; they are distinct from the lead's validator runs.
+
+## Current measured limits
+
+The [round-six report](../bench/round-six.md) records the latest in-place corpus run, aggregate compute and ELF sizes, and every remaining current-stock failure. The [production trace](../bench/transcripts/round-eight-whirlpool-trace.txt) records the measured account-loading and CPI costs. A performance failure remains a measured row and keeps the gate nonzero.
+
+The production corpus measures 34 Squads instructions, 20 Whirlpools instructions and six Marinade instructions. Coverage is partial; unreached instructions stay null and have per-instruction reasons in the report. No performance failure or divergent input is hidden.
