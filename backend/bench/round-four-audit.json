@@ -1,0 +1,4647 @@
+{
+  "schemaVersion": "1",
+  "inputs": [
+    "C:\\src\\tare\\backend\\bench\\results.json"
+  ],
+  "counts": {
+    "manifestPrograms": 238,
+    "resultPrograms": 238,
+    "statuses": {
+      "measured": 189,
+      "not_built": 49
+    },
+    "missing": 0,
+    "issues": 0
+  },
+  "complete": true,
+  "passed": true,
+  "issues": [],
+  "schemas": [
+    {
+      "schema": "BenchResults",
+      "path": "C:\\src\\tare\\backend\\bench\\results.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\results.json: published BenchResults schema passed"
+    },
+    {
+      "schema": "Compat",
+      "path": "C:\\src\\tare\\backend\\bench\\compat.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\compat.json: published Compat schema passed"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\basic-0\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\basic-0\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\basic-1\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\basic-1\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\basic-2\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\basic-2\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\puppet\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\puppet\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\puppet-master\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\puppet-master\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\basic-4\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\basic-4\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\basic-5\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\basic-5\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\declare-id\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\declare-id\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\multiple-suites\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\multiple-suites\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\system-accounts\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\system-accounts\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\floats\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\floats\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\events\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\events\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\errors\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\errors\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\relations-derivation\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\relations-derivation\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-spl-metadata-programs-metadata\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-spl-metadata-programs-metadata\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-custom-coder-programs-spl-token\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-custom-coder-programs-spl-token\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-validator-clone-programs-validator-clone\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-validator-clone-programs-validator-clone\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-anchor-cli-idl-programs-idl-commands-one\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-anchor-cli-idl-programs-idl-commands-one\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-anchor-cli-idl-programs-idl-commands-two\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-anchor-cli-idl-programs-idl-commands-two\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-multiple-suites-run-single-programs-multiple-suites-run-single\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-multiple-suites-run-single-programs-multiple-suites-run-single\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-custom-coder-programs-spl-associated-token\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-custom-coder-programs-spl-associated-token\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-safety-checks-programs-account-info\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-safety-checks-programs-account-info\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-safety-checks-programs-unchecked-account\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-safety-checks-programs-unchecked-account\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-sysvars-programs-sysvars\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-sysvars-programs-sysvars\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-typescript-programs-typescript\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-typescript-programs-typescript\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-idl-programs-external\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-idl-programs-external\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-safety-checks-programs-ignore-non-accounts\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-safety-checks-programs-ignore-non-accounts\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-idl-programs-docs\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-idl-programs-docs\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-optional-programs-allow-missing-optionals\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-optional-programs-allow-missing-optionals\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-zero-copy-programs-zero-cpi\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-zero-copy-programs-zero-cpi\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-anchor-cli-account-programs-account-command\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-anchor-cli-account-programs-account-command\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-composite-programs-composite\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-composite-programs-composite\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-cpi-returns-programs-callee\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-cpi-returns-programs-callee\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-idl-programs-relations-derivation\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-idl-programs-relations-derivation\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-init-if-needed\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-init-if-needed\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-idl-programs-generics\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-idl-programs-generics\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-custom-discriminator-programs-custom-discriminator\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-custom-discriminator-programs-custom-discriminator\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-remaining-accounts\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-remaining-accounts\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-realloc-programs-realloc\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-realloc-programs-realloc\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-cpi-returns-programs-caller\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-cpi-returns-programs-caller\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-lamports\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-lamports\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-chat-programs-chat\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-chat-programs-chat\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-declare-program-programs-external\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-declare-program-programs-external\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-overflow-checks\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-overflow-checks\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-pyth-programs-pyth\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-pyth-programs-pyth\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-custom-coder-programs-native-system\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-custom-coder-programs-native-system\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-optional-programs-optional\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-optional-programs-optional\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-zero-copy-programs-zero-copy\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-zero-copy-programs-zero-copy\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-spl-transfer-hook-programs-transfer-hook\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-spl-transfer-hook-programs-transfer-hook\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-cashiers-check-programs-cashiers-check\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-cashiers-check-programs-cashiers-check\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-idl-programs-idl\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-idl-programs-idl\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-spl-token-proxy-programs-token-proxy\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-spl-token-proxy-programs-token-proxy\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-escrow-programs-escrow\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-escrow-programs-escrow\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-spl-token-wrapper-programs-token-wrapper\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-spl-token-wrapper-programs-token-wrapper\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-misc-optional\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-misc-optional\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-misc\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-misc-programs-misc\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-bench-programs-bench\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_31_1-tests-bench-programs-bench\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-spl-metadata-programs-metadata\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-spl-metadata-programs-metadata\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-custom-coder-programs-spl-token\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-custom-coder-programs-spl-token\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-0-programs-basic-0\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-0-programs-basic-0\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-validator-clone-programs-validator-clone\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-validator-clone-programs-validator-clone\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-anchor-cli-idl-programs-idl-commands-one\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-anchor-cli-idl-programs-idl-commands-one\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-anchor-cli-idl-programs-idl-commands-two\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-anchor-cli-idl-programs-idl-commands-two\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-multiple-suites-run-single-programs-multiple-suites-run-single\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-multiple-suites-run-single-programs-multiple-suites-run-single\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-custom-coder-programs-spl-associated-token\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-custom-coder-programs-spl-associated-token\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-safety-checks-programs-account-info\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-safety-checks-programs-account-info\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-safety-checks-programs-unchecked-account\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-safety-checks-programs-unchecked-account\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-declare-id-programs-declare-id\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-declare-id-programs-declare-id\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-system-accounts-programs-system-accounts\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-system-accounts-programs-system-accounts\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-multiple-suites-programs-multiple-suites\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-multiple-suites-programs-multiple-suites\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-sysvars-programs-sysvars\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-sysvars-programs-sysvars\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-typescript-programs-typescript\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-typescript-programs-typescript\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-external\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-external\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-safety-checks-programs-ignore-non-accounts\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-safety-checks-programs-ignore-non-accounts\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-3-programs-puppet\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-3-programs-puppet\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-3-programs-puppet-master\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-3-programs-puppet-master\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-docs\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-docs\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-optional-programs-allow-missing-optionals\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-optional-programs-allow-missing-optionals\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-1-programs-basic-1\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-1-programs-basic-1\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-2-programs-basic-2\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-2-programs-basic-2\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-zero-copy-programs-zero-cpi\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-zero-copy-programs-zero-cpi\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-events-programs-events\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-events-programs-events\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-anchor-cli-account-programs-account-command\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-anchor-cli-account-programs-account-command\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-floats-programs-floats\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-floats-programs-floats\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-composite-programs-composite\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-composite-programs-composite\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-cpi-returns-programs-callee\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-cpi-returns-programs-callee\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-relations-derivation\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-relations-derivation\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-init-if-needed\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-init-if-needed\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-4-programs-basic-4\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-4-programs-basic-4\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-generics\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-generics\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-custom-discriminator-programs-custom-discriminator\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-custom-discriminator-programs-custom-discriminator\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-remaining-accounts\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-remaining-accounts\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-relations-derivation-programs-relations-derivation\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-relations-derivation-programs-relations-derivation\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-realloc-programs-realloc\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-realloc-programs-realloc\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-cpi-returns-programs-caller\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-cpi-returns-programs-caller\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-lamports\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-lamports\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-chat-programs-chat\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-chat-programs-chat\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-declare-program-programs-external\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-declare-program-programs-external\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-5-programs-basic-5\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-examples-tutorial-basic-5-programs-basic-5\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-overflow-checks\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-overflow-checks\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-pyth-programs-pyth\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-pyth-programs-pyth\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-custom-coder-programs-native-system\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-custom-coder-programs-native-system\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-optional-programs-optional\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-optional-programs-optional\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-zero-copy-programs-zero-copy\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-zero-copy-programs-zero-copy\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-errors-programs-errors\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-errors-programs-errors\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-spl-transfer-hook-programs-transfer-hook\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-spl-transfer-hook-programs-transfer-hook\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-cashiers-check-programs-cashiers-check\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-cashiers-check-programs-cashiers-check\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-idl\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-idl\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-spl-token-proxy-programs-token-proxy\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-spl-token-proxy-programs-token-proxy\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-escrow-programs-escrow\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-escrow-programs-escrow\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-spl-token-wrapper-programs-token-wrapper\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-spl-token-wrapper-programs-token-wrapper\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-new-idl\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-idl-programs-new-idl\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-misc-optional\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-misc-optional\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-misc\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-misc-programs-misc\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-bench-programs-bench\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v0_32_3-tests-bench-programs-bench\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-spl-metadata-programs-metadata\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-spl-metadata-programs-metadata\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-custom-coder-programs-spl-token\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-custom-coder-programs-spl-token\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-0-programs-basic-0\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-0-programs-basic-0\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-idl-programs-env-id\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-idl-programs-env-id\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-validator-clone-programs-validator-clone\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-validator-clone-programs-validator-clone\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-anchor-cli-idl-programs-idl-commands-one\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-anchor-cli-idl-programs-idl-commands-one\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-anchor-cli-idl-programs-idl-commands-two\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-anchor-cli-idl-programs-idl-commands-two\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-solana-program-deps-matching-programs-matching-solana-program\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-solana-program-deps-matching-programs-matching-solana-program\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-solana-program-deps-mismatched-programs-mismatched-solana-program\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-solana-program-deps-mismatched-programs-mismatched-solana-program\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-multiple-suites-run-single-programs-multiple-suites-run-single\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-multiple-suites-run-single-programs-multiple-suites-run-single\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-custom-coder-programs-spl-associated-token\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-custom-coder-programs-spl-associated-token\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-multiple-scripts-programs-example\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-multiple-scripts-programs-example\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-safety-checks-programs-account-info\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-safety-checks-programs-account-info\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-safety-checks-programs-unchecked-account\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-safety-checks-programs-unchecked-account\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-declare-id-programs-declare-id\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-declare-id-programs-declare-id\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-system-accounts-programs-system-accounts\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-system-accounts-programs-system-accounts\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-multiple-suites-programs-multiple-suites\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-multiple-suites-programs-multiple-suites\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-sysvars-programs-sysvars\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-sysvars-programs-sysvars\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-typescript-programs-typescript\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-typescript-programs-typescript\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-anchor-cli-legacy-idl-programs-anchor-cli-legacy-idl\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-anchor-cli-legacy-idl-programs-anchor-cli-legacy-idl\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-interface-account-programs-old\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-interface-account-programs-old\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-idl-programs-external\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-idl-programs-external\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-account-generation-test-programs-account-generation-test\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-account-generation-test-programs-account-generation-test\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-safety-checks-programs-ignore-non-accounts\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-safety-checks-programs-ignore-non-accounts\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-3-programs-puppet\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-3-programs-puppet\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-3-programs-puppet-master\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-3-programs-puppet-master\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-idl-programs-docs\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-idl-programs-docs\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-optional-programs-allow-missing-optionals\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-optional-programs-allow-missing-optionals\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-cpi-returns-programs-malicious\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-cpi-returns-programs-malicious\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-1-programs-basic-1\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-1-programs-basic-1\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-interface-account-programs-new\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-interface-account-programs-new\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-2-programs-basic-2\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-2-programs-basic-2\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-events-programs-events\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-events-programs-events\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-anchor-cli-account-programs-account-command\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-anchor-cli-account-programs-account-command\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-floats-programs-floats\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-floats-programs-floats\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-composite-programs-composite\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-composite-programs-composite\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-idl-programs-relations-derivation\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-idl-programs-relations-derivation\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-init-if-needed\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-init-if-needed\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-4-programs-basic-4\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-4-programs-basic-4\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-cpi-returns-programs-callee\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-cpi-returns-programs-callee\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-custom-program-programs-custom-program\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-custom-program-programs-custom-program\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-custom-discriminator-programs-custom-discriminator\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-custom-discriminator-programs-custom-discriminator\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-remaining-accounts\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-remaining-accounts\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-idl-programs-generics\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-idl-programs-generics\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-relations-derivation-programs-relations-derivation\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-relations-derivation-programs-relations-derivation\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-lamports\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-lamports\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-chat-programs-chat\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-chat-programs-chat\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-5-programs-basic-5\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-examples-tutorial-basic-5-programs-basic-5\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-overflow-checks\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-overflow-checks\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-pyth-programs-pyth\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-pyth-programs-pyth\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-custom-coder-programs-native-system\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-custom-coder-programs-native-system\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-realloc-programs-realloc\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-realloc-programs-realloc\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-optional-programs-optional\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-optional-programs-optional\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-errors-programs-errors\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-errors-programs-errors\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-spl-transfer-hook-programs-transfer-hook\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-spl-transfer-hook-programs-transfer-hook\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-declare-program-programs-declare-program\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-declare-program-programs-declare-program\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-tictactoe-programs-tictactoe\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-tictactoe-programs-tictactoe\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-cashiers-check-programs-cashiers-check\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-cashiers-check-programs-cashiers-check\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-declare-program-programs-external\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-declare-program-programs-external\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-cpi-returns-programs-caller\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-cpi-returns-programs-caller\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-spl-token-proxy-programs-token-proxy\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-spl-token-proxy-programs-token-proxy\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-escrow-programs-escrow\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-escrow-programs-escrow\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-spl-token-wrapper-programs-token-wrapper\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-spl-token-wrapper-programs-token-wrapper\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-misc-optional\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-misc-optional\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-misc\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-misc-programs-misc\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-bench-programs-bench\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\v1_2_2-tests-bench-programs-bench\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\tare-registry\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\tare-registry\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\production-squads-v4\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\production-squads-v4\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\production-whirlpools\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\production-whirlpools\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    },
+    {
+      "schema": "ProofReport",
+      "path": "C:\\src\\tare\\backend\\bench\\artifacts\\production-marinade\\proof.json",
+      "passed": true,
+      "detail": "C:\\src\\tare\\backend\\bench\\artifacts\\production-marinade\\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained"
+    }
+  ],
+  "artifacts": [
+    {
+      "program": "basic-0",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "ce0faa19520018e2ea1202a3ab4c36dcae5caf6e7fe8958d4541fe9bbefe6042",
+          "bytes": 162176,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "bbe24b52650dcda39c20894266bbac3ec53fff54af52e96e3ba916a462541e9d",
+          "bytes": 117072,
+          "matches": true
+        }
+      },
+      "proofSha256": "1c8a87b5336132544a15018444172c922b014684cee34ac6fcae1d30e53a6dfd"
+    },
+    {
+      "program": "basic-1",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "f2520b13e4dc1c820b59d3ff5ba11fda5cbe5e62752b68984e6e22b04a16c419",
+          "bytes": 182144,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "4b8dcbac9fbbdf744f858809ca1b779bcf3b242551851af5c3a9fd54d9069ec4",
+          "bytes": 152496,
+          "matches": true
+        }
+      },
+      "proofSha256": "f169cc87332e397c1e14f8a67d1cc15c4ba3440acd3a0f5ada5db9c74ae4f71c"
+    },
+    {
+      "program": "basic-2",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e523899939527d6c5778fece742a779e9d864b4c704e2855bd639da2ae2a43cd",
+          "bytes": 184456,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "17b7b7a4e958ef1ca4772d77fdd100ad58896603809e55e903f776d33b1b8de7",
+          "bytes": 157056,
+          "matches": true
+        }
+      },
+      "proofSha256": "ad4da50bebb0eb28b28e24e8a11613285933793fe43959b516bff2166380f242"
+    },
+    {
+      "program": "puppet",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "eb6f60b1b9b6f5954486ec62097a5cbe39e20afbc2d57eb7c6eb6052d8acb160",
+          "bytes": 181800,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "695f240be6f6a56239a25c24ac585e201ab18e4293cc9e37a0cbe1a58a10f351",
+          "bytes": 152704,
+          "matches": true
+        }
+      },
+      "proofSha256": "fb8379a220ed85e759cc6c09d55d06ecb05d7605ac454034665e8bc8835ef90f"
+    },
+    {
+      "program": "puppet-master",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "6af58469ee73bc3833082af377cee103a48c4e08fe00db6067b3f9fb5637f868",
+          "bytes": 175144,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "bb8d9d152955ace49aac9303b9fbfd7364e84904b25789b259b59bc1dd6793da",
+          "bytes": 133816,
+          "matches": true
+        }
+      },
+      "proofSha256": "6a4f1066634e8c9b4b90b0a1ab67a5b27cfd4d4ab1a5d68d45da88406177d338"
+    },
+    {
+      "program": "basic-4",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "87fcfa3e2304d48e830c55daf80a863bc34b8f200bfc2af5b1ba063395a30129",
+          "bytes": 187976,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0103860721aeaa29ec18d64d2c1830b05817787f92d5d6c3da6503b8b00ec524",
+          "bytes": 162680,
+          "matches": true
+        }
+      },
+      "proofSha256": "44bba24a2d3ef75999fa17ea566eb2a4c9ef9251feeff72716d78aab7e122cbb"
+    },
+    {
+      "program": "basic-5",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "4bb27849f56bb80acf3de771d51187f1cf55804550e1b528fa527bdc9b0f218a",
+          "bytes": 189320,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "7298c083dccf5a971cc01ebe46a58cd7dec7422df722e11168cd9535eb2264e0",
+          "bytes": 179776,
+          "matches": true
+        }
+      },
+      "proofSha256": "611e9ba9d76824fe4be1bfaa480545fb22be31f5a116014f0cf4bb474d354e59"
+    },
+    {
+      "program": "declare-id",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "4b5848b8e26d34472ac42b2b83fec41265ef8fcb9095a6149cc61b43d748864e",
+          "bytes": 162184,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "ae10b26beeb3a82699e6c91f31c834bbfd5b08ba11500974b0b26221c2af94be",
+          "bytes": 117072,
+          "matches": true
+        }
+      },
+      "proofSha256": "879cf7fbad2632aaeeb5967d22e665e8a3d812f55089fa0afb8bf1369e4ae160"
+    },
+    {
+      "program": "multiple-suites",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "04dd8dba5e475595c6468974ef64475f08690f3242ba8ef482efe7ca04c0be65",
+          "bytes": 162376,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "1b3e0db54765eda01738115e05d3c01ec2309ca43a814a489dabc6aeda4b1d66",
+          "bytes": 118568,
+          "matches": true
+        }
+      },
+      "proofSha256": "124c4bb1d455264248de87ec8f9f79177d75afb0c78a4602df17705efcba0823"
+    },
+    {
+      "program": "system-accounts",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "3ec7ce6d4cb0009f1409fbb843e12bd94e794dcfaca0e3b7e66394b3c17c2d5a",
+          "bytes": 163616,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "ed64ae464e718565125fcd3df4e76a4ee3d3a950cfbc2d19a589a01f9c2c3937",
+          "bytes": 119328,
+          "matches": true
+        }
+      },
+      "proofSha256": "e3a9bd5944c036a5cfc0d21c8b44e35b766b88d40afe4988b2b126991729fab4"
+    },
+    {
+      "program": "floats",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "769bb077d77f2a67d9d934f42dbab0956abf93e99f29e1c3ad95fa0d32393140",
+          "bytes": 185752,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0afe01f43f7c9a2c6dd54859f2a59d50f7d01b81d6cd40aa8073c438f5c89a33",
+          "bytes": 157744,
+          "matches": true
+        }
+      },
+      "proofSha256": "401ffac71140104f90b7d740034107264d094b4a90690a0e0b70c84764cba11c"
+    },
+    {
+      "program": "events",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "440f3c33ef3a2568e556d023d6ce95d09e82a8f82fb8abf3f89b5703bc00d507",
+          "bytes": 172568,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "6be938bd803e74d8dc30d290fd277162762cca8fd385d43827ff7d1e6c31db4a",
+          "bytes": 140008,
+          "matches": true
+        }
+      },
+      "proofSha256": "0d8380d4482c43b24cde9356c71bb4cf6932770953356dce3b18869845145e86"
+    },
+    {
+      "program": "errors",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "c4fa70829fb758aed2b540026f3d49e9dc8c2ae2f72cf2c2fca544c209cf88a6",
+          "bytes": 198080,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "33ecd3061b7fe96de86e0e1e411569afb6083effdc72b2f30657454a94d5ef53",
+          "bytes": 171800,
+          "matches": true
+        }
+      },
+      "proofSha256": "6450e2e526e077f0f32ab4fdefccd5d8245b735f16d69e40dc61bf246c38234b"
+    },
+    {
+      "program": "relations-derivation",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "9ac67ec4cc540181f6259b4160a93ac0ce5783c21b996df05e494929cffdaf8c",
+          "bytes": 193888,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "df4a0ff594155e53b55955538b87a822ca7e2544106cb748400a7a3db23b8f0e",
+          "bytes": 175472,
+          "matches": true
+        }
+      },
+      "proofSha256": "50847c918512aa6a01ef168e7967636b4bdc3c6ec05f05c7e1bf37194736f3e6"
+    },
+    {
+      "program": "v0_31_1-tests-spl-metadata-programs-metadata",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "8fa2d6246bd0dd26186d0c798a149cb8deaa48edf0fb6dba027dd9eb5ded69f2",
+          "bytes": 161928,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "98122df8ca3bd8905190cdcf75ac4f3826fd6f5baa86374fa88ff78685f20996",
+          "bytes": 117008,
+          "matches": true
+        }
+      },
+      "proofSha256": "a246147c7e952e7c631e878d9f49d51f79db1dbfa19ace6ba17ae7278907e505"
+    },
+    {
+      "program": "v0_31_1-tests-custom-coder-programs-spl-token",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "9456fafa391e66fb93eda23900be277e1290fc6b6093112133de36bb58c1e323",
+          "bytes": 162072,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "e1617fec52bd403b39606fb56fc5692374373e4dbdf31b5dc7e9b479b0f77038",
+          "bytes": 117024,
+          "matches": true
+        }
+      },
+      "proofSha256": "74429aaf4395581dd9a3ea6a1e719a37ea0d22107e380fa29be50cca6a28970e"
+    },
+    {
+      "program": "v0_31_1-tests-validator-clone-programs-validator-clone",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "2e9e9439dd5f4a349a38a57cfdd1a6bb8d97bcac1c86bd5dbc6c73666e9da40d",
+          "bytes": 162192,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "304106673620f8fb7b663d6365f5ae9225570c5960ef5f61d7e6ec51559f1227",
+          "bytes": 117080,
+          "matches": true
+        }
+      },
+      "proofSha256": "8425b2fa495d96e1f3ea163294f03a8c6fc205f475d5a27054e549e9909ee2f6"
+    },
+    {
+      "program": "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-one",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "9b0807f1c4f515b925e19880c1bdfbab130d32babd9ef00431271e7da6c3e429",
+          "bytes": 162200,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "c4790304061bd60e3e8502c66e4bb43b8d603d89695aafc7621cd92e394cf02e",
+          "bytes": 117080,
+          "matches": true
+        }
+      },
+      "proofSha256": "521a74258003a4a9f1e802222f58a6766b9ad21b32329a22cd6165bf68424cd6"
+    },
+    {
+      "program": "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-two",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "1249357f0b9a5f3e5574a146b8f7910c416acb0fb41371b4cdd461cac2d93157",
+          "bytes": 162240,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "b6f2e5d26e8d4d356806a2c0df5186f66b5975f0dd4fd74c88ecf76d20e681a0",
+          "bytes": 117072,
+          "matches": true
+        }
+      },
+      "proofSha256": "a26a305748d7c19ded24ad5160589c5ff72863b5a368a2121ae8510ef5d5f11a"
+    },
+    {
+      "program": "v0_31_1-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "32e633ed37df7e84f3a250bf292c155cd03883ef92787ff8abf3d73cc3581c64",
+          "bytes": 162216,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "d87ef03f86201f85f5f1cde6170ff2004fc960b7ab4fef9d21b91f0f4c6dbf50",
+          "bytes": 117088,
+          "matches": true
+        }
+      },
+      "proofSha256": "4e4f068b680ad69b4ad80a8aefda852536157a59777a7990e592ed351499db6b"
+    },
+    {
+      "program": "v0_31_1-tests-custom-coder-programs-spl-associated-token",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "36a8a641bbaa3717bd51dfacfc344df99bfc223253829f74e2e1d3a3d3e7257e",
+          "bytes": 162096,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "1396c97854e871dc670ade8670fc1509ab343c364fc59f773c6aa29c77c35729",
+          "bytes": 117040,
+          "matches": true
+        }
+      },
+      "proofSha256": "7431e45a4aa7d276ec041600a48a1884d08772384bd5a783802ce11bbd6144fb"
+    },
+    {
+      "program": "v0_31_1-tests-safety-checks-programs-account-info",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "4c7266cdc89bc3213bc26e109e614c0af68ec59babd2ddf63bb39244a2c34a9a",
+          "bytes": 163344,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "443000b5b116d8db09135832ada827e3edc5aaacb3115f780f95a3d3f207014f",
+          "bytes": 118472,
+          "matches": true
+        }
+      },
+      "proofSha256": "598e3387dbbfb103f426922e34d9d22e86824932c213084a38db26296715bf21"
+    },
+    {
+      "program": "v0_31_1-tests-safety-checks-programs-unchecked-account",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "fb17cffb9d4f658944c052dde6849cb271026348e71648721d36564e2079b0d2",
+          "bytes": 162840,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "d283219b3255b7077aacef0decae69fe57ea5b6b8279449aa5f7bbb264d239bd",
+          "bytes": 117888,
+          "matches": true
+        }
+      },
+      "proofSha256": "725536a2e3459e7d0131ad6482b2f4104a06ffb539c7bc510f45d22e9de9840a"
+    },
+    {
+      "program": "v0_31_1-tests-sysvars-programs-sysvars",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "7682f42c17a7543609a776394059725fdc54d1e4b0459dac4774a888902f111a",
+          "bytes": 167488,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "a49a70f7c355475a34f4a75543cb0facffbda53a94ed9d1027f01b803fe10d6f",
+          "bytes": 126720,
+          "matches": true
+        }
+      },
+      "proofSha256": "3d8c9236d6c09505737d01fe94f32be87121927b431222bd4a4473e39680e759"
+    },
+    {
+      "program": "v0_31_1-tests-typescript-programs-typescript",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e379b757934f66c3d6511a1e8181215c218b5fbd6d8b4a5adc68fe33d8fd5835",
+          "bytes": 162184,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "5e25eb0003c11c3ac4dc4c652072e56a7f97eb2f3bc5916844d6334e142e04c2",
+          "bytes": 117072,
+          "matches": true
+        }
+      },
+      "proofSha256": "dcaeb37d38efa38bc355d7625877e9bc59e3477c17eca73d3c5371816452dd58"
+    },
+    {
+      "program": "v0_31_1-tests-idl-programs-external",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "d5e3edbeef172407faec9d3b54a3239ce2d114b147834f0d77db2ef9109023e9",
+          "bytes": 162040,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "f4a38ffeaf074cba5f5e6995749fe930cc4baa5122c7bf3659449ff4fce6ec44",
+          "bytes": 117056,
+          "matches": true
+        }
+      },
+      "proofSha256": "a869cd2d86e279f87123b7bdb0321f540f3aedb74f2731f2bf029c5d6fc2f3e4"
+    },
+    {
+      "program": "v0_31_1-tests-safety-checks-programs-ignore-non-accounts",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "0fc5e3ce73777d60ce4887d58fb5ce6b72cd66a3928a6cb0a54300a6b9912397",
+          "bytes": 163744,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "75da7a04e2915d6e637145aee8879bb52ac2c15f01b68360b0d68d10575df73a",
+          "bytes": 119080,
+          "matches": true
+        }
+      },
+      "proofSha256": "61bdaa6ad53fe2a311a1ebd6819f75233f7a697c4c4b8709c0a2868607100a83"
+    },
+    {
+      "program": "v0_31_1-tests-idl-programs-docs",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "d1de7572a1edd1560f98a10d57c857f1515fd304f1e829702a8ec185c2f780e9",
+          "bytes": 164944,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "34524af1a29003e18401d7b2c54d52f57d9d760cf37131c49ea51e9e67073078",
+          "bytes": 122280,
+          "matches": true
+        }
+      },
+      "proofSha256": "d5d52acaaa484016f5a781967569a5f9ea528e5e4444e199de7cdd8b0d03c2db"
+    },
+    {
+      "program": "v0_31_1-tests-optional-programs-allow-missing-optionals",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "ef2dd4b0bbeeca089c0bdfc920bf1bd4fb9d8836b1f3a0eeaa5f832c65ddbd96",
+          "bytes": 178808,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "ee05c7c1234a77630726bef2446a4949f671a57b96adeda957b088a8bb7c4e4e",
+          "bytes": 148864,
+          "matches": true
+        }
+      },
+      "proofSha256": "2e2f8fd158985230d6f555f0131a9ae5addc322a996e2bec692f6bdfd27debab"
+    },
+    {
+      "program": "v0_31_1-tests-zero-copy-programs-zero-cpi",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "b2c2b1c2416c4fe3f66f3ff7b14da140a0bbc93c285c8755b4f2559a7cfc635a",
+          "bytes": 179200,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "b052eae962d7a1e631db876bfdb4c39595b2cbb611ea29bcb6d6e0413b2a6c2c",
+          "bytes": 147480,
+          "matches": true
+        }
+      },
+      "proofSha256": "3578bce649d1efb59e24157254baaef5c1d96b4f1bb225ee7ee41994493536f7"
+    },
+    {
+      "program": "v0_31_1-tests-anchor-cli-account-programs-account-command",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "5f87e99294fafef4e8e15764de398425f417b5cad047fbd36569117c45a94ea4",
+          "bytes": 185592,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0369963a7a1934ebb18470417a68d6d2f3cc642d38782489c635d820c8d284a7",
+          "bytes": 160888,
+          "matches": true
+        }
+      },
+      "proofSha256": "32d6a0798c6711611f1fffe267e2d891b43ccba78d3e2fe6199ec5d149ece633"
+    },
+    {
+      "program": "v0_31_1-tests-composite-programs-composite",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "fac062ba286446f677bf159746a7875aa10851fedc5e5422070aefe2b1655a4a",
+          "bytes": 179776,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "aee46aac93490391b9d636c64d5d7af923f3c3598da010b6786b7245bb472f10",
+          "bytes": 147288,
+          "matches": true
+        }
+      },
+      "proofSha256": "743a5cbbd6626b1cfbdfa1a31210ab4766f40d80c07c1eb755f23efeceeae01f"
+    },
+    {
+      "program": "v0_31_1-tests-cpi-returns-programs-callee",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e8df1db68d4e5360caaeff9d2a6c752da2762ab18518243463b1d274d885af85",
+          "bytes": 183032,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "8af57723cd58631bb84ae1137707d6841df75e9e91b4789a465758fd79f26809",
+          "bytes": 161784,
+          "matches": true
+        }
+      },
+      "proofSha256": "73a633ff4f07f56b1e3af43f7257a6d5f363bff8b5d98f626c5500808e549a0d"
+    },
+    {
+      "program": "v0_31_1-tests-idl-programs-relations-derivation",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e976ada4222bc141256b8ae7d0d827727811122a25e707319aaff115efa49e75",
+          "bytes": 188952,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "ab77118f69ccb99dd2ecf3d2680a9593c2b508a0581918c82aa3a6f66a444d1e",
+          "bytes": 162768,
+          "matches": true
+        }
+      },
+      "proofSha256": "685ff64ef3c2467cb03c689b4400648c7ab660c9735185ea8320fe3e0311b7dd"
+    },
+    {
+      "program": "v0_31_1-tests-misc-programs-init-if-needed",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "f16bb6825d6a665ddd3a5aedd0f381af05196197bc11498d899d5ac4f218ed55",
+          "bytes": 192688,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "4c2ab702af6d3992eb3a9be519e537fb2fd4ed41ccbfe5581fc4d387ffc9387f",
+          "bytes": 176256,
+          "matches": true
+        }
+      },
+      "proofSha256": "45a328a394edce7c1651a847c03772adc85cb14d3107a4290132f0f807c76f2a"
+    },
+    {
+      "program": "v0_31_1-tests-idl-programs-generics",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "013a7f0bf6b213aeeb69fca7e7715677b97a431c22ab61f99ef7de353f892205",
+          "bytes": 172360,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "4696148fdef6361bb5d9f96e60999af32d41faf09284321961a9de91c2cdde9c",
+          "bytes": 137984,
+          "matches": true
+        }
+      },
+      "proofSha256": "0d7d3c77e8ca7770039e38cdcbb95e52b8dcb167707713828878d8560652c9e0"
+    },
+    {
+      "program": "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "39501e67db5ec231eef3e805c2f08926c4fa4479a6c104f2c74a55dd19ce5d52",
+          "bytes": 182600,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "a7bfaef2f297d1a27e8aac7a9d48dcbb4784e495e790b7dbb083e356a699effa",
+          "bytes": 157232,
+          "matches": true
+        }
+      },
+      "proofSha256": "2c824fbe1550030daf35c57c032396ba81ab52bf154bc3ff2ad81d3f7507d283"
+    },
+    {
+      "program": "v0_31_1-tests-misc-programs-remaining-accounts",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "4790ffb181dc034e40cc11462684e460e61c08e480d13965bbfd126b2304eccb",
+          "bytes": 198504,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "aac6ac29271f4f0ae2d91caf332f4d9f6d6bca3424940eb06c3db4b373ea484d",
+          "bytes": 174080,
+          "matches": true
+        }
+      },
+      "proofSha256": "7f934ed0c04ec7228095c21bb2b922f6ee4780584b889c941f75798b3300f8b3"
+    },
+    {
+      "program": "v0_31_1-tests-realloc-programs-realloc",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "df84829f7899ef96ce46215a718703af8ae3b92939b58b56d46d41dd977123ad",
+          "bytes": 210376,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "50b04753705f1582ca43cfbd1b4eb0f3e682bdd3e99fbe1211a37bf3a0db54bf",
+          "bytes": 232008,
+          "matches": true
+        }
+      },
+      "proofSha256": "585721f91120990cb305579dbe3af45e79b0943e45bb322281f4ccf207e084f2"
+    },
+    {
+      "program": "v0_31_1-tests-cpi-returns-programs-caller",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "61de3590de4f3dfae1d06c2cfba2eeabc80a2f625f150f86646ca689ba5f511a",
+          "bytes": 185128,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "9af49836b1e811d4e4969bba42886a9b93d95b9c149205e1a192a7b94c723c3b",
+          "bytes": 165160,
+          "matches": true
+        }
+      },
+      "proofSha256": "27faa1c820c97e002d0af617c2e321beb050a75b9a03fde847c6577427d2a169"
+    },
+    {
+      "program": "v0_31_1-tests-misc-programs-lamports",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "7f2a49261b55a3f95edbbf4bc077b4c0555ba92d8798e9e8a0741c94476899f0",
+          "bytes": 206952,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "3eb22b9039dca81998fcf3f9403dbe0f715e38ff813d19e5722d0362c2547411",
+          "bytes": 197720,
+          "matches": true
+        }
+      },
+      "proofSha256": "b2da5f1e6481fe30622353ed48f3fdb2fafadda968f52e6d7c9826e9a1ba364e"
+    },
+    {
+      "program": "v0_31_1-tests-chat-programs-chat",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "6a2c336c4651f6f8c428cc5afd4e64754bf0a41054343de0c279384f2ab3c463",
+          "bytes": 201224,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0ce43af9720889aee54bdef61c71f8d1a3948e5e924366c0dfbb1a2fc7199273",
+          "bytes": 187400,
+          "matches": true
+        }
+      },
+      "proofSha256": "5b149aff75fe388f4e38d8395a04f0df298e130f0d9a0dc79aa671d719083073"
+    },
+    {
+      "program": "v0_31_1-tests-declare-program-programs-external",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "5146c40b54b18c00b4bfd9ae14eb078a14081c255ec7780a7919bfde40dc2b43",
+          "bytes": 192632,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "df734dac5c32cab7553c03bc4cf03812a6ff154129b883102fd7064b0da74463",
+          "bytes": 183120,
+          "matches": true
+        }
+      },
+      "proofSha256": "5d096d71ca7d41ad46e08e2e4a5923f0b9bd7a8178a551f53ee26ee4676785c9"
+    },
+    {
+      "program": "v0_31_1-tests-misc-programs-overflow-checks",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "b27818fbe0ab75ce802b08193aeb00c1a17589ac396cdbb001b57e86d98ea033",
+          "bytes": 189984,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "47649fcfa4d58a0f1cfb258fb08d699f8a28ba0a135b8f479b878b6322078114",
+          "bytes": 169112,
+          "matches": true
+        }
+      },
+      "proofSha256": "618aadd537dbfc410abcac9d8d6241d05c713cf03e6f4777f118c3cf49497e05"
+    },
+    {
+      "program": "v0_31_1-tests-pyth-programs-pyth",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "54dd8dfd9a32ae7cb29d184bd95b5098c60867b08f06e64d89dece84b9d8f020",
+          "bytes": 166552,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "af15198ae0a1b5ef134ef7731e21ea1440e40ef723c3920f6682710291eee3f9",
+          "bytes": 126888,
+          "matches": true
+        }
+      },
+      "proofSha256": "4568e6e0fa20f4a018fa6a70b3887c1fe078aa12993c421ce22df0df13ce62d6"
+    },
+    {
+      "program": "v0_31_1-tests-custom-coder-programs-native-system",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "dbd1a108473a1365a76f5a2c995b2757318c7f3d322ce8e1ded396c71641ee9d",
+          "bytes": 196152,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "3944cb6758125f806542f04ea752a114c448f161a759f9202ddecc136fc056ba",
+          "bytes": 174904,
+          "matches": true
+        }
+      },
+      "proofSha256": "36c02ddc249d93de735fd43ff5f57a91c6216be08f3aafe490aca850a5a431e8"
+    },
+    {
+      "program": "v0_31_1-tests-optional-programs-optional",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "fbdaf0cb5839c4020c4e121df73c11b5b69764fe2853ac216faf53a9ffd278b7",
+          "bytes": 235360,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "9422b72774b366a5ca01a4ab4b847d43a034a4510351aac943d869a44e1f7f91",
+          "bytes": 271728,
+          "matches": true
+        }
+      },
+      "proofSha256": "e018a6461789f8abde3aea9fd343088b86747b95868d811bbf7a935b9df64c32"
+    },
+    {
+      "program": "v0_31_1-tests-zero-copy-programs-zero-copy",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "79babc1e4551cc0bf7d558aa27b97664c1ea2113b6f03f978424610919db6174",
+          "bytes": 207528,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "8738bc22105fbb1bc4749956d42ccbd911cd3d52a176c67c413c93c44aa6fdc3",
+          "bytes": 192752,
+          "matches": true
+        }
+      },
+      "proofSha256": "5a2484fc60341edd58ff928bf6018bd5e44228d888bf72fc11e3a835cf9375b2"
+    },
+    {
+      "program": "v0_31_1-tests-spl-transfer-hook-programs-transfer-hook",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "520e4f7bece9e9a107990885ec749f0889b4c2116c3a430530185645eb43012c",
+          "bytes": 230264,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "ddbd921aa974a88aac414cd2c18a46dd90168fe0c767e039325b29c5c5fb3be7",
+          "bytes": 224168,
+          "matches": true
+        }
+      },
+      "proofSha256": "b9ce44714b0316faf4d58277546acdcc303c4f3816d730e94dcdee03d1a03773"
+    },
+    {
+      "program": "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "4eddb1a1fb073c5c7e5a431027539892ddefc03fb7476c2a03ff87c86146098f",
+          "bytes": 218000,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "ffc6cfd5b3c0c3cf621781533de3410934f4acc37a1e942212ed8bfe3881c819",
+          "bytes": 214640,
+          "matches": true
+        }
+      },
+      "proofSha256": "3e833f3d23ae157453f97bb2686808e960e3ed24b4fd577f70d84bbb496b4796"
+    },
+    {
+      "program": "v0_31_1-tests-idl-programs-idl",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "c6d9e7e8098198a1aaef678e3d8273b6efe51ebc2c37a72312b8cd84bfdf29e9",
+          "bytes": 255656,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "2260861ee62b7e1de6d4298c677107969564adaf347e83dfb19c5fbc8dfa87d2",
+          "bytes": 266184,
+          "matches": true
+        }
+      },
+      "proofSha256": "6a10c46cac3f9b10a68fb27ec3ad9dc3405319c756120871ec407f115d30396d"
+    },
+    {
+      "program": "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "ac8c214621ca26a92fe26164018cda858d07ae4b44365c18b6ffc118ac1f089a",
+          "bytes": 300744,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "c7901d1ba16bef53599f997fc28cee55dbbd4d9536abc2adb419784b82320c6b",
+          "bytes": 336568,
+          "matches": true
+        }
+      },
+      "proofSha256": "aa8dbdba6eda3e13295a94c2ffd8e25f31861f09e281107fef97eff02c705886"
+    },
+    {
+      "program": "v0_31_1-tests-escrow-programs-escrow",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "d1ada912a43a653df2a7f6e71909f1fced65ffaf7d56e4d0e6ff0f1c6ff51d42",
+          "bytes": 245312,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "10d5a017b519e973f2c5ec1d73c4037cbb34a5270966bfcb4fd672126a46d710",
+          "bytes": 272584,
+          "matches": true
+        }
+      },
+      "proofSha256": "fa4686c1ad9070359d8de945b3352671416f6f61fdc858e1aae4240aad43900d"
+    },
+    {
+      "program": "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "884a5dfd5eb5e96a672eda7d58c97b39d6ee6d12f9cd9d275005ec97755db909",
+          "bytes": 292384,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "02a7b85761c1adb37e5f79d580252bc10ae14e692d2b386e31a2571ddffc1665",
+          "bytes": 291136,
+          "matches": true
+        }
+      },
+      "proofSha256": "1c1bc316254b250219fc5f2815b7f19f1834d6931e13548f5089f5db9a097c4c"
+    },
+    {
+      "program": "v0_31_1-tests-misc-programs-misc-optional",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "0285bf9ce3d20cb7e565cfa3b9cdcae5cb99c7dd82f5aaf7fa82e46c695746bf",
+          "bytes": 767912,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "cb9a2ee78ce7723319ff917663e275c3e450b288fa5b81470850496219dfdce8",
+          "bytes": 1048552,
+          "matches": true
+        }
+      },
+      "proofSha256": "fbe0658fd6b5f30a4a9929ddaecba379c21bcfe99245302890c1ea0e48913f5d"
+    },
+    {
+      "program": "v0_31_1-tests-misc-programs-misc",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "d10eb6ebfdccc7c17a7b3045a6d7b25123e00ce896da73ab4def47d06906e4fc",
+          "bytes": 716656,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "61b2f87554c00344e14d27fd66b1ec95100a592c28724d00285333b8f13c00de",
+          "bytes": 1002568,
+          "matches": true
+        }
+      },
+      "proofSha256": "79ac6371d23e81f0304734a75fcf274255da06b3ff06833e77af95ab64500bed"
+    },
+    {
+      "program": "v0_31_1-tests-bench-programs-bench",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e68857a6fc61d7a951026f1004ea99aadfbf31ed3ea03b55a4bb4b27ac0f52d0",
+          "bytes": 1066792,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "09dbac1fcc368c18465f0eb6b3265e3befee98ab81d4fe04379f6f69d9df0b91",
+          "bytes": 1882480,
+          "matches": true
+        }
+      },
+      "proofSha256": "58eb6d2b3d59318b9bb362243f1fcfbc2c16d498e240a852b585b3cec4f7123e"
+    },
+    {
+      "program": "v0_32_3-tests-spl-metadata-programs-metadata",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "8ca25121ffb88c86a752df214054102a9a8db5cda86b9cef9580f32196ff3813",
+          "bytes": 161288,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "fda4f1dad1819bd3ad62f5a6d8728d06682dd552cf85f503e212e8fdf5d6ecd8",
+          "bytes": 117008,
+          "matches": true
+        }
+      },
+      "proofSha256": "e172e108437743dd293f4bb714830a39feb43723314cf41007270b0ec3483d71"
+    },
+    {
+      "program": "v0_32_3-tests-custom-coder-programs-spl-token",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "9b58d6b3e2a472bb27d280b01db9c6d131378ceb6fdbcfa31ee468e0fd19c575",
+          "bytes": 161432,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "9a92c84f34d6a61b4fba3de67b759d659fed8990aff3b619cd283d30b3a22bf9",
+          "bytes": 117024,
+          "matches": true
+        }
+      },
+      "proofSha256": "e72cb7acf3cf897127816f34738c6eae6a461290bb5b2da89c10684ae39c6821"
+    },
+    {
+      "program": "v0_32_3-examples-tutorial-basic-0-programs-basic-0",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "61451ae5c44dd29974370d68dcedcd1daf1dbc1f6090a325944c323919aa8296",
+          "bytes": 161536,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "cd22dbaa68376514dfa31c5247672b428a236359f130ff2abdaf63d658188915",
+          "bytes": 117072,
+          "matches": true
+        }
+      },
+      "proofSha256": "aed9f4f34ca14db3f42d97f93e932bc7a9620c0d4ee9c1b68b66c706eaf12433"
+    },
+    {
+      "program": "v0_32_3-tests-validator-clone-programs-validator-clone",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "59fd396dc015f4186be8ee5d9ef1dd955d6c199e6f5bbd774dfcca7e40b532c0",
+          "bytes": 161552,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "387e08c6a24ef2a04f4467466566cef09e478a525672c8348ae2e411143389dc",
+          "bytes": 117080,
+          "matches": true
+        }
+      },
+      "proofSha256": "35dd46a917f6b833797ebd3650e0c9eabf5902c657a1cbe2a24120c593a4ea0d"
+    },
+    {
+      "program": "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-one",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "f09c8a09aee96e915ca4af2891621fe789aac14924259e0b250e71decc9ac806",
+          "bytes": 161560,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "b5485b3737f86f04d38f5d8e19aba03a7497b78a05468b0d00d376e285e8f3ee",
+          "bytes": 117080,
+          "matches": true
+        }
+      },
+      "proofSha256": "0d3a20ea7c8acb6bea787a5b84772c4911891c29b1c8a68ccbf792db368de923"
+    },
+    {
+      "program": "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-two",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "89ee626a259505360d54f71ff9e2535a8ded5af9f2a86461312490c898d29b82",
+          "bytes": 161600,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "9bf1808cefa7b333e8081c3e05bc2c24869748fb795754c38b6ae8693659af6c",
+          "bytes": 117072,
+          "matches": true
+        }
+      },
+      "proofSha256": "8a7e6228047667a6ec27a16aa5bf8bbcde40a6732d4545ea17f9af156c63ce60"
+    },
+    {
+      "program": "v0_32_3-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "af02f8d25d295f3e5b89abd0c7007a8cb5493769686b59b4420da38607b9c9ef",
+          "bytes": 161576,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "8235344c127a7ea317410335e1cc50450d0894b5be132169c08596e636975c8a",
+          "bytes": 117088,
+          "matches": true
+        }
+      },
+      "proofSha256": "dfb18a0f93b36b5de288a1b2ca85fe88972e9249b29262e58ca7f306273651fd"
+    },
+    {
+      "program": "v0_32_3-tests-custom-coder-programs-spl-associated-token",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "3100ce093f2298593399917894bec6442e98ef919c8347aaacb7fd411f9d4343",
+          "bytes": 161456,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "eccdaf5b2088aae3e6e183e99b1f55817f40c84526c2ad39f633153726ec3cf3",
+          "bytes": 117040,
+          "matches": true
+        }
+      },
+      "proofSha256": "081f448cb1e18a8f9f7a3b35bbe598ef46ced10b879332f544d83ca061d2ec38"
+    },
+    {
+      "program": "v0_32_3-tests-safety-checks-programs-account-info",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e009a93837126df417c653e56bb3154da53f2d27e8f3b1ec467c61c19c530b49",
+          "bytes": 162704,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "38a641785ca01f4b69441b8b6b9b003c407749957b3573e6a125a9a1f34a0300",
+          "bytes": 118472,
+          "matches": true
+        }
+      },
+      "proofSha256": "57d54a8957eaaf5f3aa1d687e6957c08dd5ac3c60faf635eb53f4a9298d59b4e"
+    },
+    {
+      "program": "v0_32_3-tests-safety-checks-programs-unchecked-account",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "b2c6ada6e474cb72634665aa083f825e67dd9cf673917989ee6eb1308e75bad8",
+          "bytes": 162200,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0dcab1e709646f2cf556b3fd6019afd61b94a4ae4cdbc2c03c839c1b77365b78",
+          "bytes": 117888,
+          "matches": true
+        }
+      },
+      "proofSha256": "e42c39f8e5b59ef3029b8910082a7ce05aac2194a10f2892bcfb8dc7527003ff"
+    },
+    {
+      "program": "v0_32_3-tests-declare-id-programs-declare-id",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "c5e507a745812ebfc60428ab9e90181f222bbe5ffd188d3c2f751efe5f4b2c81",
+          "bytes": 161544,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "b83f67043fec0ca8f2a2813f9924650b21c0ecafa7ccdc6f4cb2d8a317ea95f6",
+          "bytes": 117072,
+          "matches": true
+        }
+      },
+      "proofSha256": "125cdbbcbfb5891949155a2044e506ce2b1bfa8c0876d8ca86398d48f8978417"
+    },
+    {
+      "program": "v0_32_3-tests-system-accounts-programs-system-accounts",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "860f7bf149c957164c59e203c5149fae58867b5c6c6e292449ba2bb18790dd70",
+          "bytes": 162976,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "82132d31e9dc83e59e84381603fcfa818e94afde0697bd05b4e48f4e34e56a9f",
+          "bytes": 119328,
+          "matches": true
+        }
+      },
+      "proofSha256": "3f49f5b7a1194b94f480a52f26d6c56ff2d553270c31cd02354c5de070914ecb"
+    },
+    {
+      "program": "v0_32_3-tests-multiple-suites-programs-multiple-suites",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "9e052382dc6d0264d5f2e4e87a9b00389786f4f1344861d5346d6c17df920817",
+          "bytes": 161736,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "717bb5c982416eeabf2eea7117f5700efc914d7795eb44e567a7284d0469b56e",
+          "bytes": 118568,
+          "matches": true
+        }
+      },
+      "proofSha256": "12ac8d464ce84964d6c1b55bde629cb66ab6b8cb8d38c0aceacc21cfa0af1e22"
+    },
+    {
+      "program": "v0_32_3-tests-sysvars-programs-sysvars",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "24d797ed26aeeadd2e4780370c7af87eb6a21485129ef5863638402542990351",
+          "bytes": 166848,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "e706d9ebdfbf87258be4dc218f73ed92ccdd67d543f7f838987e9fb124fd38ed",
+          "bytes": 126720,
+          "matches": true
+        }
+      },
+      "proofSha256": "a430227df69c60edadeb37eadf68cacc827f66201998850246a1520613369405"
+    },
+    {
+      "program": "v0_32_3-tests-typescript-programs-typescript",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "0450dc171490bbfdc2cf82c9fc7ee2d9fbe46bfb1250c843700de0e265727614",
+          "bytes": 161544,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "db66f6759798cff49a8bc1eda88f6ca07c9304f7db9916375761105fe4e17cce",
+          "bytes": 117072,
+          "matches": true
+        }
+      },
+      "proofSha256": "1538e2bcf02b4927e8d9bff0275612afdaf743926cc15ac78436df18d27a4cfd"
+    },
+    {
+      "program": "v0_32_3-tests-idl-programs-external",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "842720a3d4aa482b748c60b4e30eec9a28ddb5f55f3e93ec3c30fafdaa1dd524",
+          "bytes": 161400,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "3387302c04744ee6edcbb4666d9e343c97551eb8a8785e473bb14648848c8b06",
+          "bytes": 117056,
+          "matches": true
+        }
+      },
+      "proofSha256": "85e48d2380bf64b7e93e914fdf5c473369bef9aa0d7bb1121fc582508a94173f"
+    },
+    {
+      "program": "v0_32_3-tests-safety-checks-programs-ignore-non-accounts",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "ede7bf5db5d0e88dabb5dd2d036eede70035fc1353be4d1e2cace43183ea6d31",
+          "bytes": 163104,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "ea12385aaeb1484a7e384a144d3c15dd23209c44c36d3d9ee82548f4cb643478",
+          "bytes": 119080,
+          "matches": true
+        }
+      },
+      "proofSha256": "83b771413489bf9c9cd28431364233a2c53216cc54bbc235ef0a5edfa9fdaf89"
+    },
+    {
+      "program": "v0_32_3-examples-tutorial-basic-3-programs-puppet",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "fa017731c05711344e0e8bff4b477252f06c10dac738dbcc9731c023ba6ddeb4",
+          "bytes": 181288,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "edc510f16f3c6b761193a568c39efd59322ecc233217c074be18916ab67c878b",
+          "bytes": 152704,
+          "matches": true
+        }
+      },
+      "proofSha256": "9b19c8be870975d200d8189c7f3ff7a40e9ecdd0a6d39728b968dbd7f55e6a97"
+    },
+    {
+      "program": "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "55954a21d1aa6539168e2dbc521ef2ae80764b97f828e41d46b03cac59b45512",
+          "bytes": 174504,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "cd36a5270f1792f5079e14e5052a2e7b77fca3e8a266d99776061eb313c229bb",
+          "bytes": 133816,
+          "matches": true
+        }
+      },
+      "proofSha256": "ddacad0f3c824151af4addb109ac33f6b1fc4c10468352d630ad4dbffca50ade"
+    },
+    {
+      "program": "v0_32_3-tests-idl-programs-docs",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "1ac56ef99fa1213b46e5353c903ac06056d71427b49539417f8d7595551f0170",
+          "bytes": 164304,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "a4166d06b049158c7e855e13177b89a3a09384d53fd23b3278247ff49f2afff0",
+          "bytes": 122280,
+          "matches": true
+        }
+      },
+      "proofSha256": "2fb70314a839ddc38465573bf3a23b0ce3b9f52e9a9001d2783badc79b80ab77"
+    },
+    {
+      "program": "v0_32_3-tests-optional-programs-allow-missing-optionals",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "9112feed6f049395c5f8c46b3d0d6118d4836d61bdb2762f88ad6be6ac415f19",
+          "bytes": 178296,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "082fd6a2caff04365bced30a4804d4656dc3bc12c7c7ae74fe9df9355261282f",
+          "bytes": 148864,
+          "matches": true
+        }
+      },
+      "proofSha256": "9e11638d796bf251cd55bdc654f0109f8fd85a1b55f346404197c8b45f2aced9"
+    },
+    {
+      "program": "v0_32_3-examples-tutorial-basic-1-programs-basic-1",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "b8fa1d2b8107d2961130fe0937e559184c74c38a201f0288f0c2f274dca23a47",
+          "bytes": 181632,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "eb5d60d9f1140d48c58389a20f8e27b087cbd330a127001193cababfc8911457",
+          "bytes": 152496,
+          "matches": true
+        }
+      },
+      "proofSha256": "5bf55a295751f4e356e38918cfc4654eb48be44efc56e6dd2916f6f473a4dc54"
+    },
+    {
+      "program": "v0_32_3-examples-tutorial-basic-2-programs-basic-2",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "bac90a023c997cf68b9d17a604abe941718efb4e26b2901082591acf53531e59",
+          "bytes": 183944,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "832ca00a081b560dff432c06290dabb3350a46d5b65f3fd4ae0aa2ed4b7f4e78",
+          "bytes": 157056,
+          "matches": true
+        }
+      },
+      "proofSha256": "325f8d17a72f773c502dd0562fa8e59929fe04ec6c6261344c48ccc4da704693"
+    },
+    {
+      "program": "v0_32_3-tests-zero-copy-programs-zero-cpi",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "5676ad61b8b4e5a3ce29692dbb030abd74279383ce0df8ac4c86df1a99e0682f",
+          "bytes": 178560,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "23aabc64faed5c8db86f5228490fb24053c31265b4e5ad96317c239c919c9a0d",
+          "bytes": 147480,
+          "matches": true
+        }
+      },
+      "proofSha256": "681d50936d71ced4f0f786d95c6dec043595180bd1702370e18d8463ea22ad3a"
+    },
+    {
+      "program": "v0_32_3-tests-events-programs-events",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "c3aadc70e048011473be48bfe796fa3c4a96b5022155decaf4cb983fff58a4d0",
+          "bytes": 171928,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "7d4f9aaead93e785f3b97c6b93b6bd5e2de3f906e6a81f201741743e1e9a186e",
+          "bytes": 140008,
+          "matches": true
+        }
+      },
+      "proofSha256": "918d38c1434e2cb4335f4534f89c5b211dde1615a17198a8800b36a358dba1ca"
+    },
+    {
+      "program": "v0_32_3-tests-anchor-cli-account-programs-account-command",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "bbbd14be5599126a560fb9bd89b62c314027717556f8abdc4b57f6001b80cff2",
+          "bytes": 185080,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "a210f13cd9f0087c3641ca4b3569ad3146c808d021d6dfd4daedf682712369a8",
+          "bytes": 160888,
+          "matches": true
+        }
+      },
+      "proofSha256": "9c7df85c58b3f51e780a906fdd36be3f073c0f1df7684e92bc4e90d1fbdd9573"
+    },
+    {
+      "program": "v0_32_3-tests-floats-programs-floats",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "2150939323d54b689c3960070bb62ae123627ea0678f7c1a53a3f8bc7a39b2cb",
+          "bytes": 185240,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "fee43c93d19a957ccf505c3315ce55e07982d851024295919821c449676d4935",
+          "bytes": 157744,
+          "matches": true
+        }
+      },
+      "proofSha256": "425cb00ac951abb3ebf2e197ccd3dffde185a975939ef7d1a5e2beedc40211ca"
+    },
+    {
+      "program": "v0_32_3-tests-composite-programs-composite",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "cdaab0210a17e810179cb62908a3036b3753ba9f9e9c554fbe9735b0b3e42438",
+          "bytes": 179136,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "cdccbe5aa7b128b5a0ffcdc2860f830c73eff058f9d683496244b6c184368cb5",
+          "bytes": 147288,
+          "matches": true
+        }
+      },
+      "proofSha256": "40f15a3a845c09c7061e8db0185ecffc06474cbabbff93edd939a452f2f9ac7a"
+    },
+    {
+      "program": "v0_32_3-tests-cpi-returns-programs-callee",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e0cf71260d755a55941390d29531974acebc170922a4400fe279bd22b5136a27",
+          "bytes": 182504,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "bcc15800f926801a4194dcbd7f922a0c8a58f60c42b7a60ec4bbd2657b748c80",
+          "bytes": 161784,
+          "matches": true
+        }
+      },
+      "proofSha256": "18eb47541278c23e7c39f1c86b9752d10440fabf1282788ea4f450a14504f0d4"
+    },
+    {
+      "program": "v0_32_3-tests-idl-programs-relations-derivation",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "7299511621d649740f70674090cc439ebf7ceb9976b43f50839dc89f2575a179",
+          "bytes": 188440,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "ebb80306fdad5102135c476f23343c54d18a9faa5f6b301b8dc01f062effe914",
+          "bytes": 162768,
+          "matches": true
+        }
+      },
+      "proofSha256": "c258dcabdb076d6c9b6b6c8e0bf3843c4576b98382532105ac86490751356986"
+    },
+    {
+      "program": "v0_32_3-tests-misc-programs-init-if-needed",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e8385316042b2e919984c11ce600d9341086a168cf3c532662dbca7f6ccdeaa5",
+          "bytes": 192176,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "b557be25033b86f0e7e86b9c6e30d5aa482969042761db7120ad56df7fe2755f",
+          "bytes": 176256,
+          "matches": true
+        }
+      },
+      "proofSha256": "877bfad7e4ca05f9a16e46f69506a760a243eb73689ba654c95ba6da62c209d8"
+    },
+    {
+      "program": "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "7e52866b9082c0a6925d08fdbe3e74f06d4fc6da3d544c53faa7233d46b22d6a",
+          "bytes": 187464,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "9e1784719ba0c75e91564d9fef1220c9f42a998df82c4f4b73e80d5f3dd6cad0",
+          "bytes": 162680,
+          "matches": true
+        }
+      },
+      "proofSha256": "e75d0e6fb20ea3dd2d87cd0139fdf89b992d359943579bdeb8136cd46440723e"
+    },
+    {
+      "program": "v0_32_3-tests-idl-programs-generics",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "6765d9b1d63c03f0b0966962f99531c379dbf98caa19ade998605ae1f4077930",
+          "bytes": 171720,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "b4726d6660247b34f0a86f7adbabc82a38b14af91d5188599ddaf2361f899210",
+          "bytes": 137984,
+          "matches": true
+        }
+      },
+      "proofSha256": "d34263260607c90e0bc436fa399aef58f2ffcf24e016c747827c6178a35c601b"
+    },
+    {
+      "program": "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "c9fad8846aa33d5f8ca2708576416b6a3b43f59d029e4c5c4b384810a775e441",
+          "bytes": 182088,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "4d118fb100ef9f0bc3c0ab7e2f70125e437cf4a4528d274e517530816a449d55",
+          "bytes": 157232,
+          "matches": true
+        }
+      },
+      "proofSha256": "33b8e297a379467c6bb09cc78fa7f04e1450b9d6bcef47ce576f5557ae07b2e7"
+    },
+    {
+      "program": "v0_32_3-tests-misc-programs-remaining-accounts",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "f9d6c2b238eb94cb5dc57111f29d3452ba6af8de3215154516bfee8a2b18c27f",
+          "bytes": 197992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "05a914c0b22fe06fca5277307ca01a9c14cc4076a1e56eadb111eace6f535e2e",
+          "bytes": 174080,
+          "matches": true
+        }
+      },
+      "proofSha256": "21ed3aa183ccb85b994e2c466a807cbe1680554ff23f3e33923c2749eaafa2ce"
+    },
+    {
+      "program": "v0_32_3-tests-relations-derivation-programs-relations-derivation",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "2c46e57618e9e6b29fed30bfa77ec5dc96c8368fbf6556ac37a804d35576c46f",
+          "bytes": 193376,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "f5da50100da3d1a4d2d45f1c617e6cad08d5ab2bcd9f321e966ff9e5e8cf8311",
+          "bytes": 175472,
+          "matches": true
+        }
+      },
+      "proofSha256": "cee43ca87b5dc8cffc7ac5b91aa07e4b66f9de6648ce2f3999feef3cd9de73df"
+    },
+    {
+      "program": "v0_32_3-tests-realloc-programs-realloc",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "36cb1985c8e7f9591c1b96ccdba42e177ba078015a8dc7d8adb2733efeba94db",
+          "bytes": 209840,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "9429eac87b64107dd7c582eefb05415ac10c960ed2a4107d679ee9d3c527d990",
+          "bytes": 232008,
+          "matches": true
+        }
+      },
+      "proofSha256": "076b41303ac6686da39f6497d8ecef65618c81584cce5383fb095ea48f05638f"
+    },
+    {
+      "program": "v0_32_3-tests-cpi-returns-programs-caller",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "429571f5f7de457d17008f9080a107d5c15672e04dd31cdb664377deba09c27c",
+          "bytes": 184456,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "c1557042d488be8a3fd90609abafd4b5107a55dad6cf7ad6b2f2a133090599f7",
+          "bytes": 165160,
+          "matches": true
+        }
+      },
+      "proofSha256": "8880ee4f0945aa5707d94e5db0665105b3a26509bbf5e583b751d28bf972a3cb"
+    },
+    {
+      "program": "v0_32_3-tests-misc-programs-lamports",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "bf5abc2ae0d72316b89b8f2210f67ab26507ce83c6a01d52801edb34f1244758",
+          "bytes": 206440,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0903c115f14f8141510addf57622c736220628a8dea332fad6a987fa14610d72",
+          "bytes": 197720,
+          "matches": true
+        }
+      },
+      "proofSha256": "5948616f9effbffb0499c8efd32e0cd52295c664ceba06b30efc2ba495e7e0b2"
+    },
+    {
+      "program": "v0_32_3-tests-chat-programs-chat",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "d861d424d1a13f9beecb81200ea4552e3534430cda425db473d818838b5fa70b",
+          "bytes": 200712,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "6d0953ad769036afd1eb1b8b3ef4e145f6800dc2baeb2b88025768685efb3200",
+          "bytes": 187400,
+          "matches": true
+        }
+      },
+      "proofSha256": "5b94dc54e790b5a327480d4e74c57160c5d425771853dceffd82438c6e0a6cb4"
+    },
+    {
+      "program": "v0_32_3-tests-declare-program-programs-external",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "5917d193c8955353abb90511067efcb8dfa90a022cbad6ae32de450316c35d76",
+          "bytes": 192104,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "4eabd83ae00e8645d1cc79d8311254545bf213cc110dc2f5e0359c03fd5ee4d9",
+          "bytes": 183120,
+          "matches": true
+        }
+      },
+      "proofSha256": "4c36a2b5fcd78f5b9e8f3a33bcdcb3e926304359c6a26aa03afdf68b90ee1351"
+    },
+    {
+      "program": "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "04966253b825181f620a2f4d32a641182ca991a9790c171904893b559a5dde3d",
+          "bytes": 188808,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "704d09a6fae89726d334aa152bf7c8f9ec3483b922d11f5bec6fc1ef655f75b3",
+          "bytes": 179776,
+          "matches": true
+        }
+      },
+      "proofSha256": "0fb6dadb79c8cbbe16f6ec1d8fcb86b9cd3446d4b51f4c2541de6f961efb869f"
+    },
+    {
+      "program": "v0_32_3-tests-misc-programs-overflow-checks",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "5246e601e9034ff2c2ef9dffab7a5d857ab438e5395764b3d53d0e9f4f09b41d",
+          "bytes": 189472,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "e11bd94b3b3ead6808be81e8037ee9c411f56f986112136840f9e5dec26cc74c",
+          "bytes": 169112,
+          "matches": true
+        }
+      },
+      "proofSha256": "5edd975f5a2c2af83329d67bc46216b76c951e86dba5aa0c1ecb749dd1b0134d"
+    },
+    {
+      "program": "v0_32_3-tests-pyth-programs-pyth",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "245c505eb2a41827a7deac7a1b6f755ef2d3ecea285069cf1457b7b3a2cd64e9",
+          "bytes": 165912,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "ab8f4ccfd0fec627530074404a6b8e211a59b4c0e4d270b456faffe7c372ce3a",
+          "bytes": 126888,
+          "matches": true
+        }
+      },
+      "proofSha256": "51b63544d48864ef28115aea105139ec80748802f7323093b99701771063cb16"
+    },
+    {
+      "program": "v0_32_3-tests-custom-coder-programs-native-system",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "ec9e5ca9774fb9d365f5fe162d1e23032234cf7819b37ddbb87dd772492233dc",
+          "bytes": 195512,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "f42dc2d267e9e188e38209109251e32eaffad7a0bb6a67bf44eb4bc2ddd5fb9e",
+          "bytes": 174904,
+          "matches": true
+        }
+      },
+      "proofSha256": "c0bbaea78e8dc02ddf5c098e767e0dc36ec6b8bbc3909a47196573426448af57"
+    },
+    {
+      "program": "v0_32_3-tests-optional-programs-optional",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "c18575f70d533cff115e2290f740ef8c9c2662ca1904fb68d9c3d6315a72a7bf",
+          "bytes": 234832,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "cff9c057befb7002a2c5632f5834337b004b9368790b08735fa16c41864a50ed",
+          "bytes": 271728,
+          "matches": true
+        }
+      },
+      "proofSha256": "9a780a788b5e7754e1a02ef6dc562b0c9b1124492cfd6b3a5aa63d95a475e516"
+    },
+    {
+      "program": "v0_32_3-tests-zero-copy-programs-zero-copy",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "84b18603977e9c084688b6da1c9c2a5cc1bd3c9161fd04e4ab825e01572df411",
+          "bytes": 207016,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "8e18fc41116e03777712571fb2c4c910389be788e5efa336faca8b5b20251c2b",
+          "bytes": 192752,
+          "matches": true
+        }
+      },
+      "proofSha256": "7598a9c9eb72e7f3a4700e9a6d21ad004a43df5bcdee361da104a92b80970bcd"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "c2f86781e39ed6cb77c527030d6b225c676f7b0f1b5ada39c440c950163f8b00",
+          "bytes": 197424,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0bdfc7aae77ddfeeca733282d1397be1a7f1606eea18b031158d1caea6d86367",
+          "bytes": 171800,
+          "matches": true
+        }
+      },
+      "proofSha256": "da0f64482c3b3d187032f186de7940dd3d179d1fd62236f507d71aa66b0d5b4d"
+    },
+    {
+      "program": "v0_32_3-tests-spl-transfer-hook-programs-transfer-hook",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "146f3471b31b7f9338f974819e04a6e4ec6caf70a9dd67a53ffd1f48b086027e",
+          "bytes": 229752,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "7f30c8920691e76e9ca8131d3051ccf43162b38b9d08cebf9bf27cfe1de91292",
+          "bytes": 224168,
+          "matches": true
+        }
+      },
+      "proofSha256": "490ac81a925af0f38cb480ac307ce4b9a1164fb9cab07a762408e82dda0a7029"
+    },
+    {
+      "program": "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "997bb6f97582c1a9a16f64daecb99858231d8f98b2d4b14ca1eb6efae1c38222",
+          "bytes": 217336,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "60f190d4633ad21bf014039805e22a8c383a1517ef38dc617027fe2a79c16eb2",
+          "bytes": 214112,
+          "matches": true
+        }
+      },
+      "proofSha256": "a4da632504785cf9e8bf57bced65f882c0501485a41815d32cc90f9ce2873b31"
+    },
+    {
+      "program": "v0_32_3-tests-idl-programs-idl",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "8913fe0fe293621d537788733bbdc424497e223836ab029f04d39718da44cabd",
+          "bytes": 255128,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "a4758b9bf9d478a5c16f4a204361a177530127ef4fcb066eb61025a754de9247",
+          "bytes": 266184,
+          "matches": true
+        }
+      },
+      "proofSha256": "322d3060a774909a859a8e9422c51a7e723235aebb38aeee1d9a6ca4ebd1e124"
+    },
+    {
+      "program": "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "64f27d74d38fffebc92103206000de960e970f01526065eeea5accd559137fd6",
+          "bytes": 300464,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "35c145e094bea3d7f1a62b6e041838041dde123fc0daa6d176524f94fb27aaef",
+          "bytes": 336800,
+          "matches": true
+        }
+      },
+      "proofSha256": "17c8060edd195b8ac930d8d70caec4390f538dacaa01514ba8d5b3fcf23df4a0"
+    },
+    {
+      "program": "v0_32_3-tests-escrow-programs-escrow",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "47ad29a578f4ae318e60f6876d18f982af77d8716a42bcfad05859f5c132f0ea",
+          "bytes": 244848,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "caf0dd80c106183f3b4bfca3a38985f1b73c20f73bcacfaef0d9637287bebb13",
+          "bytes": 272632,
+          "matches": true
+        }
+      },
+      "proofSha256": "7777de5ab6cad3bfcc41b9acb4e57ea3f7570af7424ea8c40f48e70aac89f261"
+    },
+    {
+      "program": "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "d50a875cfd0f1cbf4f6cb9f6c91f86993d9f992a3f51602f488e979db828f2ba",
+          "bytes": 292104,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "19dd1ef31b8913c9be6f1871d489454d090cfff92b3f1f933fdc5c5d742a656b",
+          "bytes": 291368,
+          "matches": true
+        }
+      },
+      "proofSha256": "643f49c369650a577fe76d20cb297716449b300ed92bce85a1d0e67248ea58f2"
+    },
+    {
+      "program": "v0_32_3-tests-idl-programs-new-idl",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "942cd0be389a0beaa09426b05811593c508d6827e4147ff444331fe58a2b24f6",
+          "bytes": 283536,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "55b781d6bc8642b36d795fd7f8305a09d883630dcf0c664f43e8dbba96b5549b",
+          "bytes": 308912,
+          "matches": true
+        }
+      },
+      "proofSha256": "8b8f4ff156d677dea742e885007778c50c9ba9b698a584508ef8c5be9259675e"
+    },
+    {
+      "program": "v0_32_3-tests-misc-programs-misc-optional",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "f2d2c964c58a8462de261745afc4680e13ddb6a41b999770f32c61657e004c23",
+          "bytes": 767632,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "3f01f35a6cc02510711263345badd72ec6d340b62e1a3748c0b8c2d7c7577062",
+          "bytes": 1048784,
+          "matches": true
+        }
+      },
+      "proofSha256": "8c6c6caf6c9ca1395d6f8b389cc2fa7b816de8dd7012e2b5d6920610e6e3e1d9"
+    },
+    {
+      "program": "v0_32_3-tests-misc-programs-misc",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e61d202177127ecd4a0324f68910249e4d257f4765f51f38d091d428ae4b6a47",
+          "bytes": 716376,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "cd68e0fcb1149fde806f74e7aba7fa4190f36977a53230cb728ed2ce10ce3288",
+          "bytes": 1002800,
+          "matches": true
+        }
+      },
+      "proofSha256": "55a3d48cb0aa291c2798ee04d6d508ea9b78536f94ab4812aaadc1d0a38c4e95"
+    },
+    {
+      "program": "v0_32_3-tests-bench-programs-bench",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "ecd82482b7b0dc829226fe2314c7b721c3ac208ffa13eac0b49f55c1f2bc84e1",
+          "bytes": 1066280,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "1885f16324baf268c2f334b36693509259654767d4e39bd8cdaf55be4b9a34ca",
+          "bytes": 1882480,
+          "matches": true
+        }
+      },
+      "proofSha256": "b129a1895f73ac83d66b7d20f6071a9490b9fb24bfe1e1b16e15ebc201b6c072"
+    },
+    {
+      "program": "v1_2_2-tests-spl-metadata-programs-metadata",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "a3a59f856784a05e79e5a919269f5f34bc5b0df68190bc0fbbabab2aab4be81b",
+          "bytes": 54768,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "fd3a46fa3c1456116db3edbe2c68836b6b8fa323a3a69754319552a8a9ec2dc7",
+          "bytes": 31280,
+          "matches": true
+        }
+      },
+      "proofSha256": "b3e66092ae3d0db64c8a59c852ba10206e59a811bb55896212ba2a81958c3377"
+    },
+    {
+      "program": "v1_2_2-tests-custom-coder-programs-spl-token",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "6ef450aa5d087c0a03f626435dceee0a9573f50021cb62bc7a37f71a9c46f3d0",
+          "bytes": 54784,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "f3bdfa7853d967d9ec96ae4a34373d994ac78b18578c934b15f9a0ce09833089",
+          "bytes": 31296,
+          "matches": true
+        }
+      },
+      "proofSha256": "12d6267e91b6a0dd776bc17a36350d8313e2d22207f428f81e196e4769b8e7ca"
+    },
+    {
+      "program": "v1_2_2-examples-tutorial-basic-0-programs-basic-0",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "2584a199ceaec42b3d82a86cc2e556a50f2c31f2676a09c679813e97624deb1e",
+          "bytes": 54992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "c09d60d6328b8a1572a24870187f0014c2ec565037e2109e9412a26df92809df",
+          "bytes": 31272,
+          "matches": true
+        }
+      },
+      "proofSha256": "2c50f0688401af77ddc73dbd702bf04d8c5d06733c5fb576f75d09b754cf220f"
+    },
+    {
+      "program": "v1_2_2-tests-idl-programs-env-id",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "53b0b59c3209489b677e27f89a3e68e678ef6dd6d70bd7f8fee4b85612f2404d",
+          "bytes": 54992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "87bf8a22cd4e999ef6165a8695881eaf9cc9b87b675762ff70d97c8636e81256",
+          "bytes": 31272,
+          "matches": true
+        }
+      },
+      "proofSha256": "7028d2240238864cfb8541ec3918a328d16a5e1c20b925a502229ad7319d3a0c"
+    },
+    {
+      "program": "v1_2_2-tests-validator-clone-programs-validator-clone",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "2584a199ceaec42b3d82a86cc2e556a50f2c31f2676a09c679813e97624deb1e",
+          "bytes": 54992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "c09d60d6328b8a1572a24870187f0014c2ec565037e2109e9412a26df92809df",
+          "bytes": 31272,
+          "matches": true
+        }
+      },
+      "proofSha256": "16f020739613563169d96a210fe0e046047fb3828f0455a295b81e13df927231"
+    },
+    {
+      "program": "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-one",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "b18bed5de619306a16dcc80b2f392879b6aaa2c39546aaa30e9e5c25e6af0962",
+          "bytes": 54992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "1f31ab5643950fb46fefc6e0841854effeff5dc0d149b57b0bdb27cf34dc4187",
+          "bytes": 31272,
+          "matches": true
+        }
+      },
+      "proofSha256": "075aebf151f27eba94c2093a0ee1058c15f1949b2e8a57029bd0a055ac159122"
+    },
+    {
+      "program": "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-two",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "895dabf9af3d8062818c2283f59a6624b088bebc3edd390f71be61087aeb4b87",
+          "bytes": 54992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "05c88630f8215745b3d0c419c109a944c5136b96039f9b8d8925510d6226da24",
+          "bytes": 31280,
+          "matches": true
+        }
+      },
+      "proofSha256": "325dbcd46df44dadc02832bff84bccb817f8acce8f665b548c842f2d6e628678"
+    },
+    {
+      "program": "v1_2_2-tests-solana-program-deps-matching-programs-matching-solana-program",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "bc0985297509743c3657baed217a36fdf2cc969a6b3d333447e68f9138f68003",
+          "bytes": 54992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "50848e4859a4ba94174d8faa19cdaf164611118460c3d9e103090f8f78ec775f",
+          "bytes": 31272,
+          "matches": true
+        }
+      },
+      "proofSha256": "cb0ca995f7981ff5fb026e4534241e5b0837e87c3402d57627d1512fdabab761"
+    },
+    {
+      "program": "v1_2_2-tests-solana-program-deps-mismatched-programs-mismatched-solana-program",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "cc3846a1f1b3c2f7228cd7255d434318fa82554dff6146baf3d91c8dba550295",
+          "bytes": 54992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "f88310dd01c5455760447387a447a7b22ef2b4a68b302e206ff57c24398975b6",
+          "bytes": 31272,
+          "matches": true
+        }
+      },
+      "proofSha256": "2d75bf2a314075a2f212f6b043073c8cb008435019f239f6c1f1d1b192ea1476"
+    },
+    {
+      "program": "v1_2_2-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "2584a199ceaec42b3d82a86cc2e556a50f2c31f2676a09c679813e97624deb1e",
+          "bytes": 54992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "c09d60d6328b8a1572a24870187f0014c2ec565037e2109e9412a26df92809df",
+          "bytes": 31272,
+          "matches": true
+        }
+      },
+      "proofSha256": "ac38b608c61672df9114a18aa5644de035a0c769adffd691f91337428d474f01"
+    },
+    {
+      "program": "v1_2_2-tests-custom-coder-programs-spl-associated-token",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "5e11d11280d38489f267ef935de9071fc9620e6036b33cef68dbccfbebf887dd",
+          "bytes": 54784,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "a9d64f5cfd6eaa3a0242ae70ae0fbf6dac15955ad8a65820a990af524f2e87a5",
+          "bytes": 31296,
+          "matches": true
+        }
+      },
+      "proofSha256": "5e78ffa8d5a23e1dd444dcc60f7aa83f6dee92ecc7b1fadce507162d445b6bd1"
+    },
+    {
+      "program": "v1_2_2-tests-multiple-scripts-programs-example",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "ce354b314380fa1191840985b1956bed92aae875bf5bd4af7ce12293a71d3a1f",
+          "bytes": 55072,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "22d3d604f3555a289c95d43106e6aaf6adb6996ffe0c71299a0518f2951b3fbe",
+          "bytes": 35688,
+          "matches": true
+        }
+      },
+      "proofSha256": "742694b5653c1b5bc09de133a998f2cffa4da9f2093d3ab620a7249df49ee0a7"
+    },
+    {
+      "program": "v1_2_2-tests-safety-checks-programs-account-info",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "f1f2fdd8d0a74eb57408acabf32a9a491d1f822ec34bb196dacdb75a888d7a9e",
+          "bytes": 56128,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "1992a67944c86a54e1f556506059976291bc7528dcfecec1e6c191321a0de9bd",
+          "bytes": 49472,
+          "matches": true
+        }
+      },
+      "proofSha256": "a83f31c0a583403201730acb179b2c58014e486b2e314e8041fd661cd9f67ff2"
+    },
+    {
+      "program": "v1_2_2-tests-safety-checks-programs-unchecked-account",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "81de6122e9529e4676ec8c426d38a8c314e280eb9e77dbf68def8e807a85df8c",
+          "bytes": 55616,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "8a393377ba474dd68d3a1f214ca3ae320ded00f566af62e698630159522281b4",
+          "bytes": 47816,
+          "matches": true
+        }
+      },
+      "proofSha256": "aea3a278740c932aa2b4355b2eac53003f2c4c285ba16ee49104e07403cfbd7a"
+    },
+    {
+      "program": "v1_2_2-tests-declare-id-programs-declare-id",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "2584a199ceaec42b3d82a86cc2e556a50f2c31f2676a09c679813e97624deb1e",
+          "bytes": 54992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "c09d60d6328b8a1572a24870187f0014c2ec565037e2109e9412a26df92809df",
+          "bytes": 31272,
+          "matches": true
+        }
+      },
+      "proofSha256": "1822e23f174421f2d0587213bd573b32d685ad3ff1266207be0cc5ebc1a235bf"
+    },
+    {
+      "program": "v1_2_2-tests-system-accounts-programs-system-accounts",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e475b0fdb164329f83a90c7529fb78f133349f355aa7a146aff6766abd1b7579",
+          "bytes": 56608,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "ddf9fabd3fe468d27c8643b9e61b0830d488fbea1107e8ca7f0bb6373294b842",
+          "bytes": 49264,
+          "matches": true
+        }
+      },
+      "proofSha256": "cca12119a250d0998ea3ac0bce798efbc02a955241fee5a834e96649cc919212"
+    },
+    {
+      "program": "v1_2_2-tests-multiple-suites-programs-multiple-suites",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "7ce8b57357d1f704fed82b0985edf5f092c7b2df81ff9d05faa1492e6c152573",
+          "bytes": 72608,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "72f87acd8afee2a2f365a377281e90b6f5977b5d688b87d6a58150b19320a36c",
+          "bytes": 46976,
+          "matches": true
+        }
+      },
+      "proofSha256": "0725c58a5bb345f2092c6fa4ee8e20880f0a968a22b97fdddac0582051912618"
+    },
+    {
+      "program": "v1_2_2-tests-sysvars-programs-sysvars",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "fcdc66e46d34c6c4cfd753ed7b590a54c5b016216c0f9a05261bbcbd818d016c",
+          "bytes": 60856,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "648a9374350697a69cdba90c4a5c40080619463d43d3093a554babff4ecd9690",
+          "bytes": 56592,
+          "matches": true
+        }
+      },
+      "proofSha256": "2079cbb97e39f04629f0ea59893a55171f4d9e41f85a97c04c385d5814dac107"
+    },
+    {
+      "program": "v1_2_2-tests-typescript-programs-typescript",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "2584a199ceaec42b3d82a86cc2e556a50f2c31f2676a09c679813e97624deb1e",
+          "bytes": 54992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "c09d60d6328b8a1572a24870187f0014c2ec565037e2109e9412a26df92809df",
+          "bytes": 31272,
+          "matches": true
+        }
+      },
+      "proofSha256": "c278c34ecfa205169562ba15e1e0f5bc93279f55efb40e6876d09e29c28e9ec3"
+    },
+    {
+      "program": "v1_2_2-tests-anchor-cli-legacy-idl-programs-anchor-cli-legacy-idl",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "4ecbde783ab4dd7fa867d1cf7c7ff79551f880bf9a5b768a0e89024d68ca2ad3",
+          "bytes": 167752,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "027607a0e81b6d247c960f7447b61861f470ac9476c07493d50e3fd29b8c7d2d",
+          "bytes": 114824,
+          "matches": true
+        }
+      },
+      "proofSha256": "c82924ec5f4965eca90981c7fb079c71216d8532f04b674e50480dc2e65ce55b"
+    },
+    {
+      "program": "v1_2_2-tests-interface-account-programs-old",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e8a9b888a7020b3d4c632e8261d854bb99b22970a2d4813be9cdfb836c8ec7f8",
+          "bytes": 117208,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "d9008436117271d2cd4a230d3fc9164a75142aac1c5844009da1a13d7867f076",
+          "bytes": 85368,
+          "matches": true
+        }
+      },
+      "proofSha256": "0c5fc6a563ea3e5fa933ca808c815b5e6bc33bdd1f35c37dfc8a91203fd90523"
+    },
+    {
+      "program": "v1_2_2-tests-idl-programs-external",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "80c6dc51eb7cef58b730d9bf888c835ec192b3230f19cf096a1a838ac91d011f",
+          "bytes": 61032,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "bd72fc53ce938ea21cbf57f9c1f0c12b3f9e941d8054254dbadc57895a6b27c9",
+          "bytes": 52640,
+          "matches": true
+        }
+      },
+      "proofSha256": "545d9cb3df0ca74cb0216b4fa790b0c17c8c8b6b446480d93b7d883f979d9f59"
+    },
+    {
+      "program": "v1_2_2-tests-account-generation-test-programs-account-generation-test",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "f37a1ea4febe9870a114b598973e3e7ad13e5932548638fd2a8616d9a50cc878",
+          "bytes": 116576,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "a58bd8aac7b6f215ffbec9e0caf78fc9b28cc97953d9a50729c07e7c1d06b787",
+          "bytes": 84384,
+          "matches": true
+        }
+      },
+      "proofSha256": "5e69e1d203cde73f20b33570425dad8f4bb349137cfbcde63e8aeb3b8403b573"
+    },
+    {
+      "program": "v1_2_2-tests-safety-checks-programs-ignore-non-accounts",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "57586b0da291c7a3f46a65d8243abfcb0783206f8ff61f4c6d79b5f107cc4863",
+          "bytes": 56520,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "a55fe06ce5c1d5d549fe32a3f2aa2e9336a7d9f1b1a03685d4bdcf7966f48129",
+          "bytes": 50048,
+          "matches": true
+        }
+      },
+      "proofSha256": "13bee31093aaf0ebebbae90246aeb90142e58df14f19bb8710f713e88b48b1e8"
+    },
+    {
+      "program": "v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "416ae2f4a91ed56968427a24a6a419084e93cc78a599e3f6d372380ad9ff6eab",
+          "bytes": 75016,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "9b95dc255e1636437205dc04c191a5a5ea850a7667a53faed6722a2a109745cd",
+          "bytes": 56496,
+          "matches": true
+        }
+      },
+      "proofSha256": "d668f0689fb0277c76c670c37781db5c4b90514c67d4fb228c791993372d3e8a"
+    },
+    {
+      "program": "v1_2_2-examples-tutorial-basic-3-programs-puppet",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "03ba96d5bd63b524ecc9cc5dceba0470e0e06ffaf16f0818b3e9705e2c837203",
+          "bytes": 129408,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "c061b4eb22d7d90301c221ca489c91a950a2cb7933a6d27fe117ae7c06eceaf4",
+          "bytes": 93880,
+          "matches": true
+        }
+      },
+      "proofSha256": "8648b0616fc1116c52da643667e27f171dc461a996662d18453bb286a3799014"
+    },
+    {
+      "program": "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "c54568300cd5556fee18a6cab95d3abea05b2e5c9248c3d00815febfa2a862a3",
+          "bytes": 99936,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "030819c8424f28260072f6b55961ee8611c0f4cf27a7abd1fade3eb2d4e687b5",
+          "bytes": 71072,
+          "matches": true
+        }
+      },
+      "proofSha256": "8bd9a5614e9c22b131dce17b9fe36fe792f166e56be3174289bb9977f2b207ec"
+    },
+    {
+      "program": "v1_2_2-tests-idl-programs-docs",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "ceb9881d5e8a95f559d442bfda11e57e5096d4851acc98aaba2bc93ff9c85593",
+          "bytes": 78840,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "880dda5c72645aadbbd562f1b2c5aeea7e6cc17ed34b2af5e28ba631a57fd660",
+          "bytes": 52864,
+          "matches": true
+        }
+      },
+      "proofSha256": "179790f4854aa680bd12bf339102c60955e36475ba1e7d6860cd558c7ab42b54"
+    },
+    {
+      "program": "v1_2_2-tests-optional-programs-allow-missing-optionals",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "97fa9db7ac803f46bb1fef17adab6281e36864fbc16818811f8167ba9966de16",
+          "bytes": 117824,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "32211f03b55002284554e07fea8f0ce43b6bf691c2f576e2f4b0fec11574b123",
+          "bytes": 90064,
+          "matches": true
+        }
+      },
+      "proofSha256": "da88dfc346bb84fdc7f666a186e5e7361ca64de7237b196fd2960097d31fe45b"
+    },
+    {
+      "program": "v1_2_2-tests-cpi-returns-programs-malicious",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "8153ce0e340b1306920e341687eb5867ca9316329c2c613a496ea825ccfeef33",
+          "bytes": 56016,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "64c3f308740c3223cd7e6ec767eb7b2b9b6980a45a46cdec2ae6306843868451",
+          "bytes": 48568,
+          "matches": true
+        }
+      },
+      "proofSha256": "e6fb5e5cc7958e8a56996ac2600e3e97840ed1b22301e07f3f598175b88cbf1d"
+    },
+    {
+      "program": "v1_2_2-examples-tutorial-basic-1-programs-basic-1",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "f7a83a807133a090736eb709d610ef43b0d4a059f1916b0055512631dcdf6905",
+          "bytes": 129736,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "43d79f7fedaf3b6920add8e82a174eba725cef47e2a19fd51579b81f07db1c43",
+          "bytes": 94312,
+          "matches": true
+        }
+      },
+      "proofSha256": "2adb2d0c1bd9b987dbc7caec444ff96ffd1b0f9aa48ad399f7ab8d3ae7dfc84f"
+    },
+    {
+      "program": "v1_2_2-tests-interface-account-programs-new",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "9c6553a579a39a7d8669f4a67e176a16b022a9afd7cf0582a1c0ca4af20e1a1c",
+          "bytes": 128272,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "a4290b9066ef4df421d50376c7f116b7301fb27313bf761e3197e3e72b5f12a3",
+          "bytes": 101632,
+          "matches": true
+        }
+      },
+      "proofSha256": "68c30c2f1cc29881ea73ae12df63750d9c3365bddb2bf00122d882774175f419"
+    },
+    {
+      "program": "v1_2_2-examples-tutorial-basic-2-programs-basic-2",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "65dfa247c4187e0d1437045009a610876c106d57132dec03f162111dfbcfbf9b",
+          "bytes": 132368,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "f431d225bb18fc03c747a4cbed83ca8258573593fc17f4d87abadd1605ab946b",
+          "bytes": 98360,
+          "matches": true
+        }
+      },
+      "proofSha256": "dc1588e41d08f8b93ac0eb8bdb038381911e9143deeb2ab1ed17bbe009bd9650"
+    },
+    {
+      "program": "v1_2_2-tests-events-programs-events",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "ec1cb5759b1a77143276333c818c84c06cd6b196cf3c3b7be49bbaf54bf53908",
+          "bytes": 91352,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "6ba48aefbf5c43f8c6fda1fac55eafd771343c53d9e9a6beaec801b83bc36624",
+          "bytes": 73296,
+          "matches": true
+        }
+      },
+      "proofSha256": "0ce3b74eaa50ff843b983f7b9dc149d3755bd131666e56e2f6201a33d5b5b27b"
+    },
+    {
+      "program": "v1_2_2-tests-anchor-cli-account-programs-account-command",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "471de7c95b63b3531278fa395f1875b26ca414e5d91f00599e2082f2e75a1691",
+          "bytes": 129808,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "1b8c56f5df739fa8b6b7260ed332d1eac13c9647f3bb6619ae379d62d5bae631",
+          "bytes": 103960,
+          "matches": true
+        }
+      },
+      "proofSha256": "d6e3b752e5a13d103fd1739a53a5110f54796d1abc32fb0b85f3d5d994aa4057"
+    },
+    {
+      "program": "v1_2_2-tests-floats-programs-floats",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "96f0b7dd5b23746e3d7d28f07a05f2dc7364c3019857eed71fd9634970e72e6b",
+          "bytes": 133872,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "b307407a3ad08a54e82652e9973caaed2cc9b975c1a389052f3914cc0294de5a",
+          "bytes": 99744,
+          "matches": true
+        }
+      },
+      "proofSha256": "55fd9296f5de5541c43df8583631da138103c68ccb6def2b7e5531dfa96ada69"
+    },
+    {
+      "program": "v1_2_2-tests-composite-programs-composite",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "368ae1ca565f3c27ddb64d5d593b3b16477d4d8dbaaa3bbe70c87d522418ec37",
+          "bytes": 122760,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0bb760d7b5441721ebc5d3835ab3c5f1d15debea272248bf2e4fe13f56f9a906",
+          "bytes": 102344,
+          "matches": true
+        }
+      },
+      "proofSha256": "248ebb828a4687a3a85a3efe7f617f24ebcc26ce2ffd7cb35627734d9d1cf22a"
+    },
+    {
+      "program": "v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "ffa66496320f300f8fb4c5238cbd6187b9ffadc4345c50cb54451ed42f72d592",
+          "bytes": 76272,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "4910c047f1d751208c04b041fe9272ed76f930e18ca13fccb1b98218b3533a88",
+          "bytes": 58304,
+          "matches": true
+        }
+      },
+      "proofSha256": "b0163fad5825a04f197e6f6adc1e1c258c4f4a33e60035b21a6fe7d1203db32d"
+    },
+    {
+      "program": "v1_2_2-tests-idl-programs-relations-derivation",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "2e2254a751b3f5ddb558a8b7fee44c6c94dd70cd9cd9f9c2776f52cba4cb5edd",
+          "bytes": 127928,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "759951170d04bb01841a48babf00b3c69b357d63a53ea4f44e1645038f7f9636",
+          "bytes": 107552,
+          "matches": true
+        }
+      },
+      "proofSha256": "cb1ec37fcd7643ecd38749b47314bd7ff9272d133c2fcf222741b30c4c9e97c9"
+    },
+    {
+      "program": "v1_2_2-tests-misc-programs-init-if-needed",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "331017824a2857856f5e893cdb820b105761e19865b77fa2971c545cc7d82bec",
+          "bytes": 145760,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0e4f731d0a88c93e6112f000b6810448a3b60727153e02ba959eaccc176be768",
+          "bytes": 118400,
+          "matches": true
+        }
+      },
+      "proofSha256": "cbc2e270230faa3fee5f91261fa5632dbc1721e926b3b50f127aae8dd8fc2cd8"
+    },
+    {
+      "program": "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "660c203ed48fcf45f75d037af0decf9d81d812a417b6f3efff35eaf9a92582eb",
+          "bytes": 135720,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "1237ccd1e0f84138aea83aa1348aa6e3a90b4a7540308ac9fbb40ab723f93d07",
+          "bytes": 105592,
+          "matches": true
+        }
+      },
+      "proofSha256": "6f36d9eaacb349318f989e2d59a28c3197ac93043313d59ea2696c37a7d6a8e5"
+    },
+    {
+      "program": "v1_2_2-tests-cpi-returns-programs-callee",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "c77b3b0a7c7449b2159f0f6d13bb259413f31673c5ed9bbad0d6d2a603b920e3",
+          "bytes": 122584,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "91d0e77322696fe2ee47e3f3e04c69023168e2fb3204b8d6c4eeb6fb4aea6181",
+          "bytes": 105576,
+          "matches": true
+        }
+      },
+      "proofSha256": "e8df1665a4764e04cfded9bbe51c86d8877d7fa7b06ba1036bdcf26e8cd9c651"
+    },
+    {
+      "program": "v1_2_2-tests-custom-program-programs-custom-program",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "7c323b57c36e811a7be3af00dd3ccdb28641b314c7acb13488bd24aaa101fa03",
+          "bytes": 72472,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "3c98ed15c10b99b7ad2f05deee8816defe3b2d2e3162ec671043f06d057b8a84",
+          "bytes": 72304,
+          "matches": true
+        }
+      },
+      "proofSha256": "bb14df22d387750f134e81a5362aa6485556d63a6a0e0b4a8fb46faa26d84349"
+    },
+    {
+      "program": "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "40fdf62cbf9b63d82b40aa99983b8e2dc5cbdd64805baa08edc226e86c4e5249",
+          "bytes": 121472,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "852a441805f5e4e27c297ab88b1c7d0e10d1c8c036118039db818d835b66158d",
+          "bytes": 97936,
+          "matches": true
+        }
+      },
+      "proofSha256": "6d18b637eb86d99742d80a9f9d68349f14bc83255df319ac819d9425f09d02b4"
+    },
+    {
+      "program": "v1_2_2-tests-misc-programs-remaining-accounts",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "012a1fdec37166e341f632f66dc84a9c686617482546b4920e258a8ca04666ac",
+          "bytes": 135288,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "1da49ba3e98102b44f921c4734b9133fcafd114bc11e2c2a130d964ee317c129",
+          "bytes": 116304,
+          "matches": true
+        }
+      },
+      "proofSha256": "e1824b176b9d93540dc38fbf6421d79d56fe5a9617d43e9adc2fb1e131eae9e5"
+    },
+    {
+      "program": "v1_2_2-tests-idl-programs-generics",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "4180dbf021f751e154661955b048affdf133c714c813b5114420e18e689107c8",
+          "bytes": 89008,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "4c00d4046c96e74410163a3c29e32d9dda188bcbd3f25fdc2dcdbe0265d2b20a",
+          "bytes": 67824,
+          "matches": true
+        }
+      },
+      "proofSha256": "f0b3b3b95fd35731ddb8ba0d12e00c2e1d7d856fc1f461183a6c2523fcfab235"
+    },
+    {
+      "program": "v1_2_2-tests-relations-derivation-programs-relations-derivation",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "60c10dd822718922187dc528a1839b50f6a3774e55acbdfe1c11f6961a0f20ae",
+          "bytes": 133640,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "cc4b780165bbdaaef4207618729190d7c27a77e750879e2676c8e1a49dc13e44",
+          "bytes": 123224,
+          "matches": true
+        }
+      },
+      "proofSha256": "fe255753ea48db5ee8e1e13b8728d00e3578db3addcd631df368bc52b7f2fa27"
+    },
+    {
+      "program": "v1_2_2-tests-misc-programs-lamports",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "423082d7b53de8d934a809e32d8e02f74faa37353b26df5c1f9d1d737f7995f4",
+          "bytes": 149376,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "b438f57d8e922f15760df85c562f5ccd567702d9ed3d34fd213fa07692ecb330",
+          "bytes": 139912,
+          "matches": true
+        }
+      },
+      "proofSha256": "b5bd493289afa8826786d4faaef89a4bf3565effc7c9363d308209c0ccd4ee6b"
+    },
+    {
+      "program": "v1_2_2-tests-chat-programs-chat",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "a0fcd9c961a7fa947033e902f231883b938a7a1d338153d00f07d18914302e34",
+          "bytes": 143872,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0113ea3cbc76bbbea309596b41d61947ef550511ffa06dbce213e125396728da",
+          "bytes": 130072,
+          "matches": true
+        }
+      },
+      "proofSha256": "c8fb413b1412b94cc989ca87764064854cf98005928129356a8cf0d9c1cf8c41"
+    },
+    {
+      "program": "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "2f97fe24a9e3f966c294b9dd6e910b00e3216194fbd22db63233794da02b2b60",
+          "bytes": 138400,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "bd5aab85714fd464688fc23d5967c636f0308771d413b09b6d73cab1fbcf0c55",
+          "bytes": 117832,
+          "matches": true
+        }
+      },
+      "proofSha256": "c2f2f743bf1b6e043d9db577bf5bed0574262bb2dfa46e0824f4404b3823af38"
+    },
+    {
+      "program": "v1_2_2-tests-misc-programs-overflow-checks",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "8dca5b74de2c845520fe005f1fceea36ead1e42edab88c54bd8691a8a729bee7",
+          "bytes": 139880,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "19a7f0cd351a45c0b449e533c99555fbf437577ca82f4fd4b1e3779748ed09c2",
+          "bytes": 110904,
+          "matches": true
+        }
+      },
+      "proofSha256": "2d47f29ad1639dbcb8ca5db75be9f8781074de35fecf80cec252134d468023d2"
+    },
+    {
+      "program": "v1_2_2-tests-pyth-programs-pyth",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "04e29475c754c79ded9eb69acc14ec75b07c9e1270a143bbac13ec5d9adcd460",
+          "bytes": 78960,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "efa5c52b99907e55f686bd767cb250e7e4a27a57f58adcf5fb960a6b97db8eae",
+          "bytes": 57416,
+          "matches": true
+        }
+      },
+      "proofSha256": "910249d64615b4f866272951bb1dda75812f77fc687eebd1c5fdf90770b2b05d"
+    },
+    {
+      "program": "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e2fd96054cf06fdbfbfc0958ed83dead913b316ced51eabe970cd127aee870f0",
+          "bytes": 161768,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "2f49a920ca2dcb8c1d52bd5c7216d22ed169b3a4ebb8ecf984b79476e7c7ece3",
+          "bytes": 154504,
+          "matches": true
+        }
+      },
+      "proofSha256": "76d64b6a165367a523c8cdf80b19b56894fa01edcf64902e6fee98878bff5b4d"
+    },
+    {
+      "program": "v1_2_2-tests-custom-coder-programs-native-system",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "85f954ae7c09fcf8bef9af91437217ace3ab6fdca7c04d565955f7695152b06c",
+          "bytes": 113856,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "788fa918a6b550881a9bbae0fcf3bed552144761c53e88c84c0fe08ce981e99c",
+          "bytes": 104328,
+          "matches": true
+        }
+      },
+      "proofSha256": "59e1db962d162566ec97fd45d36d166d0ea9ea4dc6db7d4582acfea0bedcfaca"
+    },
+    {
+      "program": "v1_2_2-tests-realloc-programs-realloc",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "1bc618c29f034969899bd63f161e6b2ca28c2403437b97b2eb4b99ed0d6afea3",
+          "bytes": 188744,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "770357d415dac9e7255d7a1c0d1f9862247d74c70fb8ffd8c207cd8f2ee95eff",
+          "bytes": 235632,
+          "matches": true
+        }
+      },
+      "proofSha256": "92911912d31d1966e4120b6096b8e3fe1d6b05b44f329d0deb1be2bf0a6957f5"
+    },
+    {
+      "program": "v1_2_2-tests-optional-programs-optional",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "e541d69cb9be2096d013e47a90c15d2d9b32322be070881d270b6b5936eb9bf7",
+          "bytes": 186048,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "15109a602a5844779dd06d0fa314e0c81d6d142b0d1d5978ddf262ec2d4bc662",
+          "bytes": 220744,
+          "matches": true
+        }
+      },
+      "proofSha256": "f26a0d4c8f6541189f49f7d86a58ff10ca71ebbe805f32aee9f693029ca80ffa"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "cec9478d58b712c39fe51a39a176da6cd37ef56cd82d39dbd1ef19275deefdb3",
+          "bytes": 126984,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "a03ac98ac3e3b1ac9e51ee7681ee1b64026663b10ab897ba49ea65885bb17647",
+          "bytes": 109312,
+          "matches": true
+        }
+      },
+      "proofSha256": "a3d321d8a39ef050e03bacf5fb95b73149a8d4506447940b67692134cfb3d3d4"
+    },
+    {
+      "program": "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "caa916656f26d3287d192325cace9bbc8bfc7f44b55a6353cddbef1cca08b256",
+          "bytes": 182288,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0314b0d820151cfc349d501a27d1602b09ccb79abc9b26215d0457184c4a43bf",
+          "bytes": 236472,
+          "matches": true
+        }
+      },
+      "proofSha256": "846461ff34fb7da7535ef131e546b06468d6b84030769b77a23e702b332971c1"
+    },
+    {
+      "program": "v1_2_2-tests-spl-transfer-hook-programs-transfer-hook",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "7f76f2f16af2fc06846f908ae4384dccecaab88ba27100e6907efdffbd9ce91d",
+          "bytes": 170992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "c172d0997a4218904ff9b17f61ce097f64cbbe9bbd7ad56f20b6a8370f2f3df1",
+          "bytes": 163880,
+          "matches": true
+        }
+      },
+      "proofSha256": "e1c37b141c4c555e8290a0de273349a544808a4ef1de02ad05d9927200ce6bd2"
+    },
+    {
+      "program": "v1_2_2-tests-declare-program-programs-declare-program",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "0a2bf056f828f62233641b729d8fe37bdd45d05d40c0a1864f402e471b7d272d",
+          "bytes": 134176,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "d46a13dd77546751c0bb87a1ef44f02b07aa20c0aeff8acc152ce71296547ff6",
+          "bytes": 136256,
+          "matches": true
+        }
+      },
+      "proofSha256": "3c8566c0e4686adefab6678583aec85cc77bf5777e6fa7c5e9eb8fd80cd19f25"
+    },
+    {
+      "program": "v1_2_2-tests-tictactoe-programs-tictactoe",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "dbb7322c1307d6a1833775b5debc94ee4b2480c0fa6af5aac8cb3052043ce5b0",
+          "bytes": 123816,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "12179842d0412b634d593b050671c0ffdaf897f0d85e55f42ffd044bcc323e1d",
+          "bytes": 126104,
+          "matches": true
+        }
+      },
+      "proofSha256": "84e24b8d7501b4d3b3f18f690aa0df832d7e8d61ea31680a66f8ad0e2f20eb12"
+    },
+    {
+      "program": "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "28920544a52cd8315e2bf5471bed138e4b82d70f5f056f0eb1825ce62423a866",
+          "bytes": 152184,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "e87d10ad501f38d937587f4e7abe8986526e50091c162675a4f6bad9050d5d78",
+          "bytes": 158072,
+          "matches": true
+        }
+      },
+      "proofSha256": "9badd5b5d37f5ed34612f51a88c7879bb5a72a0af9f083a7dd476e0c3fab9143"
+    },
+    {
+      "program": "v1_2_2-tests-declare-program-programs-external",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "356690bbbd1eb217c80243e2f786b1afd5e4bfca5eca3b8335f838f857a696df",
+          "bytes": 172560,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "f1432c4482c832a2e072cf4dc44e4c38f3d8dad283eac7eb4f535cb02c8d56ab",
+          "bytes": 179904,
+          "matches": true
+        }
+      },
+      "proofSha256": "1f048c0dad7e74e18b69dfc20284b4f13d8095a531b73fe80c7692698f8b15d8"
+    },
+    {
+      "program": "v1_2_2-tests-cpi-returns-programs-caller",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "2841d64f298787bb62658c9667088da79b82fee71e8860e96d13f04be2b0b612",
+          "bytes": 137840,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "7d0c5287299aa48f878d1aebbdb26d3d52de4c018d6aa7cce48d86f064116150",
+          "bytes": 146232,
+          "matches": true
+        }
+      },
+      "proofSha256": "af150d58712ecb2dfffe76627462e32fad6aa5444582b954bc372ea045f1c58b"
+    },
+    {
+      "program": "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "4ce7990b43be7eca086c8f2147c16bf28d00b2caab7b62a0a7c480c215e04fe3",
+          "bytes": 244520,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "cd5c60dc92fe2de2e083be15cc3f4a0732290ca80e4a970bbd7ce72797ba0705",
+          "bytes": 272696,
+          "matches": true
+        }
+      },
+      "proofSha256": "3bc3dda61d29f3a4368746f763b353b0b0b7473c274e1082075de09ab9b47a64"
+    },
+    {
+      "program": "v1_2_2-tests-escrow-programs-escrow",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "00d320732e5c81cb2478d25eeafd08e77ff5fafed785dc00a378ca4b18b19f4c",
+          "bytes": 195656,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "5915d601261e0a96322fef99fd652b8678104abd2696afe52e9ef1663276c179",
+          "bytes": 216760,
+          "matches": true
+        }
+      },
+      "proofSha256": "5a1823a8cd29a6c403a915343af8e7aac1e15fef136fccdf6aa6f8ce0703ac55"
+    },
+    {
+      "program": "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "3bbd07b17d0b2770bc123d4f9cbd3dd1e2272cf0796759621df79d342c089331",
+          "bytes": 236232,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "0622aea0fac926e3934771400e5e900a2c2d56d2f4fbe501bb5dd6c67bee1d90",
+          "bytes": 236392,
+          "matches": true
+        }
+      },
+      "proofSha256": "63368c9f7c70a0bbfa635f23f058bd91042daa69f6b74319f1052f562c00c2f5"
+    },
+    {
+      "program": "v1_2_2-tests-misc-programs-misc-optional",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "43bbb9ef822e15c2b0e78d4aa9a48ec951cb5fb17fd92ccc0e3ff832198440be",
+          "bytes": 695384,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "2c060e604c8bba4bc0a13e653dc7d1921a37edd84bf387bbf5e895c9f711c528",
+          "bytes": 1022872,
+          "matches": true
+        }
+      },
+      "proofSha256": "ffda7d1667861f8fd74f78be8e088ba924b5eb6b15f54d0b804ae4c7b3200ac4"
+    },
+    {
+      "program": "v1_2_2-tests-misc-programs-misc",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "0d6d68fcaa1ce33ccf98b3c0f7f4239f8c4a2b9c38cdfdf7a852374c2d2d277e",
+          "bytes": 636304,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "307fc4fd9b6810e9eb7c44a52841597a1e7177359012300d429251503142c14e",
+          "bytes": 965056,
+          "matches": true
+        }
+      },
+      "proofSha256": "a49278c13ea448cd948ab5c26cc1032e40fd801b2be688f8e91e3d4527224ef3"
+    },
+    {
+      "program": "v1_2_2-tests-bench-programs-bench",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "5b09576ece95e49ed3421376fa12cadbc6498c18c04220b0d21ad9d1f518a057",
+          "bytes": 833576,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "94d99c7b5db9e1f753063971da511806379481e1dacf02c74f9ce75726004adb",
+          "bytes": 1839400,
+          "matches": true
+        }
+      },
+      "proofSha256": "78fcea400c32c4552c9039549363674b38db52a2f54870970e4c45dafcbbc163"
+    },
+    {
+      "program": "tare-registry",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "c332a84351e8f5139411e17dc959700105fed9f5477561f72bd1016a87ad48e4",
+          "bytes": 281992,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "47ca4e6d970f6d47e75cdd717c5825063653772d64042a32e59f28ea81ef285a",
+          "bytes": 288272,
+          "matches": true
+        }
+      },
+      "proofSha256": "7a8ac568ab99163bf87521bc9b1a72668cb2fa6f2b411732ad68c2d36397e360"
+    },
+    {
+      "program": "production-squads-v4",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "f228b6dfcc6eaf5d3cb0a52bce0ee11fc32c7a25af8d802cdc05eea0597b2b00",
+          "bytes": 791768,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "cd5d48c77023a51d6438ad4d6474a32d29d4840dd2252a41d664d927a4a128a9",
+          "bytes": 1099000,
+          "matches": true
+        }
+      },
+      "proofSha256": "2a1651ecbe88fce00ff981dad8c012efd23a45e37c7df948cf6215a5b92dcc84"
+    },
+    {
+      "program": "production-whirlpools",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "fec143db942af4175835d0396cbd039765c1c6700ac97ef0b21d37161b208ea4",
+          "bytes": 1556816,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "aee856412b5d2c43e82d7a9014d8e70817be3a46f26f5d459207ac04bf6f6584",
+          "bytes": 2262360,
+          "matches": true
+        }
+      },
+      "proofSha256": "cd6dc98198a7b10244d01199c8fbdebe7648115d6902bff0276f948f13f2b790"
+    },
+    {
+      "program": "production-marinade",
+      "files": {
+        "stock": {
+          "exists": true,
+          "sha256": "1b40eaaad876ea618aca11906754f8646f9ce587642b9dca1a5993b4a81ac5a6",
+          "bytes": 964616,
+          "matches": true
+        },
+        "tare": {
+          "exists": true,
+          "sha256": "ceb8c67f18ddb655be66e7aa1c315df23e3ea49ae40da26bc06d2752ff0788fc",
+          "bytes": 1115976,
+          "matches": true
+        }
+      },
+      "proofSha256": "8243e057304d4d3a3d1bf4353e788a365449a9bc423a0a9ed800d6323e52c968"
+    }
+  ],
+  "checkouts": [
+    {
+      "path": "C:\\src\\tare\\backend\\bench\\corpus\\anchor",
+      "expectedCommit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+      "actualCommit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+      "modifiedSource": [],
+      "untrackedSource": [],
+      "passed": true
+    },
+    {
+      "path": "C:\\src\\tare\\backend\\bench\\corpus\\anchor-0.32.3",
+      "expectedCommit": "0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66",
+      "actualCommit": "0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66",
+      "modifiedSource": [],
+      "untrackedSource": [],
+      "passed": true
+    },
+    {
+      "path": "C:\\src\\tare\\backend\\bench\\corpus\\anchor-1.2.2",
+      "expectedCommit": "8d9d1488d9b8af41b266d7513eea2e668adf15a2",
+      "actualCommit": "8d9d1488d9b8af41b266d7513eea2e668adf15a2",
+      "modifiedSource": [],
+      "untrackedSource": [],
+      "passed": true
+    },
+    {
+      "path": "C:\\src\\tare\\backend\\bench\\corpus\\squads-v4",
+      "expectedCommit": "3a39735d0c56249bf2ce4b16b3229d7be87ad55f",
+      "actualCommit": "3a39735d0c56249bf2ce4b16b3229d7be87ad55f",
+      "modifiedSource": [],
+      "untrackedSource": [],
+      "passed": true
+    },
+    {
+      "path": "C:\\src\\tare\\backend\\bench\\corpus\\whirlpools",
+      "expectedCommit": "cc683ec92acb5e7606caa3d8e514d9383e9c7c11",
+      "actualCommit": "cc683ec92acb5e7606caa3d8e514d9383e9c7c11",
+      "modifiedSource": [],
+      "untrackedSource": [],
+      "passed": true
+    },
+    {
+      "path": "C:\\src\\tare\\backend\\bench\\corpus\\openbook-v2",
+      "expectedCommit": "f3e17421e675b083b584867594bf3cf4f675d156",
+      "actualCommit": "f3e17421e675b083b584867594bf3cf4f675d156",
+      "modifiedSource": [],
+      "untrackedSource": [],
+      "passed": true
+    },
+    {
+      "path": "C:\\src\\tare\\backend\\bench\\corpus\\marinade",
+      "expectedCommit": "6909edc329dbf3fefcb0e6605b852c2d5f9ca8fe",
+      "actualCommit": "6909edc329dbf3fefcb0e6605b852c2d5f9ca8fe",
+      "modifiedSource": [],
+      "untrackedSource": [],
+      "passed": true
+    },
+    {
+      "path": "C:\\src\\tare\\backend\\bench\\corpus\\drift-v2",
+      "expectedCommit": "13e8e9b8d614f3b62e3a65a8c372c819e6529aeb",
+      "actualCommit": "13e8e9b8d614f3b62e3a65a8c372c819e6529aeb",
+      "modifiedSource": [],
+      "untrackedSource": [],
+      "passed": true
+    }
+  ],
+  "postprocessChecks": [
+    {
+      "name": "Compat refusal diagnostics",
+      "schema": "Compat",
+      "path": "bench/compat.json",
+      "sha256": "9017e888b307e1e1fc05c6adef8fb6e4632ef7685dc4b7465c3b52903d8e4669",
+      "passed": true,
+      "evidence": "bench/history/round-four/final-0.4.0-refusal-annotations.json"
+    }
+  ]
+}
