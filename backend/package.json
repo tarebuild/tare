@@ -14,6 +14,9 @@
     "fixture": "node scripts/fixture.mjs",
     "build": "npm run build --workspace=@tare/contract && prisma generate && tsc -p tsconfig.json",
     "contract:pack": "npm run build --workspace=@tare/contract && node scripts/pack-contract.mjs",
+    "start": "node scripts/start-service.mjs api",
+    "start:indexer": "node scripts/start-service.mjs indexer",
+    "db:migrate": "prisma migrate deploy",
     "test": "node --import tsx --test src/compute.test.ts src/registry.test.ts"
   },
   "dependencies": {

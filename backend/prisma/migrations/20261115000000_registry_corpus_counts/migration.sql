@@ -1,0 +1,4 @@
+ALTER TABLE "records"
+  ALTER COLUMN "testsCount" TYPE BIGINT,
+  ALTER COLUMN "generatedCount" TYPE BIGINT,
+  ALTER COLUMN "mainnetCount" TYPE BIGINT;
