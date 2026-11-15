@@ -55,3 +55,53 @@ Replace the IDs with a wanted subset; omit them for every manifest entry. No por
 Git ownership is configured per invoked checkout, not globally. Tool installation may change its own clone's Cargo.lock; it cannot change the corpus checkout's lockfile. Source checkouts use `core.autocrlf=false`. Every shell script is UTF-8 without BOM and uses LF.
 
 The pipeline returns nonzero for retained build/proof/suite failures but still attempts later concerns and writes their evidence. A failed tools installation is recorded per Anchor version; other versions and build/proof stages continue. A failed recording workspace does not prevent later selected workspaces from being attempted. The end-of-run table lists recorded transactions, stock tests and Tare tests for every selected program; missing, zero-test and failed evidence yields a nonzero exit. Unsupported programs in a multi-program workspace can prevent that workspace's upstream suite from starting; those failures remain visible.
+
+## Evidence and replay
+
+`record-tests.sh` and `run-upstream-tests.sh` remain separate concerns and accept the same IDs. [recording/README.md](recording/README.md) defines capture/replay semantics and validator reproduction counts. A native replay match does not claim to reproduce the validator's outcome; those counts are reported separately.
+
+Instruction weights are upper observed medians of successful attributed calls. Null weights mean no successful input reached the instruction and contribute nothing to totals. Whole-program state, lamports, logs, return data and errors are compared; only exact runtime compute lines are normalized. `gaps/` contains per-section/symbol size and CU evidence, including programs that remain larger than stock.
+
+The current native CLI rehearsal records successful attest, a matching cross-folder rebuild/check, a positive flag with the explicit rehearsal defect, and refusal of the same input without the defect. Exact evidence is in `rehearsal/chain-verification.json` and `transcripts/round-four-native-*.txt`. The lead verified Windows Docker execution and real validator/API flows in round four; the earlier round-three path-dependent hashes remain archived.
+
+The film feature is `v0_32_3-tests-idl-programs-new-idl` (13 measured instructions); its command transcripts and a Tare disassembly excerpt live in `transcripts/`.
+
+The benchmark feed omits the bulky replay payload and validates directly against the shared BenchResults schema. Each full `artifacts/<id>/proof.json` and workspace proof retains the complete replay bundle. No measured weights, comparison counts, build hashes, optimization facts or recorded-corpus facts are omitted.
+
+Contract 0.7.1 accepts `replay` and pins the full reproducible corpus. Exact wide-integer encoding and the optional record-cluster addition are documented in [../toolchain/contract-additions.md](../toolchain/contract-additions.md). Local diagnostic fields `optimization` and `recordedCorpus` are retained in benchmark reports.
+
+## Generated state scenarios
+
+The generator retains its whole-program sequences and adds independent scenarios for validation-only handlers and fresh initializers in larger programs. This prevents unrelated account families that reuse field names from overwriting one another's test state. Small programs with multiple possible endings receive additional ordered sequences that run each ending first after initialization; later attempts still exercise burned or closed account failures. Typed accounts with a reused field name are separated by their actual account type.
+
+SPL authority and mint relationships come from the source's CPI account structs and account constraints. Signable mints, token accounts and associated token accounts are initialized through real setup transactions in the corpus. `fixtureProvenance` identifies those accounts and the remaining program-derived snapshots; setup transactions are compared but excluded from target instruction medians. Fixed literal PDA seeds used by signed CPIs are resolved against the current program. A unique compatible PDA definition can be shared across instructions or imported from the account owner's stock IDL. Unknown, ambiguous, argument-dependent external seeds and unresolved account-data seeds remain explicit gaps. Zero-constrained accounts start as genuinely zero-filled allocations. Constant-index writes through untyped account data determine the minimum fixture size and required writable meta.
+
+`python bench/gaps/audit-unmeasured.py bench/results.json bench/gaps/unmeasured.json` writes a per-instruction explanation for every missing successful measurement, including source path and line, the observed baseline error when available, and direct source-level unconditional errors. Programs whose stock IDL declares no user instructions are listed separately. The audit never removes a failing input from a proof.
+
+The [final artifact audit](gaps/final-audit.json) checks canonical rows, schemas, archived ELF/proof hashes and pinned checkout cleanliness. [Generator provenance](gaps/generator-provenance.json) distinguishes real SPL setup transactions, ordered initializer successes and directly seeded state. The [fixed-corpus performance aggregate](gaps/round-three/performance/summary-final.json) compares all available prior Tare baselines with the exact canonical candidate ELFs; the [performance notes](gaps/round-three/performance/README.md) retain regressions explicitly. [Remaining state families](gaps/coverage/remaining-state-families.json) explains the named generator gaps without excluding their failing inputs.
+
+[Remaining measured gaps](gaps/remaining.md) summarizes unresolved successful-input coverage, fixed-corpus compute regressions, size exceptions, and explicit typed snapshots.
+
+## Attach an attested build
+
+After `tare attest` prints the real Record address, attach it to its matching benchmark row:
+
+```sh
+node bench/attach-record.mjs --program basic-1 --record RECORD_ADDRESS --cluster localnet --url http://127.0.0.1:7840
+```
+
+`--results FILE` selects another result file. `--url` verifies the Record owner and build/source/corpus/totals against the row; omit it only when importing an address already verified by the lead. `--registry-program ADDRESS` selects a registry other than `registry/abi.json`. The helper records `record` and the non-secret `recordCluster` label (`--record-url URL` also stores the page URL) and refuses a concurrent result-file change. `recordCluster` is the optional contract addition documented in [record-attachment.md](record-attachment.md). It never sends a transaction.
+
+## Round four flow checks
+
+`bench/repro/live-summary.json` records two-folder and fresh-cache native reproducibility checks. `bench/rehearsal/README.md` gives the positive local flag rehearsal; its `dispatch-log` defect is explicit, disabled by default and never eligible for attestation. Native RPC-adapter transcripts are labeled `round-four-native-*`; they are not validator runs.
+
+Production source pins and source-verified IDL preparation live in `bench/production/`. The normal generated-corpus runner accepts manifest `cargoFeatures`, optional `suppliedIdl`, and directed `productionCorpus` profiles. A production address identifies the intended program, not an unverified claim that these local ELFs equal a current deployment.
+
+After a real attestation, attach its address with:
+
+```sh
+node bench/attach-record.mjs --program v0_32_3-tests-idl-programs-new-idl --record RECORD --cluster localnet --url http://127.0.0.1:7840
+```
+
+The optional `recordCluster` and `recordUrl` fields are documented in `toolchain/contract-additions.md` for the services schema. Subsequent measurements preserve the attachment only if both build hashes and the corpus hash remain identical.

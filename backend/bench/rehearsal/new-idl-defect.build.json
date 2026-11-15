@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1",
+  "toolchainVersion": "0.3.0",
+  "name": "new_idl",
+  "anchorVersion": "0.32.3",
+  "manifestPath": "C:\\src\\tare\\backend\\bench\\repro\\folder-a\\tests\\idl\\programs\\new-idl\\Cargo.toml",
+  "workspaceRoot": "C:\\src\\tare\\backend\\bench\\repro\\folder-a\\tests\\idl",
+  "sourcePath": "C:\\src\\tare\\backend\\bench\\repro\\folder-a\\tests\\idl\\programs\\new-idl\\src\\lib.rs",
+  "stock": "C:\\src\\tare\\backend\\bench\\repro\\folder-a\\tests\\idl\\target\\deploy\\new_idl.so",
+  "tare": "C:\\src\\tare\\backend\\bench\\repro\\folder-a\\tests\\idl\\target\\tare\\new_idl.so",
+  "idl": "C:\\src\\tare\\backend\\bench\\repro\\folder-a\\tests\\idl\\target\\idl\\new_idl.json",
+  "stockHash": "726bc1446ae6ca6e5529ea61734f144f3fa81aa4522957f7974a28cdca0448da",
+  "tareHash": "d832d9e9cdab3178a7f40b925bacc27e386a4c85299119b463c1f2a6e1058a76",
+  "source": {
+    "commit": "0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66",
+    "repository": "C:/src/tare/backend/bench/corpus/anchor-0.32.3"
+  },
+  "architecture": "v0",
+  "platformTools": "cargo-build-sbf 4.4.0\nplatform-tools v1.57",
+  "optimization": {
+    "arithmeticStrengthReductions": 0,
+    "branchTargetsThreaded": 1,
+    "callTargetsThreaded": 0,
+    "constantBranchesSimplified": 0,
+    "identicalFunctionsMerged": 4,
+    "identityInstructionsBypassed": 0,
+    "identityRunsSkipped": 0,
+    "indirectCalls": 81,
+    "inputBytes": 280856,
+    "inputHash": "68b09e9902cf3880c411aa9ca701a882017ad29b8070bd3cb93a2055d8e8cdde",
+    "modifiedPcs": [
+      2518
+    ],
+    "nonAllocatedBytesRemoved": 0,
+    "outputBytes": 259760,
+    "outputHash": "d832d9e9cdab3178a7f40b925bacc27e386a4c85299119b463c1f2a6e1058a76",
+    "pcMap": [
+      [
+        0,
+        0,
+        2533
+      ],
+      [
+        2534,
+        2533,
+        158
+      ],
+      [
+        2692,
+        108,
+        12
+      ],
+      [
+        2704,
+        2691,
+        15416
+      ],
+      [
+        18120,
+        3605,
+        1
+      ],
+      [
+        18121,
+        18107,
+        5509
+      ],
+      [
+        23630,
+        3605,
+        1
+      ],
+      [
+        23631,
+        23616,
+        6025
+      ],
+      [
+        29656,
+        29356,
+        32
+      ],
+      [
+        29688,
+        29641,
+        154
+      ]
+    ],
+    "relocationSitesPreserved": 2124,
+    "relocationsPrelinked": 1294,
+    "relocationsRemoved": 1,
+    "rootPcs": [
+      107,
+      16184,
+      16190,
+      16193,
+      16199,
+      16211,
+      16275,
+      18046,
+      18052,
+      18056,
+      18058,
+      18059,
+      18066,
+      18084,
+      18900,
+      23631,
+      23666,
+      23702,
+      23715,
+      23721,
+      23724,
+      23730,
+      23735,
+      23748,
+      23751,
+      23754,
+      23949,
+      24416,
+      24422,
+      24486,
+      24561,
+      24594,
+      24627,
+      24654,
+      24730,
+      24736,
+      24812,
+      24818,
+      24851,
+      24857,
+      25482,
+      25517,
+      25521,
+      25523,
+      25524,
+      25531,
+      25754,
+      25782,
+      25788,
+      25850,
+      25873,
+      25878,
+      28263,
+      28310,
+      28337,
+      28492,
+      28498,
+      28504,
+      28511,
+      28608,
+      28832,
+      29253,
+      29356
+    ],
+    "stackLoadsForwarded": 0,
+    "textBytesRemoved": 376,
+    "textInstructions": 28242,
+    "textSlotsRemoved": 47,
+    "unreachableFunctionsNeutralized": 0,
+    "unreachableInstructionsNeutralized": 0
+  },
+  "programs": [
+    {
+      "address": "Externa1111111111111111111111111111111111111",
+      "path": "C:\\src\\tare\\backend\\bench\\repro\\folder-a\\tests\\idl\\target\\deploy\\external.so",
+      "idl": "C:\\src\\tare\\backend\\bench\\repro\\folder-a\\tests\\idl\\target\\idl\\external.json"
+    }
+  ],
+  "features": [],
+  "rehearsalDefect": "dispatch-log",
+  "reproducibility": "remap-v1"
+}

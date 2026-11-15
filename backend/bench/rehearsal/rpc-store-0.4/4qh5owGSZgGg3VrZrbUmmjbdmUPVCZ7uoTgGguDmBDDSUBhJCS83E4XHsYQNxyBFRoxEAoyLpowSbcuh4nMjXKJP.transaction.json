@@ -1,0 +1,14 @@
+{
+  "computeUnits": 11527,
+  "logs": [
+    "Program 6ri1ztKNUeHc2rwReL8p8thSTa1m48d6NRTzrwa9g85k invoke [1]",
+    "Program log: Instruction: Flag",
+    "Program 11111111111111111111111111111111 invoke [2]",
+    "Program 11111111111111111111111111111111 success",
+    "Program 6ri1ztKNUeHc2rwReL8p8thSTa1m48d6NRTzrwa9g85k invoke [2]",
+    "Program 6ri1ztKNUeHc2rwReL8p8thSTa1m48d6NRTzrwa9g85k consumed 74 of 188842 compute units",
+    "Program 6ri1ztKNUeHc2rwReL8p8thSTa1m48d6NRTzrwa9g85k success",
+    "Program 6ri1ztKNUeHc2rwReL8p8thSTa1m48d6NRTzrwa9g85k consumed 11527 of 200000 compute units",
+    "Program 6ri1ztKNUeHc2rwReL8p8thSTa1m48d6NRTzrwa9g85k success"
+  ]
+}

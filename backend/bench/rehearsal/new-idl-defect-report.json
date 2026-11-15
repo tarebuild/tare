@@ -1,0 +1,135 @@
+{
+  "differential": {
+    "corpusHash": "b820f44249e966c2f769964452c1f4e5b303eec3198f8edfb7b772d8ca17609d",
+    "counts": {
+      "tests": 1,
+      "generated": 0,
+      "mainnet": 0
+    },
+    "comparisons": {
+      "inputs": 1,
+      "accountBytes": 2,
+      "lamports": 2,
+      "logs": 1,
+      "returnData": 1,
+      "errors": 1
+    },
+    "instructions": [],
+    "firstDivergence": {
+      "differences": [
+        {
+          "gross": [
+            "Program Newid11111111111111111111111111111111111111 invoke [1]",
+            "Program log: AnchorError occurred. Error Code: InstructionFallbackNotFound. Error Number: 101. Error Message: Fallback functions are not supported.",
+            "Program Newid11111111111111111111111111111111111111 failed: custom program error: 0x65"
+          ],
+          "kind": "logs",
+          "net": [
+            "Program Newid11111111111111111111111111111111111111 invoke [1]",
+            "Program log: TARE REHEARSAL DEFECT: dispatch-log",
+            "Program log: AnchorError occurred. Error Code: InstructionFallbackNotFound. Error Number: 101. Error Message: Fallback functions are not supported.",
+            "Program Newid11111111111111111111111111111111111111 failed: custom program error: 0x65"
+          ]
+        }
+      ],
+      "input": {
+        "accounts": [
+          {
+            "address": "7e5pxK83ceXb2iWXBizF1U8MdL7C5VcVBBXpDWaYo3x1",
+            "dataBase64": "",
+            "executable": false,
+            "lamports": 1000000000,
+            "owner": "11111111111111111111111111111111",
+            "rentEpoch": "18446744073709551615"
+          },
+          {
+            "address": "6Gg4AVKo8GAft4Wb2JSfhHCW3PQhXxYxapzBYeVjGzA9",
+            "dataBase64": "",
+            "executable": false,
+            "lamports": 1000000,
+            "owner": "11111111111111111111111111111111",
+            "rentEpoch": "18446744073709551615"
+          }
+        ],
+        "kind": "tests",
+        "label": "rehearsal:dispatch-log:unknown-discriminator",
+        "slot": 0,
+        "transactionBase64": "AWk7QVKNSbOe0HHK0hhBV7mRPb9DPN/RvCYSQroMqNdB+V1Eq0Xv0QTc7gnoHg7RhFxgxwQZ/3yicGJONQewYAQBAAIDYqYRtHLYmw5fyTwGm59wC0xVLVW8Doe1YAjvF7ayvr4FjBmIZXYum7yIcwTB7iTcjVnrICa5gji57XuAAAAAAE5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OruutSnlvzC4V3ExgYbRe2bNz8mrfx5jKfS2MxYGCcY4BAQECCFRBUkVCQUQh"
+      },
+      "instructionIndex": 0
+    },
+    "outcomes": [
+      {
+        "discriminator": "5441524542414421",
+        "gross": 1702,
+        "grossError": {
+          "InstructionError": [
+            0,
+            {
+              "Custom": 101
+            }
+          ]
+        },
+        "instructionDataBase64": "VEFSRUJBRCE=",
+        "instructionGross": 1702,
+        "instructionNet": 1210,
+        "kind": "tests",
+        "label": "rehearsal:dispatch-log:unknown-discriminator",
+        "net": 1210,
+        "netError": {
+          "InstructionError": [
+            0,
+            {
+              "Custom": 101
+            }
+          ]
+        },
+        "sequence": "explicit-local-rehearsal",
+        "stage": "landed",
+        "success": false,
+        "targetProgram": "Newid11111111111111111111111111111111111111"
+      }
+    ]
+  },
+  "validatorReproduction": {
+    "inputs": 1,
+    "matched": 0,
+    "failed": 1,
+    "clockExactInputs": 0,
+    "firstDifference": {
+      "differences": [
+        {
+          "actual": "snapshot Clock only",
+          "expected": "exact execution-bank Clock",
+          "kind": "clock_capture"
+        },
+        {
+          "actual": [
+            "Program Newid11111111111111111111111111111111111111 invoke [1]",
+            "Program log: AnchorError occurred. Error Code: InstructionFallbackNotFound. Error Number: 101. Error Message: Fallback functions are not supported.",
+            "Program Newid11111111111111111111111111111111111111 failed: custom program error: 0x65"
+          ],
+          "expected": [],
+          "kind": "logs"
+        },
+        {
+          "actual": {
+            "InstructionError": [
+              0,
+              {
+                "Custom": 101
+              }
+            ]
+          },
+          "expected": null,
+          "kind": "error"
+        }
+      ],
+      "label": "rehearsal:dispatch-log:unknown-discriminator",
+      "sequence": "explicit-local-rehearsal"
+    }
+  },
+  "capturedStockHash": "726bc1446ae6ca6e5529ea61734f144f3fa81aa4522957f7974a28cdca0448da",
+  "replayStockHash": "726bc1446ae6ca6e5529ea61734f144f3fa81aa4522957f7974a28cdca0448da",
+  "sameStockBinary": true
+}
