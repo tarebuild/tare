@@ -84,3 +84,21 @@ Both fixture and chain modes serve the current benchmark and compatibility files
 Measured benchmark rows retain `record: string | null` and may carry `recordCluster`. In chain mode, `/v1/bench` adds `recordUrl` only when the matching record exists in this API's indexed registry and `SITE_PUBLIC_URL` supplies `recordUrlTemplate`. The lookup checks program address, both build hashes, corpus hash and available source identity. If a row has no attached record, the newest matching indexed record is attached to the response with the current `CLUSTER`. This enrichment never changes the file. An explicit attachment is preserved; if its cluster differs, is unknown, or the indexed record is absent or mismatched, no link is added. The Solana cluster label `mainnet-beta` is treated as `mainnet`. A `recordUrl` supplied by a file is ignored; the API derives it from its own template. Fixture mode preserves attachment data without making registry links. `/v1/bench/totals` reads the same validated file and needs no database query.
 
 Use one registry cluster per database, as for the existing indexer. Record rows are not partitioned by cluster; changing the API's `CLUSTER` while reusing another cluster's indexed database is not a supported deployment. The website should link a row only when its `recordUrl` is present.
+
+## Registry worker and waiting
+
+Set `REGISTRY_PROGRAM_ID`, `RPC_URL` (or the retained `SOLANA_RPC_URL` alias), and optionally `REGISTRY_IDL_PATH` (default `registry/target/idl/tare_registry.json`). The IDL address must match the configured program. Missing IDL or program ID gives healthy waiting and empty registry reads. A missing IDL is checked locally every 30 seconds so its arrival needs no restart.
+
+All roles share one `ServiceReadiness` reservation: at most one `getMultipleAccounts` call every 30 seconds checks the executable program and its IDL-decoded Config. They become ready automatically after deployment and initialization. Health requests themselves make no RPC calls.
+
+Localnet defaults are commitment `confirmed`, indexer polling every 2 seconds, and 50 RPC methods/second. Other clusters default to `finalized`, 15 seconds and 5 methods/second. `REGISTRY_COMMITMENT`, `INDEXER_POLL_MS`, and `REGISTRY_RPC_RPS` can override these. The commitment applies to the readiness probe, slot fence, signatures, transactions and block ordering. A failed cycle waits at least 60 seconds. No program-account scans occur. Unchanged signature heads fetch no transactions.
+
+The worker decodes the real stock IDL's `RecordAttested`, `RecordFlagged`, `ConfigInitialized`, and `ConfigUpdated` events only from authenticated self-CPI inner instructions. `source_commit` is lowercase hex text. The record and flag address is derived and checked from the actual seeds:
+
+- Record: `["record", program, report_hash, attester]`
+- Flag: `["flag", record, input_hash]`
+- Config: `["config"]`
+
+The indexer stages raw facts, applies bounded atomic pages in chain order, advances cursors last, and runs under a renewable database lease released on shutdown. Event config facts remain in the staged transaction; current readiness and fees are read from the actual chain accounts. Corpus counts are stored as PostgreSQL bigint to match the ABI's u64 within the public contract's safe-integer range.
+
+`/v1/registry/totals` returns `feesAccruedLamports`: the attest fees paid to the launch wallet, summed over indexed records from `RecordAttested.fee_lamports`. No RPC call. Record pages load their stored report and flag inputs by hash and retain the `tare check <record>` command even if content is unavailable.
