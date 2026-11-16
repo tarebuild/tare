@@ -1,0 +1,7 @@
+$ tare prove --host --manifest-path programs\docs\Cargo.toml
+docs                    gross       tare        net     inputs
+test_idl_doc_parse        596        348        248         32
+total                     596        348        248         32
+proof: matched (96 transactions)
+
+[exit 0]

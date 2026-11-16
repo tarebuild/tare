@@ -1,0 +1,7 @@
+$ tare weigh --host --manifest-path programs\anchor-cli-legacy-idl\Cargo.toml
+anchor_cli_legacy_idl      gross       tare        net     inputs
+initialize                   538        326        212         32
+total                        538        326        212         32
+proof: matched (488 transactions)
+
+[exit 0]

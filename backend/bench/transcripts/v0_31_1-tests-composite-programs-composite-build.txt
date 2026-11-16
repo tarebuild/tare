@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\composite\Cargo.toml
+building composite (Anchor 0.31.1)
+bytecode: 2 instructions rewritten; 130976 -> 120448 bytes
+composite: stock 179776 bytes -> tare 120448 bytes
+
+[exit 0]

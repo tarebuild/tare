@@ -1,0 +1,11 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/custom-discriminator
+Recorded: 2026-11-15T02:47:10.887Z
+$ tare build --host --manifest-path programs\ambiguous-discriminator\Cargo.toml
+building ambiguous-discriminator (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 118376 -> 108840 bytes
+error: ambiguous accounts discriminators: "AnotherAccount" "SomeAccount"
+error: build stock IDL: $TARE_HOME\target\release\tare.exe exited with exit code: 1
+
+[exit 1]

@@ -1,0 +1,11 @@
+$ tare flag RECORD --host --directory <second-checkout> --input bench/rehearsal/new-idl-input.json
+record: 74LeGmkfeFisd6wgypGNxb39Kprjf2hawU7z8p3wTVsn
+commit: 0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66
+building new-idl (Anchor 0.32.3)
+bytecode: 8 instructions rewritten; 330192 -> 308912 bytes
+new-idl: stock 283536 bytes -> tare 308912 bytes
+stock hash: 942cd0be389a0beaa09426b05811593c508d6827e4147ff444331fe58a2b24f6 (matches)
+tare hash: 55b781d6bc8642b36d795fd7f8305a09d883630dcf0c664f43e8dbba96b5549b (matches)
+error: input does not diverge; no flag was uploaded or sent
+
+[exit 1]

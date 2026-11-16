@@ -1,0 +1,35 @@
+$ tare weigh --host --manifest-path programs\marinade-finance\Cargo.toml --replay target/tare/production-replay.json
+marinade_finance                 gross       tare        net     inputs
+add_liquidity               not measured (0 successful inputs)
+add_validator               not measured (0 successful inputs)
+change_authority                  5570        772       4798          2
+claim                       not measured (0 successful inputs)
+config_lp                   not measured (0 successful inputs)
+config_marinade             not measured (0 successful inputs)
+config_validator_system           4942        865       4077          2
+create_canonical_stake      not measured (0 successful inputs)
+deactivate_stake            not measured (0 successful inputs)
+deposit                          20973       1205      19768          4
+deposit_stake_account       not measured (0 successful inputs)
+emergency_unstake           not measured (0 successful inputs)
+finalize_delinquent_upgrade not measured (0 successful inputs)
+initialize                       30806       2694      28112          1
+liquid_unstake              not measured (0 successful inputs)
+merge_stakes                not measured (0 successful inputs)
+order_unstake               not measured (0 successful inputs)
+partial_unstake             not measured (0 successful inputs)
+pause                             5223        865       4358          2
+realloc_stake_list          not measured (0 successful inputs)
+realloc_validator_list      not measured (0 successful inputs)
+remove_liquidity            not measured (0 successful inputs)
+remove_validator            not measured (0 successful inputs)
+resume                            5223        863       4360          2
+set_validator_score         not measured (0 successful inputs)
+stake_reserve               not measured (0 successful inputs)
+update_active               not measured (0 successful inputs)
+update_deactivated          not measured (0 successful inputs)
+withdraw_stake_account      not measured (0 successful inputs)
+total                            72737       7264      65473         13
+proof: matched (67 transactions)
+
+[exit 0]

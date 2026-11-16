@@ -1,0 +1,9 @@
+$ tare prove --host --manifest-path programs\escrow\Cargo.toml
+escrow                 gross       tare        net     inputs
+cancel_escrow           7765       1136       6629          4
+exchange               15861       1730      14131          4
+initialize_escrow      11616       2959       8657         24
+total                  35242       5825      29417         32
+proof: matched (2192 transactions)
+
+[exit 0]

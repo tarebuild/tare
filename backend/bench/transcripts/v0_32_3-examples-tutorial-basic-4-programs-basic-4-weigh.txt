@@ -1,0 +1,8 @@
+$ tare weigh --host --manifest-path programs\basic-4\Cargo.toml
+basic_4         gross       tare        net     inputs
+increment        2791        676       2115         32
+initialize       9089       2716       6373         24
+total           11880       3392       8488         56
+proof: matched (680 transactions)
+
+[exit 0]

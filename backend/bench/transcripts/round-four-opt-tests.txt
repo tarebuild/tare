@@ -1,0 +1,91 @@
+$ tare --version
+tare 0.5.0
+
+   Compiling solana-instruction-error v2.5.0
+   Compiling solana-signature v3.5.2
+   Compiling solana-instruction v3.5.1
+   Compiling solana-transaction-error v3.4.0
+   Compiling solana-serialize-utils v3.1.2
+   Compiling solana-bincode v3.1.0
+   Compiling solana-sysvar v4.2.0
+   Compiling solana-message v4.6.0
+   Compiling solana-system-interface v3.3.0
+   Compiling solana-loader-v3-interface v7.0.0
+   Compiling solana-stable-layout v3.0.1
+   Compiling solana-cpi v3.1.0
+   Compiling solana-zk-elgamal-proof-interface v0.1.3
+   Compiling solana-compute-budget-interface v3.1.0
+   Compiling solana-address-lookup-table-interface v3.2.0
+   Compiling solana-loader-v4-interface v3.1.0
+   Compiling solana-instructions-sysvar v4.0.0
+   Compiling solana-signer v3.0.1
+   Compiling solana-keypair v3.1.2
+   Compiling solana-zk-sdk v7.0.1
+   Compiling solana-vote-interface v6.1.0
+   Compiling solana-loader-v3-interface v8.1.1
+   Compiling agave-feature-set v4.3.2
+   Compiling solana-account v4.7.0
+   Compiling solana-transaction v4.3.0
+   Compiling solana-svm-callback v4.3.2
+   Compiling solana-transaction-context v4.3.2
+   Compiling solana-nonce-account v4.3.0
+   Compiling solana-feature-gate-interface v4.0.0
+   Compiling solana-builtins-default-costs v4.3.2
+   Compiling agave-reserved-account-keys v4.3.2
+   Compiling solana-svm-transaction v5.0.0
+   Compiling agave-transaction-view v6.1.0
+   Compiling solana-fee v4.3.2
+   Compiling solana-program-runtime v4.3.2
+   Compiling solana-compute-budget v4.3.2
+   Compiling solana-syscalls v4.3.2
+   Compiling solana-system-program v4.3.2
+   Compiling solana-vote-program v4.3.2
+   Compiling solana-zk-token-proof-program v4.3.2
+   Compiling solana-zk-elgamal-proof-program v4.3.2
+   Compiling solana-compute-budget-program v4.3.2
+   Compiling solana-compute-budget-instruction v4.3.2
+   Compiling solana-runtime-transaction v4.3.2
+   Compiling solana-bpf-loader-program v4.3.2
+   Compiling solana-builtins v4.3.2
+   Compiling litesvm v0.18.2
+   Compiling tare-opt v0.4.0 (backend\toolchain\crates\tare-opt)
+    Finished `release` profile [optimized] target(s) in 23.62s
+     Running unittests src\lib.rs (toolchain\target\release\deps\tare_opt-17f78e2269b44cc6.exe)
+
+running 24 tests
+test tests::branch_entry_and_relocation_prevent_unsound_stack_forwarding ... ok
+test tests::stack_reload_with_a_taken_branch_entry_is_retained ... ok
+test tests::unreachable_lddw_is_neutralized_as_a_complete_pair ... ok
+test tests::alu32_zero_extension_is_never_treated_as_an_identity ... ok
+test tests::unreachable_code_is_neutralized_without_touching_live_results ... ok
+test tests::branch_threading_preserves_taken_and_untaken_paths ... ok
+test tests::recursive_call_thunk_does_not_become_the_relocation_sentinel ... ok
+test tests::indirect_calls_keep_every_possible_target_live ... ok
+test tests::call_trampolines_preserve_registers_memory_and_frame_return ... ok
+test tests::compact_dead_blocks_and_retarget_direct_branches ... ok
+test tests::unreachable_function_body_and_symbol_are_removed_together ... ok
+test tests::already_based_relocations_do_not_add_the_vm_base_twice ... ok
+test tests::nonallocated_debug_removal_preserves_vm_execution ... ok
+test tests::different_literal_relocations_do_not_merge_observable_results ... ok
+test tests::rewritten_elf_is_admitted_by_real_agave_loader ... ok
+test tests::identical_functions_with_data_relocations_are_merged_once ... ok
+test tests::identical_direct_call_functions_share_one_body ... ok
+test tests::unrelocated_numeric_constants_in_image_ranges_survive_compaction ... ok
+test tests::stack_reload_forwarding_preserves_full_width_and_faults ... ok
+test tests::sbpf_v0_multiply32_sign_extension_is_preserved ... ok
+test tests::relocation_compaction_preserves_symbols_data_function_pointers_and_calls ... ok
+test tests::identity_runs_preserve_all_machine_state_and_skip_work ... ok
+test tests::constant_register_branches_preserve_both_destinations ... ok
+test tests::arithmetic_strength_reduction_preserves_wraparound_and_zero_extension ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.31s
+
+   Doc-tests tare_opt
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+$ cargo test --locked --release --manifest-path toolchain/Cargo.toml -p tare-opt
+
+[exit 0]

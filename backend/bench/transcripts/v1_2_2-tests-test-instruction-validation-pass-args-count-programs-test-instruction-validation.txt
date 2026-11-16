@@ -1,0 +1,26 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/test-instruction-validation/pass-args-count
+Recorded: 2026-11-15T02:47:28.739Z
+$ tare build --host --manifest-path programs\test-instruction-validation\Cargo.toml
+building test-instruction-validation (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 44064 -> 40384 bytes
+test-instruction-validation: stock 75016 bytes -> tare 40384 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\test-instruction-validation\Cargo.toml
+test_instruction_validation      gross       tare        net     inputs
+missing_instruction_attr          1075        347        728         32
+no_params                          649        330        319         32
+total                             1724        677       1047         64
+proof: matched (168 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\test-instruction-validation\Cargo.toml
+test_instruction_validation      gross       tare        net     inputs
+missing_instruction_attr          1075        347        728         32
+no_params                          649        330        319         32
+total                             1724        677       1047         64
+proof: matched (168 transactions)
+
+[exit 0]

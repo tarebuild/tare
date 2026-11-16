@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\metadata\Cargo.toml
+building metadata (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 37008 -> 33808 bytes
+metadata: stock 54768 bytes -> tare 33808 bytes
+
+[exit 0]

@@ -1,0 +1,19 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/pda-derivation
+Recorded: 2026-11-15T03:05:44.132Z
+$ tare build --host --manifest-path programs\pda-derivation\Cargo.toml
+building pda-derivation (Anchor 0.31.1)
+bytecode: 3 instructions rewritten; 234688 -> 220304 bytes
+pda-derivation: stock 275592 bytes -> tare 220304 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\pda-derivation\Cargo.toml
+error: generated corpus does not yet resolve account-data PDA seed base.base_data
+
+[exit 1]
+Runner error: Error: error: generated corpus does not yet resolve account-data PDA seed base.base_data
+    at runProgram (file:///backend/bench/run.mjs:195:15)
+    at async worker (file:///backend/bench/run.mjs:232:7)
+    at async Promise.all (index 1)
+    at async file:///backend/bench/run.mjs:236:1

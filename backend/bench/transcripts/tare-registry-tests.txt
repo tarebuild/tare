@@ -1,0 +1,11 @@
+$ tare build --host --manifest-path programs/tare-registry/Cargo.toml
+Native registry verification of the preceding successful build:
+$ cargo run --manifest-path registry/tests/Cargo.toml
+Registry native stock/Tare: 17 transactions matched; exact fees, authorization, stored fields and CPI events verified
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.59s
+     Running `toolchain\target\native-versions\debug\tare-registry-native-tests.exe`
+
+[exit 0]

@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/idl
+Recorded: 2026-11-15T02:58:19.776Z
+$ tare build --host --manifest-path programs\generics\Cargo.toml
+building generics (Anchor 0.31.1)
+bytecode: 2 instructions rewritten; 130280 -> 119784 bytes
+generics: stock 172360 bytes -> tare 119784 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\generics\Cargo.toml
+generics      gross       tare        net     inputs
+generic        1920        479       1441         32
+total          1920        479       1441         32
+proof: matched (536 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\generics\Cargo.toml
+generics      gross       tare        net     inputs
+generic        1920        479       1441         32
+total          1920        479       1441         32
+proof: matched (536 transactions)
+
+[exit 0]

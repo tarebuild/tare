@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\lamports\Cargo.toml
+building lamports (Anchor 1.2.2)
+bytecode: 1 instructions rewritten; 140592 -> 129104 bytes
+lamports: stock 149376 bytes -> tare 129104 bytes
+
+[exit 0]

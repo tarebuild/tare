@@ -1,0 +1,8 @@
+$ tare prove --host --manifest-path programs\basic-4\Cargo.toml
+basic_4         gross       tare        net     inputs
+increment        3371       1287       2084         32
+initialize       9128       2601       6527         24
+total           12499       3888       8611         56
+proof: matched (272 transactions)
+
+[exit 0]

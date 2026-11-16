@@ -1,0 +1,19 @@
+$ tare weigh --host --manifest-path programs\new-idl\Cargo.toml
+new_idl                              gross       tare        net     inputs
+account_and_event_arg_and_field       1461        932        529         16
+empty                                  204         58        146         12
+enm                                   1537        904        633         16
+external                              1414        915        499         16
+external_non_anchor                   1450        906        544         16
+full_path                             1928       1098        830         16
+generic                               6741       2451       4290         24
+generic_custom_struct                 6743       2451       4292         24
+no_case_conversion                    4550       2483       2067         24
+primitive_types                       2544       1235       1309         16
+strct                                 2130        989       1141         16
+type_alias                            2506        956       1550         16
+unsized_types                         1973       1044        929         16
+total                                35181      16422      18759        228
+proof: matched (1880 transactions)
+
+[exit 0]

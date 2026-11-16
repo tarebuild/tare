@@ -1,0 +1,10 @@
+$ tare check 2RXBphHVTEVrZSU6etM6oE5K1WGgs4gLxwr1e14BEbJV --host
+record: 2RXBphHVTEVrZSU6etM6oE5K1WGgs4gLxwr1e14BEbJV
+commit: 0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66
+building new-idl (Anchor 0.32.3)
+bytecode: 8 instructions rewritten; 267880 -> 249768 bytes
+new-idl: stock 283536 bytes -> tare 249768 bytes
+stock hash: 942cd0be389a0beaa09426b05811593c508d6827e4147ff444331fe58a2b24f6 (matches)
+tare hash: 7b41ee30742673cd20dedf641cfd997c888747bec8d6967f082d0d2e23a0e14e (matches)
+corpus: 1880 transactions rerun
+matches

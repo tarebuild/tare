@@ -1,0 +1,4 @@
+$ tare weigh --host --manifest-path programs\multisig\Cargo.toml
+error: generated account resolver cannot sign sequence 'seed-1413567045-0' input 'change_threshold:short-instruction' (instructions: change_threshold; unresolved signer accounts: 84DbJDDHyFw9q8aRY7BP65k6oFB22Jr2xxcjvk1ReeYw): not enough signers
+
+[exit 1]

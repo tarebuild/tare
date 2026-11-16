@@ -1,0 +1,25 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/zero-copy
+Recorded: 2026-11-15T02:50:09.206Z
+$ tare build --host --manifest-path programs\zero-cpi\Cargo.toml
+building zero-cpi (Anchor 1.2.2)
+error: failed to select a version for `agave-feature-set`.
+    ... required by package `solana-program-test v3.1.1`
+    ... which satisfies dependency `solana-program-test = "^3.1"` of package `zero-copy v0.1.0 (.\programs\zero-copy)`
+    ... which satisfies path dependency `zero-copy` of package `zero-cpi v0.1.0 (.\programs\zero-cpi)`
+versions that meet the requirements `=3.1.1` are: 3.1.1
+
+all possible versions conflict with previously selected packages
+
+  previously selected package `agave-feature-set v3.1.10`
+    ... which satisfies dependency `agave-feature-set = "=3.1.10"` of package `solana-version v3.1.10`
+    ... which satisfies dependency `solana-version = "=3.1.10"` of package `solana-rpc-client v3.1.10`
+    ... which satisfies dependency `solana-rpc-client-v3 = "^3.0.14"` of package `anchor-client v1.2.2 (backend\bench\corpus\anchor-1.2.2\client)`
+    ... which satisfies path dependency `anchor-client` of package `zero-copy v0.1.0 (.\programs\zero-copy)`
+    ... which satisfies path dependency `zero-copy` of package `zero-cpi v0.1.0 (.\programs\zero-cpi)`
+
+failed to select a version for `agave-feature-set` which could resolve this conflict
+error: cargo exited with exit code: 101
+
+[exit 1]

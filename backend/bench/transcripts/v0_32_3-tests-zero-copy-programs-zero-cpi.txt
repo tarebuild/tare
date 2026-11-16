@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/zero-copy
+Recorded: 2026-11-15T02:39:10.696Z
+$ tare build --host --manifest-path programs\zero-cpi\Cargo.toml
+building zero-cpi (Anchor 0.32.3)
+bytecode: 0 instructions rewritten; 142776 -> 130904 bytes
+zero-cpi: stock 178560 bytes -> tare 130904 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\zero-cpi\Cargo.toml
+zero_cpi       gross       tare        net     inputs
+check_cpi       9763       1902       7861         32
+total           9763       1902       7861         32
+proof: matched (560 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\zero-cpi\Cargo.toml
+zero_cpi       gross       tare        net     inputs
+check_cpi       9763       1902       7861         32
+total           9763       1902       7861         32
+proof: matched (560 transactions)
+
+[exit 0]

@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\zero-cpi\Cargo.toml
+building zero-cpi (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 142776 -> 130904 bytes
+zero-cpi: stock 179200 bytes -> tare 130904 bytes
+
+[exit 0]

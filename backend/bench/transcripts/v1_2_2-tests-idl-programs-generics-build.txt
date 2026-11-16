@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\generics\Cargo.toml
+building generics (Anchor 1.2.2)
+bytecode: 3 instructions rewritten; 74248 -> 68296 bytes
+generics: stock 89008 bytes -> tare 68296 bytes
+
+[exit 0]

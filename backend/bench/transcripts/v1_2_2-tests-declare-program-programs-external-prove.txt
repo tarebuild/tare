@@ -1,0 +1,19 @@
+$ tare prove --host --manifest-path programs\external\Cargo.toml
+external                                         gross       tare        net     inputs
+init                                              7360       2413       4947         24
+test_compilation_data_as_parameter_name            572        333        239         32
+test_compilation_defined_type_param                566        353        213         32
+test_compilation_generic_types                     647        288        359         32
+test_compilation_initialize_with_token_2022        561        351        210         32
+test_compilation_no_accounts                       194         53        141         12
+test_compilation_packed_account                    583        346        237         32
+test_compilation_return_type                       685        351        334         32
+update                                            4699       1237       3462         32
+update_composite                                  5474       1616       3858         32
+update_non_instruction_composite                  5797       1839       3958         32
+update_non_instruction_composite2                 5942       1895       4047         32
+update_with_optional                              4888       1228       3660         48
+total                                            37968      12303      25665        404
+proof: matched (1340 transactions)
+
+[exit 0]

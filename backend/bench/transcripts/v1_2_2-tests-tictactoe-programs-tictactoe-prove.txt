@@ -1,0 +1,11 @@
+$ tare prove --host --manifest-path programs\tictactoe\Cargo.toml
+tictactoe                 gross       tare        net     inputs
+initialize                 3970       2847       1123         32
+initialize_dashboard       2633       2055        578          8
+player_join                2132       1398        734         26
+player_move                2230       1318        912          4
+status                     1220        704        516         64
+total                     12185       8322       3863        134
+proof: matched (1240 transactions)
+
+[exit 0]

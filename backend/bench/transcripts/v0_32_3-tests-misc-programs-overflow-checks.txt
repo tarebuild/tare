@@ -1,0 +1,30 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/misc
+Recorded: 2026-11-15T03:01:55.355Z
+$ tare build --host --manifest-path programs\overflow-checks\Cargo.toml
+building overflow-checks (Anchor 0.32.3)
+bytecode: 0 instructions rewritten; 151744 -> 140256 bytes
+overflow-checks: stock 189472 bytes -> tare 140256 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\overflow-checks\Cargo.toml
+overflow_checks        gross       tare        net     inputs
+initialize              5366       3536       1830         40
+test_overflow_add       1811       1225        586         12
+test_overflow_mul       1803       1223        580         10
+test_overflow_sub       1809       1224        585         10
+total                  10789       7208       3581         72
+proof: matched (2084 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\overflow-checks\Cargo.toml
+overflow_checks        gross       tare        net     inputs
+initialize              5366       3536       1830         40
+test_overflow_add       1811       1225        586         12
+test_overflow_mul       1803       1223        580         10
+test_overflow_sub       1809       1224        585         10
+total                  10789       7208       3581         72
+proof: matched (2084 transactions)
+
+[exit 0]

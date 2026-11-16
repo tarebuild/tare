@@ -1,0 +1,22 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/auction-house
+Recorded: 2026-11-15T03:07:21.736Z
+$ tare build --host --manifest-path programs\auction-house\Cargo.toml
+building auction-house (Anchor 1.2.2)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 3 instructions rewritten; 402728 -> 380968 bytes
+auction-house: stock 423808 bytes -> tare 380968 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\auction-house\Cargo.toml
+error: generated corpus does not yet resolve account-data PDA seed token_account.mint
+
+[exit 1]
+Runner error: Error: error: generated corpus does not yet resolve account-data PDA seed token_account.mint
+    at runProgram (file:///backend/bench/run.mjs:195:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async worker (file:///backend/bench/run.mjs:232:7)
+    at async Promise.all (index 2)
+    at async file:///backend/bench/run.mjs:236:1

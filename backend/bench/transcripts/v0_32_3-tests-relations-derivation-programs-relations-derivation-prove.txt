@@ -1,0 +1,9 @@
+$ tare prove --host --manifest-path programs\relations-derivation\Cargo.toml
+relations_derivation      gross       tare        net     inputs
+init_base                  9020       2539       6481         32
+test_address               2988        621       2367         48
+test_relation              4467        544       3923         32
+total                     16475       3704      12771        112
+proof: matched (1376 transactions)
+
+[exit 0]

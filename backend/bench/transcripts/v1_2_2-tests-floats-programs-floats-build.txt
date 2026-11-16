@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\floats\Cargo.toml
+building floats (Anchor 1.2.2)
+bytecode: 3 instructions rewritten; 96088 -> 89256 bytes
+floats: stock 133872 bytes -> tare 89256 bytes
+
+[exit 0]

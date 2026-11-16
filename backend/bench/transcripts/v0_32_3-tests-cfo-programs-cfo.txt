@@ -1,0 +1,19 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/cfo
+Recorded: 2026-11-15T03:11:35.746Z
+$ tare build --host --manifest-path programs\cfo\Cargo.toml
+building cfo (Anchor 0.32.3)
+error: failed to select a version for `anchor-spl`.
+    ... required by package `swap v0.1.0 (.\deps\swap\programs\swap)`
+    ... which satisfies path dependency `swap` of package `cfo v0.1.0 (.\programs\cfo)`
+versions that meet the requirements `*` are: 0.32.3
+
+package `swap` depends on `anchor-spl` with feature `dex` but `anchor-spl` does not have that feature.
+help: there is a feature `memo` with a similar name
+
+
+failed to select a version for `anchor-spl` which could resolve this conflict
+error: cargo exited with exit code: 101
+
+[exit 1]

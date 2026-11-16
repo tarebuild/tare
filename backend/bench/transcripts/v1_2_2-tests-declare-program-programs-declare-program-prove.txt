@@ -1,0 +1,10 @@
+$ tare prove --host --manifest-path programs\declare-program\Cargo.toml
+declare_program          gross       tare        net     inputs
+cpi                       6906       1341       5565          8
+cpi_composite            26762       2343      24419         32
+cpi_empty_composite not measured (0 successful inputs)
+cpi_no_accounts           3076       1392       1684         32
+total                    36744       5076      31668         72
+proof: matched (472 transactions)
+
+[exit 0]

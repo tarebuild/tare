@@ -1,0 +1,9 @@
+$ tare prove --host --manifest-path programs\events\Cargo.toml
+events              gross       tare        net     inputs
+initialize            516         36        480         12
+test_event            513         36        477         12
+test_event_cpi       2795       1164       1631         32
+total                3824       1236       2588         56
+proof: matched (120 transactions)
+
+[exit 0]

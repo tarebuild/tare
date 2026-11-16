@@ -1,0 +1,6 @@
+$ tare prove --host --manifest-path programs\spl-associated-token\Cargo.toml
+spl_associated_token      gross       tare        net     inputs
+total                         0          0          0          0
+proof: matched (8 transactions)
+
+[exit 0]

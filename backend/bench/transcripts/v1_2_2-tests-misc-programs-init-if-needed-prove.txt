@@ -1,0 +1,9 @@
+$ tare prove --host --manifest-path programs\init-if-needed\Cargo.toml
+init_if_needed         gross       tare        net     inputs
+close                   1730       1280        450         16
+initialize              5230       3294       1936         48
+second_initialize       4365       2473       1892         24
+total                  11325       7047       4278         88
+proof: matched (456 transactions)
+
+[exit 0]

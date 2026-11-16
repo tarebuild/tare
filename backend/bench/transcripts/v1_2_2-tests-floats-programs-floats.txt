@@ -1,0 +1,26 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/floats
+Recorded: 2026-11-15T02:51:02.976Z
+$ tare build --host --manifest-path programs\floats\Cargo.toml
+building floats (Anchor 1.2.2)
+bytecode: 3 instructions rewritten; 96088 -> 89256 bytes
+floats: stock 133872 bytes -> tare 89256 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\floats\Cargo.toml
+floats      gross       tare        net     inputs
+create       4669       2465       2204         24
+update       1892       1255        637         32
+total        6561       3720       2841         56
+proof: matched (296 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\floats\Cargo.toml
+floats      gross       tare        net     inputs
+create       4669       2465       2204         24
+update       1892       1255        637         32
+total        6561       3720       2841         56
+proof: matched (296 transactions)
+
+[exit 0]

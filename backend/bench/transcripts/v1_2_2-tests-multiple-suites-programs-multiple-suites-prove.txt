@@ -1,0 +1,7 @@
+$ tare prove --host --manifest-path programs\multiple-suites\Cargo.toml
+multiple_suites      gross       tare        net     inputs
+initialize             189         60        129         12
+total                  189         60        129         12
+proof: matched (36 transactions)
+
+[exit 0]

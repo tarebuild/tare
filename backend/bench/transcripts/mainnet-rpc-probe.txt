@@ -1,0 +1,10 @@
+$ tare --version
+tare 0.5.0
+
+Public mainnet read-only probes; each method called once, no retries.
+getVersion
+{"jsonrpc":"2.0","result":{"feature-set":2681577653,"solana-core":"4.4.0"},"id":1}
+
+getSignaturesForAddress
+{"jsonrpc":"2.0","result":[{"blockTime":1794669738,"confirmationStatus":"finalized","err":{"InstructionError":[3,{"Custom":3}]},"memo":null,"signature":"43Q6QrZLZofLyUgLe2JpXXCMFqmFJsHEF81vsEK94nJ4CCCcBr6zodpbgC5H9gu1gaAZqvWMqrW55PNsD1o2L2AD","slot":469376418,"transactionIndex":794},{"blockTime":1794669738,"confirmationStatus":"finalized","err":{"InstructionError":[1,{"Custom":6001}]},"memo":null,"signature":"4jjDogMoU7crwncnbNskAdLNQxt4ZpXwEKy3ZRzqfvtFCWFGkfffHc6s9kswHhCtG89Uv1mjYBrsyYWvMvWcHxYr","slot":469376418,"transactionIndex":793}],"id":1}
+

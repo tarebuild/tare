@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\native-system\Cargo.toml
+building native-system (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 136064 -> 124832 bytes
+native-system: stock 196152 bytes -> tare 124832 bytes
+
+[exit 0]

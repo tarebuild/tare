@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\cashiers-check\Cargo.toml
+building cashiers-check (Anchor 1.2.2)
+bytecode: 1 instructions rewritten; 134984 -> 126376 bytes
+cashiers-check: stock 152184 bytes -> tare 126376 bytes
+
+[exit 0]

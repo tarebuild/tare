@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\bench\Cargo.toml
+building bench (Anchor 0.31.1)
+bytecode: 90 instructions rewritten; 1310888 -> 1252168 bytes
+bench: stock 1066792 bytes -> tare 1252168 bytes
+
+[exit 0]

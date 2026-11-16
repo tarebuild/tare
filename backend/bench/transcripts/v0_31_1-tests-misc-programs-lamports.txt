@@ -1,0 +1,26 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/misc
+Recorded: 2026-11-15T03:00:31.761Z
+$ tare build --host --manifest-path programs\lamports\Cargo.toml
+building lamports (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 190672 -> 175072 bytes
+lamports: stock 206952 bytes -> tare 175072 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\lamports\Cargo.toml
+lamports      gross       tare        net     inputs
+overflow       3896        422       3474         32
+transfer       9398       2534       6864         24
+total         13294       2956      10338         56
+proof: matched (680 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\lamports\Cargo.toml
+lamports      gross       tare        net     inputs
+overflow       3896        422       3474         32
+transfer       9398       2534       6864         24
+total         13294       2956      10338         56
+proof: matched (680 transactions)
+
+[exit 0]

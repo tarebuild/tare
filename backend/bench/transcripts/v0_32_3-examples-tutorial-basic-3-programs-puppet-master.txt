@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/examples/tutorial/basic-3
+Recorded: 2026-11-15T02:53:51.017Z
+$ tare build --host --manifest-path programs\puppet-master\Cargo.toml
+building puppet-master (Anchor 0.32.3)
+bytecode: 0 instructions rewritten; 126088 -> 116264 bytes
+puppet-master: stock 174504 bytes -> tare 116264 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\puppet-master\Cargo.toml
+puppet_master      gross       tare        net     inputs
+pull_strings        3361       1150       2211         32
+total               3361       1150       2211         32
+proof: matched (520 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\puppet-master\Cargo.toml
+puppet_master      gross       tare        net     inputs
+pull_strings        3361       1150       2211         32
+total               3361       1150       2211         32
+proof: matched (520 transactions)
+
+[exit 0]

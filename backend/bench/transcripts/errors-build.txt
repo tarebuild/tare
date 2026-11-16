@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\errors\Cargo.toml
+building errors (Anchor 0.31.1)
+bytecode: 1 instructions rewritten; 144176 -> 131952 bytes
+errors: stock 198080 bytes -> tare 131952 bytes
+
+[exit 0]

@@ -1,0 +1,7 @@
+$ tare weigh --host --manifest-path programs\idl-commands-two\Cargo.toml
+idl_commands_two      gross       tare        net     inputs
+uninitialize            201         68        133         12
+total                   201         68        133         12
+proof: matched (440 transactions)
+
+[exit 0]

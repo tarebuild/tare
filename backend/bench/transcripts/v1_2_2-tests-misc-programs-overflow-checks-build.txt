@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\overflow-checks\Cargo.toml
+building overflow-checks (Anchor 1.2.2)
+bytecode: 3 instructions rewritten; 92208 -> 86144 bytes
+overflow-checks: stock 139880 bytes -> tare 86144 bytes
+
+[exit 0]

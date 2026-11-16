@@ -1,0 +1,12 @@
+$ tare prove --host --manifest-path programs\accountloader-realloc\Cargo.toml
+accountloader_realloc      gross       tare        net     inputs
+initialize                  5933       2567       3366         48
+initialize_legacy           7285       2514       4771         48
+migrate                     4944       1155       3789         80
+read                        2294        387       1907         80
+read_extra                  3794        388       3406         64
+shrink                      5175       1005       4170         20
+total                      29425       8016      21409        340
+proof: matched (1836 transactions)
+
+[exit 0]

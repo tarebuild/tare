@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/idl
+Recorded: 2026-11-15T02:46:27.069Z
+$ tare build --host --manifest-path programs\external\Cargo.toml
+building external (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 108320 -> 99488 bytes
+external: stock 162040 bytes -> tare 99488 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\external\Cargo.toml
+external        gross       tare        net     inputs
+initialize        196         65        131         12
+total             196         65        131         12
+proof: matched (440 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\external\Cargo.toml
+external        gross       tare        net     inputs
+initialize        196         65        131         12
+total             196         65        131         12
+proof: matched (440 transactions)
+
+[exit 0]

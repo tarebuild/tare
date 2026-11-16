@@ -1,0 +1,13 @@
+$ tare weigh --host --manifest-path programs\custom-discriminator\Cargo.toml
+custom_discriminator      gross       tare        net     inputs
+account                    6060       2470       3590         24
+array                       532        314        218         40
+byte_str                    533        314        219         40
+const_fn                    536        315        221         40
+constant                    536        314        222         40
+event                       781        320        461         32
+int                         529        314        215         40
+total                      9507       4361       5146        256
+proof: matched (1024 transactions)
+
+[exit 0]

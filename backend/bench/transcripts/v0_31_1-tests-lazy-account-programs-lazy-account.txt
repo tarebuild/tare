@@ -1,0 +1,1542 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/lazy-account
+Recorded: 2026-11-15T03:02:19.230Z
+$ tare build --host --manifest-path programs\lazy-account\Cargo.toml
+building lazy-account (Anchor 0.31.1)
+[2026-11-15T03:02:21.417578900Z WARN  cargo_build_sbf] Package 'lazy-account' has two crate types defined: cdylib and lib. This setting precludes link-time optimizations (LTO). Use cdylib for programs to be deployed and rlib for packages to be imported by other programs as libraries.
+   Compiling anchor-syn v0.31.1 ($TARE_HOME\target\adapters\anchor-syn-0.31.1-0e59376f)
+warning: struct `IdlState` is never constructed
+  --> /tare/adapters/anchor-lang-idl-0.1.2\src\convert.rs:67:16
+   |
+67 |     pub struct IdlState {
+   |                ^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `anchor-lang-idl` (lib) generated 1 warning
+   Compiling anchor-attribute-event v0.31.1 ($TARE_HOME\target\adapters\anchor-attribute-event-0.31.1-0c577b23)
+   Compiling anchor-attribute-program v0.31.1 ($TARE_HOME\target\adapters\anchor-attribute-program-0.31.1-6b3079a2)
+   Compiling anchor-attribute-account v0.31.1 ($TARE_HOME\target\adapters\anchor-attribute-account-0.31.1-7985e533)
+   Compiling anchor-derive-serde v0.31.1 ($TARE_HOME\target\adapters\anchor-derive-serde-0.31.1-d0fe1488)
+   Compiling anchor-attribute-constant v0.31.1 ($TARE_HOME\target\adapters\anchor-attribute-constant-0.31.1-97b24e3c)
+   Compiling anchor-attribute-error v0.31.1 ($TARE_HOME\target\adapters\anchor-attribute-error-0.31.1-0259808b)
+   Compiling anchor-derive-accounts v0.31.1 ($TARE_HOME\target\adapters\anchor-derive-accounts-0.31.1-5530064e)
+   Compiling anchor-derive-space v0.31.1 ($TARE_HOME\target\adapters\anchor-derive-space-0.31.1-4c2c2e6d)
+   Compiling anchor-attribute-access-control v0.31.1 ($TARE_HOME\target\adapters\anchor-attribute-access-control-0.31.1-1f28a3ce)
+   Compiling anchor-lang v0.31.1 ($TARE_HOME\target\adapters\anchor-lang-0.31.1-bfa0d0da)
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\cpi.rs:212:16
+    |
+212 | #[cfg_attr(not(tare_sdk), inline(always))]
+    |                ^^^^^^^^
+    |
+    = help: expected names are: `docsrs`, `feature`, and `test` and 31 more
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+    = note: `#[warn(unexpected_cfgs)]` on by default
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\cpi.rs:213:12
+    |
+213 | #[cfg_attr(tare_sdk, inline(never))]
+    |            ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\cpi.rs:378:16
+    |
+378 | #[cfg_attr(not(tare_sdk), inline(always))]
+    |                ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+  --> src\event.rs:57:16
+   |
+57 | #[cfg_attr(not(tare_sdk), inline(always))]
+   |                ^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+  --> src\lib.rs:31:16
+   |
+31 | #[cfg_attr(not(tare_sdk), path="loader_raw.rs")]
+   |                ^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+  --> src\lib.rs:41:7
+   |
+41 | #[cfg(tare_sdk)]
+   |       ^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+  --> src\lib.rs:43:11
+   |
+43 | #[cfg(not(tare_sdk))]
+   |           ^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:399:16
+    |
+399 | #[cfg_attr(not(tare_sdk), repr(u64))]
+    |                ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:556:16
+    |
+556 |     #[cfg_attr(tare_sdk, inline(never))]
+    |                ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:557:20
+    |
+557 |     #[cfg_attr(not(tare_sdk), inline(always))]
+    |                    ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unused import: `crate::AccountInfo`
+ --> src\bpf_upgradeable_state.rs:2:5
+  |
+2 | use crate::AccountInfo;
+  |     ^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\cpi.rs:177:7
+    |
+177 | #[cfg(tare_sdk)]
+    |       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\cpi.rs:325:7
+    |
+325 | #[cfg(tare_sdk)]
+    |       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\cpi.rs:398:11
+    |
+398 | #[cfg(not(tare_sdk))]
+    |           ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\cpi.rs:106:11
+    |
+106 |     #[cfg(tare_sdk)]
+    |           ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\cpi.rs:110:15
+    |
+110 |     #[cfg(not(tare_sdk))]
+    |               ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\cpi.rs:292:15
+    |
+292 |     #[cfg(not(tare_sdk))]
+    |               ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unused import: `Error`
+ --> src\event.rs:1:20
+  |
+1 | use crate::error::{Error, ErrorCode};
+  |                    ^^^^^
+
+warning: unused import: `Key`
+ --> src\event.rs:2:41
+  |
+2 | use crate::{AccountCursor, AccountView, Key, Pubkey, Result};
+  |                                         ^^^
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+ --> src\input.rs:1:11
+  |
+1 | #[cfg(all(tare_sdk, not(tare_external_entry)))]
+  |           ^^^^^^^^
+  |
+  = help: consider using a Cargo feature instead
+  = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+           [lints.rust]
+           unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+  = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+ --> src\input.rs:1:25
+  |
+1 | #[cfg(all(tare_sdk, not(tare_external_entry)))]
+  |                         ^^^^^^^^^^^^^^^^^^^
+  |
+  = help: consider using a Cargo feature instead
+  = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+           [lints.rust]
+           unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+  = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+ --> src\input.rs:3:11
+  |
+3 | #[cfg(all(tare_sdk, not(tare_external_entry)))]
+  |           ^^^^^^^^
+  |
+  = help: consider using a Cargo feature instead
+  = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+           [lints.rust]
+           unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+  = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+ --> src\input.rs:3:25
+  |
+3 | #[cfg(all(tare_sdk, not(tare_external_entry)))]
+  |                         ^^^^^^^^^^^^^^^^^^^
+  |
+  = help: consider using a Cargo feature instead
+  = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+           [lints.rust]
+           unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+  = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+ --> src\input.rs:5:11
+  |
+5 | #[cfg(all(tare_sdk, tare_external_entry))]
+  |           ^^^^^^^^
+  |
+  = help: consider using a Cargo feature instead
+  = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+           [lints.rust]
+           unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+  = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+ --> src\input.rs:5:21
+  |
+5 | #[cfg(all(tare_sdk, tare_external_entry))]
+  |                     ^^^^^^^^^^^^^^^^^^^
+  |
+  = help: consider using a Cargo feature instead
+  = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+           [lints.rust]
+           unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+  = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+ --> src\input.rs:7:11
+  |
+7 | #[cfg(all(tare_sdk, tare_external_entry))]
+  |           ^^^^^^^^
+  |
+  = help: consider using a Cargo feature instead
+  = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+           [lints.rust]
+           unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+  = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+ --> src\input.rs:7:21
+  |
+7 | #[cfg(all(tare_sdk, tare_external_entry))]
+  |                     ^^^^^^^^^^^^^^^^^^^
+  |
+  = help: consider using a Cargo feature instead
+  = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+           [lints.rust]
+           unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+  = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+ --> src\input.rs:9:11
+  |
+9 | #[cfg(not(tare_sdk))]
+  |           ^^^^^^^^
+  |
+  = help: consider using a Cargo feature instead
+  = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+           [lints.rust]
+           unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+  = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+  --> src\input.rs:11:11
+   |
+11 | #[cfg(not(tare_sdk))]
+   |           ^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+  --> src\interface.rs:38:31
+   |
+38 |                 #[cfg(not(all(tare_sdk,tare_external_entry)))]
+   |                               ^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+  --> src\interface.rs:38:40
+   |
+38 |                 #[cfg(not(all(tare_sdk,tare_external_entry)))]
+   |                                        ^^^^^^^^^^^^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+  --> src\interface.rs:40:31
+   |
+40 |                 #[cfg(not(all(tare_sdk,tare_external_entry)))]
+   |                               ^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+  --> src\interface.rs:40:40
+   |
+40 |                 #[cfg(not(all(tare_sdk,tare_external_entry)))]
+   |                                        ^^^^^^^^^^^^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+  --> src\interface.rs:56:23
+   |
+56 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+   |                       ^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+  --> src\interface.rs:56:32
+   |
+56 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+   |                                ^^^^^^^^^^^^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+  --> src\interface.rs:98:23
+   |
+98 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+   |                       ^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+  --> src\interface.rs:98:32
+   |
+98 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+   |                                ^^^^^^^^^^^^^^^^^^^
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\interface.rs:104:23
+    |
+104 |             #[cfg(not(tare_sdk))]
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\interface.rs:125:27
+    |
+125 |                 #[cfg(not(tare_sdk))]
+    |                           ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:402:15
+    |
+402 |     #[cfg(not(tare_sdk))]
+    |               ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:409:19
+    |
+409 |     #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                   ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:409:28
+    |
+409 |     #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                            ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:411:19
+    |
+411 |     #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                   ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:411:28
+    |
+411 |     #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                            ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:434:19
+    |
+434 |         #[cfg(not(tare_sdk))]
+    |                   ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:440:35
+    |
+440 |                     #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                                   ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:440:44
+    |
+440 |                     #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                                            ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:442:35
+    |
+442 |                     #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                                   ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:442:44
+    |
+442 |                     #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                                            ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:458:27
+    |
+458 |             #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                           ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:458:36
+    |
+458 |             #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                                    ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:460:27
+    |
+460 |             #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                           ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:460:36
+    |
+460 |             #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                                    ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:484:23
+    |
+484 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:484:32
+    |
+484 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                                ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:494:23
+    |
+494 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:494:32
+    |
+494 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                                ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:491:23
+    |
+491 |             #[cfg(not(tare_sdk))]
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:500:23
+    |
+500 |             #[cfg(not(tare_sdk))]
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:511:23
+    |
+511 |             #[cfg(not(tare_sdk))]
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:519:23
+    |
+519 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:519:32
+    |
+519 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                                ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:523:23
+    |
+523 |             #[cfg(not(tare_sdk))]
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:539:23
+    |
+539 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:539:32
+    |
+539 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                                ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:546:19
+    |
+546 |         #[cfg(all(tare_sdk,tare_external_entry))]{true}
+    |                   ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:546:28
+    |
+546 |         #[cfg(all(tare_sdk,tare_external_entry))]{true}
+    |                            ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:547:23
+    |
+547 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]{self.dirty.get()}
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:547:32
+    |
+547 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]{self.dirty.get()}
+    |                                ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:561:19
+    |
+561 |         #[cfg(not(tare_sdk))]
+    |                   ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:569:19
+    |
+569 |         #[cfg(not(tare_sdk))]
+    |                   ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:581:27
+    |
+581 |                 #[cfg(not(tare_sdk))]
+    |                           ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:600:23
+    |
+600 |             #[cfg(not(tare_sdk))]
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+   --> src\lib.rs:859:23
+    |
+859 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                       ^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_sdk)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_sdk)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: unexpected `cfg` condition name: `tare_external_entry`
+   --> src\lib.rs:859:32
+    |
+859 |         #[cfg(not(all(tare_sdk,tare_external_entry)))]
+    |                                ^^^^^^^^^^^^^^^^^^^
+    |
+    = help: consider using a Cargo feature instead
+    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+             [lints.rust]
+             unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tare_external_entry)'] }
+    = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(tare_external_entry)");` to the top of the `build.rs`
+    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+
+warning: use of deprecated module `solana_program::bpf_loader_upgradeable`: Use solana-loader-v3-interface instead
+ --> src\bpf_upgradeable_state.rs:4:29
+  |
+4 | use crate::solana_program::{bpf_loader_upgradeable::{self,UpgradeableLoaderState},program_error::ProgramError};
+  |                             ^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(deprecated)]` on by default
+
+warning: method `lamports_are_borrowed` is never used
+   --> src\input\raw.rs:197:19
+    |
+120 | impl<'info> AccountInfo<'info> {
+    | ------------------------------ method in this implementation
+...
+197 |     pub(crate) fn lamports_are_borrowed(&self) -> bool {
+    |                   ^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `anchor-lang` (lib) generated 77 warnings (run `cargo fix --lib -p anchor-lang` to apply 3 suggestions)
+   Compiling lazy-account v0.1.0 (.\programs\lazy-account)
+error: Tare does not implement LazyAccount
+  --> programs\lazy-account\src\lib.rs:52:21
+   |
+52 |     pub my_account: LazyAccount<'info, MyAccount>,
+   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: Tare does not implement LazyAccount
+  --> programs\lazy-account\src\lib.rs:75:21
+   |
+75 |     pub my_account: LazyAccount<'info, MyAccount>,
+   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: Tare does not implement LazyAccount
+  --> programs\lazy-account\src\lib.rs:90:21
+   |
+90 |     pub my_account: LazyAccount<'info, MyAccount>,
+   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unexpected `cfg` condition value: `custom-heap`
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, and `no-idl`
+   = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `anchor_lang::solana_program::custom_heap_default` crate for guidance on how handle this unexpected cfg
+   = help: the macro `anchor_lang::solana_program::custom_heap_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: `#[warn(unexpected_cfgs)]` on by default
+   = note: this warning originates in the macro `anchor_lang::solana_program::custom_heap_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `custom-panic`
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, and `no-idl`
+   = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `anchor_lang::solana_program::custom_panic_default` crate for guidance on how handle this unexpected cfg
+   = help: the macro `anchor_lang::solana_program::custom_panic_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the macro `anchor_lang::solana_program::custom_panic_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `no-log-ix-name`
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, and `no-idl`
+   = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+   = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition name: `tare_sdk`
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^
+   |
+   = help: expected names are: `docsrs`, `feature`, and `test` and 31 more
+   = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+   = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition name: `tare_rehearsal_defect`
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+   = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `Init<'_>: Bumps` is not satisfied
+  --> programs\lazy-account\src\lib.rs:16:22
+   |
+16 |     pub fn init(ctx: Context<Init>) -> Result<()> {
+   |                      ^^^^^^^^^^^^^ unsatisfied trait bound
+   |
+help: the trait `Bumps` is not implemented for `Init<'_>`
+  --> programs\lazy-account\src\lib.rs:42:1
+   |
+42 | pub struct Init<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+note: required by a bound in `anchor_lang::Context`
+  --> src\lib.rs:244:0
+
+error[E0277]: the trait bound `Read<'_>: Bumps` is not satisfied
+  --> programs\lazy-account\src\lib.rs:27:22
+   |
+27 |     pub fn read(ctx: Context<Read>) -> Result<()> {
+   |                      ^^^^^^^^^^^^^ unsatisfied trait bound
+   |
+help: the trait `Bumps` is not implemented for `Read<'_>`
+  --> programs\lazy-account\src\lib.rs:70:1
+   |
+70 | pub struct Read<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+note: required by a bound in `anchor_lang::Context`
+  --> src\lib.rs:244:0
+
+error[E0277]: the trait bound `Write<'_>: Bumps` is not satisfied
+  --> programs\lazy-account\src\lib.rs:34:23
+   |
+34 |     pub fn write(ctx: Context<Write>, new_authority: Pubkey) -> Result<()> {
+   |                       ^^^^^^^^^^^^^^ unsatisfied trait bound
+   |
+help: the trait `Bumps` is not implemented for `Write<'_>`
+  --> programs\lazy-account\src\lib.rs:82:1
+   |
+82 | pub struct Write<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+note: required by a bound in `anchor_lang::Context`
+  --> src\lib.rs:244:0
+
+error[E0277]: the trait bound `Init<'_>: Bumps` is not satisfied in `anchor_lang::Context<'_, '_, '_, '_, Init<'_>>`
+  --> programs\lazy-account\src\lib.rs:16:22
+   |
+16 |     pub fn init(ctx: Context<Init>) -> Result<()> {
+   |                      ^^^^^^^^^^^^^ unsatisfied trait bound
+   |
+help: within `anchor_lang::Context<'_, '_, '_, '_, Init<'_>>`, the trait `Bumps` is not implemented for `Init<'_>`
+  --> programs\lazy-account\src\lib.rs:42:1
+   |
+42 | pub struct Init<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+note: required because it appears within the type `anchor_lang::Context<'_, '_, '_, '_, Init<'_>>`
+  --> src\lib.rs:244:11
+   = help: unsized fn params are gated as an unstable feature
+help: function arguments must have a statically known size, borrowed types always have a known size
+   |
+16 |     pub fn init(ctx: &Context<Init>) -> Result<()> {
+   |                      +
+
+error[E0277]: the trait bound `Read<'_>: Bumps` is not satisfied in `anchor_lang::Context<'_, '_, '_, '_, Read<'_>>`
+  --> programs\lazy-account\src\lib.rs:27:22
+   |
+27 |     pub fn read(ctx: Context<Read>) -> Result<()> {
+   |                      ^^^^^^^^^^^^^ unsatisfied trait bound
+   |
+help: within `anchor_lang::Context<'_, '_, '_, '_, Read<'_>>`, the trait `Bumps` is not implemented for `Read<'_>`
+  --> programs\lazy-account\src\lib.rs:70:1
+   |
+70 | pub struct Read<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+note: required because it appears within the type `anchor_lang::Context<'_, '_, '_, '_, Read<'_>>`
+  --> src\lib.rs:244:11
+   = help: unsized fn params are gated as an unstable feature
+help: function arguments must have a statically known size, borrowed types always have a known size
+   |
+27 |     pub fn read(ctx: &Context<Read>) -> Result<()> {
+   |                      +
+
+error[E0277]: the trait bound `Write<'_>: Bumps` is not satisfied in `anchor_lang::Context<'_, '_, '_, '_, Write<'_>>`
+  --> programs\lazy-account\src\lib.rs:34:23
+   |
+34 |     pub fn write(ctx: Context<Write>, new_authority: Pubkey) -> Result<()> {
+   |                       ^^^^^^^^^^^^^^ unsatisfied trait bound
+   |
+help: within `anchor_lang::Context<'_, '_, '_, '_, Write<'_>>`, the trait `Bumps` is not implemented for `Write<'_>`
+  --> programs\lazy-account\src\lib.rs:82:1
+   |
+82 | pub struct Write<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+note: required because it appears within the type `anchor_lang::Context<'_, '_, '_, '_, Write<'_>>`
+  --> src\lib.rs:244:11
+   = help: unsized fn params are gated as an unstable feature
+help: function arguments must have a statically known size, borrowed types always have a known size
+   |
+34 |     pub fn write(ctx: &Context<Write>, new_authority: Pubkey) -> Result<()> {
+   |                       +
+
+error[E0277]: the trait bound `Init<'_>: Bumps` is not satisfied
+  --> programs\lazy-account\src\lib.rs:16:30
+   |
+16 |     pub fn init(ctx: Context<Init>) -> Result<()> {
+   |                              ^^^^ unsatisfied trait bound
+   |
+help: the trait `Bumps` is not implemented for `Init<'_>`
+  --> programs\lazy-account\src\lib.rs:42:1
+   |
+42 | pub struct Init<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+
+error[E0277]: the trait bound `Init<'_>: Bumps` is not satisfied
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^ unsatisfied trait bound
+   |
+help: the trait `Bumps` is not implemented for `Init<'_>`
+  --> programs\lazy-account\src\lib.rs:42:1
+   |
+42 | pub struct Init<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+   = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `Init<'_>: anchor_lang::Accounts<'_>` is not satisfied
+  --> programs\lazy-account\src\lib.rs:16:30
+   |
+16 |     pub fn init(ctx: Context<Init>) -> Result<()> {
+   |                              ^^^^ unsatisfied trait bound
+   |
+help: the trait `anchor_lang::Accounts<'_>` is not implemented for `Init<'_>`
+  --> programs\lazy-account\src\lib.rs:42:1
+   |
+42 | pub struct Init<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `anchor_lang::Accounts<'info>`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+note: required by a bound in `__tare_init::{closure#0}::__load`
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^ required by this bound in `__load`
+   = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `Init<'_>: anchor_lang::Accounts<'_>` is not satisfied
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^ unsatisfied trait bound
+   |
+help: the trait `anchor_lang::Accounts<'_>` is not implemented for `Init<'_>`
+  --> programs\lazy-account\src\lib.rs:42:1
+   |
+42 | pub struct Init<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `anchor_lang::Accounts<'info>`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+   = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `Read<'_>: Bumps` is not satisfied
+  --> programs\lazy-account\src\lib.rs:27:30
+   |
+27 |     pub fn read(ctx: Context<Read>) -> Result<()> {
+   |                              ^^^^ unsatisfied trait bound
+   |
+help: the trait `Bumps` is not implemented for `Read<'_>`
+  --> programs\lazy-account\src\lib.rs:70:1
+   |
+70 | pub struct Read<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+
+error[E0277]: the trait bound `Read<'_>: Bumps` is not satisfied
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^ unsatisfied trait bound
+   |
+help: the trait `Bumps` is not implemented for `Read<'_>`
+  --> programs\lazy-account\src\lib.rs:70:1
+   |
+70 | pub struct Read<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+   = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `Read<'_>: anchor_lang::Accounts<'_>` is not satisfied
+  --> programs\lazy-account\src\lib.rs:27:30
+   |
+27 |     pub fn read(ctx: Context<Read>) -> Result<()> {
+   |                              ^^^^ unsatisfied trait bound
+   |
+help: the trait `anchor_lang::Accounts<'_>` is not implemented for `Read<'_>`
+  --> programs\lazy-account\src\lib.rs:70:1
+   |
+70 | pub struct Read<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `anchor_lang::Accounts<'info>`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+note: required by a bound in `__tare_read::{closure#0}::__load`
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^ required by this bound in `__load`
+   = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `Read<'_>: anchor_lang::Accounts<'_>` is not satisfied
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^ unsatisfied trait bound
+   |
+help: the trait `anchor_lang::Accounts<'_>` is not implemented for `Read<'_>`
+  --> programs\lazy-account\src\lib.rs:70:1
+   |
+70 | pub struct Read<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `anchor_lang::Accounts<'info>`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+   = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `Write<'_>: Bumps` is not satisfied
+  --> programs\lazy-account\src\lib.rs:34:31
+   |
+34 |     pub fn write(ctx: Context<Write>, new_authority: Pubkey) -> Result<()> {
+   |                               ^^^^^ unsatisfied trait bound
+   |
+help: the trait `Bumps` is not implemented for `Write<'_>`
+  --> programs\lazy-account\src\lib.rs:82:1
+   |
+82 | pub struct Write<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+
+error[E0277]: the trait bound `Write<'_>: Bumps` is not satisfied
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^ unsatisfied trait bound
+   |
+help: the trait `Bumps` is not implemented for `Write<'_>`
+  --> programs\lazy-account\src\lib.rs:82:1
+   |
+82 | pub struct Write<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `Bumps`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+   = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `Write<'_>: anchor_lang::Accounts<'_>` is not satisfied
+  --> programs\lazy-account\src\lib.rs:34:31
+   |
+34 |     pub fn write(ctx: Context<Write>, new_authority: Pubkey) -> Result<()> {
+   |                               ^^^^^ unsatisfied trait bound
+   |
+help: the trait `anchor_lang::Accounts<'_>` is not implemented for `Write<'_>`
+  --> programs\lazy-account\src\lib.rs:82:1
+   |
+82 | pub struct Write<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `anchor_lang::Accounts<'info>`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+note: required by a bound in `__tare_write::{closure#0}::__load`
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^ required by this bound in `__load`
+   = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `Write<'_>: anchor_lang::Accounts<'_>` is not satisfied
+  --> programs\lazy-account\src\lib.rs:12:1
+   |
+12 | #[program]
+   | ^^^^^^^^^^ unsatisfied trait bound
+   |
+help: the trait `anchor_lang::Accounts<'_>` is not implemented for `Write<'_>`
+  --> programs\lazy-account\src\lib.rs:82:1
+   |
+82 | pub struct Write<'info> {
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+   = help: the following other types implement trait `anchor_lang::Accounts<'info>`:
+             CreateNonceAccount<'info>
+             CreateNonceAccountWithSeed<'info>
+             anchor_lang::system_program::AdvanceNonceAccount<'info>
+             anchor_lang::system_program::Allocate<'info>
+             anchor_lang::system_program::AllocateWithSeed<'info>
+             anchor_lang::system_program::Assign<'info>
+             anchor_lang::system_program::AssignWithSeed<'info>
+             anchor_lang::system_program::AuthorizeNonceAccount<'info>
+           and 5 others
+   = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+For more information about this error, try `rustc --explain E0277`.
+warning: `lazy-account` (lib) generated 5 warnings
+error: could not compile `lazy-account` (lib) due to 21 previous errors; 5 warnings emitted
+error: cargo-build-sbf exited with exit code: 1
+
+[exit 1]

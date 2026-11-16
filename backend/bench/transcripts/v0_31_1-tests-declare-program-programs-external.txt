@@ -1,0 +1,38 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/declare-program
+Recorded: 2026-11-15T03:01:35.388Z
+$ tare build --host --manifest-path programs\external\Cargo.toml
+building external (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 150024 -> 138552 bytes
+external: stock 192632 bytes -> tare 138552 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\external\Cargo.toml
+external                                     gross       tare        net     inputs
+init                                          7453       2634       4819         24
+test_compilation_data_as_parameter_name        563        327        236         32
+test_compilation_defined_type_param            539        329        210         32
+test_compilation_no_accounts                   202         64        138         12
+test_compilation_return_type                   662        332        330         32
+update                                        4059        606       3453         32
+update_composite                              4072        528       3544         32
+update_non_instruction_composite              4365        712       3653         32
+total                                        21915       5532      16383        228
+proof: matched (1212 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\external\Cargo.toml
+external                                     gross       tare        net     inputs
+init                                          7453       2634       4819         24
+test_compilation_data_as_parameter_name        563        327        236         32
+test_compilation_defined_type_param            539        329        210         32
+test_compilation_no_accounts                   202         64        138         12
+test_compilation_return_type                   662        332        330         32
+update                                        4059        606       3453         32
+update_composite                              4072        528       3544         32
+update_non_instruction_composite              4365        712       3653         32
+total                                        21915       5532      16383        228
+proof: matched (1212 transactions)
+
+[exit 0]

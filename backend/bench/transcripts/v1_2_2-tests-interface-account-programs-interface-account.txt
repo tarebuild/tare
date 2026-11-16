@@ -1,0 +1,20 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/interface-account
+Recorded: 2026-11-15T02:51:58.600Z
+$ tare build --host --manifest-path programs\interface-account\Cargo.toml
+building interface-account (Anchor 1.2.2)
+bytecode: 1 instructions rewritten; 43672 -> 39992 bytes
+interface-account: stock 93056 bytes -> tare 39992 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\interface-account\Cargo.toml
+error: IDL type ExpectedAccount has no definition
+
+[exit 1]
+Runner error: Error: error: IDL type ExpectedAccount has no definition
+    at runProgram (file:///backend/bench/run.mjs:195:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async worker (file:///backend/bench/run.mjs:232:7)
+    at async Promise.all (index 2)
+    at async file:///backend/bench/run.mjs:236:1

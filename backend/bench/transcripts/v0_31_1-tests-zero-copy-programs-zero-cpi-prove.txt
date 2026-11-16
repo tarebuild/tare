@@ -1,0 +1,7 @@
+$ tare prove --host --manifest-path programs\zero-cpi\Cargo.toml
+zero_cpi       gross       tare        net     inputs
+check_cpi       9926       2065       7861         32
+total           9926       2065       7861         32
+proof: matched (560 transactions)
+
+[exit 0]

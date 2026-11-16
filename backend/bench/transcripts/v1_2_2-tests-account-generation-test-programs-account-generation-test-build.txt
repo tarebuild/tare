@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\account-generation-test\Cargo.toml
+building account-generation-test (Anchor 1.2.2)
+bytecode: 3 instructions rewritten; 58760 -> 54264 bytes
+account-generation-test: stock 116576 bytes -> tare 54264 bytes
+
+[exit 0]

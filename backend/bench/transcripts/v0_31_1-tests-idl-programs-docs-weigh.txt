@@ -1,0 +1,7 @@
+$ tare weigh --host --manifest-path programs\docs\Cargo.toml
+docs                    gross       tare        net     inputs
+test_idl_doc_parse        576        307        269         32
+total                     576        307        269         32
+proof: matched (504 transactions)
+
+[exit 0]

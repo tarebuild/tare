@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\sysvars\Cargo.toml
+building sysvars (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 48024 -> 44280 bytes
+sysvars: stock 60856 bytes -> tare 44280 bytes
+
+[exit 0]

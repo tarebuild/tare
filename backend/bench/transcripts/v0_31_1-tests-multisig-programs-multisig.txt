@@ -1,0 +1,22 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/multisig
+Recorded: 2026-11-15T03:07:10.241Z
+$ tare build --host --manifest-path programs\multisig\Cargo.toml
+building multisig (Anchor 0.31.1)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 1 instructions rewritten; 183152 -> 170432 bytes
+multisig: stock 212080 bytes -> tare 170432 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\multisig\Cargo.toml
+error: generated account resolver cannot sign sequence 'seed-1413567045-0' input 'change_threshold:short-instruction' (instructions: change_threshold; unresolved signer accounts: 84DbJDDHyFw9q8aRY7BP65k6oFB22Jr2xxcjvk1ReeYw): not enough signers
+
+[exit 1]
+Runner error: Error: error: generated account resolver cannot sign sequence 'seed-1413567045-0' input 'change_threshold:short-instruction' (instructions: change_threshold; unresolved signer accounts: 84DbJDDHyFw9q8aRY7BP65k6oFB22Jr2xxcjvk1ReeYw): not enough signers
+    at runProgram (file:///backend/bench/run.mjs:195:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async worker (file:///backend/bench/run.mjs:232:7)
+    at async Promise.all (index 1)
+    at async file:///backend/bench/run.mjs:236:1

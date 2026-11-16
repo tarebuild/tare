@@ -1,0 +1,707 @@
+$ tare build --host --manifest-path programs\new-idl\Cargo.toml
+building new-idl (Anchor 0.31.1)
+bytecode: 8 instructions rewritten; 267880 -> 249768 bytes
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling external v0.1.0 (.\programs\external)
+   Compiling new-idl v0.1.0 (.\programs\new-idl)
+error[E0599]: no associated function or constant named `get_full_path` found for type `u8` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `u8`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for array `[u8; 8]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u8; 8]`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for struct `Vec<String>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<String>`
+  |
+note: if you're trying to build a new `Vec<String>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for struct `Vec<Option<__Pubkey>>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<Option<__Pubkey>>`
+  |
+note: if you're trying to build a new `Vec<Option<__Pubkey>>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for array `[u32; 4]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u32; 4]`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for struct `Vec<[bool; 2]>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<[bool; 2]>`
+  |
+note: if you're trying to build a new `Vec<[bool; 2]>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for type `i64` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `i64`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for type `u8` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `u8`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for type `u8` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `u8`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for array `[u8; 8]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u8; 8]`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for array `[u8; 8]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u8; 8]`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for struct `Vec<String>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<String>`
+  |
+note: if you're trying to build a new `Vec<String>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for struct `Vec<String>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<String>`
+  |
+note: if you're trying to build a new `Vec<String>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for struct `Vec<Option<__Pubkey>>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<Option<__Pubkey>>`
+  |
+note: if you're trying to build a new `Vec<Option<__Pubkey>>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for struct `Vec<Option<__Pubkey>>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<Option<__Pubkey>>`
+  |
+note: if you're trying to build a new `Vec<Option<__Pubkey>>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for array `[u32; 4]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u32; 4]`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for array `[u32; 4]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u32; 4]`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for struct `Vec<[bool; 2]>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<[bool; 2]>`
+  |
+note: if you're trying to build a new `Vec<[bool; 2]>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for struct `Vec<[bool; 2]>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<[bool; 2]>`
+  |
+note: if you're trying to build a new `Vec<[bool; 2]>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for type `i64` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `i64`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for type `i64` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `i64`
+  |
+  = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for type `u8` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `u8`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for type `u8` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `u8`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for type `u8` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `u8`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for array `[u8; 8]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u8; 8]`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for array `[u8; 8]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u8; 8]`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for array `[u8; 8]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u8; 8]`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for struct `Vec<String>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<String>`
+  |
+note: if you're trying to build a new `Vec<String>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for struct `Vec<String>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<String>`
+  |
+note: if you're trying to build a new `Vec<String>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for struct `Vec<String>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<String>`
+  |
+note: if you're trying to build a new `Vec<String>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for struct `Vec<Option<__Pubkey>>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<Option<__Pubkey>>`
+  |
+note: if you're trying to build a new `Vec<Option<__Pubkey>>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for struct `Vec<Option<__Pubkey>>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<Option<__Pubkey>>`
+  |
+note: if you're trying to build a new `Vec<Option<__Pubkey>>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for struct `Vec<Option<__Pubkey>>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<Option<__Pubkey>>`
+  |
+note: if you're trying to build a new `Vec<Option<__Pubkey>>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for array `[u32; 4]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u32; 4]`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for array `[u32; 4]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u32; 4]`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for array `[u32; 4]` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `[u32; 4]`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for struct `Vec<[bool; 2]>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<[bool; 2]>`
+  |
+note: if you're trying to build a new `Vec<[bool; 2]>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for struct `Vec<[bool; 2]>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<[bool; 2]>`
+  |
+note: if you're trying to build a new `Vec<[bool; 2]>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for struct `Vec<[bool; 2]>` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `Vec<[bool; 2]>`
+  |
+note: if you're trying to build a new `Vec<[bool; 2]>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+ --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for type `i64` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `i64`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for type `i64` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `i64`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for type `i64` in the current scope
+ --> programs\new-idl\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^ associated function or constant not found in `i64`
+  |
+  = note: this error originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for type `u8` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `u8`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for array `[u8; 8]` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `[u8; 8]`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for struct `Vec<String>` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `Vec<String>`
+    |
+note: if you're trying to build a new `Vec<String>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+   --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for struct `Vec<Option<__Pubkey>>` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `Vec<Option<__Pubkey>>`
+    |
+note: if you're trying to build a new `Vec<Option<__Pubkey>>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+   --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for array `[u32; 4]` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `[u32; 4]`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for struct `Vec<[bool; 2]>` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `Vec<[bool; 2]>`
+    |
+note: if you're trying to build a new `Vec<[bool; 2]>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+   --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `get_full_path` found for type `i64` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `i64`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for type `u8` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `u8`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for type `u8` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `u8`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for array `[u8; 8]` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `[u8; 8]`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for array `[u8; 8]` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `[u8; 8]`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for struct `Vec<String>` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `Vec<String>`
+    |
+note: if you're trying to build a new `Vec<String>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+   --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for struct `Vec<String>` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `Vec<String>`
+    |
+note: if you're trying to build a new `Vec<String>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+   --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for struct `Vec<Option<__Pubkey>>` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `Vec<Option<__Pubkey>>`
+    |
+note: if you're trying to build a new `Vec<Option<__Pubkey>>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+   --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for struct `Vec<Option<__Pubkey>>` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `Vec<Option<__Pubkey>>`
+    |
+note: if you're trying to build a new `Vec<Option<__Pubkey>>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+   --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for array `[u32; 4]` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `[u32; 4]`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for array `[u32; 4]` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `[u32; 4]`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for struct `Vec<[bool; 2]>` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `Vec<[bool; 2]>`
+    |
+note: if you're trying to build a new `Vec<[bool; 2]>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+   --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for struct `Vec<[bool; 2]>` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `Vec<[bool; 2]>`
+    |
+note: if you're trying to build a new `Vec<[bool; 2]>` consider using one of the following associated functions:
+      Vec::<T>::new
+      Vec::<T>::with_capacity
+      Vec::<T>::try_with_capacity
+      Vec::<T>::from_raw_parts
+      and 7 others
+   --> /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\alloc\src\vec\mod.rs:461:4
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `create_type` found for type `i64` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `i64`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0599]: no associated function or constant named `insert_types` found for type `i64` in the current scope
+   --> programs\new-idl\src\lib.rs:267:1
+    |
+267 | #[account]
+    | ^^^^^^^^^^ associated function or constant not found in `i64`
+    |
+    = note: this error originates in the derive macro `AnchorSerialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `new-idl` (lib test) due to 77 previous errors
+error: stock IDL build failed without a package idl-build alias; enable ANCHOR_LOG for macro output
+error: build stock IDL: $TARE_HOME\target\release\tare.exe exited with exit code: 1
+
+[exit 1]

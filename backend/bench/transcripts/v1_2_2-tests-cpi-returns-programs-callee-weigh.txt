@@ -1,0 +1,13 @@
+$ tare weigh --host --manifest-path programs\callee\Cargo.toml
+callee                       gross       tare        net     inputs
+initialize                    4376       2483       1893         24
+no_accounts                    192         55        137         12
+return_struct                  725        338        387         32
+return_u64                     727        338        389         32
+return_u64_from_account        728        314        414         32
+return_u64_spoofed             725        338        387         32
+return_vec                     748        325        423         32
+total                         8221       4191       4030        196
+proof: matched (628 transactions)
+
+[exit 0]

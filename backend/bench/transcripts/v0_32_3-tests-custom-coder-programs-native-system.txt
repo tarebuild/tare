@@ -1,0 +1,46 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/custom-coder
+Recorded: 2026-11-15T03:02:58.930Z
+$ tare build --host --manifest-path programs\native-system\Cargo.toml
+building native-system (Anchor 0.32.3)
+bytecode: 0 instructions rewritten; 136064 -> 124832 bytes
+native-system: stock 195512 bytes -> tare 124832 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\native-system\Cargo.toml
+native_system                 gross       tare        net     inputs
+advance_nonce_account          1182        852        330         32
+allocate                        540        328        212         32
+allocate_with_seed             1140        606        534         32
+assign                          538        328        210         32
+assign_with_seed               1141        605        536         32
+authorize_nonce_account         867        598        269         32
+create_account                  814        536        278         40
+create_account_with_seed       1412        812        600         40
+initialize_nonce_account       1183        808        375         32
+transfer                        856        582        274         40
+transfer_with_seed             1465        869        596         40
+withdraw_nonce_account         1803       1119        684         40
+total                         12941       8043       4898        424
+proof: matched (1568 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\native-system\Cargo.toml
+native_system                 gross       tare        net     inputs
+advance_nonce_account          1182        852        330         32
+allocate                        540        328        212         32
+allocate_with_seed             1140        606        534         32
+assign                          538        328        210         32
+assign_with_seed               1141        605        536         32
+authorize_nonce_account         867        598        269         32
+create_account                  814        536        278         40
+create_account_with_seed       1412        812        600         40
+initialize_nonce_account       1183        808        375         32
+transfer                        856        582        274         40
+transfer_with_seed             1465        869        596         40
+withdraw_nonce_account         1803       1119        684         40
+total                         12941       8043       4898        424
+proof: matched (1568 transactions)
+
+[exit 0]

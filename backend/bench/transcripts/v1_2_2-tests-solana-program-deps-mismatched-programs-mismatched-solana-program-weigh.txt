@@ -1,0 +1,7 @@
+$ tare weigh --host --manifest-path programs\mismatched-solana-program\Cargo.toml
+mismatched_solana_program      gross       tare        net     inputs
+initialize                       185         57        128         12
+total                            185         57        128         12
+proof: matched (32 transactions)
+
+[exit 0]

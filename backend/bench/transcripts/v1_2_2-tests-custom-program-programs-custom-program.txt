@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/custom-program
+Recorded: 2026-11-15T02:53:10.036Z
+$ tare build --host --manifest-path programs\custom-program\Cargo.toml
+building custom-program (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 62088 -> 58008 bytes
+custom-program: stock 72472 bytes -> tare 58008 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\custom-program\Cargo.toml
+custom_program               gross       tare        net     inputs
+test_program_validation      21479        745      20734         32
+total                        21479        745      20734         32
+proof: matched (72 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\custom-program\Cargo.toml
+custom_program               gross       tare        net     inputs
+test_program_validation      21479        745      20734         32
+total                        21479        745      20734         32
+proof: matched (72 transactions)
+
+[exit 0]

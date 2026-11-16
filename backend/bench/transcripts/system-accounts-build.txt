@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\system-accounts\Cargo.toml
+building system-accounts (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 111656 -> 102584 bytes
+system-accounts: stock 163616 bytes -> tare 102584 bytes
+
+[exit 0]

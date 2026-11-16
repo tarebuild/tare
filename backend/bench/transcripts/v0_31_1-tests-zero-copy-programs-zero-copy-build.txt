@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\zero-copy\Cargo.toml
+building zero-copy (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 168584 -> 154328 bytes
+zero-copy: stock 207528 bytes -> tare 154328 bytes
+
+[exit 0]

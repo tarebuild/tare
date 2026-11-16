@@ -1,0 +1,7 @@
+$ tare weigh --host --manifest-path programs\malicious\Cargo.toml
+malicious              gross       tare        net     inputs
+spoof_return_data        666        357        309         32
+total                    666        357        309         32
+proof: matched (80 transactions)
+
+[exit 0]

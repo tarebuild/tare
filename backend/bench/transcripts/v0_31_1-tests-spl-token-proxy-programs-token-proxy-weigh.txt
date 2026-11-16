@@ -1,0 +1,14 @@
+$ tare weigh --host --manifest-path programs\token-proxy\Cargo.toml
+token_proxy                                gross       tare        net     inputs
+proxy_burn                                  5386        673       4713         32
+proxy_create_associated_token_account      23321       1324      21997         24
+proxy_create_mint                          12809       2441      10368         24
+proxy_create_token_account                 10759       2498       8261         24
+proxy_mint_to                               5300        675       4625         32
+proxy_optional_transfer                     5134        831       4303         56
+proxy_set_authority                         3965        870       3095          8
+proxy_transfer                              5231        458       4773         40
+total                                      71905       9770      62135        240
+proof: matched (1824 transactions)
+
+[exit 0]

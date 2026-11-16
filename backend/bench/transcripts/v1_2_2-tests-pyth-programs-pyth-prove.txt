@@ -1,0 +1,8 @@
+$ tare prove --host --manifest-path programs\pyth\Cargo.toml
+pyth            gross       tare        net     inputs
+initialize not measured (0 successful inputs)
+set_price  not measured (0 successful inputs)
+total               0          0          0          0
+proof: matched (168 transactions)
+
+[exit 0]

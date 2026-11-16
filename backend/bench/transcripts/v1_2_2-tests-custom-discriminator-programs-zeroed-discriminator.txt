@@ -1,0 +1,71 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/custom-discriminator
+Recorded: 2026-11-15T02:46:42.240Z
+$ tare build --host --manifest-path programs\zeroed-discriminator\Cargo.toml
+building zeroed-discriminator (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 37024 -> 33808 bytes
+[2026-11-15T02:47:01.725502400Z WARN  cargo_build_sbf] Package 'zeroed-discriminator' has two crate types defined: cdylib and lib. This setting precludes link-time optimizations (LTO). Use cdylib for programs to be deployed and rlib for packages to be imported by other programs as libraries.
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling zeroed-discriminator v0.1.0 (.\programs\zeroed-discriminator)
+warning: unexpected `cfg` condition value: `custom-heap`
+  --> programs\zeroed-discriminator\src\lib.rs:17:1
+   |
+17 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, and `no-log-ix-name`
+   = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `$crate::custom_heap_default` crate for guidance on how handle this unexpected cfg
+   = help: the macro `$crate::custom_heap_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: `#[warn(unexpected_cfgs)]` on by default
+   = note: this warning originates in the macro `$crate::custom_heap_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `custom-panic`
+  --> programs\zeroed-discriminator\src\lib.rs:17:1
+   |
+17 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, and `no-log-ix-name`
+   = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `$crate::custom_panic_default` crate for guidance on how handle this unexpected cfg
+   = help: the macro `$crate::custom_panic_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the macro `$crate::custom_panic_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+  --> programs\zeroed-discriminator\src\lib.rs:17:1
+   |
+17 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, and `no-log-ix-name`
+   = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+   = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0080]: evaluation panicked: all-zero or empty discriminators are not supported
+  --> programs\zeroed-discriminator\src\lib.rs:29:27
+   |
+29 | #[account(discriminator = zeroed_account_disc!())]
+   |                           ^^^^^^^^^^^^^^^^^^^^^^ evaluation of `<ZeroedAccount as anchor_lang::Discriminator>::DISCRIMINATOR` failed here
+
+note: erroneous constant encountered
+  --> programs\zeroed-discriminator\src\lib.rs:29:1
+   |
+29 | #[account(discriminator = zeroed_account_disc!())]
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: this note originates in the attribute macro `account` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+For more information about this error, try `rustc --explain E0080`.
+warning: `zeroed-discriminator` (lib) generated 3 warnings
+error: could not compile `zeroed-discriminator` (lib) due to 1 previous error; 3 warnings emitted
+error: cargo-build-sbf exited with exit code: 1
+
+[exit 1]

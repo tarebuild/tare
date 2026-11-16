@@ -1,0 +1,32 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/tictactoe
+Recorded: 2026-11-15T02:59:54.700Z
+$ tare build --host --manifest-path programs\tictactoe\Cargo.toml
+building tictactoe (Anchor 1.2.2)
+bytecode: 4 instructions rewritten; 91712 -> 85488 bytes
+tictactoe: stock 123816 bytes -> tare 85488 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\tictactoe\Cargo.toml
+tictactoe                 gross       tare        net     inputs
+initialize                 3970       2847       1123         32
+initialize_dashboard       2633       2055        578          8
+player_join                2132       1398        734         26
+player_move                2230       1318        912          4
+status                     1220        704        516         64
+total                     12185       8322       3863        134
+proof: matched (1240 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\tictactoe\Cargo.toml
+tictactoe                 gross       tare        net     inputs
+initialize                 3970       2847       1123         32
+initialize_dashboard       2633       2055        578          8
+player_join                2132       1398        734         26
+player_move                2230       1318        912          4
+status                     1220        704        516         64
+total                     12185       8322       3863        134
+proof: matched (1240 transactions)
+
+[exit 0]

@@ -1,0 +1,28 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/escrow
+Recorded: 2026-11-15T03:08:03.815Z
+$ tare build --host --manifest-path programs\escrow\Cargo.toml
+building escrow (Anchor 0.31.1)
+bytecode: 2 instructions rewritten; 191448 -> 178712 bytes
+escrow: stock 245312 bytes -> tare 178712 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\escrow\Cargo.toml
+escrow                 gross       tare        net     inputs
+cancel_escrow           7765       1136       6629          4
+exchange               15861       1730      14131          4
+initialize_escrow      11616       2959       8657         24
+total                  35242       5825      29417         32
+proof: matched (2192 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\escrow\Cargo.toml
+escrow                 gross       tare        net     inputs
+cancel_escrow           7765       1136       6629          4
+exchange               15861       1730      14131          4
+initialize_escrow      11616       2959       8657         24
+total                  35242       5825      29417         32
+proof: matched (2192 transactions)
+
+[exit 0]

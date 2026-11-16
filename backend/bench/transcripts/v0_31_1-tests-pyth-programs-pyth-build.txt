@@ -1,0 +1,8 @@
+$ tare build --host --manifest-path programs\pyth\Cargo.toml
+building pyth (Anchor 0.31.1)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 1 instructions rewritten; 118760 -> 108776 bytes
+pyth: stock 166552 bytes -> tare 108776 bytes
+
+[exit 0]

@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\token-wrapper\Cargo.toml
+building token-wrapper (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 177320 -> 167864 bytes
+token-wrapper: stock 236232 bytes -> tare 167864 bytes
+
+[exit 0]

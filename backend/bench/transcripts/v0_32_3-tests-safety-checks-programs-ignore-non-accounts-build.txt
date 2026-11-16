@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\ignore-non-accounts\Cargo.toml
+building ignore-non-accounts (Anchor 0.32.3)
+bytecode: 0 instructions rewritten; 110064 -> 101120 bytes
+ignore-non-accounts: stock 163104 bytes -> tare 101120 bytes
+
+[exit 0]

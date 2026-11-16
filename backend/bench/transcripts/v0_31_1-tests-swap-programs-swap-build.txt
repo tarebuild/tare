@@ -1,0 +1,20 @@
+$ tare build --host --manifest-path programs\swap\Cargo.toml
+building swap (Anchor 0.31.1)
+error: failed to select a version for `solana-instruction`.
+    ... required by package `solana-zk-sdk v2.2.1`
+    ... which satisfies dependency `solana-zk-sdk = "^2.2.0"` of package `spl-pod v0.5.1`
+    ... which satisfies dependency `spl-pod = "^0.5"` of package `anchor-spl v0.31.1 (backend\bench\corpus\anchor\spl)`
+    ... which satisfies path dependency `anchor-spl` of package `swap v0.1.0 (.\programs\swap)`
+versions that meet the requirements `=2.2.1` are: 2.2.1
+
+all possible versions conflict with previously selected packages
+
+  previously selected package `solana-instruction v2.3.3`
+    ... which satisfies dependency `solana-instruction = "^2.3.0"` of package `solana-program v2.3.0`
+    ... which satisfies dependency `solana-program = "^2"` of package `anchor-lang v0.31.1 (backend\bench\corpus\anchor\lang)`
+    ... which satisfies path dependency `anchor-lang` of package `swap v0.1.0 (.\programs\swap)`
+
+failed to select a version for `solana-instruction` which could resolve this conflict
+error: cargo exited with exit code: 101
+
+[exit 1]

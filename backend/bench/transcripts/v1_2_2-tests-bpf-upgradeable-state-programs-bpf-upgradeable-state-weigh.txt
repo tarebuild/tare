@@ -1,0 +1,4 @@
+$ tare weigh --host --manifest-path programs\bpf-upgradeable-state\Cargo.toml
+error: IDL type UpgradeableLoaderState has no definition
+
+[exit 1]

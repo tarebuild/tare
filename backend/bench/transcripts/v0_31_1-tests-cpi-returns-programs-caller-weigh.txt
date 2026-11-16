@@ -1,0 +1,12 @@
+$ tare weigh --host --manifest-path programs\caller\Cargo.toml
+caller                      gross       tare        net     inputs
+cpi_call_return_struct       3979       1283       2696         32
+cpi_call_return_u64          3979       1283       2696         32
+cpi_call_return_vec          4167       1310       2857         32
+return_struct                 326         63        263         12
+return_u64                    327         63        264         12
+return_vec                    355         46        309         12
+total                       13133       4048       9085        132
+proof: matched (776 transactions)
+
+[exit 0]

@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/anchor-cli-idl
+Recorded: 2026-11-15T02:49:41.999Z
+$ tare build --host --manifest-path programs\idl-commands-one\Cargo.toml
+building idl-commands-one (Anchor 0.32.3)
+bytecode: 0 instructions rewritten; 108344 -> 99512 bytes
+idl-commands-one: stock 161560 bytes -> tare 99512 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\idl-commands-one\Cargo.toml
+idl_commands_one      gross       tare        net     inputs
+initialize              197         65        132         12
+total                   197         65        132         12
+proof: matched (440 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\idl-commands-one\Cargo.toml
+idl_commands_one      gross       tare        net     inputs
+initialize              197         65        132         12
+total                   197         65        132         12
+proof: matched (440 transactions)
+
+[exit 0]

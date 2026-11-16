@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\callee\Cargo.toml
+building callee (Anchor 1.2.2)
+bytecode: 2 instructions rewritten; 69600 -> 64560 bytes
+callee: stock 122584 bytes -> tare 64560 bytes
+
+[exit 0]

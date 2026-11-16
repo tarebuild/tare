@@ -1,0 +1,7 @@
+$ tare prove --host --manifest-path programs\validator-clone\Cargo.toml
+validator_clone      gross       tare        net     inputs
+initialize             197         65        132         12
+total                  197         65        132         12
+proof: matched (440 transactions)
+
+[exit 0]

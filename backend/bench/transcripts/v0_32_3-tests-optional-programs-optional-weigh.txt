@@ -1,0 +1,10 @@
+$ tare weigh --host --manifest-path programs\optional\Cargo.toml
+optional        gross       tare        net     inputs
+close            1700       1116        584         28
+initialize      10562       4570       5992         60
+realloc          4364       1274       3090         48
+update           3232        885       2347         40
+total           19858       7845      12013        176
+proof: matched (3356 transactions)
+
+[exit 0]

@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\allow-missing-optionals\Cargo.toml
+building allow-missing-optionals (Anchor 0.32.3)
+bytecode: 2 instructions rewritten; 131400 -> 121192 bytes
+allow-missing-optionals: stock 178296 bytes -> tare 121192 bytes
+
+[exit 0]

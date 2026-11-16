@@ -1,0 +1,4 @@
+$ tare weigh --host --manifest-path programs\pda-derivation\Cargo.toml
+error: generated corpus does not yet resolve account-data PDA seed base.base_data
+
+[exit 1]

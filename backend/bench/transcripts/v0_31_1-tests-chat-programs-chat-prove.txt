@@ -1,0 +1,9 @@
+$ tare prove --host --manifest-path programs\chat\Cargo.toml
+chat                  gross       tare        net     inputs
+create_chat_room       1723        877        846         16
+create_user            6951       2616       4335         24
+send_message           3691        759       2932         32
+total                 12365       4252       8113         72
+proof: matched (828 transactions)
+
+[exit 0]

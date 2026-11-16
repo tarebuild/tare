@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/safety-checks
+Recorded: 2026-11-15T02:43:26.772Z
+$ tare build --host --manifest-path programs\account-info\Cargo.toml
+building account-info (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 38664 -> 35352 bytes
+account-info: stock 56128 bytes -> tare 35352 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\account-info\Cargo.toml
+account_info      gross       tare        net     inputs
+initialize          581        383        198         32
+total               581        383        198         32
+proof: matched (72 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\account-info\Cargo.toml
+account_info      gross       tare        net     inputs
+initialize          581        383        198         32
+total               581        383        198         32
+proof: matched (72 transactions)
+
+[exit 0]

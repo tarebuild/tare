@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\duplicate-mutable-accounts\Cargo.toml
+building duplicate-mutable-accounts (Anchor 1.2.2)
+bytecode: 4 instructions rewritten; 169944 -> 159704 bytes
+duplicate-mutable-accounts: stock 182288 bytes -> tare 159704 bytes
+
+[exit 0]

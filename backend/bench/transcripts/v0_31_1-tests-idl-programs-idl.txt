@@ -1,0 +1,30 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/idl
+Recorded: 2026-11-15T03:06:04.505Z
+$ tare build --host --manifest-path programs\idl\Cargo.toml
+building idl (Anchor 0.31.1)
+bytecode: 5 instructions rewritten; 236176 -> 221344 bytes
+idl: stock 255656 bytes -> tare 221344 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\idl\Cargo.toml
+idl                          gross       tare        net     inputs
+cause_error             not measured (0 successful inputs)
+initialize                   13163       3993       9170         24
+initialize_with_values       12700       3613       9087         16
+initialize_with_values2       4798       2590       2208         24
+total                        30661      10196      20465         64
+proof: matched (1440 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\idl\Cargo.toml
+idl                          gross       tare        net     inputs
+cause_error             not measured (0 successful inputs)
+initialize                   13163       3993       9170         24
+initialize_with_values       12700       3613       9087         16
+initialize_with_values2       4798       2590       2208         24
+total                        30661      10196      20465         64
+proof: matched (1440 transactions)
+
+[exit 0]

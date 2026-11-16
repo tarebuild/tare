@@ -1,0 +1,8 @@
+$ tare prove --host --manifest-path programs\test-instruction-validation\Cargo.toml
+test_instruction_validation      gross       tare        net     inputs
+missing_instruction_attr          1075        347        728         32
+no_params                          649        330        319         32
+total                             1724        677       1047         64
+proof: matched (168 transactions)
+
+[exit 0]

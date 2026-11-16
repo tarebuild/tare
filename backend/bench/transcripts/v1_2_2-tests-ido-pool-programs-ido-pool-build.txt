@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\ido-pool\Cargo.toml
+building ido-pool (Anchor 1.2.2)
+bytecode: 2 instructions rewritten; 324752 -> 309472 bytes
+ido-pool: stock 354104 bytes -> tare 309472 bytes
+
+[exit 0]

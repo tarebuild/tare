@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\custom-discriminator\Cargo.toml
+building custom-discriminator (Anchor 0.31.1)
+bytecode: 2 instructions rewritten; 134712 -> 124232 bytes
+custom-discriminator: stock 182600 bytes -> tare 124232 bytes
+
+[exit 0]

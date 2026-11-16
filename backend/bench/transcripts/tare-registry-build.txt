@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\tare-registry\Cargo.toml
+building tare-registry (Anchor 1.2.2)
+bytecode: 10 instructions rewritten; 297088 -> 278960 bytes
+tare-registry: stock 281992 bytes -> tare 278960 bytes
+
+[exit 0]

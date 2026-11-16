@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\malicious\Cargo.toml
+building malicious (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 39056 -> 35696 bytes
+malicious: stock 56016 bytes -> tare 35696 bytes
+
+[exit 0]

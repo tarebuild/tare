@@ -1,0 +1,71 @@
+$ tare weigh --host --manifest-path programs\whirlpool\Cargo.toml --features mainnet --replay target/tare/production-replay.json
+whirlpool                                     gross       tare        net     inputs
+close_bundled_position                   not measured (0 successful inputs)
+close_position                                 8504        124       8380          4
+close_position_with_token_extensions     not measured (0 successful inputs)
+collect_fees                                  10199        208       9991          4
+collect_fees_v2                          not measured (0 successful inputs)
+collect_protocol_fees                    not measured (0 successful inputs)
+collect_protocol_fees_v2                 not measured (0 successful inputs)
+collect_reward                           not measured (0 successful inputs)
+collect_reward_v2                        not measured (0 successful inputs)
+decrease_liquidity                             9412         87       9325          2
+decrease_liquidity_v2                    not measured (0 successful inputs)
+delete_position_bundle                   not measured (0 successful inputs)
+delete_token_badge                       not measured (0 successful inputs)
+idl_include                              not measured (0 successful inputs)
+increase_liquidity                             9389        104       9285          3
+increase_liquidity_by_token_amounts_v2   not measured (0 successful inputs)
+increase_liquidity_v2                    not measured (0 successful inputs)
+initialize_adaptive_fee_tier             not measured (0 successful inputs)
+initialize_config                        not measured (0 successful inputs)
+initialize_config_extension                    8104       1323       6781          4
+initialize_dynamic_tick_array            not measured (0 successful inputs)
+initialize_fee_tier                            9555       1355       8200          3
+initialize_pool                               31930       1332      30598          3
+initialize_pool_v2                       not measured (0 successful inputs)
+initialize_pool_with_adaptive_fee        not measured (0 successful inputs)
+initialize_position_bundle               not measured (0 successful inputs)
+initialize_position_bundle_with_metadata not measured (0 successful inputs)
+initialize_reward                        not measured (0 successful inputs)
+initialize_reward_v2                     not measured (0 successful inputs)
+initialize_tick_array                          7256       1165       6091         12
+initialize_token_badge                   not measured (0 successful inputs)
+lock_position                            not measured (0 successful inputs)
+open_bundled_position                    not measured (0 successful inputs)
+open_position                                 38924       2304      36620          3
+open_position_with_metadata              not measured (0 successful inputs)
+open_position_with_token_extensions      not measured (0 successful inputs)
+reposition_liquidity_v2                  not measured (0 successful inputs)
+reset_position_range                     not measured (0 successful inputs)
+set_adaptive_fee_constants               not measured (0 successful inputs)
+set_collect_protocol_fees_authority            1504        271       1233          2
+set_config_extension_authority                 1865        160       1705          2
+set_config_feature_flag                  not measured (0 successful inputs)
+set_default_base_fee_rate                not measured (0 successful inputs)
+set_default_fee_rate                           1589        280       1309          2
+set_default_protocol_fee_rate                  1301        279       1022          2
+set_delegated_fee_authority              not measured (0 successful inputs)
+set_fee_authority                              1499        259       1240          2
+set_fee_rate                                   3632        435       3197          2
+set_fee_rate_by_delegated_fee_authority  not measured (0 successful inputs)
+set_initialize_pool_authority            not measured (0 successful inputs)
+set_preset_adaptive_fee_constants        not measured (0 successful inputs)
+set_protocol_fee_rate                          3632        435       3197          2
+set_reward_authority                     not measured (0 successful inputs)
+set_reward_authority_by_super_authority  not measured (0 successful inputs)
+set_reward_emissions                     not measured (0 successful inputs)
+set_reward_emissions_super_authority           1511        270       1241          2
+set_reward_emissions_v2                  not measured (0 successful inputs)
+set_token_badge_attribute                not measured (0 successful inputs)
+set_token_badge_authority                      1867        160       1707          3
+swap                                          26173        331      25842          3
+swap_v2                                  not measured (0 successful inputs)
+transfer_locked_position                 not measured (0 successful inputs)
+two_hop_swap                             not measured (0 successful inputs)
+two_hop_swap_v2                          not measured (0 successful inputs)
+update_fees_and_rewards                        6792        357       6435          3
+total                                        184638      11239     173399         63
+proof: matched (217 transactions)
+
+[exit 0]

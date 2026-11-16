@@ -1,0 +1,10 @@
+$ tare prove --host --manifest-path programs\idl\Cargo.toml
+idl                          gross       tare        net     inputs
+cause_error             not measured (0 successful inputs)
+initialize                   13163       3993       9170         24
+initialize_with_values       12700       3613       9087         16
+initialize_with_values2       4798       2590       2208         24
+total                        30661      10196      20465         64
+proof: matched (1440 transactions)
+
+[exit 0]

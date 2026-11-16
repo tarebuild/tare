@@ -1,0 +1,20 @@
+$ tare --version
+tare 0.5.0
+
+$ cargo metadata --format-version 1 --no-deps --manifest-path ".\bench\repro\fresh-a\tests\idl\programs\new-idl\Cargo.toml"
+$ git -c "safe.directory=.\bench\repro\fresh-a" -C ".\bench\repro\fresh-a\tests\idl" rev-parse --show-toplevel
+$ docker run --rm -e TARE_IN_CONTAINER=1 -v ./bench/repro/fresh-a:/workspace -w /workspace/tests/idl tare-toolchain:0.4.0 build --host --manifest-path /workspace/tests/idl/programs/new-idl/Cargo.toml --verbose
+
+$ cargo metadata --format-version 1 --no-deps --manifest-path ".\bench\repro\fresh-a\tests\idl\programs\new-idl\Cargo.toml"
+$ git -c "safe.directory=.\bench\repro\fresh-a" -C ".\bench\repro\fresh-a\tests\idl" rev-parse --show-toplevel
+$ docker run --rm -e TARE_IN_CONTAINER=1 -v ./bench/repro/fresh-a:/workspace -w /workspace/tests/idl tare-toolchain:0.4.0 weigh --host --manifest-path /workspace/tests/idl/programs/new-idl/Cargo.toml --verbose
+
+$ cargo metadata --format-version 1 --no-deps --manifest-path ".\bench\repro\fresh-a\tests\idl\programs\new-idl\Cargo.toml"
+$ git -c "safe.directory=.\bench\repro\fresh-a" -C ".\bench\repro\fresh-a\tests\idl" rev-parse --show-toplevel
+$ docker run --rm -e TARE_IN_CONTAINER=1 -v ./bench/repro/fresh-a:/workspace -w /workspace/tests/idl tare-toolchain:0.4.0 prove --host --manifest-path /workspace/tests/idl/programs/new-idl/Cargo.toml --verbose
+
+$ cargo metadata --format-version 1 --no-deps --manifest-path ".\bench\repro\fresh-a\tests\idl\programs\new-idl\Cargo.toml"
+$ git -c "safe.directory=.\bench\repro\fresh-a" -C ".\bench\repro\fresh-a\tests\idl" rev-parse --show-toplevel
+$ docker run --rm -e TARE_IN_CONTAINER=1 -v ./bench/repro/fresh-a:/workspace -w /workspace/tests/idl -e TARE_MAINNET_RPC_URL tare-toolchain:0.4.0 prove --host --manifest-path /workspace/tests/idl/programs/new-idl/Cargo.toml --program Newid11111111111111111111111111111111111111 --samples 2 --verbose
+
+[4 intercepted Docker invocations; Docker did not run]

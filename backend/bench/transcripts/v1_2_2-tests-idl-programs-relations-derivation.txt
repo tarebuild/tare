@@ -1,0 +1,26 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/idl
+Recorded: 2026-11-15T02:52:17.255Z
+$ tare build --host --manifest-path programs\relations-derivation\Cargo.toml
+building relations-derivation (Anchor 1.2.2)
+bytecode: 3 instructions rewritten; 77320 -> 71816 bytes
+relations-derivation: stock 127928 bytes -> tare 71816 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\relations-derivation\Cargo.toml
+relations_derivation      gross       tare        net     inputs
+init_base                  7557       2520       5037         24
+test_relation              4436        539       3897         16
+total                     11993       3059       8934         40
+proof: matched (292 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\relations-derivation\Cargo.toml
+relations_derivation      gross       tare        net     inputs
+init_base                  7557       2520       5037         24
+test_relation              4436        539       3897         16
+total                     11993       3059       8934         40
+proof: matched (292 transactions)
+
+[exit 0]

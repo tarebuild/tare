@@ -1,0 +1,28 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/test-instruction-validation/pass-type
+Recorded: 2026-11-15T02:51:39.944Z
+$ tare build --host --manifest-path programs\test-instruction-validation\Cargo.toml
+building test-instruction-validation (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 44944 -> 41184 bytes
+test-instruction-validation: stock 76272 bytes -> tare 41184 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\test-instruction-validation\Cargo.toml
+test_instruction_validation      gross       tare        net     inputs
+missing_instruction_attr          1013        346        667         32
+no_params                          653        331        322         32
+type_mismatch                     1001        337        664         32
+total                             2667       1014       1653         96
+proof: matched (248 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\test-instruction-validation\Cargo.toml
+test_instruction_validation      gross       tare        net     inputs
+missing_instruction_attr          1013        346        667         32
+no_params                          653        331        322         32
+type_mismatch                     1001        337        664         32
+total                             2667       1014       1653         96
+proof: matched (248 transactions)
+
+[exit 0]

@@ -1,0 +1,7 @@
+$ tare weigh --host --manifest-path programs\account-command\Cargo.toml
+account_command      gross       tare        net     inputs
+initialize            5200       2451       2749         24
+total                 5200       2451       2749         24
+proof: matched (176 transactions)
+
+[exit 0]

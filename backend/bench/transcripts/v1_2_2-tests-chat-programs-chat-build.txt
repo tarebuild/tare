@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\chat\Cargo.toml
+building chat (Anchor 1.2.2)
+bytecode: 3 instructions rewritten; 110672 -> 102416 bytes
+chat: stock 143872 bytes -> tare 102416 bytes
+
+[exit 0]

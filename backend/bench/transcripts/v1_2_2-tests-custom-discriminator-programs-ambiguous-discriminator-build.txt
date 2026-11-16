@@ -1,0 +1,7 @@
+$ tare build --host --manifest-path programs\ambiguous-discriminator\Cargo.toml
+building ambiguous-discriminator (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 47136 -> 43184 bytes
+error: ambiguous accounts discriminators: "AnotherAccount" "SomeAccount"
+error: build stock IDL: $TARE_HOME\target\release\tare.exe exited with exit code: 1
+
+[exit 1]

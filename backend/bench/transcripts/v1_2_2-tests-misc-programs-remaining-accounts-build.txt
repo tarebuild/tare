@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\remaining-accounts\Cargo.toml
+building remaining-accounts (Anchor 1.2.2)
+bytecode: 2 instructions rewritten; 89880 -> 83960 bytes
+remaining-accounts: stock 135288 bytes -> tare 83960 bytes
+
+[exit 0]

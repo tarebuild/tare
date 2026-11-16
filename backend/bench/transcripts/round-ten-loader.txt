@@ -1,0 +1,44 @@
+$ tare --version
+tare 0.7.0
+Agave 4.4.0 admission: 214 stock + 215 Tare ELFs, 1287 checks, 0 refusals.
+Both basic-0 ELFs: DelayVisibility at slot 0, Loaded at slot 1.
+No SBF artifacts rebuilt or changed.
+
+$ node bench/gate.mjs
+Current-stock gate: FAIL: 179/189 measured programs pass; 10 size failures; 0 instruction CU failures.
+Coverage: 238/238 manifest results; 49 explicit not-built; 0 coverage issues; 0 proof failures.
+v0_31_1-tests-misc-programs-misc-optional: ELF exceeds stock by 45072 bytes
+v0_31_1-tests-misc-programs-misc: ELF exceeds stock by 21632 bytes
+v0_31_1-tests-bench-programs-bench: ELF exceeds stock by 185376 bytes
+v0_32_3-tests-misc-programs-misc-optional: ELF exceeds stock by 45584 bytes
+v0_32_3-tests-misc-programs-misc: ELF exceeds stock by 22144 bytes
+v0_32_3-tests-bench-programs-bench: ELF exceeds stock by 185888 bytes
+v1_2_2-tests-optional-programs-optional: ELF exceeds stock by 240 bytes
+v1_2_2-tests-misc-programs-misc-optional: ELF exceeds stock by 77376 bytes
+v1_2_2-tests-misc-programs-misc: ELF exceeds stock by 65688 bytes
+v1_2_2-tests-bench-programs-bench: ELF exceeds stock by 360208 bytes
+Report: bench\loader-check\gate.json
+
+[exit 1]
+
+$ tare --version
+tare 0.7.0
+Disk free before audit program 1: 315141873664 bytes
+Disk free before audit program 21: 315140947968 bytes
+Disk free before audit program 41: 315144863744 bytes
+Disk free before audit program 61: 315143172096 bytes
+Disk free before audit program 81: 315140972544 bytes
+Disk free before audit program 101: 315140083712 bytes
+Disk free before audit program 121: 315150721024 bytes
+Disk free before audit program 141: 315148926976 bytes
+Disk free before audit program 161: 315147874304 bytes
+Disk free before audit program 181: 315147145216 bytes
+Disk free before audit program 201: 315146141696 bytes
+Disk free before audit program 221: 315144617984 bytes
+Agave 4.4.0: 429 unchanged ELFs, 1287 deployment/preload/cache+JIT checks passed.
+Refused: stock 0, Tare 0.
+Basic-0 stock and Tare: DelayVisibility at slot 0; Loaded at slot 1.
+Malformed ELF control: rejected in all three phases; exit 1.
+Preflight mock: waited from slot 0 to effective slot 1 before returning.
+Disk free at start: 315342536704 bytes
+Disk free after cleanup: 315591528448 bytes

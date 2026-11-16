@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\test-instruction-validation\Cargo.toml
+building test-instruction-validation (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 44944 -> 41184 bytes
+test-instruction-validation: stock 76272 bytes -> tare 41184 bytes
+
+[exit 0]

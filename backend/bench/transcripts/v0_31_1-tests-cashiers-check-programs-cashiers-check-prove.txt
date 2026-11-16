@@ -1,0 +1,9 @@
+$ tare prove --host --manifest-path programs\cashiers-check\Cargo.toml
+cashiers_check      gross       tare        net     inputs
+cancel_check         7034       1346       5688          8
+cash_check           7046       1357       5689          8
+create_check         8938       2057       6881         24
+total               23018       4760      18258         40
+proof: matched (1805 transactions)
+
+[exit 0]

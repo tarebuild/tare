@@ -1,0 +1,20 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/ido-pool
+Recorded: 2026-11-15T03:10:38.052Z
+$ tare build --host --manifest-path programs\ido-pool\Cargo.toml
+building ido-pool (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 367352 -> 348600 bytes
+ido-pool: stock 419592 bytes -> tare 348600 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\ido-pool\Cargo.toml
+error: generated corpus does not yet resolve account-data PDA seed ido_account.ido_name
+
+[exit 1]
+Runner error: Error: error: generated corpus does not yet resolve account-data PDA seed ido_account.ido_name
+    at runProgram (file:///backend/bench/run.mjs:195:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async worker (file:///backend/bench/run.mjs:232:7)
+    at async Promise.all (index 1)
+    at async file:///backend/bench/run.mjs:236:1

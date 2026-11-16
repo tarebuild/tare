@@ -1,0 +1,22 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/custom-coder
+Recorded: 2026-11-15T02:44:02.972Z
+$ tare build --host --manifest-path programs\spl-token\Cargo.toml
+building spl-token (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 108200 -> 99384 bytes
+spl-token: stock 162072 bytes -> tare 99384 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\spl-token\Cargo.toml
+spl_token      gross       tare        net     inputs
+total              0          0          0          0
+proof: matched (416 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\spl-token\Cargo.toml
+spl_token      gross       tare        net     inputs
+total              0          0          0          0
+proof: matched (416 transactions)
+
+[exit 0]

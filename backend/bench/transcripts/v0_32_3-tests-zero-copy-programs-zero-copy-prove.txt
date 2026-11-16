@@ -1,0 +1,13 @@
+$ tare prove --host --manifest-path programs\zero-copy\Cargo.toml
+zero_copy                 gross       tare        net     inputs
+create_bar                 9220       2362       6858         48
+create_foo                 1684       1059        625         40
+create_large_account       1336        890        446         40
+update_bar                 5913        813       5100         80
+update_foo                 1002        572        430         80
+update_foo_second          1002        573        429         16
+update_large_account        997        518        479         80
+total                     21154       6787      14367        384
+proof: matched (3848 transactions)
+
+[exit 0]

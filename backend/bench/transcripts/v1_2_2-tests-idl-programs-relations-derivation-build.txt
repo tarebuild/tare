@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\relations-derivation\Cargo.toml
+building relations-derivation (Anchor 1.2.2)
+bytecode: 3 instructions rewritten; 77320 -> 71816 bytes
+relations-derivation: stock 127928 bytes -> tare 71816 bytes
+
+[exit 0]

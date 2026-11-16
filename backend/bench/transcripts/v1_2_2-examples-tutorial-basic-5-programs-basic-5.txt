@@ -1,0 +1,32 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/examples/tutorial/basic-5
+Recorded: 2026-11-15T02:55:46.004Z
+$ tare build --host --manifest-path programs\basic-5\Cargo.toml
+building basic-5 (Anchor 1.2.2)
+bytecode: 1 instructions rewritten; 84400 -> 78768 bytes
+basic-5: stock 138400 bytes -> tare 78768 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\basic-5\Cargo.toml
+basic_5      gross       tare        net     inputs
+create        7506       2449       5057         48
+jump          1767       1386        381         80
+reset         1769       1386        383         80
+run           1758       1375        383         80
+walk          1756       1375        381         80
+total        14556       7971       6585        368
+proof: matched (1520 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\basic-5\Cargo.toml
+basic_5      gross       tare        net     inputs
+create        7506       2449       5057         48
+jump          1767       1386        381         80
+reset         1769       1386        383         80
+run           1758       1375        383         80
+walk          1756       1375        381         80
+total        14556       7971       6585        368
+proof: matched (1520 transactions)
+
+[exit 0]

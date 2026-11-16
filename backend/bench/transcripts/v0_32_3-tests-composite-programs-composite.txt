@@ -1,0 +1,26 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/composite
+Recorded: 2026-11-15T02:56:03.832Z
+$ tare build --host --manifest-path programs\composite\Cargo.toml
+building composite (Anchor 0.32.3)
+bytecode: 2 instructions rewritten; 130976 -> 120448 bytes
+composite: stock 179136 bytes -> tare 120448 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\composite\Cargo.toml
+composite             gross       tare        net     inputs
+composite_update       1238        630        608         32
+initialize             2452       1829        623         16
+total                  3690       2459       1231         48
+proof: matched (696 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\composite\Cargo.toml
+composite             gross       tare        net     inputs
+composite_update       1238        630        608         32
+initialize             2452       1829        623         16
+total                  3690       2459       1231         48
+proof: matched (696 transactions)
+
+[exit 0]

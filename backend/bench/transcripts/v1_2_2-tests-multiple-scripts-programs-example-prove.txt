@@ -1,0 +1,7 @@
+$ tare prove --host --manifest-path programs\example\Cargo.toml
+example         gross       tare        net     inputs
+initialize        288         36        252         12
+total             288         36        252         12
+proof: matched (32 transactions)
+
+[exit 0]

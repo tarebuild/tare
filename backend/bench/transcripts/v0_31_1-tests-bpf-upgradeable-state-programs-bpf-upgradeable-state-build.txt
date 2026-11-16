@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\bpf-upgradeable-state\Cargo.toml
+building bpf-upgradeable-state (Anchor 0.31.1)
+bytecode: 9 instructions rewritten; 216128 -> 200656 bytes
+bpf-upgradeable-state: stock 252744 bytes -> tare 200656 bytes
+
+[exit 0]

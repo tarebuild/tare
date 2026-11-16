@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/validator-clone
+Recorded: 2026-11-15T02:41:21.476Z
+$ tare build --host --manifest-path programs\validator-clone\Cargo.toml
+building validator-clone (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 37024 -> 33808 bytes
+validator-clone: stock 54992 bytes -> tare 33808 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\validator-clone\Cargo.toml
+validator_clone      gross       tare        net     inputs
+initialize             185         57        128         12
+total                  185         57        128         12
+proof: matched (32 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\validator-clone\Cargo.toml
+validator_clone      gross       tare        net     inputs
+initialize             185         57        128         12
+total                  185         57        128         12
+proof: matched (32 transactions)
+
+[exit 0]

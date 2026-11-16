@@ -1,0 +1,11 @@
+$ tare weigh --host --manifest-path programs\tare-registry\Cargo.toml --replay target/native-replay.json
+recorded outcome reproduction: 17 / 17 inputs matched
+tare_registry      gross       tare        net     inputs
+attest             29961       6499      23462          3
+flag               15421       4448      10973          1
+init_config        23820       5618      18202          1
+set_config         15717       2993      12724          2
+total              84919      19558      65361          7
+proof: matched (17 transactions)
+
+[exit 0]

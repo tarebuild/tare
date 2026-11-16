@@ -1,0 +1,4 @@
+$ tare weigh --host --manifest-path programs\auction-house\Cargo.toml
+error: generated corpus does not yet resolve account-data PDA seed token_account.mint
+
+[exit 1]

@@ -1,0 +1,74 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/errors
+Recorded: 2026-11-15T02:42:41.482Z
+$ tare build --host --manifest-path programs\errors\Cargo.toml
+building errors (Anchor 0.31.1)
+bytecode: 1 instructions rewritten; 144176 -> 131952 bytes
+errors: stock 198080 bytes -> tare 131952 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\errors\Cargo.toml
+errors                                    gross       tare        net     inputs
+account_not_initialized_error               571        305        266         32
+account_owned_by_wrong_program_error        571        305        266         32
+has_one_error                              1792       1282        510         16
+hello                                not measured (0 successful inputs)
+hello_next                           not measured (0 successful inputs)
+hello_no_msg                         not measured (0 successful inputs)
+mut_error                                   589        375        214         32
+raw_custom_error                            597        375        222         32
+require_eq                           not measured (0 successful inputs)
+require_eq_default_error             not measured (0 successful inputs)
+require_gt                           not measured (0 successful inputs)
+require_gt_default_error             not measured (0 successful inputs)
+require_gte                          not measured (0 successful inputs)
+require_gte_default_error            not measured (0 successful inputs)
+require_keys_eq                             529        291        238         32
+require_keys_eq_default_error               525        291        234         32
+require_keys_neq                            517        292        225         32
+require_keys_neq_default_error              521        292        229         32
+require_neq                          not measured (0 successful inputs)
+require_neq_default_error            not measured (0 successful inputs)
+signer_error                                528        314        214         32
+test_err                             not measured (0 successful inputs)
+test_program_error                   not measured (0 successful inputs)
+test_program_error_with_source       not measured (0 successful inputs)
+test_require                         not measured (0 successful inputs)
+try_into_integer                     not measured (0 successful inputs)
+total                                      6740       4122       2618        304
+proof: matched (1536 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\errors\Cargo.toml
+errors                                    gross       tare        net     inputs
+account_not_initialized_error               571        305        266         32
+account_owned_by_wrong_program_error        571        305        266         32
+has_one_error                              1792       1282        510         16
+hello                                not measured (0 successful inputs)
+hello_next                           not measured (0 successful inputs)
+hello_no_msg                         not measured (0 successful inputs)
+mut_error                                   589        375        214         32
+raw_custom_error                            597        375        222         32
+require_eq                           not measured (0 successful inputs)
+require_eq_default_error             not measured (0 successful inputs)
+require_gt                           not measured (0 successful inputs)
+require_gt_default_error             not measured (0 successful inputs)
+require_gte                          not measured (0 successful inputs)
+require_gte_default_error            not measured (0 successful inputs)
+require_keys_eq                             529        291        238         32
+require_keys_eq_default_error               525        291        234         32
+require_keys_neq                            517        292        225         32
+require_keys_neq_default_error              521        292        229         32
+require_neq                          not measured (0 successful inputs)
+require_neq_default_error            not measured (0 successful inputs)
+signer_error                                528        314        214         32
+test_err                             not measured (0 successful inputs)
+test_program_error                   not measured (0 successful inputs)
+test_program_error_with_source       not measured (0 successful inputs)
+test_require                         not measured (0 successful inputs)
+try_into_integer                     not measured (0 successful inputs)
+total                                      6740       4122       2618        304
+proof: matched (1536 transactions)
+
+[exit 0]

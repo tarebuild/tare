@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\realloc\Cargo.toml
+building realloc (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 203120 -> 187456 bytes
+realloc: stock 210376 bytes -> tare 187456 bytes
+
+[exit 0]

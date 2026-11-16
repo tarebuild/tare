@@ -1,0 +1,28 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/realloc
+Recorded: 2026-11-15T02:59:04.309Z
+$ tare build --host --manifest-path programs\realloc\Cargo.toml
+building realloc (Anchor 0.32.3)
+bytecode: 0 instructions rewritten; 203120 -> 187456 bytes
+realloc: stock 209840 bytes -> tare 187456 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\realloc\Cargo.toml
+realloc         gross       tare        net     inputs
+initialize       6077       2395       3682         32
+realloc          3686       1026       2660         48
+realloc2         8203       1460       6743         20
+total           17966       4881      13085        100
+proof: matched (1544 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\realloc\Cargo.toml
+realloc         gross       tare        net     inputs
+initialize       6077       2395       3682         32
+realloc          3686       1026       2660         48
+realloc2         8203       1460       6743         20
+total           17966       4881      13085        100
+proof: matched (1544 transactions)
+
+[exit 0]

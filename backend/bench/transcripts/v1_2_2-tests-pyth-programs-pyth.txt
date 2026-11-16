@@ -1,0 +1,28 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/pyth
+Recorded: 2026-11-15T02:56:16.412Z
+$ tare build --host --manifest-path programs\pyth\Cargo.toml
+building pyth (Anchor 1.2.2)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 0 instructions rewritten; 46248 -> 41976 bytes
+pyth: stock 78960 bytes -> tare 41976 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\pyth\Cargo.toml
+pyth            gross       tare        net     inputs
+initialize not measured (0 successful inputs)
+set_price  not measured (0 successful inputs)
+total               0          0          0          0
+proof: matched (168 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\pyth\Cargo.toml
+pyth            gross       tare        net     inputs
+initialize not measured (0 successful inputs)
+set_price  not measured (0 successful inputs)
+total               0          0          0          0
+proof: matched (168 transactions)
+
+[exit 0]

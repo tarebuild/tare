@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/sysvars
+Recorded: 2026-11-15T02:51:54.427Z
+$ tare build --host --manifest-path programs\sysvars\Cargo.toml
+building sysvars (Anchor 0.32.3)
+bytecode: 0 instructions rewritten; 119784 -> 110424 bytes
+sysvars: stock 166848 bytes -> tare 110424 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\sysvars\Cargo.toml
+sysvars      gross       tare        net     inputs
+sysvars       1132        623        509         32
+total         1132        623        509         32
+proof: matched (480 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\sysvars\Cargo.toml
+sysvars      gross       tare        net     inputs
+sysvars       1132        623        509         32
+total         1132        623        509         32
+proof: matched (480 transactions)
+
+[exit 0]

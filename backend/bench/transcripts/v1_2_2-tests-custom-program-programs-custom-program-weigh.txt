@@ -1,0 +1,7 @@
+$ tare weigh --host --manifest-path programs\custom-program\Cargo.toml
+custom_program               gross       tare        net     inputs
+test_program_validation      21479        745      20734         32
+total                        21479        745      20734         32
+proof: matched (72 transactions)
+
+[exit 0]

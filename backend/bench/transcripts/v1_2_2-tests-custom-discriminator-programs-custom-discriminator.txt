@@ -1,0 +1,36 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/custom-discriminator
+Recorded: 2026-11-15T02:53:23.561Z
+$ tare build --host --manifest-path programs\custom-discriminator\Cargo.toml
+building custom-discriminator (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 67168 -> 62048 bytes
+custom-discriminator: stock 121472 bytes -> tare 62048 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\custom-discriminator\Cargo.toml
+custom_discriminator      gross       tare        net     inputs
+account                    5944       2379       3565         24
+array                       557        338        219         40
+byte_str                    558        338        220         40
+const_fn                    561        339        222         40
+constant                    561        338        223         40
+event                       806        348        458         32
+int                         554        338        216         40
+total                      9541       4418       5123        256
+proof: matched (616 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\custom-discriminator\Cargo.toml
+custom_discriminator      gross       tare        net     inputs
+account                    5944       2379       3565         24
+array                       557        338        219         40
+byte_str                    558        338        220         40
+const_fn                    561        339        222         40
+constant                    561        338        223         40
+event                       806        348        458         32
+int                         554        338        216         40
+total                      9541       4418       5123        256
+proof: matched (616 transactions)
+
+[exit 0]

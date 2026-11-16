@@ -1,0 +1,8 @@
+$ tare weigh --host --manifest-path programs\relations-derivation\Cargo.toml
+relations_derivation      gross       tare        net     inputs
+init_base                  7518       2539       4979         24
+test_relation              4464        543       3921         16
+total                     11982       3082       8900         40
+proof: matched (700 transactions)
+
+[exit 0]

@@ -1,0 +1,27 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/spl/transfer-hook
+Recorded: 2026-11-15T03:04:51.590Z
+$ tare build --host --manifest-path programs\transfer-hook\Cargo.toml
+building transfer-hook (Anchor 0.32.3)
+account ABI: SDK (representation observation size_of with unresolved type at lib.rs)
+bytecode: 2 instructions rewritten; 213296 -> 200320 bytes
+transfer-hook: stock 229752 bytes -> tare 200320 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\transfer-hook\Cargo.toml
+transfer_hook      gross       tare        net     inputs
+execute       not measured (0 successful inputs)
+initialize    not measured (0 successful inputs)
+total                  0          0          0          0
+proof: matched (852 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\transfer-hook\Cargo.toml
+transfer_hook      gross       tare        net     inputs
+execute       not measured (0 successful inputs)
+initialize    not measured (0 successful inputs)
+total                  0          0          0          0
+proof: matched (852 transactions)
+
+[exit 0]

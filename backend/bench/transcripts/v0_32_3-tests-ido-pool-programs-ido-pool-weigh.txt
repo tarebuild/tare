@@ -1,0 +1,4 @@
+$ tare weigh --host --manifest-path programs\ido-pool\Cargo.toml
+error: generated corpus does not yet resolve account-data PDA seed ido_account.ido_name
+
+[exit 1]

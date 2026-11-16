@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\events\Cargo.toml
+building events (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 76544 -> 70032 bytes
+events: stock 91352 bytes -> tare 70032 bytes
+
+[exit 0]

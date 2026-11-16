@@ -1,0 +1,20 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/bpf-upgradeable-state
+Recorded: 2026-11-15T02:54:29.365Z
+$ tare build --host --manifest-path programs\bpf-upgradeable-state\Cargo.toml
+building bpf-upgradeable-state (Anchor 1.2.2)
+bytecode: 9 instructions rewritten; 163928 -> 152792 bytes
+bpf-upgradeable-state: stock 189536 bytes -> tare 152792 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\bpf-upgradeable-state\Cargo.toml
+error: IDL type UpgradeableLoaderState has no definition
+
+[exit 1]
+Runner error: Error: error: IDL type UpgradeableLoaderState has no definition
+    at runProgram (file:///backend/bench/run.mjs:195:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async worker (file:///backend/bench/run.mjs:232:7)
+    at async Promise.all (index 2)
+    at async file:///backend/bench/run.mjs:236:1

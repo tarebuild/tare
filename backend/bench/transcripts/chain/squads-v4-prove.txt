@@ -1,0 +1,40 @@
+$ tare prove --host --manifest-path programs/squads_multisig_program/Cargo.toml --idl ../../production/controls/squads-v4/verified-idl.json --replay target/tare/production-replay.json --program SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf --samples 3
+squads_multisig_program                       gross       tare        net     inputs
+batch_accounts_close                           6508        331       6177          2
+batch_add_transaction                         20847       2511      18336          3
+batch_create                                  12143       2248       9895          3
+batch_execute_transaction                     17170        792      16378          2
+config_transaction_accounts_close              6794        305       6489          6
+config_transaction_create                     12558       1961      10597         12
+config_transaction_execute                    10588        865       9723          4
+multisig_add_member                            7308        248       7060          3
+multisig_add_spending_limit                   10607       1782       8825          3
+multisig_change_threshold                      4632        486       4146          8
+multisig_create                          not measured (0 successful inputs)
+multisig_create_v2                            12640       1603      11037          3
+multisig_remove_member                         4680        493       4187          3
+multisig_remove_spending_limit                 4382        225       4157          1
+multisig_set_config_authority                  4460        451       4009          3
+multisig_set_rent_collector                    4763        447       4316          4
+multisig_set_time_lock                         4634        490       4144          4
+program_config_init                      not measured (0 successful inputs)
+program_config_set_authority                   2987        418       2569          2
+program_config_set_multisig_creation_fee       2959        417       2542          2
+program_config_set_treasury                    2987        421       2566          4
+proposal_activate                              5995        410       5585          4
+proposal_approve                               6262        426       5836          5
+proposal_cancel                                6416        422       5994          1
+proposal_cancel_v2                             7241        535       6706          1
+proposal_create                               12637       1660      10977         18
+proposal_reject                                6521        425       6096          2
+spending_limit_use                            11712        278      11434          2
+transaction_buffer_close                       6981        482       6499          2
+transaction_buffer_create                     11448       1818       9630          6
+transaction_buffer_extend                      7919        439       7480          2
+vault_batch_transaction_account_close          8044        803       7241          2
+vault_transaction_accounts_close              11820        283      11537          2
+vault_transaction_create                      15285       2045      13240          3
+vault_transaction_create_from_buffer          21013       2048      18965          5
+vault_transaction_execute                     14671        328      14343          2
+total                                        307612      28896     278716        129
+proof: matched (488 transactions)

@@ -1,0 +1,32 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/cpi-returns
+Recorded: 2026-11-15T02:57:25.106Z
+$ tare build --host --manifest-path programs\callee\Cargo.toml
+building callee (Anchor 0.31.1)
+bytecode: 2 instructions rewritten; 136080 -> 125680 bytes
+callee: stock 183032 bytes -> tare 125680 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\callee\Cargo.toml
+callee                       gross       tare        net     inputs
+initialize                    4458       2613       1845         48
+return_struct                  706        311        395         80
+return_u64                     708        313        395         80
+return_u64_from_account        705        287        418         80
+return_vec                     729        298        431         80
+total                         7306       3822       3484        368
+proof: matched (2856 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\callee\Cargo.toml
+callee                       gross       tare        net     inputs
+initialize                    4458       2613       1845         48
+return_struct                  706        311        395         80
+return_u64                     708        313        395         80
+return_u64_from_account        705        287        418         80
+return_vec                     729        298        431         80
+total                         7306       3822       3484        368
+proof: matched (2856 transactions)
+
+[exit 0]

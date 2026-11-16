@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\new-idl\Cargo.toml
+building new-idl (Anchor 0.32.3)
+bytecode: 8 instructions rewritten; 267880 -> 249768 bytes
+new-idl: stock 283536 bytes -> tare 249768 bytes
+
+[exit 0]

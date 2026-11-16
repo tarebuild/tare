@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\accountloader-realloc\Cargo.toml
+building accountloader-realloc (Anchor 1.2.2)
+bytecode: 4 instructions rewritten; 143384 -> 132296 bytes
+accountloader-realloc: stock 161768 bytes -> tare 132296 bytes
+
+[exit 0]

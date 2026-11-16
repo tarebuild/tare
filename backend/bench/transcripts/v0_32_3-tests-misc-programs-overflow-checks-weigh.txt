@@ -1,0 +1,10 @@
+$ tare weigh --host --manifest-path programs\overflow-checks\Cargo.toml
+overflow_checks        gross       tare        net     inputs
+initialize              5366       3536       1830         40
+test_overflow_add       1811       1225        586         12
+test_overflow_mul       1803       1223        580         10
+test_overflow_sub       1809       1224        585         10
+total                  10789       7208       3581         72
+proof: matched (2084 transactions)
+
+[exit 0]

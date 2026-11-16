@@ -1,0 +1,8 @@
+$ tare prove --host --manifest-path programs\lamports\Cargo.toml
+lamports      gross       tare        net     inputs
+overflow       3854        424       3430         32
+transfer       9101       2251       6850         24
+total         12955       2675      10280         56
+proof: matched (272 transactions)
+
+[exit 0]

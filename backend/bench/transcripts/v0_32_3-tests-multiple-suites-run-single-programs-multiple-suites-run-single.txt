@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/multiple-suites-run-single
+Recorded: 2026-11-15T02:50:07.458Z
+$ tare build --host --manifest-path programs\multiple-suites-run-single\Cargo.toml
+building multiple-suites-run-single (Anchor 0.32.3)
+bytecode: 0 instructions rewritten; 108352 -> 99520 bytes
+multiple-suites-run-single: stock 161576 bytes -> tare 99520 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\multiple-suites-run-single\Cargo.toml
+multiple_suites_run_single      gross       tare        net     inputs
+initialize                        197         65        132         12
+total                             197         65        132         12
+proof: matched (440 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\multiple-suites-run-single\Cargo.toml
+multiple_suites_run_single      gross       tare        net     inputs
+initialize                        197         65        132         12
+total                             197         65        132         12
+proof: matched (440 transactions)
+
+[exit 0]

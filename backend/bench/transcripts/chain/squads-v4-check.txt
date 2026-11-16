@@ -1,0 +1,13 @@
+$ tare check AK1RjjovGLJbj5vEdzh4EtMEwdkTsRN2PYUVUASz4hpL --host
+record: AK1RjjovGLJbj5vEdzh4EtMEwdkTsRN2PYUVUASz4hpL
+commit: 3a39735d0c56249bf2ce4b16b3229d7be87ad55f
+building squads-multisig-program (Anchor 0.32.1)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 23 instructions rewritten; 826176 -> 777488 bytes
+IDL: explicit supplied input supplied-idl.json
+squads-multisig-program: stock 791768 bytes -> tare 777488 bytes
+stock hash: f228b6dfcc6eaf5d3cb0a52bce0ee11fc32c7a25af8d802cdc05eea0597b2b00 (matches)
+tare hash: 14f7ff1817c5896be925ab472bf999aaef082e5c26a98ac36a2ec4254fa36493 (matches)
+corpus: 488 transactions rerun
+matches

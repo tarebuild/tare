@@ -1,0 +1,43 @@
+$ tare --version
+tare 0.7.0
+Source: local registry workspace
+Recorded: 2026-11-15T03:07:59.677Z
+$ tare build --host --manifest-path programs\tare-registry\Cargo.toml
+building tare-registry (Anchor 1.2.2)
+bytecode: 10 instructions rewritten; 297088 -> 278960 bytes
+tare-registry: stock 281992 bytes -> tare 278960 bytes
+
+[exit 0]
+$ tare build --host --manifest-path programs/tare-registry/Cargo.toml
+Native registry verification of the preceding successful build:
+$ cargo run --manifest-path registry/tests/Cargo.toml
+Registry native stock/Tare: 17 transactions matched; exact fees, authorization, stored fields and CPI events verified
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.59s
+     Running `toolchain\target\native-versions\debug\tare-registry-native-tests.exe`
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\tare-registry\Cargo.toml --replay target/native-replay.json
+recorded outcome reproduction: 17 / 17 inputs matched
+tare_registry      gross       tare        net     inputs
+attest             29961       6499      23462          3
+flag               15421       4448      10973          1
+init_config        23820       5618      18202          1
+set_config         15717       2993      12724          2
+total              84919      19558      65361          7
+proof: matched (17 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\tare-registry\Cargo.toml --replay target/native-replay.json
+recorded outcome reproduction: 17 / 17 inputs matched
+tare_registry      gross       tare        net     inputs
+attest             29961       6499      23462          3
+flag               15421       4448      10973          1
+init_config        23820       5618      18202          1
+set_config         15717       2993      12724          2
+total              84919      19558      65361          7
+proof: matched (17 transactions)
+
+[exit 0]

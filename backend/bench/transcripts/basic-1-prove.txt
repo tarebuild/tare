@@ -1,0 +1,8 @@
+$ tare prove --host --manifest-path bench/corpus/anchor/examples/tutorial/basic-1/programs/basic-1/Cargo.toml
+basic_1         gross       tare        net     inputs
+initialize       4460       2608       1852         24
+update            725        463        262         32
+total            5185       3071       2114         56
+proof: matched (688 transactions)
+
+[exit 0]

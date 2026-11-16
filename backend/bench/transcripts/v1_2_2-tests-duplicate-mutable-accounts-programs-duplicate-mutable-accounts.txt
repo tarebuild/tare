@@ -1,0 +1,40 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/duplicate-mutable-accounts
+Recorded: 2026-11-15T02:58:24.646Z
+$ tare build --host --manifest-path programs\duplicate-mutable-accounts\Cargo.toml
+building duplicate-mutable-accounts (Anchor 1.2.2)
+bytecode: 4 instructions rewritten; 169944 -> 159704 bytes
+duplicate-mutable-accounts: stock 182288 bytes -> tare 159704 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\duplicate-mutable-accounts\Cargo.toml
+duplicate_mutable_accounts            gross       tare        net     inputs
+allows_duplicate_mutable               1852       1474        378         40
+allows_duplicate_readonly               958        568        390         32
+fails_duplicate_mutable                2311       1926        385         32
+init_if_needed_duplicate_mutable       6219       3885       2334         48
+init_multiple_with_same_payer          7809       3875       3934         24
+initialize                             4385       2483       1902         24
+mixed_duplicate                        3093       2136        957         32
+nested_duplicate                       3857       2695       1162         32
+use_remaining_accounts                 1861        949        912         32
+total                                 32345      19991      12354        296
+proof: matched (1384 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\duplicate-mutable-accounts\Cargo.toml
+duplicate_mutable_accounts            gross       tare        net     inputs
+allows_duplicate_mutable               1852       1474        378         40
+allows_duplicate_readonly               958        568        390         32
+fails_duplicate_mutable                2311       1926        385         32
+init_if_needed_duplicate_mutable       6219       3885       2334         48
+init_multiple_with_same_payer          7809       3875       3934         24
+initialize                             4385       2483       1902         24
+mixed_duplicate                        3093       2136        957         32
+nested_duplicate                       3857       2695       1162         32
+use_remaining_accounts                 1861        949        912         32
+total                                 32345      19991      12354        296
+proof: matched (1384 transactions)
+
+[exit 0]

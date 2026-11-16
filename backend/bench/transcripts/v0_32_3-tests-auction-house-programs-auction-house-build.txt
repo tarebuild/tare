@@ -1,0 +1,8 @@
+$ tare build --host --manifest-path programs\auction-house\Cargo.toml
+building auction-house (Anchor 0.32.3)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 4 instructions rewritten; 450968 -> 424632 bytes
+auction-house: stock 470792 bytes -> tare 424632 bytes
+
+[exit 0]

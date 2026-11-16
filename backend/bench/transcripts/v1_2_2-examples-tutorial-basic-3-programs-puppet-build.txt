@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\puppet\Cargo.toml
+building puppet (Anchor 1.2.2)
+bytecode: 4 instructions rewritten; 68616 -> 63560 bytes
+puppet: stock 129408 bytes -> tare 63560 bytes
+
+[exit 0]

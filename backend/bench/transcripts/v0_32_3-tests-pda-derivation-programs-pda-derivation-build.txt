@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\pda-derivation\Cargo.toml
+building pda-derivation (Anchor 0.32.3)
+bytecode: 3 instructions rewritten; 234736 -> 220352 bytes
+pda-derivation: stock 275128 bytes -> tare 220352 bytes
+
+[exit 0]

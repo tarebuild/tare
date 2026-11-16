@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\validator-clone\Cargo.toml
+building validator-clone (Anchor 0.32.3)
+bytecode: 0 instructions rewritten; 108344 -> 99512 bytes
+validator-clone: stock 161552 bytes -> tare 99512 bytes
+
+[exit 0]

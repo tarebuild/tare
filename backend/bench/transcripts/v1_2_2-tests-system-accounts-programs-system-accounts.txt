@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/system-accounts
+Recorded: 2026-11-15T02:44:15.488Z
+$ tare build --host --manifest-path programs\system-accounts\Cargo.toml
+building system-accounts (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 40416 -> 36960 bytes
+system-accounts: stock 56608 bytes -> tare 36960 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\system-accounts\Cargo.toml
+system_accounts      gross       tare        net     inputs
+initialize             870        600        270         32
+total                  870        600        270         32
+proof: matched (80 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\system-accounts\Cargo.toml
+system_accounts      gross       tare        net     inputs
+initialize             870        600        270         32
+total                  870        600        270         32
+proof: matched (80 transactions)
+
+[exit 0]

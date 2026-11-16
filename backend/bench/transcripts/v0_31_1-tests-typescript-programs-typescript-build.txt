@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\typescript\Cargo.toml
+building typescript (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 108336 -> 99504 bytes
+typescript: stock 162184 bytes -> tare 99504 bytes
+
+[exit 0]

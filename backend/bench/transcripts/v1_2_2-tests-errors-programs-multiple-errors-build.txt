@@ -1,0 +1,7 @@
+$ tare build --host --manifest-path programs\multiple-errors\Cargo.toml
+building multiple-errors (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 37016 -> 33800 bytes
+error: multiple error definitions are not allowed
+error: build stock IDL: $TARE_HOME\target\release\tare.exe exited with exit code: 1
+
+[exit 1]

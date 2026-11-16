@@ -1,0 +1,28 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/events
+Recorded: 2026-11-15T02:50:27.511Z
+$ tare build --host --manifest-path programs\events\Cargo.toml
+building events (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 76544 -> 70032 bytes
+events: stock 91352 bytes -> tare 70032 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\events\Cargo.toml
+events              gross       tare        net     inputs
+initialize            516         36        480         12
+test_event            513         36        477         12
+test_event_cpi       2795       1164       1631         32
+total                3824       1236       2588         56
+proof: matched (120 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\events\Cargo.toml
+events              gross       tare        net     inputs
+initialize            516         36        480         12
+test_event            513         36        477         12
+test_event_cpi       2795       1164       1631         32
+total                3824       1236       2588         56
+proof: matched (120 transactions)
+
+[exit 0]

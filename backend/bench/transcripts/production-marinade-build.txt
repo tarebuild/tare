@@ -1,0 +1,8 @@
+$ tare build --host --manifest-path programs\marinade-finance\Cargo.toml
+building marinade-finance (Anchor 0.31.1)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 5 instructions rewritten; 837056 -> 782112 bytes
+marinade-finance: stock 964616 bytes -> tare 782112 bytes
+
+[exit 0]

@@ -1,0 +1,9 @@
+$ tare weigh --host --manifest-path programs\cashiers-check\Cargo.toml
+cashiers_check      gross       tare        net     inputs
+cancel_check         7973       2326       5647          8
+cash_check           7976       2328       5648          8
+create_check        10320       3420       6900         24
+total               26269       8074      18195         40
+proof: matched (989 transactions)
+
+[exit 0]

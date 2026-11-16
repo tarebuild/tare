@@ -1,0 +1,5 @@
+$ curl -fsSL http://127.0.0.1:7810/install.sh | sh
+Installed 0.7.0 to ~/.tare/bin
+Add Tare to PATH: export PATH="$HOME/.tare/bin:$PATH"
+$ tare --version
+tare 0.7.0

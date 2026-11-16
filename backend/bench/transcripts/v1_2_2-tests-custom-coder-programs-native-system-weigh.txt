@@ -1,0 +1,18 @@
+$ tare weigh --host --manifest-path programs\native-system\Cargo.toml
+native_system                 gross       tare        net     inputs
+advance_nonce_account          1291        958        333         32
+allocate                        565        352        213         32
+allocate_with_seed             1188        652        536         32
+assign                          552        341        211         32
+assign_with_seed               1187        651        536         32
+authorize_nonce_account         928        657        271         32
+create_account                  878        598        280         40
+create_account_with_seed       1511        908        603         40
+initialize_nonce_account       1282        903        379         32
+transfer                        915        641        274         40
+transfer_with_seed             1551        950        601         40
+withdraw_nonce_account         1985       1295        690         40
+total                         13833       8906       4927        424
+proof: matched (1160 transactions)
+
+[exit 0]

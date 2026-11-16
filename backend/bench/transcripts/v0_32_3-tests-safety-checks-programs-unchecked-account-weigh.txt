@@ -1,0 +1,7 @@
+$ tare weigh --host --manifest-path programs\unchecked-account\Cargo.toml
+safety_checks      gross       tare        net     inputs
+initialize           504        304        200         32
+total                504        304        200         32
+proof: matched (480 transactions)
+
+[exit 0]

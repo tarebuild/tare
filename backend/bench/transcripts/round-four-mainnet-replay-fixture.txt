@@ -1,0 +1,19 @@
+$ tare prove --host --replay input-replay.json --program Newid11111111111111111111111111111111111111 --samples 1 --url http://127.0.0.1:7814
+new_idl             gross       tare        net     inputs
+account_and_event_arg_and_field       1461        823        638         16
+empty                       204         61        143         12
+enm                        1537        848        689         16
+external                   1414        834        580         16
+external_non_anchor        1450        842        608         16
+full_path                  1928       1095        833         16
+generic                    6741       2328       4413         24
+generic_custom_struct       6743       2328       4415         24
+no_case_conversion         4550       2111       2439         24
+primitive_types            2544        983       1561         16
+strct                      2130        983       1147         16
+type_alias                 2506        871       1635         16
+unsized_types              1973        906       1067         16
+total                     35181      15013      20168        228
+proof: matched (1881 transactions)
+
+[exit 0; local RPC fixture]

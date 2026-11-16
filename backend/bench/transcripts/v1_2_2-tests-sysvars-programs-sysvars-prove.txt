@@ -1,0 +1,7 @@
+$ tare prove --host --manifest-path programs\sysvars\Cargo.toml
+sysvars      gross       tare        net     inputs
+sysvars       1228        716        512         32
+total         1228        716        512         32
+proof: matched (72 transactions)
+
+[exit 0]

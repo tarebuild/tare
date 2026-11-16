@@ -1,0 +1,8 @@
+$ tare prove --host --manifest-path programs\puppet\Cargo.toml
+puppet          gross       tare        net     inputs
+initialize       4374       2481       1893         24
+set_data         1305       1049        256         32
+total            5679       3530       2149         56
+proof: matched (268 transactions)
+
+[exit 0]

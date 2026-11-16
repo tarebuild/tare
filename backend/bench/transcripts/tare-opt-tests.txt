@@ -1,0 +1,42 @@
+$ tare --version
+tare 0.5.0
+
+$ cargo test --manifest-path toolchain/Cargo.toml -p tare-opt --locked --offline
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.18s
+     Running unittests src\lib.rs (toolchain\target\debug\deps\tare_opt-ac9b75f16b8dfff0.exe)
+
+running 23 tests
+test tests::recursive_call_thunk_does_not_become_the_relocation_sentinel ... ok
+test tests::alu32_zero_extension_is_never_treated_as_an_identity ... ok
+test tests::indirect_calls_keep_every_possible_target_live ... ok
+test tests::unreachable_lddw_is_neutralized_as_a_complete_pair ... ok
+test tests::call_trampolines_preserve_registers_memory_and_frame_return ... ok
+test tests::branch_entry_and_relocation_prevent_unsound_stack_forwarding ... ok
+test tests::unreachable_code_is_neutralized_without_touching_live_results ... ok
+test tests::stack_reload_with_a_taken_branch_entry_is_retained ... ok
+test tests::branch_threading_preserves_taken_and_untaken_paths ... ok
+test tests::compact_dead_blocks_and_retarget_direct_branches ... ok
+test tests::nonallocated_debug_removal_preserves_vm_execution ... ok
+test tests::unreachable_function_body_and_symbol_are_removed_together ... ok
+test tests::rewritten_elf_is_admitted_by_real_agave_loader ... ok
+test tests::already_based_relocations_do_not_add_the_vm_base_twice ... ok
+test tests::identical_functions_with_data_relocations_are_merged_once ... ok
+test tests::different_literal_relocations_do_not_merge_observable_results ... ok
+test tests::identical_direct_call_functions_share_one_body ... ok
+test tests::relocation_compaction_preserves_symbols_data_function_pointers_and_calls ... ok
+test tests::stack_reload_forwarding_preserves_full_width_and_faults ... ok
+test tests::sbpf_v0_multiply32_sign_extension_is_preserved ... ok
+test tests::identity_runs_preserve_all_machine_state_and_skip_work ... ok
+test tests::constant_register_branches_preserve_both_destinations ... ok
+test tests::arithmetic_strength_reduction_preserves_wraparound_and_zero_extension ... ok
+
+test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.59s
+
+   Doc-tests tare_opt
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+[exit 0]

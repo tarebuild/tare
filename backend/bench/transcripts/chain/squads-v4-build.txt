@@ -1,0 +1,9 @@
+$ tare build --host --manifest-path programs/squads_multisig_program/Cargo.toml --idl ../../production/controls/squads-v4/verified-idl.json
+building squads-multisig-program (Anchor 0.32.1)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 23 instructions rewritten; 826176 -> 777488 bytes
+IDL: explicit supplied input verified-idl.json
+squads-multisig-program: stock 791768 bytes -> tare 777488 bytes
+
+[exit 0]

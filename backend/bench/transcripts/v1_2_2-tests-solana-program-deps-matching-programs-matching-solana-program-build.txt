@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\matching-solana-program\Cargo.toml
+building matching-solana-program (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 37024 -> 33808 bytes
+matching-solana-program: stock 54992 bytes -> tare 33808 bytes
+
+[exit 0]

@@ -1,0 +1,4 @@
+$ tare build --host --manifest-path programs\openbook-v2\Cargo.toml --features enable-gpl
+error: unsupported Anchor version 0.29.0 at programs\openbook-v2\Cargo.toml:26; supported: 0.31.1, 0.32.1, 0.32.3, 1.2.2
+
+[exit 1]

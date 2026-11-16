@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\optional\Cargo.toml
+building optional (Anchor 1.2.2)
+bytecode: 4 instructions rewritten; 200624 -> 186288 bytes
+optional: stock 186048 bytes -> tare 186288 bytes
+
+[exit 0]

@@ -1,0 +1,34 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/accountloader-realloc
+Recorded: 2026-11-15T02:56:38.379Z
+$ tare build --host --manifest-path programs\accountloader-realloc\Cargo.toml
+building accountloader-realloc (Anchor 1.2.2)
+bytecode: 4 instructions rewritten; 143384 -> 132296 bytes
+accountloader-realloc: stock 161768 bytes -> tare 132296 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\accountloader-realloc\Cargo.toml
+accountloader_realloc      gross       tare        net     inputs
+initialize                  5933       2567       3366         48
+initialize_legacy           7285       2514       4771         48
+migrate                     4944       1155       3789         80
+read                        2294        387       1907         80
+read_extra                  3794        388       3406         64
+shrink                      5175       1005       4170         20
+total                      29425       8016      21409        340
+proof: matched (1836 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\accountloader-realloc\Cargo.toml
+accountloader_realloc      gross       tare        net     inputs
+initialize                  5933       2567       3366         48
+initialize_legacy           7285       2514       4771         48
+migrate                     4944       1155       3789         80
+read                        2294        387       1907         80
+read_extra                  3794        388       3406         64
+shrink                      5175       1005       4170         20
+total                      29425       8016      21409        340
+proof: matched (1836 transactions)
+
+[exit 0]

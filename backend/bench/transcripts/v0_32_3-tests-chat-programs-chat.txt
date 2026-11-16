@@ -1,0 +1,28 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/chat
+Recorded: 2026-11-15T03:00:13.728Z
+$ tare build --host --manifest-path programs\chat\Cargo.toml
+building chat (Anchor 0.32.3)
+bytecode: 1 instructions rewritten; 169992 -> 155768 bytes
+chat: stock 200712 bytes -> tare 155768 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\chat\Cargo.toml
+chat                  gross       tare        net     inputs
+create_chat_room       1723        877        846         16
+create_user            6804       2469       4335         24
+send_message           3691        759       2932         32
+total                 12218       4105       8113         72
+proof: matched (828 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\chat\Cargo.toml
+chat                  gross       tare        net     inputs
+create_chat_room       1723        877        846         16
+create_user            6804       2469       4335         24
+send_message           3691        759       2932         32
+total                 12218       4105       8113         72
+proof: matched (828 transactions)
+
+[exit 0]

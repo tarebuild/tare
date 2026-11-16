@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/anchor-cli-legacy-idl
+Recorded: 2026-11-15T02:45:22.095Z
+$ tare build --host --manifest-path programs\anchor-cli-legacy-idl\Cargo.toml
+building anchor-cli-legacy-idl (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 92832 -> 84960 bytes
+anchor-cli-legacy-idl: stock 167752 bytes -> tare 84960 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\anchor-cli-legacy-idl\Cargo.toml
+anchor_cli_legacy_idl      gross       tare        net     inputs
+initialize                   538        326        212         32
+total                        538        326        212         32
+proof: matched (488 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\anchor-cli-legacy-idl\Cargo.toml
+anchor_cli_legacy_idl      gross       tare        net     inputs
+initialize                   538        326        212         32
+total                        538        326        212         32
+proof: matched (488 transactions)
+
+[exit 0]

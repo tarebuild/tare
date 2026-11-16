@@ -1,0 +1,5 @@
+$ tare attest --host --manifest-path programs/new-idl/Cargo.toml
+attest fee: 10000000 lamports
+record: 2RXBphHVTEVrZSU6etM6oE5K1WGgs4gLxwr1e14BEbJV
+transaction: 3hzjfXPCoTt6jjBZDS3JgDwE2VZRfpmHR382gD4ycseCZEE41rjPSLymfdnqEkp6TkRQZEQXYT9xddM2zahT6i5p
+http://127.0.0.1:7801/builds/2RXBphHVTEVrZSU6etM6oE5K1WGgs4gLxwr1e14BEbJV

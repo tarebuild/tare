@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\idl-commands-two\Cargo.toml
+building idl-commands-two (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 108336 -> 99504 bytes
+idl-commands-two: stock 162240 bytes -> tare 99504 bytes
+
+[exit 0]

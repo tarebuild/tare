@@ -1,0 +1,8 @@
+$ tare build --host --manifest-path programs\whirlpool\Cargo.toml --features mainnet
+building whirlpool (Anchor 0.32.1)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 14 instructions rewritten; 1509144 -> 1445224 bytes
+whirlpool: stock 1556816 bytes -> tare 1445224 bytes
+
+[exit 0]

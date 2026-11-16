@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\tictactoe\Cargo.toml
+building tictactoe (Anchor 1.2.2)
+bytecode: 4 instructions rewritten; 91712 -> 85488 bytes
+tictactoe: stock 123816 bytes -> tare 85488 bytes
+
+[exit 0]

@@ -1,0 +1,15 @@
+$ tare prove --host --manifest-path programs\duplicate-mutable-accounts\Cargo.toml
+duplicate_mutable_accounts            gross       tare        net     inputs
+allows_duplicate_mutable               1852       1474        378         40
+allows_duplicate_readonly               958        568        390         32
+fails_duplicate_mutable                2311       1926        385         32
+init_if_needed_duplicate_mutable       6219       3885       2334         48
+init_multiple_with_same_payer          7809       3875       3934         24
+initialize                             4385       2483       1902         24
+mixed_duplicate                        3093       2136        957         32
+nested_duplicate                       3857       2695       1162         32
+use_remaining_accounts                 1861        949        912         32
+total                                 32345      19991      12354        296
+proof: matched (1384 transactions)
+
+[exit 0]

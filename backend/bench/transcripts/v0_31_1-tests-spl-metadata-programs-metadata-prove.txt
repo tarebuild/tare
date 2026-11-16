@@ -1,0 +1,6 @@
+$ tare prove --host --manifest-path programs\metadata\Cargo.toml
+metadata      gross       tare        net     inputs
+total             0          0          0          0
+proof: matched (416 transactions)
+
+[exit 0]

@@ -1,0 +1,8 @@
+$ tare build --host --manifest-path programs\multisig\Cargo.toml
+building multisig (Anchor 0.31.1)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 1 instructions rewritten; 183152 -> 170432 bytes
+multisig: stock 212080 bytes -> tare 170432 bytes
+
+[exit 0]

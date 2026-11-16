@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\unchecked-account\Cargo.toml
+building unchecked-account (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 38664 -> 35352 bytes
+unchecked-account: stock 55616 bytes -> tare 35352 bytes
+
+[exit 0]

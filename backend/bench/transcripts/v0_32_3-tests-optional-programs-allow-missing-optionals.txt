@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/optional
+Recorded: 2026-11-15T02:54:20.834Z
+$ tare build --host --manifest-path programs\allow-missing-optionals\Cargo.toml
+building allow-missing-optionals (Anchor 0.32.3)
+bytecode: 2 instructions rewritten; 131400 -> 121192 bytes
+allow-missing-optionals: stock 178296 bytes -> tare 121192 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\allow-missing-optionals\Cargo.toml
+allow_missing_optionals      gross       tare        net     inputs
+do_stuff                      4343       2101       2242         36
+total                         4343       2101       2242         36
+proof: matched (596 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\allow-missing-optionals\Cargo.toml
+allow_missing_optionals      gross       tare        net     inputs
+do_stuff                      4343       2101       2242         36
+total                         4343       2101       2242         36
+proof: matched (596 transactions)
+
+[exit 0]

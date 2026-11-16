@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\token-proxy\Cargo.toml
+building token-proxy (Anchor 0.32.3)
+bytecode: 2 instructions rewritten; 244320 -> 230496 bytes
+token-proxy: stock 300464 bytes -> tare 230496 bytes
+
+[exit 0]

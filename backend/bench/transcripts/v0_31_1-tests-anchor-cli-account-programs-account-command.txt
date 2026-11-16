@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/anchor-cli-account
+Recorded: 2026-11-15T02:56:52.599Z
+$ tare build --host --manifest-path programs\account-command\Cargo.toml
+building account-command (Anchor 0.31.1)
+bytecode: 1 instructions rewritten; 144896 -> 133680 bytes
+account-command: stock 185592 bytes -> tare 133680 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\account-command\Cargo.toml
+account_command      gross       tare        net     inputs
+initialize            5297       2608       2689         24
+total                 5297       2608       2689         24
+proof: matched (584 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\account-command\Cargo.toml
+account_command      gross       tare        net     inputs
+initialize            5297       2608       2689         24
+total                 5297       2608       2689         24
+proof: matched (584 transactions)
+
+[exit 0]

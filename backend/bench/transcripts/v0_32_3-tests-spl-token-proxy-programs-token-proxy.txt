@@ -1,0 +1,38 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/spl/token-proxy
+Recorded: 2026-11-15T03:07:57.718Z
+$ tare build --host --manifest-path programs\token-proxy\Cargo.toml
+building token-proxy (Anchor 0.32.3)
+bytecode: 2 instructions rewritten; 244320 -> 230496 bytes
+token-proxy: stock 300464 bytes -> tare 230496 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\token-proxy\Cargo.toml
+token_proxy                                gross       tare        net     inputs
+proxy_burn                                  5222        510       4712         32
+proxy_create_associated_token_account      23110       1113      21997         24
+proxy_create_mint                          12532       2163      10369         24
+proxy_create_token_account                 10467       2204       8263         24
+proxy_mint_to                               5138        512       4626         32
+proxy_optional_transfer                     4955        652       4303         56
+proxy_set_authority                         3820        723       3097          8
+proxy_transfer                              5068        295       4773         40
+total                                      70312       8172      62140        240
+proof: matched (1824 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\token-proxy\Cargo.toml
+token_proxy                                gross       tare        net     inputs
+proxy_burn                                  5222        510       4712         32
+proxy_create_associated_token_account      23110       1113      21997         24
+proxy_create_mint                          12532       2163      10369         24
+proxy_create_token_account                 10467       2204       8263         24
+proxy_mint_to                               5138        512       4626         32
+proxy_optional_transfer                     4955        652       4303         56
+proxy_set_authority                         3820        723       3097          8
+proxy_transfer                              5068        295       4773         40
+total                                      70312       8172      62140        240
+proof: matched (1824 transactions)
+
+[exit 0]

@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\caller\Cargo.toml
+building caller (Anchor 0.32.3)
+bytecode: 0 instructions rewritten; 153744 -> 141328 bytes
+caller: stock 184456 bytes -> tare 141328 bytes
+
+[exit 0]

@@ -1,0 +1,6 @@
+$ tare weigh --host --manifest-path programs\spl-token\Cargo.toml
+spl_token      gross       tare        net     inputs
+total              0          0          0          0
+proof: matched (8 transactions)
+
+[exit 0]

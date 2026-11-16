@@ -1,0 +1,14 @@
+$ TARE_REHEARSAL_DEFECT=dispatch-log tare flag 7dSFXGXxgH2HUUMrC5jh8zJE286Ldmzu2iFWXPe6VmS7 --input new-idl-input.json
+record: 7dSFXGXxgH2HUUMrC5jh8zJE286Ldmzu2iFWXPe6VmS7
+commit: 0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66
+building new-idl (Anchor 0.32.3)
+bytecode: 8 instructions rewritten; 267880 -> 249768 bytes
+new-idl: stock 283536 bytes -> tare 249768 bytes
+stock hash: bb4a41c5c8301fe42f542a1ec25574e0c9d1b05dc49b7c3666565b8bad4f6398 (matches)
+tare hash: 39ed295a8e2cf7a88ec1675f646062bc4ca542349c5ff62892c16b67e274af0a (matches)
+REHEARSAL DEFECT ENABLED: dispatch-log; this artifact must not be attested
+building new-idl (Anchor 0.32.3)
+bytecode: 8 instructions rewritten; 268096 -> 249968 bytes
+new-idl: stock 283536 bytes -> tare 249968 bytes
+flag: 3ZZ1FUXdzQh4R1bvShBih96Bvnfax3jsGEbJRdpirizh
+transaction: 3VYKYc2J6HYa4gueAoB6G87uGaWxpeHttjMetxNqjgRWPMSnzxVCK4xCTmhtisuDMXN1hujgPe3QSA73jnkYRjBB

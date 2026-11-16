@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\multiple-suites-run-single\Cargo.toml
+building multiple-suites-run-single (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 108352 -> 99520 bytes
+multiple-suites-run-single: stock 162216 bytes -> tare 99520 bytes
+
+[exit 0]

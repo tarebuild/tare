@@ -1,0 +1,7 @@
+$ tare prove --host --manifest-path programs\allow-missing-optionals\Cargo.toml
+allow_missing_optionals      gross       tare        net     inputs
+do_stuff                      4420       2143       2277         36
+total                         4420       2143       2277         36
+proof: matched (188 transactions)
+
+[exit 0]

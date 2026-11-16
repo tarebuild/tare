@@ -1,0 +1,28 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/spl/token-wrapper
+Recorded: 2026-11-15T03:02:34.913Z
+$ tare build --host --manifest-path programs\token-wrapper\Cargo.toml
+building token-wrapper (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 177320 -> 167864 bytes
+token-wrapper: stock 236232 bytes -> tare 167864 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\token-wrapper\Cargo.toml
+token_wrapper      gross       tare        net     inputs
+initialize         38355       5443      32912         32
+unwrap             18330       3961      14369         36
+wrap               22565       3884      18681         48
+total              79250      13288      65962        116
+proof: matched (1944 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\token-wrapper\Cargo.toml
+token_wrapper      gross       tare        net     inputs
+initialize         38355       5443      32912         32
+unwrap             18330       3961      14369         36
+wrap               22565       3884      18681         48
+total              79250      13288      65962        116
+proof: matched (1944 transactions)
+
+[exit 0]

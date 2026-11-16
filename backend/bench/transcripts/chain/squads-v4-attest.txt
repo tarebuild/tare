@@ -1,0 +1,5 @@
+$ tare attest --host --manifest-path programs/squads_multisig_program/Cargo.toml
+attest fee: 10000000 lamports
+record: AK1RjjovGLJbj5vEdzh4EtMEwdkTsRN2PYUVUASz4hpL
+transaction: 3T4dBCAhtYA99G512mbNTkukQyu8bG4NJoKFPpfGoBUrbuPHn4imw9cZk6K1VNemP5As336isuww2NeuCk4fPQ4k
+http://127.0.0.1:7801/builds/AK1RjjovGLJbj5vEdzh4EtMEwdkTsRN2PYUVUASz4hpL

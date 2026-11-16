@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\escrow\Cargo.toml
+building escrow (Anchor 1.2.2)
+bytecode: 2 instructions rewritten; 145920 -> 137184 bytes
+escrow: stock 195656 bytes -> tare 137184 bytes
+
+[exit 0]

@@ -1,0 +1,8 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/openbook-dex/openbook-v2/tree/f3e17421e675b083b584867594bf3cf4f675d156/.
+Recorded: 2026-11-15T03:12:35.184Z
+$ tare build --host --manifest-path programs\openbook-v2\Cargo.toml --features enable-gpl
+error: unsupported Anchor version 0.29.0 at programs\openbook-v2\Cargo.toml:26; supported: 0.31.1, 0.32.1, 0.32.3, 1.2.2
+
+[exit 1]

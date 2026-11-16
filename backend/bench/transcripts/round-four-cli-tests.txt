@@ -1,0 +1,20 @@
+$ tare --version
+tare 0.5.0
+
+   Compiling tare v0.4.0 (backend\toolchain\crates\tare)
+    Finished `release` profile [optimized] target(s) in 5.90s
+     Running unittests src\main.rs (toolchain\target\release\deps\tare-1509f18f77b76f84.exe)
+
+running 6 tests
+test container_paths::tests::posix_workspace_above_current_folder ... ok
+test container_paths::tests::root_manifest_and_escape_rejected ... ok
+test container_paths::tests::unicode_paths_keep_component_boundaries ... ok
+test container_paths::tests::windows_drive_and_nested_manifest ... ok
+test wire::tests::exact_u64_document_roundtrip ... ok
+test container_paths::tests::windows_extended_drive_case_and_spaces ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+$ cargo test --locked --release --manifest-path toolchain/Cargo.toml -p tare --bin tare
+
+[exit 0]

@@ -1,0 +1,24 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/cpi-returns
+Recorded: 2026-11-15T02:49:25.132Z
+$ tare build --host --manifest-path programs\malicious\Cargo.toml
+building malicious (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 39056 -> 35696 bytes
+malicious: stock 56016 bytes -> tare 35696 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\malicious\Cargo.toml
+malicious              gross       tare        net     inputs
+spoof_return_data        666        357        309         32
+total                    666        357        309         32
+proof: matched (80 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\malicious\Cargo.toml
+malicious              gross       tare        net     inputs
+spoof_return_data        666        357        309         32
+total                    666        357        309         32
+proof: matched (80 transactions)
+
+[exit 0]

@@ -1,0 +1,2 @@
+$ tare --version
+tare 0.7.0

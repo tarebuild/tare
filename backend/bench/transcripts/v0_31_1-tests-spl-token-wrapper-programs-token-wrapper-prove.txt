@@ -1,0 +1,9 @@
+$ tare prove --host --manifest-path programs\token-wrapper\Cargo.toml
+token_wrapper      gross       tare        net     inputs
+initialize         39109       6262      32847         32
+unwrap             15191       1053      14138         45
+wrap               19414        989      18425         48
+total              73714       8304      65410        125
+proof: matched (2760 transactions)
+
+[exit 0]

@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\init-if-needed\Cargo.toml
+building init-if-needed (Anchor 1.2.2)
+bytecode: 3 instructions rewritten; 91728 -> 85152 bytes
+init-if-needed: stock 145760 bytes -> tare 85152 bytes
+
+[exit 0]

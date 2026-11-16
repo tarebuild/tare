@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\spl-token\Cargo.toml
+building spl-token (Anchor 0.31.1)
+bytecode: 0 instructions rewritten; 108200 -> 99384 bytes
+spl-token: stock 162072 bytes -> tare 99384 bytes
+
+[exit 0]

@@ -1,0 +1,28 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/cashiers-check
+Recorded: 2026-11-15T03:00:16.616Z
+$ tare build --host --manifest-path programs\cashiers-check\Cargo.toml
+building cashiers-check (Anchor 1.2.2)
+bytecode: 1 instructions rewritten; 134984 -> 126376 bytes
+cashiers-check: stock 152184 bytes -> tare 126376 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\cashiers-check\Cargo.toml
+cashiers_check      gross       tare        net     inputs
+cancel_check         7973       2326       5647          8
+cash_check           7976       2328       5648          8
+create_check        10320       3420       6900         24
+total               26269       8074      18195         40
+proof: matched (989 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\cashiers-check\Cargo.toml
+cashiers_check      gross       tare        net     inputs
+cancel_check         7973       2326       5647          8
+cash_check           7976       2328       5648          8
+create_check        10320       3420       6900         24
+total               26269       8074      18195         40
+proof: matched (989 transactions)
+
+[exit 0]

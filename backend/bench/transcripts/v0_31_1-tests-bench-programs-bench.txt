@@ -1,0 +1,196 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/47284f8f0b9844c6b83234aa90f556bad00e12ed/tests/bench
+Recorded: 2026-11-15T03:13:23.630Z
+$ tare build --host --manifest-path programs\bench\Cargo.toml
+building bench (Anchor 0.31.1)
+bytecode: 90 instructions rewritten; 1310888 -> 1252168 bytes
+bench: stock 1066792 bytes -> tare 1252168 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\bench\Cargo.toml
+bench                               gross       tare        net     inputs
+account_empty1                        586        309        277         32
+account_empty2                        898        509        389         16
+account_empty4                       1517        688        829         16
+account_empty8                       2757       1284       1473         16
+account_empty_init1                  4408       2592       1816         24
+account_empty_init2                  7886       4000       3886         16
+account_empty_init4                 14843       7492       7351         16
+account_empty_init8                 28819      14757      14062         16
+account_info1                         568        356        212         32
+account_info2                         905        634        271         32
+account_info4                        1556       1041        515         32
+account_info8                        2892       2035        857         32
+account_sized1                        604        316        288         32
+account_sized2                        919        502        417         16
+account_sized4                       1575        696        879         16
+account_sized8                       2891       1316       1575         16
+account_sized_init1                  4464       2497       1967         24
+account_sized_init2                  7998       4026       3972         16
+account_sized_init4                 15081       7576       7505         16
+account_sized_init8                 29263      14856      14407         16
+account_unsized1                      628        320        308         32
+account_unsized2                      992        541        451         16
+account_unsized4                     1728        732        996         16
+account_unsized8                     3203       1343       1860         16
+account_unsized_init1                4559       2637       1922         24
+account_unsized_init2                8216       4055       4161         16
+account_unsized_init4               15486       7590       7896         16
+account_unsized_init8               30030      14929      15101         16
+boxed_account_empty1                  593        304        289         32
+boxed_account_empty2                  928        507        421         16
+boxed_account_empty4                 1588        837        751         16
+boxed_account_empty8                 2967       1644       1323         16
+boxed_account_empty_init1            4438       2481       1957         16
+boxed_account_empty_init2            7944       4149       3795         16
+boxed_account_empty_init4           14960       7790       7170         16
+boxed_account_empty_init8           29049      15123      13926         16
+boxed_account_sized1                  614        311        303         32
+boxed_account_sized2                  964        517        447         16
+boxed_account_sized4                 1657        858        799         16
+boxed_account_sized8                 3108       1691       1417         16
+boxed_account_sized_init1            4492       2537       1955         16
+boxed_account_sized_init2            8054       4183       3871         16
+boxed_account_sized_init4           15176       7849       7327         16
+boxed_account_sized_init8           29481      15224      14257         16
+boxed_account_unsized1                647        325        322         32
+boxed_account_unsized2               1032        545        487         16
+boxed_account_unsized4               1797        915        882         16
+boxed_account_unsized8               3395       1809       1586         16
+boxed_account_unsized_init1          4575       2600       1975         16
+boxed_account_unsized_init2          8235       4216       4019         16
+boxed_account_unsized_init4         15557       7925       7632         16
+boxed_account_unsized_init8         30201      15343      14858         16
+boxed_interface_account_mint1         780        260        520         32
+boxed_interface_account_mint2        1301        416        885         32
+boxed_interface_account_mint4        2333        658       1675         32
+boxed_interface_account_mint8        4457       1286       3171         32
+boxed_interface_account_token1        908        180        728         32
+boxed_interface_account_token2       1555        256       1299         32
+boxed_interface_account_token4       2845        338       2507         32
+boxed_interface_account_token8       5481        646       4835         32
+interface1                            557        297        260         32
+interface2                            695        355        340         32
+interface4                            962        335        627         32
+interface8                           1496        455       1041         32
+interface_account_mint1               771        273        498         32
+interface_account_mint2              1285        448        837         32
+interface_account_mint4              2309        544       1765         32
+interface_account_mint8              4361       1060       3301         32
+interface_account_token1              917        189        728         32
+interface_account_token2             1568        175       1393         32
+interface_account_token4             2870        219       2651         32
+program1                              549        302        247         32
+program2                              673        365        308         32
+program4                              918        351        567         32
+program8                             1414        495        919         32
+signer1                               549        318        231         32
+signer2                               822        527        295         32
+signer4                              1345        799        546         32
+signer8                              2407       1513        894         32
+system_account1                       561        322        239         32
+system_account2                       842        531        311         32
+system_account4                      1389        813        576         32
+system_account8                      2487       1533        954         32
+unchecked_account1                    523        292        231         32
+unchecked_account2                    780        491        289         32
+unchecked_account4                   1276        740        536         32
+unchecked_account8                   2265       1391        874         32
+total                              442975     218485     224490       2136
+proof: matched (16920 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\bench\Cargo.toml
+bench                               gross       tare        net     inputs
+account_empty1                        586        309        277         32
+account_empty2                        898        509        389         16
+account_empty4                       1517        688        829         16
+account_empty8                       2757       1284       1473         16
+account_empty_init1                  4408       2592       1816         24
+account_empty_init2                  7886       4000       3886         16
+account_empty_init4                 14843       7492       7351         16
+account_empty_init8                 28819      14757      14062         16
+account_info1                         568        356        212         32
+account_info2                         905        634        271         32
+account_info4                        1556       1041        515         32
+account_info8                        2892       2035        857         32
+account_sized1                        604        316        288         32
+account_sized2                        919        502        417         16
+account_sized4                       1575        696        879         16
+account_sized8                       2891       1316       1575         16
+account_sized_init1                  4464       2497       1967         24
+account_sized_init2                  7998       4026       3972         16
+account_sized_init4                 15081       7576       7505         16
+account_sized_init8                 29263      14856      14407         16
+account_unsized1                      628        320        308         32
+account_unsized2                      992        541        451         16
+account_unsized4                     1728        732        996         16
+account_unsized8                     3203       1343       1860         16
+account_unsized_init1                4559       2637       1922         24
+account_unsized_init2                8216       4055       4161         16
+account_unsized_init4               15486       7590       7896         16
+account_unsized_init8               30030      14929      15101         16
+boxed_account_empty1                  593        304        289         32
+boxed_account_empty2                  928        507        421         16
+boxed_account_empty4                 1588        837        751         16
+boxed_account_empty8                 2967       1644       1323         16
+boxed_account_empty_init1            4438       2481       1957         16
+boxed_account_empty_init2            7944       4149       3795         16
+boxed_account_empty_init4           14960       7790       7170         16
+boxed_account_empty_init8           29049      15123      13926         16
+boxed_account_sized1                  614        311        303         32
+boxed_account_sized2                  964        517        447         16
+boxed_account_sized4                 1657        858        799         16
+boxed_account_sized8                 3108       1691       1417         16
+boxed_account_sized_init1            4492       2537       1955         16
+boxed_account_sized_init2            8054       4183       3871         16
+boxed_account_sized_init4           15176       7849       7327         16
+boxed_account_sized_init8           29481      15224      14257         16
+boxed_account_unsized1                647        325        322         32
+boxed_account_unsized2               1032        545        487         16
+boxed_account_unsized4               1797        915        882         16
+boxed_account_unsized8               3395       1809       1586         16
+boxed_account_unsized_init1          4575       2600       1975         16
+boxed_account_unsized_init2          8235       4216       4019         16
+boxed_account_unsized_init4         15557       7925       7632         16
+boxed_account_unsized_init8         30201      15343      14858         16
+boxed_interface_account_mint1         780        260        520         32
+boxed_interface_account_mint2        1301        416        885         32
+boxed_interface_account_mint4        2333        658       1675         32
+boxed_interface_account_mint8        4457       1286       3171         32
+boxed_interface_account_token1        908        180        728         32
+boxed_interface_account_token2       1555        256       1299         32
+boxed_interface_account_token4       2845        338       2507         32
+boxed_interface_account_token8       5481        646       4835         32
+interface1                            557        297        260         32
+interface2                            695        355        340         32
+interface4                            962        335        627         32
+interface8                           1496        455       1041         32
+interface_account_mint1               771        273        498         32
+interface_account_mint2              1285        448        837         32
+interface_account_mint4              2309        544       1765         32
+interface_account_mint8              4361       1060       3301         32
+interface_account_token1              917        189        728         32
+interface_account_token2             1568        175       1393         32
+interface_account_token4             2870        219       2651         32
+program1                              549        302        247         32
+program2                              673        365        308         32
+program4                              918        351        567         32
+program8                             1414        495        919         32
+signer1                               549        318        231         32
+signer2                               822        527        295         32
+signer4                              1345        799        546         32
+signer8                              2407       1513        894         32
+system_account1                       561        322        239         32
+system_account2                       842        531        311         32
+system_account4                      1389        813        576         32
+system_account8                      2487       1533        954         32
+unchecked_account1                    523        292        231         32
+unchecked_account2                    780        491        289         32
+unchecked_account4                   1276        740        536         32
+unchecked_account8                   2265       1391        874         32
+total                              442975     218485     224490       2136
+proof: matched (16920 transactions)
+
+[exit 0]

@@ -1,0 +1,95 @@
+$ tare prove --host --manifest-path programs/whirlpool/Cargo.toml
+Diagnostic: native trace_corpus over the 33 committed production-sequence inputs from the stored round-seven corpus.
+Both builds match all 33 inputs. The full round-seven corpus remains 217 inputs.
+
+Stock ELF SHA256: fec143db942af4175835d0396cbd039765c1c6700ac97ef0b21d37161b208ea4
+Tare ELF SHA256: 13c03d96ba4b20971fdce1866ccb5374f00f2804c455b9ab7cb3a72dfd14858d
+
+instruction       stock CU  tare CU  stock root instructions  tare root instructions  stock memcpy  tare memcpy
+close_position        8504     8795                     4564                    4795            20           26
+collect_fees         10199    10334                     7305                    7420            71           73
+swap                 26173    26184                    21026                   20997           101          105
+
+Both token invocations execute identical instruction counts in stock and Tare:
+close_position: 126 + 110; collect_fees: 94 + 94; swap: 76 + 76.
+All three invoke the token program twice and log once.
+The root VM differences are +231, +115, -29; extra memcpy syscall counts are +6, +2, +4.
+At the 10 CU syscall floor, these account exactly for the remaining +60, +20, +40 CU.
+
+Retained Tare family counts from the executed root instructions:
+- Box<...>::ToAccountInfo::__tare_info: 45 in close_position, 225 in collect_fees, 180 in swap.
+- SDK AccountView::from_sdk: 44 in close_position, 220 in collect_fees and swap.
+- This default Box trait path clones AccountInfo and allocates an SdkCache; underlying Account/InterfaceAccount already carry the original AccountView.
+- Box trait delegation to underlying __tare_info can remove the cache allocation without changing account bytes or borrow state.
+- Boxed field loading also adds structure copies: 96-byte copies three times per TokenAccount; Whirlpools snapshot is copied in 304-byte chunks.
+
+These are measured executed-instruction counts, not independent additive source-level CU estimates.
+The diagnostic JSON and native trace build are temporary and removed after analysis.
+
+Candidate trace after shared SDK exit/materialization and Box view delegation:
+Stock/Tare account bytes, lamports, logs, return data and errors match on all 33 inputs.
+Tare ELF SHA256: 069536f37c4b02c948d7a7bfbd931495483200c46b4999ed64af140d9a617a36
+Tare ELF bytes: 1389480
+
+instruction       stock CU  tare CU  stock root instructions  tare root instructions  stock memcpy  tare memcpy
+close_position        8504     8739                     4564                    4739            20           26
+collect_fees         10199     9991                     7305                    7077            71           73
+swap                 26173    25842                    21026                   20655           101          105
+
+Rejected broad SDK field-loader inlining trial:
+ELF bytes: 2025296 (stock 1556816).
+All 33 committed-prefix inputs matched.
+instruction       stock CU  tare CU  root net instructions  net memcpy
+close_position        8504     8618                  4638          24
+collect_fees         10199     9957                  7043          73
+swap                 26173    25741                 20554         105
+
+Account output-slot loading trial:
+All 33 committed-prefix inputs matched.
+ELF bytes: 1374264
+ELF SHA256: cec1439dbab85f7e3d1fab5aec49d3c3181a14f5a0634995505b0173a5de1acd
+instruction       stock CU  tare CU  root net instructions  net memcpy
+close_position        8504     8781                  4781          26
+collect_fees         10199    10055                  7141          73
+swap                 26173    25954                 20747         107
+
+Compact close-context inlining trial:
+All 33 committed-prefix inputs matched.
+ELF bytes: 1388304
+ELF SHA256: 91a255b048b50041ee53d38695bc49cbccac2bb7e408682def22b81019593e31
+instruction       stock CU  tare CU  root net instructions  net memcpy
+close_position        8504     8691                  4701          25
+collect_fees         10199     9991                  7077          73
+swap                 26173    25842                 20655         105
+
+Compact close-context and field inlining trial:
+All 33 committed-prefix inputs matched.
+ELF bytes: 1470184
+ELF SHA256: 6265309be34fae8be92520f22dca43bd5974914ca2850f3444418e1de448aaa6
+instruction       stock CU  tare CU  root net instructions  net memcpy
+close_position        8504     8626                  4706          18
+collect_fees         10199     9991                  7077          73
+swap                 26173    25842                 20655         105
+
+Compact close-context, fields and checks inlining trial:
+All 33 committed-prefix inputs matched.
+ELF bytes: 1456752
+ELF SHA256: 6848282fecd4b0b68fe6be0a25ced1900e27c55a3838dd1d4865dd148fd6e3c9
+instruction       stock CU  tare CU  root net instructions  net memcpy
+close_position        8504     8380                  4470          17
+collect_fees         10199     9991                  7077          73
+swap                 26173    25842                 20655         105
+
+The successful close-context trial removes the remaining caller overhead: root VM 4564 -> 4470 and memcpy 20 -> 17, totaling 124 CU below stock.
+Token callee traces remain identical. The final acceptance run still uses the whole 217-input corpus, not this diagnostic prefix.
+
+Accepted compiler candidate: compact close contexts (at most six fields, no init/zero/realloc) inline validation and field loading; other contexts retain shared loaders. Box account views delegate to the underlying view; SDK Account exit and materialization remain shared.
+Trace harness and baseline CLI identify as 0.6.0; these trial ELFs precede the 0.7.0 release-label rebuild. The release-label rebuild is verified separately by the full corpus run.
+
+0.7.0 full canary: 217 transactions matched, 20 reached instructions all strictly below stock; gross 184638 CU, net 173399 CU. ELF 1456752 bytes versus stock 1556816.
+
+Final corrected policy (boxed, leaf-only close context) on 0.7.0: 217/217 full-corpus transactions matched; 20 reached instructions strictly below stock.
+Final canary ELF: 1445224 bytes; SHA256 5cee89b2b68ca1f7615076e977b3c69084ecac5fb6a1b2fd2b57e7b542179188.
+close_position: stock 8504 CU -> Tare 8380 CU.
+collect_fees: stock 10199 CU -> Tare 9991 CU.
+swap: stock 26173 CU -> Tare 25842 CU.

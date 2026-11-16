@@ -1,0 +1,22 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/spl/metadata
+Recorded: 2026-11-15T02:39:10.710Z
+$ tare build --host --manifest-path programs\metadata\Cargo.toml
+building metadata (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 37008 -> 33808 bytes
+metadata: stock 54768 bytes -> tare 33808 bytes
+
+[exit 0]
+$ tare weigh --host --manifest-path programs\metadata\Cargo.toml
+metadata      gross       tare        net     inputs
+total             0          0          0          0
+proof: matched (8 transactions)
+
+[exit 0]
+$ tare prove --host --manifest-path programs\metadata\Cargo.toml
+metadata      gross       tare        net     inputs
+total             0          0          0          0
+proof: matched (8 transactions)
+
+[exit 0]

@@ -1,0 +1,21 @@
+$ tare --version
+tare 0.7.0
+Source: https://github.com/solana-foundation/anchor/tree/8d9d1488d9b8af41b266d7513eea2e668adf15a2/tests/test-instruction-validation/fail-args-count
+Recorded: 2026-11-15T02:51:50.751Z
+$ tare build --host --manifest-path programs\test-instruction-validation\Cargo.toml
+building test-instruction-validation (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 61832 -> 56760 bytes
+[2026-11-15T02:51:57.036961700Z WARN  cargo_build_sbf] Package 'test-instruction-validation' has two crate types defined: cdylib and lib. This setting precludes link-time optimizations (LTO). Use cdylib for programs to be deployed and rlib for packages to be imported by other programs as libraries.
+    Blocking waiting for file lock on package cache
+   Compiling test-instruction-validation v0.1.0 (.\programs\test-instruction-validation)
+error[E0080]: evaluation panicked: #[instruction(...)] on Account `MissingInstructionAttr<'_>` expects MORE args, the ix `missing_instruction_attr(...)` has only 1 args.
+ --> programs\test-instruction-validation\src\lib.rs:8:1
+  |
+8 | #[program]
+  | ^^^^^^^^^^ evaluation of `__private::__global::missing_instruction_attr::_` failed here
+
+For more information about this error, try `rustc --explain E0080`.
+error: could not compile `test-instruction-validation` (lib) due to 1 previous error
+error: cargo-build-sbf exited with exit code: 1
+
+[exit 1]

@@ -1,0 +1,909 @@
+$ tare --version
+tare 0.7.0
+Disk free at canary start: 344831373312 bytes
+Disk free after 0 programs: 344831373312 bytes (344.83 GB)
+$ tare build --host --manifest-path programs\basic-1\Cargo.toml
+$ tare build --host --manifest-path programs\new-idl\Cargo.toml
+$ tare build --host --manifest-path programs\tare-registry\Cargo.toml
+building basic-1 (Anchor 0.31.1)
+building tare-registry (Anchor 1.2.2)
+building new-idl (Anchor 0.32.3)
+bytecode: 1 instructions rewritten; 136600 -> 126056 bytes
+bytecode: 10 instructions rewritten; 297088 -> 278960 bytes
+bytecode: 8 instructions rewritten; 267880 -> 249768 bytes
+basic-1: stock 182144 bytes -> tare 126056 bytes
+$ tare weigh --host --manifest-path programs\basic-1\Cargo.toml
+tare-registry: stock 281992 bytes -> tare 278960 bytes
+$ tare weigh --host --manifest-path programs\tare-registry\Cargo.toml --replay target/native-replay.json
+basic_1         gross       tare        net     inputs
+initialize       4460       2608       1852         24
+update            725        463        262         32
+total            5185       3071       2114         56
+proof: matched (688 transactions)
+backend\bench\corpus\anchor\examples\tutorial\basic-1\target\tare\weigh.json: published Weighing schema passed; 1 replay payload(s) validated and retained
+$ tare prove --host --manifest-path programs\basic-1\Cargo.toml
+recorded outcome reproduction: 17 / 17 inputs matched
+tare_registry      gross       tare        net     inputs
+attest             29961       6499      23462          3
+flag               15421       4448      10973          1
+init_config        23820       5618      18202          1
+set_config         15717       2993      12724          2
+total              84919      19558      65361          7
+proof: matched (17 transactions)
+backend\registry\target\tare\weigh.json: published Weighing schema passed; 1 replay payload(s) validated and retained
+$ tare prove --host --manifest-path programs\tare-registry\Cargo.toml --replay target/native-replay.json
+basic_1         gross       tare        net     inputs
+initialize       4460       2608       1852         24
+update            725        463        262         32
+total            5185       3071       2114         56
+proof: matched (688 transactions)
+backend\bench\corpus\anchor\examples\tutorial\basic-1\target\tare\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+$ tare build --host --manifest-path programs\marinade-finance\Cargo.toml
+recorded outcome reproduction: 17 / 17 inputs matched
+tare_registry      gross       tare        net     inputs
+attest             29961       6499      23462          3
+flag               15421       4448      10973          1
+init_config        23820       5618      18202          1
+set_config         15717       2993      12724          2
+total              84919      19558      65361          7
+proof: matched (17 transactions)
+backend\registry\target\tare\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+$ tare build --host --manifest-path programs\squads_multisig_program\Cargo.toml --idl ..\..\production\controls\squads-v4\verified-idl.json
+building marinade-finance (Anchor 0.31.1)
+building squads-multisig-program (Anchor 0.32.1)
+new-idl: stock 283536 bytes -> tare 249768 bytes
+$ tare weigh --host --manifest-path programs\new-idl\Cargo.toml
+new_idl                              gross       tare        net     inputs
+account_and_event_arg_and_field       1461        932        529         16
+empty                                  204         58        146         12
+enm                                   1537        904        633         16
+external                              1414        915        499         16
+external_non_anchor                   1450        906        544         16
+full_path                             1928       1098        830         16
+generic                               6741       2451       4290         24
+generic_custom_struct                 6743       2451       4292         24
+no_case_conversion                    4550       2483       2067         24
+primitive_types                       2544       1235       1309         16
+strct                                 2130        989       1141         16
+type_alias                            2506        956       1550         16
+unsized_types                         1973       1044        929         16
+total                                35181      16422      18759        228
+proof: matched (1880 transactions)
+backend\bench\corpus\anchor-0.32.3\tests\idl\target\tare\weigh.json: published Weighing schema passed; 1 replay payload(s) validated and retained
+$ tare prove --host --manifest-path programs\new-idl\Cargo.toml
+new_idl                              gross       tare        net     inputs
+account_and_event_arg_and_field       1461        932        529         16
+empty                                  204         58        146         12
+enm                                   1537        904        633         16
+external                              1414        915        499         16
+external_non_anchor                   1450        906        544         16
+full_path                             1928       1098        830         16
+generic                               6741       2451       4290         24
+generic_custom_struct                 6743       2451       4292         24
+no_case_conversion                    4550       2483       2067         24
+primitive_types                       2544       1235       1309         16
+strct                                 2130        989       1141         16
+type_alias                            2506        956       1550         16
+unsized_types                         1973       1044        929         16
+total                                35181      16422      18759        228
+proof: matched (1880 transactions)
+backend\bench\corpus\anchor-0.32.3\tests\idl\target\tare\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+account ABI: SDK (typed AccountInfo boundary)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 6 instructions rewritten; 849352 -> 793960 bytes
+account input: compact SDK account views
+bytecode: 23 instructions rewritten; 918800 -> 867184 bytes
+IDL: explicit supplied input verified-idl.json
+squads-multisig-program: stock 791768 bytes -> tare 867184 bytes
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+$ tare build --host --manifest-path programs\whirlpool\Cargo.toml --features mainnet
+building whirlpool (Anchor 0.32.1)
+marinade-finance: stock 964616 bytes -> tare 793960 bytes
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 14 instructions rewritten; 1521040 -> 1456752 bytes
+whirlpool: stock 1556816 bytes -> tare 1456752 bytes
+$ tare weigh --host --manifest-path programs\whirlpool\Cargo.toml --features mainnet --replay target/tare/production-replay.json
+whirlpool                                     gross       tare        net     inputs
+close_bundled_position                   not measured (0 successful inputs)
+close_position                                 8504        124       8380          4
+close_position_with_token_extensions     not measured (0 successful inputs)
+collect_fees                                  10199        208       9991          4
+collect_fees_v2                          not measured (0 successful inputs)
+collect_protocol_fees                    not measured (0 successful inputs)
+collect_protocol_fees_v2                 not measured (0 successful inputs)
+collect_reward                           not measured (0 successful inputs)
+collect_reward_v2                        not measured (0 successful inputs)
+decrease_liquidity                             9412         87       9325          2
+decrease_liquidity_v2                    not measured (0 successful inputs)
+delete_position_bundle                   not measured (0 successful inputs)
+delete_token_badge                       not measured (0 successful inputs)
+idl_include                              not measured (0 successful inputs)
+increase_liquidity                             9389        104       9285          3
+increase_liquidity_by_token_amounts_v2   not measured (0 successful inputs)
+increase_liquidity_v2                    not measured (0 successful inputs)
+initialize_adaptive_fee_tier             not measured (0 successful inputs)
+initialize_config                        not measured (0 successful inputs)
+initialize_config_extension                    8104       1323       6781          4
+initialize_dynamic_tick_array            not measured (0 successful inputs)
+initialize_fee_tier                            9555       1355       8200          3
+initialize_pool                               31930       1332      30598          3
+initialize_pool_v2                       not measured (0 successful inputs)
+initialize_pool_with_adaptive_fee        not measured (0 successful inputs)
+initialize_position_bundle               not measured (0 successful inputs)
+initialize_position_bundle_with_metadata not measured (0 successful inputs)
+initialize_reward                        not measured (0 successful inputs)
+initialize_reward_v2                     not measured (0 successful inputs)
+initialize_tick_array                          7256       1165       6091         12
+initialize_token_badge                   not measured (0 successful inputs)
+lock_position                            not measured (0 successful inputs)
+open_bundled_position                    not measured (0 successful inputs)
+open_position                                 38924       2304      36620          3
+open_position_with_metadata              not measured (0 successful inputs)
+open_position_with_token_extensions      not measured (0 successful inputs)
+reposition_liquidity_v2                  not measured (0 successful inputs)
+reset_position_range                     not measured (0 successful inputs)
+set_adaptive_fee_constants               not measured (0 successful inputs)
+set_collect_protocol_fees_authority            1504        271       1233          2
+set_config_extension_authority                 1865        160       1705          2
+set_config_feature_flag                  not measured (0 successful inputs)
+set_default_base_fee_rate                not measured (0 successful inputs)
+set_default_fee_rate                           1589        280       1309          2
+set_default_protocol_fee_rate                  1301        279       1022          2
+set_delegated_fee_authority              not measured (0 successful inputs)
+set_fee_authority                              1499        259       1240          2
+set_fee_rate                                   3632        435       3197          2
+set_fee_rate_by_delegated_fee_authority  not measured (0 successful inputs)
+set_initialize_pool_authority            not measured (0 successful inputs)
+set_preset_adaptive_fee_constants        not measured (0 successful inputs)
+set_protocol_fee_rate                          3632        435       3197          2
+set_reward_authority                     not measured (0 successful inputs)
+set_reward_authority_by_super_authority  not measured (0 successful inputs)
+set_reward_emissions                     not measured (0 successful inputs)
+set_reward_emissions_super_authority           1511        270       1241          2
+set_reward_emissions_v2                  not measured (0 successful inputs)
+set_token_badge_attribute                not measured (0 successful inputs)
+set_token_badge_authority                      1867        160       1707          3
+swap                                          26173        331      25842          3
+swap_v2                                  not measured (0 successful inputs)
+transfer_locked_position                 not measured (0 successful inputs)
+two_hop_swap                             not measured (0 successful inputs)
+two_hop_swap_v2                          not measured (0 successful inputs)
+update_fees_and_rewards                        6792        357       6435          3
+total                                        184638      11239     173399         63
+proof: matched (217 transactions)
+backend\bench\corpus\whirlpools\target\tare\weigh.json: published Weighing schema passed; 1 replay payload(s) validated and retained
+$ tare prove --host --manifest-path programs\whirlpool\Cargo.toml --features mainnet --replay target/tare/production-replay.json
+whirlpool                                     gross       tare        net     inputs
+close_bundled_position                   not measured (0 successful inputs)
+close_position                                 8504        124       8380          4
+close_position_with_token_extensions     not measured (0 successful inputs)
+collect_fees                                  10199        208       9991          4
+collect_fees_v2                          not measured (0 successful inputs)
+collect_protocol_fees                    not measured (0 successful inputs)
+collect_protocol_fees_v2                 not measured (0 successful inputs)
+collect_reward                           not measured (0 successful inputs)
+collect_reward_v2                        not measured (0 successful inputs)
+decrease_liquidity                             9412         87       9325          2
+decrease_liquidity_v2                    not measured (0 successful inputs)
+delete_position_bundle                   not measured (0 successful inputs)
+delete_token_badge                       not measured (0 successful inputs)
+idl_include                              not measured (0 successful inputs)
+increase_liquidity                             9389        104       9285          3
+increase_liquidity_by_token_amounts_v2   not measured (0 successful inputs)
+increase_liquidity_v2                    not measured (0 successful inputs)
+initialize_adaptive_fee_tier             not measured (0 successful inputs)
+initialize_config                        not measured (0 successful inputs)
+initialize_config_extension                    8104       1323       6781          4
+initialize_dynamic_tick_array            not measured (0 successful inputs)
+initialize_fee_tier                            9555       1355       8200          3
+initialize_pool                               31930       1332      30598          3
+initialize_pool_v2                       not measured (0 successful inputs)
+initialize_pool_with_adaptive_fee        not measured (0 successful inputs)
+initialize_position_bundle               not measured (0 successful inputs)
+initialize_position_bundle_with_metadata not measured (0 successful inputs)
+initialize_reward                        not measured (0 successful inputs)
+initialize_reward_v2                     not measured (0 successful inputs)
+initialize_tick_array                          7256       1165       6091         12
+initialize_token_badge                   not measured (0 successful inputs)
+lock_position                            not measured (0 successful inputs)
+open_bundled_position                    not measured (0 successful inputs)
+open_position                                 38924       2304      36620          3
+open_position_with_metadata              not measured (0 successful inputs)
+open_position_with_token_extensions      not measured (0 successful inputs)
+reposition_liquidity_v2                  not measured (0 successful inputs)
+reset_position_range                     not measured (0 successful inputs)
+set_adaptive_fee_constants               not measured (0 successful inputs)
+set_collect_protocol_fees_authority            1504        271       1233          2
+set_config_extension_authority                 1865        160       1705          2
+set_config_feature_flag                  not measured (0 successful inputs)
+set_default_base_fee_rate                not measured (0 successful inputs)
+set_default_fee_rate                           1589        280       1309          2
+set_default_protocol_fee_rate                  1301        279       1022          2
+set_delegated_fee_authority              not measured (0 successful inputs)
+set_fee_authority                              1499        259       1240          2
+set_fee_rate                                   3632        435       3197          2
+set_fee_rate_by_delegated_fee_authority  not measured (0 successful inputs)
+set_initialize_pool_authority            not measured (0 successful inputs)
+set_preset_adaptive_fee_constants        not measured (0 successful inputs)
+set_protocol_fee_rate                          3632        435       3197          2
+set_reward_authority                     not measured (0 successful inputs)
+set_reward_authority_by_super_authority  not measured (0 successful inputs)
+set_reward_emissions                     not measured (0 successful inputs)
+set_reward_emissions_super_authority           1511        270       1241          2
+set_reward_emissions_v2                  not measured (0 successful inputs)
+set_token_badge_attribute                not measured (0 successful inputs)
+set_token_badge_authority                      1867        160       1707          3
+swap                                          26173        331      25842          3
+swap_v2                                  not measured (0 successful inputs)
+transfer_locked_position                 not measured (0 successful inputs)
+two_hop_swap                             not measured (0 successful inputs)
+two_hop_swap_v2                          not measured (0 successful inputs)
+update_fees_and_rewards                        6792        357       6435          3
+total                                        184638      11239     173399         63
+proof: matched (217 transactions)
+backend\bench\corpus\whirlpools\target\tare\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+Disk free after 6 programs: 339786616832 bytes (339.79 GB)
+Recorded 6 programs in $TARE_HOME\target\round-eight-canaries.json: 4 matching proofs, 0 diverging proofs, 2 not built
+
+Runner exit: 1
+
+$ tare --version
+tare 0.7.0
+Production canary retry after native corpus lock update and narrower close-context policy.
+Disk free after 0 programs: 339786313728 bytes (339.79 GB)
+$ tare build --host --manifest-path programs\squads_multisig_program\Cargo.toml --idl ..\..\production\controls\squads-v4\verified-idl.json
+$ tare build --host --manifest-path programs\marinade-finance\Cargo.toml
+building marinade-finance (Anchor 0.31.1)
+building squads-multisig-program (Anchor 0.32.1)
+account ABI: SDK (typed AccountInfo boundary)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 5 instructions rewritten; 837056 -> 782112 bytes
+account input: compact SDK account views
+bytecode: 23 instructions rewritten; 826176 -> 777488 bytes
+IDL: explicit supplied input verified-idl.json
+squads-multisig-program: stock 791768 bytes -> tare 777488 bytes
+$ tare weigh --host --manifest-path programs\squads_multisig_program\Cargo.toml --idl ..\..\production\controls\squads-v4\verified-idl.json --replay target/tare/production-replay.json
+marinade-finance: stock 964616 bytes -> tare 782112 bytes
+$ tare weigh --host --manifest-path programs\marinade-finance\Cargo.toml --replay target/tare/production-replay.json
+squads_multisig_program                       gross       tare        net     inputs
+batch_accounts_close                           6508        331       6177          2
+batch_add_transaction                         20847       2511      18336          3
+batch_create                                  12143       2248       9895          3
+batch_execute_transaction                     17170        792      16378          2
+config_transaction_accounts_close              6794        305       6489          6
+config_transaction_create                     12558       1961      10597         12
+config_transaction_execute                    10588        865       9723          4
+multisig_add_member                            7308        248       7060          3
+multisig_add_spending_limit                   10607       1782       8825          3
+multisig_change_threshold                      4632        486       4146          8
+multisig_create                          not measured (0 successful inputs)
+multisig_create_v2                            12640       1603      11037          3
+multisig_remove_member                         4680        493       4187          3
+multisig_remove_spending_limit                 4382        225       4157          1
+multisig_set_config_authority                  4460        451       4009          3
+multisig_set_rent_collector                    4763        447       4316          4
+multisig_set_time_lock                         4634        490       4144          4
+program_config_init                      not measured (0 successful inputs)
+program_config_set_authority                   2987        418       2569          2
+program_config_set_multisig_creation_fee       2959        417       2542          2
+program_config_set_treasury                    2987        421       2566          4
+proposal_activate                              5995        410       5585          4
+proposal_approve                               6262        426       5836          5
+proposal_cancel                                6416        422       5994          1
+proposal_cancel_v2                             7241        535       6706          1
+proposal_create                               12637       1660      10977         18
+proposal_reject                                6521        425       6096          2
+spending_limit_use                            11712        278      11434          2
+transaction_buffer_close                       6981        482       6499          2
+transaction_buffer_create                     11448       1818       9630          6
+transaction_buffer_extend                      7919        439       7480          2
+vault_batch_transaction_account_close          8044        803       7241          2
+vault_transaction_accounts_close              11820        283      11537          2
+vault_transaction_create                      15285       2045      13240          3
+vault_transaction_create_from_buffer          21013       2048      18965          5
+vault_transaction_execute                     14671        328      14343          2
+total                                        307612      28896     278716        129
+proof: matched (485 transactions)
+backend\bench\corpus\squads-v4\target\tare\weigh.json: published Weighing schema passed; 1 replay payload(s) validated and retained
+$ tare prove --host --manifest-path programs\squads_multisig_program\Cargo.toml --idl ..\..\production\controls\squads-v4\verified-idl.json --replay target/tare/production-replay.json
+marinade_finance                 gross       tare        net     inputs
+add_liquidity               not measured (0 successful inputs)
+add_validator               not measured (0 successful inputs)
+change_authority                  5570        772       4798          2
+claim                       not measured (0 successful inputs)
+config_lp                   not measured (0 successful inputs)
+config_marinade             not measured (0 successful inputs)
+config_validator_system           4942        865       4077          2
+create_canonical_stake      not measured (0 successful inputs)
+deactivate_stake            not measured (0 successful inputs)
+deposit                          20973       1205      19768          4
+deposit_stake_account       not measured (0 successful inputs)
+emergency_unstake           not measured (0 successful inputs)
+finalize_delinquent_upgrade not measured (0 successful inputs)
+initialize                       30806       2694      28112          1
+liquid_unstake              not measured (0 successful inputs)
+merge_stakes                not measured (0 successful inputs)
+order_unstake               not measured (0 successful inputs)
+partial_unstake             not measured (0 successful inputs)
+pause                             5223        865       4358          2
+realloc_stake_list          not measured (0 successful inputs)
+realloc_validator_list      not measured (0 successful inputs)
+remove_liquidity            not measured (0 successful inputs)
+remove_validator            not measured (0 successful inputs)
+resume                            5223        863       4360          2
+set_validator_score         not measured (0 successful inputs)
+stake_reserve               not measured (0 successful inputs)
+update_active               not measured (0 successful inputs)
+update_deactivated          not measured (0 successful inputs)
+withdraw_stake_account      not measured (0 successful inputs)
+total                            72737       7264      65473         13
+proof: matched (67 transactions)
+backend\bench\corpus\marinade\target\tare\weigh.json: published Weighing schema passed; 1 replay payload(s) validated and retained
+$ tare prove --host --manifest-path programs\marinade-finance\Cargo.toml --replay target/tare/production-replay.json
+squads_multisig_program                       gross       tare        net     inputs
+batch_accounts_close                           6508        331       6177          2
+batch_add_transaction                         20847       2511      18336          3
+batch_create                                  12143       2248       9895          3
+batch_execute_transaction                     17170        792      16378          2
+config_transaction_accounts_close              6794        305       6489          6
+config_transaction_create                     12558       1961      10597         12
+config_transaction_execute                    10588        865       9723          4
+multisig_add_member                            7308        248       7060          3
+multisig_add_spending_limit                   10607       1782       8825          3
+multisig_change_threshold                      4632        486       4146          8
+multisig_create                          not measured (0 successful inputs)
+multisig_create_v2                            12640       1603      11037          3
+multisig_remove_member                         4680        493       4187          3
+multisig_remove_spending_limit                 4382        225       4157          1
+multisig_set_config_authority                  4460        451       4009          3
+multisig_set_rent_collector                    4763        447       4316          4
+multisig_set_time_lock                         4634        490       4144          4
+program_config_init                      not measured (0 successful inputs)
+program_config_set_authority                   2987        418       2569          2
+program_config_set_multisig_creation_fee       2959        417       2542          2
+program_config_set_treasury                    2987        421       2566          4
+proposal_activate                              5995        410       5585          4
+proposal_approve                               6262        426       5836          5
+proposal_cancel                                6416        422       5994          1
+proposal_cancel_v2                             7241        535       6706          1
+proposal_create                               12637       1660      10977         18
+proposal_reject                                6521        425       6096          2
+spending_limit_use                            11712        278      11434          2
+transaction_buffer_close                       6981        482       6499          2
+transaction_buffer_create                     11448       1818       9630          6
+transaction_buffer_extend                      7919        439       7480          2
+vault_batch_transaction_account_close          8044        803       7241          2
+vault_transaction_accounts_close              11820        283      11537          2
+vault_transaction_create                      15285       2045      13240          3
+vault_transaction_create_from_buffer          21013       2048      18965          5
+vault_transaction_execute                     14671        328      14343          2
+total                                        307612      28896     278716        129
+proof: matched (485 transactions)
+backend\bench\corpus\squads-v4\target\tare\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+$ tare build --host --manifest-path programs\whirlpool\Cargo.toml --features mainnet
+marinade_finance                 gross       tare        net     inputs
+add_liquidity               not measured (0 successful inputs)
+add_validator               not measured (0 successful inputs)
+change_authority                  5570        772       4798          2
+claim                       not measured (0 successful inputs)
+config_lp                   not measured (0 successful inputs)
+config_marinade             not measured (0 successful inputs)
+config_validator_system           4942        865       4077          2
+create_canonical_stake      not measured (0 successful inputs)
+deactivate_stake            not measured (0 successful inputs)
+deposit                          20973       1205      19768          4
+deposit_stake_account       not measured (0 successful inputs)
+emergency_unstake           not measured (0 successful inputs)
+finalize_delinquent_upgrade not measured (0 successful inputs)
+initialize                       30806       2694      28112          1
+liquid_unstake              not measured (0 successful inputs)
+merge_stakes                not measured (0 successful inputs)
+order_unstake               not measured (0 successful inputs)
+partial_unstake             not measured (0 successful inputs)
+pause                             5223        865       4358          2
+realloc_stake_list          not measured (0 successful inputs)
+realloc_validator_list      not measured (0 successful inputs)
+remove_liquidity            not measured (0 successful inputs)
+remove_validator            not measured (0 successful inputs)
+resume                            5223        863       4360          2
+set_validator_score         not measured (0 successful inputs)
+stake_reserve               not measured (0 successful inputs)
+update_active               not measured (0 successful inputs)
+update_deactivated          not measured (0 successful inputs)
+withdraw_stake_account      not measured (0 successful inputs)
+total                            72737       7264      65473         13
+proof: matched (67 transactions)
+backend\bench\corpus\marinade\target\tare\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+building whirlpool (Anchor 0.32.1)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 11 instructions rewritten; 1451624 -> 1389480 bytes
+whirlpool: stock 1556816 bytes -> tare 1389480 bytes
+$ tare weigh --host --manifest-path programs\whirlpool\Cargo.toml --features mainnet --replay target/tare/production-replay.json
+whirlpool                                     gross       tare        net     inputs
+close_bundled_position                   not measured (0 successful inputs)
+close_position                                 8504       -235       8739          4
+close_position_with_token_extensions     not measured (0 successful inputs)
+collect_fees                                  10199        208       9991          4
+collect_fees_v2                          not measured (0 successful inputs)
+collect_protocol_fees                    not measured (0 successful inputs)
+collect_protocol_fees_v2                 not measured (0 successful inputs)
+collect_reward                           not measured (0 successful inputs)
+collect_reward_v2                        not measured (0 successful inputs)
+decrease_liquidity                             9412         87       9325          2
+decrease_liquidity_v2                    not measured (0 successful inputs)
+delete_position_bundle                   not measured (0 successful inputs)
+delete_token_badge                       not measured (0 successful inputs)
+idl_include                              not measured (0 successful inputs)
+increase_liquidity                             9389        104       9285          3
+increase_liquidity_by_token_amounts_v2   not measured (0 successful inputs)
+increase_liquidity_v2                    not measured (0 successful inputs)
+initialize_adaptive_fee_tier             not measured (0 successful inputs)
+initialize_config                        not measured (0 successful inputs)
+initialize_config_extension                    8104       1323       6781          4
+initialize_dynamic_tick_array            not measured (0 successful inputs)
+initialize_fee_tier                            9555       1355       8200          3
+initialize_pool                               31930       1332      30598          3
+initialize_pool_v2                       not measured (0 successful inputs)
+initialize_pool_with_adaptive_fee        not measured (0 successful inputs)
+initialize_position_bundle               not measured (0 successful inputs)
+initialize_position_bundle_with_metadata not measured (0 successful inputs)
+initialize_reward                        not measured (0 successful inputs)
+initialize_reward_v2                     not measured (0 successful inputs)
+initialize_tick_array                          7256       1165       6091         12
+initialize_token_badge                   not measured (0 successful inputs)
+lock_position                            not measured (0 successful inputs)
+open_bundled_position                    not measured (0 successful inputs)
+open_position                                 38924       2304      36620          3
+open_position_with_metadata              not measured (0 successful inputs)
+open_position_with_token_extensions      not measured (0 successful inputs)
+reposition_liquidity_v2                  not measured (0 successful inputs)
+reset_position_range                     not measured (0 successful inputs)
+set_adaptive_fee_constants               not measured (0 successful inputs)
+set_collect_protocol_fees_authority            1504        271       1233          2
+set_config_extension_authority                 1865        160       1705          2
+set_config_feature_flag                  not measured (0 successful inputs)
+set_default_base_fee_rate                not measured (0 successful inputs)
+set_default_fee_rate                           1589        280       1309          2
+set_default_protocol_fee_rate                  1301        279       1022          2
+set_delegated_fee_authority              not measured (0 successful inputs)
+set_fee_authority                              1499        259       1240          2
+set_fee_rate                                   3632        435       3197          2
+set_fee_rate_by_delegated_fee_authority  not measured (0 successful inputs)
+set_initialize_pool_authority            not measured (0 successful inputs)
+set_preset_adaptive_fee_constants        not measured (0 successful inputs)
+set_protocol_fee_rate                          3632        435       3197          2
+set_reward_authority                     not measured (0 successful inputs)
+set_reward_authority_by_super_authority  not measured (0 successful inputs)
+set_reward_emissions                     not measured (0 successful inputs)
+set_reward_emissions_super_authority           1511        270       1241          2
+set_reward_emissions_v2                  not measured (0 successful inputs)
+set_token_badge_attribute                not measured (0 successful inputs)
+set_token_badge_authority                      1867        160       1707          3
+swap                                          26173        331      25842          3
+swap_v2                                  not measured (0 successful inputs)
+transfer_locked_position                 not measured (0 successful inputs)
+two_hop_swap                             not measured (0 successful inputs)
+two_hop_swap_v2                          not measured (0 successful inputs)
+update_fees_and_rewards                        6792        357       6435          3
+total                                        184638      10880     173758         63
+proof: matched (217 transactions)
+backend\bench\corpus\whirlpools\target\tare\weigh.json: published Weighing schema passed; 1 replay payload(s) validated and retained
+$ tare prove --host --manifest-path programs\whirlpool\Cargo.toml --features mainnet --replay target/tare/production-replay.json
+whirlpool                                     gross       tare        net     inputs
+close_bundled_position                   not measured (0 successful inputs)
+close_position                                 8504       -235       8739          4
+close_position_with_token_extensions     not measured (0 successful inputs)
+collect_fees                                  10199        208       9991          4
+collect_fees_v2                          not measured (0 successful inputs)
+collect_protocol_fees                    not measured (0 successful inputs)
+collect_protocol_fees_v2                 not measured (0 successful inputs)
+collect_reward                           not measured (0 successful inputs)
+collect_reward_v2                        not measured (0 successful inputs)
+decrease_liquidity                             9412         87       9325          2
+decrease_liquidity_v2                    not measured (0 successful inputs)
+delete_position_bundle                   not measured (0 successful inputs)
+delete_token_badge                       not measured (0 successful inputs)
+idl_include                              not measured (0 successful inputs)
+increase_liquidity                             9389        104       9285          3
+increase_liquidity_by_token_amounts_v2   not measured (0 successful inputs)
+increase_liquidity_v2                    not measured (0 successful inputs)
+initialize_adaptive_fee_tier             not measured (0 successful inputs)
+initialize_config                        not measured (0 successful inputs)
+initialize_config_extension                    8104       1323       6781          4
+initialize_dynamic_tick_array            not measured (0 successful inputs)
+initialize_fee_tier                            9555       1355       8200          3
+initialize_pool                               31930       1332      30598          3
+initialize_pool_v2                       not measured (0 successful inputs)
+initialize_pool_with_adaptive_fee        not measured (0 successful inputs)
+initialize_position_bundle               not measured (0 successful inputs)
+initialize_position_bundle_with_metadata not measured (0 successful inputs)
+initialize_reward                        not measured (0 successful inputs)
+initialize_reward_v2                     not measured (0 successful inputs)
+initialize_tick_array                          7256       1165       6091         12
+initialize_token_badge                   not measured (0 successful inputs)
+lock_position                            not measured (0 successful inputs)
+open_bundled_position                    not measured (0 successful inputs)
+open_position                                 38924       2304      36620          3
+open_position_with_metadata              not measured (0 successful inputs)
+open_position_with_token_extensions      not measured (0 successful inputs)
+reposition_liquidity_v2                  not measured (0 successful inputs)
+reset_position_range                     not measured (0 successful inputs)
+set_adaptive_fee_constants               not measured (0 successful inputs)
+set_collect_protocol_fees_authority            1504        271       1233          2
+set_config_extension_authority                 1865        160       1705          2
+set_config_feature_flag                  not measured (0 successful inputs)
+set_default_base_fee_rate                not measured (0 successful inputs)
+set_default_fee_rate                           1589        280       1309          2
+set_default_protocol_fee_rate                  1301        279       1022          2
+set_delegated_fee_authority              not measured (0 successful inputs)
+set_fee_authority                              1499        259       1240          2
+set_fee_rate                                   3632        435       3197          2
+set_fee_rate_by_delegated_fee_authority  not measured (0 successful inputs)
+set_initialize_pool_authority            not measured (0 successful inputs)
+set_preset_adaptive_fee_constants        not measured (0 successful inputs)
+set_protocol_fee_rate                          3632        435       3197          2
+set_reward_authority                     not measured (0 successful inputs)
+set_reward_authority_by_super_authority  not measured (0 successful inputs)
+set_reward_emissions                     not measured (0 successful inputs)
+set_reward_emissions_super_authority           1511        270       1241          2
+set_reward_emissions_v2                  not measured (0 successful inputs)
+set_token_badge_attribute                not measured (0 successful inputs)
+set_token_badge_authority                      1867        160       1707          3
+swap                                          26173        331      25842          3
+swap_v2                                  not measured (0 successful inputs)
+transfer_locked_position                 not measured (0 successful inputs)
+two_hop_swap                             not measured (0 successful inputs)
+two_hop_swap_v2                          not measured (0 successful inputs)
+update_fees_and_rewards                        6792        357       6435          3
+total                                        184638      10880     173758         63
+proof: matched (217 transactions)
+backend\bench\corpus\whirlpools\target\tare\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+Disk free after 3 programs: 339762155520 bytes (339.76 GB)
+Recorded 6 programs in $TARE_HOME\target\round-eight-canaries.json: 6 matching proofs, 0 diverging proofs, 0 not built
+
+Runner exit: 0
+
+$ tare --version
+tare 0.7.0
+Final production canaries with the corrected boxed-account policy.
+Disk free after 0 programs: 339760697344 bytes (339.76 GB)
+$ tare build --host --manifest-path programs\squads_multisig_program\Cargo.toml --idl ..\..\production\controls\squads-v4\verified-idl.json
+$ tare build --host --manifest-path programs\marinade-finance\Cargo.toml
+building marinade-finance (Anchor 0.31.1)
+building squads-multisig-program (Anchor 0.32.1)
+account ABI: SDK (typed AccountInfo boundary)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 5 instructions rewritten; 837056 -> 782112 bytes
+account input: compact SDK account views
+bytecode: 23 instructions rewritten; 826176 -> 777488 bytes
+IDL: explicit supplied input verified-idl.json
+squads-multisig-program: stock 791768 bytes -> tare 777488 bytes
+$ tare weigh --host --manifest-path programs\squads_multisig_program\Cargo.toml --idl ..\..\production\controls\squads-v4\verified-idl.json --replay target/tare/production-replay.json
+marinade-finance: stock 964616 bytes -> tare 782112 bytes
+$ tare weigh --host --manifest-path programs\marinade-finance\Cargo.toml --replay target/tare/production-replay.json
+squads_multisig_program                       gross       tare        net     inputs
+batch_accounts_close                           6508        331       6177          2
+batch_add_transaction                         20847       2511      18336          3
+batch_create                                  12143       2248       9895          3
+batch_execute_transaction                     17170        792      16378          2
+config_transaction_accounts_close              6794        305       6489          6
+config_transaction_create                     12558       1961      10597         12
+config_transaction_execute                    10588        865       9723          4
+multisig_add_member                            7308        248       7060          3
+multisig_add_spending_limit                   10607       1782       8825          3
+multisig_change_threshold                      4632        486       4146          8
+multisig_create                          not measured (0 successful inputs)
+multisig_create_v2                            12640       1603      11037          3
+multisig_remove_member                         4680        493       4187          3
+multisig_remove_spending_limit                 4382        225       4157          1
+multisig_set_config_authority                  4460        451       4009          3
+multisig_set_rent_collector                    4763        447       4316          4
+multisig_set_time_lock                         4634        490       4144          4
+program_config_init                      not measured (0 successful inputs)
+program_config_set_authority                   2987        418       2569          2
+program_config_set_multisig_creation_fee       2959        417       2542          2
+program_config_set_treasury                    2987        421       2566          4
+proposal_activate                              5995        410       5585          4
+proposal_approve                               6262        426       5836          5
+proposal_cancel                                6416        422       5994          1
+proposal_cancel_v2                             7241        535       6706          1
+proposal_create                               12637       1660      10977         18
+proposal_reject                                6521        425       6096          2
+spending_limit_use                            11712        278      11434          2
+transaction_buffer_close                       6981        482       6499          2
+transaction_buffer_create                     11448       1818       9630          6
+transaction_buffer_extend                      7919        439       7480          2
+vault_batch_transaction_account_close          8044        803       7241          2
+vault_transaction_accounts_close              11820        283      11537          2
+vault_transaction_create                      15285       2045      13240          3
+vault_transaction_create_from_buffer          21013       2048      18965          5
+vault_transaction_execute                     14671        328      14343          2
+total                                        307612      28896     278716        129
+proof: matched (485 transactions)
+backend\bench\corpus\squads-v4\target\tare\weigh.json: published Weighing schema passed; 1 replay payload(s) validated and retained
+$ tare prove --host --manifest-path programs\squads_multisig_program\Cargo.toml --idl ..\..\production\controls\squads-v4\verified-idl.json --replay target/tare/production-replay.json
+marinade_finance                 gross       tare        net     inputs
+add_liquidity               not measured (0 successful inputs)
+add_validator               not measured (0 successful inputs)
+change_authority                  5570        772       4798          2
+claim                       not measured (0 successful inputs)
+config_lp                   not measured (0 successful inputs)
+config_marinade             not measured (0 successful inputs)
+config_validator_system           4942        865       4077          2
+create_canonical_stake      not measured (0 successful inputs)
+deactivate_stake            not measured (0 successful inputs)
+deposit                          20973       1205      19768          4
+deposit_stake_account       not measured (0 successful inputs)
+emergency_unstake           not measured (0 successful inputs)
+finalize_delinquent_upgrade not measured (0 successful inputs)
+initialize                       30806       2694      28112          1
+liquid_unstake              not measured (0 successful inputs)
+merge_stakes                not measured (0 successful inputs)
+order_unstake               not measured (0 successful inputs)
+partial_unstake             not measured (0 successful inputs)
+pause                             5223        865       4358          2
+realloc_stake_list          not measured (0 successful inputs)
+realloc_validator_list      not measured (0 successful inputs)
+remove_liquidity            not measured (0 successful inputs)
+remove_validator            not measured (0 successful inputs)
+resume                            5223        863       4360          2
+set_validator_score         not measured (0 successful inputs)
+stake_reserve               not measured (0 successful inputs)
+update_active               not measured (0 successful inputs)
+update_deactivated          not measured (0 successful inputs)
+withdraw_stake_account      not measured (0 successful inputs)
+total                            72737       7264      65473         13
+proof: matched (67 transactions)
+backend\bench\corpus\marinade\target\tare\weigh.json: published Weighing schema passed; 1 replay payload(s) validated and retained
+$ tare prove --host --manifest-path programs\marinade-finance\Cargo.toml --replay target/tare/production-replay.json
+squads_multisig_program                       gross       tare        net     inputs
+batch_accounts_close                           6508        331       6177          2
+batch_add_transaction                         20847       2511      18336          3
+batch_create                                  12143       2248       9895          3
+batch_execute_transaction                     17170        792      16378          2
+config_transaction_accounts_close              6794        305       6489          6
+config_transaction_create                     12558       1961      10597         12
+config_transaction_execute                    10588        865       9723          4
+multisig_add_member                            7308        248       7060          3
+multisig_add_spending_limit                   10607       1782       8825          3
+multisig_change_threshold                      4632        486       4146          8
+multisig_create                          not measured (0 successful inputs)
+multisig_create_v2                            12640       1603      11037          3
+multisig_remove_member                         4680        493       4187          3
+multisig_remove_spending_limit                 4382        225       4157          1
+multisig_set_config_authority                  4460        451       4009          3
+multisig_set_rent_collector                    4763        447       4316          4
+multisig_set_time_lock                         4634        490       4144          4
+program_config_init                      not measured (0 successful inputs)
+program_config_set_authority                   2987        418       2569          2
+program_config_set_multisig_creation_fee       2959        417       2542          2
+program_config_set_treasury                    2987        421       2566          4
+proposal_activate                              5995        410       5585          4
+proposal_approve                               6262        426       5836          5
+proposal_cancel                                6416        422       5994          1
+proposal_cancel_v2                             7241        535       6706          1
+proposal_create                               12637       1660      10977         18
+proposal_reject                                6521        425       6096          2
+spending_limit_use                            11712        278      11434          2
+transaction_buffer_close                       6981        482       6499          2
+transaction_buffer_create                     11448       1818       9630          6
+transaction_buffer_extend                      7919        439       7480          2
+vault_batch_transaction_account_close          8044        803       7241          2
+vault_transaction_accounts_close              11820        283      11537          2
+vault_transaction_create                      15285       2045      13240          3
+vault_transaction_create_from_buffer          21013       2048      18965          5
+vault_transaction_execute                     14671        328      14343          2
+total                                        307612      28896     278716        129
+proof: matched (485 transactions)
+backend\bench\corpus\squads-v4\target\tare\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+$ tare build --host --manifest-path programs\whirlpool\Cargo.toml --features mainnet
+marinade_finance                 gross       tare        net     inputs
+add_liquidity               not measured (0 successful inputs)
+add_validator               not measured (0 successful inputs)
+change_authority                  5570        772       4798          2
+claim                       not measured (0 successful inputs)
+config_lp                   not measured (0 successful inputs)
+config_marinade             not measured (0 successful inputs)
+config_validator_system           4942        865       4077          2
+create_canonical_stake      not measured (0 successful inputs)
+deactivate_stake            not measured (0 successful inputs)
+deposit                          20973       1205      19768          4
+deposit_stake_account       not measured (0 successful inputs)
+emergency_unstake           not measured (0 successful inputs)
+finalize_delinquent_upgrade not measured (0 successful inputs)
+initialize                       30806       2694      28112          1
+liquid_unstake              not measured (0 successful inputs)
+merge_stakes                not measured (0 successful inputs)
+order_unstake               not measured (0 successful inputs)
+partial_unstake             not measured (0 successful inputs)
+pause                             5223        865       4358          2
+realloc_stake_list          not measured (0 successful inputs)
+realloc_validator_list      not measured (0 successful inputs)
+remove_liquidity            not measured (0 successful inputs)
+remove_validator            not measured (0 successful inputs)
+resume                            5223        863       4360          2
+set_validator_score         not measured (0 successful inputs)
+stake_reserve               not measured (0 successful inputs)
+update_active               not measured (0 successful inputs)
+update_deactivated          not measured (0 successful inputs)
+withdraw_stake_account      not measured (0 successful inputs)
+total                            72737       7264      65473         13
+proof: matched (67 transactions)
+backend\bench\corpus\marinade\target\tare\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+building whirlpool (Anchor 0.32.1)
+account ABI: SDK (typed AccountInfo boundary)
+account input: compact SDK account views
+bytecode: 14 instructions rewritten; 1509144 -> 1445224 bytes
+whirlpool: stock 1556816 bytes -> tare 1445224 bytes
+$ tare weigh --host --manifest-path programs\whirlpool\Cargo.toml --features mainnet --replay target/tare/production-replay.json
+whirlpool                                     gross       tare        net     inputs
+close_bundled_position                   not measured (0 successful inputs)
+close_position                                 8504        124       8380          4
+close_position_with_token_extensions     not measured (0 successful inputs)
+collect_fees                                  10199        208       9991          4
+collect_fees_v2                          not measured (0 successful inputs)
+collect_protocol_fees                    not measured (0 successful inputs)
+collect_protocol_fees_v2                 not measured (0 successful inputs)
+collect_reward                           not measured (0 successful inputs)
+collect_reward_v2                        not measured (0 successful inputs)
+decrease_liquidity                             9412         87       9325          2
+decrease_liquidity_v2                    not measured (0 successful inputs)
+delete_position_bundle                   not measured (0 successful inputs)
+delete_token_badge                       not measured (0 successful inputs)
+idl_include                              not measured (0 successful inputs)
+increase_liquidity                             9389        104       9285          3
+increase_liquidity_by_token_amounts_v2   not measured (0 successful inputs)
+increase_liquidity_v2                    not measured (0 successful inputs)
+initialize_adaptive_fee_tier             not measured (0 successful inputs)
+initialize_config                        not measured (0 successful inputs)
+initialize_config_extension                    8104       1323       6781          4
+initialize_dynamic_tick_array            not measured (0 successful inputs)
+initialize_fee_tier                            9555       1355       8200          3
+initialize_pool                               31930       1332      30598          3
+initialize_pool_v2                       not measured (0 successful inputs)
+initialize_pool_with_adaptive_fee        not measured (0 successful inputs)
+initialize_position_bundle               not measured (0 successful inputs)
+initialize_position_bundle_with_metadata not measured (0 successful inputs)
+initialize_reward                        not measured (0 successful inputs)
+initialize_reward_v2                     not measured (0 successful inputs)
+initialize_tick_array                          7256       1165       6091         12
+initialize_token_badge                   not measured (0 successful inputs)
+lock_position                            not measured (0 successful inputs)
+open_bundled_position                    not measured (0 successful inputs)
+open_position                                 38924       2304      36620          3
+open_position_with_metadata              not measured (0 successful inputs)
+open_position_with_token_extensions      not measured (0 successful inputs)
+reposition_liquidity_v2                  not measured (0 successful inputs)
+reset_position_range                     not measured (0 successful inputs)
+set_adaptive_fee_constants               not measured (0 successful inputs)
+set_collect_protocol_fees_authority            1504        271       1233          2
+set_config_extension_authority                 1865        160       1705          2
+set_config_feature_flag                  not measured (0 successful inputs)
+set_default_base_fee_rate                not measured (0 successful inputs)
+set_default_fee_rate                           1589        280       1309          2
+set_default_protocol_fee_rate                  1301        279       1022          2
+set_delegated_fee_authority              not measured (0 successful inputs)
+set_fee_authority                              1499        259       1240          2
+set_fee_rate                                   3632        435       3197          2
+set_fee_rate_by_delegated_fee_authority  not measured (0 successful inputs)
+set_initialize_pool_authority            not measured (0 successful inputs)
+set_preset_adaptive_fee_constants        not measured (0 successful inputs)
+set_protocol_fee_rate                          3632        435       3197          2
+set_reward_authority                     not measured (0 successful inputs)
+set_reward_authority_by_super_authority  not measured (0 successful inputs)
+set_reward_emissions                     not measured (0 successful inputs)
+set_reward_emissions_super_authority           1511        270       1241          2
+set_reward_emissions_v2                  not measured (0 successful inputs)
+set_token_badge_attribute                not measured (0 successful inputs)
+set_token_badge_authority                      1867        160       1707          3
+swap                                          26173        331      25842          3
+swap_v2                                  not measured (0 successful inputs)
+transfer_locked_position                 not measured (0 successful inputs)
+two_hop_swap                             not measured (0 successful inputs)
+two_hop_swap_v2                          not measured (0 successful inputs)
+update_fees_and_rewards                        6792        357       6435          3
+total                                        184638      11239     173399         63
+proof: matched (217 transactions)
+backend\bench\corpus\whirlpools\target\tare\weigh.json: published Weighing schema passed; 1 replay payload(s) validated and retained
+$ tare prove --host --manifest-path programs\whirlpool\Cargo.toml --features mainnet --replay target/tare/production-replay.json
+whirlpool                                     gross       tare        net     inputs
+close_bundled_position                   not measured (0 successful inputs)
+close_position                                 8504        124       8380          4
+close_position_with_token_extensions     not measured (0 successful inputs)
+collect_fees                                  10199        208       9991          4
+collect_fees_v2                          not measured (0 successful inputs)
+collect_protocol_fees                    not measured (0 successful inputs)
+collect_protocol_fees_v2                 not measured (0 successful inputs)
+collect_reward                           not measured (0 successful inputs)
+collect_reward_v2                        not measured (0 successful inputs)
+decrease_liquidity                             9412         87       9325          2
+decrease_liquidity_v2                    not measured (0 successful inputs)
+delete_position_bundle                   not measured (0 successful inputs)
+delete_token_badge                       not measured (0 successful inputs)
+idl_include                              not measured (0 successful inputs)
+increase_liquidity                             9389        104       9285          3
+increase_liquidity_by_token_amounts_v2   not measured (0 successful inputs)
+increase_liquidity_v2                    not measured (0 successful inputs)
+initialize_adaptive_fee_tier             not measured (0 successful inputs)
+initialize_config                        not measured (0 successful inputs)
+initialize_config_extension                    8104       1323       6781          4
+initialize_dynamic_tick_array            not measured (0 successful inputs)
+initialize_fee_tier                            9555       1355       8200          3
+initialize_pool                               31930       1332      30598          3
+initialize_pool_v2                       not measured (0 successful inputs)
+initialize_pool_with_adaptive_fee        not measured (0 successful inputs)
+initialize_position_bundle               not measured (0 successful inputs)
+initialize_position_bundle_with_metadata not measured (0 successful inputs)
+initialize_reward                        not measured (0 successful inputs)
+initialize_reward_v2                     not measured (0 successful inputs)
+initialize_tick_array                          7256       1165       6091         12
+initialize_token_badge                   not measured (0 successful inputs)
+lock_position                            not measured (0 successful inputs)
+open_bundled_position                    not measured (0 successful inputs)
+open_position                                 38924       2304      36620          3
+open_position_with_metadata              not measured (0 successful inputs)
+open_position_with_token_extensions      not measured (0 successful inputs)
+reposition_liquidity_v2                  not measured (0 successful inputs)
+reset_position_range                     not measured (0 successful inputs)
+set_adaptive_fee_constants               not measured (0 successful inputs)
+set_collect_protocol_fees_authority            1504        271       1233          2
+set_config_extension_authority                 1865        160       1705          2
+set_config_feature_flag                  not measured (0 successful inputs)
+set_default_base_fee_rate                not measured (0 successful inputs)
+set_default_fee_rate                           1589        280       1309          2
+set_default_protocol_fee_rate                  1301        279       1022          2
+set_delegated_fee_authority              not measured (0 successful inputs)
+set_fee_authority                              1499        259       1240          2
+set_fee_rate                                   3632        435       3197          2
+set_fee_rate_by_delegated_fee_authority  not measured (0 successful inputs)
+set_initialize_pool_authority            not measured (0 successful inputs)
+set_preset_adaptive_fee_constants        not measured (0 successful inputs)
+set_protocol_fee_rate                          3632        435       3197          2
+set_reward_authority                     not measured (0 successful inputs)
+set_reward_authority_by_super_authority  not measured (0 successful inputs)
+set_reward_emissions                     not measured (0 successful inputs)
+set_reward_emissions_super_authority           1511        270       1241          2
+set_reward_emissions_v2                  not measured (0 successful inputs)
+set_token_badge_attribute                not measured (0 successful inputs)
+set_token_badge_authority                      1867        160       1707          3
+swap                                          26173        331      25842          3
+swap_v2                                  not measured (0 successful inputs)
+transfer_locked_position                 not measured (0 successful inputs)
+two_hop_swap                             not measured (0 successful inputs)
+two_hop_swap_v2                          not measured (0 successful inputs)
+update_fees_and_rewards                        6792        357       6435          3
+total                                        184638      11239     173399         63
+proof: matched (217 transactions)
+backend\bench\corpus\whirlpools\target\tare\proof.json: published ProofReport schema passed; 1 replay payload(s) validated and retained
+$TARE_HOME\target\round-eight-canaries.json: published BenchResults schema passed
+$TARE_HOME\target\round-eight-canaries-compat.json: published Compat schema passed
+Disk free after 3 programs: 339753889792 bytes (339.75 GB)
+Recorded 6 programs in $TARE_HOME\target\round-eight-canaries.json: 6 matching proofs, 0 diverging proofs, 0 not built
+
+Runner exit: 0

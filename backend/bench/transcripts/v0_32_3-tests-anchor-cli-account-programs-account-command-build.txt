@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\account-command\Cargo.toml
+building account-command (Anchor 0.32.3)
+bytecode: 1 instructions rewritten; 144896 -> 133680 bytes
+account-command: stock 185080 bytes -> tare 133680 bytes
+
+[exit 0]

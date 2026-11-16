@@ -1,0 +1,12 @@
+$ tare weigh --host --manifest-path programs\realloc\Cargo.toml
+realloc                   gross       tare        net     inputs
+initialize                 6094       2465       3629         48
+initialize_box_payer       6096       2463       3633         48
+realloc                    4303       1639       2664         80
+realloc2                   8739       1955       6784         52
+realloc_box_payer          7047       2527       4520         56
+realloc_self_payer         3717       1197       2520         40
+total                     35996      12246      23750        324
+proof: matched (2276 transactions)
+
+[exit 0]

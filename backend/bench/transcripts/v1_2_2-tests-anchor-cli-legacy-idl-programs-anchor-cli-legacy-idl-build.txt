@@ -1,0 +1,6 @@
+$ tare build --host --manifest-path programs\anchor-cli-legacy-idl\Cargo.toml
+building anchor-cli-legacy-idl (Anchor 1.2.2)
+bytecode: 0 instructions rewritten; 92832 -> 84960 bytes
+anchor-cli-legacy-idl: stock 167752 bytes -> tare 84960 bytes
+
+[exit 0]

@@ -1,0 +1,9 @@
+$ tare weigh --host --manifest-path programs\token-wrapper\Cargo.toml
+token_wrapper      gross       tare        net     inputs
+initialize         37907       5054      32853         32
+unwrap             14848        711      14137         45
+wrap               19073        647      18426         48
+total              71828       6412      65416        125
+proof: matched (2760 transactions)
+
+[exit 0]

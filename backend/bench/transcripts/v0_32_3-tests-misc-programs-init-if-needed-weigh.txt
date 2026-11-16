@@ -1,0 +1,9 @@
+$ tare weigh --host --manifest-path programs\init-if-needed\Cargo.toml
+init_if_needed         gross       tare        net     inputs
+close                   1133        689        444         16
+initialize              4626       2760       1866         48
+second_initialize       4301       2450       1851         24
+total                  10060       5899       4161         88
+proof: matched (864 transactions)
+
+[exit 0]

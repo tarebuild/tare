@@ -1,0 +1,28 @@
+$ tare build --host --manifest-path programs/squads_multisig_program/Cargo.toml
+Diagnostic: linked symbol and ELF section sizes from the round-seven reference, before changing code.
+
+                         stock bytes   Tare bytes   difference
+.text                         710072       816968       106896
+.rodata                        25960        25288         -672
+.data.rel.ro                    6912        11376         4464
+.rel.dyn                       47056         1920       -45136
+ELF                           791768       857400        65632
+
+Unique-address linked symbol groups:
+instruction wrappers: stock 29304, Tare 122000 bytes.
+account validation: stock 171056, Tare 144696 bytes.
+Tare field-load helpers: 99552 bytes; boxed Multisig and TransactionBuffer copies contribute 15840 bytes.
+formatting: stock 68856, Tare 69144 bytes.
+
+The retained SDK descriptor constructor is inlined into field loaders and initialization paths.
+The ProgramConfig load contains about 960 bytes of descriptor/cache construction before its scattered allocation failure paths.
+
+Measured candidates, in place:
+- Sharing SDK Account::exit reduces Tare ELF from 857400 to 825848 bytes.
+- Sharing SDK descriptor construction and forwarding boxed metadata to the existing account view reduces it to 777488 bytes.
+- Broad close-context inlining grows Squads to 867184 bytes and is rejected.
+- Restricting close-context inlining to small boxed leaf contexts restores 777488 bytes.
+
+Final production canary: stock 791768 bytes, Tare 777488 bytes; gross 307612 CU, net 278716 CU.
+All 485 transactions match; all 34 reached instructions are strictly cheaper than stock.
+Symbol categories identify retained code families, not a disjoint causal attribution of final runtime cost.

@@ -1,0 +1,8 @@
+$ tare --version
+tare 0.5.0
+
+$ node bench/gate.mjs --summary
+Current-stock gate: FAIL: 172/189 measured programs pass; 17 size failures; 7 instruction CU failures.
+Coverage: 238/238 manifest results; 49 explicit not-built; 0 coverage issues; 0 proof failures.
+Report: bench\history\round-five\gate.json
+[exit 1]

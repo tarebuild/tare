@@ -1,0 +1,11 @@
+$ tare prove --host --manifest-path programs\callee\Cargo.toml
+callee                       gross       tare        net     inputs
+initialize                    4311       2466       1845         48
+return_struct                  704        309        395         80
+return_u64                     706        311        395         80
+return_u64_from_account        703        285        418         80
+return_vec                     727        296        431         80
+total                         7151       3667       3484        368
+proof: matched (2856 transactions)
+
+[exit 0]
