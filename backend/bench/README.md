@@ -105,3 +105,11 @@ node bench/attach-record.mjs --program v0_32_3-tests-idl-programs-new-idl --reco
 ```
 
 The optional `recordCluster` and `recordUrl` fields are documented in `toolchain/contract-additions.md` for the services schema. Subsequent measurements preserve the attachment only if both build hashes and the corpus hash remain identical.
+
+## Current results
+
+[The round-five report](round-five.md) describes all 238 entries and 189 matching proofs. [The stock gap ledger](gaps/round-five/gap-causes.md) accounts for every program still failing the current-stock gate. Historical round-three comparisons remain optional diagnostics. [Lead commands](lead-run.md) cover the Linux/validator repetition.
+
+## Round five acceptance gate
+
+`node bench/gate.mjs --summary` checks every current measured program against stock: matching proof, Tare ELF no larger, and no reached instruction more expensive. Production instructions must be strictly cheaper. Every manifest entry remains explicitly measured or not built. `--against-round-three` reports historical comparisons without failing acceptance. The final measurements and remaining failures are in [round-five.md](round-five.md).

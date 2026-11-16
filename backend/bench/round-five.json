@@ -1,0 +1,2135 @@
+{
+  "results": "results.json",
+  "resultsSha256": "655507df2dca9d6a9034b1374d7da27d2758ce515a7a00942f396a0a693344a0",
+  "gate": "history/round-five/gate.json",
+  "gateStatus": "failed",
+  "gateComplete": true,
+  "gapCausesMatched": true,
+  "totals": {
+    "programs": 238,
+    "measured": 189,
+    "notBuilt": 49,
+    "instructions": 1323,
+    "weights": {
+      "gross": 6295676,
+      "net": 4433845,
+      "tare": 1861831,
+      "inputs": 30722
+    },
+    "binarySize": {
+      "gross": 38786032,
+      "net": 35997528,
+      "tare": 2788504
+    },
+    "rentLamports": {
+      "gross": 197199143320,
+      "net": 183033543000,
+      "tare": 14165600320
+    },
+    "corpus": {
+      "tests": 17,
+      "generated": 257875,
+      "mainnet": 0
+    }
+  },
+  "issues": [],
+  "artifactChecks": [
+    {
+      "id": "basic-0",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "basic-0",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "basic-1",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "basic-1",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "basic-2",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "basic-2",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "puppet",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "puppet",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "puppet-master",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "puppet-master",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "basic-4",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "basic-4",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "basic-5",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "basic-5",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "declare-id",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "declare-id",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "multiple-suites",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "multiple-suites",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "system-accounts",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "system-accounts",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "floats",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "floats",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "events",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "events",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "errors",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "errors",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "relations-derivation",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "relations-derivation",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-spl-metadata-programs-metadata",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-spl-metadata-programs-metadata",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-spl-token",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-spl-token",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-validator-clone-programs-validator-clone",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-validator-clone-programs-validator-clone",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-one",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-one",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-two",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-two",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-spl-associated-token",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-spl-associated-token",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-account-info",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-account-info",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-unchecked-account",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-unchecked-account",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-sysvars-programs-sysvars",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-sysvars-programs-sysvars",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-typescript-programs-typescript",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-typescript-programs-typescript",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-external",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-external",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-ignore-non-accounts",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-ignore-non-accounts",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-docs",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-docs",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-optional-programs-allow-missing-optionals",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-optional-programs-allow-missing-optionals",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-zero-copy-programs-zero-cpi",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-zero-copy-programs-zero-cpi",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-account-programs-account-command",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-account-programs-account-command",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-composite-programs-composite",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-composite-programs-composite",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-cpi-returns-programs-callee",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-cpi-returns-programs-callee",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-relations-derivation",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-relations-derivation",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-init-if-needed",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-init-if-needed",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-generics",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-generics",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-remaining-accounts",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-remaining-accounts",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-realloc-programs-realloc",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-realloc-programs-realloc",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-cpi-returns-programs-caller",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-cpi-returns-programs-caller",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-lamports",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-lamports",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-chat-programs-chat",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-chat-programs-chat",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-declare-program-programs-external",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-declare-program-programs-external",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-overflow-checks",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-overflow-checks",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-pyth-programs-pyth",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-pyth-programs-pyth",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-native-system",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-native-system",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-optional-programs-optional",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-optional-programs-optional",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-zero-copy-programs-zero-copy",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-zero-copy-programs-zero-copy",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-spl-transfer-hook-programs-transfer-hook",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-spl-transfer-hook-programs-transfer-hook",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-idl",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-idl",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-escrow-programs-escrow",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-escrow-programs-escrow",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-misc-optional",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-misc-optional",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-misc",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-misc",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-bench-programs-bench",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_31_1-tests-bench-programs-bench",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-spl-metadata-programs-metadata",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-spl-metadata-programs-metadata",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-spl-token",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-spl-token",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-0-programs-basic-0",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-0-programs-basic-0",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-validator-clone-programs-validator-clone",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-validator-clone-programs-validator-clone",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-one",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-one",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-two",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-two",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-spl-associated-token",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-spl-associated-token",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-account-info",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-account-info",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-unchecked-account",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-unchecked-account",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-declare-id-programs-declare-id",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-declare-id-programs-declare-id",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-system-accounts-programs-system-accounts",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-system-accounts-programs-system-accounts",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-multiple-suites-programs-multiple-suites",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-multiple-suites-programs-multiple-suites",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-sysvars-programs-sysvars",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-sysvars-programs-sysvars",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-typescript-programs-typescript",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-typescript-programs-typescript",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-external",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-external",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-ignore-non-accounts",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-ignore-non-accounts",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-3-programs-puppet",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-3-programs-puppet",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-docs",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-docs",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-optional-programs-allow-missing-optionals",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-optional-programs-allow-missing-optionals",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-1-programs-basic-1",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-1-programs-basic-1",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-2-programs-basic-2",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-2-programs-basic-2",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-zero-copy-programs-zero-cpi",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-zero-copy-programs-zero-cpi",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-events-programs-events",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-events-programs-events",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-account-programs-account-command",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-account-programs-account-command",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-floats-programs-floats",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-floats-programs-floats",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-composite-programs-composite",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-composite-programs-composite",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-cpi-returns-programs-callee",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-cpi-returns-programs-callee",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-relations-derivation",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-relations-derivation",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-init-if-needed",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-init-if-needed",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-generics",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-generics",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-remaining-accounts",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-remaining-accounts",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-relations-derivation-programs-relations-derivation",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-relations-derivation-programs-relations-derivation",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-realloc-programs-realloc",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-realloc-programs-realloc",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-cpi-returns-programs-caller",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-cpi-returns-programs-caller",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-lamports",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-lamports",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-chat-programs-chat",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-chat-programs-chat",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-declare-program-programs-external",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-declare-program-programs-external",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-overflow-checks",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-overflow-checks",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-pyth-programs-pyth",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-pyth-programs-pyth",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-native-system",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-native-system",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-optional-programs-optional",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-optional-programs-optional",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-zero-copy-programs-zero-copy",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-zero-copy-programs-zero-copy",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-errors-programs-errors",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-errors-programs-errors",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-spl-transfer-hook-programs-transfer-hook",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-spl-transfer-hook-programs-transfer-hook",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-idl",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-idl",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-escrow-programs-escrow",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-escrow-programs-escrow",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-new-idl",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-new-idl",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-misc-optional",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-misc-optional",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-misc",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-misc",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-bench-programs-bench",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v0_32_3-tests-bench-programs-bench",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-spl-metadata-programs-metadata",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-spl-metadata-programs-metadata",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-spl-token",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-spl-token",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-0-programs-basic-0",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-0-programs-basic-0",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-env-id",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-env-id",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-validator-clone-programs-validator-clone",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-validator-clone-programs-validator-clone",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-one",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-one",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-two",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-two",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-solana-program-deps-matching-programs-matching-solana-program",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-solana-program-deps-matching-programs-matching-solana-program",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-solana-program-deps-mismatched-programs-mismatched-solana-program",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-solana-program-deps-mismatched-programs-mismatched-solana-program",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-spl-associated-token",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-spl-associated-token",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-multiple-scripts-programs-example",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-multiple-scripts-programs-example",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-account-info",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-account-info",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-unchecked-account",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-unchecked-account",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-declare-id-programs-declare-id",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-declare-id-programs-declare-id",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-system-accounts-programs-system-accounts",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-system-accounts-programs-system-accounts",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-multiple-suites-programs-multiple-suites",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-multiple-suites-programs-multiple-suites",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-sysvars-programs-sysvars",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-sysvars-programs-sysvars",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-typescript-programs-typescript",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-typescript-programs-typescript",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-legacy-idl-programs-anchor-cli-legacy-idl",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-legacy-idl-programs-anchor-cli-legacy-idl",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-interface-account-programs-old",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-interface-account-programs-old",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-external",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-external",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-account-generation-test-programs-account-generation-test",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-account-generation-test-programs-account-generation-test",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-ignore-non-accounts",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-ignore-non-accounts",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-3-programs-puppet",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-3-programs-puppet",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-docs",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-docs",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-optional-programs-allow-missing-optionals",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-optional-programs-allow-missing-optionals",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-malicious",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-malicious",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-1-programs-basic-1",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-1-programs-basic-1",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-interface-account-programs-new",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-interface-account-programs-new",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-2-programs-basic-2",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-2-programs-basic-2",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-events-programs-events",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-events-programs-events",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-account-programs-account-command",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-account-programs-account-command",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-floats-programs-floats",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-floats-programs-floats",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-composite-programs-composite",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-composite-programs-composite",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-relations-derivation",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-relations-derivation",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-init-if-needed",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-init-if-needed",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-callee",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-callee",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-custom-program-programs-custom-program",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-custom-program-programs-custom-program",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-remaining-accounts",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-remaining-accounts",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-generics",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-generics",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-relations-derivation-programs-relations-derivation",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-relations-derivation-programs-relations-derivation",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-lamports",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-lamports",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-chat-programs-chat",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-chat-programs-chat",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-overflow-checks",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-overflow-checks",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-pyth-programs-pyth",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-pyth-programs-pyth",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-native-system",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-native-system",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-realloc-programs-realloc",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-realloc-programs-realloc",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-optional-programs-optional",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-optional-programs-optional",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-errors-programs-errors",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-errors-programs-errors",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-spl-transfer-hook-programs-transfer-hook",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-spl-transfer-hook-programs-transfer-hook",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-declare-program-programs-declare-program",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-declare-program-programs-declare-program",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-tictactoe-programs-tictactoe",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-tictactoe-programs-tictactoe",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-declare-program-programs-external",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-declare-program-programs-external",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-caller",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-caller",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-escrow-programs-escrow",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-escrow-programs-escrow",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-misc-optional",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-misc-optional",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-misc",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-misc",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-bench-programs-bench",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "v1_2_2-tests-bench-programs-bench",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "tare-registry",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "tare-registry",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "production-squads-v4",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "production-squads-v4",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "production-whirlpools",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "production-whirlpools",
+      "kind": "tare",
+      "matched": true
+    },
+    {
+      "id": "production-marinade",
+      "kind": "stock",
+      "matched": true
+    },
+    {
+      "id": "production-marinade",
+      "kind": "tare",
+      "matched": true
+    }
+  ],
+  "exactInputTotals": {
+    "programs": 178,
+    "comparedTransactions": 220531,
+    "roundThreeNet": 3808167,
+    "currentGross": 5469202,
+    "currentNet": 3739418
+  },
+  "currentSizeGaps": [
+    {
+      "id": "v1_2_2-tests-bench-programs-bench",
+      "stock": 833576,
+      "tare": 1848304,
+      "increase": 1014728
+    },
+    {
+      "id": "v0_32_3-tests-bench-programs-bench",
+      "stock": 1066280,
+      "tare": 1923512,
+      "increase": 857232
+    },
+    {
+      "id": "v0_31_1-tests-bench-programs-bench",
+      "stock": 1066792,
+      "tare": 1923512,
+      "increase": 856720
+    },
+    {
+      "id": "production-whirlpools",
+      "stock": 1556816,
+      "tare": 2263656,
+      "increase": 706840
+    },
+    {
+      "id": "production-squads-v4",
+      "stock": 791768,
+      "tare": 1100376,
+      "increase": 308608
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-misc-optional",
+      "stock": 695384,
+      "tare": 945048,
+      "increase": 249664
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-misc-optional",
+      "stock": 767632,
+      "tare": 993688,
+      "increase": 226056
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-misc-optional",
+      "stock": 767912,
+      "tare": 993456,
+      "increase": 225544
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-misc",
+      "stock": 636304,
+      "tare": 860312,
+      "increase": 224008
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-misc",
+      "stock": 716376,
+      "tare": 901768,
+      "increase": 185392
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-misc",
+      "stock": 716656,
+      "tare": 901536,
+      "increase": 184880
+    },
+    {
+      "id": "production-marinade",
+      "stock": 964616,
+      "tare": 1115168,
+      "increase": 150552
+    },
+    {
+      "id": "v1_2_2-tests-realloc-programs-realloc",
+      "stock": 188744,
+      "tare": 207040,
+      "increase": 18296
+    },
+    {
+      "id": "v1_2_2-tests-optional-programs-optional",
+      "stock": 186048,
+      "tare": 195384,
+      "increase": 9336
+    },
+    {
+      "id": "v0_32_3-tests-optional-programs-optional",
+      "stock": 234832,
+      "tare": 237528,
+      "increase": 2696
+    },
+    {
+      "id": "v0_31_1-tests-optional-programs-optional",
+      "stock": 235360,
+      "tare": 237528,
+      "increase": 2168
+    },
+    {
+      "id": "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+      "stock": 182288,
+      "tare": 183936,
+      "increase": 1648
+    }
+  ],
+  "unmeasuredCategories": {
+    "unreachable_by_source": 51,
+    "generated_state_missing": 35,
+    "source_constraints_impossible": 3,
+    "upstream_source_idl_mismatch": 1,
+    "fixed_production_authority_unavailable": 1,
+    "position_bundle_scenario_missing": 5,
+    "additional_token_program_scenario_missing": 14,
+    "protocol_fee_scenario_missing": 1,
+    "reward_vault_scenario_missing": 5,
+    "token_badge_scenario_missing": 3,
+    "unconditional_source_error": 1,
+    "adaptive_fee_scenario_missing": 8,
+    "production_admin_signature": 2,
+    "dynamic_tick_array_scenario_missing": 1,
+    "locked_position_scenario_missing": 2,
+    "position_range_scenario_missing": 1,
+    "second_pool_scenario_missing": 2
+  },
+  "aboveStock": [
+    {
+      "id": "production-whirlpools",
+      "instruction": "collect_fees",
+      "gross": 10199,
+      "net": 12202,
+      "increase": 2003,
+      "inputs": 4
+    },
+    {
+      "id": "production-whirlpools",
+      "instruction": "swap",
+      "gross": 26173,
+      "net": 27978,
+      "increase": 1805,
+      "inputs": 3
+    },
+    {
+      "id": "production-whirlpools",
+      "instruction": "close_position",
+      "gross": 8504,
+      "net": 9433,
+      "increase": 929,
+      "inputs": 4
+    },
+    {
+      "id": "production-whirlpools",
+      "instruction": "initialize_pool",
+      "gross": 31930,
+      "net": 32187,
+      "increase": 257,
+      "inputs": 3
+    },
+    {
+      "id": "production-whirlpools",
+      "instruction": "update_fees_and_rewards",
+      "gross": 6792,
+      "net": 7000,
+      "increase": 208,
+      "inputs": 3
+    },
+    {
+      "id": "production-whirlpools",
+      "instruction": "set_fee_rate",
+      "gross": 3632,
+      "net": 3640,
+      "increase": 8,
+      "inputs": 2
+    },
+    {
+      "id": "production-whirlpools",
+      "instruction": "set_protocol_fee_rate",
+      "gross": 3632,
+      "net": 3640,
+      "increase": 8,
+      "inputs": 2
+    }
+  ],
+  "remainingPrograms": [
+    "production-whirlpools",
+    "v1_2_2-tests-bench-programs-bench",
+    "v0_32_3-tests-bench-programs-bench",
+    "v0_31_1-tests-bench-programs-bench",
+    "production-squads-v4",
+    "v1_2_2-tests-misc-programs-misc-optional",
+    "v0_32_3-tests-misc-programs-misc-optional",
+    "v0_31_1-tests-misc-programs-misc-optional",
+    "v1_2_2-tests-misc-programs-misc",
+    "v0_32_3-tests-misc-programs-misc",
+    "v0_31_1-tests-misc-programs-misc",
+    "production-marinade",
+    "v1_2_2-tests-realloc-programs-realloc",
+    "v1_2_2-tests-optional-programs-optional",
+    "v0_32_3-tests-optional-programs-optional",
+    "v0_31_1-tests-optional-programs-optional",
+    "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts"
+  ]
+}

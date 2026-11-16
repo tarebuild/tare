@@ -1,0 +1,1366 @@
+{
+  "schemaVersion": "1",
+  "results": "C:\\src\\tare\\backend\\bench\\results.json",
+  "instructions": [
+    {
+      "program": "errors",
+      "instruction": "hello",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 12
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6000))"
+    },
+    {
+      "program": "errors",
+      "instruction": "hello_next",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 20
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6124))"
+    },
+    {
+      "program": "errors",
+      "instruction": "hello_no_msg",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 16
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6123))"
+    },
+    {
+      "program": "errors",
+      "instruction": "require_eq",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_eq!(5241, 124124124, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 67
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6126))"
+    },
+    {
+      "program": "errors",
+      "instruction": "require_eq_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_eq!(5241, 124124124, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 72
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2501))"
+    },
+    {
+      "program": "errors",
+      "instruction": "require_gt",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gt!(5, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 115
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6129))"
+    },
+    {
+      "program": "errors",
+      "instruction": "require_gt_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gt!(10, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 120
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2505))"
+    },
+    {
+      "program": "errors",
+      "instruction": "require_gte",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gte!(5, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 125
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6128))"
+    },
+    {
+      "program": "errors",
+      "instruction": "require_gte_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gte!(5, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 130
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2506))"
+    },
+    {
+      "program": "errors",
+      "instruction": "require_neq",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_neq!(500, 500, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 77
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6127))"
+    },
+    {
+      "program": "errors",
+      "instruction": "require_neq_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_neq!(500, 500, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 82
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2503))"
+    },
+    {
+      "program": "errors",
+      "instruction": "test_err",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 29
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6000))"
+    },
+    {
+      "program": "errors",
+      "instruction": "test_program_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 33
+      },
+      "observedBaselineError": "InstructionError(0, InvalidAccountData)"
+    },
+    {
+      "program": "errors",
+      "instruction": "test_program_error_with_source",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 37
+      },
+      "observedBaselineError": "InstructionError(0, InvalidAccountData)"
+    },
+    {
+      "program": "errors",
+      "instruction": "test_require",
+      "category": "unreachable_by_source",
+      "reason": "The handler unconditionally executes require!(false, ...).",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 24
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6000))"
+    },
+    {
+      "program": "errors",
+      "instruction": "try_into_integer",
+      "category": "unreachable_by_source",
+      "reason": "The handler converts u64::MAX to its smaller signed return type and always returns the conversion error.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/errors/programs/errors/src/lib.rs",
+        "line": 135
+      },
+      "observedBaselineError": "InstructionError(0, Custom(4102))"
+    },
+    {
+      "program": "v0_31_1-tests-pyth-programs-pyth",
+      "instruction": "initialize",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, ProgramFailedToComplete).",
+      "source": {
+        "path": "bench/corpus/anchor/tests/pyth/programs/pyth/src/lib.rs",
+        "line": 11
+      },
+      "observedBaselineError": "InstructionError(0, ProgramFailedToComplete)"
+    },
+    {
+      "program": "v0_31_1-tests-pyth-programs-pyth",
+      "instruction": "set_price",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, ProgramFailedToComplete).",
+      "source": {
+        "path": "bench/corpus/anchor/tests/pyth/programs/pyth/src/lib.rs",
+        "line": 23
+      },
+      "observedBaselineError": "InstructionError(0, ProgramFailedToComplete)"
+    },
+    {
+      "program": "v0_31_1-tests-spl-transfer-hook-programs-transfer-hook",
+      "instruction": "execute",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, Custom(2021)).",
+      "source": {
+        "path": "bench/corpus/anchor/tests/spl/transfer-hook/programs/transfer-hook/src/lib.rs",
+        "line": 75
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2021))"
+    },
+    {
+      "program": "v0_31_1-tests-spl-transfer-hook-programs-transfer-hook",
+      "instruction": "initialize",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, Custom(2022)).",
+      "source": {
+        "path": "bench/corpus/anchor/tests/spl/transfer-hook/programs/transfer-hook/src/lib.rs",
+        "line": 52
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2022))"
+    },
+    {
+      "program": "v0_31_1-tests-idl-programs-idl",
+      "instruction": "cause_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/idl/programs/idl/src/lib.rs",
+        "line": 106
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6000))"
+    },
+    {
+      "program": "v0_31_1-tests-misc-programs-misc",
+      "instruction": "test_used_identifiers",
+      "category": "source_constraints_impossible",
+      "reason": "The constraints fix all four one-byte seeds and explicit bumps. Bump4 produces an on-curve address, so no fourth account can satisfy the required PDA constraint.",
+      "source": {
+        "path": "bench/corpus/anchor/tests/misc/programs/misc/src/context.rs",
+        "line": 721,
+        "sha256": "d0b311786077ab967cc99285d997b186ff94de9acd4697dba603c9e66ea80c3d"
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2003))",
+      "evidence": "gaps/round-four/scenario-fix/fixed-bumps.json"
+    },
+    {
+      "program": "v0_32_3-tests-pyth-programs-pyth",
+      "instruction": "initialize",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, ProgramFailedToComplete).",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/pyth/programs/pyth/src/lib.rs",
+        "line": 11
+      },
+      "observedBaselineError": "InstructionError(0, ProgramFailedToComplete)"
+    },
+    {
+      "program": "v0_32_3-tests-pyth-programs-pyth",
+      "instruction": "set_price",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, ProgramFailedToComplete).",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/pyth/programs/pyth/src/lib.rs",
+        "line": 23
+      },
+      "observedBaselineError": "InstructionError(0, ProgramFailedToComplete)"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "hello",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 12
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6000))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "hello_next",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 20
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6124))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "hello_no_msg",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 16
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6123))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "require_eq",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_eq!(5241, 124124124, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 67
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6126))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "require_eq_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_eq!(5241, 124124124, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 72
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2501))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "require_gt",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gt!(5, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 115
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6129))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "require_gt_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gt!(10, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 120
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2505))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "require_gte",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gte!(5, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 125
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6128))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "require_gte_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gte!(5, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 130
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2506))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "require_neq",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_neq!(500, 500, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 77
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6127))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "require_neq_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_neq!(500, 500, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 82
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2503))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "test_err",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 29
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6000))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "test_program_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 33
+      },
+      "observedBaselineError": "InstructionError(0, InvalidAccountData)"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "test_program_error_with_source",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 37
+      },
+      "observedBaselineError": "InstructionError(0, InvalidAccountData)"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "test_require",
+      "category": "unreachable_by_source",
+      "reason": "The handler unconditionally executes require!(false, ...).",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 24
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6000))"
+    },
+    {
+      "program": "v0_32_3-tests-errors-programs-errors",
+      "instruction": "try_into_integer",
+      "category": "unreachable_by_source",
+      "reason": "The handler converts u64::MAX to its smaller signed return type and always returns the conversion error.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/errors/programs/errors/src/lib.rs",
+        "line": 135
+      },
+      "observedBaselineError": "InstructionError(0, Custom(4102))"
+    },
+    {
+      "program": "v0_32_3-tests-spl-transfer-hook-programs-transfer-hook",
+      "instruction": "execute",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, Custom(2021)).",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/spl/transfer-hook/programs/transfer-hook/src/lib.rs",
+        "line": 75
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2021))"
+    },
+    {
+      "program": "v0_32_3-tests-spl-transfer-hook-programs-transfer-hook",
+      "instruction": "initialize",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, Custom(2022)).",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/spl/transfer-hook/programs/transfer-hook/src/lib.rs",
+        "line": 52
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2022))"
+    },
+    {
+      "program": "v0_32_3-tests-idl-programs-idl",
+      "instruction": "cause_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/idl/programs/idl/src/lib.rs",
+        "line": 106
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6000))"
+    },
+    {
+      "program": "v0_32_3-tests-misc-programs-misc",
+      "instruction": "test_used_identifiers",
+      "category": "source_constraints_impossible",
+      "reason": "The constraints fix all four one-byte seeds and explicit bumps. Bump4 produces an on-curve address, so no fourth account can satisfy the required PDA constraint.",
+      "source": {
+        "path": "bench/corpus/anchor-0.32.3/tests/misc/programs/misc/src/context.rs",
+        "line": 721,
+        "sha256": "d0b311786077ab967cc99285d997b186ff94de9acd4697dba603c9e66ea80c3d"
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2003))",
+      "evidence": "gaps/round-four/scenario-fix/fixed-bumps.json"
+    },
+    {
+      "program": "v1_2_2-tests-pyth-programs-pyth",
+      "instruction": "initialize",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, ProgramFailedToComplete).",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/pyth/programs/pyth/src/lib.rs",
+        "line": 11
+      },
+      "observedBaselineError": "InstructionError(0, ProgramFailedToComplete)"
+    },
+    {
+      "program": "v1_2_2-tests-pyth-programs-pyth",
+      "instruction": "set_price",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, ProgramFailedToComplete).",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/pyth/programs/pyth/src/lib.rs",
+        "line": 23
+      },
+      "observedBaselineError": "InstructionError(0, ProgramFailedToComplete)"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "hello",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 12
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6000))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "hello_next",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 20
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6124))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "hello_no_msg",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 16
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6123))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "require_eq",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_eq!(5241, 124124124, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 67
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6126))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "require_eq_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_eq!(5241, 124124124, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 72
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2501))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "require_gt",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gt!(5, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 115
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6129))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "require_gt_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gt!(10, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 120
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2505))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "require_gte",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gte!(5, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 125
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6128))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "require_gte_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_gte!(5, 10, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 130
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2506))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "require_neq",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_neq!(500, 500, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 77
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6127))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "require_neq_default_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler compares fixed constants with require_neq!(500, 500, ...), which always fails.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 82
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2503))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "test_err",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 29
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6000))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "test_program_error",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 33
+      },
+      "observedBaselineError": "InstructionError(0, InvalidAccountData)"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "test_program_error_with_source",
+      "category": "unreachable_by_source",
+      "reason": "The handler directly returns Err for every input.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 37
+      },
+      "observedBaselineError": "InstructionError(0, InvalidAccountData)"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "test_require",
+      "category": "unreachable_by_source",
+      "reason": "The handler unconditionally executes require!(false, ...).",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 24
+      },
+      "observedBaselineError": "InstructionError(0, Custom(6000))"
+    },
+    {
+      "program": "v1_2_2-tests-errors-programs-errors",
+      "instruction": "try_into_integer",
+      "category": "unreachable_by_source",
+      "reason": "The handler converts u64::MAX to its smaller signed return type and always returns the conversion error.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/errors/programs/errors/src/lib.rs",
+        "line": 135
+      },
+      "observedBaselineError": "InstructionError(0, Custom(4102))"
+    },
+    {
+      "program": "v1_2_2-tests-spl-transfer-hook-programs-transfer-hook",
+      "instruction": "execute",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, Custom(2021)).",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/spl/transfer-hook/programs/transfer-hook/src/lib.rs",
+        "line": 75
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2021))"
+    },
+    {
+      "program": "v1_2_2-tests-spl-transfer-hook-programs-transfer-hook",
+      "instruction": "initialize",
+      "category": "generated_state_missing",
+      "reason": "The generated corpus has not produced a successful input for this handler. Its recorded baseline fails with InstructionError(0, Custom(2022)).",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/spl/transfer-hook/programs/transfer-hook/src/lib.rs",
+        "line": 52
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2022))"
+    },
+    {
+      "program": "v1_2_2-tests-declare-program-programs-declare-program",
+      "instruction": "cpi_empty_composite",
+      "category": "upstream_source_idl_mismatch",
+      "reason": "The caller uses instructions from its checked-in external IDL that the compiled external program source and its generated stock IDL do not implement. Stock dispatch returns 101.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/declare-program/programs/declare-program/src/lib.rs",
+        "line": 111
+      },
+      "observedBaselineError": "InstructionError(0, Custom(101))"
+    },
+    {
+      "program": "v1_2_2-tests-misc-programs-misc",
+      "instruction": "test_used_identifiers",
+      "category": "source_constraints_impossible",
+      "reason": "The constraints fix all four one-byte seeds and explicit bumps. Bump4 produces an on-curve address, so no fourth account can satisfy the required PDA constraint.",
+      "source": {
+        "path": "bench/corpus/anchor-1.2.2/tests/misc/programs/misc/src/context.rs",
+        "line": 721,
+        "sha256": "d4a6874d7b66573956a8e26b1b27389c40ccc637e2fc1c64436e12d3740ab327"
+      },
+      "observedBaselineError": "InstructionError(0, Custom(2003))",
+      "evidence": "gaps/round-four/scenario-fix/fixed-bumps.json"
+    },
+    {
+      "program": "production-squads-v4",
+      "instruction": "multisig_create",
+      "category": "unreachable_by_source",
+      "reason": "unconditional source error",
+      "source": "programs/squads_multisig_program/src/lib.rs:80",
+      "observedBaselineError": null,
+      "observedError": 6044
+    },
+    {
+      "program": "production-squads-v4",
+      "instruction": "program_config_init",
+      "category": "fixed_production_authority_unavailable",
+      "reason": "fixed production initializer signature unavailable",
+      "source": "programs/squads_multisig_program/src/instructions/program_config_init.rs:10",
+      "observedBaselineError": null,
+      "observedError": 6004
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "close_bundled_position",
+      "category": "position_bundle_scenario_missing",
+      "reason": "The current lifecycle creates an individual position; no position-bundle NFT, bitmap, or bundled-position lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:616",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "close_position_with_token_extensions",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:658",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "collect_fees_v2",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:948",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "collect_protocol_fees",
+      "category": "protocol_fee_scenario_missing",
+      "reason": "The current lifecycle collects position fees; no dedicated protocol-fee withdrawal transaction is generated.",
+      "source": "programs/whirlpool/src/lib.rs:309",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "collect_protocol_fees_v2",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:960",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "collect_reward",
+      "category": "reward_vault_scenario_missing",
+      "reason": "The current lifecycle has no funded reward mint/vault or initialized reward-emission schedule.",
+      "source": "programs/whirlpool/src/lib.rs:301",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "collect_reward_v2",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:972",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "decrease_liquidity_v2",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:996",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "delete_position_bundle",
+      "category": "position_bundle_scenario_missing",
+      "reason": "The current lifecycle creates an individual position; no position-bundle NFT, bitmap, or bundled-position lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:571",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "delete_token_badge",
+      "category": "token_badge_scenario_missing",
+      "reason": "The current lifecycle does not enable the admin-controlled token-badge feature or create a badge mint lifecycle.",
+      "source": "programs/whirlpool/src/lib.rs:1302",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "idl_include",
+      "category": "unconditional_source_error",
+      "reason": "The source-only IDL inclusion handler always returns InvalidInstructionData.",
+      "source": "programs/whirlpool/src/lib.rs:1324",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "increase_liquidity_by_token_amounts_v2",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:1052",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "increase_liquidity_v2",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:1022",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "initialize_adaptive_fee_tier",
+      "category": "adaptive_fee_scenario_missing",
+      "reason": "The current lifecycle creates a fixed-fee pool; no adaptive-fee tier, oracle state, or delegated authority lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:732",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "initialize_config",
+      "category": "production_admin_signature",
+      "reason": "The mainnet feature requires a fixed production admin signature. The configured test authorities cannot authorize this instruction.",
+      "source": "programs/whirlpool/src/lib.rs:53",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "initialize_dynamic_tick_array",
+      "category": "dynamic_tick_array_scenario_missing",
+      "reason": "The current lifecycle creates fixed tick arrays; the dynamic account allocation path has no directed input.",
+      "source": "programs/whirlpool/src/lib.rs:117",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "initialize_pool_v2",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:1073",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "initialize_pool_with_adaptive_fee",
+      "category": "adaptive_fee_scenario_missing",
+      "reason": "The current lifecycle creates a fixed-fee pool; no adaptive-fee tier, oracle state, or delegated authority lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:852",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "initialize_position_bundle",
+      "category": "position_bundle_scenario_missing",
+      "reason": "The current lifecycle creates an individual position; no position-bundle NFT, bitmap, or bundled-position lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:551",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "initialize_position_bundle_with_metadata",
+      "category": "position_bundle_scenario_missing",
+      "reason": "The current lifecycle creates an individual position; no position-bundle NFT, bitmap, or bundled-position lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:558",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "initialize_reward",
+      "category": "reward_vault_scenario_missing",
+      "reason": "The current lifecycle has no funded reward mint/vault or initialized reward-emission schedule.",
+      "source": "programs/whirlpool/src/lib.rs:159",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "initialize_reward_v2",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:1095",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "initialize_token_badge",
+      "category": "token_badge_scenario_missing",
+      "reason": "The current lifecycle does not enable the admin-controlled token-badge feature or create a badge mint lifecycle.",
+      "source": "programs/whirlpool/src/lib.rs:1291",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "lock_position",
+      "category": "locked_position_scenario_missing",
+      "reason": "The current lifecycle has no lock configuration or locked position-token owner transition.",
+      "source": "programs/whirlpool/src/lib.rs:672",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "open_bundled_position",
+      "category": "position_bundle_scenario_missing",
+      "reason": "The current lifecycle creates an individual position; no position-bundle NFT, bitmap, or bundled-position lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:591",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "open_position_with_metadata",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:218",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "open_position_with_token_extensions",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:636",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "reposition_liquidity_v2",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:1247",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "reset_position_range",
+      "category": "position_range_scenario_missing",
+      "reason": "The current lifecycle opens a fixed-range position; a range-reset transition is not generated.",
+      "source": "programs/whirlpool/src/lib.rs:690",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_adaptive_fee_constants",
+      "category": "adaptive_fee_scenario_missing",
+      "reason": "The current lifecycle creates a fixed-fee pool; no adaptive-fee tier, oracle state, or delegated authority lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:903",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_config_feature_flag",
+      "category": "production_admin_signature",
+      "reason": "The mainnet feature requires a fixed production admin signature. The configured test authorities cannot authorize this instruction.",
+      "source": "programs/whirlpool/src/lib.rs:932",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_default_base_fee_rate",
+      "category": "adaptive_fee_scenario_missing",
+      "reason": "The current lifecycle creates a fixed-fee pool; no adaptive-fee tier, oracle state, or delegated authority lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:776",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_delegated_fee_authority",
+      "category": "adaptive_fee_scenario_missing",
+      "reason": "The current lifecycle creates a fixed-fee pool; no adaptive-fee tier, oracle state, or delegated authority lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:789",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_fee_rate_by_delegated_fee_authority",
+      "category": "adaptive_fee_scenario_missing",
+      "reason": "The current lifecycle creates a fixed-fee pool; no adaptive-fee tier, oracle state, or delegated authority lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:875",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_initialize_pool_authority",
+      "category": "adaptive_fee_scenario_missing",
+      "reason": "The current lifecycle creates a fixed-fee pool; no adaptive-fee tier, oracle state, or delegated authority lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:799",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_preset_adaptive_fee_constants",
+      "category": "adaptive_fee_scenario_missing",
+      "reason": "The current lifecycle creates a fixed-fee pool; no adaptive-fee tier, oracle state, or delegated authority lifecycle is generated.",
+      "source": "programs/whirlpool/src/lib.rs:818",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_reward_authority",
+      "category": "reward_vault_scenario_missing",
+      "reason": "The current lifecycle has no funded reward mint/vault or initialized reward-emission schedule.",
+      "source": "programs/whirlpool/src/lib.rs:468",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_reward_authority_by_super_authority",
+      "category": "reward_vault_scenario_missing",
+      "reason": "The current lifecycle has no funded reward mint/vault or initialized reward-emission schedule.",
+      "source": "programs/whirlpool/src/lib.rs:482",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_reward_emissions",
+      "category": "reward_vault_scenario_missing",
+      "reason": "The current lifecycle has no funded reward mint/vault or initialized reward-emission schedule.",
+      "source": "programs/whirlpool/src/lib.rs:180",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_reward_emissions_v2",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:1117",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "set_token_badge_attribute",
+      "category": "token_badge_scenario_missing",
+      "reason": "The current lifecycle does not enable the admin-controlled token-badge feature or create a badge mint lifecycle.",
+      "source": "programs/whirlpool/src/lib.rs:1316",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "swap_v2",
+      "category": "additional_token_program_scenario_missing",
+      "reason": "The current successful lifecycle exercises classic SPL Token; this method needs its own token-extension, remaining-account, or metadata account scenario.",
+      "source": "programs/whirlpool/src/lib.rs:1147",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "transfer_locked_position",
+      "category": "locked_position_scenario_missing",
+      "reason": "The current lifecycle has no lock configuration or locked position-token owner transition.",
+      "source": "programs/whirlpool/src/lib.rs:702",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "two_hop_swap",
+      "category": "second_pool_scenario_missing",
+      "reason": "The current trading lifecycle has one pool; this instruction needs a funded second pool and ordered route accounts.",
+      "source": "programs/whirlpool/src/lib.rs:527",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-whirlpools",
+      "instruction": "two_hop_swap_v2",
+      "category": "second_pool_scenario_missing",
+      "reason": "The current trading lifecycle has one pool; this instruction needs a funded second pool and ordered route accounts.",
+      "source": "programs/whirlpool/src/lib.rs:1194",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "add_liquidity",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed funded LP-token/liquidity withdrawal lifecycle after initialization.",
+      "source": "programs/marinade-finance/src/lib.rs:128",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "add_validator",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:76",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "claim",
+      "category": "generated_state_missing",
+      "reason": "Needs a delayed-unstake ticket lifecycle and epoch progression.",
+      "source": "programs/marinade-finance/src/lib.rs:164",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "config_lp",
+      "category": "generated_state_missing",
+      "reason": "The current initialized deposit lifecycle has no directed input for this state transition.",
+      "source": "programs/marinade-finance/src/lib.rs:138",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "config_marinade",
+      "category": "generated_state_missing",
+      "reason": "The current initialized deposit lifecycle has no directed input for this state transition.",
+      "source": "programs/marinade-finance/src/lib.rs:143",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "create_canonical_stake",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:231",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "deactivate_stake",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:191",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "deposit_stake_account",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:115",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "emergency_unstake",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:200",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "finalize_delinquent_upgrade",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:275",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "liquid_unstake",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:123",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "merge_stakes",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:220",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "order_unstake",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:159",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "partial_unstake",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:209",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "realloc_stake_list",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:270",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "realloc_validator_list",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:265",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "remove_liquidity",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed funded LP-token/liquidity withdrawal lifecycle after initialization.",
+      "source": "programs/marinade-finance/src/lib.rs:133",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "remove_validator",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:81",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "set_validator_score",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:90",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "stake_reserve",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:169",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "update_active",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:174",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "update_deactivated",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:182",
+      "observedBaselineError": null
+    },
+    {
+      "program": "production-marinade",
+      "instruction": "withdraw_stake_account",
+      "category": "generated_state_missing",
+      "reason": "Needs a directed validator/stake-account lifecycle and, for epoch-sensitive paths, explicit clock/stake-history progression.",
+      "source": "programs/marinade-finance/src/lib.rs:253",
+      "observedBaselineError": null
+    }
+  ],
+  "noUserInstructionPrograms": [
+    {
+      "program": "v0_31_1-tests-spl-metadata-programs-metadata",
+      "reason": "The stock IDL declares no user instructions."
+    },
+    {
+      "program": "v0_31_1-tests-custom-coder-programs-spl-token",
+      "reason": "The stock IDL declares no user instructions."
+    },
+    {
+      "program": "v0_31_1-tests-custom-coder-programs-spl-associated-token",
+      "reason": "The stock IDL declares no user instructions."
+    },
+    {
+      "program": "v0_32_3-tests-spl-metadata-programs-metadata",
+      "reason": "The stock IDL declares no user instructions."
+    },
+    {
+      "program": "v0_32_3-tests-custom-coder-programs-spl-token",
+      "reason": "The stock IDL declares no user instructions."
+    },
+    {
+      "program": "v0_32_3-tests-custom-coder-programs-spl-associated-token",
+      "reason": "The stock IDL declares no user instructions."
+    },
+    {
+      "program": "v1_2_2-tests-spl-metadata-programs-metadata",
+      "reason": "The stock IDL declares no user instructions."
+    },
+    {
+      "program": "v1_2_2-tests-custom-coder-programs-spl-token",
+      "reason": "The stock IDL declares no user instructions."
+    },
+    {
+      "program": "v1_2_2-tests-custom-coder-programs-spl-associated-token",
+      "reason": "The stock IDL declares no user instructions."
+    }
+  ],
+  "counts": {
+    "unmeasuredInstructions": 136,
+    "unreachableBySource": 50,
+    "intentionalLifecycleFailures": 0,
+    "generatedStateMissing": 85,
+    "upstreamSourceIdlMismatch": 1,
+    "noUserInstructionPrograms": 9
+  },
+  "note": "This report explains missing successful measurements. Every failing input remains in the proof corpus; no input is filtered.",
+  "categoryCounts": {
+    "unreachable_by_source": 51,
+    "generated_state_missing": 35,
+    "source_constraints_impossible": 3,
+    "upstream_source_idl_mismatch": 1,
+    "fixed_production_authority_unavailable": 1,
+    "position_bundle_scenario_missing": 5,
+    "additional_token_program_scenario_missing": 14,
+    "protocol_fee_scenario_missing": 1,
+    "reward_vault_scenario_missing": 5,
+    "token_badge_scenario_missing": 3,
+    "unconditional_source_error": 1,
+    "adaptive_fee_scenario_missing": 8,
+    "production_admin_signature": 2,
+    "dynamic_tick_array_scenario_missing": 1,
+    "locked_position_scenario_missing": 2,
+    "position_range_scenario_missing": 1,
+    "second_pool_scenario_missing": 2
+  }
+}
