@@ -1,0 +1,374 @@
+{
+  "schemaVersion": "1",
+  "fixture": false,
+  "toolchainVersion": "0.1.0",
+  "generatedAt": "2026-11-14T12:41:21.237Z",
+  "anchorVersions": [
+    "0.31.1"
+  ],
+  "constructs": [
+    {
+      "construct": "#[program]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-0",
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "basic-4",
+            "basic-5",
+            "declare-id",
+            "multiple-suites",
+            "system-accounts",
+            "floats"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "#[derive(Accounts)]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-0",
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "basic-4",
+            "basic-5",
+            "declare-id",
+            "multiple-suites",
+            "system-accounts",
+            "floats"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "account_constraints",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "basic-4",
+            "basic-5",
+            "floats"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "Account",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "basic-4",
+            "basic-5",
+            "floats"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "Signer",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "basic-4",
+            "basic-5",
+            "system-accounts",
+            "floats"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "Program",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "basic-4",
+            "basic-5",
+            "floats"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "SystemAccount",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "system-accounts"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "UncheckedAccount",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "AccountLoader",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "InterfaceAccount",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "Context",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-0",
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "basic-4",
+            "basic-5",
+            "declare-id",
+            "multiple-suites",
+            "system-accounts",
+            "floats"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "CpiContext",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Build rejected in puppet-master."
+        }
+      ]
+    },
+    {
+      "construct": "#[account]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "basic-4",
+            "basic-5",
+            "floats"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "#[event]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "emit!",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "#[error_code]",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-4"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "require!",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "require_family",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-4"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "init",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-1",
+            "basic-2",
+            "puppet",
+            "basic-4",
+            "basic-5",
+            "floats"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "init_if_needed",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "realloc",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "close",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    },
+    {
+      "construct": "seeds",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-4",
+            "basic-5"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "bumps",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": true,
+          "programs": [
+            "basic-4",
+            "basic-5"
+          ],
+          "note": "Exercised by the listed matched generated corpora; this is not full language conformance."
+        }
+      ]
+    },
+    {
+      "construct": "remaining_accounts",
+      "versions": [
+        {
+          "anchorVersion": "0.31.1",
+          "supported": false,
+          "programs": [],
+          "note": "Not exercised by a matched corpus run."
+        }
+      ]
+    }
+  ]
+}

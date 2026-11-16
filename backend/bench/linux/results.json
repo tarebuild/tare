@@ -1,0 +1,1129 @@
+{
+  "schemaVersion": "1",
+  "fixture": false,
+  "toolchainVersion": "0.1.0",
+  "generatedAt": "2026-11-14T12:41:21.237Z",
+  "programs": [
+    {
+      "id": "basic-0",
+      "name": "basic_0",
+      "kind": "anchor_example",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "measured",
+      "weighing": {
+        "anchorVersion": "0.31.1",
+        "builds": {
+          "stock": {
+            "hash": "08d063d5b2d5ad23e08f7a70fd3435589e765f56be24fc2bbc602552c65731ab",
+            "rentLamports": 824732920,
+            "sizeBytes": 162176
+          },
+          "tare": {
+            "hash": "f5be1b57de19e6e8ed9c0f733461201f17bdf65feabf3fd5920335fd1b0ec116",
+            "rentLamports": 592272120,
+            "sizeBytes": 116416
+          }
+        },
+        "instructions": [
+          {
+            "discriminator": "afaf6d1f0d989bed",
+            "gross": 197,
+            "inputs": 12,
+            "name": "initialize",
+            "net": 138,
+            "tare": 59
+          }
+        ],
+        "program": {
+          "address": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+          "name": "basic_0"
+        },
+        "proof": {
+          "comparisons": {
+            "accountBytes": 3168,
+            "errors": 440,
+            "inputs": 440,
+            "lamports": 3168,
+            "logs": 440,
+            "returnData": 440
+          },
+          "corpus": {
+            "counts": {
+              "generated": 440,
+              "mainnet": 0,
+              "tests": 0
+            },
+            "hash": "987f36b00e01a70ec9b388ad6a3826af36a4553a18e46d7b419c6a4481e6058e"
+          },
+          "firstDivergence": null,
+          "status": "matched"
+        },
+        "schemaVersion": "1",
+        "source": {
+          "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+          "repository": "https://github.com/solana-foundation/anchor.git"
+        },
+        "toolchainVersion": "0.1.0",
+        "totals": {
+          "gross": 197,
+          "inputs": 12,
+          "net": 138,
+          "tare": 59
+        }
+      },
+      "tests": {
+        "ran": 0,
+        "passed": 0,
+        "failed": 0
+      },
+      "proof": {
+        "comparisons": {
+          "accountBytes": 3168,
+          "errors": 440,
+          "inputs": 440,
+          "lamports": 3168,
+          "logs": 440,
+          "returnData": 440
+        },
+        "corpus": {
+          "counts": {
+            "generated": 440,
+            "mainnet": 0,
+            "tests": 0
+          },
+          "hash": "987f36b00e01a70ec9b388ad6a3826af36a4553a18e46d7b419c6a4481e6058e"
+        },
+        "status": "matched"
+      },
+      "record": null
+    },
+    {
+      "id": "basic-1",
+      "name": "basic_1",
+      "kind": "anchor_example",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "measured",
+      "weighing": {
+        "anchorVersion": "0.31.1",
+        "builds": {
+          "stock": {
+            "hash": "a0d18cd9e10bd4bd00fa66af724a281c437c86faa137d20645a52181949dd80e",
+            "rentLamports": 926170360,
+            "sizeBytes": 182144
+          },
+          "tare": {
+            "hash": "61c7662e1e27566b5eb5979f7b0e98be739b0a49a46c5a139ca5d7fd4c328fbb",
+            "rentLamports": 679323000,
+            "sizeBytes": 133552
+          }
+        },
+        "instructions": [
+          {
+            "discriminator": "afaf6d1f0d989bed",
+            "gross": 4460,
+            "inputs": 8,
+            "name": "initialize",
+            "net": 2954,
+            "tare": 1506
+          },
+          {
+            "discriminator": "dbc858b09e3ffd7f",
+            "gross": 725,
+            "inputs": 16,
+            "name": "update",
+            "net": 460,
+            "tare": 265
+          }
+        ],
+        "program": {
+          "address": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+          "name": "basic_1"
+        },
+        "proof": {
+          "comparisons": {
+            "accountBytes": 4636,
+            "errors": 512,
+            "inputs": 512,
+            "lamports": 4636,
+            "logs": 512,
+            "returnData": 512
+          },
+          "corpus": {
+            "counts": {
+              "generated": 512,
+              "mainnet": 0,
+              "tests": 0
+            },
+            "hash": "84993f3100be9da30a7d216f92b826259c16799bdc4bcad4323cb0dda34230fc"
+          },
+          "firstDivergence": null,
+          "status": "matched"
+        },
+        "schemaVersion": "1",
+        "source": {
+          "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+          "repository": "https://github.com/solana-foundation/anchor.git"
+        },
+        "toolchainVersion": "0.1.0",
+        "totals": {
+          "gross": 5185,
+          "inputs": 24,
+          "net": 3414,
+          "tare": 1771
+        }
+      },
+      "tests": {
+        "ran": 0,
+        "passed": 0,
+        "failed": 0
+      },
+      "proof": {
+        "comparisons": {
+          "accountBytes": 4636,
+          "errors": 512,
+          "inputs": 512,
+          "lamports": 4636,
+          "logs": 512,
+          "returnData": 512
+        },
+        "corpus": {
+          "counts": {
+            "generated": 512,
+            "mainnet": 0,
+            "tests": 0
+          },
+          "hash": "84993f3100be9da30a7d216f92b826259c16799bdc4bcad4323cb0dda34230fc"
+        },
+        "status": "matched"
+      },
+      "record": null
+    },
+    {
+      "id": "basic-2",
+      "name": "basic_2",
+      "kind": "anchor_example",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "measured",
+      "weighing": {
+        "anchorVersion": "0.31.1",
+        "builds": {
+          "stock": {
+            "hash": "7c575124cf29c5f1997b38378c6b8f66a4f2d86187952545b96377bcb5659e10",
+            "rentLamports": 937915320,
+            "sizeBytes": 184456
+          },
+          "tare": {
+            "hash": "438967acd6c274cfd10eec8b5df24fcb090fcffd995060a6ac4aac504768bd49",
+            "rentLamports": 691067960,
+            "sizeBytes": 135864
+          }
+        },
+        "instructions": [
+          {
+            "discriminator": "181ec828051c0777",
+            "gross": 4614,
+            "inputs": 8,
+            "name": "create",
+            "net": 3125,
+            "tare": 1489
+          },
+          {
+            "discriminator": "0b12680968ae3b21",
+            "gross": 1122,
+            "inputs": 16,
+            "name": "increment",
+            "net": 611,
+            "tare": 511
+          }
+        ],
+        "program": {
+          "address": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+          "name": "basic_2"
+        },
+        "proof": {
+          "comparisons": {
+            "accountBytes": 5180,
+            "errors": 516,
+            "inputs": 516,
+            "lamports": 5180,
+            "logs": 516,
+            "returnData": 516
+          },
+          "corpus": {
+            "counts": {
+              "generated": 516,
+              "mainnet": 0,
+              "tests": 0
+            },
+            "hash": "a33cd36761ea1563bea6107e1bdf85964c69a7e629238331b58221af249a2e82"
+          },
+          "firstDivergence": null,
+          "status": "matched"
+        },
+        "schemaVersion": "1",
+        "source": {
+          "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+          "repository": "https://github.com/solana-foundation/anchor.git"
+        },
+        "toolchainVersion": "0.1.0",
+        "totals": {
+          "gross": 5736,
+          "inputs": 24,
+          "net": 3736,
+          "tare": 2000
+        }
+      },
+      "tests": {
+        "ran": 0,
+        "passed": 0,
+        "failed": 0
+      },
+      "proof": {
+        "comparisons": {
+          "accountBytes": 5180,
+          "errors": 516,
+          "inputs": 516,
+          "lamports": 5180,
+          "logs": 516,
+          "returnData": 516
+        },
+        "corpus": {
+          "counts": {
+            "generated": 516,
+            "mainnet": 0,
+            "tests": 0
+          },
+          "hash": "a33cd36761ea1563bea6107e1bdf85964c69a7e629238331b58221af249a2e82"
+        },
+        "status": "matched"
+      },
+      "record": null
+    },
+    {
+      "id": "puppet",
+      "name": "puppet",
+      "kind": "anchor_example",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "measured",
+      "weighing": {
+        "anchorVersion": "0.31.1",
+        "builds": {
+          "stock": {
+            "hash": "c551a660e119411618b382d25a8efffe87af2dfcb9e32facbf729079c2687ec9",
+            "rentLamports": 924422840,
+            "sizeBytes": 181800
+          },
+          "tare": {
+            "hash": "46e7bcd9bdd15d14304617bda54bc69434dfef622a9f177bfdacb5aa7f7a440d",
+            "rentLamports": 678835320,
+            "sizeBytes": 133456
+          }
+        },
+        "instructions": [
+          {
+            "discriminator": "afaf6d1f0d989bed",
+            "gross": 4458,
+            "inputs": 8,
+            "name": "initialize",
+            "net": 2946,
+            "tare": 1512
+          },
+          {
+            "discriminator": "df725b88c54e9999",
+            "gross": 723,
+            "inputs": 16,
+            "name": "set_data",
+            "net": 458,
+            "tare": 265
+          }
+        ],
+        "program": {
+          "address": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+          "name": "puppet"
+        },
+        "proof": {
+          "comparisons": {
+            "accountBytes": 4608,
+            "errors": 508,
+            "inputs": 508,
+            "lamports": 4608,
+            "logs": 508,
+            "returnData": 508
+          },
+          "corpus": {
+            "counts": {
+              "generated": 508,
+              "mainnet": 0,
+              "tests": 0
+            },
+            "hash": "002a5d6f2eb78e7bd3a088dc1bcc0ca3da31df2963cf92ab7d2158538631d1d6"
+          },
+          "firstDivergence": null,
+          "status": "matched"
+        },
+        "schemaVersion": "1",
+        "source": {
+          "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+          "repository": "https://github.com/solana-foundation/anchor.git"
+        },
+        "toolchainVersion": "0.1.0",
+        "totals": {
+          "gross": 5181,
+          "inputs": 24,
+          "net": 3404,
+          "tare": 1777
+        }
+      },
+      "tests": {
+        "ran": 0,
+        "passed": 0,
+        "failed": 0
+      },
+      "proof": {
+        "comparisons": {
+          "accountBytes": 4608,
+          "errors": 508,
+          "inputs": 508,
+          "lamports": 4608,
+          "logs": 508,
+          "returnData": 508
+        },
+        "corpus": {
+          "counts": {
+            "generated": 508,
+            "mainnet": 0,
+            "tests": 0
+          },
+          "hash": "002a5d6f2eb78e7bd3a088dc1bcc0ca3da31df2963cf92ab7d2158538631d1d6"
+        },
+        "status": "matched"
+      },
+      "record": null
+    },
+    {
+      "id": "puppet-master",
+      "name": "puppet_master",
+      "kind": "anchor_example",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "not_built",
+      "reason": "error: Tare does not implement CpiContext\nerror[E0433]: cannot find `cpi` in `puppet`\nerror: could not compile `puppet-master` (lib) due to 2 previous errors\nerror: cargo exited with exit code: 1",
+      "construct": "CpiContext"
+    },
+    {
+      "id": "basic-4",
+      "name": "basic_4",
+      "kind": "anchor_example",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "measured",
+      "weighing": {
+        "anchorVersion": "0.31.1",
+        "builds": {
+          "stock": {
+            "hash": "82342e07b7dfab5a86aa30892d700f541d3a28d03bfc59e4f02475e480766079",
+            "rentLamports": 955796920,
+            "sizeBytes": 187976
+          },
+          "tare": {
+            "hash": "c5e71c222b596e5921018fdb01bd6ef011510b01535240d0f55211e1341e31db",
+            "rentLamports": 694522360,
+            "sizeBytes": 136544
+          }
+        },
+        "instructions": [
+          {
+            "discriminator": "0b12680968ae3b21",
+            "gross": 2791,
+            "inputs": 16,
+            "name": "increment",
+            "net": 2483,
+            "tare": 308
+          },
+          {
+            "discriminator": "afaf6d1f0d989bed",
+            "gross": 9236,
+            "inputs": 8,
+            "name": "initialize",
+            "net": 7744,
+            "tare": 1492
+          }
+        ],
+        "program": {
+          "address": "CwrqeMj2U8tFr1Rhkgwc84tpAsqbt9pTt2a4taoTADPr",
+          "name": "basic_4"
+        },
+        "proof": {
+          "comparisons": {
+            "accountBytes": 5596,
+            "errors": 516,
+            "inputs": 516,
+            "lamports": 5596,
+            "logs": 516,
+            "returnData": 516
+          },
+          "corpus": {
+            "counts": {
+              "generated": 516,
+              "mainnet": 0,
+              "tests": 0
+            },
+            "hash": "b1c726888e0b2b783aef3ac6857760e542ff28c3519ab9645f6e3e93f39f3806"
+          },
+          "firstDivergence": null,
+          "status": "matched"
+        },
+        "schemaVersion": "1",
+        "source": {
+          "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+          "repository": "https://github.com/solana-foundation/anchor.git"
+        },
+        "toolchainVersion": "0.1.0",
+        "totals": {
+          "gross": 12027,
+          "inputs": 24,
+          "net": 10227,
+          "tare": 1800
+        }
+      },
+      "tests": {
+        "ran": 0,
+        "passed": 0,
+        "failed": 0
+      },
+      "proof": {
+        "comparisons": {
+          "accountBytes": 5596,
+          "errors": 516,
+          "inputs": 516,
+          "lamports": 5596,
+          "logs": 516,
+          "returnData": 516
+        },
+        "corpus": {
+          "counts": {
+            "generated": 516,
+            "mainnet": 0,
+            "tests": 0
+          },
+          "hash": "b1c726888e0b2b783aef3ac6857760e542ff28c3519ab9645f6e3e93f39f3806"
+        },
+        "status": "matched"
+      },
+      "record": null
+    },
+    {
+      "id": "basic-5",
+      "name": "basic_5",
+      "kind": "anchor_example",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "measured",
+      "weighing": {
+        "anchorVersion": "0.31.1",
+        "builds": {
+          "stock": {
+            "hash": "c6e4e603b9e956aad5f1b3d345d3488250c5152dd3e2169c68da64ea7434b509",
+            "rentLamports": 962624440,
+            "sizeBytes": 189320
+          },
+          "tare": {
+            "hash": "b80c44e953a6e6b7a3026259df383895c7768e7258e9b100faa08c723a549ad3",
+            "rentLamports": 697204600,
+            "sizeBytes": 137072
+          }
+        },
+        "instructions": [
+          {
+            "discriminator": "181ec828051c0777",
+            "gross": 7607,
+            "inputs": 8,
+            "name": "create",
+            "net": 6163,
+            "tare": 1444
+          },
+          {
+            "discriminator": "7312dd58a6e6db20",
+            "gross": 1105,
+            "inputs": 16,
+            "name": "jump",
+            "net": 621,
+            "tare": 484
+          },
+          {
+            "discriminator": "1751fb548ab7f0d6",
+            "gross": 1103,
+            "inputs": 16,
+            "name": "reset",
+            "net": 619,
+            "tare": 484
+          },
+          {
+            "discriminator": "cb1be4dad0452354",
+            "gross": 1103,
+            "inputs": 16,
+            "name": "run",
+            "net": 619,
+            "tare": 484
+          },
+          {
+            "discriminator": "75e30a4480fa329a",
+            "gross": 1112,
+            "inputs": 16,
+            "name": "walk",
+            "net": 617,
+            "tare": 495
+          }
+        ],
+        "program": {
+          "address": "DuT6R8tQGYa8ACYXyudFJtxDppSALLcmK39b7918jeSC",
+          "name": "basic_5"
+        },
+        "proof": {
+          "comparisons": {
+            "accountBytes": 6596,
+            "errors": 696,
+            "inputs": 696,
+            "lamports": 6596,
+            "logs": 696,
+            "returnData": 696
+          },
+          "corpus": {
+            "counts": {
+              "generated": 696,
+              "mainnet": 0,
+              "tests": 0
+            },
+            "hash": "b5ac666ef10c1baf5a0c649f637c72fd74533dbf726c3eafc4081066a258af50"
+          },
+          "firstDivergence": null,
+          "status": "matched"
+        },
+        "schemaVersion": "1",
+        "source": {
+          "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+          "repository": "https://github.com/solana-foundation/anchor.git"
+        },
+        "toolchainVersion": "0.1.0",
+        "totals": {
+          "gross": 12030,
+          "inputs": 72,
+          "net": 8639,
+          "tare": 3391
+        }
+      },
+      "tests": {
+        "ran": 0,
+        "passed": 0,
+        "failed": 0
+      },
+      "proof": {
+        "comparisons": {
+          "accountBytes": 6596,
+          "errors": 696,
+          "inputs": 696,
+          "lamports": 6596,
+          "logs": 696,
+          "returnData": 696
+        },
+        "corpus": {
+          "counts": {
+            "generated": 696,
+            "mainnet": 0,
+            "tests": 0
+          },
+          "hash": "b5ac666ef10c1baf5a0c649f637c72fd74533dbf726c3eafc4081066a258af50"
+        },
+        "status": "matched"
+      },
+      "record": null
+    },
+    {
+      "id": "declare-id",
+      "name": "declare_id",
+      "kind": "anchor_test",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "measured",
+      "weighing": {
+        "anchorVersion": "0.31.1",
+        "builds": {
+          "stock": {
+            "hash": "78ba6f8f83dd32b1111ddd52b7a61207aaa47dd896602064ba3c41b612a2b96d",
+            "rentLamports": 824773560,
+            "sizeBytes": 162184
+          },
+          "tare": {
+            "hash": "5833b8c59ad7959c5beb861a97f19d5b299ffae9f400ee7789551eb455b37e0f",
+            "rentLamports": 592272120,
+            "sizeBytes": 116416
+          }
+        },
+        "instructions": [
+          {
+            "discriminator": "afaf6d1f0d989bed",
+            "gross": 197,
+            "inputs": 12,
+            "name": "initialize",
+            "net": 138,
+            "tare": 59
+          }
+        ],
+        "program": {
+          "address": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+          "name": "declare_id"
+        },
+        "proof": {
+          "comparisons": {
+            "accountBytes": 3168,
+            "errors": 440,
+            "inputs": 440,
+            "lamports": 3168,
+            "logs": 440,
+            "returnData": 440
+          },
+          "corpus": {
+            "counts": {
+              "generated": 440,
+              "mainnet": 0,
+              "tests": 0
+            },
+            "hash": "987f36b00e01a70ec9b388ad6a3826af36a4553a18e46d7b419c6a4481e6058e"
+          },
+          "firstDivergence": null,
+          "status": "matched"
+        },
+        "schemaVersion": "1",
+        "source": {
+          "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+          "repository": "https://github.com/solana-foundation/anchor.git"
+        },
+        "toolchainVersion": "0.1.0",
+        "totals": {
+          "gross": 197,
+          "inputs": 12,
+          "net": 138,
+          "tare": 59
+        }
+      },
+      "tests": {
+        "ran": 0,
+        "passed": 0,
+        "failed": 0
+      },
+      "proof": {
+        "comparisons": {
+          "accountBytes": 3168,
+          "errors": 440,
+          "inputs": 440,
+          "lamports": 3168,
+          "logs": 440,
+          "returnData": 440
+        },
+        "corpus": {
+          "counts": {
+            "generated": 440,
+            "mainnet": 0,
+            "tests": 0
+          },
+          "hash": "987f36b00e01a70ec9b388ad6a3826af36a4553a18e46d7b419c6a4481e6058e"
+        },
+        "status": "matched"
+      },
+      "record": null
+    },
+    {
+      "id": "multiple-suites",
+      "name": "multiple_suites",
+      "kind": "anchor_test",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "measured",
+      "weighing": {
+        "anchorVersion": "0.31.1",
+        "builds": {
+          "stock": {
+            "hash": "94787eecf05bfc6200c9c6e2a7a988fc1f36d4f5dd3774ba91db405a6bdb177e",
+            "rentLamports": 825748920,
+            "sizeBytes": 162376
+          },
+          "tare": {
+            "hash": "d08c2e9aa7d0bad162f07a58ef35a980702f0067f764d06c394c82cac272d7ce",
+            "rentLamports": 600643960,
+            "sizeBytes": 118064
+          }
+        },
+        "instructions": [
+          {
+            "discriminator": "afaf6d1f0d989bed",
+            "gross": 201,
+            "inputs": 12,
+            "name": "initialize",
+            "net": 138,
+            "tare": 63
+          }
+        ],
+        "program": {
+          "address": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+          "name": "multiple_suites"
+        },
+        "proof": {
+          "comparisons": {
+            "accountBytes": 3184,
+            "errors": 444,
+            "inputs": 444,
+            "lamports": 3184,
+            "logs": 444,
+            "returnData": 444
+          },
+          "corpus": {
+            "counts": {
+              "generated": 444,
+              "mainnet": 0,
+              "tests": 0
+            },
+            "hash": "b9eacd7f57b7b7aa19e81e48a34fd87c52e79e1ad695967634b85e736b04591f"
+          },
+          "firstDivergence": null,
+          "status": "matched"
+        },
+        "schemaVersion": "1",
+        "source": {
+          "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+          "repository": "https://github.com/solana-foundation/anchor.git"
+        },
+        "toolchainVersion": "0.1.0",
+        "totals": {
+          "gross": 201,
+          "inputs": 12,
+          "net": 138,
+          "tare": 63
+        }
+      },
+      "tests": {
+        "ran": 0,
+        "passed": 0,
+        "failed": 0
+      },
+      "proof": {
+        "comparisons": {
+          "accountBytes": 3184,
+          "errors": 444,
+          "inputs": 444,
+          "lamports": 3184,
+          "logs": 444,
+          "returnData": 444
+        },
+        "corpus": {
+          "counts": {
+            "generated": 444,
+            "mainnet": 0,
+            "tests": 0
+          },
+          "hash": "b9eacd7f57b7b7aa19e81e48a34fd87c52e79e1ad695967634b85e736b04591f"
+        },
+        "status": "matched"
+      },
+      "record": null
+    },
+    {
+      "id": "system-accounts",
+      "name": "system_accounts",
+      "kind": "anchor_test",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "measured",
+      "weighing": {
+        "anchorVersion": "0.31.1",
+        "builds": {
+          "stock": {
+            "hash": "00084cd871324ddd41e1c130f93ab4ec54f9bda5126eef0f14c5ec8312a973aa",
+            "rentLamports": 832048120,
+            "sizeBytes": 163616
+          },
+          "tare": {
+            "hash": "27f6f726f8eeb174f786f57a07d3763e1d87a4c85495c281e2492ee175ac808c",
+            "rentLamports": 603976440,
+            "sizeBytes": 118720
+          }
+        },
+        "instructions": [
+          {
+            "discriminator": "afaf6d1f0d989bed",
+            "gross": 809,
+            "inputs": 16,
+            "name": "initialize",
+            "net": 388,
+            "tare": 421
+          }
+        ],
+        "program": {
+          "address": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+          "name": "system_accounts"
+        },
+        "proof": {
+          "comparisons": {
+            "accountBytes": 4120,
+            "errors": 452,
+            "inputs": 452,
+            "lamports": 4120,
+            "logs": 452,
+            "returnData": 452
+          },
+          "corpus": {
+            "counts": {
+              "generated": 452,
+              "mainnet": 0,
+              "tests": 0
+            },
+            "hash": "d00c71e24ea3efba758509a581852c636d5d4f6a1235a79dfb889f45a5b91bec"
+          },
+          "firstDivergence": null,
+          "status": "matched"
+        },
+        "schemaVersion": "1",
+        "source": {
+          "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+          "repository": "https://github.com/solana-foundation/anchor.git"
+        },
+        "toolchainVersion": "0.1.0",
+        "totals": {
+          "gross": 809,
+          "inputs": 16,
+          "net": 388,
+          "tare": 421
+        }
+      },
+      "tests": {
+        "ran": 0,
+        "passed": 0,
+        "failed": 0
+      },
+      "proof": {
+        "comparisons": {
+          "accountBytes": 4120,
+          "errors": 452,
+          "inputs": 452,
+          "lamports": 4120,
+          "logs": 452,
+          "returnData": 452
+        },
+        "corpus": {
+          "counts": {
+            "generated": 452,
+            "mainnet": 0,
+            "tests": 0
+          },
+          "hash": "d00c71e24ea3efba758509a581852c636d5d4f6a1235a79dfb889f45a5b91bec"
+        },
+        "status": "matched"
+      },
+      "record": null
+    },
+    {
+      "id": "floats",
+      "name": "floats",
+      "kind": "anchor_test",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "measured",
+      "weighing": {
+        "anchorVersion": "0.31.1",
+        "builds": {
+          "stock": {
+            "hash": "f08d8f1de17c1a33b788fbd17d6fa25d5b8908a4948a85c93a70e2102d503ef1",
+            "rentLamports": 944499000,
+            "sizeBytes": 185752
+          },
+          "tare": {
+            "hash": "f4265a40ce2ef6203336ce67ece4ad30cf6fa5bf460804753e3ec9abf7620d1b",
+            "rentLamports": 688141880,
+            "sizeBytes": 135288
+          }
+        },
+        "instructions": [
+          {
+            "discriminator": "181ec828051c0777",
+            "gross": 4752,
+            "inputs": 8,
+            "name": "create",
+            "net": 3250,
+            "tare": 1502
+          },
+          {
+            "discriminator": "dbc858b09e3ffd7f",
+            "gross": 1276,
+            "inputs": 16,
+            "name": "update",
+            "net": 1007,
+            "tare": 269
+          }
+        ],
+        "program": {
+          "address": "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS",
+          "name": "floats"
+        },
+        "proof": {
+          "comparisons": {
+            "accountBytes": 4692,
+            "errors": 520,
+            "inputs": 520,
+            "lamports": 4692,
+            "logs": 520,
+            "returnData": 520
+          },
+          "corpus": {
+            "counts": {
+              "generated": 520,
+              "mainnet": 0,
+              "tests": 0
+            },
+            "hash": "c65dffdaa7a5f0e78e94801930e02226c6e5da141e4e4d5d630f218f57e53457"
+          },
+          "firstDivergence": null,
+          "status": "matched"
+        },
+        "schemaVersion": "1",
+        "source": {
+          "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed",
+          "repository": "https://github.com/solana-foundation/anchor.git"
+        },
+        "toolchainVersion": "0.1.0",
+        "totals": {
+          "gross": 6028,
+          "inputs": 24,
+          "net": 4257,
+          "tare": 1771
+        }
+      },
+      "tests": {
+        "ran": 0,
+        "passed": 0,
+        "failed": 0
+      },
+      "proof": {
+        "comparisons": {
+          "accountBytes": 4692,
+          "errors": 520,
+          "inputs": 520,
+          "lamports": 4692,
+          "logs": 520,
+          "returnData": 520
+        },
+        "corpus": {
+          "counts": {
+            "generated": 520,
+            "mainnet": 0,
+            "tests": 0
+          },
+          "hash": "c65dffdaa7a5f0e78e94801930e02226c6e5da141e4e4d5d630f218f57e53457"
+        },
+        "status": "matched"
+      },
+      "record": null
+    },
+    {
+      "id": "events",
+      "name": "events",
+      "kind": "anchor_test",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "not_built",
+      "reason": "error: Tare does not implement event-cpi at C:\\src\\tare\\backend\\bench\\corpus\\anchor\\tests\\events\\programs\\events\\Cargo.toml:19",
+      "construct": "event-cpi"
+    },
+    {
+      "id": "errors",
+      "name": "errors",
+      "kind": "anchor_test",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "not_built",
+      "reason": "error: Tare does not implement non-unit instruction return data\nerror: Tare does not implement zero\nerror: could not compile `errors` (lib) due to 2 previous errors\nerror: cargo exited with exit code: 1",
+      "construct": "non-unit instruction return data"
+    },
+    {
+      "id": "relations-derivation",
+      "name": "relations_derivation",
+      "kind": "anchor_test",
+      "anchorVersion": "0.31.1",
+      "source": {
+        "repository": "https://github.com/solana-foundation/anchor",
+        "commit": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+      },
+      "status": "not_built",
+      "reason": "error[E0277]: the trait bound `TestRelation<'_>: Bumps` is not satisfied\nerror[E0277]: the trait bound `TestRelation<'_>: Bumps` is not satisfied\nerror[E0277]: the trait bound `TestRelation<'_>: Bumps` is not satisfied\nerror[E0277]: the trait bound `TestRelation<'_>: anchor_lang::Accounts<'_>` is not satisfied\nerror[E0277]: the trait bound `TestRelation<'_>: anchor_lang::Accounts<'_>` is not satisfied\nerror[E0277]: the trait bound `TestRelation<'_>: Bumps` is not satisfied\nerror: could not compile `relations-derivation` (lib) due to 7 previous errors; 3 warnings emitted\nerror: cargo exited with exit code: 1",
+      "construct": "Nested"
+    }
+  ],
+  "totals": {
+    "programs": 14,
+    "measured": 10,
+    "notBuilt": 4,
+    "instructions": 19,
+    "weights": {
+      "gross": 47591,
+      "net": 34479,
+      "tare": 13112,
+      "inputs": 244
+    },
+    "binarySize": {
+      "gross": 1761800,
+      "net": 1281392,
+      "tare": 480408
+    },
+    "rentLamports": {
+      "gross": 8958732400,
+      "net": 6518259760,
+      "tare": 2440472640
+    },
+    "corpus": {
+      "tests": 0,
+      "generated": 5044,
+      "mainnet": 0
+    }
+  }
+}

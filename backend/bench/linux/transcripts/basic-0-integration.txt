@@ -1,0 +1,297 @@
+$ cargo build-sbf --arch v0 --manifest-path C:\src\tare\backend\bench\corpus\anchor\examples\tutorial\basic-0\programs\basic-0\Cargo.toml --sbf-out-dir C:\src\tare\backend\bench\corpus\anchor\examples\tutorial\basic-0\target\deploy
+[2026-11-14T12:21:09.595306300Z WARN  cargo_build_sbf] Package 'basic-0' has two crate types defined: cdylib and lib. This setting precludes link-time optimizations (LTO). Use cdylib for programs to be deployed and rlib for packages to be imported by other programs as libraries.
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> C:\src\tare\backend\bench\corpus\anchor\lang\syn\src\parser\context.rs:41:20
+   |
+41 |     pub fn modules(&self) -> impl Iterator<Item = ModuleContext> {
+   |                    ^^^^^                          ^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                    |
+   |                    the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+   = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+   |
+41 |     pub fn modules(&self) -> impl Iterator<Item = ModuleContext<'_>> {
+   |                                                                ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> C:\src\tare\backend\bench\corpus\anchor\lang\syn\src\parser\context.rs:45:24
+   |
+45 |     pub fn root_module(&self) -> ModuleContext {
+   |                        ^^^^^     ^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                        |
+   |                        the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+45 |     pub fn root_module(&self) -> ModuleContext<'_> {
+   |                                               ++++
+
+warning: struct `IdlState` is never constructed
+  --> C:\src\tare\backend\bench\corpus\anchor\idl\src\convert.rs:67:16
+   |
+67 |     pub struct IdlState {
+   |                ^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `anchor-syn` (lib) generated 2 warnings (run `cargo fix --lib -p anchor-syn` to apply 2 suggestions)
+warning: `anchor-lang-idl` (lib) generated 1 warning
+warning: use of deprecated module `solana_program::system_program`: Use `solana_sdk_ids::system_program` instead
+  --> src\accounts\account.rs:12:21
+   |
+12 | use solana_program::system_program;
+   |                     ^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated module `solana_program::system_program`: Use `solana_sdk_ids::system_program` instead
+  --> src\accounts\interface_account.rs:12:21
+   |
+12 | use solana_program::system_program;
+   |                     ^^^^^^^^^^^^^^
+
+warning: use of deprecated module `solana_program::bpf_loader_upgradeable`: Use solana-loader-v3-interface instead
+ --> src\accounts\program.rs:8:21
+  |
+8 | use solana_program::bpf_loader_upgradeable::{self, UpgradeableLoaderState};
+  |                     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated module `solana_program::system_program`: Use `solana_sdk_ids::system_program` instead
+ --> src\accounts\system_account.rs:5:21
+  |
+5 | use solana_program::system_program;
+  |                     ^^^^^^^^^^^^^^
+
+warning: use of deprecated module `solana_program::system_program`: Use `solana_sdk_ids::system_program` instead
+ --> src\common.rs:4:21
+  |
+4 | use solana_program::system_program;
+  |                     ^^^^^^^^^^^^^^
+
+warning: use of deprecated method `solana_program::solana_account_info::AccountInfo::<'a>::realloc`: Use AccountInfo::resize() instead
+  --> src\common.rs:14:10
+   |
+14 |     info.realloc(0, false).map_err(Into::into)
+   |          ^^^^^^^
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src\accounts\account_loader.rs:154:17
+    |
+154 |     pub fn load(&self) -> Result<Ref<T>> {
+    |                 ^^^^^            ^^^^^^ the same lifetime is hidden here
+    |                 |
+    |                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+    = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+    |
+154 |     pub fn load(&self) -> Result<Ref<'_, T>> {
+    |                                      +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src\accounts\account_loader.rs:172:21
+    |
+172 |     pub fn load_mut(&self) -> Result<RefMut<T>> {
+    |                     ^^^^^            ^^^^^^^^^ the same lifetime is hidden here
+    |                     |
+    |                     the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+172 |     pub fn load_mut(&self) -> Result<RefMut<'_, T>> {
+    |                                             +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src\accounts\account_loader.rs:199:22
+    |
+199 |     pub fn load_init(&self) -> Result<RefMut<T>> {
+    |                      ^^^^^            ^^^^^^^^^ the same lifetime is hidden here
+    |                      |
+    |                      the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+199 |     pub fn load_init(&self) -> Result<RefMut<'_, T>> {
+    |                                              +++
+
+warning: `anchor-lang` (lib) generated 9 warnings (run `cargo fix --lib -p anchor-lang` to apply 3 suggestions)
+warning: unexpected `cfg` condition value: `custom-heap`
+ --> programs\basic-0\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `idl-build`, and `no-entrypoint`
+  = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `$crate::custom_heap_default` crate for guidance on how handle this unexpected cfg
+  = help: the macro `$crate::custom_heap_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: `#[warn(unexpected_cfgs)]` on by default
+  = note: this warning originates in the macro `$crate::custom_heap_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `custom-panic`
+ --> programs\basic-0\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `idl-build`, and `no-entrypoint`
+  = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `$crate::custom_panic_default` crate for guidance on how handle this unexpected cfg
+  = help: the macro `$crate::custom_panic_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the macro `$crate::custom_panic_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs\basic-0\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `idl-build`, and `no-entrypoint`
+  = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+  = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `no-idl`
+ --> programs\basic-0\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `idl-build`, and `no-entrypoint`
+  = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+  = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs\basic-0\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `idl-build`, and `no-entrypoint`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `no-log-ix-name`
+ --> programs\basic-0\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `idl-build`, and `no-entrypoint`
+  = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+  = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated method `anchor_lang::prelude::AccountInfo::<'a>::realloc`: Use AccountInfo::resize() instead
+ --> programs\basic-0\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: `#[warn(deprecated)]` on by default
+  = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: `basic-0` (lib) generated 12 warnings (5 duplicates)
+    Finished `release` profile [optimized] target(s) in 1.06s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.35s
+     Running unittests src\lib.rs (C:\src\tare\backend\bench\corpus\anchor\examples\tutorial\basic-0\target\debug\deps\basic_0-c11516e993287dac.exe)
+$ cargo build-sbf --arch v0 --manifest-path C:\src\tare\backend\bench\corpus\anchor\examples\tutorial\basic-0\programs\basic-0\Cargo.toml --sbf-out-dir C:\src\tare\backend\bench\corpus\anchor\examples\tutorial\basic-0\target\tare -- --config patch.crates-io.anchor-lang.path='C:/src/tare/backend/toolchain/crates/tare-lang' --config paths=['C:/src/tare/backend/toolchain/crates/tare-lang']
+[2026-11-14T12:21:13.480390100Z WARN  cargo_build_sbf] Package 'basic-0' has two crate types defined: cdylib and lib. This setting precludes link-time optimizations (LTO). Use cdylib for programs to be deployed and rlib for packages to be imported by other programs as libraries.
+warning: patch `anchor-lang v0.31.1 (C:\src\tare\backend\toolchain\crates\tare-lang)` was not used in the crate graph
+  |
+  = help: perhaps you meant one of the following:
+          	C:\src\tare\backend\bench\corpus\anchor\lang
+     Locking 1 package to latest compatible version
+      Adding anchor-lang v0.31.1 (C:\src\tare\backend\bench\corpus\anchor\lang)
+warning: path override for crate `anchor-lang` has altered the original list of
+dependencies; the dependency on `borsh` was either added or
+modified to not match the previously resolved version
+
+This is currently allowed but is known to produce buggy behavior with spurious
+recompiles and changes to the crate graph. Path overrides unfortunately were
+never intended to support this feature, so for now this message is just a
+warning. In the future, however, this message will become a hard error.
+
+To change the dependency graph via an override it's recommended to use the
+`[patch]` feature of Cargo instead of the path override feature. This is
+documented online at the url below for more information.
+
+https://doc.rust-lang.org/cargo/reference/overriding-dependencies.html
+
+   Compiling tare-lang-macros v0.1.0 (C:\src\tare\backend\toolchain\crates\tare-lang)
+   Compiling anchor-lang v0.31.1 (C:\src\tare\backend\toolchain\crates\tare-lang)
+   Compiling basic-0 v0.1.0 (C:\src\tare\backend\bench\corpus\anchor\examples\tutorial\basic-0\programs\basic-0)
+warning: unexpected `cfg` condition value: `custom-heap`
+ --> programs\basic-0\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `idl-build`, and `no-entrypoint`
+  = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `anchor_lang::solana_program::custom_heap_default` crate for guidance on how handle this unexpected cfg
+  = help: the macro `anchor_lang::solana_program::custom_heap_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: `#[warn(unexpected_cfgs)]` on by default
+  = note: this warning originates in the macro `anchor_lang::solana_program::custom_heap_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `custom-panic`
+ --> programs\basic-0\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `idl-build`, and `no-entrypoint`
+  = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `anchor_lang::solana_program::custom_panic_default` crate for guidance on how handle this unexpected cfg
+  = help: the macro `anchor_lang::solana_program::custom_panic_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the macro `anchor_lang::solana_program::custom_panic_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `no-log-ix-name`
+ --> programs\basic-0\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `idl-build`, and `no-entrypoint`
+  = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+  = help: the attribute macro `program` may come from an old version of the `tare_lang_macros` crate, try updating your dependency with `cargo update -p tare_lang_macros`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `no-idl`
+ --> programs\basic-0\src\lib.rs:5:1
+  |
+5 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `idl-build`, and `no-entrypoint`
+  = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+  = help: the attribute macro `program` may come from an old version of the `tare_lang_macros` crate, try updating your dependency with `cargo update -p tare_lang_macros`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: `basic-0` (lib) generated 4 warnings
+    Finished `release` profile [optimized] target(s) in 2.94s
+basic-0: stock 162176 bytes -> tare 98912 bytes

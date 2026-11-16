@@ -1,0 +1,10 @@
+basic_1             gross       tare        net     inputs
+initialize                 4371       1463       2908          4
+update                      725        223        502         12
+total                      5096       1686       3410         16
+proof: matched (188 transactions)
+basic_1             gross       tare        net     inputs
+initialize                 4371       1463       2908          4
+update                      725        223        502         12
+total                      5096       1686       3410         16
+proof: matched (188 transactions)
