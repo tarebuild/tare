@@ -51,3 +51,14 @@ Optional `optimization` and `recordedCorpus` fields preserve the Rust writer's e
 
 Optional `replay` is retained in strict weighings, proof uploads and reads. `Replay` is exported as a schema and type, with `schema/Replay.json` for Rust consumers. `RegistryTotals` now requires `feesAccruedLamports`; every new API response supplies it. Flag differences additionally accept strict account metadata comparisons, and replay account snapshots accept an optional safe-integer `rentEpoch`. Prior tarballs and recorded mainnet samples remain unchanged.
 
+## Changes from 0.5.0
+
+`PublicConfig.installLine` is a required, nullable string; the API supplies the installation command when configured. OpenAPI also describes the raw `/install.sh` shell response and `/releases/{file}` download responses. These routes do not take fixture scenarios. Uploaded replay and flag input u64 fields now accept safe integer numbers or exact u64 decimal strings without changing their representation: account `lamports`/`rentEpoch`, input `slot`, lamports difference values and metadata difference `rentEpoch`. Other numeric fields retain their existing types. All older tarballs and recorded mainnet files remain unchanged.
+
+## Changes from 0.6.0
+
+Measured benchmark rows accept optional `recordCluster` and absolute `recordUrl`. Uploaded proof schemas now preserve exact u64 decimal strings throughout the typed report, including large signed tare values as i64 strings. Public aggregate count fields remain numbers. All existing document shapes remain strict except optimizer and provenance extensions. Prior tarballs and recorded mainnet files remain unchanged.
+
+## Changes from 0.7.0
+
+Uploads and public reads now use separate schemas. Public numeric fields infer as `number`, while account balances and epochs infer as `string`; upload unions retain their original representation. New `Upload*` JSON Schemas describe wire uploads. Optional build environment and account ABI metadata is retained. Compile-time assertions in `src/type-assertions.ts` keep reached-instruction arithmetic, build sizes, all weighing totals, record details, corpus counts, slots and read account amounts stable.

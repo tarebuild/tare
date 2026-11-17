@@ -113,3 +113,9 @@ The optional `recordCluster` and `recordUrl` fields are documented in `toolchain
 ## Round five acceptance gate
 
 `node bench/gate.mjs --summary` checks every current measured program against stock: matching proof, Tare ELF no larger, and no reached instruction more expensive. Production instructions must be strictly cheaper. Every manifest entry remains explicitly measured or not built. `--against-round-three` reports historical comparisons without failing acceptance. The final measurements and remaining failures are in [round-five.md](round-five.md).
+
+## Round six evidence
+
+`python bench/final-round-six.py --home toolchain --cli PATH --cli-sha256 SHA --run final --jobs 3` snapshots the compiler and runs every previously measured program in private version lanes. The 49 prior explicit refusals retain their provenance; this round does not widen compatibility. `--run final --assemble` validates coverage, all proofs, replay checksums and ELF hashes before staging. Add `--publish` to publish the validated artifacts and feeds. A formerly measured program that stops building blocks publication. A size or CU failure stays measured and keeps the current-stock gate nonzero.
+
+`node bench/gate.mjs` checks the published stock comparison. `--against-round-three` remains informational and never changes acceptance. Isolated candidate runs and rejected experiments are under `history/round-six/`.

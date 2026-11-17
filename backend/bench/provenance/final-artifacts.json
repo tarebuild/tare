@@ -1,0 +1,3033 @@
+{
+  "toolchainVersion": "0.3.0",
+  "resultsSha256": "be55213b37de71a2beda8acb0456619678a7c44a21dd1c8391505a7ba9a572e4",
+  "compatSha256": "768a5ca548aee85bbbd4f3f5c866fd473c0e4a4bede5f9df55aafcd6364ba1ff",
+  "programs": [
+    {
+      "id": "basic-0",
+      "builds": {
+        "stock": {
+          "hash": "08d063d5b2d5ad23e08f7a70fd3435589e765f56be24fc2bbc602552c65731ab",
+          "rentLamports": 824732920,
+          "sizeBytes": 162176
+        },
+        "tare": {
+          "hash": "308fc27a7a878855857cec0875627c1b8c9cde78f61f4b31ae7803b98efd35e1",
+          "rentLamports": 544601400,
+          "sizeBytes": 107032
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "6c3782a6b5933e44850b6e69ee3890de6c82576a931a65d4751ac843d0cb05e1"
+    },
+    {
+      "id": "basic-1",
+      "builds": {
+        "stock": {
+          "hash": "a0d18cd9e10bd4bd00fa66af724a281c437c86faa137d20645a52181949dd80e",
+          "rentLamports": 926170360,
+          "sizeBytes": 182144
+        },
+        "tare": {
+          "hash": "817b58ff56646a782096c3cdb1d04bb1d004825f8bac098f9fd1c8df8eb829f4",
+          "rentLamports": 644291320,
+          "sizeBytes": 126656
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "766fba43ff8eecbf7b6c24e3e09471558ce6ee5f73b46cc93e6bb902799c2b45"
+    },
+    {
+      "id": "basic-2",
+      "builds": {
+        "stock": {
+          "hash": "7c575124cf29c5f1997b38378c6b8f66a4f2d86187952545b96377bcb5659e10",
+          "rentLamports": 937915320,
+          "sizeBytes": 184456
+        },
+        "tare": {
+          "hash": "7076bfc397f75dfcd7339817be16cf61515aa23268ecac2a779309737cd869c4",
+          "rentLamports": 668309560,
+          "sizeBytes": 131384
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "075f787231c8f951ad02881e24e872459bb77a3b98a4ddfd43180835df16a358"
+    },
+    {
+      "id": "puppet",
+      "builds": {
+        "stock": {
+          "hash": "c551a660e119411618b382d25a8efffe87af2dfcb9e32facbf729079c2687ec9",
+          "rentLamports": 924422840,
+          "sizeBytes": 181800
+        },
+        "tare": {
+          "hash": "f5dc3625f1ec70535ef21cf78f4d710675698a40da494859af629c3f4fa1c01b",
+          "rentLamports": 641974840,
+          "sizeBytes": 126200
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "e5aa6911143fba53fa088b736944e5dcecd6dd377461efce16617c801c601f41"
+    },
+    {
+      "id": "puppet-master",
+      "builds": {
+        "stock": {
+          "hash": "c2bab03c8b6606bdf4cc93ab4f0c7e5075dfbec52b27514df3d68b405312bb65",
+          "rentLamports": 890610360,
+          "sizeBytes": 175144
+        },
+        "tare": {
+          "hash": "2e31ecb5a9e98bb08b194f0511dff19053c6d1da5b9ea9c20295b5b4e16d8a29",
+          "rentLamports": 616859320,
+          "sizeBytes": 121256
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "6e0128efd3f8eee90df9320f341cc630545ce3b59b035b26c0839757357e147d"
+    },
+    {
+      "id": "basic-4",
+      "builds": {
+        "stock": {
+          "hash": "82342e07b7dfab5a86aa30892d700f541d3a28d03bfc59e4f02475e480766079",
+          "rentLamports": 955796920,
+          "sizeBytes": 187976
+        },
+        "tare": {
+          "hash": "38d5b536f168221cf8b217965084436d0c1833db1705f81487b7269aae1ced0c",
+          "rentLamports": 687532280,
+          "sizeBytes": 135168
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "72d0fcbf519312711e90081ebe2ae9af8953cddb22e6e71df4e2aa46c3ffb6d2"
+    },
+    {
+      "id": "basic-5",
+      "builds": {
+        "stock": {
+          "hash": "c6e4e603b9e956aad5f1b3d345d3488250c5152dd3e2169c68da64ea7434b509",
+          "rentLamports": 962624440,
+          "sizeBytes": 189320
+        },
+        "tare": {
+          "hash": "7cefa292ea29bdf3a00c14800a60c2266f97f2c3c6a4cdf5cf66abb32b05d92e",
+          "rentLamports": 722563960,
+          "sizeBytes": 142064
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "197425ee480edaf080aadf5bf0fb0a7f12aae2db1c7c9cc2b3300193c62229e7"
+    },
+    {
+      "id": "declare-id",
+      "builds": {
+        "stock": {
+          "hash": "78ba6f8f83dd32b1111ddd52b7a61207aaa47dd896602064ba3c41b612a2b96d",
+          "rentLamports": 824773560,
+          "sizeBytes": 162184
+        },
+        "tare": {
+          "hash": "79b704d0d78d956363146ea4227a28a06c064e4b71dd0ccc679704638d0334ca",
+          "rentLamports": 544601400,
+          "sizeBytes": 107032
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "76e2146a6496beb611e2e2f81cd62053f4de1c48662109174bddad8d865759ec"
+    },
+    {
+      "id": "multiple-suites",
+      "builds": {
+        "stock": {
+          "hash": "94787eecf05bfc6200c9c6e2a7a988fc1f36d4f5dd3774ba91db405a6bdb177e",
+          "rentLamports": 825748920,
+          "sizeBytes": 162376
+        },
+        "tare": {
+          "hash": "e1358eb6266055370bfd1b0dd595d3216545a09956cb9b9bcaeae5c64b48dc61",
+          "rentLamports": 551997880,
+          "sizeBytes": 108488
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "f7998309cdff51142f7fd0925ffe50d309413fd74ecffff4b83419f6c01facee"
+    },
+    {
+      "id": "system-accounts",
+      "builds": {
+        "stock": {
+          "hash": "00084cd871324ddd41e1c130f93ab4ec54f9bda5126eef0f14c5ec8312a973aa",
+          "rentLamports": 832048120,
+          "sizeBytes": 163616
+        },
+        "tare": {
+          "hash": "cd4c78b77ab9097ea9f9a0a07df045ecc62e2a15fcb1bdbdde2ce74f39191a75",
+          "rentLamports": 550494200,
+          "sizeBytes": 108192
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "e81d4d980d1107fa657eee620fc1f6b6c16d47f6c1f3973f5c318aae8958a8a1"
+    },
+    {
+      "id": "floats",
+      "builds": {
+        "stock": {
+          "hash": "f08d8f1de17c1a33b788fbd17d6fa25d5b8908a4948a85c93a70e2102d503ef1",
+          "rentLamports": 944499000,
+          "sizeBytes": 185752
+        },
+        "tare": {
+          "hash": "a30adb39bc2b88ed3afbc492a954e5369e28da9be0091272f16490f3bf7071cb",
+          "rentLamports": 673999160,
+          "sizeBytes": 132504
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "96328110dc2d47b1e4fa4430cf42426bcbc7262b72305b2607c6599b48545de9"
+    },
+    {
+      "id": "events",
+      "builds": {
+        "stock": {
+          "hash": "48549e9105e8a876a5bd6568316964b55f1c21be137217ad6020d81fb8c71fdf",
+          "rentLamports": 877524280,
+          "sizeBytes": 172568
+        },
+        "tare": {
+          "hash": "70dfac0a43d75f87793a08bd66272400b53fa19744b6f2e7fa555e2872bfb59e",
+          "rentLamports": 630229880,
+          "sizeBytes": 123888
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "9a564595c081962d6532dc4e615adf994a7f290af61cb8e5515d667944006ad7"
+    },
+    {
+      "id": "errors",
+      "builds": {
+        "stock": {
+          "hash": "c786453e6d194c92e2e011608dc9d609eb1b83d98b46359d0085454665c6c1c4",
+          "rentLamports": 1007125240,
+          "sizeBytes": 198080
+        },
+        "tare": {
+          "hash": "46a6d516f691b38169c6b7821d590b0837fd75d15336f16352b5f23790155e14",
+          "rentLamports": 695497720,
+          "sizeBytes": 136736
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "2089db47189cabe472bc16df471183db53f6e2d17989df81a7e8b8da062d984a"
+    },
+    {
+      "id": "relations-derivation",
+      "builds": {
+        "stock": {
+          "hash": "b2e52ec3451b755fc01498503644d3905dc2aeb6672494378619145d4c3d882a",
+          "rentLamports": 985829880,
+          "sizeBytes": 193888
+        },
+        "tare": {
+          "hash": "c4d14e35123d655479ac8693a531ca9f740215327dc4bf19b26b2891bf3f7128",
+          "rentLamports": 757798840,
+          "sizeBytes": 149000
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "8e99fa28c3b81c5247f7c47558ab9c8d9a343dc964766f7abbfdcfb04a77e3c7"
+    },
+    {
+      "id": "v0_31_1-tests-spl-metadata-programs-metadata",
+      "builds": {
+        "stock": {
+          "hash": "0bfdbd8fc2988f7a307c24cc5db2b24a67db8d5a27ca9aaacb85e3def235767e",
+          "rentLamports": 823473080,
+          "sizeBytes": 161928
+        },
+        "tare": {
+          "hash": "dd06e011ce58c669e2cbcd04b3e91775fc030723603ee58810d49d7804b81f4f",
+          "rentLamports": 544032440,
+          "sizeBytes": 106920
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "1afed40381ae976eecbf3fac19d1dff7db16f901029fa51d7c0eb6f24a3a0890"
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-spl-token",
+      "builds": {
+        "stock": {
+          "hash": "bf499e9dda16c1b71552a9bcd724db3147ede9390dfcfd559eec6e37c4d913a6",
+          "rentLamports": 824204600,
+          "sizeBytes": 162072
+        },
+        "tare": {
+          "hash": "cf5ecaf9fe3fa2d801053a48a0ce65bf318f7b611c6bd2a3e032122e766c5f18",
+          "rentLamports": 544113720,
+          "sizeBytes": 106936
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "199931f767721d290229ddeaa3fbcc9e00049c8b84b7aec2683b6a2db7d5b423"
+    },
+    {
+      "id": "v0_31_1-tests-validator-clone-programs-validator-clone",
+      "builds": {
+        "stock": {
+          "hash": "036c51639f86b1b6d5d7438036225baabd349ab5e83907963a557caddd91584e",
+          "rentLamports": 824814200,
+          "sizeBytes": 162192
+        },
+        "tare": {
+          "hash": "e4252f2c68facc998a8b96afc06d2be50d59543de761b8c96ebba8b07b95871a",
+          "rentLamports": 544642040,
+          "sizeBytes": 107040
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "abffcdb1810d1ab1e0f17618dd622a49bc1da30c2a15a05e2202fe982720ae54"
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-one",
+      "builds": {
+        "stock": {
+          "hash": "06485b49f57d64735cc5ef3a243052f9ef3b11cf543a0890eecd26a805668632",
+          "rentLamports": 824854840,
+          "sizeBytes": 162200
+        },
+        "tare": {
+          "hash": "7b2c6db4fe1f1b7bc81132c752189fd9277d6c990bc61bca97fd1b443b9b7890",
+          "rentLamports": 544642040,
+          "sizeBytes": 107040
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "0f115964f6c91dad67f7b7a0835f15026b6ea3201fb8eced86765a9a17643373"
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-idl-programs-idl-commands-two",
+      "builds": {
+        "stock": {
+          "hash": "1e2a011ced449e17e15d5708a387b11547dfa15710f91945b0f0b2aa15dae0fe",
+          "rentLamports": 825058040,
+          "sizeBytes": 162240
+        },
+        "tare": {
+          "hash": "db1d236b788e652c5a5187dae263a0160f9bd254d4a00b0d1d4ed389cd654d26",
+          "rentLamports": 544601400,
+          "sizeBytes": 107032
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "612755de075d0d576be9232b97e12ab0233ec3fe8ffcdcce5a64473be572014e"
+    },
+    {
+      "id": "v0_31_1-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "builds": {
+        "stock": {
+          "hash": "08f2e2bd1ba1509aaf5f4992b9c127de8452fe025565141ded1fb4182a34e70a",
+          "rentLamports": 824936120,
+          "sizeBytes": 162216
+        },
+        "tare": {
+          "hash": "b6321df666bc3463db7d823b1d3ba92a1cfdde1b5c4f7ac6bfba39f0aea00a26",
+          "rentLamports": 544682680,
+          "sizeBytes": 107048
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "35d975a1baf43595e3129e522e5e83cfa24e008a032e65f6cb0de28c86fdbce1"
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-spl-associated-token",
+      "builds": {
+        "stock": {
+          "hash": "47216ccfbfa6bde0b6954ce6c666573a6833255792c1019e5a40cbdc7926c8b9",
+          "rentLamports": 824326520,
+          "sizeBytes": 162096
+        },
+        "tare": {
+          "hash": "1d0b1609ddd02d96ad267f7b113f9c0d9f03b1430cc0876b74f5c591dd33152b",
+          "rentLamports": 544195000,
+          "sizeBytes": 106952
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "5ed4bb5c554ed0d1050a2c8c603c5e1ab165e6484ccd6df531164d754f81b084"
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-account-info",
+      "builds": {
+        "stock": {
+          "hash": "7b5a8f96b3757b9c944d7b4dc760cef55f40c7c01267c6e5bffd454aabe0802f",
+          "rentLamports": 830666360,
+          "sizeBytes": 163344
+        },
+        "tare": {
+          "hash": "891ea3d5f4d4038e97f6c07600af1ef4f1403ce701814720161082184c764b41",
+          "rentLamports": 545983160,
+          "sizeBytes": 107304
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "1555b2f82f39d41a8fcf989a735281ec145126e70b92dcf8323ef3e4c8b2edd6"
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-unchecked-account",
+      "builds": {
+        "stock": {
+          "hash": "8353d4cf80e4bbc456d85de1348a027ea9d8108c5a9fabf2357b521d9c56b66e",
+          "rentLamports": 828106040,
+          "sizeBytes": 162840
+        },
+        "tare": {
+          "hash": "2cb4062b83d73797897cd1b303e1e8b3846f36fd3f12acfc7bd5e6117e864bf0",
+          "rentLamports": 545983160,
+          "sizeBytes": 107304
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "774219de16fa9d7dd46f7ff6347575becba02d951a090036bbb0128986ec3efd"
+    },
+    {
+      "id": "v0_31_1-tests-sysvars-programs-sysvars",
+      "builds": {
+        "stock": {
+          "hash": "4c76840c5c2c900ab387689a1d8f55fa1cead5390f736cf8095ffd9ee6ad6b13",
+          "rentLamports": 851717880,
+          "sizeBytes": 167488
+        },
+        "tare": {
+          "hash": "7a37200ad071f6f59ff384bfda599c85c1b6ad85837eeb78a1aa0a245c6af5ff",
+          "rentLamports": 575447160,
+          "sizeBytes": 113104
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "982a5ac07458df10a509c066aabd1c02f14ac6e52c4d923cfe85cebd3d0be7b1"
+    },
+    {
+      "id": "v0_31_1-tests-typescript-programs-typescript",
+      "builds": {
+        "stock": {
+          "hash": "06c3dc810e30b22a192cee4182f90bb88dc4ff700c8dd44b5738cad5e9c64e3d",
+          "rentLamports": 824773560,
+          "sizeBytes": 162184
+        },
+        "tare": {
+          "hash": "43d1c0d80f983f1522da7522e54db25b6ee7038ff3b4a05b0affe6ecea4e22b5",
+          "rentLamports": 544601400,
+          "sizeBytes": 107032
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "b32b2a272ab4d1d288779edb6db746f7cdf0034c18047170b8a9992a6e8a91c9"
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-external",
+      "builds": {
+        "stock": {
+          "hash": "2eb2ed7a7e73f747042e337fb7f75eb6408b78b03f2dcabaee6f68ab5d482818",
+          "rentLamports": 824042040,
+          "sizeBytes": 162040
+        },
+        "tare": {
+          "hash": "8d66e1236b9db92dbfb0f7164e875aec492e977f68b331d90a7f1890fc5f31b6",
+          "rentLamports": 544520120,
+          "sizeBytes": 107016
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "5200a0f5cd081fb93224f69030028c62580b20eb1770de570db1bbd594fe253b"
+    },
+    {
+      "id": "v0_31_1-tests-safety-checks-programs-ignore-non-accounts",
+      "builds": {
+        "stock": {
+          "hash": "76e4759228358e6781ba2ca6ea834271369da4bb106c85bf29c3c678acff9a32",
+          "rentLamports": 832698360,
+          "sizeBytes": 163744
+        },
+        "tare": {
+          "hash": "6881420f7dfafbf67e759931ec65ece25063822f3fa785ff6e2c3760c80a2137",
+          "rentLamports": 547364920,
+          "sizeBytes": 107576
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "c5640de44408f2ed5a13269d57aaf5da1d8d54fe102b5c0b86081a18c2761fca"
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-docs",
+      "builds": {
+        "stock": {
+          "hash": "1815dc699474737b7bf9954fed032afba106be6c1087567ef6c1ac7b4b78907b",
+          "rentLamports": 838794360,
+          "sizeBytes": 164944
+        },
+        "tare": {
+          "hash": "c8f9ac236f5ed943fd12c571e8f35dc9ae497aad55f56627297386d8f874fc2a",
+          "rentLamports": 557850040,
+          "sizeBytes": 109640
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "3cdea062d5dceab0f28de4b46199bae41483fec42c39dd793e8236d1e7a8dc4f"
+    },
+    {
+      "id": "v0_31_1-tests-optional-programs-allow-missing-optionals",
+      "builds": {
+        "stock": {
+          "hash": "3d9cdc64e5be0bc60b8aff186b2030ba7be85afad5515b1c0b6afa526b39aff2",
+          "rentLamports": 909223480,
+          "sizeBytes": 178808
+        },
+        "tare": {
+          "hash": "39bae473d80bebff2f1c9864bae18e2c5038239cb45334a6e926c6884f841a2d",
+          "rentLamports": 645754360,
+          "sizeBytes": 126944
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "e9135c0b4f96fdbf117866bbe9f1b80ba8d052fe8ab4e9a5f753f735c2512f8c"
+    },
+    {
+      "id": "v0_31_1-tests-zero-copy-programs-zero-cpi",
+      "builds": {
+        "stock": {
+          "hash": "cee0dea52773f644d122210c0dd1f947ba940e2295fde4572b854287e92241c5",
+          "rentLamports": 911092920,
+          "sizeBytes": 179176
+        },
+        "tare": {
+          "hash": "044bebdd7c303f6229c59112e4edfef13c4c678642352d2e2e4caef94896b398",
+          "rentLamports": 685540920,
+          "sizeBytes": 134776
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "a0fa7a3fb3f285199484c190045f5e0e821279bad923e91fc5d154aa7a6d5ddb"
+    },
+    {
+      "id": "v0_31_1-tests-anchor-cli-account-programs-account-command",
+      "builds": {
+        "stock": {
+          "hash": "7a0a3672f5033b147d073448d83bfafe2cf2f664786fade1cc0f64cd6c2c2948",
+          "rentLamports": 943686200,
+          "sizeBytes": 185592
+        },
+        "tare": {
+          "hash": "2ec0aaa214a070a4019c93084f1ecd73780de6f0af88c9c91e0a8acc80854d89",
+          "rentLamports": 704316600,
+          "sizeBytes": 138472
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "4dbad03af110743072963752bb6023dd6634e79cb06b17e4e6a88ec3a6b2edf6"
+    },
+    {
+      "id": "v0_31_1-tests-composite-programs-composite",
+      "builds": {
+        "stock": {
+          "hash": "92049f72e864f3eeb7dda38b26b71cae256ca0395df7e9778af8937e364b73d6",
+          "rentLamports": 914140920,
+          "sizeBytes": 179776
+        },
+        "tare": {
+          "hash": "3c147e37bbdcfc6f3c5b00919fa48cd809151ec0eaf1d718c09a36d8c7917790",
+          "rentLamports": 645429240,
+          "sizeBytes": 126880
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "40d1df7a84189de3da350c72476d31f8613b61fdadab489f4e2819ea9e428b67"
+    },
+    {
+      "id": "v0_31_1-tests-cpi-returns-programs-callee",
+      "builds": {
+        "stock": {
+          "hash": "0cf0e251ceb8b47b2cd4dba7633249734e1ad50b2f5f7ba33155a9bf6c7d60a5",
+          "rentLamports": 930681400,
+          "sizeBytes": 183032
+        },
+        "tare": {
+          "hash": "e5310d1f45f65477d286b9b132b2638b34644b77969f8b25f1b308810ddca6d6",
+          "rentLamports": 668309560,
+          "sizeBytes": 131384
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "66bd5b2f36228286147bfdc53d5ac5fc7d8540eea07b5f92d60ac99e2c907853"
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-relations-derivation",
+      "builds": {
+        "stock": {
+          "hash": "02239e48fddee220d6e1c67785720554810b0ac702fae86d416dd7cfb468d96d",
+          "rentLamports": 960755000,
+          "sizeBytes": 188952
+        },
+        "tare": {
+          "hash": "bb9869d841b82594bd2f4bab798e2c9d4737bcce0e53baeb318f80f35f15eb20",
+          "rentLamports": 697814200,
+          "sizeBytes": 137192
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "199b45448b6eb2484227da25e582228f2bea7643ca60a8a69b09033475aff6f4"
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-init-if-needed",
+      "builds": {
+        "stock": {
+          "hash": "62134721ef2adab6106488fa762ef540aaebac58b27da85ed2de3e5456949acf",
+          "rentLamports": 979733880,
+          "sizeBytes": 192688
+        },
+        "tare": {
+          "hash": "b46b2b41174e7b5480b79d2e4dbed7a96ac7c84380f98c20fad447a3253fdeb9",
+          "rentLamports": 748776760,
+          "sizeBytes": 147224
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "9e7d6f0e57b6b2a2a87f25412c2dd941de836eb798beeac3e5f96f3c46432000"
+    },
+    {
+      "id": "v0_31_1-tests-idl-programs-generics",
+      "builds": {
+        "stock": {
+          "hash": "7a812c2d1526c8ca438838103844f143ab77cbb020b0ef65faab82cdd9d56201",
+          "rentLamports": 876467640,
+          "sizeBytes": 172360
+        },
+        "tare": {
+          "hash": "262dca2fdbab1ae332248881d5481dd26be15c97ca7656c56efcb2e0cffbe90d",
+          "rentLamports": 610885240,
+          "sizeBytes": 120080
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "0f6722b34fac2d62dcc5e0d8c38878913343f8967f3a5bd835126cd567e4a5ae"
+    },
+    {
+      "id": "v0_31_1-tests-custom-discriminator-programs-custom-discriminator",
+      "builds": {
+        "stock": {
+          "hash": "92496bf8d13dc3e00e213b5d9778224facb8756384b1c954075475fce31e5b24",
+          "rentLamports": 928486840,
+          "sizeBytes": 182600
+        },
+        "tare": {
+          "hash": "f3da8635eae35a77430c551e3e5b21c45fd3a7fb4014181d3612b70f1f4a3b1d",
+          "rentLamports": 665302200,
+          "sizeBytes": 130792
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "3730486466ec41bb61df2be67e9fa47ab8a0ff381c8ddec7761006c8747b0f02"
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-remaining-accounts",
+      "builds": {
+        "stock": {
+          "hash": "173edb626967d2feae3f617fb133108276f7bdd78aad79e7a4d4ba23110c3650",
+          "rentLamports": 1009279160,
+          "sizeBytes": 198504
+        },
+        "tare": {
+          "hash": "ea6edf9e3338ce5c525bc0576a3246b436b5339996359d2308b45dcf7265654a",
+          "rentLamports": 744062520,
+          "sizeBytes": 146296
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "68af5fd2f02ebbe8c999dc6f231b540420493c92bd37e16eb74432d89ad1b683"
+    },
+    {
+      "id": "v0_31_1-tests-realloc-programs-realloc",
+      "builds": {
+        "stock": {
+          "hash": "99d3ece6f6969fc776bcc233a2fc7a9639bd7c727046ede9d14ab10912a4b6bd",
+          "rentLamports": 1069588920,
+          "sizeBytes": 210376
+        },
+        "tare": {
+          "hash": "f4039c9a20fda2f6f7a884c464b519d2811d33b0a5d7f4d2eb26266421a186b7",
+          "rentLamports": 987699320,
+          "sizeBytes": 194256
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "54e71613cb2b7845044a398151d8d3fb8245b3167e48e861aaa1b493554809bb"
+    },
+    {
+      "id": "v0_31_1-tests-cpi-returns-programs-caller",
+      "builds": {
+        "stock": {
+          "hash": "895d49d0f9bc30731a0e22cdc4aacc5d674cf91dffb488d491705a74dd8ab2da",
+          "rentLamports": 941329080,
+          "sizeBytes": 185128
+        },
+        "tare": {
+          "hash": "7a8dc5f59647e1f6557d7ff5b5c904ecaa89e3aa6831dbf24ae692c3426ce609",
+          "rentLamports": 757839480,
+          "sizeBytes": 149008
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "ed963cca5e99bc0b133665fe081ed04521ca6294f7bb0b81a2be34b4b837c523"
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-lamports",
+      "builds": {
+        "stock": {
+          "hash": "ffb9768e1ecf8f6b33f664a236146a6f54fd6a0d6f1d925f87de2ae2722c4c79",
+          "rentLamports": 1052195000,
+          "sizeBytes": 206952
+        },
+        "tare": {
+          "hash": "b7bb02e03311708eab517e37cf7dcf616acaff64c21dc5989529dcaa21deba79",
+          "rentLamports": 882360440,
+          "sizeBytes": 173520
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "977750cbbf3e19ad10ffc131606ff7c0051f25d0b09011567dc43cb43136e361"
+    },
+    {
+      "id": "v0_31_1-tests-chat-programs-chat",
+      "builds": {
+        "stock": {
+          "hash": "2478a48556dcef3d7d3d3a4eef5b63c2e39bcf566a6ff835e730017bcc8d1cae",
+          "rentLamports": 1023096760,
+          "sizeBytes": 201224
+        },
+        "tare": {
+          "hash": "eabc9eda1df1512b9d6ce531d332fc82c55ba25f9b23e7cabc6086f7b51ee895",
+          "rentLamports": 799048440,
+          "sizeBytes": 157120
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "d45620629c70b6e6e73d9f89d5a2482de76b57e94c94384a7bd741e1f3627ac9"
+    },
+    {
+      "id": "v0_31_1-tests-declare-program-programs-external",
+      "builds": {
+        "stock": {
+          "hash": "6c542e128303bd84697744ae0ea1957ffdc065fffd50d0743eda7895b87de73f",
+          "rentLamports": 979449400,
+          "sizeBytes": 192632
+        },
+        "tare": {
+          "hash": "4e71e396118b8864ccfd6a3b2c0e923315e0b8e2b4dbd9c7022389378472749b",
+          "rentLamports": 762635000,
+          "sizeBytes": 149952
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "7def23fe33b19c2891d47c4c78810102a8ce708840520c59fc7ffa7ff180a7c0"
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-overflow-checks",
+      "builds": {
+        "stock": {
+          "hash": "a29b0eac25756ead2d1234712c8cf2d07ed9fb0f6e1ede004a49b3bbb658a70f",
+          "rentLamports": 965997560,
+          "sizeBytes": 189984
+        },
+        "tare": {
+          "hash": "3fdf390decc23f1830c3a1bbb94ef613b4ea1b14e81e0e0efa00f3183d694326",
+          "rentLamports": 696757560,
+          "sizeBytes": 136984
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "f84d58f57a5b843f5fb271d07b3d4735b765c5e61fbfe0de626b8573e980958f"
+    },
+    {
+      "id": "v0_31_1-tests-custom-coder-programs-native-system",
+      "builds": {
+        "stock": {
+          "hash": "7ed1fa8459bf5a2be09deaa2c08e2075e299ca264ef45c783fff1fd45f19a7d2",
+          "rentLamports": 997331000,
+          "sizeBytes": 196152
+        },
+        "tare": {
+          "hash": "3fd865698a8027c4c7055733a30248116aa0d05fa86541745f640ed09d36109d",
+          "rentLamports": 702284600,
+          "sizeBytes": 138072
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "63911662f1ebff4e23a46097bcae41794e65084bebdba90009ea7865ff0267b4"
+    },
+    {
+      "id": "v0_31_1-tests-optional-programs-optional",
+      "builds": {
+        "stock": {
+          "hash": "42710618b2dd4191226de2375c881a33ea1619684c5f34a90c2e50be2836bb8f",
+          "rentLamports": 1196507640,
+          "sizeBytes": 235360
+        },
+        "tare": {
+          "hash": "1a5665fa053fe6901681ce14a4bf1eebad2a016900b918bc91cac48f195e18b1",
+          "rentLamports": 1178097720,
+          "sizeBytes": 231736
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "745e4f46200519c4957af0c386c58f3fa97d440a72e851964c1ff1b18e100fb5"
+    },
+    {
+      "id": "v0_31_1-tests-zero-copy-programs-zero-copy",
+      "builds": {
+        "stock": {
+          "hash": "5d991526feaa7a8b39d238f612888854e6c2b7f0058b064c1e05d0d7ebd2b22b",
+          "rentLamports": 1055121080,
+          "sizeBytes": 207528
+        },
+        "tare": {
+          "hash": "231308a093ab5e10ee7f4766a5de2f3f043988108b2ba5f64bed36cd867f05c4",
+          "rentLamports": 841192120,
+          "sizeBytes": 165416
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "96fcfaafd8466c1c6a8fbe3fe02006e7ba2938cb132a0246827bfe0e51e081d8"
+    },
+    {
+      "id": "v0_31_1-tests-cashiers-check-programs-cashiers-check",
+      "builds": {
+        "stock": {
+          "hash": "759267245c31637e31d4948cb6d5931b87a2670fe8b5946a18e5f404edfccf7b",
+          "rentLamports": 1107790520,
+          "sizeBytes": 217896
+        },
+        "tare": {
+          "hash": "ede45926600230a306d66f6cb119eb0f0fc8c410c39c9fe4603cd17279c30e87",
+          "rentLamports": 931453560,
+          "sizeBytes": 183184
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "4d7997e6c73ac744b851f28f06029d51b5a01f1bee7cc41254914984d5815274"
+    },
+    {
+      "id": "v0_31_1-tests-spl-token-proxy-programs-token-proxy",
+      "builds": {
+        "stock": {
+          "hash": "37874936a7cd7e864daa9c0df7a0985b4530c08163a67a0e68e1416d7278d296",
+          "rentLamports": 1528130040,
+          "sizeBytes": 300640
+        },
+        "tare": {
+          "hash": "f9f1bc4ec8c183d52fd2fbfc965c1fac5c87bc3fb735e2df8e9b739d81581677",
+          "rentLamports": 1186672760,
+          "sizeBytes": 233424
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "75e34f5cb70dc641ec40a0127694e293adaca31792e2d12251f32b06e5bd2c3f"
+    },
+    {
+      "id": "v0_31_1-tests-escrow-programs-escrow",
+      "builds": {
+        "stock": {
+          "hash": "97b09425eff8a9a9a3b863eb039f1065314460207c8af528285fd891a58ab03e",
+          "rentLamports": 1246535480,
+          "sizeBytes": 245208
+        },
+        "tare": {
+          "hash": "54179d0da4f96c203fbb3fe8b34bc5876c2fd9d84c491cc728b6dd92c3101d6d",
+          "rentLamports": 1059997880,
+          "sizeBytes": 208488
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "11dc74396942ab994315e35d2ee52119ad88fd3d75315925190688f00d4650d9"
+    },
+    {
+      "id": "v0_31_1-tests-spl-token-wrapper-programs-token-wrapper",
+      "builds": {
+        "stock": {
+          "hash": "ee18e70307c13849de684593c6b81968e4fbf12a819c3d55785d618c55f401b2",
+          "rentLamports": 1485661240,
+          "sizeBytes": 292280
+        },
+        "tare": {
+          "hash": "cc6108f35632b59932443f037be6262ee3957ca87c9357b94fa34fd77270e09c",
+          "rentLamports": 1131199160,
+          "sizeBytes": 222504
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "c3373e2bee18cd4a8bcb9f854c75d2dbf79e620bbe4f9478c21447ea7dcbd7a0"
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-misc-optional",
+      "builds": {
+        "stock": {
+          "hash": "da4e1e3503a1a9459aa50c3fbc79da72ef235696208c1ba9c54345f7c0b1baca",
+          "rentLamports": 3901059000,
+          "sizeBytes": 767752
+        },
+        "tare": {
+          "hash": "5a2da16cb5b9600675ebcd20eb4a957261b6f9bf9a5b5ab11f657e3c2bdf776f",
+          "rentLamports": 3909308920,
+          "sizeBytes": 769376
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "00646f03192a3f7c68e5351df193df91cf0d80e6c44e67688c60605dc276022c"
+    },
+    {
+      "id": "v0_31_1-tests-misc-programs-misc",
+      "builds": {
+        "stock": {
+          "hash": "3b7d72edac1b75a4178f21b8b88e50561b7f51b7b1bc1927f07c28ea9a5ca3ba",
+          "rentLamports": 3640678520,
+          "sizeBytes": 716496
+        },
+        "tare": {
+          "hash": "b01cdb5d6ef595a85783cc9311331555a077f4a879a37956c7a05da485f39f74",
+          "rentLamports": 3834003000,
+          "sizeBytes": 754552
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "ca9157bdd749871d77203d238f5e4a919d3b1ac885589704b44f0514999d32a8"
+    },
+    {
+      "id": "v0_31_1-tests-bench-programs-bench",
+      "builds": {
+        "stock": {
+          "hash": "ba9ef56f942693dfa8343dda8e81d682087f1a5d8362341552292b8fbe0729b5",
+          "rentLamports": 5420182200,
+          "sizeBytes": 1066792
+        },
+        "tare": {
+          "hash": "e617f17b6eaee54e8662fbb4f0e96a4185ad9056d08e5d58408946b5217ae19d",
+          "rentLamports": 6700220280,
+          "sizeBytes": 1318768
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "4a0b24a889e490b33595f912970e08cc37717f040ba296bbdd9ce2bb4236b6ca"
+    },
+    {
+      "id": "v0_32_3-tests-spl-metadata-programs-metadata",
+      "builds": {
+        "stock": {
+          "hash": "4bc4e9c6517c2720b450d0f843bb1202c897767131091f9d10ca8d04e4a3c4ce",
+          "rentLamports": 820221880,
+          "sizeBytes": 161288
+        },
+        "tare": {
+          "hash": "dd06e011ce58c669e2cbcd04b3e91775fc030723603ee58810d49d7804b81f4f",
+          "rentLamports": 544032440,
+          "sizeBytes": 106920
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "1afed40381ae976eecbf3fac19d1dff7db16f901029fa51d7c0eb6f24a3a0890"
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-spl-token",
+      "builds": {
+        "stock": {
+          "hash": "e8ca20b7d86738aaae4ad450b805d8a06f659717d7e5129f53ae81d166b088b2",
+          "rentLamports": 820953400,
+          "sizeBytes": 161432
+        },
+        "tare": {
+          "hash": "d74fb677cd6b7e621b3012bc1cfdd9224d52c0ee68651a7f8f51bbb5749d419a",
+          "rentLamports": 544113720,
+          "sizeBytes": 106936
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "199931f767721d290229ddeaa3fbcc9e00049c8b84b7aec2683b6a2db7d5b423"
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-0-programs-basic-0",
+      "builds": {
+        "stock": {
+          "hash": "d061aef6400c8ede3907fcd1549f6ebe7a6eca5001ebf64a705a79d7b3ea73af",
+          "rentLamports": 821481720,
+          "sizeBytes": 161536
+        },
+        "tare": {
+          "hash": "31a3fa14a281cd84c522d663f1fabc344a5b0f1b4c4e4fa46958749252799295",
+          "rentLamports": 544601400,
+          "sizeBytes": 107032
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "6c3782a6b5933e44850b6e69ee3890de6c82576a931a65d4751ac843d0cb05e1"
+    },
+    {
+      "id": "v0_32_3-tests-validator-clone-programs-validator-clone",
+      "builds": {
+        "stock": {
+          "hash": "e2cd2754883d7fd6ef650aa413919a9631f9c7005364a254b9aeb047f6ed239f",
+          "rentLamports": 821563000,
+          "sizeBytes": 161552
+        },
+        "tare": {
+          "hash": "8d4e74367c2587771b15e90344163e313e437a21b16affe3c8cd8413af54fcfe",
+          "rentLamports": 544642040,
+          "sizeBytes": 107040
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "abffcdb1810d1ab1e0f17618dd622a49bc1da30c2a15a05e2202fe982720ae54"
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-one",
+      "builds": {
+        "stock": {
+          "hash": "8fddb3b449f9fdc8bc87a5809b12732fb8d1e5a0064dc457573c7c6f2480f3d0",
+          "rentLamports": 821603640,
+          "sizeBytes": 161560
+        },
+        "tare": {
+          "hash": "74e620c4d939404c0f545457251a389edea12c47e8d9bf951ffde70ffcfe610d",
+          "rentLamports": 544642040,
+          "sizeBytes": 107040
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "0f115964f6c91dad67f7b7a0835f15026b6ea3201fb8eced86765a9a17643373"
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-idl-programs-idl-commands-two",
+      "builds": {
+        "stock": {
+          "hash": "affd25f4d9b59688f09a25b49b8ad1f3d6a865503aa305ab99e19f0bfe8c28c2",
+          "rentLamports": 821806840,
+          "sizeBytes": 161600
+        },
+        "tare": {
+          "hash": "5c5c8d016a6d5f76871e5951599700d3a67e1c38dd2e49ce571c4fde996c6440",
+          "rentLamports": 544601400,
+          "sizeBytes": 107032
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "612755de075d0d576be9232b97e12ab0233ec3fe8ffcdcce5a64473be572014e"
+    },
+    {
+      "id": "v0_32_3-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "builds": {
+        "stock": {
+          "hash": "e125e2720fbe16dba8bdafb369c844cc8f0228a59fa156fa768018fbf2c2771d",
+          "rentLamports": 821684920,
+          "sizeBytes": 161576
+        },
+        "tare": {
+          "hash": "eac653f1c3817c2d7f180fdf8ac9109555616675aca90b4abe59190bcd4617a2",
+          "rentLamports": 544682680,
+          "sizeBytes": 107048
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "35d975a1baf43595e3129e522e5e83cfa24e008a032e65f6cb0de28c86fdbce1"
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-spl-associated-token",
+      "builds": {
+        "stock": {
+          "hash": "96e925bb3d05606b14be18659170ecfa19f50f448ea344179384eb98e72a35ec",
+          "rentLamports": 821075320,
+          "sizeBytes": 161456
+        },
+        "tare": {
+          "hash": "c88fcc035de431ef0d277142dee0ad72e69ab71ee1fbf99ef1ab8ed1acbb1321",
+          "rentLamports": 544195000,
+          "sizeBytes": 106952
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "5ed4bb5c554ed0d1050a2c8c603c5e1ab165e6484ccd6df531164d754f81b084"
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-account-info",
+      "builds": {
+        "stock": {
+          "hash": "93c92ce50f2621d6555cb6bdf7e5bf07fb1f2163531c986be5daed96fbcf7bf5",
+          "rentLamports": 827415160,
+          "sizeBytes": 162704
+        },
+        "tare": {
+          "hash": "d021fb8113c547266c1afc2f805851f45949d784950075e46b7ef95d40dc98f1",
+          "rentLamports": 545983160,
+          "sizeBytes": 107304
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "8313b9f7733dc39cf9b192c6145520858bc0328e0557e36682663022d9ca6c1b"
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-unchecked-account",
+      "builds": {
+        "stock": {
+          "hash": "9261e1e73c0461b1a1a958b90bf0c576749a764175b26c587dcd80fc0618176f",
+          "rentLamports": 824854840,
+          "sizeBytes": 162200
+        },
+        "tare": {
+          "hash": "dea00c1620fb64a7eb1fd59db9978258ebf79b4cd568068bad50f7f164dce610",
+          "rentLamports": 545983160,
+          "sizeBytes": 107304
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "d741c1c6ed02cdadf90242ebca3bbf8b7596e84d7db0120e915cb17e8bdf4dce"
+    },
+    {
+      "id": "v0_32_3-tests-declare-id-programs-declare-id",
+      "builds": {
+        "stock": {
+          "hash": "9b6b6552f724767c06d5bbdda49157760c40880838e62be2d06964be2b2a2f2b",
+          "rentLamports": 821522360,
+          "sizeBytes": 161544
+        },
+        "tare": {
+          "hash": "38445e548c73c92761d28efe7551a6f21eaecac41a82d7e549068cff80c5baba",
+          "rentLamports": 544601400,
+          "sizeBytes": 107032
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "76e2146a6496beb611e2e2f81cd62053f4de1c48662109174bddad8d865759ec"
+    },
+    {
+      "id": "v0_32_3-tests-system-accounts-programs-system-accounts",
+      "builds": {
+        "stock": {
+          "hash": "868bdfaca4d79bfba0347adf2c614c9b4db402035afc134233dc98e18c633756",
+          "rentLamports": 828796920,
+          "sizeBytes": 162976
+        },
+        "tare": {
+          "hash": "de525248f442dd6e0a069cf922894b945323d78614384f50c152be13aab70b0a",
+          "rentLamports": 550494200,
+          "sizeBytes": 108192
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "e81d4d980d1107fa657eee620fc1f6b6c16d47f6c1f3973f5c318aae8958a8a1"
+    },
+    {
+      "id": "v0_32_3-tests-multiple-suites-programs-multiple-suites",
+      "builds": {
+        "stock": {
+          "hash": "ef2892313b0b868a11232726c4c846aeba71cfe0fda70eff40786fc1e3d99c1e",
+          "rentLamports": 822497720,
+          "sizeBytes": 161736
+        },
+        "tare": {
+          "hash": "8e43fc37252453ae2df8288dcea93bbacc19cb53ebdc3f2d8fde5893a0e91ab6",
+          "rentLamports": 551997880,
+          "sizeBytes": 108488
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "f7998309cdff51142f7fd0925ffe50d309413fd74ecffff4b83419f6c01facee"
+    },
+    {
+      "id": "v0_32_3-tests-sysvars-programs-sysvars",
+      "builds": {
+        "stock": {
+          "hash": "ea28bc9764f21261f3785ffab9846d0a2c49782b7b252e289df9a8863bfa7f2a",
+          "rentLamports": 848466680,
+          "sizeBytes": 166848
+        },
+        "tare": {
+          "hash": "fa82ca0af4e9abc5e83b9f424b1a7dfc1c3140a59e4fcc8e9dc9f0ed58636ce2",
+          "rentLamports": 575447160,
+          "sizeBytes": 113104
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "982a5ac07458df10a509c066aabd1c02f14ac6e52c4d923cfe85cebd3d0be7b1"
+    },
+    {
+      "id": "v0_32_3-tests-typescript-programs-typescript",
+      "builds": {
+        "stock": {
+          "hash": "68592b077583a3687e4196140da27e7d3ccc5eb3cf318106b616c5f2c3902186",
+          "rentLamports": 821522360,
+          "sizeBytes": 161544
+        },
+        "tare": {
+          "hash": "7428c3c3c39069479517b4542dfb64f586a61f48e369f2086aea29aac7889b2e",
+          "rentLamports": 544601400,
+          "sizeBytes": 107032
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "b32b2a272ab4d1d288779edb6db746f7cdf0034c18047170b8a9992a6e8a91c9"
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-external",
+      "builds": {
+        "stock": {
+          "hash": "842720a3d4aa482b748c60b4e30eec9a28ddb5f55f3e93ec3c30fafdaa1dd524",
+          "rentLamports": 820790840,
+          "sizeBytes": 161400
+        },
+        "tare": {
+          "hash": "174d47fd35de97f23f8335ed519a358c66e9b737b60ccd39cb6f1810b6e41b11",
+          "rentLamports": 544520120,
+          "sizeBytes": 107016
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "5200a0f5cd081fb93224f69030028c62580b20eb1770de570db1bbd594fe253b"
+    },
+    {
+      "id": "v0_32_3-tests-safety-checks-programs-ignore-non-accounts",
+      "builds": {
+        "stock": {
+          "hash": "cfc4fd0ad21e1c78f8cc28310748e9a92e1549625c13719f8e0d86d14c02eb27",
+          "rentLamports": 829447160,
+          "sizeBytes": 163104
+        },
+        "tare": {
+          "hash": "319aaf4f5f38fd66828d313bfb1feea60b43beb5608a1eac728557dee92e5986",
+          "rentLamports": 547364920,
+          "sizeBytes": 107576
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "be365f860ecf4a2c3f406900303a5d13da73df2892fbd9f4aed83dc2959f03ea"
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-3-programs-puppet",
+      "builds": {
+        "stock": {
+          "hash": "495a64f4b0fc25fa0829e2ae9a4427cf27479183e893f79f30c9bd03af2db30f",
+          "rentLamports": 921821880,
+          "sizeBytes": 181288
+        },
+        "tare": {
+          "hash": "61534df59785883625fcda9ca32412d28fb39ecfae057b527fc9380fa693cf4d",
+          "rentLamports": 641974840,
+          "sizeBytes": 126200
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "e5aa6911143fba53fa088b736944e5dcecd6dd377461efce16617c801c601f41"
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-3-programs-puppet-master",
+      "builds": {
+        "stock": {
+          "hash": "7fa87ac065097ac64dde44a13c4eef6c7cad7b82b2f0d74a0b073da17251311f",
+          "rentLamports": 886830840,
+          "sizeBytes": 174400
+        },
+        "tare": {
+          "hash": "1d49779d0ed5ddeb236c864074ff59912a3a12f6aa8bc83e867b0760979cc0ab",
+          "rentLamports": 616859320,
+          "sizeBytes": 121256
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "a01f4d0716fd1ec4e8108d9573f58dbe281656d74a028b92fb69a8a11fa1e357"
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-docs",
+      "builds": {
+        "stock": {
+          "hash": "ea160370c308a647af7c2e2d5d18935688bce8a8ddf57880bd07273b3b5f0c24",
+          "rentLamports": 835543160,
+          "sizeBytes": 164304
+        },
+        "tare": {
+          "hash": "04aeafccfe90ad60fdd0980471ba45e9c81d3d3e756f7b805c4629fdf4cc97b3",
+          "rentLamports": 557850040,
+          "sizeBytes": 109640
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "3cdea062d5dceab0f28de4b46199bae41483fec42c39dd793e8236d1e7a8dc4f"
+    },
+    {
+      "id": "v0_32_3-tests-optional-programs-allow-missing-optionals",
+      "builds": {
+        "stock": {
+          "hash": "f694394b877889dc14ac604d336aaadec33ae3041754b77c08072690cbbc7c30",
+          "rentLamports": 906622520,
+          "sizeBytes": 178296
+        },
+        "tare": {
+          "hash": "f9f455aafee1ef5394d9c02b6eb7ba7b1f5f9873cf0275d74138dfa9bc725843",
+          "rentLamports": 645754360,
+          "sizeBytes": 126944
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "e9135c0b4f96fdbf117866bbe9f1b80ba8d052fe8ab4e9a5f753f735c2512f8c"
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-1-programs-basic-1",
+      "builds": {
+        "stock": {
+          "hash": "197b1a039b53ab178f9ec77f3e6040cdac3fc374e8dbdfce69c9580d78e4c583",
+          "rentLamports": 923569400,
+          "sizeBytes": 181632
+        },
+        "tare": {
+          "hash": "bc8358d37f296eabb0c568b2f6a9569196a426490f4a39786857ab736c4d7de8",
+          "rentLamports": 644291320,
+          "sizeBytes": 126656
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "766fba43ff8eecbf7b6c24e3e09471558ce6ee5f73b46cc93e6bb902799c2b45"
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-2-programs-basic-2",
+      "builds": {
+        "stock": {
+          "hash": "26350bbd48e1a7ab42161a3b1eb03201bf8e73e610e3c327fe1af141bb53c06c",
+          "rentLamports": 935314360,
+          "sizeBytes": 183944
+        },
+        "tare": {
+          "hash": "db956749477242dc12acc5d166fbf023c1c494f6bb05436fb90f88b080ee66e1",
+          "rentLamports": 668309560,
+          "sizeBytes": 131384
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "075f787231c8f951ad02881e24e872459bb77a3b98a4ddfd43180835df16a358"
+    },
+    {
+      "id": "v0_32_3-tests-zero-copy-programs-zero-cpi",
+      "builds": {
+        "stock": {
+          "hash": "8626f2bb17853d37744adf3f10f6e40627f4522a248022add906ced521edcfc4",
+          "rentLamports": 907435320,
+          "sizeBytes": 178456
+        },
+        "tare": {
+          "hash": "42f8a6f96768867835c2d941619711f0373d7c6e5d71d3f5c8a557c4d704e269",
+          "rentLamports": 685540920,
+          "sizeBytes": 134776
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "ae56b98b8df3fbb6ec95c3a55502ad6ccfc86c21804e621a49b4b35d7fd19dcf"
+    },
+    {
+      "id": "v0_32_3-tests-events-programs-events",
+      "builds": {
+        "stock": {
+          "hash": "6639df1c6a05c891bb48640af7eb7eb2565c41750e22a432c011be7dc6bbc546",
+          "rentLamports": 874273080,
+          "sizeBytes": 171928
+        },
+        "tare": {
+          "hash": "84b5b08e292f502dbcf71e6f4565975bff1d5a59fc66b86f04f0158dd9ec120f",
+          "rentLamports": 630229880,
+          "sizeBytes": 123888
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "9a564595c081962d6532dc4e615adf994a7f290af61cb8e5515d667944006ad7"
+    },
+    {
+      "id": "v0_32_3-tests-anchor-cli-account-programs-account-command",
+      "builds": {
+        "stock": {
+          "hash": "87b8f9e104f6d39764f650635c6715ddd0ca44f670b954fb1258a1928db1a98f",
+          "rentLamports": 941085240,
+          "sizeBytes": 185080
+        },
+        "tare": {
+          "hash": "a84c33c5532a7e0fdaadf51929b7966751c17ce940d031a84d2405a8d2ad1e0a",
+          "rentLamports": 704316600,
+          "sizeBytes": 138472
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "4dbad03af110743072963752bb6023dd6634e79cb06b17e4e6a88ec3a6b2edf6"
+    },
+    {
+      "id": "v0_32_3-tests-floats-programs-floats",
+      "builds": {
+        "stock": {
+          "hash": "f9ebd42a60bb5b96cf1c5b6461e3fa0a0cd90e6a4a2a69a642e95ac656d4b807",
+          "rentLamports": 941898040,
+          "sizeBytes": 185240
+        },
+        "tare": {
+          "hash": "8aa577f51c0164a3caf734a85c0b4e82907353ad44feb9c354db5470cd4c0d9c",
+          "rentLamports": 673999160,
+          "sizeBytes": 132504
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "96328110dc2d47b1e4fa4430cf42426bcbc7262b72305b2607c6599b48545de9"
+    },
+    {
+      "id": "v0_32_3-tests-composite-programs-composite",
+      "builds": {
+        "stock": {
+          "hash": "fdf0a98bdbcf86ee704b68c8abb8a153553023b0ccc1fd9d25b79c4f0d2f83c7",
+          "rentLamports": 910889720,
+          "sizeBytes": 179136
+        },
+        "tare": {
+          "hash": "37468571ed2a2dee837f37391b458f4afcf47829f867212884528ec21c1eb5fd",
+          "rentLamports": 645429240,
+          "sizeBytes": 126880
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "40d1df7a84189de3da350c72476d31f8613b61fdadab489f4e2819ea9e428b67"
+    },
+    {
+      "id": "v0_32_3-tests-cpi-returns-programs-callee",
+      "builds": {
+        "stock": {
+          "hash": "b4d10021c2e25905b18cbc5536194c22d9f7ecb8524e913c67ea9b371cf38199",
+          "rentLamports": 927999160,
+          "sizeBytes": 182504
+        },
+        "tare": {
+          "hash": "b83fed47cfd3c04e34558728efb2db00bc1208d77cdf4d39c71cb40e51a6c8bf",
+          "rentLamports": 668309560,
+          "sizeBytes": 131384
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "66bd5b2f36228286147bfdc53d5ac5fc7d8540eea07b5f92d60ac99e2c907853"
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-relations-derivation",
+      "builds": {
+        "stock": {
+          "hash": "42dead0bd5a2b3e99cd677d184586acb3a150fbd0a7acb65e879ee7eeadad23b",
+          "rentLamports": 958154040,
+          "sizeBytes": 188440
+        },
+        "tare": {
+          "hash": "df22a37247b404087223ccce9a1810dd1ea1b671594ccc2802b4199aab23bd51",
+          "rentLamports": 697814200,
+          "sizeBytes": 137192
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "199b45448b6eb2484227da25e582228f2bea7643ca60a8a69b09033475aff6f4"
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-init-if-needed",
+      "builds": {
+        "stock": {
+          "hash": "bdbe343412504922989a0d782b2351f05485cad6e47ecdf69e89daef28672373",
+          "rentLamports": 977132920,
+          "sizeBytes": 192176
+        },
+        "tare": {
+          "hash": "5446981bb67bfefdb56df301a58109f67f3b510b6ac7f556583e345a75b2ac8e",
+          "rentLamports": 748776760,
+          "sizeBytes": 147224
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "9e7d6f0e57b6b2a2a87f25412c2dd941de836eb798beeac3e5f96f3c46432000"
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-4-programs-basic-4",
+      "builds": {
+        "stock": {
+          "hash": "02cc6aecb3213d93080488ca68940ad7dbf0ead8e300067ed3c4fc52800d2f12",
+          "rentLamports": 953195960,
+          "sizeBytes": 187464
+        },
+        "tare": {
+          "hash": "1b55015cde9479d9693bd467c9d01356131c23dd6eb1c8e90e80a10df0c8365d",
+          "rentLamports": 687532280,
+          "sizeBytes": 135168
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "72d0fcbf519312711e90081ebe2ae9af8953cddb22e6e71df4e2aa46c3ffb6d2"
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-generics",
+      "builds": {
+        "stock": {
+          "hash": "b8bce02b4fd3cb04560aa6ac526382db4dae17eadfdb6cb2f2732d28e48695e9",
+          "rentLamports": 873216440,
+          "sizeBytes": 171720
+        },
+        "tare": {
+          "hash": "262dca2fdbab1ae332248881d5481dd26be15c97ca7656c56efcb2e0cffbe90d",
+          "rentLamports": 610885240,
+          "sizeBytes": 120080
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "d64162ec5899b7da0b292b4e873a080a418e5d143a82b3215b09d7a6f0b6ed91"
+    },
+    {
+      "id": "v0_32_3-tests-custom-discriminator-programs-custom-discriminator",
+      "builds": {
+        "stock": {
+          "hash": "3b003dbb2bc3c5bf4f54342d284292b72a2b27c28b93961f3bcc728980c0bf5a",
+          "rentLamports": 925885880,
+          "sizeBytes": 182088
+        },
+        "tare": {
+          "hash": "f3da8635eae35a77430c551e3e5b21c45fd3a7fb4014181d3612b70f1f4a3b1d",
+          "rentLamports": 665302200,
+          "sizeBytes": 130792
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "3730486466ec41bb61df2be67e9fa47ab8a0ff381c8ddec7761006c8747b0f02"
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-remaining-accounts",
+      "builds": {
+        "stock": {
+          "hash": "01f24f95fd07408d7814b0259215d8e90d37c72cccc9d7bf128a105c9f1ee439",
+          "rentLamports": 1006678200,
+          "sizeBytes": 197992
+        },
+        "tare": {
+          "hash": "5b6a507bf111ddacc8a5e5d107b39b9471808fbd3f1f9aef188c91e7240e8ae2",
+          "rentLamports": 744062520,
+          "sizeBytes": 146296
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "68af5fd2f02ebbe8c999dc6f231b540420493c92bd37e16eb74432d89ad1b683"
+    },
+    {
+      "id": "v0_32_3-tests-relations-derivation-programs-relations-derivation",
+      "builds": {
+        "stock": {
+          "hash": "2fab92012b305a3a42ad946043dcca671c211c9c7977acfe12aa6de3808a128a",
+          "rentLamports": 983228920,
+          "sizeBytes": 193376
+        },
+        "tare": {
+          "hash": "d2ac7751f79ba320abb15ddfdb93104958807d694a40567cc0fb6ac8ec0a5c43",
+          "rentLamports": 757798840,
+          "sizeBytes": 149000
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "8e99fa28c3b81c5247f7c47558ab9c8d9a343dc964766f7abbfdcfb04a77e3c7"
+    },
+    {
+      "id": "v0_32_3-tests-realloc-programs-realloc",
+      "builds": {
+        "stock": {
+          "hash": "134e24d6bd5d97f458dcac57cf1543c7dd33923afdf584016ae315b6c4323314",
+          "rentLamports": 1066866040,
+          "sizeBytes": 209840
+        },
+        "tare": {
+          "hash": "35f0efdfaef5a9ad879077e36f1b61994792c0a8beffec69ea836540ca57df4d",
+          "rentLamports": 987699320,
+          "sizeBytes": 194256
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "54e71613cb2b7845044a398151d8d3fb8245b3167e48e861aaa1b493554809bb"
+    },
+    {
+      "id": "v0_32_3-tests-cpi-returns-programs-caller",
+      "builds": {
+        "stock": {
+          "hash": "e71d6c2bb8ad7641b1dcfc7b9437b4eee63384c7900f5c7b227cd41a9f88906d",
+          "rentLamports": 937387000,
+          "sizeBytes": 184352
+        },
+        "tare": {
+          "hash": "51e59f7bc00ef1530bc1fc6607b5581cd86fd35deb2b9eb6100169756c7a584e",
+          "rentLamports": 757839480,
+          "sizeBytes": 149008
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "e6bd244511de1703aa6b479cfbd424701b7119bead976d25cfa307b8e475b6ca"
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-lamports",
+      "builds": {
+        "stock": {
+          "hash": "490348066bc02e3c5b3cde28fab6961f61b17568d300cc55eabd32c49aeeb293",
+          "rentLamports": 1049594040,
+          "sizeBytes": 206440
+        },
+        "tare": {
+          "hash": "b8c88e0480301ad72ce1ca07aee40a734a58544786c048e03828183d507dbd33",
+          "rentLamports": 882360440,
+          "sizeBytes": 173520
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "977750cbbf3e19ad10ffc131606ff7c0051f25d0b09011567dc43cb43136e361"
+    },
+    {
+      "id": "v0_32_3-tests-chat-programs-chat",
+      "builds": {
+        "stock": {
+          "hash": "4f202e2b3441f649d194d139f09ce8bce16c79893b8a5540a343659e320ff9fa",
+          "rentLamports": 1020495800,
+          "sizeBytes": 200712
+        },
+        "tare": {
+          "hash": "eabc9eda1df1512b9d6ce531d332fc82c55ba25f9b23e7cabc6086f7b51ee895",
+          "rentLamports": 799048440,
+          "sizeBytes": 157120
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "d45620629c70b6e6e73d9f89d5a2482de76b57e94c94384a7bd741e1f3627ac9"
+    },
+    {
+      "id": "v0_32_3-tests-declare-program-programs-external",
+      "builds": {
+        "stock": {
+          "hash": "537edac3172b09570836409310714151d1604435b149a9f4584ad36491d42838",
+          "rentLamports": 976767160,
+          "sizeBytes": 192104
+        },
+        "tare": {
+          "hash": "3c3ba82317443cb1e73c78eb0b23e6ae8fb7d6b1947e3efd420631f31f339923",
+          "rentLamports": 762635000,
+          "sizeBytes": 149952
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "7def23fe33b19c2891d47c4c78810102a8ce708840520c59fc7ffa7ff180a7c0"
+    },
+    {
+      "id": "v0_32_3-examples-tutorial-basic-5-programs-basic-5",
+      "builds": {
+        "stock": {
+          "hash": "707b99a158268c8dbcc42854b01ff8c89cfd4daa4b140cb5916cf70a7a5ed000",
+          "rentLamports": 960023480,
+          "sizeBytes": 188808
+        },
+        "tare": {
+          "hash": "edf4e97fc9a52b3607d1da30a3d8385547e041a80c122d9f7b948fdb95bb9df4",
+          "rentLamports": 722563960,
+          "sizeBytes": 142064
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "197425ee480edaf080aadf5bf0fb0a7f12aae2db1c7c9cc2b3300193c62229e7"
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-overflow-checks",
+      "builds": {
+        "stock": {
+          "hash": "51db4ed18b2f6479fca3c26d0bef4f951a7a7aac40f08e61243aaf319baf71c6",
+          "rentLamports": 963396600,
+          "sizeBytes": 189472
+        },
+        "tare": {
+          "hash": "298693c8a25d89fd3a0d2bfe09b747034d6d6106817421fa1f73ae71c23fbad8",
+          "rentLamports": 696757560,
+          "sizeBytes": 136984
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "f84d58f57a5b843f5fb271d07b3d4735b765c5e61fbfe0de626b8573e980958f"
+    },
+    {
+      "id": "v0_32_3-tests-custom-coder-programs-native-system",
+      "builds": {
+        "stock": {
+          "hash": "f4452c6a442091523b4ca101100d0ed2fca1bc6f95915338c985cdcf5811982a",
+          "rentLamports": 994079800,
+          "sizeBytes": 195512
+        },
+        "tare": {
+          "hash": "6c6a3bdd247f60c59b0a85b8f8466a5b11af2588f7a89e3dd74c838128240f56",
+          "rentLamports": 702284600,
+          "sizeBytes": 138072
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "63911662f1ebff4e23a46097bcae41794e65084bebdba90009ea7865ff0267b4"
+    },
+    {
+      "id": "v0_32_3-tests-optional-programs-optional",
+      "builds": {
+        "stock": {
+          "hash": "b27ab98c9a63f28b1efe39c4e8b84d570dfa2541954ac4f8cd1d08844d9c5c11",
+          "rentLamports": 1193825400,
+          "sizeBytes": 234832
+        },
+        "tare": {
+          "hash": "b6e0a214c3395aa384a155623c9aa19f8d5a4d7d35133d9e14413c47af28e3a8",
+          "rentLamports": 1178097720,
+          "sizeBytes": 231736
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "745e4f46200519c4957af0c386c58f3fa97d440a72e851964c1ff1b18e100fb5"
+    },
+    {
+      "id": "v0_32_3-tests-zero-copy-programs-zero-copy",
+      "builds": {
+        "stock": {
+          "hash": "44399d2f41291b3337e16d2f6f093ce788e603050af041a8bc83e6f660d3adac",
+          "rentLamports": 1052520120,
+          "sizeBytes": 207016
+        },
+        "tare": {
+          "hash": "231308a093ab5e10ee7f4766a5de2f3f043988108b2ba5f64bed36cd867f05c4",
+          "rentLamports": 841192120,
+          "sizeBytes": 165416
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "96fcfaafd8466c1c6a8fbe3fe02006e7ba2938cb132a0246827bfe0e51e081d8"
+    },
+    {
+      "id": "v0_32_3-tests-errors-programs-errors",
+      "builds": {
+        "stock": {
+          "hash": "8f2a206eb221e74ee0760dc66799dad780c421d070e2fff27e8a4bb713dbac8f",
+          "rentLamports": 1003792760,
+          "sizeBytes": 197424
+        },
+        "tare": {
+          "hash": "c49a0d1a05e0496d3514f3154e96066c6fd3d84f29cae880082f8d37ec5e8aba",
+          "rentLamports": 695497720,
+          "sizeBytes": 136736
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "2089db47189cabe472bc16df471183db53f6e2d17989df81a7e8b8da062d984a"
+    },
+    {
+      "id": "v0_32_3-tests-cashiers-check-programs-cashiers-check",
+      "builds": {
+        "stock": {
+          "hash": "2a9681e3ad8946f8e8c7d457507cfcbee2ef34ddcb33b1acce676ef51cfa1eee",
+          "rentLamports": 1104945720,
+          "sizeBytes": 217336
+        },
+        "tare": {
+          "hash": "d2148ba61d22a1136dfda9d81fe49294d0a434c69f8c8dbb2a80bd88197bd56d",
+          "rentLamports": 929299640,
+          "sizeBytes": 182760
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "4d7997e6c73ac744b851f28f06029d51b5a01f1bee7cc41254914984d5815274"
+    },
+    {
+      "id": "v0_32_3-tests-spl-token-proxy-programs-token-proxy",
+      "builds": {
+        "stock": {
+          "hash": "b9712cd8d3740d89ac35946099fffd8313e95924c6b2ea543bd3ee334eed471c",
+          "rentLamports": 1527114040,
+          "sizeBytes": 300440
+        },
+        "tare": {
+          "hash": "34434a3eced709892c58d17d98df2e0a7ea8cd0eae54d7c77f67c5c38b8015d1",
+          "rentLamports": 1185697400,
+          "sizeBytes": 233232
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "75e34f5cb70dc641ec40a0127694e293adaca31792e2d12251f32b06e5bd2c3f"
+    },
+    {
+      "id": "v0_32_3-tests-escrow-programs-escrow",
+      "builds": {
+        "stock": {
+          "hash": "125cc3fc6b4cec7400814d76a45e84021a3f989b667af504c57aadf2457b1bf3",
+          "rentLamports": 1244584760,
+          "sizeBytes": 244824
+        },
+        "tare": {
+          "hash": "8fea5c834d50f765b7ab624b7adb65cc7df2bb6063419c7a99feb9b2d76dbe22",
+          "rentLamports": 1058087800,
+          "sizeBytes": 208112
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "11dc74396942ab994315e35d2ee52119ad88fd3d75315925190688f00d4650d9"
+    },
+    {
+      "id": "v0_32_3-tests-spl-token-wrapper-programs-token-wrapper",
+      "builds": {
+        "stock": {
+          "hash": "36cc2995a857fd7d3a8eb4d692031e655966a663dee33eac936fa83c1e5d2869",
+          "rentLamports": 1484645240,
+          "sizeBytes": 292080
+        },
+        "tare": {
+          "hash": "a58a7b0032bd1e0a1d776b0cbe52a5ec76c20b0422df67baace5dd8ed08d4804",
+          "rentLamports": 1130223800,
+          "sizeBytes": 222312
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "c3373e2bee18cd4a8bcb9f854c75d2dbf79e620bbe4f9478c21447ea7dcbd7a0"
+    },
+    {
+      "id": "v0_32_3-tests-idl-programs-new-idl",
+      "builds": {
+        "stock": {
+          "hash": "3770745cb7b1ab5c5a5e84485aaf184318f8267b9e4e675987939bd1af8cae59",
+          "rentLamports": 1441241720,
+          "sizeBytes": 283536
+        },
+        "tare": {
+          "hash": "10e7326503ce7dad6d364a82a1e3ebb47e886c7fe07a446526880c855b61d677",
+          "rentLamports": 1319321720,
+          "sizeBytes": 259536
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "be4aae665fd379a82e5940c89ce1a2cba08aa9250c6c6a4d1e36908714c5f728"
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-misc-optional",
+      "builds": {
+        "stock": {
+          "hash": "3826d03aaff063f3e9f6b6b36ceca79527e36a8e73c4001924ffe5db9f2e306e",
+          "rentLamports": 3900449400,
+          "sizeBytes": 767632
+        },
+        "tare": {
+          "hash": "3bad0a3e48154334b20c76f28302579d133517217e89b1355b1a748df3983c83",
+          "rentLamports": 3910487480,
+          "sizeBytes": 769608
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "00646f03192a3f7c68e5351df193df91cf0d80e6c44e67688c60605dc276022c"
+    },
+    {
+      "id": "v0_32_3-tests-misc-programs-misc",
+      "builds": {
+        "stock": {
+          "hash": "02c5123d734a59e5b7396faf79881197948631b0706e567c9cf620a51d65eb46",
+          "rentLamports": 3640068920,
+          "sizeBytes": 716376
+        },
+        "tare": {
+          "hash": "4c493881ab979a118585f65f18dd503c0d59b44a5985cf84b434def0bc598cd6",
+          "rentLamports": 3835181560,
+          "sizeBytes": 754784
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "ca9157bdd749871d77203d238f5e4a919d3b1ac885589704b44f0514999d32a8"
+    },
+    {
+      "id": "v0_32_3-tests-bench-programs-bench",
+      "builds": {
+        "stock": {
+          "hash": "e541ebbfdefbb389e28ce003ef8f9657b3ca9a8edc078853e8b227804f873057",
+          "rentLamports": 5417581240,
+          "sizeBytes": 1066280
+        },
+        "tare": {
+          "hash": "715b1cbc1219f47c6c39f423a95f73905004ded36dd2666126865b0d8e4eb192",
+          "rentLamports": 6700220280,
+          "sizeBytes": 1318768
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "4a0b24a889e490b33595f912970e08cc37717f040ba296bbdd9ce2bb4236b6ca"
+    },
+    {
+      "id": "v1_2_2-tests-spl-metadata-programs-metadata",
+      "builds": {
+        "stock": {
+          "hash": "a3a59f856784a05e79e5a919269f5f34bc5b0df68190bc0fbbabab2aab4be81b",
+          "rentLamports": 279100280,
+          "sizeBytes": 54768
+        },
+        "tare": {
+          "hash": "e71834beacc534051fe701fec2d261a5b39b34dc7e2ef9fb16439586e79e02a6",
+          "rentLamports": 217571320,
+          "sizeBytes": 42656
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "7df2349439d9531842e30ba1991f56846139c21695e295464ef636d335d06e27"
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-spl-token",
+      "builds": {
+        "stock": {
+          "hash": "6ef450aa5d087c0a03f626435dceee0a9573f50021cb62bc7a37f71a9c46f3d0",
+          "rentLamports": 279181560,
+          "sizeBytes": 54784
+        },
+        "tare": {
+          "hash": "daf9299a1ef605233252f4b7b452facbba480ca83bc5fb87147adc7a9e3cfc28",
+          "rentLamports": 217652600,
+          "sizeBytes": 42672
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "878c12e90058babd9b7f4d733a0961d79dc2b45fa19873896b081ed43914cfcf"
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-0-programs-basic-0",
+      "builds": {
+        "stock": {
+          "hash": "9829ce85e0c494542dbb7816b0c1042787619f12c761d43e492a7794f6fafdd6",
+          "rentLamports": 280238200,
+          "sizeBytes": 54992
+        },
+        "tare": {
+          "hash": "5a23e7b51b3bc22613c65f60acde511b2fd76f6e4822969f4c15e96afd56c54f",
+          "rentLamports": 218018360,
+          "sizeBytes": 42744
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "c0ebe0041c801ac903c750667cc6e34f7eb762f4122792324945eb7b064ae09a"
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-env-id",
+      "builds": {
+        "stock": {
+          "hash": "3cc36b6b80d0b9b8a53dddef26a860351f9bf0b980861d33ebfcd417abaea641",
+          "rentLamports": 280238200,
+          "sizeBytes": 54992
+        },
+        "tare": {
+          "hash": "95e723865d90e770d058319bd91e237cfa06f29c782df8fee48b19d81d9ca74e",
+          "rentLamports": 218018360,
+          "sizeBytes": 42744
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "5ba7bbb9769f25255c0a5a4f6f0b38da3715ac3cb13e752466b54a5062538d7f"
+    },
+    {
+      "id": "v1_2_2-tests-validator-clone-programs-validator-clone",
+      "builds": {
+        "stock": {
+          "hash": "9829ce85e0c494542dbb7816b0c1042787619f12c761d43e492a7794f6fafdd6",
+          "rentLamports": 280238200,
+          "sizeBytes": 54992
+        },
+        "tare": {
+          "hash": "7ab2810cfbde7a0bfa98741d220c66e574af17e1bef53220d92a5f78a5ce38ee",
+          "rentLamports": 218018360,
+          "sizeBytes": 42744
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "09571ce9060f7bc16af16a806b19ab772f095d009c9f7ac3b0969661052fb92f"
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-one",
+      "builds": {
+        "stock": {
+          "hash": "730b8a5f3e227d8475ba12bc8a5b553bf66115c671a4b5fb14c12bf5ab883af2",
+          "rentLamports": 280238200,
+          "sizeBytes": 54992
+        },
+        "tare": {
+          "hash": "52dfac2a0f7c57adaf1a2891b1098e35f99a96e34c49f811be96d5211d553a3a",
+          "rentLamports": 218018360,
+          "sizeBytes": 42744
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "d54632bfbb5ac6b94208627a6bc138639b61433a6cf8336b27244f4b112278f4"
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-idl-programs-idl-commands-two",
+      "builds": {
+        "stock": {
+          "hash": "895dabf9af3d8062818c2283f59a6624b088bebc3edd390f71be61087aeb4b87",
+          "rentLamports": 280238200,
+          "sizeBytes": 54992
+        },
+        "tare": {
+          "hash": "69e9dc85394c664d5fcc0e1cfc92c5ad59510eefb8c6a05717162ce53537513d",
+          "rentLamports": 218059000,
+          "sizeBytes": 42752
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "180993765db2e6375a343d081de62e5c152dbdcf15c9fc166c95abbd446c44e4"
+    },
+    {
+      "id": "v1_2_2-tests-solana-program-deps-matching-programs-matching-solana-program",
+      "builds": {
+        "stock": {
+          "hash": "98dad42b6a9895756df6614f28d8d54b40c195a8e8cc20a8d4f97e7e29759810",
+          "rentLamports": 280238200,
+          "sizeBytes": 54992
+        },
+        "tare": {
+          "hash": "cffb70b1602032ee73ddc80c60cc2bc10277ee6d71f00cd822281ac2af56115c",
+          "rentLamports": 218018360,
+          "sizeBytes": 42744
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "497577b36aafc215878e115f7d984e9cc7f49f61a14aac6982cf49364826df69"
+    },
+    {
+      "id": "v1_2_2-tests-solana-program-deps-mismatched-programs-mismatched-solana-program",
+      "builds": {
+        "stock": {
+          "hash": "cc3846a1f1b3c2f7228cd7255d434318fa82554dff6146baf3d91c8dba550295",
+          "rentLamports": 280238200,
+          "sizeBytes": 54992
+        },
+        "tare": {
+          "hash": "38c1ed2cf00a0e91421faab64e80fed290d08ae36cf0ea2d2473c53433d6fa71",
+          "rentLamports": 218018360,
+          "sizeBytes": 42744
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "13f9150bb763296f08c02df38ff4ec67f40f174fb5de256e713a9b07fc91b367"
+    },
+    {
+      "id": "v1_2_2-tests-multiple-suites-run-single-programs-multiple-suites-run-single",
+      "builds": {
+        "stock": {
+          "hash": "2584a199ceaec42b3d82a86cc2e556a50f2c31f2676a09c679813e97624deb1e",
+          "rentLamports": 280238200,
+          "sizeBytes": 54992
+        },
+        "tare": {
+          "hash": "7ab2810cfbde7a0bfa98741d220c66e574af17e1bef53220d92a5f78a5ce38ee",
+          "rentLamports": 218018360,
+          "sizeBytes": 42744
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "5826baf789ea1be897861adf09229951bc3f55cdc22227d013b4661fd629d370"
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-spl-associated-token",
+      "builds": {
+        "stock": {
+          "hash": "5e11d11280d38489f267ef935de9071fc9620e6036b33cef68dbccfbebf887dd",
+          "rentLamports": 279181560,
+          "sizeBytes": 54784
+        },
+        "tare": {
+          "hash": "39773da096a902e473b5ecb8539df83cb23102c78c34c4d52719ed595e6fa69a",
+          "rentLamports": 217652600,
+          "sizeBytes": 42672
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "bb66ab619ed88178729c9891d299dc61369a3b51ed42c5d3447bd12ebf2d98df"
+    },
+    {
+      "id": "v1_2_2-tests-multiple-scripts-programs-example",
+      "builds": {
+        "stock": {
+          "hash": "2113d7f71fe2e94903feead790088938717d6aa441ecf946933c4f37849ba359",
+          "rentLamports": 280644600,
+          "sizeBytes": 55072
+        },
+        "tare": {
+          "hash": "8f15241be4e530099ec861698672db829c30302d5fe5f1e2b764b749bb81880a",
+          "rentLamports": 232201720,
+          "sizeBytes": 45536
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "7f717ba257da5995e1c855fa77811ae79ab8766d709b74e4518bff48f77a56d7"
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-account-info",
+      "builds": {
+        "stock": {
+          "hash": "f1f2fdd8d0a74eb57408acabf32a9a491d1f822ec34bb196dacdb75a888d7a9e",
+          "rentLamports": 286009080,
+          "sizeBytes": 56128
+        },
+        "tare": {
+          "hash": "490a6a0885ffdd813dc34aa62df9872f4e800212220e367acee9c9b4468d1e99",
+          "rentLamports": 299460920,
+          "sizeBytes": 58776
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "40644779fd1827642bd1caa3a67912838b10b78f674afad5d49b0c0550a13074"
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-unchecked-account",
+      "builds": {
+        "stock": {
+          "hash": "ce218e227470937960c70133d8dbf9720b51151d41236d4d71f63d0b42342b94",
+          "rentLamports": 283408120,
+          "sizeBytes": 55616
+        },
+        "tare": {
+          "hash": "490a6a0885ffdd813dc34aa62df9872f4e800212220e367acee9c9b4468d1e99",
+          "rentLamports": 299460920,
+          "sizeBytes": 58776
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "695ff54c575deae34a789e0247002ed80bf2f66a772b7b70e795ab6368404647"
+    },
+    {
+      "id": "v1_2_2-tests-declare-id-programs-declare-id",
+      "builds": {
+        "stock": {
+          "hash": "2584a199ceaec42b3d82a86cc2e556a50f2c31f2676a09c679813e97624deb1e",
+          "rentLamports": 280238200,
+          "sizeBytes": 54992
+        },
+        "tare": {
+          "hash": "5a23e7b51b3bc22613c65f60acde511b2fd76f6e4822969f4c15e96afd56c54f",
+          "rentLamports": 218018360,
+          "sizeBytes": 42744
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "f8f85fbb4de59efbceb8b4ce9a5da268a076ac6e021ee6aee79f86eacba45dc3"
+    },
+    {
+      "id": "v1_2_2-tests-system-accounts-programs-system-accounts",
+      "builds": {
+        "stock": {
+          "hash": "e475b0fdb164329f83a90c7529fb78f133349f355aa7a146aff6766abd1b7579",
+          "rentLamports": 288447480,
+          "sizeBytes": 56608
+        },
+        "tare": {
+          "hash": "f97be02ff6d365bbbfe9f976a194db01d853daf44ffc83b3550448667430c3cf",
+          "rentLamports": 304012600,
+          "sizeBytes": 59672
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "7d49d933e6513a722fad83550e1f119fbd93a35db94b078f794977feebac3b0b"
+    },
+    {
+      "id": "v1_2_2-tests-multiple-suites-programs-multiple-suites",
+      "builds": {
+        "stock": {
+          "hash": "7ce8b57357d1f704fed82b0985edf5f092c7b2df81ff9d05faa1492e6c152573",
+          "rentLamports": 369727480,
+          "sizeBytes": 72608
+        },
+        "tare": {
+          "hash": "768577a3369092446620266124d5b8c81f90dc06efaaf9487f3f87a28271d181",
+          "rentLamports": 297550840,
+          "sizeBytes": 58400
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "1c27be1e660659f6322f4888fef3972764c705f6bdf4dfc51d0708b02f621599"
+    },
+    {
+      "id": "v1_2_2-tests-sysvars-programs-sysvars",
+      "builds": {
+        "stock": {
+          "hash": "fcdc66e46d34c6c4cfd753ed7b590a54c5b016216c0f9a05261bbcbd818d016c",
+          "rentLamports": 310027320,
+          "sizeBytes": 60856
+        },
+        "tare": {
+          "hash": "b84e2e1d404a1dd835a595ba036ec24313389fdc41e433261c24d51e1a8b0681",
+          "rentLamports": 328721720,
+          "sizeBytes": 64536
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "327bb27326d0e5af44e282ab55f882420e4e2780f926ca38b8d86c90c248ca53"
+    },
+    {
+      "id": "v1_2_2-tests-typescript-programs-typescript",
+      "builds": {
+        "stock": {
+          "hash": "2584a199ceaec42b3d82a86cc2e556a50f2c31f2676a09c679813e97624deb1e",
+          "rentLamports": 280238200,
+          "sizeBytes": 54992
+        },
+        "tare": {
+          "hash": "7ab2810cfbde7a0bfa98741d220c66e574af17e1bef53220d92a5f78a5ce38ee",
+          "rentLamports": 218018360,
+          "sizeBytes": 42744
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "b9687faf00d41db0d7d8a1b4ec538c861744c52088b1769c92384f28140ecf6b"
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-legacy-idl-programs-anchor-cli-legacy-idl",
+      "builds": {
+        "stock": {
+          "hash": "21d4e631bded31c2f3092e2e4143021dd9f264d71e194c7bb6e74be550e4b7e6",
+          "rentLamports": 853059000,
+          "sizeBytes": 167752
+        },
+        "tare": {
+          "hash": "bf6d931d4db154e65a713f6491162632357e68511e14d801eaa5f6d08010e3d2",
+          "rentLamports": 535904440,
+          "sizeBytes": 105320
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "6290090365f6fc3eb7669bfbf062b3f1c85e0426b40417cc52dd63ecc6a66239"
+    },
+    {
+      "id": "v1_2_2-tests-interface-account-programs-old",
+      "builds": {
+        "stock": {
+          "hash": "e8a9b888a7020b3d4c632e8261d854bb99b22970a2d4813be9cdfb836c8ec7f8",
+          "rentLamports": 596295480,
+          "sizeBytes": 117208
+        },
+        "tare": {
+          "hash": "51765662112ce7aa87efa8c0a769f66154c84d5728168111fcb33192b47dfd5d",
+          "rentLamports": 398988280,
+          "sizeBytes": 78368
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "88b0795465cdea7165c06798d4968c59091532683c850124c63d321a6a27ba06"
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-external",
+      "builds": {
+        "stock": {
+          "hash": "80c6dc51eb7cef58b730d9bf888c835ec192b3230f19cf096a1a838ac91d011f",
+          "rentLamports": 310921400,
+          "sizeBytes": 61032
+        },
+        "tare": {
+          "hash": "e7daa58669d6e2a7c64b6c4fea01fb90762895a95af6c7125b16d6bb9e64c42d",
+          "rentLamports": 311531000,
+          "sizeBytes": 61152
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "cc0cedfb661b6ccbc13bccb67b995b0faa9d4feb37df304c5460a7e4e4afbb8d"
+    },
+    {
+      "id": "v1_2_2-tests-account-generation-test-programs-account-generation-test",
+      "builds": {
+        "stock": {
+          "hash": "f37a1ea4febe9870a114b598973e3e7ad13e5932548638fd2a8616d9a50cc878",
+          "rentLamports": 593084920,
+          "sizeBytes": 116576
+        },
+        "tare": {
+          "hash": "cb3ebe449bf74d137e12a27c145b6a1d1d109e61577451911f6b12785c72c08c",
+          "rentLamports": 391104120,
+          "sizeBytes": 76816
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "d9e0accef2b50669875459fbb3429c9f725d0437e1bdedf0f5ba4b3c2cc39273"
+    },
+    {
+      "id": "v1_2_2-tests-safety-checks-programs-ignore-non-accounts",
+      "builds": {
+        "stock": {
+          "hash": "57586b0da291c7a3f46a65d8243abfcb0783206f8ff61f4c6d79b5f107cc4863",
+          "rentLamports": 288000440,
+          "sizeBytes": 56520
+        },
+        "tare": {
+          "hash": "4e3782c69ce0df83495ef06648e017e9159cd00fa295fd49fb46c5146f14d5da",
+          "rentLamports": 300436280,
+          "sizeBytes": 58968
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "f2c95a2a1671e2765cd212cd86d0a0181cccd5505ac191ddca1738453e406284"
+    },
+    {
+      "id": "v1_2_2-tests-test-instruction-validation-pass-args-count-programs-test-instruction-validation",
+      "builds": {
+        "stock": {
+          "hash": "106bfc18ab4157b1827a63f27f2825d40876c1be6616d583f38805ed0e8cc2ad",
+          "rentLamports": 381960120,
+          "sizeBytes": 75016
+        },
+        "tare": {
+          "hash": "9613f93f0261fe0618c43f94ede0ae32f46b1a9d8a884c1dd17db409ff993b80",
+          "rentLamports": 328599800,
+          "sizeBytes": 64512
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "d346baff98eb6de20e404b17b2c7865975c831d5d690b17e2a7752590bb3f4c4"
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-3-programs-puppet",
+      "builds": {
+        "stock": {
+          "hash": "01ca08f5e12ecd23d74d5d4dcbd943e8efe67b894964e878e156693864e856f7",
+          "rentLamports": 658271480,
+          "sizeBytes": 129408
+        },
+        "tare": {
+          "hash": "15f330da797eb870e7901f8f54f9ed91a2705d0ddb9b647f4e58e812cbd532dc",
+          "rentLamports": 421543480,
+          "sizeBytes": 82808
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "343813b1bc0ba6077348f0ce0372a55af2d3a03d405e75fde7a63b3079d78ec8"
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-3-programs-puppet-master",
+      "builds": {
+        "stock": {
+          "hash": "065178868fd402aae727c1e8436ed786c321956d952a5c57f7a7eec2b85e08c3",
+          "rentLamports": 508675640,
+          "sizeBytes": 99960
+        },
+        "tare": {
+          "hash": "cfd556a164c5264fa28d5e937fbed613d5849abbf057f20612473ed287f4bda4",
+          "rentLamports": 368955320,
+          "sizeBytes": 72456
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "bb8294b5d1ffe5791879e112ca3b7d9226b1d2b4288491d50e69fec01fa4abc1"
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-docs",
+      "builds": {
+        "stock": {
+          "hash": "028e23dc79124d919513bd7019a8133070bf404f2fb4e400b3cbde739dabc154",
+          "rentLamports": 401386040,
+          "sizeBytes": 78840
+        },
+        "tare": {
+          "hash": "37473c276c40afd558d0894ee93b1a1c37554612fa29e76529795737f318a0dc",
+          "rentLamports": 312099960,
+          "sizeBytes": 61264
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "065a2bb39ed6bae08fb8e0eaec6d022238e99f66ea01893e1f28822c405c5a7f"
+    },
+    {
+      "id": "v1_2_2-tests-optional-programs-allow-missing-optionals",
+      "builds": {
+        "stock": {
+          "hash": "97fa9db7ac803f46bb1fef17adab6281e36864fbc16818811f8167ba9966de16",
+          "rentLamports": 599424760,
+          "sizeBytes": 117824
+        },
+        "tare": {
+          "hash": "4fbd7d2cb08f0569b3da5b404f94fbde400fc9ac90a41a58ac631c9e66105973",
+          "rentLamports": 420121080,
+          "sizeBytes": 82528
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "aa7ae99449697234d5dd284f60176c816ef4978cc1440db5e10527d11df9691e"
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-malicious",
+      "builds": {
+        "stock": {
+          "hash": "8153ce0e340b1306920e341687eb5867ca9316329c2c613a496ea825ccfeef33",
+          "rentLamports": 285440120,
+          "sizeBytes": 56016
+        },
+        "tare": {
+          "hash": "018b54387ea6cb5e6c4d9bd220d57e6bf25b72a4e80de69f048fcff5854f941e",
+          "rentLamports": 301655480,
+          "sizeBytes": 59208
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "d5293e815cffa93a7dd5afb8af8c6aef05c43103397df013d028c1807f9aa424"
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-1-programs-basic-1",
+      "builds": {
+        "stock": {
+          "hash": "f7a83a807133a090736eb709d610ef43b0d4a059f1916b0055512631dcdf6905",
+          "rentLamports": 659937720,
+          "sizeBytes": 129736
+        },
+        "tare": {
+          "hash": "3c76bbc4cfcf08976d99d1f666fea83200fd93e81940a3066ded6d73b102dd8d",
+          "rentLamports": 422640760,
+          "sizeBytes": 83024
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "eb946e276b5d2767858a8ff0b0f0168fbe898d5ecc815420697b460fdc11b4a3"
+    },
+    {
+      "id": "v1_2_2-tests-interface-account-programs-new",
+      "builds": {
+        "stock": {
+          "hash": "2309a9055cc56498c1a6fce1b8ba515975bb53f7aa908285be4f6345d39f3165",
+          "rentLamports": 652500600,
+          "sizeBytes": 128272
+        },
+        "tare": {
+          "hash": "621967c2fffd4ef9afe37cd1e6ec0197ac65b72e127231c4debd141d5f46352c",
+          "rentLamports": 469620600,
+          "sizeBytes": 92272
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "d7abc8af29fea9bea760ac728929cf6c17569a975f06b787d54d0d99582edced"
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-2-programs-basic-2",
+      "builds": {
+        "stock": {
+          "hash": "65dfa247c4187e0d1437045009a610876c106d57132dec03f162111dfbcfbf9b",
+          "rentLamports": 673308280,
+          "sizeBytes": 132368
+        },
+        "tare": {
+          "hash": "138de719bdbde8f75213e9250097d999d43d62c5b67c2ef3d1f4dc17d4290f0e",
+          "rentLamports": 445968120,
+          "sizeBytes": 87616
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "3fbe9fc1f1302c711c30ba881b5375c52522e26109d670488d2bcad2798aa0de"
+    },
+    {
+      "id": "v1_2_2-tests-events-programs-events",
+      "builds": {
+        "stock": {
+          "hash": "ec1cb5759b1a77143276333c818c84c06cd6b196cf3c3b7be49bbaf54bf53908",
+          "rentLamports": 464947000,
+          "sizeBytes": 91352
+        },
+        "tare": {
+          "hash": "1a4d96ec08cfe43454683485fb41cb433e83d18bb1bca1236d48c038906c089d",
+          "rentLamports": 391388600,
+          "sizeBytes": 76872
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "41d6305afd793b5ea1702bbdc514cec1fcac596d6261e2fbff8dcc7c9162f507"
+    },
+    {
+      "id": "v1_2_2-tests-anchor-cli-account-programs-account-command",
+      "builds": {
+        "stock": {
+          "hash": "471de7c95b63b3531278fa395f1875b26ca414e5d91f00599e2082f2e75a1691",
+          "rentLamports": 660303480,
+          "sizeBytes": 129808
+        },
+        "tare": {
+          "hash": "19f7c1cee98bdc5175b7d668bf4ac2deacd439d417a8fd347a289b5a30f031f2",
+          "rentLamports": 474091000,
+          "sizeBytes": 93152
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "7fc0817e09e633b638dcc1149ef3403ed10f8d826299616658f0dabc37253315"
+    },
+    {
+      "id": "v1_2_2-tests-floats-programs-floats",
+      "builds": {
+        "stock": {
+          "hash": "96f0b7dd5b23746e3d7d28f07a05f2dc7364c3019857eed71fd9634970e72e6b",
+          "rentLamports": 680948600,
+          "sizeBytes": 133872
+        },
+        "tare": {
+          "hash": "03f83b028854d49ea6caa955b8c4db485b77640faea79e71e3a0d7b1c6d1b6da",
+          "rentLamports": 449666360,
+          "sizeBytes": 88344
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "dceeee267e15f7698d8445ee09514092601f5ab20ee8db150c4beee803baeb84"
+    },
+    {
+      "id": "v1_2_2-tests-composite-programs-composite",
+      "builds": {
+        "stock": {
+          "hash": "368ae1ca565f3c27ddb64d5d593b3b16477d4d8dbaaa3bbe70c87d522418ec37",
+          "rentLamports": 624499640,
+          "sizeBytes": 122760
+        },
+        "tare": {
+          "hash": "f6c21e782a99db61ede239cfcd2b6ba0f837bbd961a4a9dfed3e9501f862997e",
+          "rentLamports": 481324920,
+          "sizeBytes": 94576
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "8a5c5f1a0d8de8aeddb5a08edaebe97c49a982190801041138e4b3f06e4da2d1"
+    },
+    {
+      "id": "v1_2_2-tests-test-instruction-validation-pass-type-programs-test-instruction-validation",
+      "builds": {
+        "stock": {
+          "hash": "f2ee6489461d32cfbaec3a9f7ca6ddf20f62d7fdc4d2fda6cfba6748825a06ad",
+          "rentLamports": 388340600,
+          "sizeBytes": 76272
+        },
+        "tare": {
+          "hash": "57e3e0f93e6ae86e0817c7a518498aa5b58cf373f600a0cc084137077c3f7a59",
+          "rentLamports": 334614520,
+          "sizeBytes": 65696
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "a44930d42e45f1464323d112f0938bbdaeb5e894f68b089d47ac74aa987eae27"
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-relations-derivation",
+      "builds": {
+        "stock": {
+          "hash": "2e2254a751b3f5ddb558a8b7fee44c6c94dd70cd9cd9f9c2776f52cba4cb5edd",
+          "rentLamports": 650753080,
+          "sizeBytes": 127928
+        },
+        "tare": {
+          "hash": "0837f2b604025b0dd38ad28f4e39082343b547d828c743eb965a3bd9c645558f",
+          "rentLamports": 476244920,
+          "sizeBytes": 93576
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "663b7db48653dcec2634f7e63887dc58442099f9c84ff6e6ffd78dfc53e45cf9"
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-init-if-needed",
+      "builds": {
+        "stock": {
+          "hash": "331017824a2857856f5e893cdb820b105761e19865b77fa2971c545cc7d82bec",
+          "rentLamports": 741339640,
+          "sizeBytes": 145760
+        },
+        "tare": {
+          "hash": "37418b96f42c2ae4bd7fa43e99bff3d768e6ca5fb08e206d61e06446581923aa",
+          "rentLamports": 523712440,
+          "sizeBytes": 102920
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "2744323c5915906fa1d1b79187fe57a5e64f7a937a813c13ef0ddac579647947"
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-4-programs-basic-4",
+      "builds": {
+        "stock": {
+          "hash": "660c203ed48fcf45f75d037af0decf9d81d812a417b6f3efff35eaf9a92582eb",
+          "rentLamports": 690336440,
+          "sizeBytes": 135720
+        },
+        "tare": {
+          "hash": "b75985e03bfb78faa221509d593f3ac3f6a6817fc6489334437ef60d82535185",
+          "rentLamports": 469254840,
+          "sizeBytes": 92200
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "68d6bc35955743d17e36685aa0b5f1235f037708b2dd79faf0546b9404a0c4e9"
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-callee",
+      "builds": {
+        "stock": {
+          "hash": "d183205688cd5c0d15d995863be526a402e256d0c952932f2ec25cf961f6ae4f",
+          "rentLamports": 623605560,
+          "sizeBytes": 122584
+        },
+        "tare": {
+          "hash": "346e3751ea53f60474de1b8bda2f16b0bc949f92ae1ab34267ac26ad33f8dd9d",
+          "rentLamports": 443204600,
+          "sizeBytes": 87072
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "37ec4ca3a7eb4acbdf3d2ebecd5ad12b2259b3de096a6a458039e42302b7e30e"
+    },
+    {
+      "id": "v1_2_2-tests-custom-program-programs-custom-program",
+      "builds": {
+        "stock": {
+          "hash": "4e12a39d8358248f6c4d7fe47f1b8784b4e8b307e056c3dded12ce0f7af0b2e3",
+          "rentLamports": 369036600,
+          "sizeBytes": 72472
+        },
+        "tare": {
+          "hash": "b3c13b310b873418d699f21b3ae2c0029c4a2c41bc12d60df8ef2addd1caae7c",
+          "rentLamports": 412358840,
+          "sizeBytes": 81000
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "bbe521c12531e258855406865793d16b321e267855cd0c25609208a8f9d1cd8f"
+    },
+    {
+      "id": "v1_2_2-tests-custom-discriminator-programs-custom-discriminator",
+      "builds": {
+        "stock": {
+          "hash": "40fdf62cbf9b63d82b40aa99983b8e2dc5cbdd64805baa08edc226e86c4e5249",
+          "rentLamports": 617956600,
+          "sizeBytes": 121472
+        },
+        "tare": {
+          "hash": "f9806c053284871a4c2fb01bc9fe021349825f38c9f34f350437fe2f1fb442e2",
+          "rentLamports": 447146680,
+          "sizeBytes": 87848
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "effc1c499e5cdee618abb6fe768444278b00af140da7511148bf2a40c4e8dc6c"
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-remaining-accounts",
+      "builds": {
+        "stock": {
+          "hash": "012a1fdec37166e341f632f66dc84a9c686617482546b4920e258a8ca04666ac",
+          "rentLamports": 688141880,
+          "sizeBytes": 135288
+        },
+        "tare": {
+          "hash": "2d1b7e921c83a936586cf7c3565dc3debb0887f005da825031f63fdca6ed460a",
+          "rentLamports": 533303480,
+          "sizeBytes": 104808
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "2f88e770071f79c53268b214a11993b423d0c8d2157ca82395b8255a4160120d"
+    },
+    {
+      "id": "v1_2_2-tests-idl-programs-generics",
+      "builds": {
+        "stock": {
+          "hash": "d04a09688bebbc07bfa7e3416d3f1dede20965d584e5bbc8859959b67753a65f",
+          "rentLamports": 453039480,
+          "sizeBytes": 89008
+        },
+        "tare": {
+          "hash": "24280069b51a86d0a953950409fea47157732acda5e10d682a405c382890f22b",
+          "rentLamports": 363021880,
+          "sizeBytes": 71288
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "e4d3b224bde65f6017aab6d1ece7b768d269196208ad5177159af129fdeeda53"
+    },
+    {
+      "id": "v1_2_2-tests-relations-derivation-programs-relations-derivation",
+      "builds": {
+        "stock": {
+          "hash": "60c10dd822718922187dc528a1839b50f6a3774e55acbdfe1c11f6961a0f20ae",
+          "rentLamports": 679770040,
+          "sizeBytes": 133640
+        },
+        "tare": {
+          "hash": "311ce52d95988c3856024ea77fe61101ba3ded824924995180df176ebe05c79f",
+          "rentLamports": 547852600,
+          "sizeBytes": 107672
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "cbed5581c03f408c0b52d7383fa71604368651d7e9ca1b3cec72da89d8a9c693"
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-lamports",
+      "builds": {
+        "stock": {
+          "hash": "b5f577e545620d3c2561c205aa9ef9f2498dfcb223d4bcdfe6f75482ec52ee7e",
+          "rentLamports": 759708920,
+          "sizeBytes": 149376
+        },
+        "tare": {
+          "hash": "75a44b7975abf5c6fe1c4e1b0a8babe34744e797d312ebccc489bf06d205a671",
+          "rentLamports": 671723320,
+          "sizeBytes": 132056
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "38b14c84ec42ec1324e3a7be3aed9a0a0c26d863eb92b3c05dd8a64f52ded6c1"
+    },
+    {
+      "id": "v1_2_2-tests-chat-programs-chat",
+      "builds": {
+        "stock": {
+          "hash": "a30bb4842e290bf6d143198a997aeab9762aa7822d477604d1121f8d5a5b7737",
+          "rentLamports": 731748600,
+          "sizeBytes": 143872
+        },
+        "tare": {
+          "hash": "4005a6315abf2c19ef242cc579049cc448336e22271cbba3ae467db9f2c66cae",
+          "rentLamports": 552688760,
+          "sizeBytes": 108624
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "e9f4c24701a1b90f60f47ff8e9db0bf577f3761a321edcbd01b18852571813c0"
+    },
+    {
+      "id": "v1_2_2-examples-tutorial-basic-5-programs-basic-5",
+      "builds": {
+        "stock": {
+          "hash": "2f97fe24a9e3f966c294b9dd6e910b00e3216194fbd22db63233794da02b2b60",
+          "rentLamports": 703950840,
+          "sizeBytes": 138400
+        },
+        "tare": {
+          "hash": "3fb35c92d1a7694f2a6da14ec11d5a6211a863a990937f43b2d4a2513f9ee285",
+          "rentLamports": 481528120,
+          "sizeBytes": 94616
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "92ded7b6fca08ec0f7ebd1a5ffcf5c70f38141587b43eecd33019cd222b49443"
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-overflow-checks",
+      "builds": {
+        "stock": {
+          "hash": "dc79476931a5f3db0850e6ea16b0ec3b4c88110c701fd860eb84d91e44275960",
+          "rentLamports": 711469240,
+          "sizeBytes": 139880
+        },
+        "tare": {
+          "hash": "2c1a51ed258881d25a4c0a0aeef7db4797a1ae67ca60348af3a35c2996902608",
+          "rentLamports": 474456760,
+          "sizeBytes": 93224
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "8a7e7a8600274bb57d2fa9d957e015a487adb9292eff31aab39a58ca03b13fce"
+    },
+    {
+      "id": "v1_2_2-tests-accountloader-realloc-programs-accountloader-realloc",
+      "builds": {
+        "stock": {
+          "hash": "77538a8f2c10553cafedd87151dffbda6af732dc53739a54a5020480826f85e4",
+          "rentLamports": 822660280,
+          "sizeBytes": 161768
+        },
+        "tare": {
+          "hash": "7e7deb7440c014d66b05b2a706389bd3f0d5799e4b1a8a95b730d59f09c0325f",
+          "rentLamports": 740242360,
+          "sizeBytes": 145544
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "706607ceaada93d07a2ebdebda08566c6eb3b4e00c68d9174a03c473351dc8a1"
+    },
+    {
+      "id": "v1_2_2-tests-custom-coder-programs-native-system",
+      "builds": {
+        "stock": {
+          "hash": "a45cd2ba270a62d34ca9dfefacacf210502b3645744280552901676f0c09587a",
+          "rentLamports": 579267320,
+          "sizeBytes": 113856
+        },
+        "tare": {
+          "hash": "db834043e6d0fbd1aa12c7613f2dc3daf11d3903921052db2c09baf5a0025566",
+          "rentLamports": 461451960,
+          "sizeBytes": 90664
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "dc9cbf6fbd98b8ab889ab88dee769cbd86a48f52b719f12d8a3e205f3716d6e7"
+    },
+    {
+      "id": "v1_2_2-tests-realloc-programs-realloc",
+      "builds": {
+        "stock": {
+          "hash": "1bc618c29f034969899bd63f161e6b2ca28c2403437b97b2eb4b99ed0d6afea3",
+          "rentLamports": 959698360,
+          "sizeBytes": 188744
+        },
+        "tare": {
+          "hash": "450d53dea08f498f32ef5597aaf9967a1823bac90c1951b099747c6e7d9db8cb",
+          "rentLamports": 983310200,
+          "sizeBytes": 193392
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "f3f6440af5f8771fd21ca9ad96379bca6f13c9b555a2f2d4d7e48e1fb90af4b7"
+    },
+    {
+      "id": "v1_2_2-tests-optional-programs-optional",
+      "builds": {
+        "stock": {
+          "hash": "e541d69cb9be2096d013e47a90c15d2d9b32322be070881d270b6b5936eb9bf7",
+          "rentLamports": 946002680,
+          "sizeBytes": 186048
+        },
+        "tare": {
+          "hash": "5265d7036f44afa5d8c4a2b0a789542e761e09a10f474d0a5b9a7a20860e9399",
+          "rentLamports": 953846200,
+          "sizeBytes": 187592
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "f092f743338ad85e2617326a2e3b47c8a1555cd0eaa8a7fca4338a837ba87761"
+    },
+    {
+      "id": "v1_2_2-tests-errors-programs-errors",
+      "builds": {
+        "stock": {
+          "hash": "316268fbec599b1e15870679ce168a603a90481f3fa494515b47611f7a0af008",
+          "rentLamports": 645957560,
+          "sizeBytes": 126984
+        },
+        "tare": {
+          "hash": "68c31b15beab9ed408162a9c6a0adcf1c6f1b7b2df24a48182e25cd6f10bc692",
+          "rentLamports": 470595960,
+          "sizeBytes": 92464
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "3e3917387f85fea2f7fe027a378c8fd5e19b2c8a1bcd3ee1946486c7ff8df281"
+    },
+    {
+      "id": "v1_2_2-tests-duplicate-mutable-accounts-programs-duplicate-mutable-accounts",
+      "builds": {
+        "stock": {
+          "hash": "e0c4f3f697ea16eccf72ca21107479ba75bc8d7ac8454a2b872fd0431c1ecaf1",
+          "rentLamports": 926901880,
+          "sizeBytes": 182288
+        },
+        "tare": {
+          "hash": "7aec418861f70d4cf98e4d04276160f2e191c87cae14591e729105b26cbce831",
+          "rentLamports": 965266040,
+          "sizeBytes": 189840
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "c906e62073dfd31704ff516025c42fc7223e6bf304dd3d2e25a8da6d6736b23b"
+    },
+    {
+      "id": "v1_2_2-tests-declare-program-programs-declare-program",
+      "builds": {
+        "stock": {
+          "hash": "61dc6af0136f3e7d50d328eddc59416ca8ba62486f072431d78be6fe2cd4f8ee",
+          "rentLamports": 682492920,
+          "sizeBytes": 134176
+        },
+        "tare": {
+          "hash": "aa69f5e08b0d13c94874a8a5ead0ef6b910bc27fd520254db1ec172506539ffa",
+          "rentLamports": 607430840,
+          "sizeBytes": 119400
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "5f3fe4a63c4824afd54243b87a53e2b3ff1f6855cb628ca8a529fb7b24eb0fc2"
+    },
+    {
+      "id": "v1_2_2-tests-tictactoe-programs-tictactoe",
+      "builds": {
+        "stock": {
+          "hash": "64dc6c728f0b5cfd5bf935e3ef8529a9101b5a573ff2924c711d7806fb17269f",
+          "rentLamports": 629864120,
+          "sizeBytes": 123816
+        },
+        "tare": {
+          "hash": "fffca2e09865a427d2c285b92b6caa83a9dc00b56b26c06ef4e694877c29cea6",
+          "rentLamports": 543666680,
+          "sizeBytes": 106848
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "369f61ceb755510f07db8b27c0e781d291701b03afc1667ba132862f60917fa6"
+    },
+    {
+      "id": "v1_2_2-tests-cashiers-check-programs-cashiers-check",
+      "builds": {
+        "stock": {
+          "hash": "92fd5af7edce355406a3e8f03f5216760932482afabbc9e6d0e2d8fad92253dc",
+          "rentLamports": 773973560,
+          "sizeBytes": 152184
+        },
+        "tare": {
+          "hash": "e98ef4813b3e771226c43fde52be012ccd2fda84397c8fa30479f96cdd8420ee",
+          "rentLamports": 716305400,
+          "sizeBytes": 140832
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "0dde022e3f48f5adf2aa4bd5981b13e3792bff315b9eee6cbda393ea35a7c287"
+    },
+    {
+      "id": "v1_2_2-tests-declare-program-programs-external",
+      "builds": {
+        "stock": {
+          "hash": "3d8f76d9e31a80e7b2fca9eae316923eba2c3e695e97dc89d27f5b045a72d2eb",
+          "rentLamports": 877483640,
+          "sizeBytes": 172560
+        },
+        "tare": {
+          "hash": "2663ef6bf2ede495a60528668cfe2ae8783b8f26c8fad81bbf6c25201a32d21a",
+          "rentLamports": 754954040,
+          "sizeBytes": 148440
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "9fd7e8a84b0a1e6326f93034702ee6882630d085317e8b6f09cdb25a166c49ef"
+    },
+    {
+      "id": "v1_2_2-tests-cpi-returns-programs-caller",
+      "builds": {
+        "stock": {
+          "hash": "c4ef669c66151d4784a399ab0181818c892dea0dfdc1c15ad4343b20d4d83e7a",
+          "rentLamports": 701227960,
+          "sizeBytes": 137864
+        },
+        "tare": {
+          "hash": "247539c6dd74b0c394c8ed823521f8e1b3271dde7801a3ce949d18bfd7b9f37b",
+          "rentLamports": 716305400,
+          "sizeBytes": 140832
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "250bd430b2649e4a4c8dab71a110b5d53dc6fc50994803f969273e28767dfa74"
+    },
+    {
+      "id": "v1_2_2-tests-spl-token-proxy-programs-token-proxy",
+      "builds": {
+        "stock": {
+          "hash": "4ce7990b43be7eca086c8f2147c16bf28d00b2caab7b62a0a7c480c215e04fe3",
+          "rentLamports": 1243040440,
+          "sizeBytes": 244520
+        },
+        "tare": {
+          "hash": "76f7dc0ef58756a3094474389f08b7291a77b3b43576917a4a27c7827a198300",
+          "rentLamports": 968395320,
+          "sizeBytes": 190456
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "943b6e491633a55a915fc9c3ebe59b18097a35801fc85a7d61efe2343d7a837c"
+    },
+    {
+      "id": "v1_2_2-tests-escrow-programs-escrow",
+      "builds": {
+        "stock": {
+          "hash": "ed2bf6ad2628c0edbac5866ed8d4fdbce428da681e3870d202be4e1f5fa08592",
+          "rentLamports": 994811320,
+          "sizeBytes": 195656
+        },
+        "tare": {
+          "hash": "a999f911b5c1c19198a34db2e1f2b236ff28dc1dfee62f90f34745a60aa1376f",
+          "rentLamports": 854562680,
+          "sizeBytes": 168048
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "b7b78bb5befff48053307338d56646f2bd13089d8e5a48d7dcb84c961c72856a"
+    },
+    {
+      "id": "v1_2_2-tests-spl-token-wrapper-programs-token-wrapper",
+      "builds": {
+        "stock": {
+          "hash": "3bbd07b17d0b2770bc123d4f9cbd3dd1e2272cf0796759621df79d342c089331",
+          "rentLamports": 1200937400,
+          "sizeBytes": 236232
+        },
+        "tare": {
+          "hash": "65175bd9195a484349325727abc427f44de471933a18e31e34f426e6f2cee9d8",
+          "rentLamports": 940638200,
+          "sizeBytes": 184992
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "8fb39192bcbd22bad3c2d8e53adfc217405abc1d0e3721a2c211ee4673759d6a"
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-misc-optional",
+      "builds": {
+        "stock": {
+          "hash": "75985725dc6575e3d6765ee4f39da99bd2424e6c75b82dc5cdb9d802efcebf57",
+          "rentLamports": 3533429560,
+          "sizeBytes": 695384
+        },
+        "tare": {
+          "hash": "12733f779e50c6f462f59dcc9160100d9fbfc6748305e5b7e7a8caeaa770c0af",
+          "rentLamports": 3620521080,
+          "sizeBytes": 712528
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "d78f6dc6a796e9e876714a91c2fe4a35c320598075018c095947a087e4d1f251"
+    },
+    {
+      "id": "v1_2_2-tests-misc-programs-misc",
+      "builds": {
+        "stock": {
+          "hash": "ad2c8f80284567c2b0f73bcdf81fca432ef34789adc771f60342681a28d328dc",
+          "rentLamports": 3233303160,
+          "sizeBytes": 636304
+        },
+        "tare": {
+          "hash": "458ace0b7433bbdb7930dce8e8496643bcbe2f9a3c9edae8c94cf1e434873fca",
+          "rentLamports": 3620480440,
+          "sizeBytes": 712520
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "f0295e59fd0d728887c6c781983fdaf05a8dd03e94b19658f54d635adc1d607c"
+    },
+    {
+      "id": "v1_2_2-tests-bench-programs-bench",
+      "builds": {
+        "stock": {
+          "hash": "5b09576ece95e49ed3421376fa12cadbc6498c18c04220b0d21ad9d1f518a057",
+          "rentLamports": 4235444920,
+          "sizeBytes": 833576
+        },
+        "tare": {
+          "hash": "68ce3e205e4648c03cd6d4b2e20e50223948db772132dca13cb33d48b8241828",
+          "rentLamports": 6421795640,
+          "sizeBytes": 1263960
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "44551767beb392e73c40758db674a7dbacea2aa92831c0192a019b9349adda03"
+    },
+    {
+      "id": "tare-registry",
+      "builds": {
+        "stock": {
+          "hash": "c3ce786858994eb09cfcfb88441f0e0deb810a430e7ebe0853a77764642e9883",
+          "rentLamports": 1433398200,
+          "sizeBytes": 281992
+        },
+        "tare": {
+          "hash": "061686382bfbfe3c932bbac5e6855714dae3002e0b87ea26819a4c657669a1df",
+          "rentLamports": 1327124600,
+          "sizeBytes": 261072
+        }
+      },
+      "proofStatus": "matched",
+      "corpusHash": "755f9e4093ffb773d4e1ceb8637c961da00cd7dbdf0307accd45bd45128c7483"
+    }
+  ]
+}

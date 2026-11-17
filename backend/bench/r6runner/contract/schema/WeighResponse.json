@@ -1,0 +1,1150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "const": "ready"
+        },
+        "sample": {
+          "type": "object",
+          "properties": {
+            "program": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "address": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 32,
+                      "maxLength": 44,
+                      "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "address"
+              ],
+              "additionalProperties": false
+            },
+            "anchor": {
+              "type": "boolean"
+            },
+            "hasIdl": {
+              "type": "boolean"
+            },
+            "binarySize": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "rentLamports": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "sampledAt": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+            },
+            "transactions": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "signaturesExamined": {
+              "description": "Signature rows examined during this sampling run. Omitted in older samples where the count is unknown.",
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "instructions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "discriminator": {
+                    "type": "string",
+                    "pattern": "^(?:[a-f0-9]{2}){1,32}$"
+                  },
+                  "calls": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "median": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "p90": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "totalUnits": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "share": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                },
+                "required": [
+                  "name",
+                  "discriminator",
+                  "calls",
+                  "median",
+                  "p90",
+                  "totalUnits",
+                  "share"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "program",
+            "anchor",
+            "hasIdl",
+            "binarySize",
+            "rentLamports",
+            "sampledAt",
+            "transactions",
+            "instructions"
+          ],
+          "additionalProperties": false
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "string",
+                "minLength": 32,
+                "maxLength": 44,
+                "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+              },
+              "program": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "address": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 32,
+                        "maxLength": 44,
+                        "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "address"
+                ],
+                "additionalProperties": false
+              },
+              "attester": {
+                "type": "string",
+                "minLength": 32,
+                "maxLength": 44,
+                "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "repository": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "commit": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{40,64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "repository",
+                  "commit"
+                ],
+                "additionalProperties": false
+              },
+              "toolchainVersion": {
+                "type": "string",
+                "minLength": 1
+              },
+              "stockBuildHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "tareBuildHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "corpus": {
+                "type": "object",
+                "properties": {
+                  "hash": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "counts": {
+                    "type": "object",
+                    "properties": {
+                      "tests": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "generated": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "mainnet": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      }
+                    },
+                    "required": [
+                      "tests",
+                      "generated",
+                      "mainnet"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "hash",
+                  "counts"
+                ],
+                "additionalProperties": false
+              },
+              "gross": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "net": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "tare": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "reportHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "reportLocation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "slot": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+              },
+              "flags": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "address",
+              "program",
+              "attester",
+              "source",
+              "toolchainVersion",
+              "stockBuildHash",
+              "tareBuildHash",
+              "corpus",
+              "gross",
+              "net",
+              "tare",
+              "reportHash",
+              "reportLocation",
+              "slot",
+              "createdAt",
+              "flags"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "status",
+        "sample",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "const": "no_transactions"
+        },
+        "sample": {
+          "type": "object",
+          "properties": {
+            "program": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "address": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 32,
+                      "maxLength": 44,
+                      "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "address"
+              ],
+              "additionalProperties": false
+            },
+            "anchor": {
+              "type": "boolean"
+            },
+            "hasIdl": {
+              "type": "boolean"
+            },
+            "binarySize": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "rentLamports": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "sampledAt": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+            },
+            "transactions": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "signaturesExamined": {
+              "description": "Signature rows examined during this sampling run. Omitted in older samples where the count is unknown.",
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "instructions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "discriminator": {
+                    "type": "string",
+                    "pattern": "^(?:[a-f0-9]{2}){1,32}$"
+                  },
+                  "calls": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "median": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "p90": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "totalUnits": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "share": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                },
+                "required": [
+                  "name",
+                  "discriminator",
+                  "calls",
+                  "median",
+                  "p90",
+                  "totalUnits",
+                  "share"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "program",
+            "anchor",
+            "hasIdl",
+            "binarySize",
+            "rentLamports",
+            "sampledAt",
+            "transactions",
+            "instructions"
+          ],
+          "additionalProperties": false
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "string",
+                "minLength": 32,
+                "maxLength": 44,
+                "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+              },
+              "program": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "address": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 32,
+                        "maxLength": 44,
+                        "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "address"
+                ],
+                "additionalProperties": false
+              },
+              "attester": {
+                "type": "string",
+                "minLength": 32,
+                "maxLength": 44,
+                "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "repository": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "commit": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{40,64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "repository",
+                  "commit"
+                ],
+                "additionalProperties": false
+              },
+              "toolchainVersion": {
+                "type": "string",
+                "minLength": 1
+              },
+              "stockBuildHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "tareBuildHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "corpus": {
+                "type": "object",
+                "properties": {
+                  "hash": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "counts": {
+                    "type": "object",
+                    "properties": {
+                      "tests": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "generated": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "mainnet": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      }
+                    },
+                    "required": [
+                      "tests",
+                      "generated",
+                      "mainnet"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "hash",
+                  "counts"
+                ],
+                "additionalProperties": false
+              },
+              "gross": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "net": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "tare": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "reportHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "reportLocation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "slot": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+              },
+              "flags": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "address",
+              "program",
+              "attester",
+              "source",
+              "toolchainVersion",
+              "stockBuildHash",
+              "tareBuildHash",
+              "corpus",
+              "gross",
+              "net",
+              "tare",
+              "reportHash",
+              "reportLocation",
+              "slot",
+              "createdAt",
+              "flags"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "status",
+        "sample",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "const": "not_program"
+        },
+        "program": {
+          "type": "string",
+          "minLength": 32,
+          "maxLength": 44,
+          "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "string",
+                "minLength": 32,
+                "maxLength": 44,
+                "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+              },
+              "program": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "address": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 32,
+                        "maxLength": 44,
+                        "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "address"
+                ],
+                "additionalProperties": false
+              },
+              "attester": {
+                "type": "string",
+                "minLength": 32,
+                "maxLength": 44,
+                "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "repository": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "commit": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{40,64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "repository",
+                  "commit"
+                ],
+                "additionalProperties": false
+              },
+              "toolchainVersion": {
+                "type": "string",
+                "minLength": 1
+              },
+              "stockBuildHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "tareBuildHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "corpus": {
+                "type": "object",
+                "properties": {
+                  "hash": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "counts": {
+                    "type": "object",
+                    "properties": {
+                      "tests": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "generated": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "mainnet": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      }
+                    },
+                    "required": [
+                      "tests",
+                      "generated",
+                      "mainnet"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "hash",
+                  "counts"
+                ],
+                "additionalProperties": false
+              },
+              "gross": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "net": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "tare": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "reportHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "reportLocation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "slot": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+              },
+              "flags": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "address",
+              "program",
+              "attester",
+              "source",
+              "toolchainVersion",
+              "stockBuildHash",
+              "tareBuildHash",
+              "corpus",
+              "gross",
+              "net",
+              "tare",
+              "reportHash",
+              "reportLocation",
+              "slot",
+              "createdAt",
+              "flags"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "status",
+        "program",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "const": "sampling"
+        },
+        "program": {
+          "type": "string",
+          "minLength": 32,
+          "maxLength": 44,
+          "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+        },
+        "startedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+        },
+        "retryAfterSeconds": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "string",
+                "minLength": 32,
+                "maxLength": 44,
+                "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+              },
+              "program": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "address": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 32,
+                        "maxLength": 44,
+                        "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "address"
+                ],
+                "additionalProperties": false
+              },
+              "attester": {
+                "type": "string",
+                "minLength": 32,
+                "maxLength": 44,
+                "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "repository": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "commit": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{40,64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "repository",
+                  "commit"
+                ],
+                "additionalProperties": false
+              },
+              "toolchainVersion": {
+                "type": "string",
+                "minLength": 1
+              },
+              "stockBuildHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "tareBuildHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "corpus": {
+                "type": "object",
+                "properties": {
+                  "hash": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "counts": {
+                    "type": "object",
+                    "properties": {
+                      "tests": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "generated": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "mainnet": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      }
+                    },
+                    "required": [
+                      "tests",
+                      "generated",
+                      "mainnet"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "hash",
+                  "counts"
+                ],
+                "additionalProperties": false
+              },
+              "gross": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "net": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "tare": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "reportHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "reportLocation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "slot": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+              },
+              "flags": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "address",
+              "program",
+              "attester",
+              "source",
+              "toolchainVersion",
+              "stockBuildHash",
+              "tareBuildHash",
+              "corpus",
+              "gross",
+              "net",
+              "tare",
+              "reportHash",
+              "reportLocation",
+              "slot",
+              "createdAt",
+              "flags"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "status",
+        "program",
+        "startedAt",
+        "retryAfterSeconds",
+        "records"
+      ],
+      "additionalProperties": false
+    }
+  ],
+  "title": "WeighResponse"
+}

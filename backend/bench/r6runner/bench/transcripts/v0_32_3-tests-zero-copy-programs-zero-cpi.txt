@@ -1,0 +1,5 @@
+$ tare --version
+tare 0.6.0
+Source: https://github.com/solana-foundation/anchor/tree/0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66/tests/zero-copy
+Recorded: 2026-11-15T01:07:33.972Z
+$ tare build --host --manifest-path programs\zero-cpi\Cargo.toml

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "siteUrl": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "recordUrlTemplate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "installLine": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "siteUrl",
+    "recordUrlTemplate",
+    "installLine"
+  ],
+  "additionalProperties": false,
+  "title": "PublicConfig"
+}

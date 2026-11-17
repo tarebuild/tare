@@ -1,0 +1,21 @@
+{
+  "schemaValidation": "BenchResults and Compat passed; full archived ProofReport audit at bench/gaps/final-audit.json",
+  "shellScripts": "7 owned shell entry scripts have LF and no BOM; bash -n passed",
+  "terminalCaptures": 837,
+  "terminalCapturesNormalized": true,
+  "featuredDisassemblySha256": "10e7326503ce7dad6d364a82a1e3ebb47e886c7fe07a446526880c855b61d677",
+  "optimizerTests": 23,
+  "frozenBaselineInputs": 116408,
+  "mainnetPublicRpcCalls": 2,
+  "mainnetCorpusRun": false,
+  "validatorRun": false,
+  "containerRun": false,
+  "finalAuditPassed": true,
+  "finalAuditSha256": "b26b585eaba3051f44a0edbe8a1c1c42e8b89d08f5937e0ed084239b8591758f",
+  "measuredPrograms": 178,
+  "comparisonTransactions": 220531,
+  "oversizedPrograms": 21,
+  "regressedInstructions": 10,
+  "regressedPrograms": 3,
+  "unresolvedFixtureRows": 42
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "hash",
+    "location"
+  ],
+  "additionalProperties": false,
+  "title": "UploadResult"
+}

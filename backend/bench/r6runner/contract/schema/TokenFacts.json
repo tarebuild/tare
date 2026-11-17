@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "ticker": {
+      "type": "string",
+      "const": "TARE"
+    },
+    "supply": {
+      "type": "number",
+      "const": 1000000000
+    },
+    "mint": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 32,
+          "maxLength": 44,
+          "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "venue": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "developerAllocationShare": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "ticker",
+    "supply",
+    "mint",
+    "venue",
+    "developerAllocationShare"
+  ],
+  "additionalProperties": false,
+  "title": "TokenFacts"
+}

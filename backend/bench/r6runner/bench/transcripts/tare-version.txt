@@ -1,0 +1,2 @@
+$ tare --version
+tare 0.6.0

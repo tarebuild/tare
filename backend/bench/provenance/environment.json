@@ -1,0 +1,43 @@
+{
+  "host": "Windows 11 x86_64",
+  "validatorUsed": false,
+  "containerRun": false,
+  "versions": {
+    "cargo": "cargo 1.99.0 (5f94df478 2026-08-27)",
+    "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+    "cargoBuildSbf": "cargo-build-sbf 4.4.0\nplatform-tools v1.57",
+    "solana": "solana-cli 4.3.2 (src:a2033000; feat:c9ad34d2, client:Agave)",
+    "node": "v22.23.4",
+    "python": "Python 3.13.4"
+  },
+  "arch": "v0",
+  "platformTools": "1.57",
+  "svm": "LiteSVM 0.18.2",
+  "svmRuntime": "Agave 4.3.2",
+  "pinnedSources": [
+    {
+      "id": "anchor-0.31.1",
+      "anchorVersion": "0.31.1",
+      "checkout": "corpus/anchor",
+      "tag": "v0.31.1",
+      "repository": "https://github.com/solana-foundation/anchor",
+      "revision": "47284f8f0b9844c6b83234aa90f556bad00e12ed"
+    },
+    {
+      "id": "anchor-0.32.3",
+      "anchorVersion": "0.32.3",
+      "checkout": "corpus/anchor-0.32.3",
+      "tag": "v0.32.3",
+      "repository": "https://github.com/solana-foundation/anchor",
+      "revision": "0e115d4bd34b7a9f61cbe6ade144dae2d5d12c66"
+    },
+    {
+      "id": "anchor-1.2.2",
+      "anchorVersion": "1.2.2",
+      "checkout": "corpus/anchor-1.2.2",
+      "tag": "v1.2.2",
+      "repository": "https://github.com/solana-foundation/anchor",
+      "revision": "8d9d1488d9b8af41b266d7513eea2e668adf15a2"
+    }
+  ]
+}
