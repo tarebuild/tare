@@ -1,10 +1,10 @@
 [workspace]
 resolver = "2"
-members = ["crates/tare-lang-macros", "crates/tare-lang", "crates/tare-spl", "crates/tare-opt", "crates/tare-prove", "crates/tare"]
+members = ["crates/tare", "crates/tare-prove", "crates/tare-opt", "crates/tare-lang", "crates/tare-lang-macros", "crates/tare-spl"]
 default-members = ["crates/tare"]
 
 [workspace.package]
-version = "0.1.0"
+version = "0.7.1"
 edition = "2021"
 license = "Apache-2.0"
 

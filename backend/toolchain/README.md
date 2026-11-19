@@ -141,3 +141,28 @@ The ordinary Anchor [registry workspace](../registry/README.md) owns fees and re
 The [round-six report](../bench/round-six.md) records the latest in-place corpus run, aggregate compute and ELF sizes, and every remaining current-stock failure. The [production trace](../bench/transcripts/round-eight-whirlpool-trace.txt) records the measured account-loading and CPI costs. A performance failure remains a measured row and keeps the gate nonzero.
 
 The production corpus measures 34 Squads instructions, 20 Whirlpools instructions and six Marinade instructions. Coverage is partial; unreached instructions stay null and have per-instruction reasons in the report. No performance failure or divergent input is hidden.
+
+## Account representation and equivalence
+
+The compiler first inspects representation observations in parsed source, then selects compact raw account descriptors for source that type-checks against them. Layout queries over recursively checked local payload types do not force SDK mode. Unknown types, account wrappers, pointer/refcount observations and ambiguous imports remain conservative. The public SDK representation is compiled when Rust identifies a typed account boundary, or when source can observe concrete layout, pointers or reference-counting behavior. Both branches implement Tare's checks and runtime; this does not substitute a stock runtime. The chosen account ABI and its reason are recorded with the build. Raw borrow guards have no SDK discriminant, and fixed raw CPI account lists use stack marshalling. Shared error origins use a tagged enum, keeping their clone/drop targets direct.
+
+The benchmark gate reads current stock/Tare results and rejects size, compute or proof failures. Historical round-three replay reports retain their exact input and ELF hashes as an optional diagnostic.
+
+Builds and reports record `buildEnvironment`: a host target triple or selected image reference. A check in another environment names both environments before rebuilding. Weighing columns widen to the longest instruction name. Native Agave 4.4 loader admission is checked separately from LiteSVM 4.3 execution; the loader control distinguishes empty and fully enabled feature sets instead of treating either as a captured validator configuration.
+
+Raw descriptors have a fixed C layout and use the runtime's canonical boolean flag representation. A writable borrow precheck reads the aligned pair of counters as one word, retaining rejection whenever either counter is nonzero. Static error-key rendering uses a bounded stack base58 converter; native comparisons cover 4,096 keys and the differential corpus retains exact error log comparisons.
+
+
+The fixed-width instruction decoder reads canonical integer, boolean and public-key arguments directly after the same input-length and boolean-validity checks. Shadowed types and floating-point arguments keep their Borsh decoder. Raw instruction wrappers inline without the old program-wide sixteen-instruction cutoff; SDK wrappers retain their size policy. The small event-CPI wrappers inline on the raw path. CPI descriptors store the three canonical boolean flag bytes in one fully initialized little-endian word with the same C ABI offsets.
+
+Canonical primitive direct accounts already contain their complete serialized value. Their non-initializing exit returns without constructing a snapshot serializer; custom account implementations default out of this optimization. Anchor 1.2 account reload validates ownership before deserialization, matching stock's error and compared keys after reassignment. The dedicated Rent syscall is accepted by the same loader feature configurations as stock; its measured cost is fourteen CU above the formerly used generic syscall.
+
+The acceptance gate compares each current measured program with its stock build: matched proof, no larger ELF, and no higher reached instruction median. Production instructions must be strictly cheaper. `--against-round-three` reports the preserved historical comparison without affecting acceptance. Unknown indirect calls are listed in optimization metadata and retain all potentially reachable text; the optimizer never deletes a possible target just because the corpus did not call it.
+
+SDK account serialization exits and descriptor construction are shared out of line. Internal metadata access through `Box<Account>` and `Box<InterfaceAccount>` delegates to the existing account view, preserving the original SDK borrow state without allocating another descriptor. Small close contexts containing boxed leaf accounts inline their loads and checks only when they contain at most six fields and no initialization, zero, or realloc constraint. Other contexts retain shared loading. The checks and their order are unchanged.
+
+## Validator admission
+
+The CLI checks both ELF artifacts with the separately pinned Agave 4.4.0 deployment, preload, verifier and JIT paths before completing a build or proof. The standalone [checker](../bench/loader-check/README.md) keeps Agave 4.4 dependencies separate from the LiteSVM graph. On Windows it compiles, but never executes, the upstream JIT through its existing Windows memory backend. The bytecode optimizer and differential VM are unchanged.
+
+The Linux suite preflight also waits for the upgradeable ProgramData deployment slot plus one. A genesis program at slot zero is not usable until slot one; Agave returns `UnsupportedProgramId` for this visibility delay as well as for a failed load. [The round-ten audit](../bench/loader-check/before.json) distinguishes those states over every current ELF.
