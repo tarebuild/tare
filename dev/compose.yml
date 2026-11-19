@@ -1,0 +1,24 @@
+name: tare
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: tare-postgres
+    network_mode: bridge
+    ports:
+      - "127.0.0.1:7811:5432"
+    environment:
+      POSTGRES_USER: tare
+      POSTGRES_PASSWORD: tare
+      POSTGRES_DB: tare
+    volumes:
+      - tare-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tare -d tare"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  tare-postgres-data:
+    name: tare-postgres-data

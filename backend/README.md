@@ -211,3 +211,76 @@ Without Pinata, uploaded bytes are written atomically under `.data/reports/` or 
 Railway service root is `backend/`, build `npm run build`, API start `npm start`, worker start `npm run start:indexer`. Each role receives its own PORT. Internal PostgreSQL is contacted only at start/runtime. Persist `.data/` on a volume when using local content storage; Pinata needs no content volume because CID metadata is in PostgreSQL.
 
 `.railwayignore` excludes the Rust toolchain, corpus source, Cargo files and local secrets, while including `bench/results.json`, `bench/compat.json`, only `registry/target/idl/tare_registry.json` from the registry tree, and packaged `releases/` when present. HTTP keep-alive is 65 seconds with a 66-second headers timeout. No deployment is performed by this round.
+
+## Local-validator integration run
+
+The backend never starts a validator. Once the lead has the registry deployed and initialized on the validator at 7840, run the services from `backend/`. The stock IDL and checked disposable local program ID currently agree on `6ri1ztKNUeHc2rwReL8p8thSTa1m48d6NRTzrwa9g85k`.
+
+API terminal:
+
+```powershell
+$env:MODE='chain'
+$env:CLUSTER='localnet'
+$env:DATABASE_URL='postgresql://tare:tare@127.0.0.1:7811/tare'
+$env:RPC_URL='http://127.0.0.1:7840'
+$env:REGISTRY_PROGRAM_ID='6ri1ztKNUeHc2rwReL8p8thSTa1m48d6NRTzrwa9g85k'
+$env:REGISTRY_IDL_PATH='registry/target/idl/tare_registry.json'
+$env:REGISTRY_COMMITMENT='confirmed'
+$env:INDEXER_POLL_MS='2000'
+$env:REGISTRY_RPC_RPS='50'
+$env:SITE_PUBLIC_URL='http://127.0.0.1:7800'
+$env:HOST='127.0.0.1'
+$env:PORT='7812'
+npm.cmd run build
+npm.cmd start
+```
+
+Indexer terminal (same settings, separate port):
+
+```powershell
+$env:MODE='chain'
+$env:CLUSTER='localnet'
+$env:DATABASE_URL='postgresql://tare:tare@127.0.0.1:7811/tare'
+$env:RPC_URL='http://127.0.0.1:7840'
+$env:REGISTRY_PROGRAM_ID='6ri1ztKNUeHc2rwReL8p8thSTa1m48d6NRTzrwa9g85k'
+$env:REGISTRY_IDL_PATH='registry/target/idl/tare_registry.json'
+$env:REGISTRY_COMMITMENT='confirmed'
+$env:INDEXER_POLL_MS='2000'
+$env:REGISTRY_RPC_RPS='50'
+$env:HOST='127.0.0.1'
+$env:PORT='7813'
+npm.cmd run start:indexer
+```
+
+Read the API without changing the lead's fixture server on 7810:
+
+```powershell
+Invoke-RestMethod http://127.0.0.1:7812/health
+Invoke-RestMethod http://127.0.0.1:7813/health
+Invoke-RestMethod http://127.0.0.1:7812/v1/registry/totals
+Invoke-RestMethod http://127.0.0.1:7812/v1/records
+```
+
+The toolchain-owned deployment command is documented in `registry/README.md`: `node registry/scripts/deploy.mjs --url http://127.0.0.1:7840 --keypair <funded-local-deployer.json> --fee <chosen-lamports>`. The services do not choose the fee or deploy the program.
+
+For the CLI, set `TARE_API_URL=http://127.0.0.1:7810`, `TARE_RPC_URL=http://127.0.0.1:7840`, `TARE_REGISTRY_PROGRAM_ID=7viqDjx5k8ffnfnZiBv9dMhxzVhcGSYLMb5bKdDP1XtP`, and `TARE_KEYPAIR` to the funded local signer path, then run the normal `tare attest`, `tare check <record>`, and `tare flag <record> --input <file>` flows in the intended program workspace. A flag input must actually diverge. Inspect `/v1/records/<record>` after each transaction; the indexer backfills on start and picks up subsequent signatures at the configured cadence.
+
+Stop the two service terminals with Ctrl+C. The indexer stops its current bounded page and releases its lease. The lead confirmed the API and indexer against a real local-validator attestation: the indexed record, totals and pinned report were returned successfully.
+
+## CLI/API agreement and remaining limits
+
+| CLI call | Services behavior |
+| --- | --- |
+| POST `/v1/reports` | JSON UploadProofReport with optional replay; 1 MiB maximum; returns lowercase SHA-256 of exact uploaded bytes plus location |
+| POST `/v1/flag-inputs` | JSON UploadFlagInput, same byte/hash contract and limit |
+| GET `/v1/reports/<hash>` | The CLI omits Accept: application/json and receives verified stored bytes verbatim, including replay |
+| GET `/v1/config` | `recordUrlTemplate` is `SITE_PUBLIC_URL/builds/{record}`; `installLine` uses `API_PUBLIC_URL`; each is null while its origin is unset |
+
+The CLI sends `Content-Type: application/json`, no authorization or Origin header, and accepts all successful statuses including 201. Its upload hash is SHA-256 of `serde_json::to_vec(Value)`; the API hashes the exact posted bytes and serves them back unchanged. Therefore the API does not need to reproduce Rust's JSON ordering, float spelling or escaping. The CLI's check reserializes its own uploaded representation with the same serializer. Requests with distinct whitespace or key ordering have distinct content hashes.
+
+Reports also accept optional `buildEnvironment` (host target triple or image reference) and `accountAbi` (raw/sdk mode and selection), matching the current writer. The current toolchain's public projection drops local `optimization` and `recordedCorpus` diagnostics but retains `replay`; both full local artifacts and the public projection validate. Replay remains compressed in the API. Its inner SHA-256 covers decompressed bytes and is checked by the CLI, with a 256 MiB decompression limit; the API enforces the outer 1 MiB document limit and schema.
+
+For uploaded u64 values, producers should encode values above 9,007,199,254,740,991 as canonical decimal strings (for example `"18446744073709551615"` for u64::MAX). Safe integers remain accepted. This covers every typed u64 in a weighing/proof or flag input, including account values, input slot, weights, build size/rent, corpus/comparison counts and optimizer/reproduction counters. Signed tare values use the same number-or-decimal-string rule within i64 bounds. Generated seed, preSlot, validator compute units and other decoded replay data remain inside the opaque compressed payload and are preserved byte for byte. Stored request bytes and the upload hash remain unchanged. Public JSON views normalize only known fields; opaque replay and diagnostic JSON stay intact. Requests/reports over 1 MiB are explicitly rejected by both the CLI and API; the largest current proof artifact is below that limit.
+
+
+Implementation references: [Current Anchor Program Metadata IDL](https://github.com/otter-sec/anchor/blob/master/ts/packages/anchor/src/idl.ts), [Agave account space and slicing](https://github.com/anza-xyz/agave/blob/master/account-decoder/src/lib.rs), [Anchor IDL source](https://github.com/coral-xyz/anchor/blob/v0.32.1/ts/packages/anchor/src/idl.ts), [upgradeable loader layout](https://github.com/solana-labs/solana/blob/master/sdk/program/src/bpf_loader_upgradeable.rs), and [Helius rate limits](https://www.helius.dev/docs/billing/rate-limits).
