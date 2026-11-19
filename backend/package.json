@@ -16,8 +16,10 @@
     "contract:pack": "npm run build --workspace=@tare/contract && node scripts/pack-contract.mjs",
     "start": "node scripts/start-service.mjs api",
     "start:indexer": "node scripts/start-service.mjs indexer",
+    "start:crank": "node scripts/start-service.mjs crank",
     "db:migrate": "prisma migrate deploy",
     "test": "node --import tsx --test src/compute.test.ts src/registry.test.ts",
+    "weigh:record": "tsx src/weigh-record.ts",
     "release:package": "node scripts/package-release.mjs"
   },
   "dependencies": {
@@ -25,6 +27,7 @@
     "@hono/node-server": "2.1.6",
     "@prisma/adapter-pg": "7.10.1",
     "@prisma/client": "7.10.1",
+    "@solana/spl-token": "0.4.15",
     "@solana/web3.js": "1.99.0",
     "@tare/contract": "file:./contract",
     "hono": "4.13.16",

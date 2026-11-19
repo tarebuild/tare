@@ -59,13 +59,14 @@ export function buildApp() {
   routes.get('/v1/registry/totals', async (c) => {
     if (registry.status() !== 'ready') return json(c, emptyRegistryTotals)
     const [totals, programs, flags] = await Promise.all([
-      db.record.aggregate({ _count: true, _sum: { gross: true, net: true, testsCount: true, generatedCount: true, mainnetCount: true } }),
+      db.record.aggregate({ _count: true, _sum: { gross: true, net: true, testsCount: true, generatedCount: true, mainnetCount: true, feeLamports: true } }),
       db.record.groupBy({ by: ['program'] }), db.flag.count(),
     ])
+    const feesAccruedLamports = Number(totals._sum.feeLamports ?? 0n)
     return json(c, { ...emptyRegistryTotals, records: totals._count, programs: programs.length, flags,
       gross: Number(totals._sum.gross ?? 0n), net: Number(totals._sum.net ?? 0n),
       tare: Number((totals._sum.gross ?? 0n) - (totals._sum.net ?? 0n)),
-      corpus: Number(totals._sum.testsCount ?? 0) + Number(totals._sum.generatedCount ?? 0) + Number(totals._sum.mainnetCount ?? 0) })
+      corpus: Number(totals._sum.testsCount ?? 0) + Number(totals._sum.generatedCount ?? 0) + Number(totals._sum.mainnetCount ?? 0), feesAccruedLamports })
   })
   routes.get('/v1/records', async (c) => {
     const q = readQuery(c, s.RecordsQuery)
