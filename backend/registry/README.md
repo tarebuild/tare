@@ -50,3 +50,13 @@ node registry/scripts/deploy.mjs --url http://127.0.0.1:7840 --keypair /absolute
 The URL defaults to `http://127.0.0.1:7840`; `--keypair` and `--fee` are always required. The fee shown is only an explicit example, not a program constant. The default program keypair is the public `localnet-keypair.json` fixture. Optional `--program-keypair FILE` and `--binary FILE` select different local artifacts; always pass a separate private program keypair for any nonlocal deployment. The default binary is the Tare build, `target/tare/tare_registry.so`.
 
 The script verifies that the program keypair matches the stock IDL, skips deployment when on-chain ELF bytes already match, otherwise runs `solana program deploy --use-rpc` in WSL with a fixed buffer keypair and a compute-unit price, then initializes Config if absent with `--fee-recipient`. If Config exists with a different fee or recipient, the supplied current admin changes it; an already matching Config is left alone. It verifies Config afterward and writes `deployments/<cluster>.json`. This makes repeated runs idempotent without weakening on-chain initialization. The deployment script is syntax-checked here; network execution remains the lead's step.
+
+## Event field names
+
+- `ConfigInitialized` and `ConfigUpdated`: `admin`, `fee_recipient`, `attest_fee_lamports`.
+- `RecordAttested`: `program`, `stock_build_hash`, `tare_build_hash`, `source_repository`, `source_commit`, `toolchain_version`, `corpus_hash`, `tests_count`, `generated_count`, `mainnet_count`, `gross`, `net`, `report_hash`, `report_location`, `attester`, `slot`.
+- `RecordFlagged`: `record`, `input_hash`, `input_location`, `flagger`, `slot`.
+
+`source_commit` is a bounded byte vector in the Record and lowercase hex text in the event. The other event field names and encodings match the stored account fields. Full stock IDL discriminators and types remain the source for the indexer.
+
+The final native round-three artifacts measure 281,992 stock ELF bytes and 261,072 Tare bytes. The four instruction medians total 84,919 gross and 66,967 net CU; the 17-transaction money-path corpus matches. These totals are also in `bench/results.json`.

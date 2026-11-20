@@ -1,0 +1,12 @@
+{
+  "cluster": "mainnet",
+  "genesisHash": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+  "programId": "7viqDjx5k8ffnfnZiBv9dMhxzVhcGSYLMb5bKdDP1XtP",
+  "programData": "GkHCmyMfup9Ffd2jHc2LCoeUyNfNgjzr1E5j673Xgy93",
+  "config": "Fvcic6U24RfK7CG9a4rKNaRubMgsQZN3NpywXEoYUQkD",
+  "feeRecipient": "EvycjhbgcQDVN92xpPsdy6oLKezCcDiykg96g8ZXZDe9",
+  "upgradeAuthority": "9Hxi73ZUWmF3m1wMnqb3Mh7zqhGmcTYxkUvgB88BKCQm",
+  "admin": "9Hxi73ZUWmF3m1wMnqb3Mh7zqhGmcTYxkUvgB88BKCQm",
+  "attestFeeLamports": "50000000",
+  "elfSha256": "348a6403b4fdadc36208769edf040c2e4aafc4f8c7967371ca48fa639b919cf5"
+}
