@@ -46,11 +46,25 @@
         }
       ]
     },
+    "developerAllocationLock": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 32,
+          "maxLength": 44,
+          "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "The Streamflow lock holding the developer allocation."
+    },
     "feesReceivedLamports": {
       "type": "integer",
       "minimum": 0,
       "maximum": 9007199254740991,
-      "description": "Attest fees paid to the launch wallet, summed over indexed records: the same sum as `RegistryTotals.feesAccruedLamports`."
+      "description": "Attest fees paid to the launch wallet, summed over indexed records: the same sum as `RegistryTotals.feesAccruedLamports`. Trading fees are in `bySource.trading`."
     },
     "spentLamports": {
       "type": "integer",
@@ -78,9 +92,18 @@
             "type": "string",
             "enum": [
               "buy",
-              "burn"
+              "burn",
+              "claim"
             ],
-            "description": "`buy`: the swap and the burn of its quoted minimum in one transaction. `burn`: the rest that swap delivered."
+            "description": "`buy`: the swap and the burn of its quoted minimum in one transaction. `burn`: the rest that swap delivered. `claim`: a trading-fee claim, its claimer share sent on and its TARE burn share burned."
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "attest",
+              "trading"
+            ],
+            "description": "What paid for it: attest fees, or the burn share of the pool's trading fees."
           },
           "spentLamports": {
             "type": "integer",
@@ -92,6 +115,31 @@
             "type": "number",
             "minimum": 0,
             "description": "TARE burned in this transaction, in whole tokens."
+          },
+          "claimedLamports": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991,
+            "description": "For a claim: the SOL side of the trading fees claimed."
+          },
+          "keptLamports": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991,
+            "description": "For a claim: the claimer's share, sent to the recipient."
+          },
+          "claimSignature": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 64,
+                "maxLength": 88
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "For a trading-fee row: the claim transaction it comes from (its own signature on a claim). Null for attest-fee rows."
           },
           "slot": {
             "type": "integer",
@@ -107,14 +155,88 @@
         "required": [
           "signature",
           "kind",
+          "source",
           "spentLamports",
           "burned",
+          "claimedLamports",
+          "keptLamports",
+          "claimSignature",
           "slot",
           "at"
         ],
         "additionalProperties": false
       },
       "description": "The latest crank transactions, newest first, at most 20."
+    },
+    "bySource": {
+      "type": "object",
+      "properties": {
+        "attest": {
+          "type": "object",
+          "properties": {
+            "feesReceivedLamports": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991,
+              "description": "Attest fees paid to the launch wallet."
+            },
+            "spentLamports": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "burned": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "feesReceivedLamports",
+            "spentLamports",
+            "burned"
+          ],
+          "additionalProperties": false
+        },
+        "trading": {
+          "type": "object",
+          "properties": {
+            "feesReceivedLamports": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991,
+              "description": "The SOL side of the trading fees the crank claimed."
+            },
+            "keptLamports": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991,
+              "description": "The claimer's share of those claims, sent to the recipient."
+            },
+            "spentLamports": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "burned": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "feesReceivedLamports",
+            "keptLamports",
+            "spentLamports",
+            "burned"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "attest",
+        "trading"
+      ],
+      "additionalProperties": false,
+      "description": "The same totals split by what paid for them."
     }
   },
   "required": [
@@ -123,10 +245,12 @@
     "mint",
     "venue",
     "developerAllocationShare",
+    "developerAllocationLock",
     "feesReceivedLamports",
     "spentLamports",
     "burned",
-    "burns"
+    "burns",
+    "bySource"
   ],
   "additionalProperties": false,
   "title": "TokenFacts"

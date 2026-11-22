@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { Address, Base64, Signature, Timestamp } from './primitives.js'
 import { defineErrors } from './errors.js'
 
-export const CONTRACT_VERSION = '0.9.0'
+export const CONTRACT_VERSION = '0.10.0'
 export const DOCUMENT_VERSION = '1'
 export const Count = z.int().nonnegative()
 /** Uploaded u64 metadata preserves safe numbers and exact canonical decimal strings. */
@@ -279,19 +279,27 @@ export const RecentWeighings = z.strictObject({ items: z.array(ProgramSample), a
 export const UploadResult = z.strictObject({ hash: Hash, location: z.string().min(1) })
 export const Burn = z.strictObject({
   signature: Signature.describe('The crank transaction, checkable on any explorer.'),
-  kind: z.enum(['buy', 'burn']).describe('`buy`: the swap and the burn of its quoted minimum in one transaction. `burn`: the rest that swap delivered.'),
+  kind: z.enum(['buy', 'burn', 'claim']).describe('`buy`: the swap and the burn of its quoted minimum in one transaction. `burn`: the rest that swap delivered. `claim`: a trading-fee claim, its claimer share sent on and its TARE burn share burned.'),
+  source: z.enum(['attest', 'trading']).describe('What paid for it: attest fees, or the burn share of the pool\'s trading fees.'),
   spentLamports: Count.describe('SOL the launch wallet spent in this transaction, its fee left out.'),
   burned: z.number().nonnegative().describe('TARE burned in this transaction, in whole tokens.'),
+  claimedLamports: Count.describe('For a claim: the SOL side of the trading fees claimed.'),
+  keptLamports: Count.describe('For a claim: the claimer\'s share, sent to the recipient.'),
+  claimSignature: Signature.nullable().describe('For a trading-fee row: the claim transaction it comes from (its own signature on a claim). Null for attest-fee rows.'),
   slot: Count, at: Timestamp,
 })
 export const TokenFacts = z.strictObject({
   ticker: z.literal('TARE'), supply: z.literal(1000000000), mint: Address.nullable(), venue: z.url().nullable(),
   developerAllocationShare: z.number().min(0).max(1).nullable(),
   developerAllocationLock: Address.nullable().describe('The Streamflow lock holding the developer allocation.'),
-  feesReceivedLamports: Count.describe('Attest fees paid to the launch wallet, summed over indexed records: the same sum as `RegistryTotals.feesAccruedLamports`.'),
+  feesReceivedLamports: Count.describe('Attest fees paid to the launch wallet, summed over indexed records: the same sum as `RegistryTotals.feesAccruedLamports`. Trading fees are in `bySource.trading`.'),
   spentLamports: Count.describe('SOL the crank spent buying TARE, summed over its transactions.'),
   burned: z.number().nonnegative().describe('TARE the crank burned, in whole tokens.'),
   burns: z.array(Burn).describe('The latest crank transactions, newest first, at most 20.'),
+  bySource: z.strictObject({
+    attest: z.strictObject({ feesReceivedLamports: Count.describe('Attest fees paid to the launch wallet.'), spentLamports: Count, burned: z.number().nonnegative() }),
+    trading: z.strictObject({ feesReceivedLamports: Count.describe('The SOL side of the trading fees the crank claimed.'), keptLamports: Count.describe('The claimer\'s share of those claims, sent to the recipient.'), spentLamports: Count, burned: z.number().nonnegative() }),
+  }).describe('The same totals split by what paid for them.'),
 })
 export const SCENARIOS = ['default', 'empty', 'waiting', 'ready', 'anchor', 'non-anchor', 'not-program', 'no-transactions', 'calls-failed', 'sampling', 'with-records', 'report-unavailable', 'diverged'] as const
 export type Scenario = typeof SCENARIOS[number]

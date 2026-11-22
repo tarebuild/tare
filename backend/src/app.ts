@@ -127,19 +127,26 @@ export function buildApp() {
   })
   routes.get('/v1/flag-inputs/:hash', async (c) => contentResponse(c, 'flag_input', await content.getBytes('flag_input', readParam(c, 'hash', s.Hash))))
   routes.get('/v1/token', async (c) => {
-    const [fees, spent, burns] = await Promise.all([
+    const [fees, sources, burns] = await Promise.all([
       db.record.aggregate({ _sum: { feeLamports: true } }),
-      db.burn.aggregate({ _sum: { spentLamports: true, burned: true } }),
-      db.burn.findMany({ select: { signature: true, kind: true, spentLamports: true, burned: true, decimals: true, slot: true, at: true }, orderBy: { slot: 'desc' } }),
+      db.burn.groupBy({ by: ['source'], _sum: { spentLamports: true, burned: true, claimedLamports: true, keptLamports: true } }),
+      db.burn.findMany({ orderBy: { slot: 'desc' }, take: 20 }),
     ])
-    const tokens = (raw: bigint, decimals: number) => Number(raw) / 10 ** decimals
+    const decimals = burns[0]?.decimals ?? 6
+    const tokens = (raw: bigint, d = decimals) => Number(raw) / 10 ** d
+    const sum = (source: string) => sources.find((row) => row.source === source)?._sum
+    const total = (field: 'spentLamports' | 'burned') => (sum('attest')?.[field] ?? 0n) + (sum('trading')?.[field] ?? 0n)
     return json(c, {
       ...fixtureToken, mint: env.TOKEN_MINT ?? null, venue: env.TOKEN_VENUE ?? null,
       developerAllocationShare: env.TOKEN_DEVELOPER_SHARE ?? null, developerAllocationLock: env.TOKEN_DEVELOPER_LOCK ?? null,
-      feesReceivedLamports: Number(fees._sum.feeLamports ?? 0n), spentLamports: Number(spent._sum.spentLamports ?? 0n),
-      burned: burns.length ? tokens(spent._sum.burned ?? 0n, burns[0]!.decimals) : 0,
-      burns: burns.slice(0, 20).map((burn) => ({ signature: burn.signature, kind: burn.kind, spentLamports: Number(burn.spentLamports),
-        burned: tokens(burn.burned, burn.decimals), slot: Number(burn.slot), at: burn.at.toISOString() })),
+      feesReceivedLamports: Number(fees._sum.feeLamports ?? 0n), spentLamports: Number(total('spentLamports')), burned: tokens(total('burned')),
+      burns: burns.map((burn) => ({ signature: burn.signature, kind: burn.kind, source: burn.source, spentLamports: Number(burn.spentLamports),
+        burned: tokens(burn.burned, burn.decimals), claimedLamports: Number(burn.claimedLamports), keptLamports: Number(burn.keptLamports), claimSignature: burn.claimSignature, slot: Number(burn.slot), at: burn.at.toISOString() })),
+      bySource: {
+        attest: { feesReceivedLamports: Number(fees._sum.feeLamports ?? 0n), spentLamports: Number(sum('attest')?.spentLamports ?? 0n), burned: tokens(sum('attest')?.burned ?? 0n) },
+        trading: { feesReceivedLamports: Number(sum('trading')?.claimedLamports ?? 0n), keptLamports: Number(sum('trading')?.keptLamports ?? 0n),
+          spentLamports: Number(sum('trading')?.spentLamports ?? 0n), burned: tokens(sum('trading')?.burned ?? 0n) },
+      },
     })
   })
   app.route('/', routes)

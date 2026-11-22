@@ -18,18 +18,21 @@
     "start:indexer": "node scripts/start-service.mjs indexer",
     "start:crank": "node scripts/start-service.mjs crank",
     "db:migrate": "prisma migrate deploy",
-    "test": "node --import tsx --test src/compute.test.ts src/registry.test.ts src/burns.test.ts",
+    "test": "node --import tsx --test src/compute.test.ts src/registry.test.ts src/burns.test.ts src/trading-share.test.ts",
     "weigh:record": "tsx src/weigh-record.ts",
     "release:package": "node scripts/package-release.mjs"
   },
   "dependencies": {
     "@coral-xyz/anchor": "0.32.1",
     "@hono/node-server": "2.1.6",
+    "@meteora-ag/cp-amm-sdk": "1.5.1",
+    "@meteora-ag/dynamic-bonding-curve-sdk": "2.0.0",
     "@prisma/adapter-pg": "7.10.1",
     "@prisma/client": "7.10.1",
     "@solana/spl-token": "0.4.15",
     "@solana/web3.js": "1.99.0",
     "@tare/contract": "file:./contract",
+    "bn.js": "5.2.5",
     "hono": "4.13.16",
     "pg": "8.16.3",
     "zod": "4.6.7"

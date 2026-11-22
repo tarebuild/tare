@@ -7,6 +7,7 @@ import { Connection, PublicKey, type AddressLookupTableAccount } from '@solana/w
 import { NATIVE_MINT, createBurnCheckedInstruction, getAssociatedTokenAddressSync } from '@solana/spl-token'
 import { CONTRACT_VERSION } from '@tare/contract'
 import { burnFacts } from './burns.js'
+import { createTradingFees } from './trading-fees.js'
 import { env } from './config.js'
 import { createDb } from './db.js'
 import { createApi } from './engines/server/app.js'
@@ -54,6 +55,19 @@ async function gate(): Promise<'waiting' | 'ready'> {
   return 'ready'
 }
 
+/** Buys TARE with `lamports` through Jupiter and burns the quote's minimum in the same transaction. */
+async function swapAndBurn(key: string, lamports: bigint) {
+  const { signer, mint } = settings!
+  const { tokenProgram, decimals } = mintInfo!
+  const tokens = getAssociatedTokenAddressSync(mint, signer.publicKey, false, tokenProgram)
+  const quote = await quoteExactIn(jupiter, { inputMint: NATIVE_MINT, outputMint: mint, amount: lamports, slippageBps: env.CRANK_SLIPPAGE_BPS, maxAccounts: 40 })
+  const swap = await swapInstructions(jupiter, { quote, taker: signer.publicKey })
+  tables = await loadLookupTables(connection!, swap.lookupTables)
+  await journal!.execute(key, () => [...swap.setup, swap.swap, ...swap.cleanup,
+    createBurnCheckedInstruction(tokens, mint, signer.publicKey, quote.minimumOut, decimals, [], tokenProgram)])
+  log({ event: 'buyback', key, lamports: lamports.toString() })
+}
+
 async function buyback(now: number) {
   const { signer, mint, clip, intervalMs } = settings!
   const { tokenProgram, decimals } = mintInfo!
@@ -61,16 +75,9 @@ async function buyback(now: number) {
   const balance = BigInt(await connection!.getBalance(signer.publicKey, 'confirmed'))
   const key = `buyback:${mint.toBase58()}:${Math.floor(now / intervalMs)}`
   const existing = await database.db.keeperTransaction.findUnique({ where: { key } })
-  if (balance >= env.CRANK_RESERVE_LAMPORTS + clip && (!existing || existing.state === 'expired')) {
-    const quote = await quoteExactIn(jupiter, { inputMint: NATIVE_MINT, outputMint: mint, amount: clip, slippageBps: env.CRANK_SLIPPAGE_BPS, maxAccounts: 40 })
-    const swap = await swapInstructions(jupiter, { quote, taker: signer.publicKey })
-    tables = await loadLookupTables(connection!, swap.lookupTables)
-    await journal!.execute(key, () => [...swap.setup, swap.swap, ...swap.cleanup,
-      createBurnCheckedInstruction(tokens, mint, signer.publicKey, quote.minimumOut, decimals, [], tokenProgram)])
-    log({ event: 'buyback', key, lamports: clip.toString() })
-  }
+  if (balance >= env.CRANK_RESERVE_LAMPORTS + clip && (!existing || existing.state === 'expired')) await swapAndBurn(key, clip)
   // The rest of what each recent swap delivered: its own balance change, never the account's balance.
-  const swaps = await database.db.keeperTransaction.findMany({ where: { key: { startsWith: 'buyback:' }, state: 'confirmed' }, orderBy: { createdAt: 'desc' }, take: 5 })
+  const swaps = await database.db.keeperTransaction.findMany({ where: { state: 'confirmed', OR: [{ key: { startsWith: 'buyback:' } }, { key: { startsWith: 'feebuy:' } }] }, orderBy: { createdAt: 'desc' }, take: 5 })
   for (const row of swaps) {
     if (await database.db.keeperTransaction.findUnique({ where: { key: `burn:${row.signature}` } })) continue
     const tx = await connection!.getTransaction(row.signature, { commitment: 'confirmed', maxSupportedTransactionVersion: 0 })
@@ -81,19 +88,58 @@ async function buyback(now: number) {
   }
 }
 
+const trading = settings && env.TRADING_FEE_POOL ? { pool: new PublicKey(env.TRADING_FEE_POOL), recipient: new PublicKey(env.CRANK_TRADING_RECIPIENT) } : null
+let tradingFees: ReturnType<typeof createTradingFees> | null = null
+
+/**
+ * The pool's creator fees, once per interval: claim them, send the claimer's share to the recipient
+ * and burn the TARE side's burn share in one transaction; then buy and burn with what the claim left
+ * in the wallet, which the claim's own balance change measures, so a restart resumes it.
+ */
+async function claimTradingFees(now: number) {
+  if (!trading) return
+  const { signer, mint, intervalMs } = settings!
+  tradingFees ??= createTradingFees({ connection: connection!, pool: trading!.pool, wallet: signer.publicKey, mint, ...mintInfo!,
+    recipient: trading!.recipient, burnBpsOfVolume: env.CRANK_TRADING_BURN_BPS, minLamports: env.CRANK_TRADING_MIN_LAMPORTS })
+  const key = `fees:${mint.toBase58()}:${Math.floor(now / intervalMs)}`
+  const existing = await database.db.keeperTransaction.findUnique({ where: { key } })
+  if (!existing || existing.state === 'expired') {
+    const claim = await tradingFees.plan()
+    if ('waiting' in claim) log({ event: 'trading_fees_waiting', reason: claim.waiting })
+    else {
+      await journal!.execute(key, () => claim.instructions)
+      log({ event: 'trading_fees_claimed', key, venue: claim.venue, quote: claim.claimed.quote.toString(), base: claim.claimed.base.toString(), burnQuote: claim.split.burnQuote.toString(), burnBase: claim.split.burnBase.toString() })
+    }
+  }
+  const claims = await database.db.keeperTransaction.findMany({ where: { key: { startsWith: 'fees:' }, state: 'confirmed' }, orderBy: { createdAt: 'desc' }, take: 5 })
+  for (const row of claims) {
+    if (await database.db.keeperTransaction.findUnique({ where: { key: `feebuy:${row.signature}` } })) continue
+    const tx = await connection!.getTransaction(row.signature, { commitment: 'confirmed', maxSupportedTransactionVersion: 0 })
+    if (!tx?.meta) continue
+    const index = tx.transaction.message.getAccountKeys({ accountKeysFromLookups: tx.meta.loadedAddresses }).staticAccountKeys.findIndex((k) => k.equals(signer.publicKey))
+    const left = BigInt(tx.meta.postBalances[index]!) - BigInt(tx.meta.preBalances[index]!) + BigInt(tx.meta.fee)
+    if (left > 0n) await swapAndBurn(`feebuy:${row.signature}`, left)
+  }
+}
+
 /** Each confirmed crank transaction, read once from chain: the SOL the wallet spent and the TARE it burned. */
 async function recordBurns() {
   const { signer, mint } = settings!
-  const rows = await database.db.keeperTransaction.findMany({ where: { state: 'confirmed', OR: [{ key: { startsWith: 'buyback:' } }, { key: { startsWith: 'burn:' } }] }, orderBy: { createdAt: 'asc' } })
+  const rows = await database.db.keeperTransaction.findMany({ where: { state: 'confirmed', OR: ['buyback:', 'burn:', 'fees:', 'feebuy:'].map((prefix) => ({ key: { startsWith: prefix } })) }, orderBy: { createdAt: 'asc' } })
+  const bySignature = new Map(rows.map((row) => [row.signature, row.key]))
   const recorded = new Set((await database.db.burn.findMany({ select: { signature: true } })).map((row) => row.signature))
   for (const row of rows) {
     if (recorded.has(row.signature)) continue
     const tx = await connection!.getParsedTransaction(row.signature, { commitment: 'confirmed', maxSupportedTransactionVersion: 0 })
     if (!tx?.meta || tx.meta.err || tx.blockTime == null) continue
-    const { spentLamports, burned } = burnFacts(tx, signer.publicKey, mint)
+    const { spentLamports, burned, claimedLamports, keptLamports } = burnFacts(tx, signer.publicKey, mint, trading?.recipient)
+    // A rest burn belongs to the swap it follows; trading-fee claims and their buys to the trading side.
+    const origin = row.key.startsWith('burn:') ? bySignature.get(row.key.slice(5)) ?? '' : row.key
     await database.db.burn.create({ data: {
-      signature: row.signature, key: row.key, kind: row.key.startsWith('buyback:') ? 'buy' : 'burn',
-      spentLamports, burned, decimals: mintInfo!.decimals, slot: BigInt(tx.slot), at: new Date(tx.blockTime * 1000),
+      signature: row.signature, key: row.key, kind: row.key.startsWith('fees:') ? 'claim' : row.key.startsWith('burn:') ? 'burn' : 'buy',
+      source: origin.startsWith('fees:') || origin.startsWith('feebuy:') ? 'trading' : 'attest',
+      claimSignature: row.key.startsWith('fees:') ? row.signature : origin.startsWith('feebuy:') ? origin.slice(7) : null,
+      spentLamports: row.key.startsWith('fees:') ? 0n : spentLamports, burned, claimedLamports, keptLamports, decimals: mintInfo!.decimals, slot: BigInt(tx.slot), at: new Date(tx.blockTime * 1000),
     } })
     log({ event: 'burn_recorded', signature: row.signature, spentLamports: spentLamports.toString(), burned: burned.toString() })
   }
@@ -101,6 +147,7 @@ async function recordBurns() {
 
 const scheduler = createScheduler([
   { name: 'resume', everyMs: 0, run: () => journal!.resume() },
+  { name: 'trading-fees', everyMs: settings?.intervalMs ?? 0, run: claimTradingFees },
   { name: 'buyback', everyMs: settings?.intervalMs ?? 0, run: buyback },
   { name: 'burns', everyMs: 30_000, run: recordBurns },
 ], { onError: (task, error) => log({ event: 'crank_task_failed', task, message: error instanceof Error ? error.message : 'unknown' }) })

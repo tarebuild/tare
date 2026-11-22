@@ -92,8 +92,12 @@ model Burn {
   signature     String   @id
   key           String   @unique
   kind          String
+  source        String   @default("attest")
   spentLamports BigInt
   burned        BigInt
+  claimedLamports BigInt @default(0)
+  keptLamports  BigInt   @default(0)
+  claimSignature String?
   decimals      Int
   slot          BigInt
   at            DateTime

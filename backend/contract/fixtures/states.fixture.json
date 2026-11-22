@@ -837,10 +837,24 @@
     "mint": null,
     "venue": null,
     "developerAllocationShare": null,
+    "developerAllocationLock": null,
     "feesReceivedLamports": 0,
     "spentLamports": 0,
     "burned": 0,
-    "burns": []
+    "burns": [],
+    "bySource": {
+      "attest": {
+        "feesReceivedLamports": 0,
+        "spentLamports": 0,
+        "burned": 0
+      },
+      "trading": {
+        "feesReceivedLamports": 0,
+        "keptLamports": 0,
+        "spentLamports": 0,
+        "burned": 0
+      }
+    }
   },
   "upload": {
     "hash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
