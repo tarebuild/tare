@@ -1,12 +1,15 @@
-// The crank: signs as the token's launch wallet, which receives every attest fee. On its interval
-// it buys TARE through Jupiter with one clip of the wallet's SOL and burns what that swap delivered:
-// the quote's minimum in the swap's own transaction, the rest right after. It waits, making no RPC
-// calls, until the mint, the clip, the interval and the wallet's key are all set.
+// The crank: signs as the wallet that launched TARE, which receives every attest fee and holds the
+// pool's creator role. That wallet also holds its owner's SOL, so the crank spends only what fees
+// account for (`crank-budget.ts`): a clip of the attest fees received since the earlier attest buys,
+// and the burn share of each trading-fee claim. Each buy burns the quote's minimum in the swap's own
+// transaction and the rest right after. It waits, making no RPC calls, until the mint, the clip, the
+// interval and the wallet's key are all set.
 
 import { Connection, PublicKey, type AddressLookupTableAccount } from '@solana/web3.js'
 import { NATIVE_MINT, createBurnCheckedInstruction, getAssociatedTokenAddressSync } from '@solana/spl-token'
 import { CONTRACT_VERSION } from '@tare/contract'
 import { burnFacts } from './burns.js'
+import { attestSpend, tradingBurnShare } from './crank-budget.js'
 import { createTradingFees } from './trading-fees.js'
 import { env } from './config.js'
 import { createDb } from './db.js'
@@ -25,8 +28,8 @@ import { expectKey, keypairFromSecret } from './engines/tx/server/keys.js'
 
 const log = (entry: Record<string, unknown>) => console.log(JSON.stringify({ service: 'tare-crank', ...entry }))
 const database = createDb(env.DATABASE_URL!)
-const signer = env.LAUNCH_WALLET_SECRET_KEY ? keypairFromSecret('LAUNCH_WALLET_SECRET_KEY', env.LAUNCH_WALLET_SECRET_KEY) : null
-if (signer && env.LAUNCH_WALLET) expectKey('LAUNCH_WALLET_SECRET_KEY', signer, env.LAUNCH_WALLET)
+const signer = env.CRANK_WALLET_SECRET_KEY ? keypairFromSecret('CRANK_WALLET_SECRET_KEY', env.CRANK_WALLET_SECRET_KEY) : null
+if (signer && env.CRANK_WALLET) expectKey('CRANK_WALLET_SECRET_KEY', signer, env.CRANK_WALLET)
 const rpcUrl = env.SOLANA_RPC_URL ?? env.HELIUS_RPC_URL
 const settings = signer && env.TOKEN_MINT && env.CRANK_CLIP_LAMPORTS && env.CRANK_INTERVAL_SECONDS && rpcUrl
   ? { signer, mint: new PublicKey(env.TOKEN_MINT), clip: env.CRANK_CLIP_LAMPORTS, intervalMs: env.CRANK_INTERVAL_SECONDS * 1000, rpcUrl }
@@ -68,14 +71,30 @@ async function swapAndBurn(key: string, lamports: bigint) {
   log({ event: 'buyback', key, lamports: lamports.toString() })
 }
 
+/** Attest fees paid to this wallet (the indexer's records) and what this wallet's attest buys spent. */
+async function attestLedger() {
+  const wallet = settings!.signer.publicKey.toBase58()
+  const [fees, spent] = await Promise.all([
+    database.db.record.aggregate({ where: { feeRecipient: wallet }, _sum: { feeLamports: true } }),
+    database.db.burn.aggregate({ where: { wallet, source: 'attest' }, _sum: { spentLamports: true } }),
+  ])
+  return { feesReceived: fees._sum.feeLamports ?? 0n, attestSpent: spent._sum.spentLamports ?? 0n }
+}
+
 async function buyback(now: number) {
   const { signer, mint, clip, intervalMs } = settings!
   const { tokenProgram, decimals } = mintInfo!
   const tokens = getAssociatedTokenAddressSync(mint, signer.publicKey, false, tokenProgram)
-  const balance = BigInt(await connection!.getBalance(signer.publicKey, 'confirmed'))
   const key = `buyback:${mint.toBase58()}:${Math.floor(now / intervalMs)}`
   const existing = await database.db.keeperTransaction.findUnique({ where: { key } })
-  if (balance >= env.CRANK_RESERVE_LAMPORTS + clip && (!existing || existing.state === 'expired')) await swapAndBurn(key, clip)
+  if (!existing || existing.state === 'expired') {
+    // Every earlier attest buy is booked before the ledger is read, and none may still be in flight.
+    await recordBurns()
+    const inFlight = await database.db.keeperTransaction.count({ where: { state: 'signed', OR: [{ key: { startsWith: 'buyback:' } }, { key: { startsWith: 'burn:' } }] } })
+    const balance = BigInt(await connection!.getBalance(signer.publicKey, 'confirmed'))
+    const lamports = inFlight ? 0n : attestSpend({ balance, ...(await attestLedger()), clip, reserve: env.CRANK_RESERVE_LAMPORTS })
+    if (lamports > 0n) await swapAndBurn(key, lamports)
+  }
   // The rest of what each recent swap delivered: its own balance change, never the account's balance.
   const swaps = await database.db.keeperTransaction.findMany({ where: { state: 'confirmed', OR: [{ key: { startsWith: 'buyback:' } }, { key: { startsWith: 'feebuy:' } }] }, orderBy: { createdAt: 'desc' }, take: 5 })
   for (const row of swaps) {
@@ -88,19 +107,19 @@ async function buyback(now: number) {
   }
 }
 
-const trading = settings && env.TRADING_FEE_POOL ? { pool: new PublicKey(env.TRADING_FEE_POOL), recipient: new PublicKey(env.CRANK_TRADING_RECIPIENT) } : null
+const trading = settings && env.TRADING_FEE_POOL ? { pool: new PublicKey(env.TRADING_FEE_POOL) } : null
 let tradingFees: ReturnType<typeof createTradingFees> | null = null
 
 /**
- * The pool's creator fees, once per interval: claim them, send the claimer's share to the recipient
- * and burn the TARE side's burn share in one transaction; then buy and burn with what the claim left
- * in the wallet, which the claim's own balance change measures, so a restart resumes it.
+ * The pool's creator fees, once per interval: claim them and burn the TARE side's burn share in one
+ * transaction; then buy and burn the burn share of the SOL the claim brought in, measured from the
+ * claim's own balance change, so a restart resumes it. The claimer's share stays in the wallet.
  */
 async function claimTradingFees(now: number) {
   if (!trading) return
   const { signer, mint, intervalMs } = settings!
   tradingFees ??= createTradingFees({ connection: connection!, pool: trading!.pool, wallet: signer.publicKey, mint, ...mintInfo!,
-    recipient: trading!.recipient, burnBpsOfVolume: env.CRANK_TRADING_BURN_BPS, minLamports: env.CRANK_TRADING_MIN_LAMPORTS })
+    burnBpsOfVolume: env.CRANK_TRADING_BURN_BPS, minLamports: env.CRANK_TRADING_MIN_LAMPORTS })
   const key = `fees:${mint.toBase58()}:${Math.floor(now / intervalMs)}`
   const existing = await database.db.keeperTransaction.findUnique({ where: { key } })
   if (!existing || existing.state === 'expired') {
@@ -117,8 +136,10 @@ async function claimTradingFees(now: number) {
     const tx = await connection!.getTransaction(row.signature, { commitment: 'confirmed', maxSupportedTransactionVersion: 0 })
     if (!tx?.meta) continue
     const index = tx.transaction.message.getAccountKeys({ accountKeysFromLookups: tx.meta.loadedAddresses }).staticAccountKeys.findIndex((k) => k.equals(signer.publicKey))
-    const left = BigInt(tx.meta.postBalances[index]!) - BigInt(tx.meta.preBalances[index]!) + BigInt(tx.meta.fee)
-    if (left > 0n) await swapAndBurn(`feebuy:${row.signature}`, left)
+    if (index < 0) continue // a claim another wallet signed before the role moved; its buy ran then
+    const claimDelta = BigInt(tx.meta.postBalances[index]!) - BigInt(tx.meta.preBalances[index]!) + BigInt(tx.meta.fee)
+    const lamports = tradingBurnShare({ claimDelta, fraction: await tradingFees.fraction() })
+    if (lamports > 0n) await swapAndBurn(`feebuy:${row.signature}`, lamports)
   }
 }
 
@@ -132,14 +153,18 @@ async function recordBurns() {
     if (recorded.has(row.signature)) continue
     const tx = await connection!.getParsedTransaction(row.signature, { commitment: 'confirmed', maxSupportedTransactionVersion: 0 })
     if (!tx?.meta || tx.meta.err || tx.blockTime == null) continue
-    const { spentLamports, burned, claimedLamports, keptLamports } = burnFacts(tx, signer.publicKey, mint, trading?.recipient)
+    const facts = burnFacts(tx, signer.publicKey, mint)
+    const { spentLamports, burned } = facts
+    // A claim keeps the claimer's share in the wallet: what it brought in, less the burn share bought after it.
+    const claimedLamports = row.key.startsWith('fees:') ? facts.claimedLamports : 0n
+    const keptLamports = claimedLamports > 0n && tradingFees ? claimedLamports - tradingBurnShare({ claimDelta: claimedLamports, fraction: await tradingFees.fraction() }) : 0n
     // A rest burn belongs to the swap it follows; trading-fee claims and their buys to the trading side.
     const origin = row.key.startsWith('burn:') ? bySignature.get(row.key.slice(5)) ?? '' : row.key
     await database.db.burn.create({ data: {
       signature: row.signature, key: row.key, kind: row.key.startsWith('fees:') ? 'claim' : row.key.startsWith('burn:') ? 'burn' : 'buy',
       source: origin.startsWith('fees:') || origin.startsWith('feebuy:') ? 'trading' : 'attest',
       claimSignature: row.key.startsWith('fees:') ? row.signature : origin.startsWith('feebuy:') ? origin.slice(7) : null,
-      spentLamports: row.key.startsWith('fees:') ? 0n : spentLamports, burned, claimedLamports, keptLamports, decimals: mintInfo!.decimals, slot: BigInt(tx.slot), at: new Date(tx.blockTime * 1000),
+      wallet: signer.publicKey.toBase58(), spentLamports: row.key.startsWith('fees:') ? 0n : spentLamports, burned, claimedLamports, keptLamports, decimals: mintInfo!.decimals, slot: BigInt(tx.slot), at: new Date(tx.blockTime * 1000),
     } })
     log({ event: 'burn_recorded', signature: row.signature, spentLamports: spentLamports.toString(), burned: burned.toString() })
   }
@@ -156,7 +181,7 @@ const runtime = createKeeperRuntime({
   lease: { acquire: () => lease.acquire(), renew: () => lease.acquire(), release: () => lease.release() },
   leaseMs: 15_000, tickMs: 5_000, gate, tick: () => scheduler.tick(), log,
 })
-if (!settings) log({ event: 'crank_waiting', missing: ['LAUNCH_WALLET_SECRET_KEY', 'TOKEN_MINT', 'CRANK_CLIP_LAMPORTS', 'CRANK_INTERVAL_SECONDS']
+if (!settings) log({ event: 'crank_waiting', missing: ['CRANK_WALLET_SECRET_KEY', 'TOKEN_MINT', 'CRANK_CLIP_LAMPORTS', 'CRANK_INTERVAL_SECONDS']
   .filter((name) => !process.env[name]) })
 void runtime.run()
 

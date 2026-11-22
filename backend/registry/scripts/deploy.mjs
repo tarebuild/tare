@@ -9,10 +9,10 @@ import { Connection, Keypair, PublicKey, SystemProgram, Transaction, Transaction
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const options = new Map();
 for (let i = 2; i < process.argv.length; i += 2) {
-  if (!process.argv[i].startsWith('--') || !process.argv[i + 1]) throw new Error('Use --keypair FILE --fee LAMPORTS --fee-recipient ADDRESS [--url URL] [--program-keypair FILE] [--buffer-keypair FILE] [--compute-unit-price MICROLAMPORTS] [--binary FILE].');
+  if (!process.argv[i].startsWith('--') || !process.argv[i + 1]) throw new Error('Use --keypair FILE --fee LAMPORTS --fee-recipient ADDRESS [--url URL] [--program-keypair FILE] [--buffer-keypair FILE] [--compute-unit-price MICROLAMPORTS] [--binary FILE] [--authority FILE].');
   options.set(process.argv[i].slice(2), process.argv[i + 1]);
 }
-for (const name of options.keys()) if (!['keypair', 'fee', 'fee-recipient', 'url', 'program-keypair', 'buffer-keypair', 'compute-unit-price', 'binary'].includes(name)) throw new Error(`Unknown option --${name}.`);
+for (const name of options.keys()) if (!['keypair', 'fee', 'fee-recipient', 'url', 'program-keypair', 'buffer-keypair', 'compute-unit-price', 'binary', 'authority'].includes(name)) throw new Error(`Unknown option --${name}.`);
 if (!options.has('keypair') || !options.has('fee') || !options.has('fee-recipient')) throw new Error('--keypair, --fee and --fee-recipient are required; no fee or recipient is assumed.');
 // The launch wallet: every attest fee is paid to it, and the crank signs as it.
 const feeRecipient = new PublicKey(options.get('fee-recipient'));
@@ -30,6 +30,9 @@ if (!fs.existsSync(bufferPath)) fs.writeFileSync(bufferPath, JSON.stringify(Arra
 const programKeyPath = path.resolve(options.get('program-keypair') || path.join(root, 'localnet-keypair.json'));
 const binaryPath = path.resolve(options.get('binary') || path.join(root, 'target/tare/tare_registry.so'));
 const wallet = Keypair.fromSecretKey(Uint8Array.from(JSON.parse(fs.readFileSync(walletPath, 'utf8'))));
+// The upgrade authority and config admin: its own key when the payer is not trusted with them.
+const authorityPath = path.resolve(options.get('authority') || walletPath);
+const authority = Keypair.fromSecretKey(Uint8Array.from(JSON.parse(fs.readFileSync(authorityPath, 'utf8'))));
 const programKey = Keypair.fromSecretKey(Uint8Array.from(JSON.parse(fs.readFileSync(programKeyPath, 'utf8'))));
 const idl = JSON.parse(fs.readFileSync(path.join(root, 'target/idl/tare_registry.json'), 'utf8'));
 const program = new PublicKey(idl.address);
@@ -47,7 +50,7 @@ if (programInfo) {
   deployedSame = !!data && data.data.subarray(45, 45 + elf.length).equals(elf) && data.data.subarray(45 + elf.length).every(value => value === 0);
 }
 if (!deployedSame) {
-  const result = solana(['program', 'deploy', '--use-rpc', '--url', url, '--keypair', walletPath, '--upgrade-authority', walletPath,
+  const result = solana(['program', 'deploy', '--use-rpc', '--url', url, '--keypair', walletPath, '--upgrade-authority', authorityPath,
     '--program-id', programKeyPath, '--buffer', bufferPath, '--with-compute-unit-price', computeUnitPrice, binaryPath]);
   if (result.status !== 0) throw new Error('solana program deploy failed.');
 } else console.log('Registry executable already matches; deployment skipped.');
@@ -66,32 +69,37 @@ const ro = (pubkey, isSigner = false) => ({ pubkey, isSigner, isWritable: false 
 const rw = (pubkey, isSigner = false) => ({ pubkey, isSigner, isWritable: true });
 let instruction;
 if (!info) {
-  instruction = new TransactionInstruction({ programId: program, keys: [rw(wallet.publicKey, true), ro(program), ro(programData), rw(config), ro(SystemProgram.programId), ro(eventAuthority), ro(program)], data: Buffer.concat([hash('global:init_config'), wallet.publicKey.toBuffer(), feeRecipient.toBuffer(), u64(fee)]) });
+  instruction = new TransactionInstruction({ programId: program, keys: [rw(authority.publicKey, true), ro(program), ro(programData), rw(config), ro(SystemProgram.programId), ro(eventAuthority), ro(program)], data: Buffer.concat([hash('global:init_config'), authority.publicKey.toBuffer(), feeRecipient.toBuffer(), u64(fee)]) });
 } else {
   if (!info.owner.equals(program) || info.data.length !== 80 || !info.data.subarray(0, 8).equals(hash('account:Config'))) throw new Error('Config has an unexpected owner or layout.');
   const admin = new PublicKey(info.data.subarray(8, 40));
   const currentRecipient = new PublicKey(info.data.subarray(40, 72));
   const currentFee = info.data.readBigUInt64LE(72);
   if (currentFee !== fee || !currentRecipient.equals(feeRecipient)) {
-    if (!admin.equals(wallet.publicKey)) throw new Error('The supplied keypair is not the current config admin.');
-    instruction = new TransactionInstruction({ programId: program, keys: [ro(wallet.publicKey, true), rw(config), ro(eventAuthority), ro(program)], data: Buffer.concat([hash('global:set_config'), admin.toBuffer(), feeRecipient.toBuffer(), u64(fee)]) });
+    if (!admin.equals(authority.publicKey)) throw new Error('The supplied authority is not the current config admin.');
+    instruction = new TransactionInstruction({ programId: program, keys: [ro(authority.publicKey, true), rw(config), ro(eventAuthority), ro(program)], data: Buffer.concat([hash('global:set_config'), admin.toBuffer(), feeRecipient.toBuffer(), u64(fee)]) });
   } else console.log('Registry config already matches; initialization skipped.');
 }
 if (instruction) {
-  const signature = await sendAndConfirmTransaction(connection, new Transaction().add(instruction), [wallet], { commitment: 'confirmed', preflightCommitment: 'confirmed' });
+  const transaction = new Transaction().add(instruction);
+  transaction.feePayer = wallet.publicKey;
+  const signers = authority.publicKey.equals(wallet.publicKey) ? [wallet] : [wallet, authority];
+  const signature = await sendAndConfirmTransaction(connection, transaction, signers, { commitment: 'confirmed', preflightCommitment: 'confirmed' });
   console.log(`Config transaction: ${signature}`);
 }
 const finalConfig = await connection.getAccountInfo(config);
 if (!finalConfig || finalConfig.data.readBigUInt64LE(72) !== fee || !new PublicKey(finalConfig.data.subarray(40, 72)).equals(feeRecipient)) throw new Error('Post-deployment registry verification failed.');
-// A fee sent to an account below its rent-exempt minimum fails the attest: the launch wallet holds SOL first.
+// A fee sent to an account below its rent-exempt minimum fails the attest: the recipient holds SOL first.
 const recipientLamports = await connection.getBalance(feeRecipient);
-if (recipientLamports < await connection.getMinimumBalanceForRentExemption(0)) console.log(`Fund the launch wallet ${feeRecipient.toBase58()} before the first attest: it holds ${recipientLamports} lamports.`);
+if (recipientLamports < await connection.getMinimumBalanceForRentExemption(0)) console.log(`Fund the fee recipient ${feeRecipient.toBase58()} before the first attest: it holds ${recipientLamports} lamports.`);
 const genesisHash = await connection.getGenesisHash();
 const cluster = { '5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d': 'mainnet' }[genesisHash] ?? (local ? 'localnet' : genesisHash);
+const programDataBytes = (await connection.getAccountInfo(programData)).data;
+const upgradeAuthority = programDataBytes[12] ? new PublicKey(programDataBytes.subarray(13, 45)).toBase58() : null;
 // One record per cluster, holding only what derives from the chain: never the RPC URL.
 const deployment = {
   cluster, genesisHash, programId: program.toBase58(), programData: programData.toBase58(), config: config.toBase58(), feeRecipient: feeRecipient.toBase58(),
-  upgradeAuthority: wallet.publicKey.toBase58(), admin: new PublicKey(finalConfig.data.subarray(8, 40)).toBase58(),
+  upgradeAuthority, admin: new PublicKey(finalConfig.data.subarray(8, 40)).toBase58(),
   attestFeeLamports: fee.toString(), elfSha256: createHash('sha256').update(elf).digest('hex'),
 };
 fs.mkdirSync(path.join(root, 'deployments'), { recursive: true });

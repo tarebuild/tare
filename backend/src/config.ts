@@ -26,15 +26,14 @@ const configured = parseEnv(z.object({
   TOKEN_VENUE: httpUrl.optional(),
   TOKEN_DEVELOPER_SHARE: z.coerce.number().min(0).max(1).optional(),
   TOKEN_DEVELOPER_LOCK: address.optional(),
-  // Trading fees: the DBC pool whose creator side the launch wallet claims, the slice of volume burned
-  // (basis points), where the rest of each claim goes, and the smallest claim worth a transaction.
+  // Trading fees: the DBC pool whose creator side the crank's wallet claims, the slice of volume burned
+  // (basis points), and the smallest claim worth a transaction. The rest of each claim stays in the wallet.
   TRADING_FEE_POOL: address.optional(),
   CRANK_TRADING_BURN_BPS: z.coerce.number().int().min(0).max(10_000).default(50),
-  CRANK_TRADING_RECIPIENT: address.default('9Hxi73ZUWmF3m1wMnqb3Mh7zqhGmcTYxkUvgB88BKCQm'),
   CRANK_TRADING_MIN_LAMPORTS: z.coerce.bigint().positive().default(50_000_000n),
   // The crank. The clip and the interval are the user's figures; the crank waits while either is unset.
-  LAUNCH_WALLET: address.optional(),
-  LAUNCH_WALLET_SECRET_KEY: z.string().optional(),
+  CRANK_WALLET: address.optional(),
+  CRANK_WALLET_SECRET_KEY: z.string().optional(),
   CRANK_CLIP_LAMPORTS: z.coerce.bigint().positive().optional(),
   CRANK_INTERVAL_SECONDS: z.coerce.number().int().min(60).optional(),
   CRANK_RESERVE_LAMPORTS: z.coerce.bigint().nonnegative().default(10_000_000n),

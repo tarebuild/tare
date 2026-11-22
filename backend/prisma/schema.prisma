@@ -28,6 +28,8 @@ model Record {
   slot             BigInt
   /// The attest fee this record paid to the launch wallet.
   feeLamports      BigInt   @default(0)
+  /// The wallet that fee was paid to: the registry's fee recipient at the time.
+  feeRecipient     String   @default("") @db.VarChar(44)
   signature        String   @db.VarChar(88)
   createdAt        DateTime @db.Timestamptz(3)
   flags            Flag[]
@@ -93,6 +95,7 @@ model Burn {
   key           String   @unique
   kind          String
   source        String   @default("attest")
+  wallet        String   @default("")
   spentLamports BigInt
   burned        BigInt
   claimedLamports BigInt @default(0)

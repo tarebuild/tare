@@ -75,6 +75,7 @@ export type RegistryRecordFact = {
   reportLocation: string
   slot: string
   feeLamports: string
+  feeRecipient: string
 }
 export type RegistryFlagFact = {
   address: string
@@ -131,6 +132,7 @@ export function registryFacts(tx: DecodedTransaction): RegistryFacts {
           reportLocation: value.report_location,
           slot: value.slot,
           feeLamports: value.fee_lamports,
+          feeRecipient: value.fee_recipient,
         })
       } else if (event.name === 'RecordFlagged') {
         const value = flagEvent.parse(event.data)
