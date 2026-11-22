@@ -1455,7 +1455,7 @@ $ docker run --rm tare-toolchain:<version> --version
         title: 'What it costs',
         body: (
           <p>
-            Attesting carries a fee in SOL, paid by the attester to the token&rsquo;s launch wallet. Checking costs nothing: it runs on
+            Attesting carries a fee in SOL, paid by the attester to the wallet that launched the token. Checking costs nothing: it runs on
             your machine. <L href="/docs/token">Token</L>
           </p>
         ),
@@ -2095,7 +2095,7 @@ $ tare attest`}</Shell>
             rows={[
               ['Program', <C key="p">{REGISTRY_PROGRAM_ID}</C>],
               ['Config', <C key="c">{REGISTRY_CONFIG}</C>],
-              [<span key="f">Fee recipient, the {TOKEN.ticker} launch wallet</span>, <C key="r">{FEE_RECIPIENT}</C>],
+              [<span key="f">Fee recipient, the wallet that launched {TOKEN.ticker}</span>, <C key="r">{FEE_RECIPIENT}</C>],
             ]}
           />
         ),
@@ -2140,7 +2140,7 @@ $ tare attest`}</Shell>
                   <C key="2">fee_recipient</C>,
                   <C key="2t">Pubkey</C>,
                   <span key="2w">
-                    The account every attest fee is paid to: the {TOKEN.ticker} launch wallet. <L href="/docs/token">Token</L>
+                    The account every attest fee is paid to: the wallet that launched {TOKEN.ticker}. <L href="/docs/token">Token</L>
                   </span>,
                 ],
                 [<C key="3">attest_fee_lamports</C>, <C key="3t">u64</C>, <span key="3w">The lamports <C>attest</C> moves from the attester to the fee recipient.</span>],
@@ -2535,8 +2535,8 @@ $ tare attest`}</Shell>
             <Table
               head={['Step', 'What happens']}
               rows={[
-                [<C key="1">tare attest</C>, 'A team publishes a proof. The same instruction pays the whole fee to the launch wallet.'],
-                [<b key="2">Buy</b>, `On a fixed interval, the crank on Tare's server signs as the launch wallet and buys ${TOKEN.ticker} through Jupiter with a fixed amount of SOL.`],
+                [<C key="1">tare attest</C>, 'A team publishes a proof. The same instruction pays the whole fee to the wallet that launched ' + TOKEN.ticker + '.'],
+                [<b key="2">Buy</b>, `On a fixed interval, the crank on Tare's server signs as that wallet and buys ${TOKEN.ticker} through Jupiter with a fixed amount of SOL.`],
                 [<b key="3">Burn</b>, `It burns every ${TOKEN.ticker} that swap delivered: the quote's minimum in the swap's own transaction, the rest right after.`],
               ]}
             />

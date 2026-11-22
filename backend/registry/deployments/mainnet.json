@@ -4,9 +4,9 @@
   "programId": "7viqDjx5k8ffnfnZiBv9dMhxzVhcGSYLMb5bKdDP1XtP",
   "programData": "GkHCmyMfup9Ffd2jHc2LCoeUyNfNgjzr1E5j673Xgy93",
   "config": "Fvcic6U24RfK7CG9a4rKNaRubMgsQZN3NpywXEoYUQkD",
-  "feeRecipient": "EvycjhbgcQDVN92xpPsdy6oLKezCcDiykg96g8ZXZDe9",
-  "upgradeAuthority": "9Hxi73ZUWmF3m1wMnqb3Mh7zqhGmcTYxkUvgB88BKCQm",
-  "admin": "9Hxi73ZUWmF3m1wMnqb3Mh7zqhGmcTYxkUvgB88BKCQm",
+  "feeRecipient": "9Hxi73ZUWmF3m1wMnqb3Mh7zqhGmcTYxkUvgB88BKCQm",
+  "upgradeAuthority": "287we9psyddZm8GADpMfUcHDhdY519HR5fFnkvZi85Hv",
+  "admin": "287we9psyddZm8GADpMfUcHDhdY519HR5fFnkvZi85Hv",
   "attestFeeLamports": "50000000",
   "elfSha256": "1b6dc7ef90d621d744194a3df3fba3f2aa173acc02d89b98d76a75dad757043f"
 }

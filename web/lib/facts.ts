@@ -80,7 +80,7 @@ export const TOKEN = {
   launch: 'Fair launch',
   allocation:
     "The whole supply goes to the public launch. The developer’s allocation is the developer’s own first buy in it, on the same terms as every buyer.",
-  fee: 'Attesting carries a fee in SOL, paid by the attester to the token’s launch wallet. A crank buys TARE on the market with it and burns it.',
+  fee: 'Attesting carries a fee in SOL, paid by the attester to the wallet that launched the token. A crank buys TARE on the market with it and burns it.',
   feeAsset: 'SOL',
   mint: process.env.NEXT_PUBLIC_TOKEN_MINT ?? '',
   venue: process.env.NEXT_PUBLIC_TOKEN_VENUE ?? '',
@@ -91,8 +91,8 @@ export const TOKEN = {
 export const REGISTRY_PROGRAM_ID = '7viqDjx5k8ffnfnZiBv9dMhxzVhcGSYLMb5bKdDP1XtP'
 /** Its Config account, the PDA of ["config"]. */
 export const REGISTRY_CONFIG = 'Fvcic6U24RfK7CG9a4rKNaRubMgsQZN3NpywXEoYUQkD'
-/** Config.fee_recipient: the TARE launch wallet every attest fee goes to. */
-export const FEE_RECIPIENT = 'EvycjhbgcQDVN92xpPsdy6oLKezCcDiykg96g8ZXZDe9'
+/** Config.fee_recipient: the deployer, the wallet that launched TARE, which every attest fee goes to. */
+export const FEE_RECIPIENT = '9Hxi73ZUWmF3m1wMnqb3Mh7zqhGmcTYxkUvgB88BKCQm'
 
 /** The X handle, with its @. Configuration point: set once the account exists. */
 export const X_HANDLE = process.env.NEXT_PUBLIC_X_HANDLE ?? ''
