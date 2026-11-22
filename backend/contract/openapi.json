@@ -3,7 +3,7 @@
   "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
   "info": {
     "title": "Tare API",
-    "version": "0.10.0",
+    "version": "0.11.0",
     "description": "Public reads and two size-capped, rate-limited JSON uploads. All fixture values are fictional."
   },
   "servers": [
@@ -19130,7 +19130,8 @@
           },
           "supply": {
             "type": "number",
-            "const": 1000000000
+            "const": 1000000000,
+            "description": "The supply minted at launch."
           },
           "mint": {
             "anyOf": [
@@ -19155,6 +19156,18 @@
                 "type": "null"
               }
             ]
+          },
+          "mintSupply": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The supply on chain now, in whole tokens, read at most once a minute; null before the mint exists or when the read fails."
           },
           "developerAllocationShare": {
             "anyOf": [
@@ -19366,6 +19379,7 @@
           "supply",
           "mint",
           "venue",
+          "mintSupply",
           "developerAllocationShare",
           "developerAllocationLock",
           "feesReceivedLamports",

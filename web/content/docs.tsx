@@ -10,6 +10,7 @@ import { C, List, Shell, Source, Steps, Table } from '@/components/docs/kit'
 import { featured } from '@/lib/bench'
 import { CORPORA, FEE_RECIPIENT, IDENTICAL, INSTALL, LIMITS, LINKS, REGISTRY_CONFIG, REGISTRY_PROGRAM_ID, SITE_URL, TOKEN, WEIGHTS } from '@/lib/facts'
 import { units } from '@/lib/format'
+import { TokenBurns, TokenFigures, TokenSupply } from '@/components/docs/Token'
 import { API_URL } from '@/lib/api'
 
 export type DocSection = { id: string; title: string; body: ReactNode }
@@ -21,6 +22,9 @@ const L = ({ href, children }: { href: string; children: ReactNode }) => (
     {children}
   </Link>
 )
+
+/** TARE's DAMM v2 pool since the curve migrated (DEPLOY.md, Trading fees). */
+const TARE_POOL = '3GP5PDmgpdgaTkddgTiSoQkQCxLpkswH6gmau6G3C6hU'
 
 /** The public repository, linked as its address. */
 const Repo = () => (
@@ -2489,8 +2493,11 @@ $ tare attest`}</Shell>
   },
 
   token: {
-    lead: `${TOKEN.ticker} is the token of the Tare registry. Every attested build reaches it through the attest fee.`,
-    banner: [{ t: TOKEN.ticker, c: 'white' }],
+    lead: `${TOKEN.ticker} is the token of the Tare registry. Two fees buy it on the market and burn it: the attest fee and its own trading fee.`,
+    banner: [
+      { t: TOKEN.ticker, c: 'white' },
+      { t: 'burn', c: 'red' },
+    ],
     sections: [
       {
         id: 'facts',
@@ -2500,9 +2507,9 @@ $ tare attest`}</Shell>
             head={['', '']}
             rows={[
               ['Ticker', TOKEN.ticker],
-              ['Supply', `${units(TOKEN.supply)}, fixed`],
+              ['Supply at launch', `${units(TOKEN.supply)}, with no mint authority`],
               ['Launch', TOKEN.launch],
-              ['Fee asset', TOKEN.feeAsset],
+              ['Pool', <span key="p">Meteora DAMM v2, <C>{TARE_POOL}</C></span>],
               ...(TOKEN.mint ? [['Mint', <C key="m">{TOKEN.mint}</C>]] : []),
               ...(TOKEN.venue
                 ? [
@@ -2524,22 +2531,88 @@ $ tare attest`}</Shell>
         body: <p>{TOKEN.allocation}</p>,
       },
       {
-        id: 'fee',
-        title: 'What the attest fee does',
+        id: 'burns',
+        title: 'Where the burns come from',
         body: (
           <>
             <p>
-              Building, weighing and proving cost nothing. <C>tare attest</C> carries a fee in SOL, the asset a team already holds to
-              deploy.
+              Both fees arrive at the wallet that launched {TOKEN.ticker}, <C>{FEE_RECIPIENT}</C>. A crank on Tare&rsquo;s server signs as
+              that wallet and spends only what the fees account for, never the wallet&rsquo;s other balance. Every{' '}
+              {TOKEN.ticker} it buys, it burns.
+            </p>
+            <TokenFigures />
+          </>
+        ),
+      },
+      {
+        id: 'attest',
+        title: 'The attest fee',
+        body: (
+          <>
+            <p>
+              Building, weighing, proving and checking cost nothing. <C>tare attest</C> carries a fee in {TOKEN.feeAsset}, the asset a
+              team already holds to deploy.
             </p>
             <Table
               head={['Step', 'What happens']}
               rows={[
-                [<C key="1">tare attest</C>, 'A team publishes a proof. The same instruction pays the whole fee to the wallet that launched ' + TOKEN.ticker + '.'],
-                [<b key="2">Buy</b>, `On a fixed interval, the crank on Tare's server signs as that wallet and buys ${TOKEN.ticker} through Jupiter with a fixed amount of SOL.`],
+                [<C key="1">tare attest</C>, `A team publishes a proof. The same instruction pays the whole fee to the wallet that launched ${TOKEN.ticker}.`],
+                [<b key="2">Buy</b>, `Once the attest fees received exceed what earlier attest buys spent by a fixed amount of SOL, the crank buys ${TOKEN.ticker} with that amount through Jupiter.`],
                 [<b key="3">Burn</b>, `It burns every ${TOKEN.ticker} that swap delivered: the quote's minimum in the swap's own transaction, the rest right after.`],
               ]}
             />
+          </>
+        ),
+      },
+      {
+        id: 'trading',
+        title: 'The trading fee',
+        body: (
+          <>
+            <p>
+              {TOKEN.ticker} launched on a Meteora dynamic bonding curve and trades on the DAMM v2 pool the curve migrated to. Both charge
+              3.5% of every trade. Of the volume traded:
+            </p>
+            <Table
+              head={['Share of volume', 'Goes to']}
+              rows={[
+                ['0.5%', `Burned: the crank buys ${TOKEN.ticker} with it and burns it.`],
+                ['2.3%', 'Kept by the claimer, the wallet that launched the token.'],
+                ['0.7%', 'Kept by Meteora, a fifth of every fee.'],
+              ]}
+            />
+            <Steps>
+              <li>
+                Once per interval the crank claims the pool&rsquo;s fees for the creator&rsquo;s side into the wallet. The burn share is{' '}
+                0.5 / (3.5 &times; 0.8) = 5/28 of each claim.
+              </li>
+              <li>
+                The same transaction burns 5/28 of the {TOKEN.ticker} the claim brought in.
+              </li>
+              <li>
+                5/28 of the SOL the claim brought in, read from that transaction&rsquo;s own balance change, goes through the same Jupiter
+                buy and burn as the attest fee.
+              </li>
+            </Steps>
+          </>
+        ),
+      },
+      {
+        id: 'check',
+        title: 'How to check',
+        body: (
+          <>
+            <p>
+              Every claim, buy and burn below links to its transaction. On an explorer, a claim moves the pool&rsquo;s fees to the wallet;
+              a buy spends SOL, receives {TOKEN.ticker} and burns it in the same transaction; a burn is a <C>BurnChecked</C> on the mint.
+              Each buy and burn names the claim it came from.
+            </p>
+            <p>
+              The burned total is the supply at launch less the mint&rsquo;s supply now, which any explorer or RPC reads from the mint
+              account. The same figures are at <C>GET {API_URL}/v1/token</C>.
+            </p>
+            <TokenSupply />
+            <TokenBurns />
           </>
         ),
       },

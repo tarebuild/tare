@@ -836,6 +836,7 @@
     "supply": 1000000000,
     "mint": null,
     "venue": null,
+    "mintSupply": null,
     "developerAllocationShare": null,
     "developerAllocationLock": null,
     "feesReceivedLamports": 0,

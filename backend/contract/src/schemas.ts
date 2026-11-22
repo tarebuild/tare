@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { Address, Base64, Signature, Timestamp } from './primitives.js'
 import { defineErrors } from './errors.js'
 
-export const CONTRACT_VERSION = '0.10.0'
+export const CONTRACT_VERSION = '0.11.0'
 export const DOCUMENT_VERSION = '1'
 export const Count = z.int().nonnegative()
 /** Uploaded u64 metadata preserves safe numbers and exact canonical decimal strings. */
@@ -289,7 +289,8 @@ export const Burn = z.strictObject({
   slot: Count, at: Timestamp,
 })
 export const TokenFacts = z.strictObject({
-  ticker: z.literal('TARE'), supply: z.literal(1000000000), mint: Address.nullable(), venue: z.url().nullable(),
+  ticker: z.literal('TARE'), supply: z.literal(1000000000).describe('The supply minted at launch.'), mint: Address.nullable(), venue: z.url().nullable(),
+  mintSupply: z.number().nonnegative().nullable().describe('The supply on chain now, in whole tokens, read at most once a minute; null before the mint exists or when the read fails.'),
   developerAllocationShare: z.number().min(0).max(1).nullable(),
   developerAllocationLock: Address.nullable().describe('The Streamflow lock holding the developer allocation.'),
   feesReceivedLamports: Count.describe('Attest fees paid to the launch wallet, summed over indexed records: the same sum as `RegistryTotals.feesAccruedLamports`. Trading fees are in `bySource.trading`.'),

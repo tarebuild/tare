@@ -8,7 +8,8 @@
     },
     "supply": {
       "type": "number",
-      "const": 1000000000
+      "const": 1000000000,
+      "description": "The supply minted at launch."
     },
     "mint": {
       "anyOf": [
@@ -33,6 +34,18 @@
           "type": "null"
         }
       ]
+    },
+    "mintSupply": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "The supply on chain now, in whole tokens, read at most once a minute; null before the mint exists or when the read fails."
     },
     "developerAllocationShare": {
       "anyOf": [
@@ -244,6 +257,7 @@
     "supply",
     "mint",
     "venue",
+    "mintSupply",
     "developerAllocationShare",
     "developerAllocationLock",
     "feesReceivedLamports",

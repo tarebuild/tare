@@ -15,7 +15,7 @@
     "paper": "python scripts/paper.py"
   },
   "dependencies": {
-    "@tare/contract": "file:vendor/tare-contract-0.8.0.tgz",
+    "@tare/contract": "file:vendor/tare-contract-0.11.0.tgz",
     "lenis": "^1.3.27",
     "next": "16.4.6",
     "react": "19.3.1",

@@ -688,3 +688,85 @@
     overflow-wrap: anywhere;
   }
 }
+
+/* ----- the token's figures and the crank's transactions (components/docs/Token.tsx) ----- */
+
+.figures :global(.table) tbody th {
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+  color: var(--ink);
+}
+.figures :global(.table) td {
+  color: var(--ink);
+}
+.figures tr[data-burned] th,
+.figures tr[data-burned] td {
+  color: var(--magenta);
+}
+.figures :global(.table) td:last-child {
+  font-weight: 600;
+}
+
+.unit {
+  margin-left: 0.35em;
+  font-size: var(--small-size);
+  font-weight: 500;
+  color: var(--ink-3);
+}
+
+.none {
+  color: var(--ink-3);
+}
+
+.sub {
+  display: block;
+  font-size: var(--small-size);
+  color: var(--ink-3);
+}
+
+.burns :global(.table) td {
+  white-space: nowrap;
+}
+
+/* The burned total beside the supply it came off: figures at size on one line, each with its label under it. */
+.supply {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s5) clamp(32px, 5vw, 64px);
+  margin: var(--s2) 0;
+}
+.supply > div {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+}
+.supply dt {
+  order: 2;
+  font-size: var(--small-size);
+  color: var(--ink-3);
+}
+.supply dd {
+  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+}
+.supply > div[data-c='magenta'] dd {
+  color: var(--magenta);
+}
+.supply > div[data-c='green'] dd {
+  color: var(--green);
+}
+.supply dd :global(.link) {
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+.supply > .check {
+  flex-basis: 100%;
+}
+.supply > .check dd {
+  font-size: 1rem;
+  letter-spacing: 0;
+  color: var(--ink);
+}

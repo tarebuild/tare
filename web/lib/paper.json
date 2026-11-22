@@ -2,7 +2,7 @@
   "title": "Tare: An Optimizing Build for Anchor Programs, Proven by Differential Execution",
   "subtitle": "Gross, tare and net compute for every instruction, and an on-chain registry of the evidence",
   "authors": "Tare",
-  "version": "1.0",
+  "version": "1.1",
   "date": "22 November 2026 (UTC)",
   "abstract": [
     "Tare is an optimizing build tool for Solana programs written in Anchor and a public on-chain registry of what it built. It compiles an unchanged Anchor workspace twice, once with stock Anchor and once with a second implementation of the Anchor language substituted at the dependency level, and then rewrites the linked sBPF bytecode. Every instruction receives three weights in compute units: gross (the stock build), net (the Tare build) and tare (their difference). The two builds are shown to behave identically by executing them side by side on a local SVM over a corpus of transactions, drawn from the program's own tests, from sequences generated from its IDL and from samples of its mainnet traffic, and comparing account bytes, lamports, account metadata, logs, return data and errors after every transaction. The result is published as a record in a registry program on Solana mainnet, from which anyone can rebuild both binaries and rerun the comparison. Over a corpus of 189 open-source Anchor programs, 1,187 measured instructions fall from 6,295,676 to 4,459,739 compute units and binaries from 38,786,032 to 30,970,216 bytes, with 257,892 transactions matched and none diverging."
@@ -56,7 +56,7 @@
     {
       "n": "10",
       "title": "Weighing Deployed Programs",
-      "page": 27
+      "page": 28
     },
     {
       "n": "11",
@@ -76,7 +76,7 @@
     {
       "n": "14",
       "title": "Conclusion",
-      "page": 35
+      "page": 36
     },
     {
       "n": "A",
@@ -95,5 +95,5 @@
     }
   ],
   "pages": 43,
-  "bytes": 398170
+  "bytes": 399774
 }

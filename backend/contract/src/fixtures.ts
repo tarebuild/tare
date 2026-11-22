@@ -129,10 +129,10 @@ export const fixtureWeighings: Record<string, s.WeighResponse> = {
 export const fixtureRecentWeighings = { items: [anchorSample, (fixtureWeighings['non-anchor'] as Extract<s.WeighResponse, { status: 'ready' }>).sample], asOf: at }
 export const emptyRegistryTotals: s.RegistryTotals = { records: 0, programs: 0, flags: 0, gross: 0, net: 0, tare: 0, corpus: 0, feesAccruedLamports: 0 }
 export const fixtureRegistryTotals: s.RegistryTotals = { records: 2, programs: 2, flags: 1, gross: 34500, net: 14100, tare: 20400, corpus: 123, feesAccruedLamports: 0 }
-export const fixtureToken: z.output<typeof s.TokenFacts> = { ticker: 'TARE', supply: 1000000000, mint: null, venue: null, developerAllocationShare: null, developerAllocationLock: null, feesReceivedLamports: 0, spentLamports: 0, burned: 0, burns: [],
+export const fixtureToken: z.output<typeof s.TokenFacts> = { ticker: 'TARE', supply: 1000000000, mint: null, venue: null, mintSupply: null, developerAllocationShare: null, developerAllocationLock: null, feesReceivedLamports: 0, spentLamports: 0, burned: 0, burns: [],
   bySource: { attest: { feesReceivedLamports: 0, spentLamports: 0, burned: 0 }, trading: { feesReceivedLamports: 0, keptLamports: 0, spentLamports: 0, burned: 0 } } }
 export const fixtureTokenBurning: z.output<typeof s.TokenFacts> = {
-  ...fixtureToken, mint: 'BW2pMhQQSwGui8bW1iW1AJUUhYtEAYMDhBAkVHDmSrcX', feesReceivedLamports: 100000000, spentLamports: 50000000, burned: 412913.586421,
+  ...fixtureToken, mint: 'BW2pMhQQSwGui8bW1iW1AJUUhYtEAYMDhBAkVHDmSrcX', mintSupply: 999587086.413579, feesReceivedLamports: 100000000, spentLamports: 50000000, burned: 412913.586421,
   bySource: { attest: { feesReceivedLamports: 100000000, spentLamports: 50000000, burned: 412913.586421 }, trading: { feesReceivedLamports: 0, keptLamports: 0, spentLamports: 0, burned: 0 } },
   burns: [
     { signature: '4zKGNEW2dKgKixRsyJQDL5rz8bGUo4JFv5yCXRN4tCWPeb9djBfav6HrCutzya1ihAGF6wxesNqBByzs8wDQFgvp', kind: 'burn', source: 'attest', spentLamports: 0, burned: 2031.552108, claimedLamports: 0, keptLamports: 0, claimSignature: null, slot: 381000140, at: '2026-11-22T21:00:14.000Z' },

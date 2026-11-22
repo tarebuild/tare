@@ -126,11 +126,25 @@ export function buildApp() {
     return json(c, await content.put('flag_input', value, bytes), 201)
   })
   routes.get('/v1/flag-inputs/:hash', async (c) => contentResponse(c, 'flag_input', await content.getBytes('flag_input', readParam(c, 'hash', s.Hash))))
+  // The mint's supply on chain, read at most once a minute through the registry's paced RPC.
+  let supplyRead: { at: number; value: Promise<number | null> } | null = null
+  const mintSupply = () => {
+    const rpc = registry.rpc()
+    if (!env.TOKEN_MINT || !rpc) return Promise.resolve(null)
+    if (!supplyRead || Date.now() - supplyRead.at > 60_000) {
+      const value = rpc.call('getTokenSupply', [env.TOKEN_MINT, { commitment: 'confirmed' }])
+        .then((result) => { const amount = (result as { value: { amount: string; decimals: number } }).value; return Number(BigInt(amount.amount)) / 10 ** amount.decimals })
+      value.catch(() => { supplyRead = null })
+      supplyRead = { at: Date.now(), value }
+    }
+    return supplyRead.value.catch(() => null)
+  }
   routes.get('/v1/token', async (c) => {
-    const [fees, sources, burns] = await Promise.all([
+    const [fees, sources, burns, supplyNow] = await Promise.all([
       db.record.aggregate({ _sum: { feeLamports: true } }),
       db.burn.groupBy({ by: ['source'], _sum: { spentLamports: true, burned: true, claimedLamports: true, keptLamports: true } }),
       db.burn.findMany({ orderBy: { slot: 'desc' }, take: 20 }),
+      mintSupply(),
     ])
     const decimals = burns[0]?.decimals ?? 6
     const tokens = (raw: bigint, d = decimals) => Number(raw) / 10 ** d
@@ -138,7 +152,7 @@ export function buildApp() {
     const total = (field: 'spentLamports' | 'burned') => (sum('attest')?.[field] ?? 0n) + (sum('trading')?.[field] ?? 0n)
     return json(c, {
       ...fixtureToken, mint: env.TOKEN_MINT ?? null, venue: env.TOKEN_VENUE ?? null,
-      developerAllocationShare: env.TOKEN_DEVELOPER_SHARE ?? null, developerAllocationLock: env.TOKEN_DEVELOPER_LOCK ?? null,
+      mintSupply: supplyNow, developerAllocationShare: env.TOKEN_DEVELOPER_SHARE ?? null, developerAllocationLock: env.TOKEN_DEVELOPER_LOCK ?? null,
       feesReceivedLamports: Number(fees._sum.feeLamports ?? 0n), spentLamports: Number(total('spentLamports')), burned: tokens(total('burned')),
       burns: burns.map((burn) => ({ signature: burn.signature, kind: burn.kind, source: burn.source, spentLamports: Number(burn.spentLamports),
         burned: tokens(burn.burned, burn.decimals), claimedLamports: Number(burn.claimedLamports), keptLamports: Number(burn.keptLamports), claimSignature: burn.claimSignature, slot: Number(burn.slot), at: burn.at.toISOString() })),
