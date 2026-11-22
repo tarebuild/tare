@@ -3,7 +3,9 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
+import { GitHubMark } from '@/components/GitHubMark'
 import { GROUPS, docHref } from '@/lib/docs'
+import { LINKS } from '@/lib/facts'
 import styles from './docs.module.css'
 
 export type SearchEntry = { href: string; page: string; section: string; text: string }
@@ -100,6 +102,10 @@ export function Rail({ index }: { index: SearchEntry[] }) {
               })}
             </div>
           ))}
+          <a href={LINKS.source} className={styles.source} target="_blank" rel="noreferrer">
+            <GitHubMark />
+            Source on GitHub
+          </a>
         </nav>
       )}
     </aside>

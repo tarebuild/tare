@@ -8,11 +8,12 @@ const PRODUCT = [
   { href: '/weigh', label: 'Weigh a program' },
   { href: '/bench', label: 'The benchmark' },
   { href: '/builds', label: 'The registry' },
+  { href: '/paper', label: 'The whitepaper' },
 ]
 
 export function Footer() {
   const outside = [
-    LINKS.source && { href: LINKS.source, label: 'Source' },
+    { href: LINKS.source, label: 'Source on GitHub' },
     LINKS.x && { href: LINKS.x, label: 'X' },
     { href: LINKS.solar, label: 'Solar, the idea Tare carries' },
   ].filter((l): l is { href: string; label: string } => Boolean(l))

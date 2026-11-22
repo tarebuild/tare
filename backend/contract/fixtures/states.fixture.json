@@ -836,7 +836,11 @@
     "supply": 1000000000,
     "mint": null,
     "venue": null,
-    "developerAllocationShare": null
+    "developerAllocationShare": null,
+    "feesReceivedLamports": 0,
+    "spentLamports": 0,
+    "burned": 0,
+    "burns": []
   },
   "upload": {
     "hash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",

@@ -5,6 +5,7 @@ use spl_token_interface::state::{Account as TokenAccount, AccountState as TokenS
 const TOKEN: &str = "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA";
 const TOKEN_2022: &str = "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb";
 const ASSOCIATED: &str = "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL";
+pub(crate) const LOADER_UPGRADEABLE: &str = "BPFLoaderUpgradeab1e11111111111111111111111";
 impl Generator<'_> {
     pub(super) fn resolve_spl_programs(&mut self, ix: &Value) -> Result<()> {
         let instruction = required_str(ix, "name")?;
@@ -96,6 +97,9 @@ impl Generator<'_> {
                 .0);
             }
         }
+        if hint.account_type.as_deref()==Some("ProgramData") {
+            return Ok(Address::find_program_address(&[self.program.as_ref()],&LOADER_UPGRADEABLE.parse()?).0);
+        }
         Ok(self.account_bindings.get(&(normalize(ix),normalize(name))).copied().unwrap_or_else(||self.identity(name)))
     }
     pub(super) fn account_fixture(&mut self, ty: &str, hint: &AccountHint, instruction:&str, account_name:&str) -> Result<Account> {
@@ -140,6 +144,15 @@ impl Generator<'_> {
                     rent_epoch: 0,
                 });
             }
+        }
+        if ty == "ProgramData" {
+            // The loader's ProgramData header, with the instruction's first signer as upgrade authority.
+            let signer=self.idl["instructions"].as_array().and_then(|ixs|ixs.iter().find(|ix|normalize(ix["name"].as_str().unwrap_or(""))==normalize(instruction)))
+                .and_then(|ix|ix["accounts"].as_array()).and_then(|accounts|accounts.iter().find(|a|a["signer"]==true||a["isSigner"]==true))
+                .and_then(|a|a["name"].as_str()).map(str::to_owned).context("ProgramData fixture needs a signer in its instruction")?;
+            let authority=self.bound_identity(instruction,&signer);
+            let mut data=3u32.to_le_bytes().to_vec();data.extend(0u64.to_le_bytes());data.push(1);data.extend(authority.to_bytes());
+            return Ok(Account{lamports:program_rent(data.len()),data,owner:LOADER_UPGRADEABLE.parse()?,executable:false,rent_epoch:0});
         }
         let discriminator=account_discriminator(self.idl,ty)?;
         let fields=self.encode_defined(ty)?;

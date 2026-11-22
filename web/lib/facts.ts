@@ -86,8 +86,13 @@ export const TOKEN = {
   venue: process.env.NEXT_PUBLIC_TOKEN_VENUE ?? '',
 } as const
 
-/** The tare_registry program's mainnet address. Configuration point: blank until the registry is deployed. */
-export const REGISTRY_PROGRAM_ID = process.env.NEXT_PUBLIC_REGISTRY_PROGRAM_ID ?? ''
+// The registry on mainnet (backend/registry/deployments/mainnet.json).
+/** The tare_registry program. */
+export const REGISTRY_PROGRAM_ID = '7viqDjx5k8ffnfnZiBv9dMhxzVhcGSYLMb5bKdDP1XtP'
+/** Its Config account, the PDA of ["config"]. */
+export const REGISTRY_CONFIG = 'Fvcic6U24RfK7CG9a4rKNaRubMgsQZN3NpywXEoYUQkD'
+/** Config.fee_recipient: the TARE launch wallet every attest fee goes to. */
+export const FEE_RECIPIENT = 'EvycjhbgcQDVN92xpPsdy6oLKezCcDiykg96g8ZXZDe9'
 
 /** The X handle, with its @. Configuration point: set once the account exists. */
 export const X_HANDLE = process.env.NEXT_PUBLIC_X_HANDLE ?? ''
@@ -103,7 +108,7 @@ export const EXAMPLE_PROGRAMS = [
 export const LINKS = {
   solar: 'https://www.paradigm.xyz/writing/solar-100-faster-solidity',
   x: process.env.NEXT_PUBLIC_X_URL ?? '',
-  source: process.env.NEXT_PUBLIC_SOURCE_URL ?? '',
+  source: 'https://github.com/tarebuild/tare',
 } as const
 
 /**

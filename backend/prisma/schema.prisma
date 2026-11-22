@@ -87,6 +87,21 @@ model KeeperTransaction {
   @@index([state, createdAt])
 }
 
+/// One confirmed crank transaction, read once from its balance changes on chain.
+model Burn {
+  signature     String   @id
+  key           String   @unique
+  kind          String
+  spentLamports BigInt
+  burned        BigInt
+  decimals      Int
+  slot          BigInt
+  at            DateTime
+
+  @@map("burns")
+  @@index([slot])
+}
+
 /// The latest completed on-demand sample for a deployed program.
 model Weighing {
   program   String   @id @db.VarChar(44)

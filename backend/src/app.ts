@@ -126,7 +126,22 @@ export function buildApp() {
     return json(c, await content.put('flag_input', value, bytes), 201)
   })
   routes.get('/v1/flag-inputs/:hash', async (c) => contentResponse(c, 'flag_input', await content.getBytes('flag_input', readParam(c, 'hash', s.Hash))))
-  routes.get('/v1/token', (c) => json(c, { ...fixtureToken, mint: env.TOKEN_MINT ?? null, venue: env.TOKEN_VENUE ?? null }))
+  routes.get('/v1/token', async (c) => {
+    const [fees, spent, burns] = await Promise.all([
+      db.record.aggregate({ _sum: { feeLamports: true } }),
+      db.burn.aggregate({ _sum: { spentLamports: true, burned: true } }),
+      db.burn.findMany({ select: { signature: true, kind: true, spentLamports: true, burned: true, decimals: true, slot: true, at: true }, orderBy: { slot: 'desc' } }),
+    ])
+    const tokens = (raw: bigint, decimals: number) => Number(raw) / 10 ** decimals
+    return json(c, {
+      ...fixtureToken, mint: env.TOKEN_MINT ?? null, venue: env.TOKEN_VENUE ?? null,
+      developerAllocationShare: env.TOKEN_DEVELOPER_SHARE ?? null, developerAllocationLock: env.TOKEN_DEVELOPER_LOCK ?? null,
+      feesReceivedLamports: Number(fees._sum.feeLamports ?? 0n), spentLamports: Number(spent._sum.spentLamports ?? 0n),
+      burned: burns.length ? tokens(spent._sum.burned ?? 0n, burns[0]!.decimals) : 0,
+      burns: burns.slice(0, 20).map((burn) => ({ signature: burn.signature, kind: burn.kind, spentLamports: Number(burn.spentLamports),
+        burned: tokens(burn.burned, burn.decimals), slot: Number(burn.slot), at: burn.at.toISOString() })),
+    })
+  })
   app.route('/', routes)
   app.route('/fixture', fixtureRoutes())
   return { app, start: () => registry.start(), close: async () => {

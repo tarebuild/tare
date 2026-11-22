@@ -3,7 +3,9 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
+import { LINKS } from '@/lib/facts'
 import { PLACES } from '@/lib/places'
+import { GitHubMark } from './GitHubMark'
 import { Lockup } from './Logo'
 import styles from './Nav.module.css'
 
@@ -99,6 +101,9 @@ export function Nav() {
               </Link>
             ))}
           </nav>
+          <a href={LINKS.source} className={styles.source} target="_blank" rel="noreferrer" aria-label="Source on GitHub" title="Source on GitHub">
+            <GitHubMark size={18} />
+          </a>
           <Link href="/docs/install" prefetch={false} className={`btn ${styles.action}`} data-size="sm">
             Install
           </Link>
@@ -122,9 +127,14 @@ export function Nav() {
             </Link>
           ))}
         </nav>
-        <Link href="/docs/install" onClick={() => setOpen(false)} className="btn">
-          Install
-        </Link>
+        <div className={styles.sheetActions}>
+          <Link href="/docs/install" onClick={() => setOpen(false)} className="btn">
+            Install
+          </Link>
+          <a href={LINKS.source} className="btn" data-kind="secondary" target="_blank" rel="noreferrer">
+            <GitHubMark /> Source on GitHub
+          </a>
+        </div>
       </div>
     </>
   )

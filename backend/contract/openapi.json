@@ -3,7 +3,7 @@
   "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
   "info": {
     "title": "Tare API",
-    "version": "0.8.0",
+    "version": "0.9.0",
     "description": "Public reads and two size-capped, rate-limited JSON uploads. All fixture values are fictional."
   },
   "servers": [
@@ -19167,6 +19167,76 @@
                 "type": "null"
               }
             ]
+          },
+          "feesReceivedLamports": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991,
+            "description": "Attest fees paid to the launch wallet, summed over indexed records: the same sum as `RegistryTotals.feesAccruedLamports`."
+          },
+          "spentLamports": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991,
+            "description": "SOL the crank spent buying TARE, summed over its transactions."
+          },
+          "burned": {
+            "type": "number",
+            "minimum": 0,
+            "description": "TARE the crank burned, in whole tokens."
+          },
+          "burns": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "signature": {
+                  "type": "string",
+                  "minLength": 64,
+                  "maxLength": 88,
+                  "description": "The crank transaction, checkable on any explorer."
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "buy",
+                    "burn"
+                  ],
+                  "description": "`buy`: the swap and the burn of its quoted minimum in one transaction. `burn`: the rest that swap delivered."
+                },
+                "spentLamports": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991,
+                  "description": "SOL the launch wallet spent in this transaction, its fee left out."
+                },
+                "burned": {
+                  "type": "number",
+                  "minimum": 0,
+                  "description": "TARE burned in this transaction, in whole tokens."
+                },
+                "slot": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+                }
+              },
+              "required": [
+                "signature",
+                "kind",
+                "spentLamports",
+                "burned",
+                "slot",
+                "at"
+              ],
+              "additionalProperties": false
+            },
+            "description": "The latest crank transactions, newest first, at most 20."
           }
         },
         "required": [
@@ -19174,7 +19244,11 @@
           "supply",
           "mint",
           "venue",
-          "developerAllocationShare"
+          "developerAllocationShare",
+          "feesReceivedLamports",
+          "spentLamports",
+          "burned",
+          "burns"
         ],
         "additionalProperties": false
       }

@@ -28,9 +28,33 @@ export function PageHead({ title, lead, children }: { title: TitleBlock[]; lead?
   )
 }
 
-export function Page({ children, narrow }: { children: ReactNode; narrow?: boolean }) {
+/** A working page. `wide` is for a view in regions, which uses more of a wide frame than reading pages do. */
+export function Page({ children, narrow, wide }: { children: ReactNode; narrow?: boolean; wide?: boolean }) {
   return (
-    <div className={`wrap ${styles.page}`} data-narrow={narrow || undefined}>
+    <div className={`wrap ${styles.page}`} data-narrow={narrow || undefined} data-wide={wide || undefined}>
+      {children}
+    </div>
+  )
+}
+
+/**
+ * A working view's two regions on a wide screen: the work, and what belongs to the thing in hand beside it,
+ * which stays in view with its own scroll. On a phone both open into the page's one column, each `Slot` at its
+ * place in the task's order.
+ */
+export function Regions({ work, aside }: { work: ReactNode; aside: ReactNode }) {
+  return (
+    <div className={styles.regions}>
+      <div className={styles.work}>{work}</div>
+      <aside className={styles.aside}>{aside}</aside>
+    </div>
+  )
+}
+
+/** One part of a region, with its place in the phone's single column. */
+export function Slot({ order, children }: { order: number; children: ReactNode }) {
+  return (
+    <div className={styles.slot} style={{ '--order': order } as React.CSSProperties}>
       {children}
     </div>
   )

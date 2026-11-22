@@ -24,6 +24,8 @@ const configured = parseEnv(z.object({
   PINATA_GATEWAY: httpUrl.optional(),
   TOKEN_MINT: address.optional(),
   TOKEN_VENUE: httpUrl.optional(),
+  TOKEN_DEVELOPER_SHARE: z.coerce.number().min(0).max(1).optional(),
+  TOKEN_DEVELOPER_LOCK: address.optional(),
   // The crank. The clip and the interval are the user's figures; the crank waits while either is unset.
   LAUNCH_WALLET: address.optional(),
   LAUNCH_WALLET_SECRET_KEY: z.string().optional(),

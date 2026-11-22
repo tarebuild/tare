@@ -1,0 +1,99 @@
+{
+  "title": "Tare: An Optimizing Build for Anchor Programs, Proven by Differential Execution",
+  "subtitle": "Gross, tare and net compute for every instruction, and an on-chain registry of the evidence",
+  "authors": "Tare",
+  "version": "1.0",
+  "date": "22 November 2026 (UTC)",
+  "abstract": [
+    "Tare is an optimizing build tool for Solana programs written in Anchor and a public on-chain registry of what it built. It compiles an unchanged Anchor workspace twice, once with stock Anchor and once with a second implementation of the Anchor language substituted at the dependency level, and then rewrites the linked sBPF bytecode. Every instruction receives three weights in compute units: gross (the stock build), net (the Tare build) and tare (their difference). The two builds are shown to behave identically by executing them side by side on a local SVM over a corpus of transactions, drawn from the program's own tests, from sequences generated from its IDL and from samples of its mainnet traffic, and comparing account bytes, lamports, account metadata, logs, return data and errors after every transaction. The result is published as a record in a registry program on Solana mainnet, from which anyone can rebuild both binaries and rerun the comparison. Over a corpus of 189 open-source Anchor programs, 1,187 measured instructions fall from 6,295,676 to 4,459,739 compute units and binaries from 38,786,032 to 30,970,216 bytes, with 257,892 transactions matched and none diverging."
+  ],
+  "sections": [
+    {
+      "n": "1",
+      "title": "Introduction",
+      "page": 1
+    },
+    {
+      "n": "2",
+      "title": "Background",
+      "page": 3
+    },
+    {
+      "n": "3",
+      "title": "The Three Weights",
+      "page": 5
+    },
+    {
+      "n": "4",
+      "title": "System Overview",
+      "page": 8
+    },
+    {
+      "n": "5",
+      "title": "The Build",
+      "page": 9
+    },
+    {
+      "n": "6",
+      "title": "The Front Stage: A Second Implementation of the Anchor Language",
+      "page": 12
+    },
+    {
+      "n": "7",
+      "title": "The Bytecode Stage",
+      "page": 16
+    },
+    {
+      "n": "8",
+      "title": "The Differential Proof",
+      "page": 20
+    },
+    {
+      "n": "9",
+      "title": "The Registry",
+      "page": 24
+    },
+    {
+      "n": "10",
+      "title": "Weighing Deployed Programs",
+      "page": 27
+    },
+    {
+      "n": "11",
+      "title": "Evaluation",
+      "page": 29
+    },
+    {
+      "n": "12",
+      "title": "Related Work",
+      "page": 33
+    },
+    {
+      "n": "13",
+      "title": "The Road",
+      "page": 35
+    },
+    {
+      "n": "14",
+      "title": "Conclusion",
+      "page": 35
+    },
+    {
+      "n": "A",
+      "title": "Registry Reference",
+      "page": 39
+    },
+    {
+      "n": "B",
+      "title": "Constructs Exercised by the Corpus",
+      "page": 40
+    },
+    {
+      "n": "C",
+      "title": "Benchmark Results by Program",
+      "page": 41
+    }
+  ],
+  "pages": 43,
+  "bytes": 398170
+}

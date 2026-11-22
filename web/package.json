@@ -11,7 +11,8 @@
     "start": "next start --hostname 0.0.0.0 --port ${PORT:-7801}",
     "start:local": "next start --hostname 127.0.0.1 --port 7801",
     "typecheck": "tsc --noEmit",
-    "sync": "node scripts/sync.mjs"
+    "sync": "node scripts/sync.mjs",
+    "paper": "python scripts/paper.py"
   },
   "dependencies": {
     "@tare/contract": "file:vendor/tare-contract-0.8.0.tgz",

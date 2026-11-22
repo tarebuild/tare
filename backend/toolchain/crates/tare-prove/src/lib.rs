@@ -612,8 +612,18 @@ impl<'a> Generator<'a> {
                 let path = required_str(seed, "path")?;
                 let args=array(ix,"args")?;
                 let index=self.hints.instruction_args.iter().find(|(name,_)|normalize(name)==normalize(ix["name"].as_str().unwrap_or(""))).and_then(|(_,aliases)|aliases.get(path));
-                let arg=args.iter().find(|a|a["name"].as_str()==Some(path)).or_else(||index.and_then(|i|args.get(*i))).ok_or_else(||anyhow!("PDA seed argument {path} is missing"))?;
-                let bytes=self.encode(&arg["type"],required_str(arg,"name")?)?;
+                let mut arg=args.iter().find(|a|a["name"].as_str()==Some(path)).or_else(||index.and_then(|i|args.get(*i))).cloned();
+                if arg.is_none() {
+                    // A field of a struct argument, such as `args.program`: the same field the instruction data encodes.
+                    let mut parts=path.split('.');
+                    arg=args.iter().find(|a|a["name"].as_str()==parts.next()).cloned();
+                    for field in parts {
+                        let defined=arg.as_ref().and_then(|a|a["type"]["defined"].as_str().or_else(||a["type"]["defined"]["name"].as_str())).map(str::to_owned);
+                        arg=defined.and_then(|name|self.idl["types"].as_array().and_then(|ts|ts.iter().find(|t|t["name"].as_str()==Some(&name))).and_then(|t|t["type"]["fields"].as_array()).and_then(|fs|fs.iter().find(|f|f["name"].as_str()==Some(field))).cloned());
+                    }
+                }
+                let arg=arg.ok_or_else(||anyhow!("PDA seed argument {path} is missing"))?;
+                let bytes=self.encode(&arg["type"],required_str(&arg,"name")?)?;
                 if arg["type"]=="string"||arg["type"].get("vec").is_some()||(self.scenario.is_some()&&arg["type"]=="bytes"){Ok(bytes[4..].to_vec())}else{Ok(bytes)}
             }
             other => bail!("generated corpus does not implement PDA seed kind {other}"),
@@ -1419,6 +1429,16 @@ fn run_inner(program_id: &str, stock: &[u8], tare: &[u8], corpus: &Corpus, exter
             .context("load stock ELF")?;
         let mut net = initial;
         net.add_program(program, tare).context("load Tare ELF")?;
+        // add_program writes a fresh ProgramData; a starting ProgramData keeps its header (upgrade authority).
+        let programdata=Address::find_program_address(&[program.as_ref()],&spl::LOADER_UPGRADEABLE.parse()?).0;
+        if let Some(start)=sequence.starting_accounts.iter().find(|a|a.address==programdata.to_string()) {
+            let start=start.account()?;
+            for svm in [&mut gross,&mut net] {
+                let mut loaded=svm.get_account(&programdata).context("loaded ProgramData")?;
+                loaded.data[..start.data.len().min(45)].copy_from_slice(&start.data[..start.data.len().min(45)]);
+                svm.set_account(programdata,loaded)?;
+            }
+        }
         for alias in &corpus.program_aliases {
             let address: Address = alias.parse()?;
             gross
@@ -1438,6 +1458,8 @@ fn run_inner(program_id: &str, stock: &[u8], tare: &[u8], corpus: &Corpus, exter
             .iter()
             .map(|a| a.address.parse())
             .collect::<std::result::Result<_, _>>()?;
+        // The program's ProgramData holds its ELF, which differs between the builds by design.
+        tracked.remove(&programdata);
         for case in &sequence.cases {
             let mut gross_fork = gross.clone();
             let mut net_fork = net.clone();
@@ -1452,7 +1474,7 @@ fn run_inner(program_id: &str, stock: &[u8], tare: &[u8], corpus: &Corpus, exter
                 .collect::<Result<Vec<_>>>()?;
             for ix in &instructions {
                 for account in &ix.accounts {
-                    if account.pubkey != program {
+                    if account.pubkey != program && account.pubkey != programdata {
                         tracked.insert(account.pubkey);
                     }
                 }

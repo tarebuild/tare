@@ -113,6 +113,29 @@
   color: var(--ink);
 }
 
+/* The source, under the chapters: the one way out of the docs the rail carries. */
+.source {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  justify-self: start;
+  padding: 7px 12px;
+  border-radius: 9px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-3);
+  transition: color var(--t-hover) var(--ease), background var(--t-hover) var(--ease);
+}
+.source:active {
+  background: rgb(255 255 255 / 0.14);
+}
+@media (hover: hover) and (pointer: fine) {
+  .source:hover {
+    color: var(--ink);
+    background: rgb(255 255 255 / 0.06);
+  }
+}
+
 .children {
   display: grid;
   gap: 1px;

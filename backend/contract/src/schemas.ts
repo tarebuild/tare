@@ -1,8 +1,8 @@
 import { z } from 'zod'
-import { Address, Base64, Timestamp } from './primitives.js'
+import { Address, Base64, Signature, Timestamp } from './primitives.js'
 import { defineErrors } from './errors.js'
 
-export const CONTRACT_VERSION = '0.8.0'
+export const CONTRACT_VERSION = '0.9.0'
 export const DOCUMENT_VERSION = '1'
 export const Count = z.int().nonnegative()
 /** Uploaded u64 metadata preserves safe numbers and exact canonical decimal strings. */
@@ -277,9 +277,21 @@ export const WeighResponse = z.discriminatedUnion('status', [
 ])
 export const RecentWeighings = z.strictObject({ items: z.array(ProgramSample), asOf: Timestamp })
 export const UploadResult = z.strictObject({ hash: Hash, location: z.string().min(1) })
+export const Burn = z.strictObject({
+  signature: Signature.describe('The crank transaction, checkable on any explorer.'),
+  kind: z.enum(['buy', 'burn']).describe('`buy`: the swap and the burn of its quoted minimum in one transaction. `burn`: the rest that swap delivered.'),
+  spentLamports: Count.describe('SOL the launch wallet spent in this transaction, its fee left out.'),
+  burned: z.number().nonnegative().describe('TARE burned in this transaction, in whole tokens.'),
+  slot: Count, at: Timestamp,
+})
 export const TokenFacts = z.strictObject({
   ticker: z.literal('TARE'), supply: z.literal(1000000000), mint: Address.nullable(), venue: z.url().nullable(),
   developerAllocationShare: z.number().min(0).max(1).nullable(),
+  developerAllocationLock: Address.nullable().describe('The Streamflow lock holding the developer allocation.'),
+  feesReceivedLamports: Count.describe('Attest fees paid to the launch wallet, summed over indexed records: the same sum as `RegistryTotals.feesAccruedLamports`.'),
+  spentLamports: Count.describe('SOL the crank spent buying TARE, summed over its transactions.'),
+  burned: z.number().nonnegative().describe('TARE the crank burned, in whole tokens.'),
+  burns: z.array(Burn).describe('The latest crank transactions, newest first, at most 20.'),
 })
 export const SCENARIOS = ['default', 'empty', 'waiting', 'ready', 'anchor', 'non-anchor', 'not-program', 'no-transactions', 'calls-failed', 'sampling', 'with-records', 'report-unavailable', 'diverged'] as const
 export type Scenario = typeof SCENARIOS[number]
@@ -295,6 +307,8 @@ export type WeighResponse = z.output<typeof WeighResponse>
 export type ProgramSample = z.output<typeof ProgramSample>
 export type RegistryTotals = z.output<typeof RegistryTotals>
 export type UploadResult = z.output<typeof UploadResult>
+export type Burn = z.output<typeof Burn>
+export type TokenFacts = z.output<typeof TokenFacts>
 export type PublicConfig = z.output<typeof PublicConfig>
 
 export type UploadOptimization = z.output<typeof UploadOptimization>

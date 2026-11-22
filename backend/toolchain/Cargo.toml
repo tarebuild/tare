@@ -4,7 +4,7 @@ members = ["crates/tare", "crates/tare-prove", "crates/tare-opt", "crates/tare-l
 default-members = ["crates/tare"]
 
 [workspace.package]
-version = "0.7.1"
+version = "0.7.2"
 edition = "2021"
 license = "Apache-2.0"
 

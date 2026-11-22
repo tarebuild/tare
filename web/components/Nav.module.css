@@ -133,6 +133,36 @@
     0 14px 40px rgb(0 0 0 / 0.62);
 }
 
+/* The source, one round press beside Install. */
+.source {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  color: rgb(255 255 255 / 0.72);
+  transition: color var(--t-hover) var(--ease), background var(--t-hover) var(--ease), transform var(--t-press) var(--ease);
+}
+.source:active {
+  transform: scale(0.94);
+}
+@media (hover: hover) and (pointer: fine) {
+  .source:hover {
+    color: #fff;
+    background: rgb(255 255 255 / 0.16);
+  }
+}
+.source:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.sheetActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+}
+
 .capsule .action {
   height: 36px;
   padding: 0 16px;
@@ -190,7 +220,7 @@
     animation: sheetIn 0.24s var(--ease) backwards;
   }
   .sheetPlace,
-  .sheet > :global(.btn) {
+  .sheetActions {
     animation: placeIn 0.5s var(--out) backwards;
   }
   .sheetPlace:nth-child(2) {
@@ -202,7 +232,7 @@
   .sheetPlace:nth-child(n + 4) {
     animation-delay: 150ms;
   }
-  .sheet > :global(.btn) {
+  .sheetActions {
     animation-delay: 200ms;
   }
 }
@@ -231,6 +261,9 @@
   .capsule {
     width: 100%;
     justify-content: space-between;
+  }
+  .source {
+    margin-left: auto;
   }
   .toggle {
     display: inline-flex;

@@ -129,7 +129,14 @@ export const fixtureWeighings: Record<string, s.WeighResponse> = {
 export const fixtureRecentWeighings = { items: [anchorSample, (fixtureWeighings['non-anchor'] as Extract<s.WeighResponse, { status: 'ready' }>).sample], asOf: at }
 export const emptyRegistryTotals: s.RegistryTotals = { records: 0, programs: 0, flags: 0, gross: 0, net: 0, tare: 0, corpus: 0, feesAccruedLamports: 0 }
 export const fixtureRegistryTotals: s.RegistryTotals = { records: 2, programs: 2, flags: 1, gross: 34500, net: 14100, tare: 20400, corpus: 123, feesAccruedLamports: 0 }
-export const fixtureToken: z.output<typeof s.TokenFacts> = { ticker: 'TARE', supply: 1000000000, mint: null, venue: null, developerAllocationShare: null }
+export const fixtureToken: z.output<typeof s.TokenFacts> = { ticker: 'TARE', supply: 1000000000, mint: null, venue: null, developerAllocationShare: null, developerAllocationLock: null, feesReceivedLamports: 0, spentLamports: 0, burned: 0, burns: [] }
+export const fixtureTokenBurning: z.output<typeof s.TokenFacts> = {
+  ...fixtureToken, mint: 'BW2pMhQQSwGui8bW1iW1AJUUhYtEAYMDhBAkVHDmSrcX', feesReceivedLamports: 100000000, spentLamports: 50000000, burned: 412913.586421,
+  burns: [
+    { signature: '4zKGNEW2dKgKixRsyJQDL5rz8bGUo4JFv5yCXRN4tCWPeb9djBfav6HrCutzya1ihAGF6wxesNqBByzs8wDQFgvp', kind: 'burn', spentLamports: 0, burned: 2031.552108, slot: 381000140, at: '2026-11-22T21:00:14.000Z' },
+    { signature: '4qnML9cJBeJT6qSbmv486WycqzZwmoAmbrzssZxMQyw5Z6g4m9ZYkNACdNL3GHzpca1f7zW7P5UiZ4ZdiKKDKFSR', kind: 'buy', spentLamports: 50000000, burned: 410882.034313, slot: 381000128, at: '2026-11-22T21:00:09.000Z' },
+  ],
+}
 export const emptyBench: s.BenchResults = {
   schemaVersion: '1', fixture: false, toolchainVersion: null, generatedAt: null, programs: [],
   totals: { programs: 0, measured: 0, notBuilt: 0, instructions: 0, weights: { gross: 0, net: 0, tare: 0, inputs: 0 }, binarySize: { gross: 0, net: 0, tare: 0 }, rentLamports: { gross: 0, net: 0, tare: 0 }, corpus: { tests: 0, generated: 0, mainnet: 0 } },

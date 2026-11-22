@@ -18,7 +18,7 @@
     "start:indexer": "node scripts/start-service.mjs indexer",
     "start:crank": "node scripts/start-service.mjs crank",
     "db:migrate": "prisma migrate deploy",
-    "test": "node --import tsx --test src/compute.test.ts src/registry.test.ts",
+    "test": "node --import tsx --test src/compute.test.ts src/registry.test.ts src/burns.test.ts",
     "weigh:record": "tsx src/weigh-record.ts",
     "release:package": "node scripts/package-release.mjs"
   },

@@ -6,6 +6,7 @@
 import { Connection, PublicKey, type AddressLookupTableAccount } from '@solana/web3.js'
 import { NATIVE_MINT, createBurnCheckedInstruction, getAssociatedTokenAddressSync } from '@solana/spl-token'
 import { CONTRACT_VERSION } from '@tare/contract'
+import { burnFacts } from './burns.js'
 import { env } from './config.js'
 import { createDb } from './db.js'
 import { createApi } from './engines/server/app.js'
@@ -80,9 +81,28 @@ async function buyback(now: number) {
   }
 }
 
+/** Each confirmed crank transaction, read once from chain: the SOL the wallet spent and the TARE it burned. */
+async function recordBurns() {
+  const { signer, mint } = settings!
+  const rows = await database.db.keeperTransaction.findMany({ where: { state: 'confirmed', OR: [{ key: { startsWith: 'buyback:' } }, { key: { startsWith: 'burn:' } }] }, orderBy: { createdAt: 'asc' } })
+  const recorded = new Set((await database.db.burn.findMany({ select: { signature: true } })).map((row) => row.signature))
+  for (const row of rows) {
+    if (recorded.has(row.signature)) continue
+    const tx = await connection!.getParsedTransaction(row.signature, { commitment: 'confirmed', maxSupportedTransactionVersion: 0 })
+    if (!tx?.meta || tx.meta.err || tx.blockTime == null) continue
+    const { spentLamports, burned } = burnFacts(tx, signer.publicKey, mint)
+    await database.db.burn.create({ data: {
+      signature: row.signature, key: row.key, kind: row.key.startsWith('buyback:') ? 'buy' : 'burn',
+      spentLamports, burned, decimals: mintInfo!.decimals, slot: BigInt(tx.slot), at: new Date(tx.blockTime * 1000),
+    } })
+    log({ event: 'burn_recorded', signature: row.signature, spentLamports: spentLamports.toString(), burned: burned.toString() })
+  }
+}
+
 const scheduler = createScheduler([
   { name: 'resume', everyMs: 0, run: () => journal!.resume() },
   { name: 'buyback', everyMs: settings?.intervalMs ?? 0, run: buyback },
+  { name: 'burns', everyMs: 30_000, run: recordBurns },
 ], { onError: (task, error) => log({ event: 'crank_task_failed', task, message: error instanceof Error ? error.message : 'unknown' }) })
 
 const runtime = createKeeperRuntime({

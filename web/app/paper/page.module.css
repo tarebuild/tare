@@ -1,0 +1,132 @@
+/* The paper's own title, under the page's mono line. */
+.title {
+  display: block;
+  max-width: 24em;
+  font-size: clamp(1.25rem, 2.2vw, 1.875rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.subtitle {
+  display: block;
+  margin-top: var(--s2);
+  max-width: 32em;
+  color: var(--ink-2);
+  text-wrap: balance;
+}
+
+/* The paper's first page beside its abstract; the page itself is the one picture here. */
+.paper {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+}
+
+.cover {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 0.5) inset,
+    0 30px 80px -24px rgb(0 0 0 / 0.9),
+    0 0 0 1px var(--line);
+  transition:
+    transform var(--t-panel) var(--out),
+    box-shadow var(--t-panel) var(--ease);
+}
+.cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (hover: hover) and (pointer: fine) {
+  .cover:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 0.5) inset,
+      0 44px 100px -24px rgb(0 0 0 / 0.95),
+      0 0 0 1px color-mix(in srgb, var(--green) 60%, transparent);
+  }
+}
+.cover:active {
+  transform: translateY(-2px);
+  transition-duration: var(--t-press);
+}
+.cover:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+}
+
+.side {
+  display: grid;
+  gap: var(--s7);
+  min-width: 0;
+}
+
+.abstract {
+  display: grid;
+  gap: var(--s4);
+  max-width: var(--measure);
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+.abstract p:first-child {
+  color: var(--ink);
+}
+
+/* The sections in order, one to a hairline, their numbers in mono. */
+.contents {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(24px, 4vw, 64px);
+  border-bottom: 1px solid var(--line);
+}
+.contents li {
+  display: grid;
+  grid-template-columns: 3ch minmax(0, 1fr) auto;
+  gap: var(--s4);
+  align-items: baseline;
+  padding-block: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 1.0625rem;
+  letter-spacing: -0.014em;
+}
+.contents li :first-child,
+.contents li :nth-child(3) {
+  color: var(--ink-3);
+  font-size: 0.875rem;
+}
+
+.bib {
+  margin: 0;
+  padding: var(--s5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  font-family: var(--mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  overflow-x: auto;
+}
+
+@media (max-width: 860px) {
+  .paper {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cover {
+    width: min(100%, 360px);
+  }
+  .contents {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

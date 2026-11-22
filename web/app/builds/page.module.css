@@ -61,19 +61,3 @@
   display: grid;
   gap: var(--s7);
 }
-
-.two {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--s7) clamp(32px, 5vw, 80px);
-  align-items: stretch;
-}
-.two > section {
-  grid-template-rows: auto 1fr;
-}
-
-@media (max-width: 900px) {
-  .two {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}

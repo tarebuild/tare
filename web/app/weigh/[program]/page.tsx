@@ -6,7 +6,7 @@ import { CommandLine, CopyButton } from '@/components/Copy'
 import { Records } from '@/components/Records'
 import { Resample } from '@/components/Resample'
 import { Beam } from '@/components/Scale'
-import { Chip, Page, PageHead, Panel, Section, Stat, Stats, State, type TitleBlock } from '@/components/ui'
+import { Chip, Page, PageHead, Panel, Regions, Section, Slot, Stat, Stats, State, type TitleBlock } from '@/components/ui'
 import { api, read, scenario } from '@/lib/api'
 import { instructionName } from '@/lib/bench'
 import { LIMITS } from '@/lib/facts'
@@ -87,39 +87,63 @@ export default async function WeighProgram({ params, searchParams }: Props) {
 
   const { sample, records } = result
   return (
-    <Page>
+    <Page wide>
       <Head program={program} sample={sample} />
-      <Stats>
-        <Stat value={size(sample.binarySize)[0]} unit={size(sample.binarySize)[1]} label="Binary size" />
-        <Stat value={sol(sample.rentLamports)} unit="SOL" label="Rent locked" />
-        <Stat value={units(sample.instructions.length)} label="Instructions seen" />
-      </Stats>
-      {sample.instructions.length > 0 && <Where sample={sample} />}
-      <Section title="Compute by instruction" id="compute-h" side={`Sampled ${stamp(sample.sampledAt)}`}>
-        {result.status === 'calls_failed' ? (
-          <State c="red" word="Failing" title="Every recent call failed">
-            This program was called in the sampled window, but every call that ran it failed, so there is no compute to group.
-            {sample.signaturesFailed != null && sample.signaturesExamined != null && (
-              <>
-                {' '}
-                {units(sample.signaturesFailed)} of the {units(sample.signaturesExamined)} recent signatures read were failed transactions.
-              </>
-            )}{' '}
-            Its size and rent above are read from the program account.
-          </State>
-        ) : result.status === 'no_transactions' || sample.instructions.length === 0 ? (
-          <State word="Quiet" title="No recent transactions">
-            This program has not been called in the sampled window, so there is no compute to group. Its size and rent above are read
-            from the program account.
-          </State>
-        ) : (
-          <Panel flush>
-            <Sampled sample={sample} />
-          </Panel>
-        )}
-      </Section>
-      <RecordsOf program={program} records={records} />
-      <FromSource program={program} />
+      <Regions
+        work={
+          <>
+            {sample.instructions.length > 0 && (
+              <Slot order={2}>
+                <Where sample={sample} />
+              </Slot>
+            )}
+            <Slot order={3}>
+              <Section title="Compute by instruction" id="compute-h" side={`Sampled ${stamp(sample.sampledAt)}`}>
+                {result.status === 'calls_failed' ? (
+                  <State c="red" word="Failing" title="Every recent call failed">
+                    This program was called in the sampled window, but every call that ran it failed, so there is no compute to group.
+                    {sample.signaturesFailed != null && sample.signaturesExamined != null && (
+                      <>
+                        {' '}
+                        {units(sample.signaturesFailed)} of the {units(sample.signaturesExamined)} recent signatures read were failed transactions.
+                      </>
+                    )}{' '}
+                    Its size and rent are read from the program account.
+                  </State>
+                ) : result.status === 'no_transactions' || sample.instructions.length === 0 ? (
+                  <State word="Quiet" title="No recent transactions">
+                    This program has not been called in the sampled window, so there is no compute to group. Its size and rent are read from
+                    the program account.
+                  </State>
+                ) : (
+                  <Panel flush>
+                    <Sampled sample={sample} />
+                  </Panel>
+                )}
+              </Section>
+            </Slot>
+            {records.length > 0 && (
+              <Slot order={4}>
+                <RecordsOf program={program} records={records} />
+              </Slot>
+            )}
+          </>
+        }
+        aside={
+          <>
+            <Slot order={1}>
+              <Stats>
+                <Stat value={size(sample.binarySize)[0]} unit={size(sample.binarySize)[1]} label="Binary size" />
+                <Stat value={sol(sample.rentLamports)} unit="SOL" label="Rent locked" />
+                <Stat value={units(sample.instructions.length)} label="Instructions seen" />
+              </Stats>
+            </Slot>
+            <Slot order={5}>
+              <FromSource program={program} />
+            </Slot>
+          </>
+        }
+      />
     </Page>
   )
 }

@@ -75,7 +75,7 @@ The client validates responses. `ApiClientError` exposes `code`, `status`, and `
 | GET `/v1/reports/{hash}` | Normalized ProofReport with explicit Accept: application/json; otherwise original bytes |
 | POST `/v1/flag-inputs` | UploadFlagInput JSON returns 201 `{hash,location}` |
 | GET `/v1/flag-inputs/{hash}` | Normalized FlagInput with explicit Accept: application/json; otherwise original bytes |
-| GET `/v1/token` | Token facts; unknown values null |
+| GET `/v1/token` | Token facts (unknown values null), attest fees received, SOL the crank spent, TARE burned, and the latest burns with their signatures |
 
 Records use keyset pagination by descending slot then address. Pass `page.nextCursor` unchanged and retain the program filter. A missing record fails with `RECORD_NOT_FOUND`; missing report content leaves its record and flags visible with `status: "report_unavailable"`.
 

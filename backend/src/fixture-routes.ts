@@ -105,6 +105,6 @@ export function fixtureRoutes() {
     if (!value) fail('FLAG_INPUT_UNAVAILABLE', 'The pinned flag input is unavailable.', { retryable: true })
     return contentResponse(c, 'flag_input', Buffer.from(JSON.stringify(value)))
   })
-  app.get('/v1/token', (c) => json(c, f.fixtureToken))
+  app.get('/v1/token', (c) => json(c, empty(c.get('scenario')) ? f.fixtureToken : f.fixtureTokenBurning))
   return app
 }

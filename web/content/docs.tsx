@@ -8,7 +8,7 @@ import type { ReactNode } from 'react'
 import { Compatibility } from '@/components/docs/Compatibility'
 import { C, List, Shell, Source, Steps, Table } from '@/components/docs/kit'
 import { featured } from '@/lib/bench'
-import { CORPORA, IDENTICAL, INSTALL, LIMITS, REGISTRY_PROGRAM_ID, SITE_URL, TOKEN, WEIGHTS } from '@/lib/facts'
+import { CORPORA, FEE_RECIPIENT, IDENTICAL, INSTALL, LIMITS, LINKS, REGISTRY_CONFIG, REGISTRY_PROGRAM_ID, SITE_URL, TOKEN, WEIGHTS } from '@/lib/facts'
 import { units } from '@/lib/format'
 import { API_URL } from '@/lib/api'
 
@@ -20,6 +20,13 @@ const L = ({ href, children }: { href: string; children: ReactNode }) => (
   <Link href={href} className="link">
     {children}
   </Link>
+)
+
+/** The public repository, linked as its address. */
+const Repo = () => (
+  <a href={LINKS.source} className="link">
+    {LINKS.source.replace(/^https:\/\//, '')}
+  </a>
 )
 
 const NL = String.fromCharCode(10)
@@ -134,6 +141,16 @@ export const CONTENT: Record<string, Doc> = {
               bytecode stage over the linked program.
             </p>
           </>
+        ),
+      },
+      {
+        id: 'source',
+        title: 'The source',
+        body: (
+          <p>
+            Every part of Tare is public at <Repo />, under Apache-2.0: the CLI and its crates in <C>backend/toolchain</C>, the registry
+            program in <C>backend/registry</C>, the API in <C>backend/src</C> and the benchmark in <C>backend/bench</C>.
+          </p>
         ),
       },
       {
@@ -328,9 +345,33 @@ export const CONTENT: Record<string, Doc> = {
             </p>
           </>
         ) : (
+          <p>
+            Build it from source, <a href="#source" className="link">below</a>.
+          </p>
+        ),
+      },
+      {
+        id: 'source',
+        title: 'Build from source',
+        body: (
           <>
-            <p>Build the binary from the toolchain workspace with Cargo:</p>
-            <Shell>{`$ cargo install --path toolchain/crates/tare`}</Shell>
+            <p>
+              The source is at <Repo />. Build the CLI with Cargo:
+            </p>
+            <Shell>{`
+$ git clone ${LINKS.source}
+$ cd tare
+$ cargo build --release --manifest-path backend/toolchain/Cargo.toml -p tare
+`}</Shell>
+            <p>
+              The binary is <C>backend/toolchain/target/release/tare</C>; put its folder on your <C>PATH</C>. It reads Tare&rsquo;s
+              implementation of the Anchor crates from the clone it was built in, so keep the clone where it is, or set{' '}
+              <C>TARE_HOME</C> to its <C>backend/toolchain</C>.
+            </p>
+            <p>
+              Builds without <C>--host</C> run in the image <C>tare-toolchain:&lt;version&gt;</C>, which you build from the same clone.{' '}
+              <L href="/docs/build/container#image">Building the image</L>
+            </p>
           </>
         ),
       },
@@ -770,6 +811,26 @@ bytecode: <n> instructions rewritten; <linked> -> <optimized> bytes
             inside it. The image pins its Rust base by digest, the Agave release and platform tools by checksum, and its system packages
             by a dated snapshot.
           </p>
+        ),
+      },
+      {
+        id: 'image',
+        title: 'Building the image',
+        body: (
+          <>
+            <p>
+              The image is built from <C>backend/</C> in a clone of <Repo />, tagged with the CLI&rsquo;s version:
+            </p>
+            <Shell>{`
+$ cd backend
+$ docker build --platform linux/amd64 -f toolchain/image/Dockerfile -t tare-toolchain:<version> .
+$ docker run --rm tare-toolchain:<version> --version
+`}</Shell>
+            <p>
+              It carries the pinned tools, the CLI and Tare&rsquo;s implementation of the Anchor crates. The workspace is mounted into
+              it at <C>/workspace</C>.
+            </p>
+          </>
         ),
       },
       {
@@ -2010,7 +2071,7 @@ $ tare attest`}</Shell>
         body: (
           <p>
             The registry is an Anchor program, built with <C>tare build</C> like any other. Its weights and its proof are a record like
-            any other.
+            any other. Its source is <C>backend/registry</C> at <Repo />.
           </p>
         ),
       },
@@ -2018,64 +2079,137 @@ $ tare attest`}</Shell>
   },
 
   'registry/accounts': {
-    lead: 'The three accounts of tare_registry.',
+    lead: 'The three accounts of tare_registry, field by field, as the program lays them out.',
     banner: [
+      { t: 'Config', c: 'white' },
       { t: 'Record', c: 'blue' },
       { t: 'Flag', c: 'red' },
     ],
     sections: [
       {
+        id: 'mainnet',
+        title: 'On mainnet',
+        body: (
+          <Table
+            head={['', 'Address']}
+            rows={[
+              ['Program', <C key="p">{REGISTRY_PROGRAM_ID}</C>],
+              ['Config', <C key="c">{REGISTRY_CONFIG}</C>],
+              [<span key="f">Fee recipient, the {TOKEN.ticker} launch wallet</span>, <C key="r">{FEE_RECIPIENT}</C>],
+            ]}
+          />
+        ),
+      },
+      {
+        id: 'layout',
+        title: 'Addresses and layout',
+        body: (
+          <>
+            <Table
+              head={['Account', 'Seeds', 'Size', 'Discriminator']}
+              rows={[
+                [<L key="1" href="#config">Config</L>, <C key="1s">[&quot;config&quot;]</C>, '80 bytes', <C key="1d">9b0caae01efacc82</C>],
+                [
+                  <L key="2" href="#record">Record</L>,
+                  <C key="2s">[&quot;record&quot;, program, report_hash, attester]</C>,
+                  '1,128 bytes',
+                  <C key="2d">fee975fc4ca6928b</C>,
+                ],
+                [<L key="3" href="#flag">Flag</L>, <C key="3s">[&quot;flag&quot;, record, input_hash]</C>, '628 bytes', <C key="3d">9cdd99865493a536</C>],
+              ]}
+            />
+            <p>
+              Every address is a PDA of the registry program over those seeds. Each account starts with its 8-byte discriminator, the
+              first 8 bytes of the SHA-256 of <C>account:&lt;Name&gt;</C>, and its fields follow in Borsh, in the order below. A string or
+              byte vector is a little-endian <C>u32</C> length and then its bytes. A record and a flag are allocated at their bounds, so
+              each takes its full size whatever its strings hold.
+            </p>
+          </>
+        ),
+      },
+      {
         id: 'config',
         title: 'Config',
         body: (
-          <Table
-            head={['Field', 'What it is']}
-            rows={[
-              ['admin', 'The key that can change the config.'],
-              ['fee recipient', <span key="r">The account every attest fee is paid to: the {TOKEN.ticker} launch wallet. <L href="/docs/token">Token</L></span>],
-              ['attest fee', 'In lamports.'],
-            ]}
-          />
+          <>
+            <Table
+              head={['Field', 'Type', 'What it is']}
+              rows={[
+                [<C key="1">admin</C>, <C key="1t">Pubkey</C>, <span key="1w">The key that signs <C>set_config</C>.</span>],
+                [
+                  <C key="2">fee_recipient</C>,
+                  <C key="2t">Pubkey</C>,
+                  <span key="2w">
+                    The account every attest fee is paid to: the {TOKEN.ticker} launch wallet. <L href="/docs/token">Token</L>
+                  </span>,
+                ],
+                [<C key="3">attest_fee_lamports</C>, <C key="3t">u64</C>, <span key="3w">The lamports <C>attest</C> moves from the attester to the fee recipient.</span>],
+              ]}
+            />
+            <p>
+              There is one config. <C>tare attest</C> reads the fee and the fee recipient from it before it sends anything.
+            </p>
+          </>
         ),
       },
       {
         id: 'record',
         title: 'Record',
         body: (
-          <Table
-            head={['Field', 'What it is']}
-            rows={[
-              ['program', 'The address the build is for.'],
-              ['stock build hash, tare build hash', 'SHA-256 of each binary.'],
-              ['source repository, commit', 'Where the source is and which commit was built.'],
-              ['toolchain version', 'Which tare made the build.'],
-              ['corpus hash, counts', 'The corpus and its three counts.'],
-              ['gross total, net total', 'The summed weights.'],
-              ['report hash, location', 'The pinned proof report.'],
-              ['attester, slot', 'Who wrote it, and when.'],
-            ]}
-          />
+          <>
+            <Table
+              head={['Field', 'Type', 'What it is']}
+              rows={[
+                [<C key="1">program</C>, <C key="1t">Pubkey</C>, 'The program address the build is for.'],
+                [<C key="2">stock_build_hash</C>, <C key="2t">[u8; 32]</C>, 'SHA-256 of the stock binary.'],
+                [<C key="3">tare_build_hash</C>, <C key="3t">[u8; 32]</C>, 'SHA-256 of the Tare binary.'],
+                [<C key="4">source_repository</C>, <C key="4t">String</C>, 'The public repository the build came from. 1 to 256 UTF-8 bytes.'],
+                [<C key="5">source_commit</C>, <C key="5t">Vec&lt;u8&gt;</C>, 'The commit that was built, as its raw object id: 20 bytes for SHA-1, 32 for SHA-256.'],
+                [<C key="6">toolchain_version</C>, <C key="6t">String</C>, 'The tare version that made both builds. 1 to 64 UTF-8 bytes.'],
+                [<C key="7">corpus_hash</C>, <C key="7t">[u8; 32]</C>, <span key="7w">The hash of every input the proof ran. <L href="/docs/prove/corpora">Corpora</L></span>],
+                [<C key="8">tests_count</C>, <C key="8t">u64</C>, "Transactions from the program's own tests."],
+                [<C key="9">generated_count</C>, <C key="9t">u64</C>, 'Instruction sequences generated from the IDL.'],
+                [<C key="10">mainnet_count</C>, <C key="10t">u64</C>, 'Transactions sampled from mainnet.'],
+                [<C key="11">gross</C>, <C key="11t">u64</C>, 'Summed compute units of the stock build.'],
+                [<C key="12">net</C>, <C key="12t">u64</C>, 'Summed compute units of the Tare build.'],
+                [<C key="13">report_hash</C>, <C key="13t">[u8; 32]</C>, <span key="13w">SHA-256 of the pinned proof report. <L href="/docs/prove/report">proof.json</L></span>],
+                [<C key="14">report_location</C>, <C key="14t">String</C>, 'Where the report is pinned. 1 to 512 UTF-8 bytes.'],
+                [<C key="15">attester</C>, <C key="15t">Pubkey</C>, 'The key that signed attest.'],
+                [<C key="16">slot</C>, <C key="16t">u64</C>, 'The slot the record was written in.'],
+              ]}
+            />
+            <p>
+              No instruction writes to a record after <C>attest</C> creates it.
+            </p>
+          </>
         ),
       },
       {
         id: 'flag',
         title: 'Flag',
         body: (
-          <Table
-            head={['Field', 'What it is']}
-            rows={[
-              ['record', 'The record it is filed against.'],
-              ['input hash, location', 'The pinned diverging input.'],
-              ['flagger, slot', 'Who filed it, and when.'],
-            ]}
-          />
+          <>
+            <Table
+              head={['Field', 'Type', 'What it is']}
+              rows={[
+                [<C key="1">record</C>, <C key="1t">Pubkey</C>, 'The record it is filed against.'],
+                [<C key="2">input_hash</C>, <C key="2t">[u8; 32]</C>, 'SHA-256 of the pinned input on which the two builds differ.'],
+                [<C key="3">input_location</C>, <C key="3t">String</C>, 'Where the input is pinned. 1 to 512 UTF-8 bytes.'],
+                [<C key="4">flagger</C>, <C key="4t">Pubkey</C>, 'The key that signed flag.'],
+                [<C key="5">slot</C>, <C key="5t">u64</C>, 'The slot the flag was written in.'],
+              ]}
+            />
+            <p>
+              The seeds hold one flag per record and input. No instruction writes to a flag after <C>flag</C> creates it.
+            </p>
+          </>
         ),
       },
     ],
   },
 
   'registry/instructions': {
-    lead: 'The four instructions of tare_registry, each with its event.',
+    lead: 'The four instructions of tare_registry: their arguments, accounts, checks, events and errors.',
     banner: [
       { t: 'attest', c: 'blue' },
       { t: 'flag', c: 'red' },
@@ -2085,13 +2219,258 @@ $ tare attest`}</Shell>
         id: 'instructions',
         title: 'Instructions',
         body: (
+          <>
+            <Table
+              head={['Instruction', 'Discriminator', 'Signer', 'Emits']}
+              rows={[
+                [<L key="1" href="#init_config">init_config</L>, <C key="1d">17eb73e8a86001e7</C>, "The registry program's upgrade authority", <L key="1e" href="#config-events">ConfigInitialized</L>],
+                [<L key="2" href="#set_config">set_config</L>, <C key="2d">6c9e9aafd4623442</C>, 'The admin', <L key="2e" href="#config-events">ConfigUpdated</L>],
+                [<L key="3" href="#attest">attest</L>, <C key="3d">53947877908b75a0</C>, 'The attester', <L key="3e" href="#record-attested">RecordAttested</L>],
+                [<L key="4" href="#flag">flag</L>, <C key="4d">469724ffe3d02839</C>, 'The flagger', <L key="4e" href="#record-flagged">RecordFlagged</L>],
+              ]}
+            />
+            <p>
+              The discriminator is the first 8 bytes of the SHA-256 of <C>global:&lt;instruction&gt;</C>, followed by the arguments in
+              Borsh. Every instruction ends with two more accounts, the event authority (the PDA of <C>[&quot;__event_authority&quot;]</C>)
+              and the registry program itself, through which it emits its event.
+            </p>
+          </>
+        ),
+      },
+      {
+        id: 'init_config',
+        title: 'init_config',
+        body: (
+          <>
+            <p>Creates the config. It runs once: a second call fails, since the config account already exists.</p>
+            <Table
+              head={['Argument', 'Type']}
+              rows={[
+                [<C key="1">admin</C>, <C key="1t">Pubkey</C>],
+                [<C key="2">fee_recipient</C>, <C key="2t">Pubkey</C>],
+                [<C key="3">attest_fee_lamports</C>, <C key="3t">u64</C>],
+              ]}
+            />
+            <Table
+              head={['Account', 'Access', 'What it is']}
+              rows={[
+                [<C key="1">authority</C>, 'Signer, writable', "The registry program's upgrade authority. Pays the config's rent."],
+                [<C key="2">registry_program</C>, 'Read', <span key="2w">The registry program. Its program-data address has to be <C>program_data</C>.</span>],
+                [<C key="3">program_data</C>, 'Read', <span key="3w">The program&rsquo;s program-data account. Its upgrade authority has to be <C>authority</C>.</span>],
+                [<C key="4">config</C>, 'Writable, created', <span key="4w">The PDA of <C>[&quot;config&quot;]</C>.</span>],
+                [<C key="5">system_program</C>, 'Read', ''],
+              ]}
+            />
+            <p>
+              Raises <L href="#errors">ProgramDataMismatch</L> or <L href="#errors">Unauthorized</L>.
+            </p>
+          </>
+        ),
+      },
+      {
+        id: 'set_config',
+        title: 'set_config',
+        body: (
+          <>
+            <p>Replaces all three fields of the config. Passing another key as <C>new_admin</C> hands the config over to it.</p>
+            <Table
+              head={['Argument', 'Type']}
+              rows={[
+                [<C key="1">new_admin</C>, <C key="1t">Pubkey</C>],
+                [<C key="2">fee_recipient</C>, <C key="2t">Pubkey</C>],
+                [<C key="3">attest_fee_lamports</C>, <C key="3t">u64</C>],
+              ]}
+            />
+            <Table
+              head={['Account', 'Access', 'What it is']}
+              rows={[
+                [<C key="1">admin</C>, 'Signer', <span key="1w">The config&rsquo;s current admin.</span>],
+                [<C key="2">config</C>, 'Writable', <span key="2w">The PDA of <C>[&quot;config&quot;]</C>.</span>],
+              ]}
+            />
+            <p>
+              Raises <L href="#errors">Unauthorized</L> when the signer is not the config&rsquo;s admin.
+            </p>
+          </>
+        ),
+      },
+      {
+        id: 'attest',
+        title: 'attest',
+        body: (
+          <>
+            <p>
+              Writes a record and pays the attest fee from the attester to the fee recipient, in the same instruction. It takes one
+              argument, <C>args</C>, a struct whose fields become the record&rsquo;s.
+            </p>
+            <Table
+              head={['Field of args', 'Type', 'Bound']}
+              rows={[
+                [<C key="1">program</C>, <C key="1t">Pubkey</C>, ''],
+                [<C key="2">stock_build_hash</C>, <C key="2t">[u8; 32]</C>, ''],
+                [<C key="3">tare_build_hash</C>, <C key="3t">[u8; 32]</C>, ''],
+                [<C key="4">source_repository</C>, <C key="4t">String</C>, '1 to 256 bytes'],
+                [<C key="5">source_commit</C>, <C key="5t">Vec&lt;u8&gt;</C>, '20 or 32 bytes'],
+                [<C key="6">toolchain_version</C>, <C key="6t">String</C>, '1 to 64 bytes'],
+                [<C key="7">corpus_hash</C>, <C key="7t">[u8; 32]</C>, ''],
+                [<C key="8">tests_count</C>, <C key="8t">u64</C>, ''],
+                [<C key="9">generated_count</C>, <C key="9t">u64</C>, ''],
+                [<C key="10">mainnet_count</C>, <C key="10t">u64</C>, ''],
+                [<C key="11">gross</C>, <C key="11t">u64</C>, ''],
+                [<C key="12">net</C>, <C key="12t">u64</C>, ''],
+                [<C key="13">report_hash</C>, <C key="13t">[u8; 32]</C>, ''],
+                [<C key="14">report_location</C>, <C key="14t">String</C>, '1 to 512 bytes'],
+              ]}
+            />
+            <Table
+              head={['Account', 'Access', 'What it is']}
+              rows={[
+                [<C key="1">attester</C>, 'Signer, writable', "Pays the fee and the record's rent."],
+                [<C key="2">config</C>, 'Read', <span key="2w">The PDA of <C>[&quot;config&quot;]</C>.</span>],
+                [<C key="3">fee_recipient</C>, 'Writable', <span key="3w">A system account, and the one <C>Config.fee_recipient</C> names.</span>],
+                [
+                  <C key="4">record</C>,
+                  'Writable, created',
+                  <span key="4w">
+                    The PDA of <C>[&quot;record&quot;, program, report_hash, attester]</C>.
+                  </span>,
+                ],
+                [<C key="5">system_program</C>, 'Read', ''],
+              ]}
+            />
+            <Steps>
+              <li>Checks the bound of every string and of the commit.</li>
+              <li>
+                Transfers <C>Config.attest_fee_lamports</C> from the attester to the fee recipient.
+              </li>
+              <li>
+                Writes the record, with the attester&rsquo;s key and the current slot, and emits <L href="#record-attested">RecordAttested</L>.
+              </li>
+            </Steps>
+            <p>
+              The same key attesting the same report for the same program again fails, since that record already exists. Raises{' '}
+              <L href="#errors">RepositoryLength</L>, <L href="#errors">CommitLength</L>, <L href="#errors">VersionLength</L>,{' '}
+              <L href="#errors">LocationLength</L> or <L href="#errors">FeeRecipientMismatch</L>.
+            </p>
+          </>
+        ),
+      },
+      {
+        id: 'flag',
+        title: 'flag',
+        body: (
+          <>
+            <p>Writes a flag against a record.</p>
+            <Table
+              head={['Argument', 'Type', 'Bound']}
+              rows={[
+                [<C key="1">input_hash</C>, <C key="1t">[u8; 32]</C>, ''],
+                [<C key="2">input_location</C>, <C key="2t">String</C>, '1 to 512 bytes'],
+              ]}
+            />
+            <Table
+              head={['Account', 'Access', 'What it is']}
+              rows={[
+                [<C key="1">flagger</C>, 'Signer, writable', "Pays the flag's rent."],
+                [<C key="2">record</C>, 'Read', 'The record the flag is filed against.'],
+                [<C key="3">flag</C>, 'Writable, created', <span key="3w">The PDA of <C>[&quot;flag&quot;, record, input_hash]</C>.</span>],
+                [<C key="4">system_program</C>, 'Read', ''],
+              ]}
+            />
+            <p>
+              The program writes the flag; <C>tare flag</C> sends it only after the input diverges on a local rebuild of the record.{' '}
+              <L href="/docs/check/flag">tare flag</L> Raises <L href="#errors">LocationLength</L>.
+            </p>
+          </>
+        ),
+      },
+      {
+        id: 'events',
+        title: 'Events',
+        body: (
+          <p>
+            Events go out with <C>emit_cpi!</C>: the program calls itself through the event authority, and the event is the data of that
+            inner instruction, so it stays in the transaction however long its logs run. The data is <C>e445a52e51cb9a1d</C>, then the
+            event&rsquo;s 8-byte discriminator (the first 8 bytes of the SHA-256 of <C>event:&lt;Name&gt;</C>), then its fields in Borsh.
+            The registry&rsquo;s pages are read from these events.
+          </p>
+        ),
+      },
+      {
+        id: 'config-events',
+        title: 'ConfigInitialized and ConfigUpdated',
+        body: (
+          <>
+            <p>
+              Discriminators <C>b531c89c13a7b25b</C> and <C>28f1e67a0b13c6c2</C>. Both carry the config as it now stands.
+            </p>
+            <Table
+              head={['Field', 'Type']}
+              rows={[
+                [<C key="1">admin</C>, <C key="1t">Pubkey</C>],
+                [<C key="2">fee_recipient</C>, <C key="2t">Pubkey</C>],
+                [<C key="3">attest_fee_lamports</C>, <C key="3t">u64</C>],
+              ]}
+            />
+          </>
+        ),
+      },
+      {
+        id: 'record-attested',
+        title: 'RecordAttested',
+        body: (
+          <>
+            <p>
+              Discriminator <C>27fdb4fc52d5c658</C>. Every field of the <L href="/docs/registry/accounts#record">record</L>, in its order,
+              then the fee.
+            </p>
+            <Table
+              head={['Field', 'Type', 'Differs from the record']}
+              rows={[
+                [<span key="1">program &hellip; slot</span>, 'As in the record', ''],
+                [<C key="2">source_commit</C>, <C key="2t">String</C>, 'The commit as lowercase hex, 40 or 64 characters.'],
+                [<C key="3">fee_recipient</C>, <C key="3t">Pubkey</C>, 'The account the fee was paid to.'],
+                [<C key="4">fee_lamports</C>, <C key="4t">u64</C>, 'The fee this attest paid.'],
+              ]}
+            />
+          </>
+        ),
+      },
+      {
+        id: 'record-flagged',
+        title: 'RecordFlagged',
+        body: (
+          <>
+            <p>
+              Discriminator <C>18919896e08a6cef</C>. Every field of the <L href="/docs/registry/accounts#flag">flag</L>, in its order.
+            </p>
+            <Table
+              head={['Field', 'Type']}
+              rows={[
+                [<C key="1">record</C>, <C key="1t">Pubkey</C>],
+                [<C key="2">input_hash</C>, <C key="2t">[u8; 32]</C>],
+                [<C key="3">input_location</C>, <C key="3t">String</C>],
+                [<C key="4">flagger</C>, <C key="4t">Pubkey</C>],
+                [<C key="5">slot</C>, <C key="5t">u64</C>],
+              ]}
+            />
+          </>
+        ),
+      },
+      {
+        id: 'errors',
+        title: 'Errors',
+        body: (
           <Table
-            head={['Instruction', 'Signer', 'What it does']}
+            head={['Code', 'Name', 'Message', 'Raised by']}
             rows={[
-              [<C key="1">init_config</C>, "The registry program's upgrade authority", 'Creates the config, naming the admin, the fee recipient and the attest fee.'],
-              [<C key="2">set_config</C>, 'The admin', 'Sets the admin, the fee recipient and the attest fee. Passing another key as the admin hands the config over to it.'],
-              [<C key="3">attest</C>, 'The attester', 'Writes a record and pays the fee from the attester to the fee recipient, in the same instruction.'],
-              [<C key="4">flag</C>, 'The flagger', 'Writes a flag against a record.'],
+              ['6000', <C key="0">Unauthorized</C>, 'Only the configured authority may perform this action', 'init_config, set_config'],
+              ['6001', <C key="1">ProgramDataMismatch</C>, 'The program-data account does not belong to this registry', 'init_config'],
+              ['6002', <C key="2">RepositoryLength</C>, 'Source repository must contain between 1 and 256 UTF-8 bytes', 'attest'],
+              ['6003', <C key="3">CommitLength</C>, 'Source commit must contain 20 or 32 bytes', 'attest'],
+              ['6004', <C key="4">VersionLength</C>, 'Toolchain version must contain between 1 and 64 UTF-8 bytes', 'attest'],
+              ['6005', <C key="5">LocationLength</C>, 'Pinned location must contain between 1 and 512 UTF-8 bytes', 'attest, flag'],
+              ['6006', <C key="6">FeeRecipientMismatch</C>, 'The fee recipient is not the one the registry config names', 'attest'],
             ]}
           />
         ),
@@ -2105,11 +2484,6 @@ $ tare attest`}</Shell>
             <C>flag</C>, each signed by the keypair you pass. The site sends none; it is read-only.
           </p>
         ),
-      },
-      {
-        id: 'events',
-        title: 'Events',
-        body: <p>Each instruction emits an event carrying what it wrote. An indexer turns those into the registry&rsquo;s pages.</p>,
       },
     ],
   },
